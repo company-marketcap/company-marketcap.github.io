@@ -1,0 +1,204 @@
+/* Global Styles */
+:root {
+    --primary-color: #4361ee;
+    --secondary-color: #3f37c9;
+    --accent-color: #4895ef;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+    --success-color: #4cc9f0;
+    --info-color: #4895ef;
+    --warning-color: #f72585;
+    --danger-color: #e63946;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation Styles */
+.navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--light-color) 0%, #e9ecef 100%);
+}
+
+.hero-section h1 {
+    color: var(--dark-color);
+    font-weight: 700;
+}
+
+.hero-section p {
+    color: #495057;
+    font-size: 1.1rem;
+}
+
+/* Features Section */
+.features .card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 0.5rem;
+}
+
+.features .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+
+/* Calculator Section */
+.calculator .card {
+    border: none;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.calculator .card-header {
+    background-color: var(--primary-color);
+    padding: 1rem 1.5rem;
+}
+
+.calculator .form-label {
+    font-weight: 500;
+    color: #495057;
+}
+
+.calculator .btn-primary {
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+}
+
+/* Insights Section */
+.insights h3 {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.insights ul {
+    padding-left: 1.25rem;
+}
+
+.insights li {
+    margin-bottom: 0.5rem;
+}
+
+/* FAQ Section */
+.faq .accordion-button:not(.collapsed) {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.faq .accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(0, 0, 0, 0.125);
+}
+
+.faq .accordion-item {
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: var(--dark-color);
+}
+
+.footer h3 {
+    margin-bottom: 1.25rem;
+    font-weight: 600;
+}
+
+.footer a {
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.footer a:hover {
+    opacity: 0.8;
+}
+
+.footer .social-icons a {
+    font-size: 1.25rem;
+}
+
+.footer hr {
+    opacity: 0.1;
+}
+
+/* Results Card */
+#resultsCard {
+    transition: all 0.3s ease;
+}
+
+#resultsCard .card-header {
+    background: linear-gradient(135deg, #4cc9f0 0%, #4895ef 100%);
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 3rem 0;
+        text-align: center;
+    }
+
+    .hero-section img {
+        margin-top: 2rem;
+    }
+
+    .features .card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Chart Styling */
+canvas {
+    max-width: 100%;
+    height: auto !important;
+}
+
+/* Custom Animation Classes */
+.fade-in {
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.slide-up {
+    animation: slideUp 0.5s ease;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
