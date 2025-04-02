@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarketCapInsights - Calculate Company Growth Potential</title>
+    <meta name="description" content="Analyze market capitalization growth potential with our advanced calculator. Make informed investment decisions with MarketCapInsights.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="/">MarketCapInsights</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="privacy-policy.html">Privacy Policy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="terms.html">Terms</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-3">Free Market Cap Calculator for Growth Projections</h1>
+                    <p class="lead mb-4">Our advanced calculators help you analyze company growth trajectories based on market capitalization trends and revenue projections.</p>
+                    <a href="#calculator" class="btn btn-primary btn-lg">Try Our Calculator</a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://via.placeholder.com/600x400" alt="Market Cap Analysis" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Grid Section -->
+    <section class="features py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Why Use MarketCapInsights?</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="bi bi-graph-up-arrow feature-icon"></i>
+                            <h3 class="card-title h5 mt-3">Growth Projection</h3>
+                            <p class="card-text">Visualize potential company growth based on historical data and market trends.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="bi bi-calculator feature-icon"></i>
+                            <h3 class="card-title h5 mt-3">SIP Integration</h3>
+                            <p class="card-text">Calculate how systematic investments can grow with changing market capitalization.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="bi bi-bar-chart feature-icon"></i>
+                            <h3 class="card-title h5 mt-3">Competitive Analysis</h3>
+                            <p class="card-text">Compare market cap metrics across companies within the same industry.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section id="calculator" class="calculator py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="card shadow">
+                        <div class="card-header bg-primary text-white">
+                            <h2 class="h4 mb-0">Market Cap Growth & Investment Calculator</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h3 class="h5 mb-3">Company Metrics</h3>
+                                    <div class="mb-3">
+                                        <label for="initialMarketCap" class="form-label">Initial Market Cap (USD)</label>
+                                        <input type="number" class="form-control" id="initialMarketCap" min="1000000" value="1000000000">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="annualGrowthRate" class="form-label">Expected Annual Growth Rate (%)</label>
+                                        <input type="number" class="form-control" id="annualGrowthRate" min="0" max="100" value="15">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="revenueMultiple" class="form-label">Revenue Multiple (P/S Ratio)</label>
+                                        <input type="number" class="form-control" id="revenueMultiple" min="0.1" step="0.1" value="5">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="industryPeRatio" class="form-label">Industry P/E Ratio</label>
+                                        <input type="number" class="form-control" id="industryPeRatio" min="1" step="0.1" value="22">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h3 class="h5 mb-3">Investment Parameters</h3>
+                                    <div class="mb-3">
+                                        <label for="initialInvestment" class="form-label">Initial Investment (USD)</label>
+                                        <input type="number" class="form-control" id="initialInvestment" min="100" value="10000">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="monthlyContribution" class="form-label">Monthly Contribution (USD)</label>
+                                        <input type="number" class="form-control" id="monthlyContribution" min="0" value="500">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="investmentYears" class="form-label">Investment Time Horizon (Years)</label>
+                                        <input type="number" class="form-control" id="investmentYears" min="1" max="50" value="10">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="reinvestDividends" class="form-label">Reinvest Dividends?</label>
+                                        <select class="form-select" id="reinvestDividends">
+                                            <option value="yes">Yes</option>
+                                            <option value="no">No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center mt-3">
+                                <button id="calculateBtn" class="btn btn-primary btn-lg px-4">Calculate Results</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div class="row justify-content-center mt-4">
+                <div class="col-lg-10">
+                    <div id="resultsCard" class="card shadow" style="display:none;">
+                        <div class="card-header bg-success text-white">
+                            <h3 class="h4 mb-0">Calculation Results</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h4 class="h5 mb-3">Market Cap Projections</h4>
+                                    <div class="mb-3">
+                                        <p><strong>Projected Market Cap in <span id="yearSpan">10</span> years:</strong> <span id="projectedMarketCap">$0</span></p>
+                                        <p><strong>Compound Annual Growth Rate:</strong> <span id="cagr">0%</span></p>
+                                        <p><strong>Estimated Revenue in <span id="yearSpan2">10</span> years:</strong> <span id="projectedRevenue">$0</span></p>
+                                        <p><strong>Estimated Earnings in <span id="yearSpan3">10</span> years:</strong> <span id="projectedEarnings">$0</span></p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h4 class="h5 mb-3">Investment Projections</h4>
+                                    <div class="mb-3">
+                                        <p><strong>Total Investment Value:</strong> <span id="totalInvestmentValue">$0</span></p>
+                                        <p><strong>Total Contributions:</strong> <span id="totalContributions">$0</span></p>
+                                        <p><strong>Investment Growth:</strong> <span id="investmentGrowth">$0</span></p>
+                                        <p><strong>Return on Investment:</strong> <span id="roi">0%</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <canvas id="growthChart" width="400" height="200"></canvas>
+                            </div>
+                            <div class="alert alert-info mt-4">
+                                <p class="mb-0"><i class="bi bi-info-circle me-2"></i> These projections are based on your inputs and historical data patterns. Actual results may vary based on market conditions, economic factors, and company performance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insights Section -->
+    <section class="insights py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Market Cap Insights</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3 class="h4 mb-3">Understanding Market Capitalization</h3>
+                    <p>Market capitalization is the total value of a company's outstanding shares, calculated by multiplying the current share price by the total number of shares. It's a key indicator of a company's size, stability, and growth potential in the market.</p>
+                    <p>Companies are typically categorized based on their market cap:</p>
+                    <ul>
+                        <li><strong>Mega Cap:</strong> Over $200 billion</li>
+                        <li><strong>Large Cap:</strong> $10-200 billion</li>
+                        <li><strong>Mid Cap:</strong> $2-10 billion</li>
+                        <li><strong>Small Cap:</strong> $300 million-2 billion</li>
+                        <li><strong>Micro Cap:</strong> $50-300 million</li>
+                        <li><strong>Nano Cap:</strong> Under $50 million</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="h4 mb-3">Why Market Cap Matters for Investors</h3>
+                    <p>Market capitalization helps investors understand the risk profile of a company. Generally, larger market cap companies are more stable but may offer slower growth, while smaller market cap companies may provide higher growth potential with increased volatility.</p>
+                    <p>Key factors that impact market capitalization include:</p>
+                    <ul>
+                        <li>Revenue growth and profitability</li>
+                        <li>Industry trends and competitive positioning</li>
+                        <li>Innovation and product development</li>
+                        <li>Management effectiveness</li>
+                        <li>Economic conditions and market sentiment</li>
+                    </ul>
+                    <p>Our calculator helps you project how these factors might influence a company's market cap over time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    How accurate are market cap growth projections?
+                                </button>
+                            </h3>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Market cap projections are estimates based on historical data, industry trends, and current growth rates. While our calculator uses comprehensive algorithms to provide realistic projections, actual results may vary due to unforeseen market conditions, economic changes, or company-specific events. We recommend using these projections as one of several tools in your investment decision-making process.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    How do revenue multiples affect market capitalization?
+                                </button>
+                            </h3>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Revenue multiples (or Price-to-Sales ratios) reflect how much investors are willing to pay for each dollar of a company's revenue. Higher growth companies often command higher revenue multiples. When a company grows its revenue while maintaining or increasing its revenue multiple, market capitalization can grow exponentially. Our calculator factors in these dynamics to provide more accurate projections of potential market cap growth.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    What is the relationship between SIP investments and market cap growth?
+                                </button>
+                            </h3>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Systematic Investment Plans (SIPs) allow investors to benefit from market cap growth through regular, disciplined investing. When investing in companies with strong market cap growth potential, SIPs can help average purchase costs and compound returns over time. Our calculator integrates SIP investment models with market cap projections to provide a comprehensive view of how your investments might grow alongside company valuation increases.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    How do industry P/E ratios influence market cap calculations?
+                                </button>
+                            </h3>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Industry Price-to-Earnings (P/E) ratios provide context for valuing companies within specific sectors. Companies in high-growth industries typically have higher P/E ratios than those in mature industries. Our calculator uses industry P/E ratios to help estimate future earnings potential and corresponding market cap growth. This approach provides more sector-specific projections tailored to different types of companies and their growth trajectories.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h3 class="h5">MarketCapInsights</h3>
+                    <p>Empowering investors with market capitalization analysis tools and insights.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h3 class="h5">Quick Links</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="/" class="text-white">Home</a></li>
+                        <li><a href="about.html" class="text-white">About Us</a></li>
+                        <li><a href="contact.html" class="text-white">Contact</a></li>
+                        <li><a href="privacy-policy.html" class="text-white">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-white">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h3 class="h5">Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+                    </div>
+                    <p class="mt-3">Subscribe to our newsletter for market insights.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Your email">
+                        <button class="btn btn-primary">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 MarketCapInsights. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">Designed with <i class="bi bi-heart-fill text-danger"></i> for investors</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
