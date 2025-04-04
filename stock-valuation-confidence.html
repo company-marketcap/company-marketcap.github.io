@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Stock Valuation Confidence Interval Calculator - Quantify Valuation Uncertainty</title>
+  <meta content="ca-pub-6247788451623601" name="google-adsense-account">
+  <meta content="ca-pub-5426315045205785" name="google-adsense-account">
+  <meta content="Calculate statistical confidence intervals for stock valuations. Quantify uncertainty in your stock price targets with our free probability-based valuation tool." name="description">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+
+  <style>
+    /* Valuation Confidence Calculator Specific Styles */
+    .hero-section {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e6f0ff 100%);
+    }
+
+    .result-card {
+      animation: fadeSlideUp 0.5s ease-out;
+    }
+
+    .chart-container {
+      height: 400px;
+      position: relative;
+    }
+
+    .probability-marker {
+      position: absolute;
+      width: 2px;
+      background-color: rgba(220, 53, 69, 0.8);
+      z-index: 10;
+    }
+
+    .probability-marker::after {
+      content: attr(data-label);
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(220, 53, 69, 0.8);
+      color: white;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 0.75rem;
+      white-space: nowrap;
+    }
+
+    .confidence-range {
+      background-color: rgba(40, 167, 69, 0.2);
+      position: absolute;
+      height: 100%;
+      z-index: 5;
+    }
+
+    .valuation-metric {
+      padding: 1rem;
+      border-radius: 0.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .valuation-metric:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    }
+
+    .valuation-metric.selected {
+      border: 2px solid #0d6efd;
+      background-color: rgba(13, 110, 253, 0.05);
+    }
+
+    .metric-icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .input-help {
+      font-size: 0.85rem;
+    }
+
+    .confidence-slider {
+      height: 36px;
+    }
+
+    .confidence-slider .form-range::-webkit-slider-thumb {
+      height: 24px;
+      width: 24px;
+    }
+
+    .confidence-level-badge {
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+    }
+
+    .scenario-table th, .scenario-table td {
+      vertical-align: middle;
+    }
+
+    .scenario-badge {
+      padding: 0.25rem 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .bearish {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+
+    .bullish {
+      background-color: #d4edda;
+      color: #155724;
+    }
+
+    .base-case {
+      background-color: #cce5ff;
+      color: #004085;
+    }
+
+    /* Animation for results */
+    @keyframes fadeSlideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () {
+        (c[a].q = c[a].q || []).push(arguments)
+      };
+      t = l.createElement(r);
+      t.async = 1;
+      t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0];
+      y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "qxscsfgx1j");
+  </script>
+</head>
+<body>
+
+<div id="header"></div>
+
+<!-- Hero Section -->
+<header class="hero-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="hero-content">
+          <span class="badge bg-primary mb-2 p-2">VALUATION TOOL</span>
+          <h1 class="display-4 fw-bold mb-3">Stock Valuation Confidence Interval Calculator</h1>
+          <p class="lead mb-4">Quantify the uncertainty in your stock valuations with statistical confidence intervals. Get more realistic price targets that account for market volatility and estimation errors.</p>
+          <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-primary btn-lg" href="#calculator">Try Free Calculator <i class="bi bi-arrow-right-circle ms-2"></i></a>
+            <a class="btn btn-outline-secondary btn-lg" href="#features">Learn More</a>
+          </div>
+          <div class="mt-4 usage-stats">
+            <span class="badge bg-light text-dark p-2 me-2">
+              <i class="bi bi-graph-up me-1"></i> Analyzed 20,000+ valuations
+            </span>
+            <span class="badge bg-light text-dark p-2">
+              <i class="bi bi-shield-check me-1"></i> 100% private calculations
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="hero-image position-relative">
+          <img
+            alt="Stock Valuation Confidence Interval Chart"
+            class="img-fluid rounded shadow"
+            src="/img/valuation-confidence-chart.png">
+          <div class="free-badge position-absolute top-0 end-0 bg-success text-white p-3 rounded-circle m-3">
+            <strong>FREE</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Calculator Section -->
+<section class="calculator py-5 bg-light" id="calculator">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="h2 fw-bold">Stock Valuation Confidence Interval Calculator</h2>
+      <p class="lead text-muted">Calculate statistically sound price ranges for your stock valuations</p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="card shadow border-0">
+          <div class="card-header bg-primary text-white py-3">
+            <div class="d-flex justify-content-between align-items-center">
+              <h2 class="h4 mb-0"><i class="bi bi-graph-up-arrow me-2"></i> Valuation Confidence Analysis</h2>
+              <span class="badge bg-success py-2 px-3">FREE</span>
+            </div>
+          </div>
+          <div class="card-body p-4">
+            <div class="alert alert-info mb-4">
+              <div class="d-flex">
+                <div class="me-3">
+                  <i class="bi bi-info-circle-fill fs-4"></i>
+                </div>
+                <div>
+                  <p class="mb-0">This calculator helps you determine realistic valuation ranges for stocks by applying statistical confidence intervals to your estimates. Enter your valuation inputs below to see a probability-based price range.</p>
+                </div>
+              </div>
+            </div>
+
+            <form id="valuationCalculatorForm">
+              <div class="row g-4">
+                <div class="col-lg-6">
+                  <div class="card border-0 shadow-sm h-100">
+                    <div class="card-header bg-light">
+                      <h3 class="h5 mb-0">Stock Information</h3>
+                    </div>
+                    <div class="card-body">
+                      <div class="mb-3">
+                        <label class="form-label" for="tickerSymbol">Stock Ticker Symbol</label>
+                        <input class="form-control" id="tickerSymbol" placeholder="e.g., AAPL" required type="text">
+                        <div class="input-help text-muted mt-1">
+                          <small>Enter the stock symbol you want to analyze</small>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label" for="currentPrice">Current Stock Price ($)</label>
+                        <div class="input-group">
+                          <span class="input-group-text">$</span>
+                          <input class="form-control" id="currentPrice" min="0.01" placeholder="e.g., 150.25" required step="0.01" type="number">
+                        </div>
+                        <div class="input-help text-muted mt-1">
+                          <small>The current market price of the stock</small>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label" for="historicalVolatility">Historical Volatility (% Annual)</label>
+                        <div class="input-group">
+                          <input class="form-control" id="historicalVolatility" min="1" placeholder="e.g., 25" required step="0.1" type="number" value="25">
+                          <span class="input-group-text">%</span>
+                        </div>
+                        <div class="input-help text-muted mt-1">
+                          <small>Annual stock price volatility (standard deviation of returns)</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="card border-0 shadow-sm h-100">
+                    <div class="card-header bg-light">
+                      <h3 class="h5 mb-0">Valuation Parameters</h3>
+                    </div>
+                    <div class="card-body">
+                      <div class="mb-3">
+                        <label class="form-label" for="baseEstimate">Base Case Valuation Estimate ($)</label>
+                        <div class="input-group">
+                          <span class="input-group-text">$</span>
+                          <input class="form-control" id="baseEstimate" min="0.01" placeholder="e.g., 180.50" required step="0.01" type="number">
+                        </div>
+                        <div class="input-help text-muted mt-1">
+                          <small>Your most likely price target for the stock</small>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label" for="timeHorizon">Valuation Time Horizon (Months)</label>
+                        <input class="form-control" id="timeHorizon" min="1" max="60" placeholder="e.g., 12" required step="1" type="number" value="12">
+                        <div class="input-help text-muted mt-1">
+                          <small>Time period for your price target (1-60 months)</small>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label" for="estimationError">Estimation Error (%)</label>
+                        <div class="input-group">
+                          <input class="form-control" id="estimationError" min="0" placeholder="e.g., 15" required step="1" type="number" value="15">
+                          <span class="input-group-text">%</span>
+                        </div>
+                        <div class="input-help text-muted mt-1">
+                          <small>Potential error in your base case estimate (analyst disagreement)</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt-4">
+                <div class="col-12">
+                  <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-light">
+                      <h3 class="h5 mb-0">Confidence Level</h3>
+                    </div>
+                    <div class="card-body">
+                      <div class="row g-3">
+                        <div class="col-md-9">
+                          <div class="confidence-slider">
+                            <label class="form-label" for="confidenceLevel">Select Confidence Level</label>
+                            <input class="form-range" id="confidenceLevel" min="50" max="99" step="1" type="range" value="95">
+                          </div>
+                          <div class="d-flex justify-content-between mt-1">
+                            <small>50% (Wide Range)</small>
+                            <small>80%</small>
+                            <small>95% (Standard)</small>
+                            <small>99% (Conservative)</small>
+                          </div>
+                        </div>
+                        <div class="col-md-3 d-flex align-items-center justify-content-center">
+                          <span class="badge bg-primary confidence-level-badge" id="confidenceLevelDisplay">95%</span>
+                        </div>
+                      </div>
+                      <div class="mt-3 text-muted">
+                        <small><i class="bi bi-info-circle me-1"></i> Higher confidence levels produce wider price ranges but increase the probability that the actual future price will fall within the range.</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-center mt-4">
+                <button class="btn btn-primary btn-lg" id="calculateBtn" type="submit">
+                  <i class="bi bi-calculator me-2"></i>Calculate Valuation Range
+                </button>
+                <button class="btn btn-outline-secondary btn-lg ms-2" id="resetBtn" type="button">
+                  <i class="bi bi-arrow-repeat me-2"></i>Reset Values
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Results Section -->
+    <div class="row justify-content-center mt-4">
+      <div class="col-lg-10">
+        <div class="card shadow border-0 result-card" id="resultsCard" style="display:none;">
+          <div class="card-header bg-success text-white py-3">
+            <div class="d-flex justify-content-between align-items-center">
+              <h3 class="h4 mb-0"><i class="bi bi-graph-up me-2"></i>Valuation Confidence Analysis Results</h3>
+              <button class="btn btn-outline-light btn-sm" onclick="window.print()">
+                <i class="bi bi-printer me-1"></i> Print Report
+              </button>
+            </div>
+          </div>
+          <div class="card-body p-4">
+            <div class="row mb-4">
+              <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                  <div class="card-header bg-primary bg-opacity-10">
+                    <h4 class="h5 mb-0 text-primary"><i class="bi bi-bullseye me-2"></i>Valuation Range</h4>
+                  </div>
+                  <div class="card-body text-center">
+                    <div class="mb-3">
+                      <span class="fs-6 text-muted" id="tickerDisplay">TICKER</span>
+                      <h3 class="display-6 fw-bold mb-0"><span id="lowerBound">$0</span> - <span id="upperBound">$0</span></h3>
+                      <p class="lead text-muted" id="confidenceIntervalDisplay">95% Confidence Interval</p>
+                    </div>
+
+                    <div class="row g-3 mt-3">
+                      <div class="col-md-4">
+                        <div class="bg-light rounded p-3">
+                          <p class="mb-1">Current Price</p>
+                          <h5 class="mb-0" id="currentPriceDisplay">$0.00</h5>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="bg-light rounded p-3">
+                          <p class="mb-1">Base Estimate</p>
+                          <h5 class="mb-0" id="baseEstimateDisplay">$0.00</h5>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="bg-light rounded p-3">
+                          <p class="mb-1">Time Horizon</p>
+                          <h5 class="mb-0" id="timeHorizonDisplay">12 months</h5>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="alert alert-primary mt-4 text-start">
+                      <div class="d-flex">
+                        <div class="me-3">
+                          <i class="bi bi-info-circle-fill fs-4"></i>
+                        </div>
+                        <div>
+                          <h5 class="mb-1">Interpretation</h5>
+                          <p class="mb-0" id="interpretationText">Based on your inputs, there is a 95% probability that the stock price will fall within this range in the next 12 months, assuming normal distribution of returns.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                  <div class="card-header bg-success bg-opacity-10">
+                    <h4 class="h5 mb-0 text-success"><i class="bi bi-graph-up-arrow me-2"></i>Probability Distribution</h4>
+                  </div>
+                  <div class="card-body">
+                    <div class="chart-container">
+                      <canvas id="probabilityChart"></canvas>
+                      <div class="confidence-range" id="confidenceRangeOverlay"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card border-0 shadow-sm mb-4">
+              <div class="card-header bg-primary bg-opacity-10">
+                <h4 class="h5 mb-0 text-primary"><i class="bi bi-bar-chart-steps me-2"></i>Valuation Scenarios</h4>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-hover scenario-table">
+                    <thead class="table-light">
+                      <tr>
+                        <th>Scenario</th>
+                        <th>Price Target</th>
+                        <th>% Change</th>
+                        <th>Probability</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><span class="scenario-badge bearish">Bearish</span></td>
+                        <td id="bearishTarget">$0.00</td>
+                        <td class="text-danger" id="bearishChange">-0.0%</td>
+                        <td id="bearishProbability">0%</td>
+                        <td>Lower bound of confidence interval, represents downside risk</td>
+                      </tr>
+                      <tr>
+                        <td><span class="scenario-badge base-case">Base Case</span></td>
+                        <td id="baseCaseTarget">$0.00</td>
+                        <td id="baseCaseChange">+0.0%</td>
+                        <td>Highest</td>
+                        <td>Most likely outcome based on your valuation estimate</td>
+                      </tr>
+                      <tr>
+                        <td><span class="scenario-badge bullish">Bullish</span></td>
+                        <td id="bullishTarget">$0.00</td>
+                        <td class="text-success" id="bullishChange">+0.0%</td>
+                        <td id="bullishProbability">0%</td>
+                        <td>Upper bound of confidence interval, represents upside potential</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="card border-0 shadow-sm mb-4">
+              <div class="card-header bg-success bg-opacity-10">
+                <h4 class="h5 mb-0 text-success"><i class="bi bi-pie-chart me-2"></i>Key Probabilities</h4>
+              </div>
+              <div class="card-body">
+                <div class="row g-4">
+                  <div class="col-md-4">
+                    <div class="card border-0 bg-light h-100">
+                      <div class="card-body text-center p-4">
+                        <i class="bi bi-arrow-down-circle text-danger fs-1 mb-3"></i>
+                        <h5>Probability of Loss</h5>
+                        <div class="display-6 fw-bold" id="probabilityOfLoss">0%</div>
+                        <p class="text-muted mb-0">Chance of being below current price</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card border-0 bg-light h-100">
+                      <div class="card-body text-center p-4">
+                        <i class="bi bi-check-circle text-success fs-1 mb-3"></i>
+                        <h5>Probability of Reaching Target</h5>
+                        <div class="display-6 fw-bold" id="probabilityOfTarget">0%</div>
+                        <p class="text-muted mb-0">Chance of reaching base estimate</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card border-0 bg-light h-100">
+                      <div class="card-body text-center p-4">
+                        <i class="bi bi-arrow-up-right-circle text-primary fs-1 mb-3"></i>
+                        <h5>Probability of 25%+ Gain</h5>
+                        <div class="display-6 fw-bold" id="probabilityOfBigGain">0%</div>
+                        <p class="text-muted mb-0">Chance of achieving 25%+ return</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card border-0 shadow-sm mb-4">
+              <div class="card-header bg-primary bg-opacity-10">
+                <h4 class="h5 mb-0 text-primary"><i class="bi bi-lightbulb me-2"></i>Analysis Insights</h4>
+              </div>
+              <div class="card-body">
+                <div id="analysisInsights">
+                  <!-- Insights will be filled dynamically -->
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex mt-4 mb-2">
+              <div class="me-3">
+                <i class="bi bi-shield-check text-success fs-3"></i>
+              </div>
+              <div>
+                <h5 class="mb-1">Analysis Disclosure</h5>
+                <p class="mb-0 text-muted">This analysis is provided for educational purposes only and should not be construed as investment advice. The calculations assume a normal distribution of returns and incorporate the volatility and estimation error parameters you provided. Actual results may vary due to market conditions, company performance, and other factors. Always consult with a financial advisor before making investment decisions.</p>
+              </div>
+            </div>
+
+            <div class="text-center mt-4">
+              <button class="btn btn-outline-primary me-2" onclick="window.location.href='#calculator'">
+                <i class="bi bi-arrow-repeat me-1"></i> Start New Calculation
+              </button>
+              <div class="position-relative d-inline-block">
+                <button class="btn btn-outline-success" id="shareResultsBtn">
+                  <i class="bi bi-share me-1"></i> Share Results
+                </button>
+                <div class="share-popup shadow-sm p-2 rounded" id="sharePopup" style="display: none;">
+                  <a class="text-decoration-none me-2"
+                     href="https://twitter.com/intent/tweet?text=Check+out+this+stock+valuation+confidence+interval+analysis!&url=https://marketcapinsights.com/valuation-confidence.html" target="_blank">
+                    <i class="bi bi-twitter fs-4 text-info"></i>
+                  </a>
+                  <a class="text-decoration-none me-2"
+                     href="https://www.linkedin.com/shareArticle?mini=true&url=https://marketcapinsights.com/valuation-confidence.html&title=Stock%20Valuation%20Confidence%20Interval%20Analysis" target="_blank">
+                    <i class="bi bi-linkedin fs-4 text-primary"></i>
+                  </a>
+                  <a class="text-decoration-none"
+                     href="https://www.facebook.com/sharer/sharer.php?u=https://marketcapinsights.com/valuation-confidence.html" target="_blank">
+                    <i class="bi bi-facebook fs-4 text-secondary"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="calcNav"></div>
+
+<!-- Features Grid Section -->
+<section class="features py-5" id="features">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="badge bg-primary mb-2 p-2">WHY IT MATTERS</span>
+      <h2 class="fw-bold">The Importance of Valuation Confidence Intervals</h2>
+      <p class="lead text-muted mx-auto" style="max-width: 700px;">Point estimates for stock prices are misleading - probability ranges provide a more realistic view of potential outcomes</p>
+    </div>
+
+    <div class="row g-4 mb-5">
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 hover-lift">
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center mb-3">
+              <div class="feature-icon-wrapper bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                <i class="bi bi-graph-up-arrow feature-icon text-primary"></i>
+              </div>
+              <h3 class="card-title h5 mb-0">Realistic Expectations</h3>
+            </div>
+            <p class="card-text text-muted">Confidence intervals provide a realistic range of potential price outcomes rather than overly precise point estimates that rarely materialize.</p>
+            <div class="mt-3">
+              <span class="badge bg-success me-2">Free</span>
+              <span class="badge bg-light text-dark">Professional analysis</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 hover-lift">
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center mb-3">
+              <div class="feature-icon-wrapper bg-success bg-opacity-10 p-3 rounded-circle me-3">
+                <i class="bi bi-shield-check feature-icon text-success"></i>
+              </div>
+              <h3 class="card-title h5 mb-0">Risk Management</h3>
+            </div>
+            <p class="card-text text-muted">Quantify the probability of downside scenarios to better understand your risk exposure and set appropriate position sizes for your risk tolerance.</p>
+            <div class="mt-3">
+              <span class="badge bg-success me-2">Free</span>
+              <span class="badge bg-light text-dark">Risk assessment</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 hover-lift">
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center mb-3">
+              <div class="feature-icon-wrapper bg-info bg-opacity-10 p-3 rounded-circle me-3">
+                <i class="bi bi-bar-chart-line feature-icon text-info"></i>
+              </div>
+              <h3 class="card-title h5 mb-0">Precision Understanding</h3>
+            </div>
+            <p class="card-text text-muted">Understand how model uncertainty and market volatility impact valuation precision, leading to more informed investment decisions.</p>
+            <div class="mt-3">
+              <span class="badge bg-success me-2">Free</span>
+              <span class="badge bg-light text-dark">Statistical analysis</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-5">
+      <a class="btn btn-primary btn-lg px-5" href="#calculator">Try the Valuation Calculator <i class="bi bi-arrow-right ms-2"></i></a>
+      <p class="text-muted mt-2">No sign-up • No credit card • 100% free</p>
+    </div>
+  </div>
+</section>
+
+<!-- Valuation Methodology Section -->
+<section class="insights py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="badge bg-secondary mb-2 p-2">EXPERT INSIGHTS</span>
+      <h2 class="fw-bold">Understanding Valuation Confidence Intervals</h2>
+      <p class="lead text-muted mx-auto" style="max-width: 700px;">How probability-based approaches improve traditional valuation methods</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body p-4">
+            <h3 class="h4 text-primary mb-4"><i class="bi bi-graph-up me-2"></i>Why Point Estimates Are Misleading</h3>
+            <p>Traditional stock price targets suggest a precision that doesn't exist in reality. There are several problems with single-point valuation estimates:</p>
+
+            <div class="d-flex mb-3">
+              <div class="me-3 text-danger">
+                <i class="bi bi-x-circle-fill fs-4"></i>
+              </div>
+              <div>
+                <h5 class="h6 mb-1">False Precision</h5>
+                <p class="text-muted mb-0">Exact price targets imply a level of certainty that's impossible in complex, dynamic markets with many variables.</p>
+              </div>
+            </div>
+
+            <div class="d-flex mb-3">
+              <div class="me-3 text-danger">
+                <i class="bi bi-x-circle-fill fs-4"></i>
+              </div>
+              <div>
+                <h5 class="h6 mb-1">Ignores Volatility</h5>
+                <p class="text-muted mb-0">Point estimates fail to account for natural price fluctuations and the range of possible outcomes due to market volatility.</p>
+              </div>
+            </div>
+
+            <div class="d-flex mb-3">
+              <div class="me-3 text-danger">
+                <i class="bi bi-x-circle-fill fs-4"></i>
+              </div>
+              <div>
+                <h5 class="h6 mb-1">Model Uncertainty</h5>
+                <p class="text-muted mb-0">All valuation models have inherent errors and assumptions that create uncertainty not reflected in a single estimate.</p>
+              </div>
+            </div>
+
+            <div class="d-flex mb-3">
+              <div class="me-3 text-danger">
+                <i class="bi bi-x-circle-fill fs-4"></i>
+              </div>
+              <div>
+                <h5 class="h6 mb-1">Poor Decision Framework</h5>
+                <p class="text-muted mb-0">Binary "buy/sell" decisions based on rigid price targets fail to account for the probabilistic nature of investment outcomes.</p>
+              </div>
+            </div>
+
+            <div class="alert alert-info mt-4">
+              <i class="bi bi-lightbulb me-2"></i>
+              <strong>Professional Insight:</strong> Even the most accurate analysts typically have a margin of error of ±15-20% on their price targets. Confidence intervals make this uncertainty explicit.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body p-4">
+            <h3 class="h4 text-primary mb-4"><i class="bi bi-check-circle me-2"></i>Benefits of Confidence Interval Approach</h3>
+            <p>Statistical confidence intervals offer significant advantages over traditional point estimates for stock valuations:</p>
+
+            <div class="d-flex mb-3">
+              <div class="me-3 text-success">
+                <i class="bi bi-check-circle-fill fs-4"></i>
+              </div>
+              <div>
+                <h5 class="h6 mb-1">Explicit Uncertainty Recognition</h5>
+                <p class="text-muted mb-0">Confidence intervals explicitly acknowledge and quantify the uncertainty inherent in all valuation models.</p>
+              </div>
+            </div>
+
+            <div class="d-flex mb-3">
+              <div class="me-3 text-success">
+                <i class="bi bi-check-circle-fill fs-4"></i>
+              </div>
+              <div>
+                <h5 class="h6 mb-1">Probabilistic Framework</h5>
+                <p class="text-muted mb-0">By providing probability distributions, investors can make more nuanced decisions based on their risk preferences.</p>
+              </div>
+            </div>
+
+            <div class="d-flex mb-3">
+              <div class="me-3 text-success">
+                <i class="bi bi-check-circle-fill fs-4"></i>
+              </div>
+              <div>
+                <h5 class="h6 mb-1">Better Risk Assessment</h5>
+                <p class="text-muted mb-0">Understand the probability of downside scenarios, allowing for more appropriate position sizing and risk management.</p>
+              </div>
+            </div>
+
+            <div class="d-flex mb-3">
+              <div class="me-3 text-success">
+                <i class="bi bi-check-circle-fill fs-4"></i>
+              </div>
+              <div>
+                <h5 class="h6 mb-1">Time Horizon Integration</h5>
+                <p class="text-muted mb-0">Confidence intervals naturally widen with longer time horizons, reflecting increased uncertainty over extended periods.</p>
+              </div>
+            </div>
+
+            <div class="d-flex mb-3">
+              <div class="me-3 text-success">
+                <i class="bi bi-check-circle-fill fs-4"></i>
+              </div>
+              <div>
+                <h5 class="h6 mb-1">Professional Methodology</h5>
+                <p class="text-muted mb-0">Institutional investors and hedge funds routinely use probability distributions rather than point estimates for their analyses.</p>
+              </div>
+            </div>
+
+            <div class="alert alert-primary mt-4">
+              <i class="bi bi-info-circle me-2"></i>
+              <strong>Statistical Foundation:</strong> Our calculator uses a normal distribution model that incorporates both the inherent volatility of the stock and the estimation uncertainty in your valuation model.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-5">
+      <a class="btn btn-outline-primary" href="#calculator">Calculate Your Valuation Range <i class="bi bi-calculator ms-2"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="badge bg-primary mb-2 p-2">COMMON QUESTIONS</span>
+      <h2 class="fw-bold">Frequently Asked Questions</h2>
+      <p class="lead text-muted mx-auto" style="max-width: 700px;">Everything you need to know about valuation confidence intervals</p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="card border-0 shadow-sm">
+          <div class="card-body p-0">
+            <div class="accordion accordion-flush" id="faqAccordion">
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button" data-bs-target="#faq1" data-bs-toggle="collapse" type="button">
+                    <i class="bi bi-question-circle text-primary me-2"></i> What is a valuation confidence interval?
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse show" data-bs-parent="#faqAccordion" id="faq1">
+                  <div class="accordion-body">
+                    <p>A valuation confidence interval is a statistical range that expresses the uncertainty in a stock's estimated future price. Unlike a single-point price target, a confidence interval provides a range of values within which the future stock price is likely to fall with a specific probability (e.g., 95% confidence).</p>
+
+                    <p>The calculation of a confidence interval incorporates:</p>
+                    <ul>
+                      <li><strong>Base valuation estimate:</strong> Your central price target based on fundamental analysis</li>
+                      <li><strong>Historical volatility:</strong> The natural price fluctuation of the stock over time</li>
+                      <li><strong>Estimation error:</strong> The uncertainty in your valuation model and assumptions</li>
+                      <li><strong>Time horizon:</strong> Longer time periods increase the range of possible outcomes</li>
+                      <li><strong>Confidence level:</strong> Higher confidence levels (e.g., 99% vs. 80%) produce wider intervals</li>
+                    </ul>
+
+                    <p class="mb-0 text-muted">By using confidence intervals, investors gain a more realistic understanding of the potential range of future prices and can make better-informed decisions based on their risk tolerance and investment goals.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-target="#faq2" data-bs-toggle="collapse" type="button">
+                    <i class="bi bi-question-circle text-primary me-2"></i> How do I interpret the confidence interval results?
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq2">
+                  <div class="accordion-body">
+                    <p>The confidence interval provides you with a statistically sound range of potential future stock prices. Here's how to interpret the results:</p>
+
+                    <ul>
+                      <li><strong>Confidence level (e.g., 95%):</strong> This means there's a 95% probability that the future stock price will fall within the calculated range, assuming a normal distribution of returns</li>
+                      <li><strong>Lower bound:</strong> Represents a reasonable downside scenario, useful for risk assessment</li>
+                      <li><strong>Upper bound:</strong> Represents a reasonable upside scenario, useful for understanding potential returns</li>
+                      <li><strong>Width of the interval:</strong> Indicates the level of uncertainty; wider intervals suggest higher uncertainty</li>
+                    </ul>
+
+                    <p>Additionally, the calculator provides key probability insights:</p>
+                    <ul>
+                      <li><strong>Probability of loss:</strong> The chance that the stock will be below its current price at the end of your time horizon</li>
+                      <li><strong>Probability of reaching target:</strong> The likelihood of the stock reaching your base case estimate</li>
+                      <li><strong>Probability of significant gain:</strong> The chance of achieving a return above a specific threshold (e.g., 25%)</li>
+                    </ul>
+
+                    <p class="mb-0 text-muted">These probability-based insights allow you to make more nuanced investment decisions, appropriately size positions, and set realistic expectations for potential outcomes.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-target="#faq3" data-bs-toggle="collapse" type="button">
+                    <i class="bi bi-question-circle text-primary me-2"></i> How do I find the historical volatility for a stock?
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq3">
+                  <div class="accordion-body">
+                    <p>Historical volatility is a key input for the confidence interval calculation. Here are several ways to find this information:</p>
+
+                    <ol>
+                      <li><strong>Financial websites:</strong> Many financial websites like Yahoo Finance, MarketWatch, or Barchart provide historical volatility metrics for stocks</li>
+                      <li><strong>Brokerage platforms:</strong> Most brokerages show volatility statistics in their stock analysis tools</li>
+                      <li><strong>Manual calculation:</strong> Calculate the standard deviation of daily or monthly returns over the past year and annualize it</li>
+                      <li><strong>Options-implied volatility:</strong> Option prices can be used to derive the market's expected future volatility</li>
+                    </ul>
+
+                    <p>General volatility benchmarks (if you can't find the specific value):</p>
+                    <ul>
+                      <li><strong>Low volatility stocks:</strong> 15-20% annual volatility (e.g., utilities, consumer staples)</li>
+                      <li><strong>Average volatility stocks:</strong> 20-30% annual volatility (e.g., most large-cap stocks)</li>
+                      <li><strong>High volatility stocks:</strong> 30-50% annual volatility (e.g., small-caps, growth stocks)</li>
+                      <li><strong>Very high volatility stocks:</strong> 50%+ annual volatility (e.g., biotech, early-stage tech)</li>
+                    </ul>
+
+                    <p class="mb-0 text-muted">For the most accurate confidence intervals, try to use volatility measures specific to your stock rather than industry averages.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-target="#faq4" data-bs-toggle="collapse" type="button">
+                    <i class="bi bi-question-circle text-primary me-2"></i> What confidence level should I use?
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq4">
+                  <div class="accordion-body">
+                    <p>The choice of confidence level depends on your analysis needs and risk assessment goals:</p>
+
+                    <div class="table-responsive mt-3 mb-3">
+                      <table class="table table-bordered">
+                        <thead class="table-light">
+                          <tr>
+                            <th>Confidence Level</th>
+                            <th>Description</th>
+                            <th>Best For</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><strong>50% - 70%</strong></td>
+                            <td>Narrower interval, higher chance of price falling outside the range</td>
+                            <td>Understanding the most likely outcomes, less concerned with extreme scenarios</td>
+                          </tr>
+                          <tr>
+                            <td><strong>80% - 90%</strong></td>
+                            <td>Balanced approach, covers most probable scenarios</td>
+                            <td>General investment planning, moderate risk assessment</td>
+                          </tr>
+                          <tr>
+                            <td><strong>95%</strong></td>
+                            <td>Standard statistical confidence level, covers nearly all plausible outcomes</td>
+                            <td>Comprehensive risk assessment, standard for most investment analyses</td>
+                          </tr>
+                          <tr>
+                            <td><strong>99%</strong></td>
+                            <td>Very wide interval, includes extreme scenarios</td>
+                            <td>Conservative risk management, stress testing, worst-case scenario planning</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <p>Professional investors often use multiple confidence levels for different purposes:</p>
+                    <ul>
+                      <li>95% or 99% intervals for risk management and position sizing</li>
+                      <li>80% intervals for estimating likely price ranges</li>
+                      <li>50% intervals (interquartile range) for understanding the most probable outcomes</li>
+                    </ul>
+
+                    <p class="mb-0 text-muted">The default 95% confidence level in our calculator is the most commonly used in statistical analysis and provides a good balance between capturing potential outcomes while not being excessively wide.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-target="#faq5" data-bs-toggle="collapse" type="button">
+                    <i class="bi bi-question-circle text-primary me-2"></i> How does this help with investment decision-making?
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq5">
+                  <div class="accordion-body">
+                    <p>Valuation confidence intervals improve investment decision-making in several ways:</p>
+
+                    <div class="d-flex mb-3">
+                      <div class="me-3 text-primary">
+                        <i class="bi bi-check-circle-fill fs-4"></i>
+                      </div>
+                      <div>
+                        <h5 class="h6 mb-1">Position Sizing</h5>
+                        <p class="text-muted mb-0">Wider confidence intervals indicate higher uncertainty, suggesting smaller position sizes. Narrower intervals may justify larger positions.</p>
+                      </div>
+                    </div>
+
+                    <div class="d-flex mb-3">
+                      <div class="me-3 text-primary">
+                        <i class="bi bi-check-circle-fill fs-4"></i>
+                      </div>
+                      <div>
+                        <h5 class="h6 mb-1">Risk-Reward Assessment</h5>
+                        <p class="text-muted mb-0">The ratio of upside potential (distance to upper bound) versus downside risk (distance to lower bound) helps evaluate the attractiveness of an investment.</p>
+                      </div>
+                    </div>
+
+                    <div class="d-flex mb-3">
+                      <div class="me-3 text-primary">
+                        <i class="bi bi-check-circle-fill fs-4"></i>
+                      </div>
+                      <div>
+                        <h5 class="h6 mb-1">Entry Point Optimization</h5>
+                        <p class="text-muted mb-0">Understanding the probability distribution can help time entries toward the lower end of the confidence interval.</p>
+                      </div>
+                    </div>
+
+                    <div class="d-flex mb-3">
+                      <div class="me-3 text-primary">
+                        <i class="bi bi-check-circle-fill fs-4"></i>
+                      </div>
+                      <div>
+                        <h5 class="h6 mb-1">Stop Loss Placement</h5>
+                        <p class="text-muted mb-0">The lower bound of a confidence interval can provide a statistically informed reference point for stop loss placement.</p>
+                      </div>
+                    </div>
+
+                    <div class="d-flex mb-3">
+                      <div class="me-3 text-primary">
+                        <i class="bi bi-check-circle-fill fs-4"></i>
+                      </div>
+                      <div>
+                        <h5 class="h6 mb-1">Portfolio Diversification</h5>
+                        <p class="text-muted mb-0">Stocks with wider confidence intervals (higher uncertainty) should be balanced with more stable investments.</p>
+                      </div>
+                    </div>
+
+                    <p class="mb-0 text-muted">By incorporating statistical confidence into your valuation process, you can make more nuanced investment decisions based on probability distributions rather than simplistic binary outcomes.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-target="#faq6" data-bs-toggle="collapse" type="button">
+                    <i class="bi bi-question-circle text-primary me-2"></i> How accurate is this confidence interval model?
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq6">
+                  <div class="accordion-body">
+                    <p>The confidence interval model provides valuable statistical insights, but it's important to understand its assumptions and limitations:</p>
+
+                    <p><strong>Key assumptions:</strong></p>
+                    <ul>
+                      <li>Stock returns follow a normal (Gaussian) distribution</li>
+                      <li>Historical volatility is a good predictor of future volatility</li>
+                      <li>The estimation error percentage accurately reflects uncertainty in your valuation model</li>
+                      <li>Market conditions remain relatively consistent over the time horizon</li>
+                    </ul>
+
+                    <p><strong>Accuracy considerations:</strong></p>
+                    <ul>
+                      <li>In practice, stock returns often have "fat tails" (more extreme outcomes than predicted by normal distributions)</li>
+                      <li>Black swan events and market crashes occur more frequently than statistical models suggest</li>
+                      <li>The model becomes less reliable for very long time horizons (>3 years)</li>
+                      <li>Company-specific events (e.g., acquisitions, regulatory changes) can cause outcomes outside predicted ranges</li>
+                    </ul>
+
+                    <p><strong>Best practices for accuracy:</strong></p>
+                    <ul>
+                      <li>Use a higher confidence level (95% or 99%) for more comprehensive risk assessment</li>
+                      <li>Regularly update your inputs as new information becomes available</li>
+                      <li>Supplement statistical analysis with fundamental research</li>
+                      <li>Consider multiple valuation methods and time horizons</li>
+                    </ul>
+
+                    <p class="mb-0 text-muted">Despite these limitations, confidence intervals provide a much more realistic framework for understanding potential stock price outcomes than single-point estimates, which inherently provide no information about uncertainty.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <p class="lead mb-3">Still have questions about valuation confidence intervals?</p>
+          <a class="btn btn-outline-primary" href="contact.html">Contact Our Team <i class="bi bi-arrow-right ms-2"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer"></div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/include.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Initialize the calculator
+    initValuationConfidenceCalculator();
+    setupSharePopup();
+  });
+
+  // Initialize the valuation confidence calculator
+  function initValuationConfidenceCalculator() {
+    // Add event listeners to form
+    document.getElementById('valuationCalculatorForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      calculateConfidenceInterval();
+    });
+
+    document.getElementById('resetBtn').addEventListener('click', resetCalculator);
+
+    // Configure confidence level slider
+    const confidenceSlider = document.getElementById('confidenceLevel');
+    const confidenceLevelDisplay = document.getElementById('confidenceLevelDisplay');
+
+    confidenceSlider.addEventListener('input', function() {
+      confidenceLevelDisplay.textContent = this.value + '%';
+    });
+  }
+
+  // Calculate confidence interval and display results
+  function calculateConfidenceInterval() {
+    // Get input values
+    const ticker = document.getElementById('tickerSymbol').value.trim().toUpperCase();
+    const currentPrice = parseFloat(document.getElementById('currentPrice').value);
+    const historicalVolatility = parseFloat(document.getElementById('historicalVolatility').value) / 100; // Convert to decimal
+    const baseEstimate = parseFloat(document.getElementById('baseEstimate').value);
+    const timeHorizon = parseInt(document.getElementById('timeHorizon').value);
+    const estimationError = parseFloat(document.getElementById('estimationError').value) / 100; // Convert to decimal
+    const confidenceLevel = parseInt(document.getElementById('confidenceLevel').value) / 100; // Convert to decimal
+
+// Calculate projected annual return
+  const annualReturnRate = Math.pow(baseEstimate / currentPrice, 1 / (timeHorizon / 12)) - 1;
+
+  // Convert to monthly return rate
+  const monthlyReturnRate = Math.pow(1 + annualReturnRate, 1/12) - 1;
+
+  // Calculate total volatility (combining market volatility and estimation error)
+  // For estimation error, we convert it to a monthly equivalent volatility
+  const monthlyVolatility = historicalVolatility / Math.sqrt(12);
+  const monthlyEstimationError = estimationError / Math.sqrt(timeHorizon);
+  const totalMonthlyVolatility = Math.sqrt(Math.pow(monthlyVolatility, 2) + Math.pow(monthlyEstimationError, 2));
+
+  // Calculate z-score for the confidence level
+  const zScore = calculateZScore(confidenceLevel);
+
+  // Calculate confidence interval
+  const expectedFinalPrice = currentPrice * Math.pow(1 + monthlyReturnRate, timeHorizon);
+  const standardDeviation = expectedFinalPrice * totalMonthlyVolatility * Math.sqrt(timeHorizon);
+
+  const lowerBound = expectedFinalPrice - (zScore * standardDeviation);
+  const upperBound = expectedFinalPrice + (zScore * standardDeviation);
+
+  // Calculate probabilities for key scenarios
+  const probOfLoss = calculateNormalCDF((Math.log(currentPrice) - Math.log(expectedFinalPrice)) / (totalMonthlyVolatility * Math.sqrt(timeHorizon)));
+  const probOfTarget = 1 - calculateNormalCDF((Math.log(baseEstimate) - Math.log(expectedFinalPrice)) / (totalMonthlyVolatility * Math.sqrt(timeHorizon)));
+  const bigGainThreshold = currentPrice * 1.25; // 25% gain
+  const probOfBigGain = 1 - calculateNormalCDF((Math.log(bigGainThreshold) - Math.log(expectedFinalPrice)) / (totalMonthlyVolatility * Math.sqrt(timeHorizon)));
+
+  // Calculate bearish and bullish targets
+  const bearishTarget = Math.max(lowerBound, 0.01); // Prevent negative price
+  const bullishTarget = upperBound;
+
+  // Calculate percentage changes
+  const bearishChange = ((bearishTarget / currentPrice) - 1) * 100;
+  const baseCaseChange = ((baseEstimate / currentPrice) - 1) * 100;
+  const bullishChange = ((bullishTarget / currentPrice) - 1) * 100;
+
+  // Update result displays
+  document.getElementById('tickerDisplay').textContent = ticker;
+  document.getElementById('lowerBound').textContent = formatCurrency(bearishTarget);
+  document.getElementById('upperBound').textContent = formatCurrency(bullishTarget);
+  document.getElementById('confidenceIntervalDisplay').textContent = `${(confidenceLevel * 100).toFixed(0)}% Confidence Interval`;
+
+  document.getElementById('currentPriceDisplay').textContent = formatCurrency(currentPrice);
+  document.getElementById('baseEstimateDisplay').textContent = formatCurrency(baseEstimate);
+  document.getElementById('timeHorizonDisplay').textContent = `${timeHorizon} month${timeHorizon !== 1 ? 's' : ''}`;
+
+  document.getElementById('interpretationText').textContent = `Based on your inputs, there is a ${(confidenceLevel * 100).toFixed(0)}% probability that ${ticker}'s stock price will fall between ${formatCurrency(bearishTarget)} and ${formatCurrency(bullishTarget)} in the next ${timeHorizon} month${timeHorizon !== 1 ? 's' : ''}, accounting for both market volatility and estimation uncertainty.`;
+
+  // Update scenario table
+  document.getElementById('bearishTarget').textContent = formatCurrency(bearishTarget);
+  document.getElementById('bearishChange').textContent = `${bearishChange.toFixed(1)}%`;
+  document.getElementById('bearishProbability').textContent = `${((1 - confidenceLevel) / 2 * 100).toFixed(1)}%`;
+
+  document.getElementById('baseCaseTarget').textContent = formatCurrency(baseEstimate);
+  document.getElementById('baseCaseChange').textContent = `${baseCaseChange >= 0 ? '+' : ''}${baseCaseChange.toFixed(1)}%`;
+
+  document.getElementById('bullishTarget').textContent = formatCurrency(bullishTarget);
+  document.getElementById('bullishChange').textContent = `+${bullishChange.toFixed(1)}%`;
+  document.getElementById('bullishProbability').textContent = `${((1 - confidenceLevel) / 2 * 100).toFixed(1)}%`;
+
+  // Update probability displays
+  document.getElementById('probabilityOfLoss').textContent = `${(probOfLoss * 100).toFixed(1)}%`;
+  document.getElementById('probabilityOfTarget').textContent = `${(probOfTarget * 100).toFixed(1)}%`;
+  document.getElementById('probabilityOfBigGain').textContent = `${(probOfBigGain * 100).toFixed(1)}%`;
+
+  // Create analysis insights
+  createAnalysisInsights(
+    ticker,
+    currentPrice,
+    baseEstimate,
+    bearishTarget,
+    bullishTarget,
+    probOfLoss,
+    probOfTarget,
+    probOfBigGain,
+    historicalVolatility,
+    estimationError,
+    timeHorizon
+  );
+
+  // Create probability chart
+  createProbabilityChart(
+    currentPrice,
+    expectedFinalPrice,
+    standardDeviation,
+    lowerBound,
+    upperBound,
+    baseEstimate
+  );
+
+  // Show results card
+  document.getElementById('resultsCard').style.display = 'block';
+
+  // Scroll to results
+  setTimeout(() => {
+    document.getElementById('resultsCard').scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }, 300);
+}
+
+// Calculate Z-score from confidence level
+function calculateZScore(confidenceLevel) {
+  // For 95% confidence, z = 1.96
+  // For 99% confidence, z = 2.576
+  // For 90% confidence, z = 1.645
+  // For 80% confidence, z = 1.282
+
+  // We'll use an approximation for the inverse error function
+  const p = 1 - (1 - confidenceLevel) / 2;
+  return Math.sqrt(2) * inverseErf(2 * p - 1);
+}
+
+// Inverse error function approximation
+function inverseErf(x) {
+  // Approximation for the inverse error function
+  // Good for values between -0.99 and 0.99
+  const a = 0.147;
+  const signX = (x < 0) ? -1 : 1;
+  const absX = Math.abs(x);
+
+  const term1 = Math.pow((2 / (Math.PI * a)) + (Math.log(1 - absX) / 2), 0.5);
+  const term2 = Math.log(1 - absX) / a;
+
+  return signX * Math.sqrt(term1 - term2);
+}
+
+// Calculate normal cumulative distribution function
+function calculateNormalCDF(x) {
+  // Approximation of the normal CDF
+  const t = 1 / (1 + 0.2316419 * Math.abs(x));
+  const d = 0.3989423 * Math.exp(-x * x / 2);
+  const probability = d * t * (0.3193815 + t * (-0.3565638 + t * (1.781478 + t * (-1.821256 + t * 1.330274))));
+
+  if (x > 0) {
+    return 1 - probability;
+  } else {
+    return probability;
+  }
+}
+
+// Create analysis insights
+function createAnalysisInsights(
+  ticker,
+  currentPrice,
+  baseEstimate,
+  bearishTarget,
+  bullishTarget,
+  probOfLoss,
+  probOfTarget,
+  probOfBigGain,
+  volatility,
+  estimationError,
+  timeHorizon
+) {
+  const insightsDiv = document.getElementById('analysisInsights');
+  insightsDiv.innerHTML = '';
+
+  // Create insights based on parameters
+  const insights = [];
+
+  // Upside/downside insight
+  const upside = bullishTarget - currentPrice;
+  const downside = currentPrice - bearishTarget;
+  const riskRewardRatio = upside / downside;
+
+  if (riskRewardRatio >= 2) {
+    insights.push(`
+      <div class="analysis-highlight">
+        <h5><i class="bi bi-graph-up-arrow text-success me-2"></i>Favorable Risk-Reward Profile</h5>
+        <p>With an upside potential of ${formatCurrency(upside)} and downside risk of ${formatCurrency(downside)}, ${ticker} offers a risk-reward ratio of ${riskRewardRatio.toFixed(1)}:1. This favorable profile suggests the potential reward outweighs the risk.</p>
+      </div>
+    `);
+  } else if (riskRewardRatio < 1) {
+    insights.push(`
+      <div class="analysis-highlight">
+        <h5><i class="bi bi-exclamation-triangle text-danger me-2"></i>Unfavorable Risk-Reward Profile</h5>
+        <p>With an upside potential of ${formatCurrency(upside)} and downside risk of ${formatCurrency(downside)}, ${ticker} has a risk-reward ratio of ${riskRewardRatio.toFixed(1)}:1. The downside risk exceeds the potential upside, suggesting caution.</p>
+      </div>
+    `);
+  }
+
+  // Volatility insight
+  if (volatility >= 0.4) {
+    insights.push(`
+      <div class="analysis-highlight">
+        <h5><i class="bi bi-arrow-left-right text-warning me-2"></i>High Volatility Alert</h5>
+        <p>${ticker}'s annual volatility of ${(volatility * 100).toFixed(1)}% is significantly higher than average, resulting in a wide confidence interval. Consider smaller position sizes for this stock to manage risk.</p>
+      </div>
+    `);
+  }
+
+  // Probability insight
+  if (probOfTarget >= 0.7) {
+    insights.push(`
+      <div class="analysis-highlight">
+        <h5><i class="bi bi-check-circle text-success me-2"></i>High Probability of Reaching Target</h5>
+        <p>There is a ${(probOfTarget * 100).toFixed(1)}% probability of ${ticker} reaching your target price of ${formatCurrency(baseEstimate)}. This high probability suggests confidence in your valuation thesis.</p>
+      </div>
+    `);
+  } else if (probOfTarget <= 0.3) {
+    insights.push(`
+      <div class="analysis-highlight">
+        <h5><i class="bi bi-x-circle text-danger me-2"></i>Low Probability of Reaching Target</h5>
+        <p>There is only a ${(probOfTarget * 100).toFixed(1)}% probability of ${ticker} reaching your target price of ${formatCurrency(baseEstimate)}. Consider reviewing your valuation assumptions or looking for investments with higher probability outcomes.</p>
+      </div>
+    `);
+  }
+
+  // Loss probability insight
+  if (probOfLoss >= 0.4) {
+    insights.push(`
+      <div class="analysis-highlight">
+        <h5><i class="bi bi-shield-exclamation text-warning me-2"></i>Significant Downside Risk</h5>
+        <p>There is a ${(probOfLoss * 100).toFixed(1)}% probability of ${ticker} falling below its current price of ${formatCurrency(currentPrice)}. Consider implementing risk management strategies such as position sizing or stop losses.</p>
+      </div>
+    `);
+  } else if (probOfLoss <= 0.2) {
+    insights.push(`
+      <div class="analysis-highlight">
+        <h5><i class="bi bi-shield-check text-success me-2"></i>Limited Downside Risk</h5>
+        <p>With only a ${(probOfLoss * 100).toFixed(1)}% probability of falling below the current price, ${ticker} shows limited downside risk based on your inputs. This favorable risk profile suggests a potentially attractive investment opportunity.</p>
+      </div>
+    `);
+  }
+
+  // Time horizon insight
+  if (timeHorizon >= 24) {
+    insights.push(`
+      <div class="analysis-highlight">
+        <h5><i class="bi bi-clock-history text-primary me-2"></i>Long-Term Investment Perspective</h5>
+        <p>Your ${timeHorizon}-month time horizon suggests a long-term investment approach. Be aware that longer time horizons naturally result in wider confidence intervals due to increasing uncertainty over time.</p>
+      </div>
+    `);
+  }
+
+  // Estimation error insight
+  if (estimationError >= 0.25) {
+    insights.push(`
+      <div class="analysis-highlight">
+        <h5><i class="bi bi-question-circle text-warning me-2"></i>High Estimation Uncertainty</h5>
+        <p>Your ${(estimationError * 100).toFixed(0)}% estimation error suggests significant uncertainty in your valuation model. Consider gathering more information to refine your estimate or diversifying across multiple investments to manage this uncertainty.</p>
+      </div>
+    `);
+  }
+
+  // Add insights to the DOM
+  if (insights.length > 0) {
+    insightsDiv.innerHTML = insights.join('');
+  } else {
+    insightsDiv.innerHTML = `
+      <div class="alert alert-info">
+        <p class="mb-0">Analysis insights will appear here based on your input parameters and calculation results.</p>
+      </div>
+    `;
+  }
+}
+
+// Create probability distribution chart
+function createProbabilityChart(currentPrice, expectedPrice, standardDeviation, lowerBound, upperBound, baseEstimate) {
+  const ctx = document.getElementById('probabilityChart').getContext('2d');
+
+  // Destroy existing chart if it exists
+  if (window.probabilityChart instanceof Chart) {
+    window.probabilityChart.destroy();
+  }
+
+  // Generate data points for the normal distribution curve
+  const data = [];
+  const labels = [];
+
+  // Create 50 points on the curve
+  const min = Math.max(expectedPrice - 3 * standardDeviation, 0);
+  const max = expectedPrice + 3 * standardDeviation;
+  const step = (max - min) / 50;
+
+  for (let i = 0; i <= 50; i++) {
+    const x = min + (step * i);
+    labels.push(formatCurrency(x));
+
+    // Normal distribution formula
+    const y = (1 / (standardDeviation * Math.sqrt(2 * Math.PI))) *
+              Math.exp(-0.5 * Math.pow((x - expectedPrice) / standardDeviation, 2));
+
+    data.push(y);
+  }
+
+  // Create chart
+  window.probabilityChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: labels,
+      datasets: [{
+        label: 'Probability Density',
+        data: data,
+        borderColor: 'rgba(75, 192, 192, 1)',
+        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+        fill: true,
+        tension: 0.4,
+        pointRadius: 0
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        y: {
+          beginAtZero: true,
+          title: {
+            display: true,
+            text: 'Probability Density'
+          },
+          ticks: {
+            display: false
+          }
+        },
+        x: {
+          title: {
+            display: true,
+            text: 'Stock Price ($)'
+          },
+          ticks: {
+            callback: function(value, index) {
+              // Show fewer labels for readability
+              return index % 10 === 0 ? labels[index] : '';
+            }
+          }
+        }
+      },
+      plugins: {
+        tooltip: {
+          callbacks: {
+            title: function(tooltipItems) {
+              return 'Price: ' + tooltipItems[0].label;
+            },
+            label: function(context) {
+              return 'Relative Probability: ' + (context.raw * standardDeviation * 100).toFixed(2);
+            }
+          }
+        }
+      }
+    }
+  });
+
+  // Add confidence interval overlay
+  const chartCanvas = document.getElementById('probabilityChart');
+  const chartContainer = chartCanvas.parentElement;
+  const confidenceRange = document.getElementById('confidenceRangeOverlay');
+
+  // Position the confidence interval overlay
+  const chartRect = chartCanvas.getBoundingClientRect();
+  const containerRect = chartContainer.getBoundingClientRect();
+
+  // Calculate positions
+  const xMin = min;
+  const xMax = max;
+  const xRange = xMax - xMin;
+
+  const leftPos = ((lowerBound - xMin) / xRange) * 100;
+  const rightPos = ((upperBound - xMin) / xRange) * 100;
+
+  // Set the position of the confidence interval overlay
+  confidenceRange.style.left = leftPos + '%';
+  confidenceRange.style.width = (rightPos - leftPos) + '%';
+
+  // Add markers for current price and base estimate
+  addPriceMarker(chartContainer, 'Current', currentPrice, xMin, xRange, 'rgba(255, 99, 132, 0.8)');
+  addPriceMarker(chartContainer, 'Target', baseEstimate, xMin, xRange, 'rgba(54, 162, 235, 0.8)');
+}
+
+// Add a price marker to the chart
+function addPriceMarker(container, label, price, minPrice, priceRange, color) {
+  // Remove any existing marker with the same label
+  const existingMarker = container.querySelector(`.probability-marker[data-label="${label}"]`);
+  if (existingMarker) {
+    existingMarker.remove();
+  }
+
+  // Create marker
+  const marker = document.createElement('div');
+  marker.className = 'probability-marker';
+  marker.style.left = ((price - minPrice) / priceRange) * 100 + '%';
+  marker.style.height = '100%';
+  marker.style.backgroundColor = color;
+  marker.setAttribute('data-label', label);
+
+  container.appendChild(marker);
+}
+
+// Reset calculator form
+function resetCalculator() {
+  document.getElementById('tickerSymbol').value = '';
+  document.getElementById('currentPrice').value = '';
+  document.getElementById('historicalVolatility').value = '25';
+  document.getElementById('baseEstimate').value = '';
+  document.getElementById('timeHorizon').value = '12';
+  document.getElementById('estimationError').value = '15';
+  document.getElementById('confidenceLevel').value = '95';
+  document.getElementById('confidenceLevelDisplay').textContent = '95%';
+
+  // Hide results
+  document.getElementById('resultsCard').style.display = 'none';
+}
+
+// Setup share popup functionality
+function setupSharePopup() {
+  const shareBtn = document.getElementById('shareResultsBtn');
+
+  if (shareBtn) {
+    shareBtn.addEventListener('click', function() {
+      const popup = document.getElementById('sharePopup');
+      popup.style.display = popup.style.display === 'none' ? 'block' : 'none';
+
+      // Close popup when clicking outside
+      document.addEventListener('click', function hidePopup(e) {
+        if (!e.target.closest('#sharePopup') && e.target !== shareBtn) {
+          popup.style.display = 'none';
+          document.removeEventListener('click', hidePopup);
+        }
+      });
+    });
+  }
+}
+
+// Helper function to format currency
+function formatCurrency(value) {
+  return '$' + value.toLocaleString('en-US', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  });
+}
+
+// Calculator Navigation Template
+document.addEventListener('DOMContentLoaded', function () {
+  // Create a template div
+  const calcNav = document.createElement('div');
+  calcNav.className = 'calculator-nav bg-light py-3 border-bottom';
+  calcNav.style.display = 'none'; // Hide initially
+
+  calcNav.innerHTML = `
+    <div class="container">
+      <h5 class="text-primary mb-2">Explore Our Other Financial Calculators:</h5>
+      <div class="row g-2">
+        <div class="col-md-3 col-sm-6">
+          <a href="index.html" class="btn btn-outline-primary btn-sm w-100">Market Cap Calculator</a>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <a href="position-sizing.html" class="btn btn-outline-primary btn-sm w-100">Position Sizing Calculator</a>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <a href="tax-harvesting.html" class="btn btn-outline-primary btn-sm w-100">Tax-Efficient Harvesting</a>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <a href="sector-balance.html" class="btn btn-outline-primary btn-sm w-100">Sector Balance Optimizer</a>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <a href="stock-split.html" class="btn btn-outline-primary btn-sm w-100">Stock Split Impact</a>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <a href="drip-breakeven.html" class="btn btn-outline-primary btn-sm w-100">Dividend Reinvestment</a>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <a href="valuation-confidence.html" class="btn btn-outline-primary btn-sm w-100">Valuation Confidence</a>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <a href="ma-crossover.html" class="btn btn-outline-primary btn-sm w-100">MA Crossover Backtester</a>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <a href="buyback-impact.html" class="btn btn-outline-primary btn-sm w-100">Share Buyback Impact</a>
+        </div>
+      </div>
+      <div class="text-end mt-2">
+        <button class="btn btn-sm btn-link text-muted" id="hideCalcNavBtn">Hide</button>
+      </div>
+    </div>
+  `;
+
+  // Add toggle button
+  const toggleBtn = document.createElement('button');
+  toggleBtn.className = 'btn btn-sm btn-primary position-fixed';
+  toggleBtn.id = 'showCalcNavBtn';
+  toggleBtn.innerHTML = '<i class="bi bi-calculator me-1"></i> More Calculators';
+  toggleBtn.style.bottom = '20px';
+  toggleBtn.style.right = '20px';
+  toggleBtn.style.zIndex = '1000';
+  toggleBtn.style.borderRadius = '30px';
+  toggleBtn.style.padding = '8px 16px';
+
+  // Add to document
+  document.body.appendChild(calcNav);
+  document.body.appendChild(toggleBtn);
+
+  // Show/hide functionality
+  document.getElementById('showCalcNavBtn').addEventListener('click', function() {
+    calcNav.style.display = 'block';
+    this.style.display = 'none';
+  });
+
+  document.getElementById('hideCalcNavBtn').addEventListener('click', function() {
+    calcNav.style.display = 'none';
+    document.getElementById('showCalcNavBtn').style.display = 'block';
+  });
+});
+</script>
+</body>
+</html>
