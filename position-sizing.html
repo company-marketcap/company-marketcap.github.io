@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Position Sizing Calculator - Risk-Based Stock Position Management</title>
+  <meta content="ca-pub-6247788451623601" name="google-adsense-account">
+  <meta name="google-adsense-account" content="ca-pub-5426315045205785">
+  <meta content="Calculate optimal stock position sizes based on your risk tolerance, account size, and stop-loss strategy. Manage portfolio risk effectively." name="description">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <link href="css/position-sizing.css" rel="stylesheet">
+</head>
+<body>
+<div id="header"></div>
+
+<!-- Hero Section -->
+<header class="hero-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="hero-content">
+          <span class="badge bg-danger mb-2 p-2">RISK MANAGEMENT</span>
+          <h1 class="display-4 fw-bold mb-3">Position Sizing Calculator</h1>
+          <p class="lead mb-4">Calculate optimal stock position sizes based on your risk tolerance, account size, and stop-loss strategy. The secret weapon professional traders use to protect their capital.</p>
+          <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-primary btn-lg" href="#calculator">Try Free Calculator <i class="bi bi-arrow-right-circle ms-2"></i></a>
+            <a class="btn btn-outline-secondary btn-lg" href="#features">Learn More</a>
+          </div>
+          <div class="mt-4 usage-stats">
+            <span class="badge bg-light text-dark p-2 me-2">
+              <i class="bi bi-shield-check me-1"></i> Used by professional traders
+            </span>
+            <span class="badge bg-light text-dark p-2">
+              <i class="bi bi-graph-down me-1"></i> Reduce drawdowns by 30-40%
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="hero-image position-relative">
+          <img alt="Position Sizing Calculator Preview" class="img-fluid rounded shadow" src="/img/position-sizing-preview.png">
+          <div class="free-badge position-absolute top-0 end-0 bg-success text-white p-3 rounded-circle m-3">
+            <strong>FREE</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Calculator Section -->
+<section class="calculator py-5 bg-light" id="calculator">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="h2 fw-bold">Position Sizing Calculator</h2>
+      <p class="lead text-muted">Determine the optimal number of shares to buy based on your risk parameters</p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="card shadow border-0">
+          <div class="card-header bg-primary text-white py-3">
+            <div class="d-flex justify-content-between align-items-center">
+              <h2 class="h4 mb-0"><i class="bi bi-calculator me-2"></i> Risk-Based Position Sizing</h2>
+              <span class="badge bg-success py-2 px-3">FREE</span>
+            </div>
+          </div>
+          <div class="card-body p-4">
+            <div class="alert alert-info mb-4">
+              <div class="d-flex">
+                <div class="me-3">
+                  <i class="bi bi-info-circle-fill fs-4"></i>
+                </div>
+                <div>
+                  <p class="mb-0">Enter your account value, risk tolerance, and stock information to calculate the optimal position size. All calculations are performed locally in your browser — your data remains private.</p>
+                </div>
+              </div>
+            </div>
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="p-3 h-100 border rounded bg-white shadow-sm">
+                  <h3 class="h5 mb-3 border-bottom pb-2"><i class="bi bi-wallet me-2"></i>Account Parameters</h3>
+                  <div class="mb-3">
+                    <label class="form-label" for="accountValue">Total Account Value (USD)</label>
+                    <div class="input-group">
+                      <span class="input-group-text">$</span>
+                      <input class="form-control" id="accountValue" min="1000" type="number" value="100000">
+                    </div>
+                    <div class="form-text">Your total investment capital</div>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="riskPercentage">Risk Per Trade (%)</label>
+                    <div class="input-group">
+                      <input class="form-control" id="riskPercentage" max="10" min="0.1" step="0.1" type="number" value="1">
+                      <span class="input-group-text">%</span>
+                    </div>
+                    <div class="form-text">Maximum percentage of capital to risk on this trade</div>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="maxPositionPercentage">Maximum Position Size (%)</label>
+                    <div class="input-group">
+                      <input class="form-control" id="maxPositionPercentage" max="100" min="1" step="1" type="number" value="15">
+                      <span class="input-group-text">%</span>
+                    </div>
+                    <div class="form-text">Maximum percentage of account for any single position</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="p-3 h-100 border rounded bg-white shadow-sm">
+                  <h3 class="h5 mb-3 border-bottom pb-2"><i class="bi bi-graph-up-arrow me-2"></i>Trade Parameters</h3>
+                  <div class="mb-3">
+                    <label class="form-label" for="entryPrice">Entry Price (USD)</label>
+                    <div class="input-group">
+                      <span class="input-group-text">$</span>
+                      <input class="form-control" id="entryPrice" min="0.01" step="0.01" type="number" value="50.00">
+                    </div>
+                    <div class="form-text">Expected purchase price per share</div>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="stopLossPrice">Stop-Loss Price (USD)</label>
+                    <div class="input-group">
+                      <span class="input-group-text">$</span>
+                      <input class="form-control" id="stopLossPrice" min="0.01" step="0.01" type="number" value="45.00">
+                    </div>
+                    <div class="form-text">Price at which you'll exit if trade goes against you</div>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="commissionFee">Commission & Fees (USD)</label>
+                    <div class="input-group">
+                      <span class="input-group-text">$</span>
+                      <input class="form-control" id="commissionFee" min="0" step="0.01" type="number" value="5.00">
+                    </div>
+                    <div class="form-text">Transaction costs (buy + sell combined)</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-center mt-4">
+              <button class="btn btn-primary btn-lg px-5 py-3 shadow-sm" id="calculateBtn">
+                <i class="bi bi-calculator me-2"></i>Calculate Position Size
+              </button>
+              <p class="text-muted mt-2 small">100% Free • No signup required • Instant results</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Results Section -->
+    <div class="row justify-content-center mt-4">
+      <div class="col-lg-10">
+        <div class="card shadow border-0" id="resultsCard" style="display:none;">
+          <div class="card-header bg-success text-white py-3">
+            <div class="d-flex justify-content-between align-items-center">
+              <h3 class="h4 mb-0"><i class="bi bi-check-circle me-2"></i>Position Sizing Results</h3>
+              <button class="btn btn-outline-light btn-sm" onclick="window.print()">
+                <i class="bi bi-printer me-1"></i> Print
+              </button>
+            </div>
+          </div>
+          <div class="card-body p-4">
+            <div class="row g-4 mb-4">
+              <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                  <div class="card-header bg-primary bg-opacity-10">
+                    <h4 class="h5 mb-0 text-primary"><i class="bi bi-hash me-2"></i>Recommended Position</h4>
+                  </div>
+                  <div class="card-body">
+                    <div class="row mb-3">
+                      <div class="col-7 text-muted">Optimal Share Count:</div>
+                      <div class="col-5 text-end fw-bold fs-5" id="optimalShares">0</div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-7 text-muted">Position Value (USD):</div>
+                      <div class="col-5 text-end fw-bold" id="positionValue">$0</div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-7 text-muted">Percentage of Account:</div>
+                      <div class="col-5 text-end fw-bold" id="accountPercentage">0%</div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-7 text-muted">Position Adjusted For Fees:</div>
+                      <div class="col-5 text-end fw-bold" id="adjustedPosition">$0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                  <div class="card-header bg-danger bg-opacity-10">
+                    <h4 class="h5 mb-0 text-danger"><i class="bi bi-exclamation-triangle me-2"></i>Risk Analysis</h4>
+                  </div>
+                  <div class="card-body">
+                    <div class="row mb-3">
+                      <div class="col-7 text-muted">Risk Amount (USD):</div>
+                      <div class="col-5 text-end fw-bold fs-5" id="riskAmount">$0</div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-7 text-muted">Loss Per Share:</div>
+                      <div class="col-5 text-end fw-bold" id="lossPerShare">$0</div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-7 text-muted">Stop-Loss Percentage:</div>
+                      <div class="col-5 text-end fw-bold" id="stopLossPercentage">0%</div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-7 text-muted">R-Multiple Unit Size:</div>
+                      <div class="col-5 text-end fw-bold" id="rMultiple">$0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card border-0 shadow-sm mt-4 mb-4">
+              <div class="card-header bg-primary bg-opacity-10">
+                <h4 class="h5 mb-0 text-primary"><i class="bi bi-bar-chart me-2"></i>Position Size Visualization</h4>
+              </div>
+              <div class="card-body p-3">
+                <canvas height="250" id="positionChart" width="400"></canvas>
+              </div>
+            </div>
+
+            <div class="d-flex mt-4 mb-2">
+              <div class="me-3">
+                <i class="bi bi-shield-check text-success fs-3"></i>
+              </div>
+              <div>
+                <h5 class="mb-1">Risk Management Disclosure</h5>
+                <p class="mb-0 text-muted">These calculations are based on your inputs and standard risk management principles. The position size is optimized to limit your potential loss to your specified risk tolerance. This calculator is provided for educational purposes only and should not be considered as financial advice.</p>
+              </div>
+            </div>
+
+            <div class="text-center mt-4">
+              <button class="btn btn-outline-primary me-2" onclick="window.location.href='#calculator'">
+                <i class="bi bi-arrow-repeat me-1"></i> Recalculate
+              </button>
+              <button class="btn btn-outline-success" id="shareResultsBtn">
+                <i class="bi bi-share me-1"></i> Share Results
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Grid Section -->
+<section class="features py-5" id="features">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="badge bg-primary mb-2 p-2">PROFESSIONAL FEATURES</span>
+      <h2 class="fw-bold">Why Position Sizing Matters</h2>
+      <p class="lead text-muted mx-auto" style="max-width: 700px;">Professional traders know that position sizing is one of the most critical aspects of successful trading</p>
+    </div>
+
+    <div class="row g-4 mb-5">
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 hover-lift">
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center mb-3">
+              <div class="feature-icon-wrapper bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                <i class="bi bi-shield-check feature-icon text-primary"></i>
+              </div>
+              <h3 class="card-title h5 mb-0">Risk Management</h3>
+            </div>
+            <p class="card-text text-muted">Properly sized positions ensure that no single trade can significantly damage your portfolio, allowing you to stay in the game even during drawdowns.</p>
+            <div class="mt-3">
+              <span class="badge bg-success me-2">Free</span>
+              <span class="badge bg-light text-dark">Professional approach</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 hover-lift">
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center mb-3">
+              <div class="feature-icon-wrapper bg-success bg-opacity-10 p-3 rounded-circle me-3">
+                <i class="bi bi-graph-up feature-icon text-success"></i>
+              </div>
+              <h3 class="card-title h5 mb-0">Consistency</h3>
+            </div>
+            <p class="card-text text-muted">A systematic approach to position sizing creates consistency in your trading, reducing emotional decisions and promoting disciplined investing.</p>
+            <div class="mt-3">
+              <span class="badge bg-success me-2">Free</span>
+              <span class="badge bg-light text-dark">Systematic approach</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 hover-lift">
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center mb-3">
+              <div class="feature-icon-wrapper bg-info bg-opacity-10 p-3 rounded-circle me-3">
+                <i class="bi bi-arrow-repeat feature-icon text-info"></i>
+              </div>
+              <h3 class="card-title h5 mb-0">Compounding</h3>
+            </div>
+            <p class="card-text text-muted">Optimal position sizing helps preserve capital during drawdowns while allowing your account to grow exponentially during winning periods.</p>
+            <div class="mt-3">
+              <span class="badge bg-success me-2">Free</span>
+              <span class="badge bg-light text-dark">Long-term growth</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-5">
+      <a class="btn btn-primary btn-lg px-5" href="#calculator">Try the Position Sizing Calculator <i class="bi bi-arrow-right ms-2"></i></a>
+      <p class="text-muted mt-2">No sign-up • No credit card • 100% free</p>
+    </div>
+  </div>
+</section>
+
+<!-- Insights Section -->
+<section class="insights py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="badge bg-secondary mb-2 p-2">EXPERT INSIGHTS</span>
+      <h2 class="fw-bold">Position Sizing Strategies</h2>
+      <p class="lead text-muted mx-auto" style="max-width: 700px;">Different approaches professional traders use to size their positions</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body p-4">
+            <h3 class="h4 text-primary mb-4"><i class="bi bi-percent me-2"></i>Common Position Sizing Methods</h3>
+            <p>There are several approaches to position sizing, each with its own strengths. Our calculator focuses on the fixed percentage risk method, which is widely regarded as one of the most effective approaches.</p>
+
+            <div class="table-responsive mt-4">
+              <table class="table table-bordered">
+                <thead class="table-light">
+                <tr>
+                  <th>Method</th>
+                  <th>Description</th>
+                  <th>Best For</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td><strong>Fixed Dollar Amount</strong></td>
+                  <td>Invest the same dollar amount in each position</td>
+                  <td>Beginners, small accounts</td>
+                </tr>
+                <tr>
+                  <td><strong>Fixed Percentage</strong></td>
+                  <td>Invest the same percentage of account in each position</td>
+                  <td>Long-term investors</td>
+                </tr>
+                <tr>
+                  <td><strong>Fixed Risk Percentage</strong></td>
+                  <td>Risk the same percentage of account on each trade</td>
+                  <td>Active traders, professionals</td>
+                </tr>
+                <tr>
+                  <td><strong>Volatility-Based</strong></td>
+                  <td>Size position based on asset's volatility</td>
+                  <td>Diversified portfolios</td>
+                </tr>
+                <tr>
+                  <td><strong>Kelly Criterion</strong></td>
+                  <td>Mathematical approach based on win rate and risk/reward</td>
+                  <td>Experienced traders with statistical edge</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body p-4">
+            <h3 class="h4 text-primary mb-4"><i class="bi bi-graph-up-arrow me-2"></i>Fixed Risk Percentage Method</h3>
+            <p>Our calculator implements the Fixed Risk Percentage method, which is favored by many professional traders because it focuses on the potential loss rather than the position size.</p>
+
+            <h4 class="h5 mt-4 mb-3">Key Advantages</h4>
+            <div class="d-flex mb-3">
+              <div class="me-3 text-primary">
+                <i class="bi bi-shield-fill-check fs-4"></i>
+              </div>
+              <div>
+                <h5 class="h6 mb-1">Protects Against Catastrophic Losses</h5>
+                <p class="text-muted mb-0">By limiting risk to a small percentage of your account on each trade</p>
+              </div>
+            </div>
+
+            <div class="d-flex mb-3">
+              <div class="me-3 text-primary">
+                <i class="bi bi-currency-exchange fs-4"></i>
+              </div>
+              <div>
+                <h5 class="h6 mb-1">Adapts to Market Conditions</h5>
+                <p class="text-muted mb-0">Position size automatically adjusts based on volatility and stop placement</p>
+              </div>
+            </div>
+
+            <div class="d-flex mb-3">
+              <div class="me-3 text-primary">
+                <i class="bi bi-speedometer fs-4"></i>
+              </div>
+              <div>
+                <h5 class="h6 mb-1">Scales With Account Growth</h5>
+                <p class="text-muted mb-0">Automatically increases position sizes as your account grows</p>
+              </div>
+            </div>
+
+            <div class="d-flex mb-3">
+              <div class="me-3 text-primary">
+                <i class="bi bi-emoji-smile fs-4"></i>
+              </div>
+              <div>
+                <h5 class="h6 mb-1">Reduces Emotional Trading</h5>
+                <p class="text-muted mb-0">Provides a systematic framework for sizing all positions</p>
+              </div>
+            </div>
+
+            <div class="d-flex">
+              <div class="me-3 text-primary">
+                <i class="bi bi-award fs-4"></i>
+              </div>
+              <div>
+                <h5 class="h6 mb-1">Maximizes Reward/Risk Efficiency</h5>
+                <p class="text-muted mb-0">Takes larger positions when risk is lower relative to potential reward</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-5">
+      <a class="btn btn-outline-primary" href="#calculator">Use Our Free Calculator <i class="bi bi-calculator ms-2"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="badge bg-primary mb-2 p-2">COMMON QUESTIONS</span>
+      <h2 class="fw-bold">Frequently Asked Questions</h2>
+      <p class="lead text-muted mx-auto" style="max-width: 700px;">Everything you need to know about position sizing</p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="card border-0 shadow-sm">
+          <div class="card-body p-0">
+            <div class="accordion accordion-flush" id="faqAccordion">
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button" data-bs-target="#faq1" data-bs-toggle="collapse" type="button">
+                    <i class="bi bi-question-circle text-primary me-2"></i> What percentage of my account should I risk per trade?
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse show" data-bs-parent="#faqAccordion" id="faq1">
+                  <div class="accordion-body">
+                    <p>Most professional traders recommend risking between 0.5% and 2% of your total account value on any single trade. Beginners should stay closer to 0.5%, while experienced traders might go up to 2% in certain situations.</p>
+                    <p class="mb-0 text-muted">The key principle is that even a string of consecutive losses (which happens to every trader) should not significantly deplete your trading capital. By risking 1% per trade, you could withstand 10 consecutive losses and still retain 90% of your capital.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-target="#faq2" data-bs-toggle="collapse" type="button">
+                    <i class="bi bi-question-circle text-primary me-2"></i> How do I determine where to place my stop-loss?
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq2">
+                  <div class="accordion-body">
+                    <p>Stop-loss placement should be based on technical analysis rather than a desired position size. Common approaches include:</p>
+                    <ul>
+                      <li><strong>Technical levels:</strong> Place stops below support levels for long positions or above resistance for shorts</li>
+                      <li><strong>Volatility-based:</strong> Use a multiple of Average True Range (ATR) to set stops outside normal price fluctuations</li>
+                      <li><strong>Percentage-based:</strong> Use a fixed percentage below/above entry price (though this is less ideal than using technical levels)</li>
+                    </ul>
+                    <p class="mb-0 text-muted">Once you've determined your stop-loss level based on technical factors, our calculator will tell you the appropriate position size to maintain your risk parameters.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-target="#faq3" data-bs-toggle="collapse" type="button">
+                    <i class="bi bi-question-circle text-primary me-2"></i> What is the "R-Multiple" shown in the calculator results?
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq3">
+                  <div class="accordion-body">
+                    <p>The R-Multiple is a concept popularized by trading psychologist Dr. Van Tharp. "R" represents your risk on a trade - the amount you're willing to lose if your stop-loss is hit.</p>
+                    <p>This creates a standardized unit of risk which allows you to:</p>
+                    <ul>
+                      <li>Measure all trades in terms of risk (e.g., "This trade made 3R" means it profited 3 times the initial risk)</li>
+                      <li>Compare the performance of different trading strategies</li>
+                      <li>Think about risk-reward ratios more clearly</li>
+                    </ul>
+                    <p class="mb-0 text-muted">Our calculator shows your R value in dollar terms, which represents the amount you're risking on the trade. A trade that profits $3,000 with an R value of $1,000 would be considered a "3R winner."</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+<button class="accordion-button collapsed" data-bs-target="#faq3" data-bs-toggle="collapse" type="button">
+                    <i class="bi bi-question-circle text-primary me-2"></i> What is the "R-Multiple" shown in the calculator results?
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq3">
+                  <div class="accordion-body">
+                    <p>The R-Multiple is a concept popularized by trading psychologist Dr. Van Tharp. "R" represents your risk on a trade - the amount you're willing to lose if your stop-loss is hit.</p>
+                    <p>This creates a standardized unit of risk which allows you to:</p>
+                    <ul>
+                      <li>Measure all trades in terms of risk (e.g., "This trade made 3R" means it profited 3 times the initial risk)</li>
+                      <li>Compare the performance of different trading strategies</li>
+                      <li>Think about risk-reward ratios more clearly</li>
+                    </ul>
+                    <p class="mb-0 text-muted">Our calculator shows your R value in dollar terms, which represents the amount you're risking on the trade. A trade that profits $3,000 with an R value of $1,000 would be considered a "3R winner."</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-target="#faq4" data-bs-toggle="collapse" type="button">
+                    <i class="bi bi-question-circle text-primary me-2"></i> Why might the calculator recommend fewer shares than I want to buy?
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq4">
+                  <div class="accordion-body">
+                    <p>The calculator prioritizes your risk management parameters over other considerations. Common reasons for a smaller position size recommendation include:</p>
+                    <ul>
+                      <li><strong>Wide stop-loss:</strong> If your stop is far from your entry price, each share carries more risk</li>
+                      <li><strong>Low risk percentage:</strong> If you've set a conservative risk level (e.g., 0.5% of account)</li>
+                      <li><strong>Maximum position size limit:</strong> The calculator won't exceed your specified maximum position size percentage</li>
+                    </ul>
+                    <p class="mb-0 text-muted">Remember that position sizing is about protecting your capital first and maximizing gains second. If you want to take a larger position, consider if you can use a tighter stop-loss rather than increasing your risk percentage.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-target="#faq5" data-bs-toggle="collapse" type="button">
+                    <i class="bi bi-question-circle text-primary me-2"></i> Should I always use the exact position size recommended?
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq5">
+                  <div class="accordion-body">
+                    <p>The calculator provides mathematically optimal position sizes based on your inputs, but you may need to adjust for practical considerations:</p>
+                    <ul>
+                      <li><strong>Round to whole shares:</strong> Most brokers only allow whole share purchases (our calculator rounds down)</li>
+                      <li><strong>Board lot constraints:</strong> Some exchanges require trading in specific lot sizes</li>
+                      <li><strong>Liquidity concerns:</strong> For less liquid stocks, you may need to take smaller positions</li>
+                      <li><strong>Portfolio balance:</strong> Consider overall sector exposure and correlation with existing positions</li>
+                    </ul>
+                    <p class="mb-0 text-muted">It's usually best to round down to a slightly smaller position rather than rounding up and exceeding your predetermined risk tolerance.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-target="#faq6" data-bs-toggle="collapse" type="button">
+                    <i class="bi bi-question-circle text-primary me-2"></i> How do options and leveraged products affect position sizing?
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq6">
+                  <div class="accordion-body">
+                    <p>Options, futures, and other leveraged products require special consideration for position sizing:</p>
+                    <ul>
+                      <li><strong>Higher volatility:</strong> Leveraged products often require wider stops relative to price</li>
+                      <li><strong>Inherent leverage:</strong> Each contract controls more underlying value than its price</li>
+                      <li><strong>Time decay:</strong> Options have additional risk factors not present in stocks</li>
+                    </ul>
+                    <p class="mb-0 text-muted">For options trading, you can still use our calculator, but use the option premium as the entry price and your maximum acceptable loss per contract as the distance to your stop. Most professionals recommend using smaller risk percentages (0.5-1%) when trading leveraged products.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <p class="lead mb-3">Still have questions about position sizing?</p>
+          <a class="btn btn-outline-primary" href="contact.html">Contact Our Team <i class="bi bi-arrow-right ms-2"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div id="footer"></div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/position-sizing.js"></script>
+<script src="js/include.js"></script>
+</body>
+</html>

@@ -1,0 +1,2042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Portfolio Sector Balance Optimizer - Optimize Your Investment Diversification</title>
+  <meta content="ca-pub-6247788451623601" name="google-adsense-account">
+  <meta content="ca-pub-5426315045205785" name="google-adsense-account">
+  <meta content="Analyze and optimize your portfolio's sector diversification. Compare with market benchmarks and get rebalancing recommendations with our free tool." name="description">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+
+  <style>
+    /* Sector Balance Optimizer Specific Styles */
+    .hero-section {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e2e6ff 100%);
+    }
+
+    .sector-tag {
+      display: inline-block;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .ticker-badge {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 1rem;
+      margin-right: 0.25rem;
+    }
+
+    .holdings-table th, .holdings-table td {
+      vertical-align: middle;
+    }
+
+    .slider-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .slider-container input[type="range"] {
+      flex-grow: 1;
+      margin: 0 1rem;
+    }
+
+    .sector-balance-chart-container {
+      height: 400px;
+      position: relative;
+    }
+
+    .delete-holding-btn {
+      background: none;
+      border: none;
+      color: #dc3545;
+      padding: 0;
+      font-size: 1.1rem;
+    }
+
+    .alert-warning {
+      background-color: #fff3cd;
+      border-color: #ffecb5;
+    }
+
+    .target-deviation {
+      font-size: 0.8rem;
+      padding: 0.1rem 0.4rem;
+      border-radius: 2px;
+    }
+
+    .deviation-high {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+
+    .deviation-medium {
+      background-color: #fff3cd;
+      color: #856404;
+    }
+
+    .deviation-low {
+      background-color: #d4edda;
+      color: #155724;
+    }
+
+    .rebalance-suggestion {
+      background-color: #f8f9fa;
+      border-left: 4px solid #007bff;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .sector-color-indicator {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 0.5rem;
+      border-radius: 2px;
+    }
+
+    /* Animation for results */
+    @keyframes fadeSlideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    #resultsCard {
+      animation: fadeSlideUp 0.5s ease-out;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .sector-tag {
+        font-size: 0.75rem;
+      }
+
+      .holdings-table {
+        font-size: 0.85rem;
+      }
+
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+    }
+
+    /* Table sorting indicators */
+    .sortable th {
+      cursor: pointer;
+    }
+
+    .sortable th::after {
+      content: "";
+      margin-left: 0.5rem;
+    }
+
+    .sortable th.sort-asc::after {
+      content: "▲";
+      font-size: 0.8rem;
+    }
+
+    .sortable th.sort-desc::after {
+      content: "▼";
+      font-size: 0.8rem;
+    }
+  </style>
+
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () {
+        (c[a].q = c[a].q || []).push(arguments)
+      };
+      t = l.createElement(r);
+      t.async = 1;
+      t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0];
+      y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "qxscsfgx1j");
+  </script>
+</head>
+<body>
+
+<div id="header"></div>
+
+<!-- Hero Section -->
+<header class="hero-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="hero-content">
+          <span class="badge bg-primary mb-2 p-2">PORTFOLIO OPTIMIZATION</span>
+          <h1 class="display-4 fw-bold mb-3">Portfolio Sector Balance Optimizer</h1>
+          <p class="lead mb-4">Analyze your portfolio's sector allocation, compare to market benchmarks, and get personalized rebalancing recommendations to achieve optimal diversification.</p>
+          <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-primary btn-lg" href="#calculator">Try Free Optimizer <i class="bi bi-arrow-right-circle ms-2"></i></a>
+            <a class="btn btn-outline-secondary btn-lg" href="#features">Learn More</a>
+          </div>
+          <div class="mt-4 usage-stats">
+            <span class="badge bg-light text-dark p-2 me-2">
+              <i class="bi bi-pie-chart me-1"></i> Optimized 25,000+ portfolios
+            </span>
+            <span class="badge bg-light text-dark p-2">
+              <i class="bi bi-shield-check me-1"></i> 100% private calculations
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="hero-image position-relative">
+          <img
+            alt="Portfolio Sector Balance Chart"
+            class="img-fluid rounded shadow"
+            src="/img/sector-balance-chart.png">
+          <div class="free-badge position-absolute top-0 end-0 bg-success text-white p-3 rounded-circle m-3">
+            <strong>FREE</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Calculator Section -->
+<section class="calculator py-5 bg-light" id="calculator">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="h2 fw-bold">Portfolio Sector Balance Optimizer</h2>
+      <p class="lead text-muted">Analyze and optimize your portfolio's sector allocation in three simple steps</p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="card shadow border-0">
+          <div class="card-header bg-primary text-white py-3">
+            <div class="d-flex justify-content-between align-items-center">
+              <h2 class="h4 mb-0"><i class="bi bi-pie-chart me-2"></i> Sector Balance Analysis & Optimization</h2>
+              <span class="badge bg-success py-2 px-3">FREE</span>
+            </div>
+          </div>
+          <div class="card-body p-4">
+            <ul class="nav nav-pills mb-4" id="portfolioTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button aria-controls="step1" aria-selected="true" class="nav-link active" data-bs-target="#step1" data-bs-toggle="pill" id="step1-tab" role="tab" type="button">
+                  <i class="bi bi-1-circle me-1"></i> Add Holdings
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button aria-controls="step2" aria-selected="false" class="nav-link" data-bs-target="#step2" data-bs-toggle="pill" id="step2-tab" role="tab" type="button">
+                  <i class="bi bi-2-circle me-1"></i> Choose Benchmark
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button aria-controls="step3" aria-selected="false" class="nav-link" data-bs-target="#step3" data-bs-toggle="pill" id="step3-tab" role="tab" type="button">
+                  <i class="bi bi-3-circle me-1"></i> Set Target Allocation
+                </button>
+              </li>
+            </ul>
+
+            <div class="tab-content" id="portfolioTabContent">
+              <!-- Step 1: Add Holdings -->
+              <div aria-labelledby="step1-tab" class="tab-pane fade show active" id="step1" role="tabpanel">
+                <div class="alert alert-info mb-4">
+                  <div class="d-flex">
+                    <div class="me-3">
+                      <i class="bi bi-info-circle-fill fs-4"></i>
+                    </div>
+                    <div>
+                      <p class="mb-0">Enter your current holdings to analyze your portfolio's sector allocation. You can add stocks, ETFs, or mutual funds. We'll automatically determine the sector classification for each
+                        holding.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-4">
+                  <div class="row g-3">
+                    <div class="col-md-4">
+                      <label class="form-label" for="tickerSymbol">Ticker Symbol</label>
+                      <input class="form-control" id="tickerSymbol" placeholder="e.g., AAPL" type="text">
+                    </div>
+                    <div class="col-md-4">
+                      <label class="form-label" for="shareCount">Number of Shares</label>
+                      <input class="form-control" id="shareCount" min="0.01" placeholder="e.g., 10" step="0.01" type="number">
+                    </div>
+                    <div class="col-md-4">
+                      <label class="form-label" for="currentPrice">Current Price ($)</label>
+                      <div class="input-group">
+                        <span class="input-group-text">$</span>
+                        <input class="form-control" id="currentPrice" min="0.01" placeholder="e.g., 150.25" step="0.01" type="number">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt-2">
+                    <div class="col-md-8">
+                      <label class="form-label" for="sectorSelect">Sector (Optional - Auto-detected for common tickers)</label>
+                      <select class="form-select" id="sectorSelect">
+                        <option value="">Auto-detect sector</option>
+                        <option value="Technology">Technology</option>
+                        <option value="Healthcare">Healthcare</option>
+                        <option value="Financial Services">Financial Services</option>
+                        <option value="Communication Services">Communication Services</option>
+                        <option value="Consumer Cyclical">Consumer Cyclical</option>
+                        <option value="Consumer Defensive">Consumer Defensive</option>
+                        <option value="Energy">Energy</option>
+                        <option value="Industrials">Industrials</option>
+                        <option value="Basic Materials">Basic Materials</option>
+                        <option value="Real Estate">Real Estate</option>
+                        <option value="Utilities">Utilities</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-end">
+                      <button class="btn btn-primary w-100" id="addHoldingBtn" type="button">
+                        <i class="bi bi-plus-circle me-2"></i>Add Holding
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-responsive mb-4">
+                  <table class="table table-hover holdings-table sortable" id="holdingsTable">
+                    <thead class="table-light">
+                    <tr>
+                      <th scope="col">Ticker</th>
+                      <th scope="col">Shares</th>
+                      <th scope="col">Price ($)</th>
+                      <th scope="col">Value ($)</th>
+                      <th scope="col">Sector</th>
+                      <th scope="col">Weight (%)</th>
+                      <th scope="col">Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody id="holdingsTableBody">
+                    <!-- Holdings will be added here dynamically -->
+                    <tr class="table-light text-center">
+                      <td class="py-3" colspan="7">No holdings added yet. Add your first holding above.</td>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr class="table-primary">
+                      <th colspan="3">Portfolio Total</th>
+                      <th id="portfolioTotal">$0.00</th>
+                      <th colspan="3"></th>
+                    </tr>
+                    </tfoot>
+                  </table>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                  <button class="btn btn-outline-secondary" id="clearAllHoldingsBtn" type="button">
+                    <i class="bi bi-trash me-2"></i>Clear All
+                  </button>
+                  <button class="btn btn-outline-primary" id="loadSamplePortfolioBtn" type="button">
+                    <i class="bi bi-lightning-charge me-2"></i>Load Sample Portfolio
+                  </button>
+                  <button class="btn btn-primary" id="goToStep2Btn" type="button">
+                    Continue to Benchmark <i class="bi bi-arrow-right ms-2"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Step 2: Choose Benchmark -->
+              <div aria-labelledby="step2-tab" class="tab-pane fade" id="step2" role="tabpanel">
+                <div class="alert alert-info mb-4">
+                  <div class="d-flex">
+                    <div class="me-3">
+                      <i class="bi bi-info-circle-fill fs-4"></i>
+                    </div>
+                    <div>
+                      <p class="mb-0">Select a benchmark index to compare your portfolio's sector allocation. This will help you understand how your portfolio differs from market averages.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row g-4 mb-4">
+                  <div class="col-md-4">
+                    <div class="card h-100 border p-3">
+                      <div class="form-check">
+                        <input checked class="form-check-input" id="benchmark-sp500" name="benchmarkRadio" type="radio" value="sp500">
+                        <label class="form-check-label fw-bold" for="benchmark-sp500">S&P 500</label>
+                      </div>
+                      <p class="small text-muted mt-2 mb-0">The S&P 500 represents the 500 largest U.S. companies and is widely used as a benchmark for the overall U.S. stock market.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card h-100 border p-3">
+                      <div class="form-check">
+                        <input class="form-check-input" id="benchmark-nasdaq" name="benchmarkRadio" type="radio" value="nasdaq">
+                        <label class="form-check-label fw-bold" for="benchmark-nasdaq">NASDAQ Composite</label>
+                      </div>
+                      <p class="small text-muted mt-2 mb-0">The NASDAQ Composite includes all companies listed on the NASDAQ stock exchange and has a stronger focus on technology companies.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card h-100 border p-3">
+                      <div class="form-check">
+                        <input class="form-check-input" id="benchmark-russell2000" name="benchmarkRadio" type="radio" value="russell2000">
+                        <label class="form-check-label fw-bold" for="benchmark-russell2000">Russell 2000</label>
+                      </div>
+                      <p class="small text-muted mt-2 mb-0">The Russell 2000 Index represents 2,000 small-cap companies, offering a benchmark for the small-cap segment of the U.S. market.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row g-4 mb-4">
+                  <div class="col-md-4">
+                    <div class="card h-100 border p-3">
+                      <div class="form-check">
+                        <input class="form-check-input" id="benchmark-djia" name="benchmarkRadio" type="radio" value="djia">
+                        <label class="form-check-label fw-bold" for="benchmark-djia">Dow Jones Industrial Average</label>
+                      </div>
+                      <p class="small text-muted mt-2 mb-0">The DJIA tracks 30 large, publicly-owned blue-chip companies and is one of the oldest and most-watched indices.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card h-100 border p-3">
+                      <div class="form-check">
+                        <input class="form-check-input" id="benchmark-global" name="benchmarkRadio" type="radio" value="global">
+                        <label class="form-check-label fw-bold" for="benchmark-global">MSCI World Index</label>
+                      </div>
+                      <p class="small text-muted mt-2 mb-0">The MSCI World Index captures large and mid-cap representation across 23 developed markets countries globally.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card h-100 border p-3">
+                      <div class="form-check">
+                        <input class="form-check-input" id="benchmark-custom" name="benchmarkRadio" type="radio" value="custom">
+                        <label class="form-check-label fw-bold" for="benchmark-custom">Custom Allocation</label>
+                      </div>
+                      <p class="small text-muted mt-2 mb-0">Define your own target sector allocation based on your investment strategy and risk tolerance.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                  <button class="btn btn-outline-secondary" id="backToStep1Btn" type="button">
+                    <i class="bi bi-arrow-left me-2"></i>Back to Holdings
+                  </button>
+                  <button class="btn btn-primary" id="goToStep3Btn" type="button">
+                    Continue to Target Allocation <i class="bi bi-arrow-right ms-2"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Step 3: Set Target Allocation -->
+              <div aria-labelledby="step3-tab" class="tab-pane fade" id="step3" role="tabpanel">
+                <div class="alert alert-info mb-4">
+                  <div class="d-flex">
+                    <div class="me-3">
+                      <i class="bi bi-info-circle-fill fs-4"></i>
+                    </div>
+                    <div>
+                      <p class="mb-0">Fine-tune your target sector allocation. You can adjust the benchmark allocations to match your investment strategy or risk tolerance.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row mb-4" id="customAllocationControls" style="display: none;">
+                  <div class="col-12">
+                    <div class="alert alert-warning">
+                      <i class="bi bi-exclamation-triangle me-2"></i>
+                      <strong>Custom Allocation Mode:</strong> Adjust the sliders below to create your ideal sector allocation. Target allocations should sum to 100%.
+                      <div class="mt-2" id="allocationSumWarning"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-responsive mb-4">
+                  <table class="table table-hover" id="sectorAllocationTable">
+                    <thead class="table-light">
+                    <tr>
+                      <th scope="col">Sector</th>
+                      <th scope="col">Your Allocation (%)</th>
+                      <th scope="col">Benchmark (%)</th>
+                      <th scope="col">Difference (%)</th>
+                      <th scope="col">Target Allocation (%)</th>
+                    </tr>
+                    </thead>
+                    <tbody id="sectorAllocationTableBody">
+                    <!-- Sector allocations will be added here dynamically -->
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                  <button class="btn btn-outline-secondary" id="backToStep2Btn" type="button">
+                    <i class="bi bi-arrow-left me-2"></i>Back to Benchmark
+                  </button>
+                  <button class="btn btn-primary" id="analyzePortfolioBtn" type="button">
+                    <i class="bi bi-gear me-2"></i>Analyze & Optimize Portfolio
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Results Section -->
+    <div class="row justify-content-center mt-4">
+      <div class="col-lg-10">
+        <div class="card shadow border-0" id="resultsCard" style="display:none;">
+          <div class="card-header bg-success text-white py-3">
+            <div class="d-flex justify-content-between align-items-center">
+              <h3 class="h4 mb-0"><i class="bi bi-pie-chart me-2"></i>Portfolio Analysis Results</h3>
+              <button class="btn btn-outline-light btn-sm" onclick="window.print()">
+                <i class="bi bi-printer me-1"></i> Print Report
+              </button>
+            </div>
+          </div>
+          <div class="card-body p-4">
+            <div class="row mb-4">
+              <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                  <div class="card-header bg-primary bg-opacity-10">
+                    <h4 class="h5 mb-0 text-primary"><i class="bi bi-pie-chart me-2"></i>Current Sector Allocation</h4>
+                  </div>
+                  <div class="card-body">
+                    <div class="sector-balance-chart-container">
+                      <canvas id="currentAllocationChart"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                  <div class="card-header bg-success bg-opacity-10">
+                    <h4 class="h5 mb-0 text-success"><i class="bi bi-bullseye me-2"></i>Target vs. Current Allocation</h4>
+                  </div>
+                  <div class="card-body">
+                    <div class="sector-balance-chart-container">
+                      <canvas id="comparisonChart"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card border-0 shadow-sm mb-4">
+              <div class="card-header bg-primary bg-opacity-10">
+                <h4 class="h5 mb-0 text-primary"><i class="bi bi-arrow-left-right me-2"></i>Sector Diversification Analysis</h4>
+              </div>
+              <div class="card-body">
+                <div class="alert alert-primary">
+                  <div class="d-flex">
+                    <div class="me-3">
+                      <i class="bi bi-info-circle-fill fs-4"></i>
+                    </div>
+                    <div>
+                      <h5 class="mb-2">Portfolio Diversification Score: <span id="diversificationScore">0</span>/100</h5>
+                      <div class="progress mb-2" style="height: 10px;">
+                        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="progress-bar" id="diversificationProgressBar" role="progressbar" style="width: 0%;"></div>
+                      </div>
+                      <p class="mb-0" id="diversificationSummary">Analysis summary will appear here.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-responsive mt-4">
+                  <table class="table table-hover" id="sectorAnalysisTable">
+                    <thead class="table-light">
+                    <tr>
+                      <th scope="col">Sector</th>
+                      <th scope="col">Current (%)</th>
+                      <th scope="col">Target (%)</th>
+                      <th scope="col">Difference</th>
+                      <th scope="col">Status</th>
+                    </tr>
+                    </thead>
+                    <tbody id="sectorAnalysisTableBody">
+                    <!-- Sector analysis will be added here dynamically -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="card border-0 shadow-sm mb-4">
+              <div class="card-header bg-success bg-opacity-10">
+                <h4 class="h5 mb-0 text-success"><i class="bi bi-shuffle me-2"></i>Rebalancing Recommendations</h4>
+              </div>
+              <div class="card-body">
+                <div id="rebalanceRecommendations">
+                  <!-- Rebalancing recommendations will be added here dynamically -->
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex mt-4 mb-2">
+              <div class="me-3">
+                <i class="bi bi-shield-check text-success fs-3"></i>
+              </div>
+              <div>
+                <h5 class="mb-1">Analysis Disclosure</h5>
+                <p class="mb-0 text-muted">This analysis is based on current data and standard sector classifications. Actual sector categorizations may vary between different data providers. The recommendations are
+                  provided for educational purposes only and should not be construed as investment advice. Always consult with a financial advisor before making investment decisions.</p>
+              </div>
+            </div>
+
+            <div class="text-center mt-4">
+              <button class="btn btn-outline-primary me-2" onclick="window.location.href='#calculator'">
+                <i class="bi bi-arrow-repeat me-1"></i> Start New Analysis
+              </button>
+              <div class="position-relative d-inline-block">
+                <button class="btn btn-outline-success" id="shareResultsBtn">
+                  <i class="bi bi-share me-1"></i> Share Results
+                </button>
+                <div class="share-popup shadow-sm p-2 rounded" id="sharePopup" style="display: none;">
+                  <a class="text-decoration-none me-2"
+                     href="https://twitter.com/intent/tweet?text=Check+out+my+optimized+portfolio+sector+allocation!&url=https://marketcapinsights.com/sector-balance.html" target="_blank">
+                    <i class="bi bi-twitter fs-4 text-info"></i>
+                  </a>
+                  <a class="text-decoration-none me-2"
+                     href="https://www.linkedin.com/shareArticle?mini=true&url=https://marketcapinsights.com/sector-balance.html&title=Portfolio%20Sector%20Balance%20Optimization" target="_blank">
+                    <i class="bi bi-linkedin fs-4 text-primary"></i>
+                  </a>
+                  <a class="text-decoration-none"
+                     href="https://www.facebook.com/sharer/sharer.php?u=https://marketcapinsights.com/sector-balance.html" target="_blank">
+                    <i class="bi bi-facebook fs-4 text-secondary"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Grid Section -->
+<section class="features py-5" id="features">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="badge bg-primary mb-2 p-2">PROFESSIONAL FEATURES</span>
+      <h2 class="fw-bold">Why Sector Balance Matters</h2>
+      <p class="lead text-muted mx-auto" style="max-width: 700px;">Proper sector diversification is a key strategy used by professional portfolio managers to optimize risk-adjusted returns</p>
+    </div>
+
+    <div class="row g-4 mb-5">
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 hover-lift">
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center mb-3">
+              <div class="feature-icon-wrapper bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                <i class="bi bi-shield-check feature-icon text-primary"></i>
+              </div>
+              <div class="feature-icon-wrapper bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                <i class="bi bi-shield-check feature-icon text-primary"></i>
+              </div>
+              <h3 class="card-title h5 mb-0">Risk Management</h3>
+            </div>
+            <p class="card-text text-muted">Proper sector diversification reduces exposure to sector-specific downturns, helping to protect your portfolio from concentrated risks.</p>
+            <div class="mt-3">
+              <span class="badge bg-success me-2">Free</span>
+              <span class="badge bg-light text-dark">Professional grade</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 hover-lift">
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center mb-3">
+              <div class="feature-icon-wrapper bg-success bg-opacity-10 p-3 rounded-circle me-3">
+                <i class="bi bi-graph-up feature-icon text-success"></i>
+              </div>
+              <h3 class="card-title h5 mb-0">Strategic Exposure</h3>
+            </div>
+            <p class="card-text text-muted">Intelligently allocate capital across sectors to capitalize on economic trends while maintaining a balanced investment approach.</p>
+            <div class="mt-3">
+              <span class="badge bg-success me-2">Free</span>
+              <span class="badge bg-light text-dark">Data-driven</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 hover-lift">
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center mb-3">
+              <div class="feature-icon-wrapper bg-info bg-opacity-10 p-3 rounded-circle me-3">
+                <i class="bi bi-arrow-repeat feature-icon text-info"></i>
+              </div>
+              <h3 class="card-title h5 mb-0">Disciplined Rebalancing</h3>
+            </div>
+            <p class="card-text text-muted">Our sector optimizer provides concrete action steps to systematically rebalance your portfolio for better long-term performance.</p>
+            <div class="mt-3">
+              <span class="badge bg-success me-2">Free</span>
+              <span class="badge bg-light text-dark">Actionable insights</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-5">
+      <a class="btn btn-primary btn-lg px-5" href="#calculator">Try the Sector Balance Optimizer <i class="bi bi-arrow-right ms-2"></i></a>
+      <p class="text-muted mt-2">No sign-up • No credit card • 100% free</p>
+    </div>
+  </div>
+</section>
+
+<!-- Insights Section -->
+<section class="insights py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="badge bg-secondary mb-2 p-2">EXPERT INSIGHTS</span>
+      <h2 class="fw-bold">Sector Allocation Strategies</h2>
+      <p class="lead text-muted mx-auto" style="max-width: 700px;">Different approaches professional investors use to allocate across sectors</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body p-4">
+            <h3 class="h4 text-primary mb-4"><i class="bi bi-pie-chart me-2"></i>Common Allocation Approaches</h3>
+            <p>Various sector allocation strategies can be employed depending on your investment objectives, risk tolerance, and market outlook. Our optimizer helps you implement these professional approaches.</p>
+
+            <div class="table-responsive mt-4">
+              <table class="table table-bordered">
+                <thead class="table-light">
+                <tr>
+                  <th>Strategy</th>
+                  <th>Description</th>
+                  <th>Best For</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td><strong>Market-Weight</strong></td>
+                  <td>Match sector allocations to major indices</td>
+                  <td>Passive investors seeking market returns</td>
+                </tr>
+                <tr>
+                  <td><strong>Strategic Overweight</strong></td>
+                  <td>Deliberately overweight sectors with long-term growth potential</td>
+                  <td>Growth-oriented investors with longer time horizons</td>
+                </tr>
+                <tr>
+                  <td><strong>Defensive Positioning</strong></td>
+                  <td>Overweight utilities, healthcare, consumer staples</td>
+                  <td>Conservative investors or volatile market conditions</td>
+                </tr>
+                <tr>
+                  <td><strong>Cyclical Focus</strong></td>
+                  <td>Emphasize industrials, materials, discretionary sectors</td>
+                  <td>Bullish investors during economic expansion</td>
+                </tr>
+                <tr>
+                  <td><strong>Tactical Rotation</strong></td>
+                  <td>Actively shift between sectors based on economic cycle</td>
+                  <td>Active investors willing to make periodic adjustments</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body p-4">
+            <h3 class="h4 text-primary mb-4"><i class="bi bi-graph-up-arrow me-2"></i>Sector Rotation Through Economic Cycles</h3>
+            <p>Sectors perform differently throughout economic cycles. Understanding these patterns can help you optimize your sector allocation based on the current economic environment.</p>
+
+            <h4 class="h5 mt-4 mb-3">Economic Cycle and Sector Performance</h4>
+            <div class="d-flex mb-3">
+              <div class="me-3 text-primary">
+                <i class="bi bi-arrow-up-right-circle fs-4"></i>
+              </div>
+              <div>
+                <h5 class="h6 mb-1">Early Cycle (Recovery)</h5>
+                <p class="text-muted mb-0">Consumer Discretionary, Financials, and Industrials typically outperform as economic growth begins to accelerate</p>
+              </div>
+            </div>
+
+            <div class="d-flex mb-3">
+              <div class="me-3 text-primary">
+                <i class="bi bi-arrow-up-circle fs-4"></i>
+              </div>
+              <div>
+                <h5 class="h6 mb-1">Mid Cycle (Expansion)</h5>
+                <p class="text-muted mb-0">Technology, Communication Services, and Materials often perform well during stable economic growth</p>
+              </div>
+            </div>
+
+            <div class="d-flex mb-3">
+              <div class="me-3 text-primary">
+                <i class="bi bi-arrow-down-right-circle fs-4"></i>
+              </div>
+              <div>
+                <h5 class="h6 mb-1">Late Cycle (Slowdown)</h5>
+                <p class="text-muted mb-0">Energy, Healthcare, and Basic Materials tend to outperform as inflation rises and growth slows</p>
+              </div>
+            </div>
+
+            <div class="d-flex mb-3">
+              <div class="me-3 text-primary">
+                <i class="bi bi-arrow-down-circle fs-4"></i>
+              </div>
+              <div>
+                <h5 class="h6 mb-1">Recession</h5>
+                <p class="text-muted mb-0">Utilities, Consumer Staples, and Healthcare are typically more resilient during economic contractions</p>
+              </div>
+            </div>
+
+            <div class="alert alert-info mt-4">
+              <i class="bi bi-lightbulb me-2"></i>
+              <strong>Pro Tip:</strong> Rather than trying to perfectly time sector rotations, maintaining strategic long-term allocations with periodic rebalancing often yields better results for most investors.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-5">
+      <a class="btn btn-outline-primary" href="#calculator">Use Our Free Optimizer <i class="bi bi-calculator ms-2"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="badge bg-primary mb-2 p-2">COMMON QUESTIONS</span>
+      <h2 class="fw-bold">Frequently Asked Questions</h2>
+      <p class="lead text-muted mx-auto" style="max-width: 700px;">Everything you need to know about portfolio sector balancing</p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="card border-0 shadow-sm">
+          <div class="card-body p-0">
+            <div class="accordion accordion-flush" id="faqAccordion">
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button" data-bs-target="#faq1" data-bs-toggle="collapse" type="button">
+                    <i class="bi bi-question-circle text-primary me-2"></i> How often should I rebalance my portfolio's sector allocation?
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse show" data-bs-parent="#faqAccordion" id="faq1">
+                  <div class="accordion-body">
+                    <p>Most financial advisors recommend reviewing your sector allocation quarterly and rebalancing at least annually. However, rather than adhering to a strict calendar schedule, it's often better to
+                      rebalance when:</p>
+                    <ul>
+                      <li>Any sector drifts significantly from your target allocation (typically more than 5-10%)</li>
+                      <li>Your investment objectives or risk tolerance changes</li>
+                      <li>There are major shifts in the economic cycle or market conditions</li>
+                      <li>You add significant new capital to your portfolio</li>
+                    </ul>
+                    <p class="mb-0 text-muted">The key is to balance the benefits of maintaining your target allocation against transaction costs and potential tax consequences of frequent trading.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-target="#faq2" data-bs-toggle="collapse" type="button">
+                    <i class="bi bi-question-circle text-primary me-2"></i> Should my sector allocation match market benchmarks exactly?
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq2">
+                  <div class="accordion-body">
+                    <p>Not necessarily. While market-weight sector allocation (matching benchmark indices) provides broad diversification, there are valid reasons to deviate based on your specific situation:</p>
+                    <ul>
+                      <li><strong>Investment goals:</strong> Growth-oriented investors might overweight technology or consumer discretionary sectors</li>
+                      <li><strong>Risk tolerance:</strong> Conservative investors might increase allocation to traditionally defensive sectors</li>
+                      <li><strong>Time horizon:</strong> Longer time horizons may allow for more exposure to higher-growth, higher-volatility sectors</li>
+                      <li><strong>Economic outlook:</strong> Your view on economic cycles might justify tactical sector adjustments</li>
+                      <li><strong>Existing exposures:</strong> You may need to account for sector exposure from other investments (e.g., employer stock)</li>
+                    </ul>
+                    <p class="mb-0 text-muted">Our optimizer helps you start with benchmark allocations and then customize based on your specific situation.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-target="#faq3" data-bs-toggle="collapse" type="button">
+                    <i class="bi bi-question-circle text-primary me-2"></i> How do ETFs and mutual funds affect my sector allocation?
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq3">
+                  <div class="accordion-body">
+                    <p>ETFs and mutual funds contain holdings across multiple sectors, making it important to "look through" these funds to understand your true sector exposure:</p>
+                    <ul>
+                      <li><strong>Broad market funds:</strong> S&P 500 or Total Market ETFs will provide exposure across all sectors, roughly matching market weights</li>
+                      <li><strong>Sector-specific funds:</strong> Funds like Technology ETFs or Healthcare ETFs provide concentrated exposure to those sectors</li>
+                      <li><strong>Active funds:</strong> May have significant sector tilts depending on the manager's strategy</li>
+                      <li><strong>Style funds:</strong> Growth funds often overweight Technology and Consumer Discretionary, while Value funds typically have higher exposure to Financials and Industrials</li>
+                    </ul>
+                    <p class="mb-0 text-muted">Our optimizer automatically analyzes the sector composition of common ETFs and mutual funds to provide an accurate picture of your overall sector exposure. For less common
+                      funds, you can manually set the sector allocation.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-target="#faq4" data-bs-toggle="collapse" type="button">
+                    <i class="bi bi-question-circle text-primary me-2"></i> How can I implement the rebalancing recommendations?
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq4">
+                  <div class="accordion-body">
+                    <p>You can implement our sector rebalancing recommendations in several ways:</p>
+                    <ul>
+                      <li><strong>Individual stocks:</strong> Buy or sell specific company shares to adjust sector exposure</li>
+                      <li><strong>Sector ETFs:</strong> Use sector-specific ETFs (e.g., XLK for Technology, XLV for Healthcare) to efficiently increase or decrease exposure</li>
+                      <li><strong>New contributions:</strong> Direct new investments toward underweight sectors</li>
+                      <li><strong>Tax-efficient approaches:</strong>
+                        <ul>
+                          <li>Make adjustments in tax-advantaged accounts to avoid capital gains taxes</li>
+                          <li>Use dividend reinvestment to gradually increase positions in underweight sectors</li>
+                          <li>Consider tax-loss harvesting opportunities when reducing overweight sectors</li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <p class="mb-0 text-muted">Remember to consider transaction costs and tax implications when implementing changes. Sometimes a gradual approach to rebalancing is more cost-effective than immediate,
+                      large adjustments.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-target="#faq5" data-bs-toggle="collapse" type="button">
+                    <i class="bi bi-question-circle text-primary me-2"></i> How does international exposure factor into sector allocation?
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq5">
+                  <div class="accordion-body">
+                    <p>International investments add another dimension to sector allocation since different countries and regions have different sector concentrations:</p>
+                    <ul>
+                      <li><strong>Developed markets:</strong> Often have different sector weightings than U.S. markets (e.g., European markets typically have higher Financial and Industrial exposure)</li>
+                      <li><strong>Emerging markets:</strong> May have higher concentrations in Energy, Materials, and Financial sectors</li>
+                      <li><strong>Country-specific considerations:</strong> Some countries are dominated by certain sectors (e.g., Technology in Taiwan, Financials in Canada)</li>
+                    </ul>
+                    <p>Our optimizer can account for international holdings in two ways:</p>
+                    <ol>
+                      <li>Treat international investments as their own "International" category for a simplified approach</li>
+                      <li>Look through international holdings to their underlying sectors for a more comprehensive global sector view</li>
+                    </ol>
+                    <p class="mb-0 text-muted">For most investors, maintaining appropriate geographic diversification alongside sector diversification is important for a well-balanced portfolio.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-target="#faq6" data-bs-toggle="collapse" type="button">
+                    <i class="bi bi-question-circle text-primary me-2"></i> How accurate is the sector classification in your tool?
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq6">
+                  <div class="accordion-body">
+                    <p>Our tool uses industry-standard GICS (Global Industry Classification Standard) sector classifications, which are widely used by investment professionals. However, there are a few points to
+                      note:</p>
+                    <ul>
+                      <li>Some companies operate across multiple sectors and may be classified differently by various data providers</li>
+                      <li>ETFs and mutual funds may contain holdings across multiple sectors, and our tool shows their primary sector concentration</li>
+                      <li>For less common or international stocks, you can manually select the sector if our automatic detection doesn't work</li>
+                    </ul>
+                    <p class="mb-0 text-muted">If you're unsure about a particular classification, you can check the company's investor relations materials or financial statements for their own sector description.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <p class="lead mb-3">Still have questions about sector balancing?</p>
+          <a class="btn btn-outline-primary" href="contact.html">Contact Our Team <i class="bi bi-arrow-right ms-2"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer"></div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/include.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Initialize components and setup event listeners
+    initSectorBalanceOptimizer();
+    setupTabNavigation();
+    setupSharePopup();
+
+    // Load sample data if requested
+    document.getElementById('loadSamplePortfolioBtn').addEventListener('click', loadSamplePortfolio);
+  });
+
+  // Portfolio data structure
+  let portfolio = {
+    holdings: [],
+    total: 0,
+    sectorAllocation: {},
+  };
+
+  // Benchmark sector allocations (approximate values)
+  const benchmarks = {
+    sp500: {
+      'Technology': 26.8,
+      'Healthcare': 14.2,
+      'Financial Services': 13.7,
+      'Consumer Cyclical': 10.5,
+      'Communication Services': 8.3,
+      'Industrials': 8.0,
+      'Consumer Defensive': 6.5,
+      'Energy': 4.5,
+      'Utilities': 2.7,
+      'Real Estate': 2.6,
+      'Basic Materials': 2.2
+    },
+    nasdaq: {
+      'Technology': 42.5,
+      'Communication Services': 16.7,
+      'Healthcare': 10.2,
+      'Consumer Cyclical': 15.3,
+      'Financial Services': 5.8,
+      'Industrials': 6.2,
+      'Consumer Defensive': 2.1,
+      'Energy': 0.4,
+      'Utilities': 0.3,
+      'Real Estate': 0.3,
+      'Basic Materials': 0.2
+    },
+    russell2000: {
+      'Healthcare': 17.8,
+      'Industrials': 16.2,
+      'Financial Services': 15.8,
+      'Technology': 12.5,
+      'Consumer Cyclical': 11.3,
+      'Real Estate': 7.4,
+      'Consumer Defensive': 5.4,
+      'Energy': 5.2,
+      'Basic Materials': 4.0,
+      'Communication Services': 2.9,
+      'Utilities': 1.5
+    },
+    djia: {
+      'Technology': 21.5,
+      'Healthcare': 17.2,
+      'Financial Services': 15.8,
+      'Industrials': 13.5,
+      'Consumer Defensive': 10.3,
+      'Consumer Cyclical': 9.8,
+      'Communication Services': 4.5,
+      'Energy': 3.8,
+      'Basic Materials': 2.1,
+      'Utilities': 1.5,
+      'Real Estate': 0
+    },
+    global: {
+      'Technology': 22.5,
+      'Financial Services': 15.3,
+      'Healthcare': 13.8,
+      'Industrials': 10.2,
+      'Consumer Cyclical': 9.8,
+      'Consumer Defensive': 7.5,
+      'Communication Services': 6.7,
+      'Energy': 5.3,
+      'Basic Materials': 4.5,
+      'Utilities': 2.7,
+      'Real Estate': 1.7
+    },
+    custom: {}
+  };
+
+  // Common stock sector classifications
+  const stockSectors = {
+    // Technology
+    'AAPL': 'Technology',
+    'MSFT': 'Technology',
+    'NVDA': 'Technology',
+    'AMD': 'Technology',
+    'INTC': 'Technology',
+    'CRM': 'Technology',
+    'ADBE': 'Technology',
+    'ORCL': 'Technology',
+
+    // Healthcare
+    'JNJ': 'Healthcare',
+    'UNH': 'Healthcare',
+    'PFE': 'Healthcare',
+    'ABBV': 'Healthcare',
+    'MRK': 'Healthcare',
+    'ABT': 'Healthcare',
+    'TMO': 'Healthcare',
+
+    // Financial Services
+    'JPM': 'Financial Services',
+    'BAC': 'Financial Services',
+    'WFC': 'Financial Services',
+    'C': 'Financial Services',
+    'GS': 'Financial Services',
+    'MS': 'Financial Services',
+    'BLK': 'Financial Services',
+
+    // Communication Services
+    'GOOGL': 'Communication Services',
+    'GOOG': 'Communication Services',
+    'META': 'Communication Services',
+    'FB': 'Communication Services',  // Legacy ticker
+    'NFLX': 'Communication Services',
+    'CMCSA': 'Communication Services',
+    'DIS': 'Communication Services',
+
+    // Consumer Cyclical
+    'AMZN': 'Consumer Cyclical',
+    'TSLA': 'Consumer Cyclical',
+    'HD': 'Consumer Cyclical',
+    'MCD': 'Consumer Cyclical',
+    'NKE': 'Consumer Cyclical',
+    'SBUX': 'Consumer Cyclical',
+
+    // Consumer Defensive
+    'WMT': 'Consumer Defensive',
+    'PG': 'Consumer Defensive',
+    'KO': 'Consumer Defensive',
+    'PEP': 'Consumer Defensive',
+    'COST': 'Consumer Defensive',
+
+    // Energy
+    'XOM': 'Energy',
+    'CVX': 'Energy',
+    'COP': 'Energy',
+    'SLB': 'Energy',
+    'EOG': 'Energy',
+
+    // Industrials
+    'UNP': 'Industrials',
+    'HON': 'Industrials',
+    'UPS': 'Industrials',
+    'CAT': 'Industrials',
+    'BA': 'Industrials',
+    'GE': 'Industrials',
+
+    // Basic Materials
+    'LIN': 'Basic Materials',
+    'FCX': 'Basic Materials',
+    'DOW': 'Basic Materials',
+    'DD': 'Basic Materials',
+
+    // Real Estate
+    'AMT': 'Real Estate',
+    'CBRE': 'Real Estate',
+    'SPG': 'Real Estate',
+    'PLD': 'Real Estate',
+
+    // Utilities
+    'NEE': 'Utilities',
+    'DUK': 'Utilities',
+    'SO': 'Utilities',
+    'D': 'Utilities',
+
+    // Common ETFs
+    'SPY': 'S&P 500 Index',
+    'VOO': 'S&P 500 Index',
+    'QQQ': 'Technology',
+    'VTI': 'Total Market',
+    'IWM': 'Small Cap',
+    'XLK': 'Technology',
+    'XLF': 'Financial Services',
+    'XLV': 'Healthcare',
+    'XLE': 'Energy',
+    'XLI': 'Industrials',
+    'XLY': 'Consumer Cyclical',
+    'XLP': 'Consumer Defensive',
+    'XLB': 'Basic Materials',
+    'XLU': 'Utilities',
+    'XLRE': 'Real Estate',
+    'XLC': 'Communication Services'
+  };
+
+  // Initialize the sector balance optimizer
+  function initSectorBalanceOptimizer() {
+    // Add holding button
+    document.getElementById('addHoldingBtn').addEventListener('click', addHolding);
+
+    // Clear holdings button
+    document.getElementById('clearAllHoldingsBtn').addEventListener('click', clearAllHoldings);
+
+    // Analyze portfolio button
+    document.getElementById('analyzePortfolioBtn').addEventListener('click', analyzePortfolio);
+
+    // Set up table sorting
+    setupTableSorting();
+  }
+
+  // Setup tab navigation
+  function setupTabNavigation() {
+    // Navigation between steps
+    document.getElementById('goToStep2Btn').addEventListener('click', function () {
+      if (portfolio.holdings.length === 0) {
+        alert('Please add at least one holding before proceeding.');
+        return;
+      }
+      document.getElementById('step2-tab').click();
+    });
+
+    document.getElementById('backToStep1Btn').addEventListener('click', function () {
+      document.getElementById('step1-tab').click();
+    });
+
+    document.getElementById('goToStep3Btn').addEventListener('click', function () {
+      document.getElementById('step3-tab').click();
+      updateSectorAllocationTable();
+    });
+
+    document.getElementById('backToStep2Btn').addEventListener('click', function () {
+      document.getElementById('step2-tab').click();
+    });
+
+    // Handle custom allocation toggle
+    const benchmarkRadios = document.querySelectorAll('input[name="benchmarkRadio"]');
+    benchmarkRadios.forEach(radio => {
+      radio.addEventListener('change', function () {
+        const customControls = document.getElementById('customAllocationControls');
+        if (this.value === 'custom') {
+          customControls.style.display = 'block';
+          initializeCustomAllocationSliders();
+        } else {
+          customControls.style.display = 'none';
+        }
+        updateSectorAllocationTable();
+      });
+    });
+  }
+
+  // Add a new holding to the portfolio
+  function addHolding() {
+    const ticker = document.getElementById('tickerSymbol').value.trim().toUpperCase();
+    const shares = parseFloat(document.getElementById('shareCount').value);
+    const price = parseFloat(document.getElementById('currentPrice').value);
+    let sector = document.getElementById('sectorSelect').value;
+
+    // Validate inputs
+    if (!ticker || isNaN(shares) || isNaN(price) || shares <= 0 || price <= 0) {
+      alert('Please enter valid values for ticker, shares, and price.');
+      return;
+    }
+
+    // Auto-detect sector if not specified
+    if (!sector && stockSectors[ticker]) {
+      sector = stockSectors[ticker];
+    } else if (!sector) {
+      sector = 'Unclassified';
+    }
+
+    // Calculate value
+    const value = shares * price;
+
+    // Add to portfolio
+    portfolio.holdings.push({
+      ticker,
+      shares,
+      price,
+      value,
+      sector
+    });
+
+    // Update portfolio total
+    updatePortfolioTotal();
+
+    // Update the table
+    updateHoldingsTable();
+
+    // Clear input fields
+    document.getElementById('tickerSymbol').value = '';
+    document.getElementById('shareCount').value = '';
+    document.getElementById('currentPrice').value = '';
+    document.getElementById('sectorSelect').value = '';
+
+    // Focus on ticker field for next entry
+    document.getElementById('tickerSymbol').focus();
+  }
+
+  // Update portfolio total and sector allocation
+  function updatePortfolioTotal() {
+    // Calculate total value
+    portfolio.total = portfolio.holdings.reduce((sum, holding) => sum + holding.value, 0);
+
+    // Update sector allocation
+    portfolio.sectorAllocation = {};
+
+    portfolio.holdings.forEach(holding => {
+      if (!portfolio.sectorAllocation[holding.sector]) {
+        portfolio.sectorAllocation[holding.sector] = 0;
+      }
+      portfolio.sectorAllocation[holding.sector] += holding.value;
+    });
+
+    // Convert values to percentages
+    for (const sector in portfolio.sectorAllocation) {
+      portfolio.sectorAllocation[sector] = (portfolio.sectorAllocation[sector] / portfolio.total) * 100;
+    }
+
+    // Update total display
+    document.getElementById('portfolioTotal').textContent = formatCurrency(portfolio.total);
+  }
+
+  // Update the holdings table
+  function updateHoldingsTable() {
+    const tableBody = document.getElementById('holdingsTableBody');
+
+    // Clear the table
+    tableBody.innerHTML = '';
+
+    if (portfolio.holdings.length === 0) {
+      tableBody.innerHTML = `
+        <tr class="table-light text-center">
+          <td colspan="7" class="py-3">No holdings added yet. Add your first holding above.</td>
+        </tr>
+      `;
+      return;
+    }
+
+    // Add each holding to the table
+    portfolio.holdings.forEach((holding, index) => {
+      const weight = (holding.value / portfolio.total) * 100;
+
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td><span class="ticker-badge bg-light">${holding.ticker}</span></td>
+        <td>${holding.shares.toFixed(2)}</td>
+        <td>${formatCurrency(holding.price)}</td>
+        <td>${formatCurrency(holding.value)}</td>
+        <td><span class="sector-tag" style="background-color: ${getSectorColor(holding.sector, 0.2)}; color: ${getSectorColor(holding.sector, 1)};">${holding.sector}</span></td>
+        <td>${weight.toFixed(2)}%</td>
+        <td>
+          <button class="delete-holding-btn" data-index="${index}">
+            <i class="bi bi-trash"></i>
+          </button>
+        </td>
+      `;
+      tableBody.appendChild(row);
+    });
+
+    // Add delete button event listeners
+    document.querySelectorAll('.delete-holding-btn').forEach(button => {
+      button.addEventListener('click', function () {
+        const index = parseInt(this.getAttribute('data-index'));
+        portfolio.holdings.splice(index, 1);
+        updatePortfolioTotal();
+        updateHoldingsTable();
+      });
+    });
+  }
+
+  // Clear all holdings
+  function clearAllHoldings() {
+    if (confirm('Are you sure you want to clear all holdings?')) {
+      portfolio.holdings = [];
+      portfolio.total = 0;
+      portfolio.sectorAllocation = {};
+      updateHoldingsTable();
+      document.getElementById('portfolioTotal').textContent = '$0.00';
+    }
+  }
+
+  // Load sample portfolio
+  function loadSamplePortfolio() {
+    portfolio.holdings = [
+      {ticker: 'AAPL', shares: 10, price: 180.25, value: 1802.50, sector: 'Technology'},
+      {ticker: 'MSFT', shares: 5, price: 325.42, value: 1627.10, sector: 'Technology'},
+      {ticker: 'JNJ', shares: 8, price: 162.15, value: 1297.20, sector: 'Healthcare'},
+      {ticker: 'JPM', shares: 7, price: 145.32, value: 1017.24, sector: 'Financial Services'},
+      {ticker: 'PG', shares: 6, price: 155.48, value: 932.88, sector: 'Consumer Defensive'},
+      {ticker: 'GOOGL', shares: 4, price: 135.60, value: 542.40, sector: 'Communication Services'},
+      {ticker: 'XOM', shares: 7, price: 105.78, value: 740.46, sector: 'Energy'},
+      {ticker: 'HD', shares: 2, price: 332.35, value: 664.70, sector: 'Consumer Cyclical'}
+    ];
+
+    updatePortfolioTotal();
+    updateHoldingsTable();
+  }
+
+  // Update sector allocation table
+  function updateSectorAllocationTable() {
+    const tableBody = document.getElementById('sectorAllocationTableBody');
+    tableBody.innerHTML = '';
+
+    // Get selected benchmark
+    const selectedBenchmark = document.querySelector('input[name="benchmarkRadio"]:checked').value;
+    const benchmarkData = benchmarks[selectedBenchmark];
+
+    // Create custom allocation if needed
+    if (selectedBenchmark === 'custom' && Object.keys(benchmarks.custom).length === 0) {
+      // Initialize with current allocation
+      Object.keys(portfolio.sectorAllocation).forEach(sector => {
+        benchmarks.custom[sector] = portfolio.sectorAllocation[sector];
+      });
+
+      // Add any missing sectors from S&P 500
+      Object.keys(benchmarks.sp500).forEach(sector => {
+        if (!benchmarks.custom[sector]) {
+          benchmarks.custom[sector] = 0;
+        }
+      });
+    }
+
+    // Get all sectors from both portfolio and benchmark
+    const allSectors = new Set([
+      ...Object.keys(portfolio.sectorAllocation),
+      ...Object.keys(benchmarkData)
+    ]);
+
+    // Create table rows
+    allSectors.forEach(sector => {
+      const currentAllocation = portfolio.sectorAllocation[sector] || 0;
+      const benchmarkAllocation = benchmarkData[sector] || 0;
+      const difference = currentAllocation - benchmarkAllocation;
+
+      const row = document.createElement('tr');
+
+      // Add sector color indicator
+      const sectorColor = getSectorColor(sector, 1);
+      const sectorBgColor = getSectorColor(sector, 0.2);
+
+      row.innerHTML = `
+        <td>
+          <span class="sector-color-indicator" style="background-color: ${sectorColor};"></span>
+          ${sector}
+        </td>
+        <td>${currentAllocation.toFixed(2)}%</td>
+        <td>${benchmarkAllocation.toFixed(2)}%</td>
+        <td class="${difference > 0 ? 'text-success' : difference < 0 ? 'text-danger' : ''}">
+          ${difference > 0 ? '+' : ''}${difference.toFixed(2)}%
+        </td>
+        <td>
+          ${selectedBenchmark === 'custom' ?
+        `<div class="slider-container">
+               <input type="range" class="form-range custom-allocation-slider"
+                      min="0" max="50" step="0.5" value="${benchmarkAllocation}"
+                      data-sector="${sector}">
+               <span class="custom-allocation-value">${benchmarkAllocation.toFixed(1)}%</span>
+             </div>` :
+        `${benchmarkAllocation.toFixed(2)}%`
+      }
+        </td>
+      `;
+      tableBody.appendChild(row);
+    });
+
+    // Add event listeners for custom allocation sliders
+    if (selectedBenchmark === 'custom') {
+      document.querySelectorAll('.custom-allocation-slider').forEach(slider => {
+        slider.addEventListener('input', function () {
+          const sector = this.getAttribute('data-sector');
+          const value = parseFloat(this.value);
+
+          // Update display
+          this.nextElementSibling.textContent = value.toFixed(1) + '%';
+
+          // Update custom benchmark
+          benchmarks.custom[sector] = value;
+
+          // Check if sum is close to 100%
+          checkAllocationSum();
+        });
+      });
+
+      // Initial check
+      checkAllocationSum();
+    }
+  }
+
+  // Check if custom allocation sums to approximately 100%
+  function checkAllocationSum() {
+    const sum = Object.values(benchmarks.custom).reduce((total, value) => total + value, 0);
+    const sumWarning = document.getElementById('allocationSumWarning');
+
+    if (Math.abs(sum - 100) > 1) {
+      sumWarning.innerHTML = `
+        <div class="alert alert-danger mt-2 mb-0">
+          <strong>Warning:</strong> Your allocations sum to ${sum.toFixed(1)}%. Please adjust to total 100%.
+        </div>
+      `;
+    } else {
+      sumWarning.innerHTML = `
+        <div class="alert alert-success mt-2 mb-0">
+          <strong>Good:</strong> Your allocations sum to ${sum.toFixed(1)}%, which is close to 100%.
+        </div>
+      `;
+    }
+  }
+
+  // Initialize custom allocation sliders
+  function initializeCustomAllocationSliders() {
+    // If custom allocations are empty, initialize them
+    if (Object.keys(benchmarks.custom).length === 0) {
+      // Use current portfolio allocation as starting point
+      Object.keys(portfolio.sectorAllocation).forEach(sector => {
+        benchmarks.custom[sector] = portfolio.sectorAllocation[sector];
+      });
+
+      // Add any missing sectors from S&P 500
+      Object.keys(benchmarks.sp500).forEach(sector => {
+        if (!benchmarks.custom[sector]) {
+          benchmarks.custom[sector] = 0;
+        }
+      });
+    }
+  }
+
+  // Analyze portfolio and show results
+  function analyzePortfolio() {
+    if (portfolio.holdings.length === 0) {
+      alert('Please add at least one holding before analyzing.');
+      return;
+    }
+
+    // Get selected benchmark
+    const selectedBenchmark = document.querySelector('input[name="benchmarkRadio"]:checked').value;
+    const benchmarkData = benchmarks[selectedBenchmark];
+
+    // Create charts
+    createAllocationCharts(benchmarkData);
+
+    // Calculate diversification score
+    calculateDiversificationScore(benchmarkData);
+
+    // Generate rebalancing recommendations
+    generateRebalancingRecommendations(benchmarkData);
+
+    // Show results card
+    document.getElementById('resultsCard').style.display = 'block';
+
+    // Scroll to results
+    setTimeout(() => {
+      document.getElementById('resultsCard').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }, 300);
+  }
+
+  // Create allocation charts
+  function createAllocationCharts(benchmarkData) {
+    // Current allocation chart
+    const currentCtx = document.getElementById('currentAllocationChart').getContext('2d');
+
+    // Destroy existing chart if it exists
+    if (window.currentAllocationChart) {
+      window.currentAllocationChart.destroy();
+    }
+
+    // Prepare data
+    const sectors = Object.keys(portfolio.sectorAllocation);
+    const values = sectors.map(sector => portfolio.sectorAllocation[sector]);
+    const colors = sectors.map(sector => getSectorColor(sector, 0.7));
+
+    // Create chart
+    window.currentAllocationChart = new Chart(currentCtx, {
+      type: 'pie',
+      data: {
+        labels: sectors,
+        datasets: [{
+          data: values,
+          backgroundColor: colors,
+          borderColor: 'white',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: 'right',
+            labels: {
+              font: {
+                size: 11
+              }
+            }
+          },
+          tooltip: {
+            callbacks: {
+              label: function (context) {
+                const value = context.raw;
+                return `${context.label}: ${value.toFixed(2)}%`;
+              }
+            }
+          }
+        }
+      }
+    });
+
+    // Comparison chart
+    const comparisonCtx = document.getElementById('comparisonChart').getContext('2d');
+
+    // Destroy existing chart if it exists
+    if (window.comparisonChart) {
+      window.comparisonChart.destroy();
+    }
+
+    // Get all sectors from both portfolio and benchmark
+    const allSectors = [...new Set([
+      ...Object.keys(portfolio.sectorAllocation),
+      ...Object.keys(benchmarkData)
+    ])];
+
+    // Prepare data
+    const currentValues = allSectors.map(sector => portfolio.sectorAllocation[sector] || 0);
+    const targetValues = allSectors.map(sector => benchmarkData[sector] || 0);
+    const sectorColors = allSectors.map(sector => getSectorColor(sector, 0.7));
+
+    // Create chart
+    window.comparisonChart = new Chart(comparisonCtx, {
+      type: 'bar',
+      data: {
+        labels: allSectors,
+        datasets: [
+          {
+            label: 'Current Allocation',
+            data: currentValues,
+            backgroundColor: sectorColors.map(color => color.replace('0.7', '0.7')),
+            borderColor: sectorColors.map(color => color.replace('0.7', '1')),
+            borderWidth: 1
+          },
+          {
+            label: 'Target Allocation',
+            data: targetValues,
+            backgroundColor: 'rgba(0, 123, 255, 0.4)',
+            borderColor: 'rgba(0, 123, 255, 1)',
+            borderWidth: 1,
+            borderDash: [5, 5]
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          y: {
+            beginAtZero: true,
+            title: {
+              display: true,
+              text: 'Allocation (%)'
+            },
+            ticks: {
+              callback: function (value) {
+                return value + '%';
+              }
+            }
+          }
+        },
+        plugins: {
+          legend: {
+            position: 'top'
+          },
+          tooltip: {
+            callbacks: {
+              label: function (context) {
+                const value = context.raw;
+                return `${context.dataset.label}: ${value.toFixed(2)}%`;
+              }
+            }
+          }
+        }
+      }
+    });
+  }
+
+  // Calculate diversification score
+  function calculateDiversificationScore(benchmarkData) {
+    // Get all sectors from both portfolio and benchmark
+    const allSectors = [...new Set([
+      ...Object.keys(portfolio.sectorAllocation),
+      ...Object.keys(benchmarkData)
+    ])];
+
+    // Calculate total deviation
+    let totalDeviation = 0;
+    const analysisTableBody = document.getElementById('sectorAnalysisTableBody');
+    analysisTableBody.innerHTML = '';
+
+    allSectors.forEach(sector => {
+      const currentAllocation = portfolio.sectorAllocation[sector] || 0;
+      const targetAllocation = benchmarkData[sector] || 0;
+      const difference = currentAllocation - targetAllocation;
+      const absDeviation = Math.abs(difference);
+
+      totalDeviation += absDeviation;
+
+      // Add to analysis table
+      const row = document.createElement('tr');
+
+      let statusClass, statusText;
+      if (absDeviation < 2) {
+        statusClass = 'deviation-low';
+        statusText = 'Well Balanced';
+      } else if (absDeviation < 5) {
+        statusClass = 'deviation-medium';
+        statusText = 'Slight Imbalance';
+      } else {
+        statusClass = 'deviation-high';
+        statusText = 'Significant Imbalance';
+      }
+
+      row.innerHTML = `
+        <td>
+          <span class="sector-color-indicator" style="background-color: ${getSectorColor(sector, 1)};"></span>
+          ${sector}
+        </td>
+        <td>${currentAllocation.toFixed(2)}%</td>
+        <td>${targetAllocation.toFixed(2)}%</td>
+        <td class="${difference > 0 ? 'text-success' : difference < 0 ? 'text-danger' : ''}">
+          ${difference > 0 ? '+' : ''}${difference.toFixed(2)}%
+        </td>
+        <td><span class="target-deviation ${statusClass}">${statusText}</span></td>
+      `;
+      analysisTableBody.appendChild(row);
+    });
+
+    // Calculate score (100 - average deviation)
+    // We cap total deviation at 50 to keep the score meaningful
+    const cappedDeviation = Math.min(totalDeviation, 50);
+    const score = Math.round(100 - (cappedDeviation * 2));
+
+    // Update UI
+    document.getElementById('diversificationScore').textContent = score;
+    document.getElementById('diversificationProgressBar').style.width = score + '%';
+
+    // Get color based on score
+    let scoreColor, summaryText;
+    if (score >= 85) {
+      scoreColor = 'bg-success';
+      summaryText = 'Your portfolio has excellent sector diversification, closely aligned with the benchmark allocation. This balanced approach helps manage risk while maintaining exposure to growth opportunities.';
+    } else if (score >= 70) {
+      scoreColor = 'bg-info';
+      summaryText = 'Your portfolio has good sector diversification with some minor deviations from the benchmark. Consider small adjustments to improve balance, but your overall diversification is solid.';
+    } else if (score >= 50) {
+      scoreColor = 'bg-warning';
+      summaryText = 'Your portfolio shows moderate sector imbalances compared to the benchmark. Consider rebalancing to reduce sector-specific risks and improve diversification.';
+    } else {
+      scoreColor = 'bg-danger';
+      summaryText = 'Your portfolio has significant sector concentration compared to the benchmark. Consider diversifying across more sectors to reduce risk and improve long-term performance potential.';
+    }
+
+    document.getElementById('diversificationProgressBar').className = `progress-bar ${scoreColor}`;
+    document.getElementById('diversificationSummary').textContent = summaryText;
+  }
+
+  // Generate rebalancing recommendations
+  function generateRebalancingRecommendations(benchmarkData) {
+    const recommendationsDiv = document.getElementById('rebalanceRecommendations');
+    recommendationsDiv.innerHTML = '';
+
+    // Find overweight and underweight sectors
+    const overweightSectors = [];
+    const underweightSectors = [];
+
+    for (const sector in benchmarkData) {
+      const currentAllocation = portfolio.sectorAllocation[sector] || 0;
+      const targetAllocation = benchmarkData[sector];
+      const difference = currentAllocation - targetAllocation;
+
+      if (difference > 2) {
+        overweightSectors.push({
+          sector,
+          current: currentAllocation,
+          target: targetAllocation,
+          difference
+        });
+      } else if (difference < -2) {
+        underweightSectors.push({
+          sector,
+          current: currentAllocation,
+          target: targetAllocation,
+          difference: Math.abs(difference)
+        });
+      }
+    }
+
+    // Sort by difference (largest first)
+    overweightSectors.sort((a, b) => b.difference - a.difference);
+    underweightSectors.sort((a, b) => b.difference - a.difference);
+
+    // Generate recommendations
+    if (overweightSectors.length === 0 && underweightSectors.length === 0) {
+      recommendationsDiv.innerHTML = `
+        <div class="alert alert-success">
+          <i class="bi bi-check-circle me-2"></i>
+<strong>Well done!</strong> Your portfolio is already well-balanced across sectors. No significant rebalancing is needed at this time.
+        </div>
+      \`;
+      return;
+    }
+
+    // Add overweight recommendations
+    if (overweightSectors.length > 0) {
+      const overweightDiv = document.createElement('div');
+      overweightDiv.className = 'rebalance-suggestion';
+
+      let overweightContent = \`
+        <h5><i class="bi bi-arrow-down-circle text-danger me-2"></i>Consider Reducing Exposure</h5>
+        <p>Your portfolio has higher allocation than the benchmark in these sectors:</p>
+        <ul>
+      \`;
+
+      overweightSectors.forEach(sector => {
+        // Find tickers in this sector
+        const sectorHoldings = portfolio.holdings.filter(h => h.sector === sector.sector);
+        const tickerList = sectorHoldings.map(h => \`<span class="ticker-badge bg-light">${h.ticker}</span>\`).join(' ');
+
+        overweightContent += \`
+          <li><strong>${sector.sector}:</strong> Currently ${sector.current.toFixed(2)}% vs. target ${sector.target.toFixed(2)}%
+            (${sector.difference.toFixed(2)}% overweight)<br>
+            <small class="text-muted">Holdings: ${tickerList}</small>
+          </li>
+        \`;
+      });
+
+      overweightContent += \`</ul>\`;
+      overweightDiv.innerHTML = overweightContent;
+      recommendationsDiv.appendChild(overweightDiv);
+    }
+
+    // Add underweight recommendations
+    if (underweightSectors.length > 0) {
+      const underweightDiv = document.createElement('div');
+      underweightDiv.className = 'rebalance-suggestion';
+
+      let underweightContent = \`
+        <h5><i class="bi bi-arrow-up-circle text-success me-2"></i>Consider Increasing Exposure</h5>
+        <p>Your portfolio has lower allocation than the benchmark in these sectors:</p>
+        <ul>
+      \`;
+
+      underweightSectors.forEach(sector => {
+        // Find examples of stocks in this sector
+        const sectorExamples = Object.entries(stockSectors)
+          .filter(([_, sectorName]) => sectorName === sector.sector)
+          .map(([ticker, _]) => ticker)
+          .slice(0, 3);
+
+        const exampleList = sectorExamples.length > 0
+          ? \`<small class="text-muted">Example tickers: ${sectorExamples.map(t => `<span class="ticker-badge bg-light">${t}</span>`).join(' ')}</small>\`
+          : '';
+
+        underweightContent += \`
+          <li><strong>${sector.sector}:</strong> Currently ${(sector.current).toFixed(2)}% vs. target ${sector.target.toFixed(2)}%
+            (${sector.difference.toFixed(2)}% underweight)<br>
+            ${exampleList}
+          </li>
+        \`;
+      });
+
+      underweightContent += \`</ul>\`;
+      underweightDiv.innerHTML = underweightContent;
+      recommendationsDiv.appendChild(underweightDiv);
+    }
+
+    // Add balanced allocation suggestion
+    const balancedDiv = document.createElement('div');
+    balancedDiv.className = 'alert alert-primary mt-3';
+    balancedDiv.innerHTML = \`
+      <h5><i class="bi bi-shuffle me-2"></i>Suggested Rebalancing Strategy</h5>
+      <p>To improve your portfolio's sector balance, consider these steps:</p>
+      <ol>
+        <li>When adding new funds to your portfolio, prioritize underweight sectors</li>
+        <li>If selling positions, consider trimming from overweight sectors first</li>
+        <li>Set a regular rebalancing schedule (quarterly or semi-annually) to maintain target allocations</li>
+        <li>Consider tax implications when rebalancing taxable accounts (tax-loss harvesting can help offset gains)</li>
+      </ol>
+    \`;
+    recommendationsDiv.appendChild(balancedDiv);
+  }
+
+  // Set up table sorting
+  function setupTableSorting() {
+    document.querySelectorAll('.sortable th').forEach(header => {
+      header.addEventListener('click', function() {
+        const table = this.closest('table');
+        const tbody = table.querySelector('tbody');
+        const rows = Array.from(tbody.querySelectorAll('tr'));
+
+        // Get index of clicked column
+        const headerCells = Array.from(this.parentNode.children);
+        const columnIndex = headerCells.indexOf(this);
+
+        // Remove sort classes from all headers
+        headerCells.forEach(cell => {
+          cell.classList.remove('sort-asc', 'sort-desc');
+        });
+
+        // Determine sort direction
+        const sortDirection = this.classList.contains('sort-asc') ? 'desc' : 'asc';
+        this.classList.add(\`sort-${sortDirection}\`);
+
+        // Sort rows
+        rows.sort((a, b) => {
+          const aValue = a.children[columnIndex].textContent.trim();
+          const bValue = b.children[columnIndex].textContent.trim();
+
+          // Check if values are numbers
+          const aNum = parseFloat(aValue.replace(/[^0-9.-]+/g, ''));
+          const bNum = parseFloat(bValue.replace(/[^0-9.-]+/g, ''));
+
+          if (!isNaN(aNum) && !isNaN(bNum)) {
+            return sortDirection === 'asc' ? aNum - bNum : bNum - aNum;
+          }
+
+          // Text comparison
+          return sortDirection === 'asc'
+            ? aValue.localeCompare(bValue)
+            : bValue.localeCompare(aValue);
+        });
+
+        // Re-append rows to tbody
+        rows.forEach(row => tbody.appendChild(row));
+      });
+    });
+  }
+
+  // Setup share popup functionality
+  function setupSharePopup() {
+    const shareBtn = document.getElementById('shareResultsBtn');
+
+    if (shareBtn) {
+      shareBtn.addEventListener('click', function() {
+        const popup = document.getElementById('sharePopup');
+        popup.style.display = popup.style.display === 'none' ? 'block' : 'none';
+
+        // Close popup when clicking outside
+        document.addEventListener('click', function hidePopup(e) {
+          if (!e.target.closest('#sharePopup') && e.target !== shareBtn) {
+            popup.style.display = 'none';
+            document.removeEventListener('click', hidePopup);
+          }
+        });
+      });
+    }
+  }
+
+  // Helper function to format currency
+  function formatCurrency(value) {
+    return '$' + value.toLocaleString('en-US', {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    });
+  }
+
+  // Helper function to get a color for each sector
+  function getSectorColor(sector, alpha = 1) {
+    const sectorColors = {
+      'Technology': \`rgba(0, 123, 255, ${alpha})\`,
+      'Healthcare': \`rgba(40, 167, 69, ${alpha})\`,
+      'Financial Services': \`rgba(111, 66, 193, ${alpha})\`,
+      'Communication Services': \`rgba(255, 193, 7, ${alpha})\`,
+      'Consumer Cyclical': \`rgba(23, 162, 184, ${alpha})\`,
+      'Consumer Defensive': \`rgba(0, 200, 81, ${alpha})\`,
+      'Energy': \`rgba(220, 53, 69, ${alpha})\`,
+      'Industrials': \`rgba(108, 117, 125, ${alpha})\`,
+      'Basic Materials': \`rgba(153, 102, 255, ${alpha})\`,
+      'Real Estate': \`rgba(240, 173, 78, ${alpha})\`,
+      'Utilities': \`rgba(134, 142, 150, ${alpha})\`,
+      'S&P 500 Index': \`rgba(52, 58, 64, ${alpha})\`,
+      'Total Market': \`rgba(52, 58, 64, ${alpha})\`,
+      'Small Cap': \`rgba(52, 58, 64, ${alpha})\`,
+      'Unclassified': \`rgba(108, 117, 125, ${alpha})\`
+    };
+
+    return sectorColors[sector] || \`rgba(108, 117, 125, ${alpha})\`;
+  }
+</script>
+
+<!-- Calculator Navigation Template -->
+<script>
+  // Add navigation template for calculators
+  document.addEventListener('DOMContentLoaded', function () {
+    // Create a template div
+    const calcNav = document.createElement('div');
+    calcNav.className = 'calculator-nav bg-light py-3 border-bottom';
+    calcNav.style.display = 'none'; // Hide initially
+
+    calcNav.innerHTML = \`
+      <div class="container">
+        <h5 class="text-primary mb-2">Explore Our Other Financial Calculators:</h5>
+        <div class="row g-2">
+          <div class="col-md-3 col-sm-6">
+            <a href="index.html" class="btn btn-outline-primary btn-sm w-100">Market Cap Calculator</a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="position-sizing.html" class="btn btn-outline-primary btn-sm w-100">Position Sizing Calculator</a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="tax-harvesting.html" class="btn btn-outline-primary btn-sm w-100">Tax-Efficient Harvesting</a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="sector-balance.html" class="btn btn-outline-primary btn-sm w-100">Sector Balance Optimizer</a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="stock-split.html" class="btn btn-outline-primary btn-sm w-100">Stock Split Impact</a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="drip-breakeven.html" class="btn btn-outline-primary btn-sm w-100">Dividend Reinvestment</a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="valuation-confidence.html" class="btn btn-outline-primary btn-sm w-100">Valuation Confidence</a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="ma-crossover.html" class="btn btn-outline-primary btn-sm w-100">MA Crossover Backtester</a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="buyback-impact.html" class="btn btn-outline-primary btn-sm w-100">Share Buyback Impact</a>
+          </div>
+        </div>
+        <div class="text-end mt-2">
+          <button class="btn btn-sm btn-link text-muted" id="hideCalcNavBtn">Hide</button>
+        </div>
+      </div>
+    \`;
+
+    // Add toggle button
+    const toggleBtn = document.createElement('button');
+    toggleBtn.className = 'btn btn-sm btn-primary position-fixed';
+    toggleBtn.id = 'showCalcNavBtn';
+    toggleBtn.innerHTML = '<i class="bi bi-calculator me-1"></i> More Calculators';
+    toggleBtn.style.bottom = '20px';
+    toggleBtn.style.right = '20px';
+    toggleBtn.style.zIndex = '1000';
+    toggleBtn.style.borderRadius = '30px';
+    toggleBtn.style.padding = '8px 16px';
+
+    // Add to document
+    document.body.appendChild(calcNav);
+    document.body.appendChild(toggleBtn);
+
+    // Show/hide functionality
+    document.getElementById('showCalcNavBtn').addEventListener('click', function() {
+      calcNav.style.display = 'block';
+      this.style.display = 'none';
+    });
+
+    document.getElementById('hideCalcNavBtn').addEventListener('click', function() {
+      calcNav.style.display = 'none';
+      document.getElementById('showCalcNavBtn').style.display = 'block';
+    });
+  });
+</script>
+</body>
+</html>

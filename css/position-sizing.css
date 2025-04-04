@@ -1,0 +1,110 @@
+/* Position Sizing Calculator Specific Styles */
+
+/* Hero section background */
+.hero-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e2f0ff 100%);
+}
+
+/* Custom styles for risk indicators */
+.risk-indicator {
+    height: 8px;
+    border-radius: 4px;
+    margin-top: 8px;
+    background: linear-gradient(90deg,
+        #28a745 0%,
+        #ffc107 50%,
+        #dc3545 100%);
+}
+
+.optimal-marker {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 50%;
+    top: -12px;
+    cursor: pointer;
+}
+
+/* Custom Badge Styles */
+.badge.bg-danger {
+    background-color: #d9534f !important;
+}
+
+/* Chart customizations */
+.position-chart-container {
+    position: relative;
+    min-height: 300px;
+}
+
+/* R-Multiple Display */
+.r-multiple-display {
+    background-color: #f8f9fa;
+    border-left: 4px solid #007bff;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 0.25rem;
+}
+
+/* Animation for results display */
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#resultsCard {
+    animation: fadeSlideUp 0.5s ease-out;
+}
+
+/* Improve focus on calculation button */
+#calculateBtn:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content .lead {
+        font-size: 1rem;
+    }
+
+    .hero-image {
+        margin-top: 2rem;
+    }
+}
+
+/* Position Size Pill */
+.position-size-pill {
+    background-color: #f0f8ff;
+    border: 1px solid #b8daff;
+    color: #004085;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+/* Share Popup */
+.share-popup {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #dee2e6;
+    padding: 0.5rem;
+    z-index: 1000;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.375rem;
+}
