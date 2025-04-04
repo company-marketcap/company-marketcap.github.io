@@ -2,9 +2,1708 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Tax-Efficient Harvesting Calculator - Optimize Your Investment Tax Strategy</title>
+  <meta content="Calculate potential tax savings through strategic tax-loss harvesting. Optimize your investment portfolio's tax efficiency with our free calculator." name="description">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    /* Tax Harvesting Calculator Specific Styles */
+    .hero-section {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9fff2 100%);
+    }
+
+    .loss-card {
+      border-left: 5px solid #dc3545;
+    }
+
+    .gain-card {
+      border-left: 5px solid #198754;
+    }
+
+    .savings-card {
+      border-left: 5px solid #0d6efd;
+    }
+
+    .diff-indicator {
+      font-size: 0.9rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 3px;
+      margin-left: 0.5rem;
+    }
+
+    .harvest-arrow {
+      position: relative;
+      text-align: center;
+      padding: 1rem;
+      font-size: 2rem;
+      color: #6c757d;
+    }
+
+    .tax-chart-container {
+      height: 400px;
+      margin-bottom: 1.5rem;
+    }
+
+    .tax-input-group .input-group-text {
+      min-width: 50px;
+      justify-content: center;
+    }
+
+    .tax-option {
+      border-radius: 0.25rem;
+      border: 1px solid #ced4da;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      transition: all 0.2s ease;
+    }
+
+    .tax-option:hover {
+      border-color: #0d6efd;
+      box-shadow: 0 0.25rem 0.5rem rgba(13, 110, 253, 0.1);
+    }
+
+    .tax-badge {
+      font-size: 0.8rem;
+      padding: 0.3rem 0.6rem;
+      border-radius: 1rem;
+      margin-left: 0.5rem;
+    }
+
+    .tax-result-value {
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
+    .tax-hint {
+      position: relative;
+      padding: 1rem;
+      border-left: 4px solid #0d6efd;
+      background-color: #f8f9fa;
+      margin-bottom: 1rem;
+    }
+
+    .carryforward-section {
+      border-top: 1px dashed #dee2e6;
+      padding-top: 1rem;
+      margin-top: 1rem;
+    }
+
+    .historical-tax-item {
+      padding: 0.75rem;
+      border-radius: 0.25rem;
+      background-color: #f8f9fa;
+      margin-bottom: 0.5rem;
+      transition: all 0.2s ease;
+    }
+
+    .historical-tax-item:hover {
+      background-color: #e9ecef;
+    }
+
+    .toggle-advanced-btn {
+      cursor: pointer;
+      text-decoration: none;
+      color: #0d6efd;
+    }
+
+    .toggle-advanced-btn:hover {
+      text-decoration: underline;
+    }
+
+    /* Animation for results */
+    @keyframes fadeSlideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    #resultsCard {
+      animation: fadeSlideUp 0.5s ease-out;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .harvest-arrow {
+        transform: rotate(90deg);
+        margin: 1rem 0;
+      }
+
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
+<div id="header"></div>
+
+<!-- Hero Section -->
+<header class="hero-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="hero-content">
+          <span class="badge bg-primary mb-2 p-2">TAX OPTIMIZATION</span>
+          <h1 class="display-4 fw-bold mb-3">Tax-Efficient Harvesting Calculator</h1>
+          <p class="lead mb-4">Calculate your potential tax savings through strategic tax-loss harvesting. Optimize your investment portfolio's tax efficiency and reduce your tax liability.</p>
+          <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-primary btn-lg" href="#calculator">Try Free Calculator <i class="bi bi-arrow-right-circle ms-2"></i></a>
+            <a class="btn btn-outline-secondary btn-lg" href="#features">Learn More</a>
+          </div>
+          <div class="mt-4 usage-stats">
+            <span class="badge bg-light text-dark p-2 me-2">
+              <i class="bi bi-shield-check me-1"></i> IRS compliant calculations
+            </span>
+            <span class="badge bg-light text-dark p-2">
+              <i class="bi bi-calendar-check me-1"></i> Updated for current tax year
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="hero-image position-relative">
+          <img
+            alt="Tax-Efficient Harvesting Visualization"
+            class="img-fluid rounded shadow"
+            src="/api/placeholder/600/400"
+            style="width: 100%; height: auto;">
+          <div class="free-badge position-absolute top-0 end-0 bg-success text-white p-3 rounded-circle m-3">
+            <strong>FREE</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Calculator Section -->
+<section class="calculator py-5 bg-light" id="calculator">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="h2 fw-bold">Tax-Efficient Harvesting Calculator</h2>
+      <p class="lead text-muted">Calculate potential tax savings through strategic tax-loss harvesting</p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="card shadow border-0">
+          <div class="card-header bg-primary text-white py-3">
+            <div class="d-flex justify-content-between align-items-center">
+              <h2 class="h4 mb-0"><i class="bi bi-calculator me-2"></i>Tax-Loss Harvesting Tool</h2>
+              <span class="badge bg-success py-2 px-3">FREE</span>
+            </div>
+          </div>
+          <div class="card-body p-4">
+            <div class="alert alert-info mb-4">
+              <div class="d-flex">
+                <div class="me-3">
+                  <i class="bi bi-info-circle-fill fs-4"></i>
+                </div>
+                <div>
+                  <p class="mb-0">Enter your investment details and tax information to calculate the potential tax savings from harvesting investment losses.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="p-3 h-100 border rounded bg-white shadow-sm">
+                  <h3 class="h5 mb-3 border-bottom pb-2"><i class="bi bi-cash-coin me-2"></i>Investment Information</h3>
+
+                  <div class="mb-3">
+                    <label class="form-label" for="investmentName">Investment Name/Description</label>
+                    <input class="form-control" id="investmentName" placeholder="e.g., XYZ Stock or ETF" type="text">
+                    <div class="form-text">Name or description of the investment</div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label" for="purchasePrice">Original Purchase Price ($)</label>
+                    <div class="input-group">
+                      <span class="input-group-text">$</span>
+                      <input class="form-control" id="purchasePrice" min="0.01" step="0.01" type="number">
+                    </div>
+                    <div class="form-text">Total cost basis of the investment</div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label" for="currentValue">Current Market Value ($)</label>
+                    <div class="input-group">
+                      <span class="input-group-text">$</span>
+                      <input class="form-control" id="currentValue" min="0" step="0.01" type="number">
+                    </div>
+                    <div class="form-text">Current value of the investment</div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label" for="purchaseDate">Purchase Date</label>
+                    <input class="form-control" id="purchaseDate" type="date">
+                    <div class="form-text">Date when you purchased the investment</div>
+                  </div>
+
+                  <div class="form-check form-switch mb-3">
+                    <input class="form-check-input" id="hasOtherCapitalGains" type="checkbox">
+                    <label class="form-check-label" for="hasOtherCapitalGains">I have other capital gains to offset</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="p-3 h-100 border rounded bg-white shadow-sm" id="otherGainsSection" style="display:none;">
+                  <h3 class="h5 mb-3 border-bottom pb-2"><i class="bi bi-graph-up me-2"></i>Other Capital Gains</h3>
+
+                  <div class="mb-3">
+                    <label class="form-label" for="shortTermGains">Short-Term Capital Gains ($)</label>
+                    <div class="input-group">
+                      <span class="input-group-text">$</span>
+                      <input class="form-control" id="shortTermGains" min="0" step="0.01" type="number">
+                    </div>
+                    <div class="form-text">Gains from assets held ≤ 1 year</div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label" for="longTermGains">Long-Term Capital Gains ($)</label>
+                    <div class="input-group">
+                      <span class="input-group-text">$</span>
+                      <input class="form-control" id="longTermGains" min="0" step="0.01" type="number">
+                    </div>
+                    <div class="form-text">Gains from assets held > 1 year</div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label" for="ordinaryIncome">Annual Ordinary Income ($)</label>
+                    <div class="input-group">
+                      <span class="input-group-text">$</span>
+                      <input class="form-control" id="ordinaryIncome" min="0" step="1000" type="number">
+                    </div>
+                    <div class="form-text">Your total annual income (affects tax brackets)</div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label" for="filingStatus">Tax Filing Status</label>
+                    <select class="form-select" id="filingStatus">
+                      <option value="single">Single</option>
+                      <option value="married">Married Filing Jointly</option>
+                      <option value="head">Head of Household</option>
+                      <option value="separate">Married Filing Separately</option>
+                    </select>
+                    <div class="form-text">Your tax filing status</div>
+                  </div>
+
+                  <div class="form-check form-switch mb-3">
+                    <input class="form-check-input" id="includeStateCalc" type="checkbox" checked>
+                    <label class="form-check-label" for="includeStateCalc">Include state tax calculations</label>
+                  </div>
+
+                  <div class="mb-3" id="stateRateDiv">
+                    <label class="form-label" for="stateRate">State Tax Rate (%)</label>
+                    <div class="input-group">
+                      <input class="form-control" id="stateRate" max="15" min="0" step="0.1" type="number" value="5">
+                      <span class="input-group-text">%</span>
+                    </div>
+                    <div class="form-text">Your state's income tax rate</div>
+                  </div>
+                </div>
+
+                <div class="p-3 h-100 border rounded bg-white shadow-sm" id="taxSettingsSection">
+                  <h3 class="h5 mb-3 border-bottom pb-2"><i class="bi bi-gear me-2"></i>Tax Settings</h3>
+
+                  <div class="mb-3">
+                    <label class="form-label" for="taxYear">Tax Year</label>
+                    <select class="form-select" id="taxYear">
+                      <option value="2025" selected>2025</option>
+                      <option value="2024">2024</option>
+                      <option value="2023">2023</option>
+                    </select>
+                    <div class="form-text">Year for tax calculation purposes</div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label" for="incomeBracket">Federal Income Tax Bracket (%)</label>
+                    <div class="input-group">
+                      <select class="form-select" id="incomeBracket">
+                        <option value="10">10%</option>
+                        <option value="12">12%</option>
+                        <option value="22">22%</option>
+                        <option value="24">24%</option>
+                        <option value="32">32%</option>
+                        <option value="35">35%</option>
+                        <option value="37">37%</option>
+                      </select>
+                      <span class="input-group-text">%</span>
+                    </div>
+                    <div class="form-text">Your current federal income tax bracket</div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label" for="capitalGainsRate">Long-Term Capital Gains Rate (%)</label>
+                    <div class="input-group">
+                      <select class="form-select" id="capitalGainsRate">
+                        <option value="0">0%</option>
+                        <option value="15" selected>15%</option>
+                        <option value="20">20%</option>
+                      </select>
+                      <span class="input-group-text">%</span>
+                    </div>
+                    <div class="form-text">Your long-term capital gains tax rate</div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label" for="niitRate">Net Investment Income Tax (NIIT) Rate (%)</label>
+                    <div class="input-group">
+                      <input class="form-control" id="niitRate" readonly type="number" value="3.8">
+                      <span class="input-group-text">%</span>
+                    </div>
+                    <div class="form-text">Additional tax on investment income for high earners</div>
+                  </div>
+
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" id="applyNiit" type="checkbox">
+                    <label class="form-check-label" for="applyNiit">Apply NIIT (income > $200K single/$250K joint)</label>
+                  </div>
+
+                  <div class="form-check form-switch mb-3">
+                    <input class="form-check-input" id="includeAdvancedOptions" type="checkbox">
+                    <label class="form-check-label" for="includeAdvancedOptions">Show advanced options</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-4" id="advancedOptionsRow" style="display:none;">
+              <div class="col-12">
+                <div class="p-3 border rounded bg-white shadow-sm">
+                  <h3 class="h5 mb-3 border-bottom pb-2"><i class="bi bi-sliders me-2"></i>Advanced Options</h3>
+
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label class="form-label" for="transactionCost">Transaction Costs ($)</label>
+                        <div class="input-group">
+                          <span class="input-group-text">$</span>
+                          <input class="form-control" id="transactionCost" min="0" step="0.01" type="number" value="0">
+                        </div>
+                        <div class="form-text">Trading fees and commissions</div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label class="form-label" for="washSaleBuffer">Wash Sale Buffer Days</label>
+                        <input class="form-control" id="washSaleBuffer" min="30" step="1" type="number" value="30">
+                        <div class="form-text">Days to wait to avoid wash sale rule (min. 30)</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label class="form-label" for="replacementInvestment">Replacement Investment</label>
+                        <input class="form-control" id="replacementInvestment" placeholder="e.g., Similar ETF or index fund" type="text">
+                        <div class="form-text">Alternative investment to maintain market exposure</div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label class="form-label" for="carryForwardLimit">Loss Carry Forward Limit ($)</label>
+                        <div class="input-group">
+                          <span class="input-group-text">$</span>
+                          <input class="form-control" id="carryForwardLimit" min="0" step="1000" type="number" value="3000">
+                        </div>
+                        <div class="form-text">Annual limit for offsetting ordinary income ($3,000 standard)</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" id="considerAlternatives" type="checkbox" checked>
+                    <label class="form-check-label" for="considerAlternatives">Consider alternative investment opportunities</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center mt-4">
+              <button class="btn btn-primary btn-lg px-5 py-3 shadow-sm" id="calculateBtn">
+                <i class="bi bi-calculator me-2"></i>Calculate Tax Savings
+              </button>
+              <p class="text-muted mt-2 small">100% Free • No signup required • Instant results</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Results Section -->
+    <div class="row justify-content-center mt-4">
+      <div class="col-lg-10">
+        <div class="card shadow border-0" id="resultsCard" style="display:none;">
+          <div class="card-header bg-success text-white py-3">
+            <div class="d-flex justify-content-between align-items-center">
+              <h3 class="h4 mb-0"><i class="bi bi-check-circle me-2"></i>Tax Harvesting Analysis Results</h3>
+              <button class="btn btn-outline-light btn-sm" onclick="window.print()">
+                <i class="bi bi-printer me-1"></i> Print Report
+              </button>
+            </div>
+          </div>
+          <div class="card-body p-4">
+            <div class="mb-4">
+              <div class="alert alert-primary">
+                <div class="d-flex">
+                  <div class="me-3">
+                    <i class="bi bi-info-circle-fill fs-4"></i>
+                  </div>
+                  <div>
+                    <h5 class="mb-1" id="harvestSummary">Tax-Loss Harvesting Summary</h5>
+                    <p class="mb-0" id="harvestDescription">The summary will appear here after calculation.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-4 mb-4">
+              <div class="col-md-5">
+                <div class="card h-100 border-0 shadow-sm loss-card">
+                  <div class="card-header bg-danger bg-opacity-10">
+                    <h4 class="h5 mb-0 text-danger"><i class="bi bi-graph-down me-2"></i>Investment Loss</h4>
+                  </div>
+                  <div class="card-body">
+                    <div class="row mb-3">
+                      <div class="col-6 text-muted">Cost Basis:</div>
+                      <div class="col-6 text-end fw-bold" id="costBasisDisplay">$0.00</div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-6 text-muted">Current Value:</div>
+                      <div class="col-6 text-end fw-bold" id="currentValueDisplay">$0.00</div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-6 text-muted">Realized Loss:</div>
+                      <div class="col-6 text-end fw-bold" id="realizedLossDisplay">$0.00</div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-6 text-muted">Loss Type:</div>
+                      <div class="col-6 text-end fw-bold" id="lossTypeDisplay">-</div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-6 text-muted">Holding Period:</div>
+                      <div class="col-6 text-end fw-bold" id="holdingPeriodDisplay">0 days</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-2 d-flex align-items-center justify-content-center">
+                <div class="harvest-arrow">
+                  <i class="bi bi-arrow-right"></i>
+                  <div class="tax-badge bg-primary text-white" id="strategyBadge">Harvest</div>
+                </div>
+              </div>
+
+              <div class="col-md-5">
+                <div class="card h-100 border-0 shadow-sm savings-card">
+                  <div class="card-header bg-primary bg-opacity-10">
+                    <h4 class="h5 mb-0 text-primary"><i class="bi bi-piggy-bank me-2"></i>Tax Savings</h4>
+                  </div>
+                  <div class="card-body">
+                    <div class="row mb-3">
+                      <div class="col-6 text-muted">Federal Tax Savings:</div>
+                      <div class="col-6 text-end">
+                        <span class="fw-bold" id="federalSavingsDisplay">$0.00</span>
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-6 text-muted">State Tax Savings:</div>
+                      <div class="col-6 text-end">
+                        <span class="fw-bold" id="stateSavingsDisplay">$0.00</span>
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-6 text-muted">NIIT Savings:</div>
+                      <div class="col-6 text-end">
+                        <span class="fw-bold" id="niitSavingsDisplay">$0.00</span>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row mb-3">
+                      <div class="col-6 text-muted">Total Tax Savings:</div>
+                      <div class="col-6 text-end">
+                        <span class="fw-bold text-success" id="totalSavingsDisplay">$0.00</span>
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-6 text-muted">Net Benefit:</div>
+                      <div class="col-6 text-end">
+                        <span class="fw-bold" id="netBenefitDisplay">$0.00</span>
+                        <span class="diff-indicator bg-success bg-opacity-10 text-success" id="savingsRateDisplay">0%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Loss Utilization Section -->
+            <div class="card border-0 shadow-sm mb-4">
+              <div class="card-header bg-primary bg-opacity-10">
+                <h4 class="h5 mb-0 text-primary"><i class="bi bi-bar-chart me-2"></i>Loss Utilization</h4>
+              </div>
+              <div class="card-body">
+                <div class="tax-chart-container">
+                  <canvas id="lossUtilizationChart"></canvas>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <h5 class="mb-3">Loss Application Breakdown</h5>
+                    <div class="table-responsive">
+                      <table class="table table-bordered">
+                        <thead class="table-light">
+                          <tr>
+                            <th>Loss Application</th>
+                            <th>Amount</th>
+                            <th>Tax Savings</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Short-Term Gains Offset</td>
+                            <td id="shortTermOffsetDisplay">$0.00</td>
+                            <td id="shortTermSavingsDisplay">$0.00</td>
+                          </tr>
+                          <tr>
+                            <td>Long-Term Gains Offset</td>
+                            <td id="longTermOffsetDisplay">$0.00</td>
+                            <td id="longTermSavingsDisplay">$0.00</td>
+                          </tr>
+                          <tr>
+                            <td>Ordinary Income Offset</td>
+                            <td id="incomeOffsetDisplay">$0.00</td>
+                            <td id="incomeSavingsDisplay">$0.00</td>
+                          </tr>
+                          <tr>
+                            <td>Loss Carryforward</td>
+                            <td id="carryforwardDisplay">$0.00</td>
+                            <td id="futureSavingsDisplay">$0.00</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <h5 class="mb-3">Strategic Recommendations</h5>
+                    <div class="p-3 bg-light rounded" id="recommendationsContainer">
+                      <ul class="mb-0" id="recommendationsList">
+                        <!-- Recommendations will be added here by JS -->
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tax Considerations Section -->
+            <div class="card border-0 shadow-sm mb-4">
+              <div class="card-header bg-warning bg-opacity-10">
+                <h4 class="h5 mb-0 text-warning"><i class="bi bi-exclamation-triangle me-2"></i>Important Tax Considerations</h4>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <h5 class="mb-3">Wash Sale Rule</h5>
+                    <p>To ensure your loss is tax-deductible, avoid purchasing "substantially identical" securities:</p>
+                    <ul>
+                      <li><strong>30-Day Window:</strong> Don't buy the same or substantially identical security within 30 days before or after the sale.</li>
+                      <li><strong>Alternative Investments:</strong> Consider similar but not identical ETFs or funds to maintain market exposure.</li>
+                      <li><strong>Spousal & IRA Accounts:</strong> Purchases in these accounts can also trigger wash sale rules.</li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <h5 class="mb-3">Loss Harvesting Strategy</h5>
+                    <p>Maximize the efficiency of your tax-loss harvesting:</p>
+                    <ul>
+                      <li><strong>Short-Term vs. Long-Term:</strong> Short-term losses are generally more valuable as they offset income taxed at higher ordinary rates.</li>
+                      <li><strong>Year-End Planning:</strong> Consider tax-loss harvesting at year-end to offset gains realized during the year.</li>
+                      <li><strong>Carryforward Strategy:</strong> Losses that exceed the annual limit can be carried forward to future tax years.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="alert alert-warning mt-3">
+                  <strong>Important:</strong> This calculator provides estimates only. Tax laws are complex and change frequently. Consult with a qualified tax professional for advice specific to your situation.
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex mt-4 mb-2">
+              <div class="me-3">
+                <i class="bi bi-shield-check text-success fs-3"></i>
+              </div>
+              <div>
+                <h5 class="mb-1">Analysis Disclosure</h5>
+                <p class="mb-0 text-muted">This analysis is based on the information provided and current tax rates. The calculator assumes proper execution of tax-loss harvesting strategies while avoiding wash sale rules. The actual tax savings may vary based on your complete tax situation, future tax law changes, and market conditions. This calculator is provided for educational purposes only and should not be construed as tax or investment advice.</p>
+              </div>
+            </div>
+
+            <div class="text-center mt-4">
+              <button class="btn btn-outline-primary me-2" onclick="window.location.href='#calculator'">
+                <i class="bi bi-arrow-repeat me-1"></i> New Calculation
+              </button>
+              <div class="position-relative d-inline-block">
+                <button class="btn btn-outline-success" id="shareResultsBtn">
+                  <i class="bi bi-share me-1"></i> Share Results
+                </button>
+                <div class="share-popup shadow-sm p-2 rounded" id="sharePopup" style="display: none;">
+                  <a class="text-decoration-none me-2"
+                     href="https://twitter.com/intent/tweet?text=Check+out+how+much+you+can+save+with+tax-loss+harvesting!&url=https://example.com/tax-harvesting-calculator.html" target="_blank">
+                    <i class="bi bi-twitter fs-4 text-info"></i>
+                  </a>
+                  <a class="text-decoration-none me-2"
+                     href="https://www.linkedin.com/shareArticle?mini=true&url=https://example.com/tax-harvesting-calculator.html&title=Tax-Efficient%20Harvesting%20Calculator" target="_blank">
+                    <i class="bi bi-linkedin fs-4 text-primary"></i>
+                  </a>
+                  <a class="text-decoration-none"
+                     href="https://www.facebook.com/sharer/sharer.php?u=https://example.com/tax-harvesting-calculator.html" target="_blank">
+                    <i class="bi bi-facebook fs-4 text-secondary"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="calcNav"></div>
+
+<!-- Features Grid Section -->
+<section class="features py-5" id="features">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="badge bg-primary mb-2 p-2">KEY FEATURES</span>
+      <h2 class="fw-bold">Understanding Tax-Loss Harvesting</h2>
+      <p class="lead text-muted mx-auto" style="max-width: 700px;">Our calculator helps you analyze all aspects of tax-loss harvesting and its impact on your tax liability</p>
+    </div>
+
+    <div class="row g-4 mb-5">
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 hover-lift">
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center mb-3">
+              <div class="feature-icon-wrapper bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                <i class="bi bi-calculator feature-icon text-primary"></i>
+              </div>
+              <h3 class="card-title h5 mb-0">Tax Savings Calculations</h3>
+            </div>
+            <p class="card-text text-muted">Instantly calculate potential tax savings from harvesting investment losses based on your tax bracket and specific situation.</p>
+            <div class="mt-3">
+              <span class="badge bg-success me-2">Free</span>
+              <span class="badge bg-light text-dark">Accurate estimates</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 hover-lift">
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center mb-3">
+              <div class="feature-icon-wrapper bg-success bg-opacity-10 p-3 rounded-circle me-3">
+                <i class="bi bi-bar-chart feature-icon text-success"></i>
+              </div>
+              <h3 class="card-title h5 mb-0">Loss Utilization Strategy</h3>
+            </div>
+            <p class="card-text text-muted">Analyze how to optimally apply your losses to maximize tax benefits, with smart allocation across different types of gains and income.</p>
+            <div class="mt-3">
+              <span class="badge bg-success me-2">Free</span>
+              <span class="badge bg-light text-dark">Strategic optimization</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 hover-lift">
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center mb-3">
+              <div class="feature-icon-wrapper bg-info bg-opacity-10 p-3 rounded-circle me-3">
+                <i class="bi bi-graph-up feature-icon text-info"></i>
+              </div>
+              <h3 class="card-title h5 mb-0">Wash Sale Compliance</h3>
+            </div>
+            <p class="card-text text-muted">Get recommendations for avoiding wash sale rule violations and maintaining market exposure with alternative investments.</p>
+            <div class="mt-3">
+              <span class="badge bg-success me-2">Free</span>
+              <span class="badge bg-light text-dark">IRS compliant</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 hover-lift">
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center mb-3">
+              <div class="feature-icon-wrapper bg-warning bg-opacity-10 p-3 rounded-circle me-3">
+                <i class="bi bi-graph-down feature-icon text-warning"></i>
+              </div>
+              <h3 class="card-title h5 mb-0">Capital Loss Carryforward</h3>
+            </div>
+            <p class="card-text text-muted">Understand the tax implications of carrying forward losses that exceed the annual limit and how they can benefit you in future tax years.</p>
+            <div class="mt-3">
+              <span class="badge bg-success me-2">Free</span>
+              <span class="badge bg-light text-dark">Future planning</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 hover-lift">
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center mb-3">
+              <div class="feature-icon-wrapper bg-danger bg-opacity-10 p-3 rounded-circle me-3">
+                <i class="bi bi-piggy-bank feature-icon text-danger"></i>
+              </div>
+              <h3 class="card-title h5 mb-0">Federal & State Tax Integration</h3>
+            </div>
+            <p class="card-text text-muted">Calculate potential savings across both federal and state taxes, with support for different filing statuses and income levels.</p>
+            <div class="mt-3">
+              <span class="badge bg-success me-2">Free</span>
+              <span class="badge bg-light text-dark">Comprehensive analysis</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 hover-lift">
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center mb-3">
+              <div class="feature-icon-wrapper bg-secondary bg-opacity-10 p-3 rounded-circle me-3">
+                <i class="bi bi-shield-check feature-icon text-secondary"></i>
+              </div>
+              <h3 class="card-title h5 mb-0">Privacy Focused</h3>
+            </div>
+            <p class="card-text text-muted">All calculations are performed in your browser. Your financial data never leaves your device, ensuring complete security and privacy.</p>
+            <div class="mt-3">
+              <span class="badge bg-success me-2">Free</span>
+              <span class="badge bg-light text-dark">100% Private</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-5">
+      <a class="btn btn-primary btn-lg px-5" href="#calculator">Try the Free Calculator <i class="bi bi-arrow-right ms-2"></i></a>
+      <p class="text-muted mt-2">No sign-up • No credit card • No limits</p>
+    </div>
+  </div>
+</section>
+
+<!-- Insights Section -->
+<section class="insights py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="badge bg-secondary mb-2 p-2">EXPERT KNOWLEDGE</span>
+      <h2 class="fw-bold">Tax-Loss Harvesting Insights</h2>
+      <p class="lead text-muted mx-auto" style="max-width: 700px;">Understanding the mechanics and implications of tax-loss harvesting</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body p-4">
+            <h3 class="h4 text-primary mb-4"><i class="bi bi-info-circle me-2"></i>What Is Tax-Loss Harvesting?</h3>
+            <p>Tax-loss harvesting is a strategy that involves selling investments that have declined in value to offset capital gains taxes on other investments that have appreciated. This technique can reduce your overall tax liability while maintaining your portfolio's asset allocation and expected returns.</p>
+
+            <div class="table-responsive mt-4">
+              <table class="table table-bordered">
+                <thead class="table-light">
+                <tr>
+                  <th>Tax Scenario</th>
+                  <th>Without Harvesting</th>
+                  <th>With Harvesting</th>
+                  <th>Potential Savings</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td><strong>Short-Term Gains</strong></td>
+                  <td>Taxed at ordinary income rates (up to 37%)</td>
+                  <td>Reduced or eliminated by losses</td>
+                  <td>Up to 37%</td>
+                </tr>
+                <tr>
+                  <td><strong>Long-Term Gains</strong></td>
+                  <td>Taxed at 0%, 15%, or 20%</td>
+                  <td>Reduced or eliminated by losses</td>
+                  <td>Up to 20%</td>
+                </tr>
+                <tr>
+                  <td><strong>No Capital Gains</strong></td>
+                  <td>No immediate tax benefit from losses</td>
+                  <td>Up to $3,000 can offset ordinary income</td>
+                  <td>Varies by tax bracket</td>
+                </tr>
+                <tr>
+                  <td><strong>Losses > $3,000</strong></td>
+                  <td>Limited annual deduction</td>
+                  <td>Excess carried forward to future years</td>
+                  <td>Deferred tax benefits</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body p-4">
+            <h3 class="h4 text-primary mb-4"><i class="bi bi-question-circle me-2"></i>When To Consider Tax-Loss Harvesting</h3>
+            <p>Tax-loss harvesting can be particularly beneficial in certain situations:</p>
+
+            <div class="d-flex mb-3">
+              <div class="me-3 text-primary">
+                <i class="bi bi-graph-down-arrow fs-4"></i>
+              </div>
+              <div>
+                <h5 class="h6 mb-1">Market Downturns</h5>
+                <p class="text-muted mb-0">During significant market corrections or bear markets when investments may be temporarily down</p>
+              </div>
+            </div>
+
+            <div class="d-flex mb-3">
+              <div class="me-3 text-primary">
+                <i class="bi bi-cash-stack fs-4"></i>
+              </div>
+              <div>
+                <h5 class="h6 mb-1">High-Income Years</h5>
+                <p class="text-muted mb-0">When you're in a higher tax bracket due to unusually high income or significant capital gains</p>
+              </div>
+            </div>
+
+            <div class="d-flex mb-3">
+              <div class="me-3 text-primary">
+                <i class="bi bi-calendar-check fs-4"></i>
+              </div>
+              <div>
+                <h5 class="h6 mb-1">Year-End Tax Planning</h5>
+                <p class="text-muted mb-0">As part of December tax planning to offset realized gains from earlier in the year</p>
+              </div>
+            </div>
+
+            <div class="d-flex mb-3">
+              <div class="me-3 text-primary">
+                <i class="bi bi-arrow-repeat fs-4"></i>
+              </div>
+              <div>
+                <h5 class="h6 mb-1">Portfolio Rebalancing</h5>
+                <p class="text-muted mb-0">When you need to rebalance your portfolio anyway, creating an opportunity to harvest losses</p>
+              </div>
+            </div>
+
+            <div class="d-flex">
+              <div class="me-3 text-primary">
+                <i class="bi bi-hourglass-split fs-4"></i>
+              </div>
+              <div>
+                <h5 class="h6 mb-1">Transitioning Investments</h5>
+                <p class="text-muted mb-0">When moving from one investment strategy to another or changing advisors</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-5">
+      <a class="btn btn-outline-primary" href="#calculator">Use Our Free Harvesting Calculator <i class="bi bi-calculator ms-2"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="badge bg-primary mb-2 p-2">COMMON QUESTIONS</span>
+      <h2 class="fw-bold">Frequently Asked Questions</h2>
+      <p class="lead text-muted mx-auto" style="max-width: 700px;">Everything you need to know about tax-loss harvesting and our calculator</p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="card border-0 shadow-sm">
+          <div class="card-body p-0">
+            <div class="accordion accordion-flush" id="faqAccordion">
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button" data-bs-target="#faq1" data-bs-toggle="collapse" type="button">
+                    <i class="bi bi-question-circle text-primary me-2"></i> What is the wash sale rule and why is it important?
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse show" data-bs-parent="#faqAccordion" id="faq1">
+                  <div class="accordion-body">
+                    <p>The wash sale rule is an IRS regulation that prevents investors from claiming a tax deduction for a security sold at a loss if a "substantially identical" security is purchased within 30 days before or after the sale date.</p>
+                    <p>This rule is important because:</p>
+                    <ul>
+                      <li>It prevents investors from selling securities at a loss solely to claim a tax benefit while maintaining an economically identical position</li>
+                      <li>Violations result in the disallowance of the tax loss</li>
+                      <li>The disallowed loss gets added to the cost basis of the replacement shares</li>
+                    </ul>
+                    <p class="mb-0 text-muted">To avoid triggering the wash sale rule while maintaining market exposure, investors typically purchase similar but not "substantially identical" securities. For example, selling an S&P 500 ETF from one provider and buying a different S&P 500 ETF from another provider, or replacing it with a total market ETF.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-target="#faq2" data-bs-toggle="collapse" type="button">
+                    <i class="bi bi-question-circle text-primary me-2"></i> How much of my investment losses can I deduct against ordinary income?
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq2">
+                  <div class="accordion-body">
+                    <p>The IRS limits how much capital loss you can use to offset ordinary income:</p>
+                    <ul>
+                      <li>Capital losses must first be used to offset capital gains of the same type (short-term losses against short-term gains; long-term losses against long-term gains)</li>
+                      <li>Any additional net capital loss can offset the opposite type of capital gain</li>
+                      <li>If you still have net capital losses, you can deduct up to $3,000 ($1,500 if married filing separately) against ordinary income per year</li>
+                      <li>Any remaining losses above the $3,000 limit can be carried forward to future tax years indefinitely</li>
+                    </ul>
+                    <p class="mb-0 text-muted">This means that even if you have a large investment loss, your ability to use it to offset ordinary income (like wages) is limited to $3,000 per year. However, there's no limit on using capital losses to offset capital gains in the current tax year.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-target="#faq3" data-bs-toggle="collapse" type="button">
+                    <i class="bi bi-question-circle text-primary me-2"></i> Is tax-loss harvesting worth it for small portfolios?
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq3">
+                  <div class="accordion-body">
+                    <p>The value of tax-loss harvesting for small portfolios depends on several factors:</p>
+                    <ul>
+                      <li><strong>Tax Bracket:</strong> Higher tax brackets increase the benefit of harvesting losses</li>
+                      <li><strong>Transaction Costs:</strong> Trading fees and bid-ask spreads can reduce or eliminate benefits for very small trades</li>
+                      <li><strong>Asset Location:</strong> Only applicable in taxable accounts, not IRAs or 401(k)s</li>
+                      <li><strong>Time Horizon:</strong> The longer you can defer taxes, the more valuable harvesting becomes</li>
+                    </ul>
+                    <p>For small portfolios, tax-loss harvesting may still be worthwhile if:</p>
+                    <ul>
+                      <li>You use a brokerage with zero trading commissions</li>
+                      <li>You focus on harvesting larger losses (typically $500+)</li>
+                      <li>You're in a 22% or higher tax bracket</li>
+                      <li>You have capital gains to offset</li>
+                    </ul>
+                    <p class="mb-0 text-muted">Our calculator can help determine if the potential tax savings outweigh any transaction costs for your specific situation.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-target="#faq4" data-bs-toggle="collapse" type="button">
+                    <i class="bi bi-question-circle text-primary me-2"></i> How does tax-loss harvesting affect my cost basis?
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq4">
+                  <div class="accordion-body">
+                    <p>Tax-loss harvesting affects your cost basis in several ways:</p>
+                    <ul>
+                      <li><strong>Original Investment:</strong> When you sell an investment at a loss, that establishes your realized loss for tax purposes</li>
+                      <li><strong>Replacement Investment:</strong> The purchase price of your replacement investment becomes your new cost basis</li>
+                      <li><strong>Wash Sale Adjustments:</strong> If you trigger a wash sale, the disallowed loss is added to the cost basis of the replacement shares</li>
+                    </ul>
+                    <p>It's important to understand that tax-loss harvesting doesn't eliminate taxes permanently—it defers them:</p>
+                    <ul>
+                      <li>The replacement investment typically has a lower cost basis than your original investment</li>
+                      <li>If the replacement investment appreciates and is eventually sold, you may owe more in capital gains taxes than if you had never harvested the loss</li>
+                      <li>The benefit comes from the time value of money and potential for lower future tax rates</li>
+                    </ul>
+                    <p class="mb-0 text-muted">Good record-keeping is essential for tracking cost basis adjustments across multiple tax-loss harvesting transactions, especially when they involve wash sales.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-target="#faq5" data-bs-toggle="collapse" type="button">
+                    <i class="bi bi-question-circle text-primary me-2"></i> Can I use tax-loss harvesting in retirement accounts?
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq5">
+                  <div class="accordion-body">
+                    <p>No, tax-loss harvesting is not applicable in tax-advantaged retirement accounts such as:</p>
+                    <ul>
+                      <li>Traditional IRAs</li>
+                      <li>Roth IRAs</li>
+                      <li>401(k) plans</li>
+                      <li>403(b) plans</li>
+                      <li>Other qualified retirement accounts</li>
+                    </ul>
+                    <p>This is because:</p>
+                    <ul>
+                      <li>These accounts already have tax advantages (tax-deferred growth or tax-free withdrawals)</li>
+                      <li>Transactions within these accounts are not reportable tax events</li>
+                      <li>Losses in retirement accounts cannot be deducted on your tax return</li>
+                    </ul>
+                    <p class="mb-0 text-muted">Tax-loss harvesting should be focused exclusively on investments held in taxable brokerage accounts. However, be aware that purchases in retirement accounts can still trigger the wash sale rule for sales at a loss in your taxable accounts.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-target="#faq6" data-bs-toggle="collapse" type="button">
+                    <i class="bi bi-question-circle text-primary me-2"></i> How does your calculator handle state taxes in the tax-loss harvesting analysis?
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq6">
+                  <div class="accordion-body">
+                    <p>Our calculator includes state tax considerations in the following ways:</p>
+                    <ul>
+                      <li><strong>Customizable State Rate:</strong> You can enter your specific state income tax rate (or an average effective rate)</li>
+                      <li><strong>State-Specific Treatment:</strong> The calculator assumes that your state follows federal treatment of capital gains and losses</li>
+                      <li><strong>Combined Analysis:</strong> Tax savings calculations include both federal and state tax benefits</li>
+                    </ul>
+                    <p>Important considerations regarding state taxes:</p>
+                    <ul>
+                      <li>Some states have different rules for capital gains/losses than the federal government</li>
+                      <li>A few states don't tax income at all (e.g., Alaska, Florida, Nevada, South Dakota, Texas, Washington, and Wyoming)</li>
+                      <li>Some states have flat income tax rates, while others have progressive brackets</li>
+                    </ul>
+                    <p class="mb-0 text-muted">For the most accurate state tax calculations, you should verify your state's specific treatment of capital losses. The calculator provides a reasonable approximation for most states, but the exact rules vary by jurisdiction.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <p class="lead mb-3">Still have questions about tax-loss harvesting?</p>
+          <a class="btn btn-outline-primary" href="#">Contact Our Team <i class="bi bi-arrow-right ms-2"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div id="footer"></div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/include.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Initialize components
+    initTaxHarvestingCalculator();
+    setupToggleAdvanced();
+    setupSharePopup();
+  });
+
+  // Initialize the tax harvesting calculator
+  function initTaxHarvestingCalculator() {
+    // Options toggle switch
+    document.getElementById('hasOtherCapitalGains').addEventListener('change', function() {
+      const otherGainsSection = document.getElementById('otherGainsSection');
+      const taxSettingsSection = document.getElementById('taxSettingsSection');
+
+      if (this.checked) {
+        otherGainsSection.style.display = 'block';
+        taxSettingsSection.style.display = 'none';
+      } else {
+        otherGainsSection.style.display = 'none';
+        taxSettingsSection.style.display = 'block';
+      }
+    });
+
+    // State tax toggle
+    document.getElementById('includeStateCalc').addEventListener('change', function() {
+      const stateRateDiv = document.getElementById('stateRateDiv');
+      stateRateDiv.style.display = this.checked ? 'block' : 'none';
+    });
+
+    // Calculate button
+    document.getElementById('calculateBtn').addEventListener('click', calculateTaxSavings);
+  }
+
+  // Toggle advanced options
+  function setupToggleAdvanced() {
+    const advancedSwitch = document.getElementById('includeAdvancedOptions');
+    const advancedOptionsRow = document.getElementById('advancedOptionsRow');
+
+    advancedSwitch.addEventListener('change', function() {
+      advancedOptionsRow.style.display = this.checked ? 'flex' : 'none';
+    });
+  }
+
+  // Setup share popup functionality
+  function setupSharePopup() {
+    const shareBtn = document.getElementById('shareResultsBtn');
+    const popup = document.getElementById('sharePopup');
+
+    if (shareBtn && popup) {
+      shareBtn.addEventListener('click', function() {
+        popup.style.display = popup.style.display === 'none' ? 'block' : 'none';
+
+        // Hide popup when clicking outside
+        document.addEventListener('click', function hidePopup(e) {
+          if (!e.target.closest('#sharePopup') && e.target !== shareBtn) {
+            popup.style.display = 'none';
+            document.removeEventListener('click', hidePopup);
+          }
+        });
+      });
+    }
+  }
+
+// Calculate tax savings from harvesting losses
+function calculateTaxSavings() {
+  // Get input values
+  const investmentName = document.getElementById('investmentName').value.trim();
+  const purchasePrice = parseFloat(document.getElementById('purchasePrice').value) || 0;
+  const currentValue = parseFloat(document.getElementById('currentValue').value) || 0;
+  const purchaseDate = document.getElementById('purchaseDate').value;
+  const hasOtherGains = document.getElementById('hasOtherCapitalGains').checked;
+
+  // Validate essential inputs
+  if (!investmentName || !purchasePrice || currentValue === '' || !purchaseDate) {
+    alert('Please fill in all required investment fields.');
+    return;
+  }
+
+  // Check if this is actually a loss
+  if (currentValue >= purchasePrice) {
+    alert('Tax-loss harvesting requires an investment with a current value less than its purchase price. This investment shows a gain or breakeven position.');
+    return;
+  }
+
+  // Calculate realized loss
+  const realizedLoss = purchasePrice - currentValue;
+
+  // Calculate holding period
+  const today = new Date();
+  const purchaseDateTime = new Date(purchaseDate);
+  const holdingPeriodDays = Math.floor((today - purchaseDateTime) / (1000 * 60 * 60 * 24));
+  const isLongTerm = holdingPeriodDays > 365;
+
+  // Get tax rates and other inputs
+  let federalTaxRate, capitalGainsRate, stateTaxRate, niitRate;
+  let shortTermGains = 0, longTermGains = 0, ordinaryIncome = 0;
+  let transactionCost = 0;
+
+  if (hasOtherGains) {
+    shortTermGains = parseFloat(document.getElementById('shortTermGains').value) || 0;
+    longTermGains = parseFloat(document.getElementById('longTermGains').value) || 0;
+    ordinaryIncome = parseFloat(document.getElementById('ordinaryIncome').value) || 0;
+    federalTaxRate = getFederalTaxRate(document.getElementById('filingStatus').value, ordinaryIncome);
+    capitalGainsRate = getCapitalGainsRate(document.getElementById('filingStatus').value, ordinaryIncome);
+  } else {
+    federalTaxRate = parseFloat(document.getElementById('incomeBracket').value) / 100;
+    capitalGainsRate = parseFloat(document.getElementById('capitalGainsRate').value) / 100;
+  }
+
+  // Check if state tax calculations should be included
+  const includeStateTax = document.getElementById('includeStateCalc').checked;
+  stateTaxRate = includeStateTax ? (parseFloat(document.getElementById('stateRate').value) / 100) : 0;
+
+  // Check if NIIT should be applied
+  const applyNiit = document.getElementById('applyNiit').checked;
+  niitRate = applyNiit ? parseFloat(document.getElementById('niitRate').value) / 100 : 0;
+
+  // Get transaction costs if advanced options are enabled
+  if (document.getElementById('includeAdvancedOptions').checked) {
+    transactionCost = parseFloat(document.getElementById('transactionCost').value) || 0;
+  }
+
+  // Calculate optimal loss allocation
+  const lossAllocation = allocateLoss(
+    realizedLoss,
+    shortTermGains,
+    longTermGains,
+    federalTaxRate,
+    capitalGainsRate,
+    isLongTerm
+  );
+
+  // Calculate tax savings
+  const federalSavings = (lossAllocation.shortTermOffset * federalTaxRate) +
+                        (lossAllocation.longTermOffset * capitalGainsRate) +
+                        (lossAllocation.incomeOffset * federalTaxRate);
+
+  const stateSavings = includeStateTax ?
+                     (lossAllocation.shortTermOffset + lossAllocation.longTermOffset + lossAllocation.incomeOffset) * stateTaxRate : 0;
+
+  const niitSavings = applyNiit ?
+                    (lossAllocation.shortTermOffset + lossAllocation.longTermOffset) * niitRate : 0;
+
+  const totalSavings = federalSavings + stateSavings + niitSavings;
+  const netBenefit = totalSavings - transactionCost;
+  const savingsRate = (netBenefit / realizedLoss) * 100;
+
+  // Update results in the UI
+  updateResults(
+    investmentName,
+    purchasePrice,
+    currentValue,
+    realizedLoss,
+    isLongTerm,
+    holdingPeriodDays,
+    lossAllocation,
+    federalSavings,
+    stateSavings,
+    niitSavings,
+    totalSavings,
+    netBenefit,
+    savingsRate,
+    transactionCost
+  );
+
+  // Create chart for loss utilization
+  createLossUtilizationChart(lossAllocation, realizedLoss);
+
+  // Generate recommendations
+  generateRecommendations(
+    isLongTerm,
+    lossAllocation,
+    document.getElementById('includeAdvancedOptions').checked ?
+      document.getElementById('replacementInvestment').value : '',
+    document.getElementById('includeAdvancedOptions').checked ?
+      parseInt(document.getElementById('washSaleBuffer').value) : 30
+  );
+
+  // Show results
+  document.getElementById('resultsCard').style.display = 'block';
+
+  // Scroll to results
+  setTimeout(() => {
+    document.getElementById('resultsCard').scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }, 300);
+}
+
+// Allocate loss to different types of gains and income for optimal tax savings
+function allocateLoss(loss, shortTermGains, longTermGains, federalTaxRate, capitalGainsRate, isLongTerm) {
+  let remainingLoss = loss;
+  let shortTermOffset = 0;
+  let longTermOffset = 0;
+  let incomeOffset = 0;
+  let carryforward = 0;
+
+  // First, offset short-term gains (highest tax rate)
+  if (shortTermGains > 0 && remainingLoss > 0) {
+    shortTermOffset = Math.min(shortTermGains, remainingLoss);
+    remainingLoss -= shortTermOffset;
+  }
+
+  // Then, offset long-term gains
+  if (longTermGains > 0 && remainingLoss > 0) {
+    longTermOffset = Math.min(longTermGains, remainingLoss);
+    remainingLoss -= longTermOffset;
+  }
+
+  // Use up to $3,000 to offset ordinary income
+  if (remainingLoss > 0) {
+    incomeOffset = Math.min(3000, remainingLoss);
+    remainingLoss -= incomeOffset;
+  }
+
+  // Any remaining loss is carried forward
+  if (remainingLoss > 0) {
+    carryforward = remainingLoss;
+  }
+
+  return {
+    shortTermOffset,
+    longTermOffset,
+    incomeOffset,
+    carryforward
+  };
+}
+
+// Get federal tax rate based on filing status and income
+function getFederalTaxRate(filingStatus, income) {
+  // 2025 tax bracket estimations (simplified)
+  const brackets = {
+    'single': [
+      { threshold: 0, rate: 0.10 },
+      { threshold: 11000, rate: 0.12 },
+      { threshold: 44725, rate: 0.22 },
+      { threshold: 95375, rate: 0.24 },
+      { threshold: 182100, rate: 0.32 },
+      { threshold: 231250, rate: 0.35 },
+      { threshold: 578125, rate: 0.37 }
+    ],
+    'married': [
+      { threshold: 0, rate: 0.10 },
+      { threshold: 22000, rate: 0.12 },
+      { threshold: 89450, rate: 0.22 },
+      { threshold: 190750, rate: 0.24 },
+      { threshold: 364200, rate: 0.32 },
+      { threshold: 462500, rate: 0.35 },
+      { threshold: 693750, rate: 0.37 }
+    ],
+    'head': [
+      { threshold: 0, rate: 0.10 },
+      { threshold: 15700, rate: 0.12 },
+      { threshold: 59850, rate: 0.22 },
+      { threshold: 95350, rate: 0.24 },
+      { threshold: 182100, rate: 0.32 },
+      { threshold: 231250, rate: 0.35 },
+      { threshold: 578100, rate: 0.37 }
+    ],
+    'separate': [
+      { threshold: 0, rate: 0.10 },
+      { threshold: 11000, rate: 0.12 },
+      { threshold: 44725, rate: 0.22 },
+      { threshold: 95375, rate: 0.24 },
+      { threshold: 182100, rate: 0.32 },
+      { threshold: 231250, rate: 0.35 },
+      { threshold: 346875, rate: 0.37 }
+    ]
+  };
+
+  const applicableBrackets = brackets[filingStatus] || brackets.single;
+
+  // Find marginal tax rate
+  let rate = 0.10; // default minimum rate
+  for (let i = applicableBrackets.length - 1; i >= 0; i--) {
+    if (income >= applicableBrackets[i].threshold) {
+      rate = applicableBrackets[i].rate;
+      break;
+    }
+  }
+
+  return rate;
+}
+
+// Get capital gains rate based on filing status and income
+function getCapitalGainsRate(filingStatus, income) {
+  // 2025 capital gains thresholds (simplified)
+  const thresholds = {
+    'single': [
+      { threshold: 0, rate: 0 },
+      { threshold: 44625, rate: 0.15 },
+      { threshold: 492300, rate: 0.20 }
+    ],
+    'married': [
+      { threshold: 0, rate: 0 },
+      { threshold: 89250, rate: 0.15 },
+      { threshold: 553850, rate: 0.20 }
+    ],
+    'head': [
+      { threshold: 0, rate: 0 },
+      { threshold: 59750, rate: 0.15 },
+      { threshold: 523050, rate: 0.20 }
+    ],
+    'separate': [
+      { threshold: 0, rate: 0 },
+      { threshold: 44625, rate: 0.15 },
+      { threshold: 276900, rate: 0.20 }
+    ]
+  };
+
+  const applicableThresholds = thresholds[filingStatus] || thresholds.single;
+
+  // Find applicable capital gains rate
+  let rate = 0; // default minimum rate
+  for (let i = applicableThresholds.length - 1; i >= 0; i--) {
+    if (income >= applicableThresholds[i].threshold) {
+      rate = applicableThresholds[i].rate;
+      break;
+    }
+  }
+
+  return rate;
+}
+
+// Update the UI with calculation results
+function updateResults(
+  investmentName,
+  purchasePrice,
+  currentValue,
+  realizedLoss,
+  isLongTerm,
+  holdingPeriodDays,
+  lossAllocation,
+  federalSavings,
+  stateSavings,
+  niitSavings,
+  totalSavings,
+  netBenefit,
+  savingsRate,
+  transactionCost
+) {
+  // Update loss card
+  document.getElementById('costBasisDisplay').textContent = formatCurrency(purchasePrice);
+  document.getElementById('currentValueDisplay').textContent = formatCurrency(currentValue);
+  document.getElementById('realizedLossDisplay').textContent = formatCurrency(realizedLoss);
+  document.getElementById('lossTypeDisplay').textContent = isLongTerm ? 'Long-Term Loss' : 'Short-Term Loss';
+  document.getElementById('holdingPeriodDisplay').textContent = holdingPeriodDays + ' days';
+
+  // Update savings card
+  document.getElementById('federalSavingsDisplay').textContent = formatCurrency(federalSavings);
+  document.getElementById('stateSavingsDisplay').textContent = formatCurrency(stateSavings);
+  document.getElementById('niitSavingsDisplay').textContent = formatCurrency(niitSavings);
+  document.getElementById('totalSavingsDisplay').textContent = formatCurrency(totalSavings);
+  document.getElementById('netBenefitDisplay').textContent = formatCurrency(netBenefit);
+  document.getElementById('savingsRateDisplay').textContent = formatPercent(savingsRate);
+
+  // Update loss utilization table
+  document.getElementById('shortTermOffsetDisplay').textContent = formatCurrency(lossAllocation.shortTermOffset);
+  document.getElementById('longTermOffsetDisplay').textContent = formatCurrency(lossAllocation.longTermOffset);
+  document.getElementById('incomeOffsetDisplay').textContent = formatCurrency(lossAllocation.incomeOffset);
+  document.getElementById('carryforwardDisplay').textContent = formatCurrency(lossAllocation.carryforward);
+
+  // Calculate and update savings by category using appropriate tax rates
+  const incomeBracket = document.getElementById('hasOtherCapitalGains').checked
+    ? getFederalTaxRate(document.getElementById('filingStatus').value, parseFloat(document.getElementById('ordinaryIncome').value) || 0)
+    : parseFloat(document.getElementById('incomeBracket').value) / 100;
+
+  const capitalGains = document.getElementById('hasOtherCapitalGains').checked
+    ? getCapitalGainsRate(document.getElementById('filingStatus').value, parseFloat(document.getElementById('ordinaryIncome').value) || 0)
+    : parseFloat(document.getElementById('capitalGainsRate').value) / 100;
+
+  document.getElementById('shortTermSavingsDisplay').textContent = formatCurrency(lossAllocation.shortTermOffset * incomeBracket);
+  document.getElementById('longTermSavingsDisplay').textContent = formatCurrency(lossAllocation.longTermOffset * capitalGains);
+  document.getElementById('incomeSavingsDisplay').textContent = formatCurrency(lossAllocation.incomeOffset * incomeBracket);
+  document.getElementById('futureSavingsDisplay').textContent = "Varies";
+
+  // Update summary text
+  document.getElementById('harvestSummary').textContent = `Tax-Loss Harvesting Summary for ${investmentName}`;
+
+  const savingsSummary = `By harvesting a loss of ${formatCurrency(realizedLoss)} from your ${isLongTerm ? 'long-term' : 'short-term'} investment,
+    you could save approximately ${formatCurrency(totalSavings)} in taxes (${formatPercent(savingsRate)} of the harvested loss).`;
+
+  const detailSummary = lossAllocation.carryforward > 0
+    ? ` This includes offsetting ${formatCurrency(lossAllocation.shortTermOffset + lossAllocation.longTermOffset)} in capital gains,
+        ${formatCurrency(lossAllocation.incomeOffset)} in ordinary income, with ${formatCurrency(lossAllocation.carryforward)} carried forward to future years.`
+    : ` This includes offsetting ${formatCurrency(lossAllocation.shortTermOffset + lossAllocation.longTermOffset)} in capital gains and
+        ${formatCurrency(lossAllocation.incomeOffset)} in ordinary income.`;
+
+  document.getElementById('harvestDescription').textContent = savingsSummary + detailSummary;
+
+  // Update strategy badge
+  document.getElementById('strategyBadge').textContent = getHarvestingStrategy(isLongTerm, lossAllocation);
+}
+
+// Create chart for loss utilization
+function createLossUtilizationChart(lossAllocation, totalLoss) {
+  const ctx = document.getElementById('lossUtilizationChart').getContext('2d');
+
+  // Destroy existing chart if it exists
+  if (window.lossUtilizationChart && typeof window.lossUtilizationChart.destroy === 'function') {
+    window.lossUtilizationChart.destroy();
+  }
+
+  // Create dataset
+  const data = [
+    {
+      label: 'Short-Term Gains Offset',
+      value: lossAllocation.shortTermOffset,
+      color: 'rgba(220, 53, 69, 0.7)'
+    },
+    {
+      label: 'Long-Term Gains Offset',
+      value: lossAllocation.longTermOffset,
+      color: 'rgba(255, 193, 7, 0.7)'
+    },
+    {
+      label: 'Ordinary Income Offset',
+      value: lossAllocation.incomeOffset,
+      color: 'rgba(13, 110, 253, 0.7)'
+    },
+    {
+      label: 'Loss Carryforward',
+      value: lossAllocation.carryforward,
+      color: 'rgba(108, 117, 125, 0.7)'
+    }
+  ];
+
+  // Filter out zero values
+  const filteredData = data.filter(item => item.value > 0);
+
+  // Create the chart
+  window.lossUtilizationChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+      labels: filteredData.map(item => item.label),
+      datasets: [{
+        data: filteredData.map(item => item.value),
+        backgroundColor: filteredData.map(item => item.color),
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          position: 'right'
+        },
+        tooltip: {
+          callbacks: {
+            label: function(context) {
+              const value = context.raw;
+              const percentage = ((value / totalLoss) * 100).toFixed(1);
+              return `${context.label}: ${formatCurrency(value)} (${percentage}%)`;
+            }
+          }
+        }
+      }
+    }
+  });
+}
+
+// Generate recommendations based on the analysis
+function generateRecommendations(isLongTerm, lossAllocation, replacementInvestment, washSaleBuffer) {
+  const recommendationsList = document.getElementById('recommendationsList');
+  recommendationsList.innerHTML = '';
+
+  const recommendations = [];
+
+  // Basic recommendation about harvesting
+  if (lossAllocation.shortTermOffset > 0 || lossAllocation.longTermOffset > 0 || lossAllocation.incomeOffset > 0) {
+    recommendations.push('Consider harvesting this loss to reduce your tax liability for the current year.');
+  } else {
+    recommendations.push('This loss may be more valuable if saved for a future tax year when you have capital gains to offset.');
+  }
+
+  // Wash sale rule
+  const washSaleDateObj = new Date();
+  washSaleDateObj.setDate(washSaleDateObj.getDate() + washSaleBuffer);
+  const washSaleDate = washSaleDateObj.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+  recommendations.push(`To avoid wash sale rule violations, do not repurchase this or a substantially identical security until at least ${washSaleDate} (${washSaleBuffer} days from today).`);
+
+  // Replacement investment
+  if (replacementInvestment) {
+    recommendations.push(`Consider ${replacementInvestment} as a replacement to maintain market exposure while avoiding wash sale rules.`);
+  } else {
+    recommendations.push('Consider an ETF or mutual fund with similar market exposure but different underlying assets to maintain your investment strategy while avoiding wash sale rules.');
+  }
+
+  // Loss carryforward strategy
+  if (lossAllocation.carryforward > 0) {
+    recommendations.push(`You'll have ${formatCurrency(lossAllocation.carryforward)} in capital losses to carry forward to future tax years. Track this carryforward carefully for your tax filings.`);
+  }
+
+  // Year-end consideration
+  const today = new Date();
+  if (today.getMonth() >= 9) { // October or later
+    recommendations.push('Consider timing your harvest before the end of the tax year to ensure benefits apply to your current year taxes.');
+  }
+
+  // Add all recommendations to the list
+  recommendations.forEach(recommendation => {
+    const li = document.createElement('li');
+    li.className = 'mb-2';
+    li.textContent = recommendation;
+    recommendationsList.appendChild(li);
+  });
+}
+
+// Get harvesting strategy based on loss type and allocation
+function getHarvestingStrategy(isLongTerm, lossAllocation) {
+  if (lossAllocation.shortTermOffset > 0 && lossAllocation.shortTermOffset >= lossAllocation.longTermOffset) {
+    return 'ST Gain Offset';
+  } else if (lossAllocation.longTermOffset > 0) {
+    return 'LT Gain Offset';
+  } else if (lossAllocation.incomeOffset > 0) {
+    return 'Income Offset';
+  } else {
+    return 'Carry Forward';
+  }
+}
+
+// Format currency values
+function formatCurrency(value) {
+  return '$' + value.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+}
+
+// Format percentage values
+function formatPercent(value) {
+  return value.toFixed(1) + '%';
+}
+
+// Setup share popup functionality
+function setupSharePopup() {
+  const shareBtn = document.getElementById('shareResultsBtn');
+  const popup = document.getElementById('sharePopup');
+
+  if (shareBtn && popup) {
+    shareBtn.addEventListener('click', function() {
+      popup.style.display = popup.style.display === 'none' ? 'block' : 'none';
+
+      // Hide popup when clicking outside
+      document.addEventListener('click', function hidePopup(e) {
+        if (!e.target.closest('#sharePopup') && e.target !== shareBtn) {
+          popup.style.display = 'none';
+          document.removeEventListener('click', hidePopup);
+        }
+      });
+    });
+  }
+}
+
+// Initialize the tax harvesting calculator
+function initTaxHarvestingCalculator() {
+  // Options toggle switch
+  document.getElementById('hasOtherCapitalGains').addEventListener('change', function() {
+    const otherGainsSection = document.getElementById('otherGainsSection');
+    const taxSettingsSection = document.getElementById('taxSettingsSection');
+
+    if (this.checked) {
+      otherGainsSection.style.display = 'block';
+      taxSettingsSection.style.display = 'none';
+    } else {
+      otherGainsSection.style.display = 'none';
+      taxSettingsSection.style.display = 'block';
+    }
+  });
+
+  // State tax toggle
+  document.getElementById('includeStateCalc').addEventListener('change', function() {
+    const stateRateDiv = document.getElementById('stateRateDiv');
+    stateRateDiv.style.display = this.checked ? 'block' : 'none';
+  });
+
+  // Advanced options toggle
+  document.getElementById('includeAdvancedOptions').addEventListener('change', function() {
+    const advancedOptionsRow = document.getElementById('advancedOptionsRow');
+    advancedOptionsRow.style.display = this.checked ? 'flex' : 'none';
+  });
+
+  // Calculate button
+  document.getElementById('calculateBtn').addEventListener('click', calculateTaxSavings);
+}
+
+// Initialize everything when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize components
+  initTaxHarvestingCalculator();
+  setupSharePopup();
+
+  // Set default date values
+  document.getElementById('purchaseDate').valueAsDate = new Date(new Date().setFullYear(new Date().getFullYear() - 1));
+});
+
+  </script>
 </body>
 </html>

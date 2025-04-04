@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Dividend Reinvestment Breakeven Calculator - Calculate Recovery Time After Stock Price Drops</title>
+  <meta content="ca-pub-6247788451623601" name="google-adsense-account">
+  <meta content="ca-pub-5426315045205785" name="google-adsense-account">
+  <meta content="Calculate how long it takes for dividend reinvestments to break even after stock price drops. Optimize your DRIP strategy with our free calculator." name="description">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+
+  <style>
+    /* Dividend Reinvestment Calculator Specific Styles */
+    .hero-section {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e2f0ff 100%);
+    }
+
+    .result-card {
+      animation: fadeSlideUp 0.5s ease-out;
+    }
+
+    .drip-charts-container {
+      height: 400px;
+      position: relative;
+    }
+
+    .scenario-card {
+      transition: transform 0.3s ease;
+    }
+
+    .scenario-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature-icon {
+      font-size: 1.5rem;
+    }
+
+    .analysis-highlight {
+      background-color: #f8f9fa;
+      border-left: 4px solid #007bff;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .recovery-timeline {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 20px;
+    }
+
+    .timeline-point {
+      position: absolute;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #007bff;
+      top: 0;
+    }
+
+    .timeline-point:after {
+      content: '';
+      position: absolute;
+      left: 9px;
+      top: 20px;
+      height: calc(100% + 10px);
+      width: 2px;
+      background-color: #dee2e6;
+    }
+
+    .timeline-point.last:after {
+      display: none;
+    }
+
+    .input-help {
+      font-size: 0.85rem;
+    }
+
+    /* Animation for results */
+    @keyframes fadeSlideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () {
+        (c[a].q = c[a].q || []).push(arguments)
+      };
+      t = l.createElement(r);
+      t.async = 1;
+      t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0];
+      y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "qxscsfgx1j");
+  </script>
+</head>
+<body>
+
+<div id="header"></div>
+
+<!-- Hero Section -->
+<header class="hero-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="hero-content">
+          <span class="badge bg-primary mb-2 p-2">DIVIDEND STRATEGY</span>
+          <h1 class="display-4 fw-bold mb-3">Dividend Reinvestment Breakeven Calculator</h1>
+          <p class="lead mb-4">Calculate how long it takes for dividend reinvestments to recover after a stock price drop. Optimize your DRIP strategy and understand the power of compounding dividends.</p>
+          <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-primary btn-lg" href="#calculator">Try Free Calculator <i class="bi bi-arrow-right-circle ms-2"></i></a>
+            <a class="btn btn-outline-secondary btn-lg" href="#features">Learn More</a>
+          </div>
+          <div class="mt-4 usage-stats">
+            <span class="badge bg-light text-dark p-2 me-2">
+              <i class="bi bi-graph-up me-1"></i> Calculated 18,000+ breakeven points
+            </span>
+            <span class="badge bg-light text-dark p-2">
+              <i class="bi bi-shield-check me-1"></i> 100% private calculations
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="hero-image position-relative">
+          <img
+            alt="Dividend Reinvestment Chart"
+            class="img-fluid rounded shadow"
+            src="/img/dividend-reinvestment-chart.png">
+          <div class="free-badge position-absolute top-0 end-0 bg-success text-white p-3 rounded-circle m-3">
+            <strong>FREE</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Calculator Section -->
+<section class="calculator py-5 bg-light" id="calculator">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="h2 fw-bold">Dividend Reinvestment Breakeven Calculator</h2>
+      <p class="lead text-muted">Calculate how long it takes to break even after a price drop when reinvesting dividends</p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="card shadow border-0">
+          <div class="card-header bg-primary text-white py-3">
+            <div class="d-flex justify-content-between align-items-center">
+              <h2 class="h4 mb-0"><i class="bi bi-graph-up-arrow me-2"></i> Dividend Recovery Analysis</h2>
+              <span class="badge bg-success py-2 px-3">FREE</span>
+            </div>
+          </div>
+          <div class="card-body p-4">
+            <div class="alert alert-info mb-4">
+              <div class="d-flex">
+                <div class="me-3">
+                  <i class="bi bi-info-circle-fill fs-4"></i>
+                </div>
+                <div>
+                  <p class="mb-0">This calculator helps you estimate how long it will take for dividend reinvestments to help you break even after a stock price drop. Enter your stock's details below to see the recovery
+                    timeline.</p>
+                </div>
+              </div>
+            </div>
+
+            <form id="dripCalculatorForm">
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <div class="card border-0 shadow-sm h-100">
+                    <div class="card-header bg-light">
+                      <h3 class="h5 mb-0">Stock Information</h3>
+                    </div>
+                    <div class="card-body">
+                      <div class="mb-3">
+                        <label class="form-label" for="initialPrice">Initial Stock Price ($)</label>
+                        <div class="input-group">
+                          <span class="input-group-text">$</span>
+                          <input class="form-control" id="initialPrice" min="0.01" placeholder="e.g., 100" required step="0.01" type="number" value="100">
+                        </div>
+                        <div class="input-help text-muted mt-1">
+                          <small>The original price at which you purchased the stock</small>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label" for="priceDropPercent">Price Drop (%)</label>
+                        <div class="input-group">
+                          <input class="form-control" id="priceDropPercent" max="99" min="1" placeholder="e.g., 20" required step="1" type="number" value="20">
+                          <span class="input-group-text">%</span>
+                        </div>
+                        <div class="input-help text-muted mt-1">
+                          <small>How much the stock price has dropped</small>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label" for="annualGrowthPercent">Expected Annual Price Growth (%)</label>
+                        <div class="input-group">
+                          <input class="form-control" id="annualGrowthPercent" min="-20" placeholder="e.g., 5" required step="0.5" type="number" value="5">
+                          <span class="input-group-text">%</span>
+                        </div>
+                        <div class="input-help text-muted mt-1">
+                          <small>Estimated annual growth rate of the stock price (can be negative)</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card border-0 shadow-sm h-100">
+                    <div class="card-header bg-light">
+                      <h3 class="h5 mb-0">Dividend Information</h3>
+                    </div>
+                    <div class="card-body">
+                      <div class="mb-3">
+                        <label class="form-label" for="dividendYieldPercent">Current Dividend Yield (%)</label>
+                        <div class="input-group">
+                          <input class="form-control" id="dividendYieldPercent" min="0.1" placeholder="e.g., 4" required step="0.1" type="number" value="4">
+                          <span class="input-group-text">%</span>
+                        </div>
+                        <div class="input-help text-muted mt-1">
+                          <small>Annual dividend yield based on current price</small>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label" for="dividendGrowthPercent">Annual Dividend Growth (%)</label>
+                        <div class="input-group">
+                          <input class="form-control" id="dividendGrowthPercent" min="0" placeholder="e.g., 3" required step="0.5" type="number" value="3">
+                          <span class="input-group-text">%</span>
+                        </div>
+                        <div class="input-help text-muted mt-1">
+                          <small>Expected annual increase in dividend payments</small>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label" for="dividendFrequency">Dividend Payment Frequency</label>
+                        <select class="form-select" id="dividendFrequency" required>
+                          <option value="4">Quarterly</option>
+                          <option value="12">Monthly</option>
+                          <option value="2">Semi-Annually</option>
+                          <option value="1">Annually</option>
+                        </select>
+                        <div class="input-help text-muted mt-1">
+                          <small>How often dividends are paid out</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt-4">
+                <div class="col-12">
+                  <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-light">
+                      <h3 class="h5 mb-0">Investment Details</h3>
+                    </div>
+                    <div class="card-body">
+                      <div class="row g-3">
+                        <div class="col-md-6">
+                          <label class="form-label" for="initialShares">Initial Number of Shares</label>
+                          <input class="form-control" id="initialShares" min="1" placeholder="e.g., 100" required step="1" type="number" value="100">
+                          <div class="input-help text-muted mt-1">
+                            <small>Number of shares before the price drop</small>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <label class="form-label" for="additionalInvestment">Additional Monthly Investment ($)</label>
+                          <div class="input-group">
+                            <span class="input-group-text">$</span>
+                            <input class="form-control" id="additionalInvestment" min="0" placeholder="e.g., 100" step="50" type="number" value="0">
+                          </div>
+                          <div class="input-help text-muted mt-1">
+                            <small>Optional extra monthly investments (0 for none)</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-center mt-4">
+                <button class="btn btn-primary btn-lg" id="calculateBtn" type="submit">
+                  <i class="bi bi-calculator me-2"></i>Calculate Breakeven Point
+                </button>
+                <button class="btn btn-outline-secondary btn-lg ms-2" id="resetBtn" type="button">
+                  <i class="bi bi-arrow-repeat me-2"></i>Reset Values
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Results Section -->
+    <div class="row justify-content-center mt-4">
+      <div class="col-lg-10">
+        <div class="card shadow border-0 result-card" id="resultsCard" style="display:none;">
+          <div class="card-header bg-success text-white py-3">
+            <div class="d-flex justify-content-between align-items-center">
+              <h3 class="h4 mb-0"><i class="bi bi-graph-up me-2"></i>Dividend Reinvestment Analysis Results</h3>
+              <button class="btn btn-outline-light btn-sm" onclick="window.print()">
+                <i class="bi bi-printer me-1"></i> Print Report
+              </button>
+            </div>
+          </div>
+          <div class="card-body p-4">
+            <div class="row mb-4">
+              <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                  <div class="card-header bg-primary bg-opacity-10">
+                    <h4 class="h5 mb-0 text-primary"><i class="bi bi-clock-history me-2"></i>Breakeven Analysis</h4>
+                  </div>
+                  <div class="card-body">
+                    <div class="text-center mb-4">
+                      <div class="display-6 fw-bold" id="breakevenTime">0</div>
+                      <p class="lead mb-0">Years to breakeven</p>
+                    </div>
+
+                    <div class="alert alert-primary mb-4">
+                      <div class="d-flex">
+                        <div class="me-3">
+                          <i class="bi bi-info-circle-fill fs-4"></i>
+                        </div>
+                        <div>
+                          <h5 class="mb-1">Investment Summary</h5>
+                          <p class="mb-1" id="initialInvestmentSummary"></p>
+                          <p class="mb-1" id="droppedPriceSummary"></p>
+                          <p class="mb-0" id="breakevenDateSummary"></p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                      <div class="text-center">
+                        <div class="h4 mb-0" id="initialShareValue">$0</div>
+                        <div class="small text-muted">Initial Value</div>
+                      </div>
+                      <div class="text-center">
+                        <div class="h4 mb-0" id="finalShareValue">$0</div>
+                        <div class="small text-muted">Breakeven Value</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                  <div class="card-header bg-success bg-opacity-10">
+                    <h4 class="h5 mb-0 text-success"><i class="bi bi-graph-up-arrow me-2"></i>Recovery Visualization</h4>
+                  </div>
+                  <div class="card-body">
+                    <div class="drip-charts-container">
+                      <canvas id="recoveryChart"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card border-0 shadow-sm mb-4">
+              <div class="card-header bg-primary bg-opacity-10">
+                <h4 class="h5 mb-0 text-primary"><i class="bi bi-layer-forward me-2"></i>Recovery Breakdown</h4>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <h5 class="mb-3">Key Recovery Metrics</h5>
+                    <table class="table table-bordered">
+                      <tbody>
+                      <tr>
+                        <th scope="row">Time to 50% Recovery</th>
+                        <td id="halfRecoveryTime">0 months</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Time to 75% Recovery</th>
+                        <td id="threeQuarterRecoveryTime">0 months</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Time to 90% Recovery</th>
+                        <td id="nearFullRecoveryTime">0 months</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Time to Full Recovery</th>
+                        <td id="fullRecoveryTime">0 months</td>
+                      </tr>
+                      </tbody>
+                    </table>
+
+                    <div class="alert alert-success mt-3">
+                      <i class="bi bi-lightbulb me-2"></i>
+                      <span id="reinvestmentImpact">Loading impact analysis...</span>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <h5 class="mb-3">Recovery Timeline</h5>
+                    <div id="recoveryTimeline">
+                      <!-- Timeline will be filled dynamically -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card border-0 shadow-sm mb-4">
+              <div class="card-header bg-success bg-opacity-10">
+                <h4 class="h5 mb-0 text-success"><i class="bi bi-table me-2"></i>Year-by-Year Breakdown</h4>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-striped table-hover" id="yearlyBreakdownTable">
+                    <thead class="table-light">
+                    <tr>
+                      <th>Year</th>
+                      <th>Share Price</th>
+                      <th>Shares Owned</th>
+                      <th>Annual Dividends</th>
+                      <th>Total Value</th>
+                      <th>Recovery %</th>
+                    </tr>
+                    </thead>
+                    <tbody id="yearlyBreakdownBody">
+                    <!-- Table rows will be filled dynamically -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="card border-0 shadow-sm mb-4">
+              <div class="card-header bg-primary bg-opacity-10">
+                <h4 class="h5 mb-0 text-primary"><i class="bi bi-lightbulb me-2"></i>Analysis Insights</h4>
+              </div>
+              <div class="card-body">
+                <div id="analysisInsights">
+                  <!-- Insights will be filled dynamically -->
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex mt-4 mb-2">
+              <div class="me-3">
+                <i class="bi bi-shield-check text-success fs-3"></i>
+              </div>
+              <div>
+                <h5 class="mb-1">Analysis Disclosure</h5>
+                <p class="mb-0 text-muted">This analysis is provided for educational purposes only and should not be construed as investment advice. The calculations are based on the inputs provided and assume consistent
+                  dividend payments and reinvestment. Actual results may vary due to market conditions, company performance, and other factors. Always consult with a financial advisor before making investment
+                  decisions.</p>
+              </div>
+            </div>
+
+            <div class="text-center mt-4">
+              <button class="btn btn-outline-primary me-2" onclick="window.location.href='#calculator'">
+                <i class="bi bi-arrow-repeat me-1"></i> Start New Calculation
+              </button>
+              <div class="position-relative d-inline-block">
+                <button class="btn btn-outline-success" id="shareResultsBtn">
+                  <i class="bi bi-share me-1"></i> Share Results
+                </button>
+                <div class="share-popup shadow-sm p-2 rounded" id="sharePopup" style="display: none;">
+                  <a class="text-decoration-none me-2"
+                     href="https://twitter.com/intent/tweet?text=Check+out+how+long+it+takes+to+recover+from+a+stock+price+drop+with+dividend+reinvestment!&url=https://marketcapinsights.com/drip-breakeven.html"
+                     target="_blank">
+                    <i class="bi bi-twitter fs-4 text-info"></i>
+                  </a>
+                  <a class="text-decoration-none me-2"
+                     href="https://www.linkedin.com/shareArticle?mini=true&url=https://marketcapinsights.com/drip-breakeven.html&title=Dividend%20Reinvestment%20Breakeven%20Calculator" target="_blank">
+                    <i class="bi bi-linkedin fs-4 text-primary"></i>
+                  </a>
+                  <a class="text-decoration-none"
+                     href="https://www.facebook.com/sharer/sharer.php?u=https://marketcapinsights.com/drip-breakeven.html" target="_blank">
+                    <i class="bi bi-facebook fs-4 text-secondary"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="calcNav"></div>
+
+<!-- Features Grid Section -->
+<section class="features py-5" id="features">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="badge bg-primary mb-2 p-2">WHY IT MATTERS</span>
+      <h2 class="fw-bold">The Power of Dividend Reinvestment</h2>
+      <p class="lead text-muted mx-auto" style="max-width: 700px;">Dividend reinvestment is a proven strategy to accelerate wealth building and recover from market downturns</p>
+    </div>
+
+    <div class="row g-4 mb-5">
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 hover-lift">
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center mb-3">
+              <div class="feature-icon-wrapper bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                <i class="bi bi-arrow-repeat feature-icon text-primary"></i>
+              </div>
+              <h3 class="card-title h5 mb-0">Compound Growth</h3>
+            </div>
+            <p class="card-text text-muted">Reinvesting dividends allows you to purchase additional shares, which in turn generate more dividends, creating a powerful compounding effect over time.</p>
+            <div class="mt-3">
+              <span class="badge bg-success me-2">Free</span>
+              <span class="badge bg-light text-dark">Long-term strategy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 hover-lift">
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center mb-3">
+              <div class="feature-icon-wrapper bg-success bg-opacity-10 p-3 rounded-circle me-3">
+                <i class="bi bi-cash-stack feature-icon text-success"></i>
+              </div>
+              <h3 class="card-title h5 mb-0">Dollar-Cost Averaging</h3>
+            </div>
+            <p class="card-text text-muted">Automatically buy more shares when prices are low and fewer when prices are high, reducing the impact of market volatility and improving long-term returns.</p>
+            <div class="mt-3">
+              <span class="badge bg-success me-2">Free</span>
+              <span class="badge bg-light text-dark">Risk management</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 hover-lift">
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center mb-3">
+              <div class="feature-icon-wrapper bg-info bg-opacity-10 p-3 rounded-circle me-3">
+                <i class="bi bi-shield-check feature-icon text-info"></i>
+              </div>
+              <h3 class="card-title h5 mb-0">Recovery Acceleration</h3>
+            </div>
+            <p class="card-text text-muted">After a stock price drop, dividend reinvestment helps you recover faster by acquiring more shares at lower prices, shortening your path to breakeven.</p>
+            <div class="mt-3">
+              <span class="badge bg-success me-2">Free</span>
+              <span class="badge bg-light text-dark">Downside protection</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-5">
+      <a class="btn btn-primary btn-lg px-5" href="#calculator">Try the DRIP Calculator <i class="bi bi-arrow-right ms-2"></i></a>
+      <p class="text-muted mt-2">No sign-up • No credit card • 100% free</p>
+    </div>
+  </div>
+</section>
+
+<!-- Dividend Reinvestment Strategy Section -->
+<section class="insights py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="badge bg-secondary mb-2 p-2">EXPERT INSIGHTS</span>
+      <h2 class="fw-bold">Maximizing Your Dividend Reinvestment Strategy</h2>
+      <p class="lead text-muted mx-auto" style="max-width: 700px;">Proven approaches to optimize your DRIP investments for long-term wealth building</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body p-4">
+            <h3 class="h4 text-primary mb-4"><i class="bi bi-graph-up me-2"></i>Dividend Reinvestment Scenarios</h3>
+            <p>Different market conditions can significantly impact the effectiveness of dividend reinvestment strategies. Understanding these scenarios can help you optimize your approach.</p>
+
+            <div class="table-responsive mt-4">
+              <table class="table table-bordered">
+                <thead class="table-light">
+                <tr>
+                  <th>Scenario</th>
+                  <th>DRIP Impact</th>
+                  <th>Strategy Considerations</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td><strong>Market Correction<br>(10-20% Drop)</strong></td>
+                  <td>Moderately accelerated recovery through acquiring more shares at lower prices</td>
+                  <td>Continue DRIP, consider adding extra funds to take advantage of lower prices</td>
+                </tr>
+                <tr>
+                  <td><strong>Significant Decline<br>(20-40% Drop)</strong></td>
+                  <td>Substantial acceleration of recovery due to much higher yield on cost</td>
+                  <td>Maintain DRIP strategy, consider supplementary investments if fundamentals remain strong</td>
+                </tr>
+                <tr>
+                  <td><strong>Market Crash<br>(40%+ Drop)</strong></td>
+                  <td>Transformative opportunity if dividends are maintained, dramatic reduction in recovery time</td>
+                  <td>Carefully assess dividend sustainability, increase position if dividends appear secure</td>
+                </tr>
+                <tr>
+                  <td><strong>Sideways Market<br>(Low Growth)</strong></td>
+                  <td>DRIP becomes primary driver of returns, gradually increasing share count and income</td>
+                  <td>Focus on companies with dividend growth history to counteract flat price performance</td>
+                </tr>
+                <tr>
+                  <td><strong>Dividend Cuts</strong></td>
+                  <td>Recovery significantly delayed, potential permanent impairment of capital</td>
+                  <td>Monitor dividend coverage ratios and payout ratios closely, diversify dividend sources</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body p-4">
+            <h3 class="h4 text-primary mb-4"><i class="bi bi-star me-2"></i>Optimal DRIP Characteristics</h3>
+            <p>Not all dividend stocks are equally effective for reinvestment strategies. The best DRIP candidates typically share these key characteristics:</p>
+
+            <div class="d-flex mb-3">
+              <div class="me-3 text-primary">
+                <i class="bi bi-check-circle-fill fs-4"></i>
+              </div>
+              <div>
+                <h5 class="h6 mb-1">Consistent Dividend Growth</h5>
+                <p class="text-muted mb-0">Companies with a history of regularly increasing dividends provide accelerating compounding effects over time, dramatically shortening recovery periods.</p>
+              </div>
+            </div>
+
+            <div class="d-flex mb-3">
+              <div class="me-3 text-primary">
+                <i class="bi bi-check-circle-fill fs-4"></i>
+              </div>
+              <div>
+                <h5 class="h6 mb-1">Sustainable Payout Ratios</h5>
+                <p class="text-muted mb-0">Look for payout ratios below 60% for most industries, ensuring the company can maintain dividends even during challenging economic periods.</p>
+              </div>
+            </div>
+
+            <div class="d-flex mb-3">
+              <div class="me-3 text-primary">
+                <i class="bi bi-check-circle-fill fs-4"></i>
+              </div>
+              <div>
+                <h5 class="h6 mb-1">Moderate Yield</h5>
+                <p class="text-muted mb-0">Stocks with 3-5% yields often provide the best balance between current income and growth potential, optimizing the reinvestment effect.</p>
+              </div>
+            </div>
+
+            <div class="d-flex mb-3">
+              <div class="me-3 text-primary">
+                <i class="bi bi-check-circle-fill fs-4"></i>
+              </div>
+              <div>
+                <h5 class="h6 mb-1">Strong Competitive Position</h5>
+                <p class="text-muted mb-0">Companies with economic moats can maintain pricing power and grow earnings, supporting dividend increases that accelerate recovery timelines.</p>
+              </div>
+            </div>
+
+            <div class="alert alert-info mt-4">
+              <i class="bi bi-lightbulb me-2"></i>
+              <strong>Pro Tip:</strong> Dividend Aristocrats (companies that have increased dividends for 25+ consecutive years) often make excellent DRIP candidates due to their proven ability to maintain and grow
+              dividends through various economic cycles.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-5">
+      <a class="btn btn-outline-primary" href="#calculator">Calculate Your Recovery Time <i class="bi bi-calculator ms-2"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="badge bg-primary mb-2 p-2">COMMON QUESTIONS</span>
+      <h2 class="fw-bold">Frequently Asked Questions</h2>
+      <p class="lead text-muted mx-auto" style="max-width: 700px;">Everything you need to know about dividend reinvestment strategies</p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="card border-0 shadow-sm">
+          <div class="card-body p-0">
+            <div class="accordion accordion-flush" id="faqAccordion">
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button" data-bs-target="#faq1" data-bs-toggle="collapse" type="button">
+                    <i class="bi bi-question-circle text-primary me-2"></i> How does dividend reinvestment help me recover from price drops?
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse show" data-bs-parent="#faqAccordion" id="faq1">
+                  <div class="accordion-body">
+                    <p>Dividend reinvestment helps you recover from price drops through several powerful mechanisms:</p>
+                    <ul>
+                      <li><strong>Automatic dollar-cost averaging:</strong> When prices fall, your dividends automatically purchase more shares than before, lowering your average cost basis</li>
+                      <li><strong>Higher yield on cost:</strong> A price drop effectively increases the dividend yield, meaning your reinvested dividends buy even more shares</li>
+                      <li><strong>Compounding acceleration:</strong> These additional shares generate their own dividends, which are then reinvested to buy more shares, creating a snowball effect</li>
+                      <li><strong>No emotional decision-making:</strong> The systematic nature of DRIP programs removes the emotional barriers that might prevent investing during market downturns</li>
+                    </ul>
+                    <p class="mb-0 text-muted">The combination of these factors means that market downturns, while psychologically difficult, can actually enhance your long-term returns through a well-executed dividend
+                      reinvestment strategy.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-target="#faq2" data-bs-toggle="collapse" type="button">
+                    <i class="bi bi-question-circle text-primary me-2"></i> What factors most influence the breakeven time after a price drop?
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq2">
+                  <div class="accordion-body">
+                    <p>Several key factors determine how quickly you'll recover from a price drop when reinvesting dividends:</p>
+                    <ol>
+                      <li><strong>Dividend yield:</strong> Higher yields lead to faster recovery as more capital is being reinvested at the lower prices</li>
+                      <li><strong>Magnitude of price drop:</strong> Paradoxically, larger drops can sometimes lead to faster percentage-based recovery because dividend yields increase proportionally</li>
+                      <li><strong>Dividend growth rate:</strong> Companies that consistently increase their dividends accelerate the recovery timeline substantially</li>
+                      <li><strong>Price appreciation:</strong> Recovery is fastest when combining dividend reinvestment with price appreciation as the market recovers</li>
+                      <li><strong>Reinvestment consistency:</strong> Missing reinvestment opportunities significantly delays recovery time</li>
+                      <li><strong>Additional investments:</strong> Adding new capital during the recovery period can dramatically shorten breakeven time</li>
+                    </ol>
+                    <p class="mb-0 text-muted">Our calculator takes all these factors into account to provide the most accurate estimate of your specific breakeven timeline.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-target="#faq3" data-bs-toggle="collapse" type="button">
+                    <i class="bi bi-question-circle text-primary me-2"></i> Should I continue dividend reinvestment during market downturns?
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq3">
+                  <div class="accordion-body">
+                    <p>In most cases, continuing dividend reinvestment during market downturns is advantageous for long-term investors. Here's why:</p>
+                    <ul>
+                      <li>Market downturns allow your dividends to purchase more shares at discounted prices</li>
+                      <li>The automatic nature of DRIP programs helps you practice disciplined investing when emotions might otherwise lead to poor decisions</li>
+                      <li>Historical data shows that consistent dividend reinvestment through market cycles outperforms attempts to time the market</li>
+                    </ul>
+                    <p>However, there are a few situations where you might consider pausing reinvestment:</p>
+                    <ul>
+                      <li>When you have serious concerns about a specific company's fundamental business stability</li>
+                      <li>If you believe the dividend is at high risk of being cut or eliminated</li>
+                      <li>When you have identified significantly better opportunities elsewhere in the market</li>
+                      <li>If you need the income for current expenses</li>
+                    </ul>
+                    <p class="mb-0 text-muted">Remember that dividend reinvestment is a long-term strategy, and temporary market volatility often creates the best opportunities for accelerating your wealth building.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-target="#faq4" data-bs-toggle="collapse" type="button">
+                    <i class="bi bi-question-circle text-primary me-2"></i> How do taxes affect dividend reinvestment breakeven calculations?
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq4">
+                  <div class="accordion-body">
+                    <p>Taxes can significantly impact dividend reinvestment effectiveness and breakeven calculations:</p>
+                    <ul>
+                      <li><strong>Tax-advantaged accounts (IRAs, 401(k)s):</strong> Reinvestment is most efficient in these accounts since dividends aren't taxed before reinvestment, allowing 100% of the dividend to
+                        purchase new shares
+                      </li>
+                      <li><strong>Taxable accounts:</strong> Dividends are typically taxed in the year received, even if reinvested, reducing the amount of capital working for you</li>
+                      <li><strong>Qualified vs. ordinary dividends:</strong> Qualified dividends are taxed at lower capital gains rates, making them more efficient for reinvestment in taxable accounts</li>
+                      <li><strong>Tax brackets:</strong> Higher-income investors face larger tax drags on reinvestment efficiency</li>
+                    </ul>
+                    <p>For the most accurate real-world breakeven calculations in taxable accounts, you can:</p>
+                    <ol>
+                      <li>Calculate your after-tax dividend yield (dividend yield × (1 - your dividend tax rate))</li>
+                      <li>Use this adjusted yield in our calculator for a more precise breakeven estimate</li>
+                    </ol>
+                    <p class="mb-0 text-muted">For most investors, prioritizing dividend reinvestment in tax-advantaged accounts will lead to significantly faster recovery times after price drops.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-target="#faq5" data-bs-toggle="collapse" type="button">
+                    <i class="bi bi-question-circle text-primary me-2"></i> How does dividend reinvestment compare to other recovery strategies?
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq5">
+                  <div class="accordion-body">
+                    <p>When recovering from stock price declines, investors have several strategies to consider:</p>
+
+                    <div class="table-responsive mt-3 mb-3">
+                      <table class="table table-bordered">
+                        <thead class="table-light">
+                        <tr>
+                          <th>Strategy</th>
+                          <th>Pros</th>
+                          <th>Cons</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                          <td><strong>Dividend Reinvestment</strong></td>
+                          <td>
+                            <ul class="mb-0">
+                              <li>Automatic and disciplined</li>
+                              <li>Dollar-cost averaging benefit</li>
+                              <li>Compounds over time</li>
+                            </ul>
+                          </td>
+                          <td>
+                            <ul class="mb-0">
+                              <li>Slower for low-yield stocks</li>
+                              <li>Risk of dividend cuts</li>
+                              <li>Tax inefficiency in taxable accounts</li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><strong>Lump-Sum Averaging Down</strong></td>
+                          <td>
+                            <ul class="mb-0">
+                              <li>Potentially faster recovery</li>
+                              <li>Takes advantage of lower prices</li>
+                              <li>More control over timing</li>
+                            </ul>
+                          </td>
+                          <td>
+                            <ul class="mb-0">
+                              <li>Requires additional capital</li>
+                              <li>Emotional challenge to execute</li>
+                              <li>Risk of catching a "falling knife"</li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><strong>Selling and Tax-Loss Harvesting</strong></td>
+                          <td>
+                            <ul class="mb-0">
+                              <li>Captures tax benefits</li>
+                              <li>Frees capital for better opportunities</li>
+                              <li>Removes emotional attachment</li>
+                            </ul>
+                          </td>
+                          <td>
+                            <ul class="mb-0">
+                              <li>Locks in losses</li>
+                              <li>May miss recovery</li>
+                              <li>Transaction costs</li>
+                            </ul>
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <p class="mb-0 text-muted">Many successful investors combine these approaches, using dividend reinvestment as the core strategy and supplementing with selective averaging down when fundamentals remain
+                      strong, while also taking tax-loss harvesting opportunities when appropriate.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-target="#faq6" data-bs-toggle="collapse" type="button">
+                    <i class="bi bi-question-circle text-primary me-2"></i> How accurate is this dividend reinvestment calculator?
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq6">
+                  <div class="accordion-body">
+                    <p>Our dividend reinvestment calculator provides a reliable estimate based on the inputs you provide, but it's important to understand its assumptions and limitations:</p>
+                    <ul>
+                      <li><strong>Consistent dividend payments:</strong> The calculator assumes dividends continue to be paid at the expected frequency and growth rate</li>
+                      <li><strong>Steady growth rates:</strong> Both price appreciation and dividend growth are modeled as consistent annual percentage increases</li>
+                      <li><strong>Reinvestment timing:</strong> The calculator assumes dividends are reinvested immediately when paid</li>
+                      <li><strong>No transaction costs:</strong> The model doesn't account for any fees or commissions that might apply to dividend reinvestment</li>
+                      <li><strong>Pre-tax calculations:</strong> Results are shown before any tax effects unless you manually adjust the yield input</li>
+                    </ul>
+                    <p>To improve accuracy for your specific situation:</p>
+                    <ol>
+                      <li>Use conservative estimates for growth rates</li>
+                      <li>Consider the company's dividend history and payout ratio when estimating future dividend growth</li>
+                      <li>For taxable accounts, adjust inputs to reflect after-tax dividend amounts</li>
+                      <li>Review and update your calculations periodically as conditions change</li>
+                    </ol>
+                    <p class="mb-0 text-muted">While no calculator can perfectly predict future market behavior, this tool provides valuable insight into the recovery power of dividend reinvestment under various
+                      scenarios.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <p class="lead mb-3">Still have questions about dividend reinvestment strategies?</p>
+          <a class="btn btn-outline-primary" href="contact.html">Contact Our Team <i class="bi bi-arrow-right ms-2"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer"></div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/include.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Initialize the calculator
+    initDividendReinvestmentCalculator();
+    setupSharePopup();
+  });
+
+  // Initialize the dividend reinvestment calculator
+  function initDividendReinvestmentCalculator() {
+    // Add event listeners to form
+    document.getElementById('dripCalculatorForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      calculateBreakeven();
+    });
+
+    document.getElementById('resetBtn').addEventListener('click', resetCalculator);
+  }
+
+  // Calculate the breakeven point and display results
+  function calculateBreakeven() {
+    // Get input values
+    const initialPrice = parseFloat(document.getElementById('initialPrice').value);
+    const priceDropPercent = parseFloat(document.getElementById('priceDropPercent').value);
+    const annualGrowthPercent = parseFloat(document.getElementById('annualGrowthPercent').value);
+    const dividendYieldPercent = parseFloat(document.getElementById('dividendYieldPercent').value);
+    const dividendGrowthPercent = parseFloat(document.getElementById('dividendGrowthPercent').value);
+    const dividendFrequency = parseInt(document.getElementById('dividendFrequency').value);
+    const initialShares = parseFloat(document.getElementById('initialShares').value);
+    const additionalInvestment = parseFloat(document.getElementById('additionalInvestment').value) || 0;
+
+    // Calculate new price after drop
+    const priceAfterDrop = initialPrice * (1 - priceDropPercent / 100);
+
+    // Calculate initial investment value
+    const initialInvestmentValue = initialPrice * initialShares;
+
+    // Setup simulation variables
+    const monthlyGrowthRate = Math.pow(1 + annualGrowthPercent / 100, 1 / 12) - 1;
+    const monthlyDividendGrowthRate = Math.pow(1 + dividendGrowthPercent / 100, 1 / 12) - 1;
+    const initialDividendYield = dividendYieldPercent / 100; // Annual yield
+
+    // Calculate initial dividend per share (based on current price after drop)
+    const annualDividendPerShare = priceAfterDrop * initialDividendYield;
+    const dividendPerShare = annualDividendPerShare / dividendFrequency;
+
+    // Run simulation month by month
+    let currentShares = initialShares;
+    let currentPrice = priceAfterDrop;
+    let currentDividendPerShare = dividendPerShare;
+    let currentValue = currentShares * currentPrice;
+    let monthsToBreakeven = 0;
+    let breakevenReached = false;
+
+    // Recovery tracking
+    let halfRecoveryMonth = 0;
+    let threeQuarterRecoveryMonth = 0;
+    let nearFullRecoveryMonth = 0;
+    let fullRecoveryMonth = 0;
+    const halfRecoveryAmount = initialInvestmentValue * 0.5;
+    const threeQuarterRecoveryAmount = initialInvestmentValue * 0.75;
+    const nearFullRecoveryAmount = initialInvestmentValue * 0.9;
+
+    // Data for charts and tables
+    const months = [];
+    const values = [];
+    const sharesData = [];
+    const priceData = [];
+    const recoveryPctData = [];
+
+    // Yearly breakdown data
+    const yearlyData = [];
+    let yearlyDividendSum = 0;
+
+    // Maximum simulation time (30 years = 360 months)
+    const maxMonths = 360;
+
+    for (let month = 0; month <= maxMonths; month++) {
+      // Add current data to arrays
+      months.push(month);
+      values.push(currentValue);
+      sharesData.push(currentShares);
+      priceData.push(currentPrice);
+      recoveryPctData.push((currentValue / initialInvestmentValue) * 100);
+
+      // Check recovery milestones
+      if (halfRecoveryMonth === 0 && currentValue >= halfRecoveryAmount) {
+        halfRecoveryMonth = month;
+      }
+
+      if (threeQuarterRecoveryMonth === 0 && currentValue >= threeQuarterRecoveryAmount) {
+        threeQuarterRecoveryMonth = month;
+      }
+
+      if (nearFullRecoveryMonth === 0 && currentValue >= nearFullRecoveryAmount) {
+        nearFullRecoveryMonth = month;
+      }
+
+      if (fullRecoveryMonth === 0 && currentValue >= initialInvestmentValue) {
+        fullRecoveryMonth = month;
+        breakevenReached = true;
+        break;
+      }
+
+      // Add yearly data
+      if (month % 12 === 0 && month > 0) {
+        const year = month / 12;
+        yearlyData.push({
+          year: year,
+          sharePrice: currentPrice.toFixed(2),
+          sharesOwned: currentShares.toFixed(2),
+          annualDividends: yearlyDividendSum.toFixed(2),
+          totalValue: currentValue.toFixed(2),
+          recoveryPct: ((currentValue / initialInvestmentValue) * 100).toFixed(1)
+        });
+        yearlyDividendSum = 0;
+      }
+
+      // Apply monthly price growth
+      currentPrice = currentPrice * (1 + monthlyGrowthRate);
+
+      // Apply dividend reinvestment if it's a dividend month
+      if (month > 0 && month % (12 / dividendFrequency) === 0) {
+        // Calculate dividend amount
+        const dividendAmount = currentShares * currentDividendPerShare;
+        yearlyDividendSum += dividendAmount;
+
+        // Reinvest dividend to buy more shares
+        const newShares = dividendAmount / currentPrice;
+        currentShares += newShares;
+      }
+
+      // Apply additional monthly investment if specified
+      if (additionalInvestment > 0) {
+        const additionalShares = additionalInvestment / currentPrice;
+        currentShares += additionalShares;
+      }
+
+      // Grow dividend per share (monthly compounding of annual growth rate)
+      currentDividendPerShare = currentDividendPerShare * (1 + monthlyDividendGrowthRate);
+
+      // Calculate current value
+      currentValue = currentShares * currentPrice;
+
+      // Update months to breakeven
+      monthsToBreakeven = month;
+    }
+
+    // Convert to years (with one decimal)
+    const yearsToBreakeven = breakevenReached ? (monthsToBreakeven / 12).toFixed(1) : '>30';
+
+    // Display results
+    document.getElementById('breakevenTime').textContent = yearsToBreakeven;
+    document.getElementById('initialInvestmentSummary').textContent = `Initial Investment: ${formatCurrency(initialInvestmentValue)} (${initialShares} shares @ ${formatCurrency(initialPrice)})`;
+    document.getElementById('droppedPriceSummary').textContent = `After ${priceDropPercent}% drop: ${formatCurrency(priceAfterDrop * initialShares)} (${initialShares} shares @ ${formatCurrency(priceAfterDrop)})`;
+
+    const breakevenDate = new Date();
+    breakevenDate.setMonth(breakevenDate.getMonth() + monthsToBreakeven);
+
+    if (breakevenReached) {
+      document.getElementById('breakevenDateSummary').textContent = `Estimated breakeven by: ${breakevenDate.toLocaleDateString('en-US', {year: 'numeric', month: 'long'})}`;
+    } else {
+      document.getElementById('breakevenDateSummary').textContent = `Breakeven takes longer than 30 years with current parameters`;
+    }
+
+    document.getElementById('initialShareValue').textContent = formatCurrency(initialInvestmentValue);
+    document.getElementById('finalShareValue').textContent = formatCurrency(currentValue);
+
+    // Recovery times
+    document.getElementById('halfRecoveryTime').textContent = halfRecoveryMonth > 0 ? `${halfRecoveryMonth} months (${(halfRecoveryMonth / 12).toFixed(1)} years)` : 'Not reached';
+    document.getElementById('threeQuarterRecoveryTime').textContent = threeQuarterRecoveryMonth > 0 ? `${threeQuarterRecoveryMonth} months (${(threeQuarterRecoveryMonth / 12).toFixed(1)} years)` : 'Not reached';
+    document.getElementById('nearFullRecoveryTime').textContent = nearFullRecoveryMonth > 0 ? `${nearFullRecoveryMonth} months (${(nearFullRecoveryMonth / 12).toFixed(1)} years)` : 'Not reached';
+    document.getElementById('fullRecoveryTime').textContent = fullRecoveryMonth > 0 ? `${fullRecoveryMonth} months (${(fullRecoveryMonth / 12).toFixed(1)} years)` : 'Not reached within 30 years';
+
+    // Calculate reinvestment impact
+    const noReinvestmentValue = initialShares * currentPrice;
+    const reinvestmentImpact = (currentValue - noReinvestmentValue) / noReinvestmentValue * 100;
+    document.getElementById('reinvestmentImpact').textContent = `Dividend reinvestment increased your recovery value by approximately ${reinvestmentImpact.toFixed(1)}% compared to simply holding without reinvesting.`;
+
+    // Create recovery timeline
+    createRecoveryTimeline(halfRecoveryMonth, threeQuarterRecoveryMonth, nearFullRecoveryMonth, fullRecoveryMonth);
+
+    // Create yearly breakdown table
+    createYearlyBreakdownTable(yearlyData);
+
+    // Create analysis insights
+    createAnalysisInsights(initialDividendYield, dividendGrowthPercent, priceDropPercent, yearsToBreakeven, breakevenReached, additionalInvestment);
+
+    // Create chart
+    createRecoveryChart(months, values, initialInvestmentValue);
+
+    // Show results card
+    document.getElementById('resultsCard').style.display = 'block';
+
+    // Scroll to results
+    setTimeout(() => {
+      document.getElementById('resultsCard').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }, 300);
+  }
+
+  // Create recovery timeline visualization
+  function createRecoveryTimeline(halfRecovery, threeQuarter, nearFull, full) {
+    const timeline = document.getElementById('recoveryTimeline');
+    timeline.innerHTML = '';
+
+    // Helper function to create a timeline item
+    const createTimelineItem = (months, percent, label, isLast = false) => {
+      if (months === 0) return;
+
+      const years = (months / 12).toFixed(1);
+      const item = document.createElement('div');
+      item.className = 'recovery-timeline';
+      item.innerHTML = `
+        <div class="timeline-point${isLast ? ' last' : ''}"></div>
+        <h6>${label}</h6>
+        <p class="mb-1">Time: ${months} months (${years} years)</p>
+        <p class="text-muted mb-0">Recovery: ${percent}% of original investment</p>
+      `;
+      timeline.appendChild(item);
+    };
+
+    createTimelineItem(halfRecovery, '50%', '50% Recovery');
+    createTimelineItem(threeQuarter, '75%', '75% Recovery');
+    createTimelineItem(nearFull, '90%', '90% Recovery');
+    createTimelineItem(full, '100%', 'Full Recovery', true);
+
+    if (halfRecovery === 0 && threeQuarter === 0 && nearFull === 0 && full === 0) {
+      timeline.innerHTML = `
+        <div class="alert alert-warning">
+          <i class="bi bi-exclamation-triangle me-2"></i>
+          No significant recovery milestones reached within the simulation timeframe. Consider adjusting the parameters for a more realistic scenario.
+        </div>
+      `;
+    }
+  }
+
+  // Create yearly breakdown table
+  function createYearlyBreakdownTable(yearlyData) {
+    const tableBody = document.getElementById('yearlyBreakdownBody');
+    tableBody.innerHTML = '';
+
+    if (yearlyData.length === 0) {
+      const row = document.createElement('tr');
+      row.innerHTML = `<td colspan="6" class="text-center">Insufficient data for yearly breakdown</td>`;
+      tableBody.appendChild(row);
+      return;
+    }
+
+    yearlyData.forEach(data => {
+      const row = document.createElement('tr');
+
+      // Add recovery percentage styling
+      let recoveryClass = '';
+      const recoveryPct = parseFloat(data.recoveryPct);
+      if (recoveryPct >= 100) {
+        recoveryClass = 'text-success fw-bold';
+      } else if (recoveryPct >= 90) {
+        recoveryClass = 'text-success';
+      } else if (recoveryPct >= 75) {
+        recoveryClass = 'text-warning';
+      } else if (recoveryPct >= 50) {
+        recoveryClass = 'text-info';
+      } else {
+        recoveryClass = 'text-danger';
+      }
+
+      row.innerHTML = `
+        <td>Year ${data.year}</td>
+        <td>$${data.sharePrice}</td>
+        <td>${data.sharesOwned}</td>
+        <td>$${data.annualDividends}</td>
+        <td>$${data.totalValue}</td>
+        <td class="${recoveryClass}">${data.recoveryPct}%</td>
+      `;
+      tableBody.appendChild(row);
+    });
+  }
+
+  // Create analysis insights
+  function createAnalysisInsights(dividendYield, dividendGrowth, priceDropPercent, yearsToBreakeven, breakevenReached, additionalInvestment) {
+    const insightsDiv = document.getElementById('analysisInsights');
+    insightsDiv.innerHTML = '';
+
+    // Create insights based on parameters
+    const insights = [];
+
+    // Yield assessment
+    if (dividendYield >= 0.05) {
+      insights.push(`
+        <div class="analysis-highlight">
+          <h5><i class="bi bi-graph-up-arrow text-success me-2"></i>High Yield Advantage</h5>
+          <p>Your stock's ${(dividendYield * 100).toFixed(1)}% dividend yield significantly accelerates recovery. High-yield stocks can recover faster from price drops through reinvestment, especially when the underlying business fundamentals remain strong.</p>
+        </div>
+      `);
+    } else if (dividendYield <= 0.02) {
+      insights.push(`
+        <div class="analysis-highlight">
+          <h5><i class="bi bi-exclamation-triangle text-warning me-2"></i>Low Yield Challenge</h5>
+          <p>With a ${(dividendYield * 100).toFixed(1)}% dividend yield, recovery through dividend reinvestment alone will be slow. Consider stocks with higher yields or supplement with additional regular investments to speed up recovery.</p>
+        </div>
+      `);
+    }
+
+    // Dividend growth assessment
+    if (dividendGrowth >= 7) {
+      insights.push(`
+        <div class="analysis-highlight">
+          <h5><i class="bi bi-arrow-up-right text-success me-2"></i>Strong Dividend Growth</h5>
+          <p>The ${dividendGrowth.toFixed(1)}% annual dividend growth rate significantly enhances recovery speed. Companies that consistently grow dividends at this rate often outperform over the long term and recover faster from price declines.</p>
+        </div>
+      `);
+    } else if (dividendGrowth < 2) {
+      insights.push(`
+        <div class="analysis-highlight">
+          <h5><i class="bi bi-arrow-right text-warning me-2"></i>Limited Dividend Growth</h5>
+          <p>With only ${dividendGrowth.toFixed(1)}% annual dividend growth, recovery will rely more heavily on price appreciation. Consider companies with stronger dividend growth histories to accelerate recovery through reinvestment.</p>
+        </div>
+      `);
+    }
+
+    // Price drop assessment
+    if (priceDropPercent >= 40) {
+      insights.push(`
+        <div class="analysis-highlight">
+          <h5><i class="bi bi-arrow-down-circle text-danger me-2"></i>Significant Price Drop</h5>
+          <p>A ${priceDropPercent}% price drop represents a major decline that may indicate fundamental issues. While dividend reinvestment at these lower prices can accelerate recovery, carefully assess if the dividend is sustainable before reinvesting.</p>
+        </div>
+      `);
+    }
+
+    // Breakeven assessment
+    if (!breakevenReached) {
+      insights.push(`
+        <div class="analysis-highlight">
+          <h5><i class="bi bi-clock-history text-danger me-2"></i>Extended Recovery Timeline</h5>
+          <p>With current parameters, full recovery takes longer than 30 years. Consider increasing your dividend reinvestment strategy with additional periodic investments or finding stocks with higher yield/growth combinations.</p>
+        </div>
+      `);
+    } else if (parseFloat(yearsToBreakeven) <= 3) {
+      insights.push(`
+        <div class="analysis-highlight">
+          <h5><i class="bi bi-check-circle text-success me-2"></i>Rapid Recovery Potential</h5>
+          <p>With a breakeven time of ${yearsToBreakeven} years, your recovery timeline is relatively quick. This demonstrates the power of dividend reinvestment during market downturns when fundamentals remain strong.</p>
+        </div>
+      `);
+    } else if (parseFloat(yearsToBreakeven) >= 10) {
+      insights.push(`
+        <div class="analysis-highlight">
+          <h5><i class="bi bi-hourglass-split text-warning me-2"></i>Long Recovery Timeline</h5>
+          <p>A ${yearsToBreakeven}-year recovery period is quite long. This could be an opportunity to average down by purchasing additional shares at the lower price point to accelerate your recovery timeline.</p>
+        </div>
+      `);
+    }
+
+    // Additional investment assessment
+    if (additionalInvestment > 0) {
+      insights.push(`
+        <div class="analysis-highlight">
+          <h5><i class="bi bi-plus-circle text-success me-2"></i>Additional Investment Benefit</h5>
+          <p>Your strategy of adding $${additionalInvestment.toFixed(2)} monthly significantly accelerates recovery. Dollar-cost averaging through regular contributions is one of the most effective ways to recover from price drops.</p>
+        </div>
+      `);
+    } else {
+      insights.push(`
+        <div class="analysis-highlight">
+          <h5><i class="bi bi-info-circle text-info me-2"></i>Consider Additional Investments</h5>
+          <p>Adding regular monthly investments could substantially accelerate your recovery timeline. Even small additional contributions can have a significant impact through compounding and dollar-cost averaging.</p>
+        </div>
+      `);
+    }
+
+    // Add insights to the DOM
+    if (insights.length > 0) {
+      insightsDiv.innerHTML = insights.join('');
+    } else {
+      insightsDiv.innerHTML = `
+        <div class="alert alert-info">
+          <p class="mb-0">Analysis insights will appear here based on your input parameters.</p>
+        </div>
+      `;
+    }
+  }
+
+// Create recovery chart
+function createRecoveryChart(months, values, initialValue) {
+  const ctx = document.getElementById('recoveryChart').getContext('2d');
+
+  // Destroy existing chart if it exists - FIX FOR ERROR
+  if (window.recoveryChart instanceof Chart) {
+    window.recoveryChart.destroy();
+  }
+
+  // Create horizontal line dataset for initial investment value
+  const initialValueLine = Array(months.length).fill(initialValue);
+
+  // Create chart
+  window.recoveryChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: months.map(month => {
+        if (month % 12 === 0) {
+          return `Year ${month / 12}`;
+        }
+        return '';
+      }),
+      datasets: [
+        {
+          label: 'Portfolio Value',
+          data: values,
+          borderColor: 'rgba(0, 123, 255, 1)',
+          backgroundColor: 'rgba(0, 123, 255, 0.1)',
+          fill: true,
+          tension: 0.1
+        },
+        {
+          label: 'Initial Investment',
+          data: initialValueLine,
+          borderColor: 'rgba(220, 53, 69, 0.8)',
+          borderWidth: 2,
+          borderDash: [5, 5],
+          fill: false,
+          pointRadius: 0
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        y: {
+          beginAtZero: false,
+          title: {
+            display: true,
+            text: 'Portfolio Value ($)'
+          },
+          ticks: {
+            callback: function(value) {
+              return '$' + value.toLocaleString();
+            }
+          }
+        },
+        x: {
+          title: {
+            display: true,
+            text: 'Time (Months/Years)'
+          }
+        }
+      },
+      plugins: {
+        tooltip: {
+          callbacks: {
+            label: function(context) {
+              const label = context.dataset.label || '';
+              const value = context.raw;
+              return label + ': $' + value.toLocaleString('en-US', { maximumFractionDigits: 2 });
+            },
+            title: function(tooltipItems) {
+              const month = tooltipItems[0].label !== '' ? tooltipItems[0].label : `Month ${tooltipItems[0].dataIndex}`;
+              return month;
+            }
+          }
+        }
+      }
+    }
+  });
+}
+
+
+  // Reset calculator form
+  function resetCalculator() {
+    document.getElementById('initialPrice').value = '100';
+    document.getElementById('priceDropPercent').value = '20';
+    document.getElementById('annualGrowthPercent').value = '5';
+    document.getElementById('dividendYieldPercent').value = '4';
+    document.getElementById('dividendGrowthPercent').value = '3';
+    document.getElementById('dividendFrequency').value = '4';
+    document.getElementById('initialShares').value = '100';
+    document.getElementById('additionalInvestment').value = '0';
+
+    // Hide results
+    document.getElementById('resultsCard').style.display = 'none';
+  }
+
+  // Setup share popup functionality
+  function setupSharePopup() {
+    const shareBtn = document.getElementById('shareResultsBtn');
+
+    if (shareBtn) {
+      shareBtn.addEventListener('click', function () {
+        const popup = document.getElementById('sharePopup');
+        popup.style.display = popup.style.display === 'none' ? 'block' : 'none';
+
+        // Close popup when clicking outside
+        document.addEventListener('click', function hidePopup(e) {
+          if (!e.target.closest('#sharePopup') && e.target !== shareBtn) {
+            popup.style.display = 'none';
+            document.removeEventListener('click', hidePopup);
+          }
+        });
+      });
+    }
+  }
+
+  // Helper function to format currency
+  function formatCurrency(value) {
+    return '$' + value.toLocaleString('en-US', {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    });
+  }
+
+  // Calculator Navigation Template
+  document.addEventListener('DOMContentLoaded', function () {
+    // Create a template div
+    const calcNav = document.createElement('div');
+    calcNav.className = 'calculator-nav bg-light py-3 border-bottom';
+    calcNav.style.display = 'none'; // Hide initially
+
+    calcNav.innerHTML = `
+      <div class="container">
+        <h5 class="text-primary mb-2">Explore Our Other Financial Calculators:</h5>
+        <div class="row g-2">
+          <div class="col-md-3 col-sm-6">
+            <a href="index.html" class="btn btn-outline-primary btn-sm w-100">Market Cap Calculator</a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="position-sizing.html" class="btn btn-outline-primary btn-sm w-100">Position Sizing Calculator</a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="tax-harvesting.html" class="btn btn-outline-primary btn-sm w-100">Tax-Efficient Harvesting</a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="sector-balance.html" class="btn btn-outline-primary btn-sm w-100">Sector Balance Optimizer</a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="stock-split.html" class="btn btn-outline-primary btn-sm w-100">Stock Split Impact</a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="drip-breakeven.html" class="btn btn-outline-primary btn-sm w-100">Dividend Reinvestment</a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="valuation-confidence.html" class="btn btn-outline-primary btn-sm w-100">Valuation Confidence</a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="ma-crossover.html" class="btn btn-outline-primary btn-sm w-100">MA Crossover Backtester</a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="buyback-impact.html" class="btn btn-outline-primary btn-sm w-100">Share Buyback Impact</a>
+          </div>
+        </div>
+        <div class="text-end mt-2">
+          <button class="btn btn-sm btn-link text-muted" id="hideCalcNavBtn">Hide</button>
+        </div>
+      </div>
+    `;
+
+    // Add toggle button
+    const toggleBtn = document.createElement('button');
+    toggleBtn.className = 'btn btn-sm btn-primary position-fixed';
+    toggleBtn.id = 'showCalcNavBtn';
+    toggleBtn.innerHTML = '<i class="bi bi-calculator me-1"></i> More Calculators';
+    toggleBtn.style.bottom = '20px';
+    toggleBtn.style.right = '20px';
+    toggleBtn.style.zIndex = '1000';
+    toggleBtn.style.borderRadius = '30px';
+    toggleBtn.style.padding = '8px 16px';
+
+    // Add to document
+    document.body.appendChild(calcNav);
+    document.body.appendChild(toggleBtn);
+
+    // Show/hide functionality
+    document.getElementById('showCalcNavBtn').addEventListener('click', function () {
+      calcNav.style.display = 'block';
+      this.style.display = 'none';
+    });
+
+    document.getElementById('hideCalcNavBtn').addEventListener('click', function () {
+      calcNav.style.display = 'none';
+      document.getElementById('showCalcNavBtn').style.display = 'block';
+    });
+  });
+</script>
+</body>
+</html>
