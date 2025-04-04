@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Inflation-Adjusted Return Calculator - See Your Real Investment Returns</title>
+  <meta content="ca-pub-6247788451623601" name="google-adsense-account">
+  <meta content="ca-pub-5426315045205785" name="google-adsense-account">
+  <meta content="Calculate your real investment returns adjusted for inflation. Compare nominal vs. real returns and see the true purchasing power of your investments over time." name="description">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+
+  <style>
+    /* Inflation Calculator Specific Styles */
+    .hero-section {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e2e6ff 100%);
+    }
+
+    .results-card {
+      animation: fadeSlideUp 0.5s ease-out;
+    }
+
+    @keyframes fadeSlideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .comparison-table th, .comparison-table td {
+      vertical-align: middle;
+    }
+
+    .chart-container {
+      height: 400px;
+      position: relative;
+    }
+
+    .inflation-info-badge {
+      display: inline-block;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .year-marker {
+      position: relative;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      margin-right: 8px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .result-highlight {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .inflation-rate-info {
+      background-color: #f8f9fa;
+      border-left: 4px solid #6c757d;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .inflation-info-badge {
+        font-size: 0.75rem;
+      }
+
+      .comparison-table {
+        font-size: 0.85rem;
+      }
+
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () {
+        (c[a].q = c[a].q || []).push(arguments)
+      };
+      t = l.createElement(r);
+      t.async = 1;
+      t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0];
+      y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "qxscsfgx1j");
+  </script>
+</head>
+<body>
+
+<div id="header"></div>
+
+<!-- Hero Section -->
+<header class="hero-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="hero-content">
+          <span class="badge bg-primary mb-2 p-2">INVESTMENT ANALYSIS</span>
+          <h1 class="display-4 fw-bold mb-3">Inflation-Adjusted Return Calculator</h1>
+          <p class="lead mb-4">Calculate the true value of your investment returns by adjusting for inflation. See how purchasing power impacts your long-term investment performance.</p>
+          <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-primary btn-lg" href="#calculator">Try Free Calculator <i class="bi bi-arrow-right-circle ms-2"></i></a>
+            <a class="btn btn-outline-secondary btn-lg" href="#features">Learn More</a>
+          </div>
+          <div class="mt-4 usage-stats">
+            <span class="badge bg-light text-dark p-2 me-2">
+              <i class="bi bi-calculator me-1"></i> Trusted by 15,000+ investors
+            </span>
+            <span class="badge bg-light text-dark p-2">
+              <i class="bi bi-shield-check me-1"></i> 100% private calculations
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="hero-image position-relative">
+          <img
+            alt="Inflation-Adjusted Return Chart"
+            class="img-fluid rounded shadow"
+            src="/img/inflation-adjusted-chart.png">
+          <div class="free-badge position-absolute top-0 end-0 bg-success text-white p-3 rounded-circle m-3">
+            <strong>FREE</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Calculator Section -->
+<section class="calculator py-5 bg-light" id="calculator">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="h2 fw-bold">Inflation-Adjusted Return Calculator</h2>
+      <p class="lead text-muted">Discover the real value of your investments over time</p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card shadow border-0">
+          <div class="card-header bg-primary text-white py-3">
+            <div class="d-flex justify-content-between align-items-center">
+              <h2 class="h4 mb-0"><i class="bi bi-calculator me-2"></i> Calculate Real Returns</h2>
+              <span class="badge bg-success py-2 px-3">FREE</span>
+            </div>
+          </div>
+          <div class="card-body p-4">
+            <div class="alert alert-info mb-4">
+              <div class="d-flex">
+                <div class="me-3">
+                  <i class="bi bi-info-circle-fill fs-4"></i>
+                </div>
+                <div>
+                  <p class="mb-0">Enter your investment details to calculate how inflation affects your returns over time. See the difference between nominal returns and real (inflation-adjusted) returns.</p>
+                </div>
+              </div>
+            </div>
+
+            <form id="inflationCalculatorForm">
+              <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                  <label class="form-label" for="initialInvestment">Initial Investment ($)</label>
+                  <div class="input-group">
+                    <span class="input-group-text">$</span>
+                    <input class="form-control" id="initialInvestment" min="1" placeholder="e.g., 10000" required type="number" value="10000">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="annualContribution">Annual Contribution ($)</label>
+                  <div class="input-group">
+                    <span class="input-group-text">$</span>
+                    <input class="form-control" id="annualContribution" min="0" placeholder="e.g., 1000" type="number" value="1000">
+                  </div>
+                  <div class="form-text">Optional. Leave at 0 for no additional contributions.</div>
+                </div>
+              </div>
+
+              <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                  <label class="form-label" for="nominalReturn">Expected Annual Return (%)</label>
+                  <div class="input-group">
+                    <input class="form-control" id="nominalReturn" max="100" min="0" placeholder="e.g., 8" required step="0.1" type="number" value="8">
+                    <span class="input-group-text">%</span>
+                  </div>
+                  <div class="form-text">Nominal return before inflation</div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="inflationRate">Expected Inflation Rate (%)</label>
+                  <div class="input-group">
+                    <input class="form-control" id="inflationRate" max="20" min="0" placeholder="e.g., 2.5" required step="0.1" type="number" value="2.5">
+                    <span class="input-group-text">%</span>
+                  </div>
+                  <div class="form-text">Historical average is around 2-3%</div>
+                </div>
+              </div>
+
+              <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                  <label class="form-label" for="investmentLength">Investment Period (Years)</label>
+                  <input class="form-control" id="investmentLength" max="50" min="1" placeholder="e.g., 20" required type="number" value="20">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="compoundingFrequency">Compounding Frequency</label>
+                  <select class="form-select" id="compoundingFrequency">
+                    <option value="1">Annually</option>
+                    <option value="2">Semi-Annually</option>
+                    <option value="4">Quarterly</option>
+                    <option selected value="12">Monthly</option>
+                    <option value="365">Daily</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="inflation-rate-info p-3 rounded mb-4">
+                <h5 class="mb-2"><i class="bi bi-info-circle me-2"></i>Historical Inflation Rates</h5>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="d-flex align-items-center mb-2">
+                      <div class="year-marker bg-success"></div>
+                      <div>Low: 1.5%</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="d-flex align-items-center mb-2">
+                      <div class="year-marker bg-warning"></div>
+                      <div>Average: 2.5%</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="d-flex align-items-center mb-2">
+                      <div class="year-marker bg-danger"></div>
+                      <div>High: 4.5%</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center mt-2">
+                  <button class="btn btn-sm btn-outline-secondary me-2" id="setInflationLow" type="button">Use Low (1.5%)</button>
+                  <button class="btn btn-sm btn-outline-secondary me-2" id="setInflationAvg" type="button">Use Average (2.5%)</button>
+                  <button class="btn btn-sm btn-outline-secondary" id="setInflationHigh" type="button">Use High (4.5%)</button>
+                </div>
+              </div>
+
+              <div class="text-center">
+                <button class="btn btn-primary" id="calculateBtn" type="submit">
+                  <i class="bi bi-calculator me-2"></i>Calculate Inflation-Adjusted Returns
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Results Section -->
+    <div class="row justify-content-center mt-4">
+      <div class="col-lg-10">
+        <div class="card shadow border-0 results-card" id="resultsCard" style="display:none;">
+          <div class="card-header bg-success text-white py-3">
+            <div class="d-flex justify-content-between align-items-center">
+              <h3 class="h4 mb-0"><i class="bi bi-graph-up me-2"></i>Inflation-Adjusted Results</h3>
+              <button class="btn btn-outline-light btn-sm" onclick="window.print()">
+                <i class="bi bi-printer me-1"></i> Print Report
+              </button>
+            </div>
+          </div>
+          <div class="card-body p-4">
+            <div class="row mb-4">
+              <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                  <div class="card-header bg-primary bg-opacity-10">
+                    <h4 class="h5 mb-0 text-primary"><i class="bi bi-currency-dollar me-2"></i>Summary Results</h4>
+                  </div>
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <table class="table table-borderless">
+                        <tbody>
+                        <tr>
+                          <td>Initial Investment:</td>
+                          <td class="text-end" id="summaryInitial">$10,000.00</td>
+                        </tr>
+                        <tr>
+                          <td>Total Contributions:</td>
+                          <td class="text-end" id="summaryContributions">$20,000.00</td>
+                        </tr>
+                        <tr>
+                          <td>Investment Growth (Nominal):</td>
+                          <td class="text-end" id="summaryGrowthNominal">$25,500.00</td>
+                        </tr>
+                        <tr class="table-light">
+                          <td class="fw-bold">Final Amount (Nominal):</td>
+                          <td class="text-end fw-bold" id="summaryFinalNominal">$55,500.00</td>
+                        </tr>
+                        <tr>
+                          <td>Inflation Impact:</td>
+                          <td class="text-end text-danger" id="summaryInflationImpact">-$15,620.00</td>
+                        </tr>
+                        <tr class="table-light">
+                          <td class="fw-bold">Final Amount (Real):</td>
+                          <td class="text-end fw-bold" id="summaryFinalReal">$39,880.00</td>
+                        </tr>
+                        <tr>
+                          <td>Purchasing Power Retention:</td>
+                          <td class="text-end" id="summaryPurchasingPower">71.9%</td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                  <div class="card-header bg-success bg-opacity-10">
+                    <h4 class="h5 mb-0 text-success"><i class="bi bi-percent me-2"></i>Return Analysis</h4>
+                  </div>
+                  <div class="card-body">
+                    <div class="mb-4">
+                      <h5 class="h6 mb-3">Nominal vs. Real Return</h5>
+                      <div class="row g-3">
+                        <div class="col-6">
+                          <div class="p-3 rounded bg-light text-center">
+                            <div class="text-primary mb-1">Nominal Return</div>
+                            <div class="fs-4 fw-bold" id="nominalReturnResult">8.00%</div>
+                            <div class="small text-muted">Before inflation</div>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="p-3 rounded bg-light text-center">
+                            <div class="text-success mb-1">Real Return</div>
+                            <div class="fs-4 fw-bold" id="realReturnResult">5.37%</div>
+                            <div class="small text-muted">After inflation</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="alert alert-warning">
+                      <i class="bi bi-exclamation-triangle me-2"></i>
+                      <span id="inflationImpactMessage">Over 20 years, inflation has reduced your effective annual return by 2.63% and decreased your purchasing power by 28.1%.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card border-0 shadow-sm mb-4">
+              <div class="card-header bg-primary bg-opacity-10">
+                <h4 class="h5 mb-0 text-primary"><i class="bi bi-graph-up-arrow me-2"></i>Growth Visualization</h4>
+              </div>
+              <div class="card-body">
+                <div class="chart-container">
+                  <canvas id="growthChart"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <div class="card border-0 shadow-sm mb-4">
+              <div class="card-header bg-success bg-opacity-10">
+                <h4 class="h5 mb-0 text-success"><i class="bi bi-table me-2"></i>Year-by-Year Breakdown</h4>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-hover comparison-table" id="yearByYearTable">
+                    <thead class="table-light">
+                    <tr>
+                      <th>Year</th>
+                      <th>Nominal Value ($)</th>
+                      <th>Real Value ($)</th>
+                      <th>Annual Contribution ($)</th>
+                      <th>Cumulative Inflation (%)</th>
+                      <th>Purchasing Power</th>
+                    </tr>
+                    </thead>
+                    <tbody id="yearByYearTableBody">
+                    <!-- Data will be populated by JavaScript -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="card border-0 shadow-sm mb-4">
+              <div class="card-header bg-info bg-opacity-10">
+                <h4 class="h5 mb-0 text-info"><i class="bi bi-lightbulb me-2"></i>Insights & Recommendations</h4>
+              </div>
+              <div class="card-body">
+                <div id="insightsContainer">
+                  <!-- Will be populated by JavaScript -->
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex mt-4 mb-2">
+              <div class="me-3">
+                <i class="bi bi-shield-check fs-4"></i>
+              </div>
+              <div>
+                <h5 class="h6 mb-1">Inflation-Protected Securities</h5>
+                <p class="text-muted mb-0">TIPS (Treasury Inflation-Protected Securities) and I Bonds adjust their principal or interest based on inflation measures</p>
+              </div>
+            </div>
+
+            <div class="d-flex mb-3">
+              <div class="me-3 text-primary">
+                <i class="bi bi-graph-up fs-4"></i>
+              </div>
+              <div>
+                <h5 class="h6 mb-1">Dividend Growth Stocks</h5>
+                <p class="text-muted mb-0">Companies that consistently increase dividends faster than inflation help maintain purchasing power</p>
+              </div>
+            </div>
+
+            <div class="alert alert-warning mt-4">
+              <i class="bi bi-exclamation-triangle me-2"></i>
+              <strong>Important Note:</strong> Different inflation environments call for different strategies. During periods of high inflation, short-duration bonds and commodities may outperform, while during moderate
+              inflation, stocks and real estate often perform best.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-5">
+      <a class="btn btn-outline-primary" href="#calculator">Calculate Your Inflation-Adjusted Returns <i class="bi bi-calculator ms-2"></i></a>
+    </div>
+  </div>
+</section>
+
+<div id="calcNav"></div>
+
+<!-- FAQ Section -->
+<section class="faq py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="badge bg-primary mb-2 p-2">COMMON QUESTIONS</span>
+      <h2 class="fw-bold">Frequently Asked Questions</h2>
+      <p class="lead text-muted mx-auto" style="max-width: 700px;">Everything you need to know about inflation and investment returns</p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="card border-0 shadow-sm">
+          <div class="card-body p-0">
+            <div class="accordion accordion-flush" id="faqAccordion">
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button" data-bs-target="#faq1" data-bs-toggle="collapse" type="button">
+                    <i class="bi bi-question-circle text-primary me-2"></i> What is the difference between nominal and real returns?
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse show" data-bs-parent="#faqAccordion" id="faq1">
+                  <div class="accordion-body">
+                    <p>Nominal returns and real returns differ in how they account for inflation:</p>
+                    <ul>
+                      <li><strong>Nominal Return:</strong> The return on an investment before accounting for inflation. It's the percentage increase in your investment value expressed in current dollars.</li>
+                      <li><strong>Real Return:</strong> The return on an investment after adjusting for inflation. It represents the actual increase in purchasing power provided by the investment.</li>
+                    </ul>
+                    <p class="mb-0 text-muted">For example, if your investment grows by 7% in a year (nominal return) but inflation is 3%, your real return is approximately 4%. This means your purchasing power has
+                      increased by 4%, not 7%.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-target="#faq2" data-bs-toggle="collapse" type="button">
+                    <i class="bi bi-question-circle text-primary me-2"></i> How do I calculate real return from nominal return?
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq2">
+                  <div class="accordion-body">
+                    <p>There are two methods to calculate real returns from nominal returns:</p>
+                    <ol>
+                      <li><strong>Approximate Method (good for small percentages):</strong>
+                        <pre>Real Return ≈ Nominal Return - Inflation Rate</pre>
+                        <p>Example: 8% nominal return - 3% inflation = 5% real return</p>
+                      </li>
+                      <li><strong>Precise Method (better for larger percentages):</strong>
+                        <pre>Real Return = [(1 + Nominal Return) / (1 + Inflation Rate)] - 1</pre>
+                        <p>Example: [(1 + 0.08) / (1 + 0.03)] - 1 = 1.08/1.03 - 1 = 1.0485 - 1 = 0.0485 or 4.85% real return</p>
+                      </li>
+                    </ol>
+                    <p class="mb-0 text-muted">Our calculator uses the precise method to give you the most accurate results, especially for long time periods where the difference between the two methods becomes more
+                      significant.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-target="#faq3" data-bs-toggle="collapse" type="button">
+                    <i class="bi bi-question-circle text-primary me-2"></i> What inflation rate should I use for my calculations?
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq3">
+                  <div class="accordion-body">
+                    <p>The most appropriate inflation rate to use depends on your time horizon and economic outlook:</p>
+                    <ul>
+                      <li><strong>Historical Average (2-3%):</strong> For long-term planning, the historical average U.S. inflation rate of around 2-3% is often used as a reasonable baseline.</li>
+                      <li><strong>Current Inflation Rate:</strong> For short-term projections, you might use the most recent annual inflation rate.</li>
+                      <li><strong>Federal Reserve Target (2%):</strong> The Fed targets 2% inflation, so this can be a reasonable assumption for long-term planning.</li>
+                      <li><strong>Personal Inflation Rate:</strong> Consider that your personal inflation rate might differ from the official numbers based on your spending patterns (e.g., healthcare costs inflate faster
+                        than the CPI average).
+                      </li>
+                    </ul>
+                    <p class="mb-0 text-muted">A conservative approach for long-term planning is to use a slightly higher rate than the historical average (3-3.5%) to build in a safety margin, especially for retirement
+                      planning.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-target="#faq4" data-bs-toggle="collapse" type="button">
+                    <i class="bi bi-question-circle text-primary me-2"></i> Which investments typically outpace inflation?
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq4">
+                  <div class="accordion-body">
+                    <p>Historically, several asset classes have demonstrated the ability to outpace inflation over long periods:</p>
+                    <ul>
+                      <li><strong>Stocks:</strong> Equities have historically provided the highest real returns over long periods, averaging around 6-7% above inflation.</li>
+                      <li><strong>Real Estate:</strong> Both residential and commercial real estate have typically maintained value above inflation rates.</li>
+                      <li><strong>Commodities:</strong> Certain commodities like gold, silver, and oil often serve as inflation hedges, though they can be volatile.</li>
+                      <li><strong>TIPS (Treasury Inflation-Protected Securities):</strong> These government bonds are specifically designed to protect against inflation by adjusting their principal value based on changes
+                        in the Consumer Price Index.
+                      </li>
+                      <li><strong>I Bonds:</strong> U.S. savings bonds that earn interest based on combining a fixed rate and an inflation rate.</li>
+                    </ul>
+                    <p class="mb-0 text-muted">A diversified portfolio containing a mix of these assets can provide robust protection against inflation while balancing risk appropriately for your time horizon.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-target="#faq5" data-bs-toggle="collapse" type="button">
+                    <i class="bi bi-question-circle text-primary me-2"></i> How does compounding frequency affect inflation-adjusted returns?
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq5">
+                  <div class="accordion-body">
+                    <p>Compounding frequency affects both nominal and inflation-adjusted returns in the following ways:</p>
+                    <ul>
+                      <li><strong>More Frequent Compounding:</strong> Higher compounding frequency (monthly vs. annually) leads to higher effective returns because interest/gains are reinvested more frequently and can
+                        generate additional returns.
+                      </li>
+                      <li><strong>Effect on Real Returns:</strong> The benefit of more frequent compounding still applies after adjusting for inflation. If your nominal returns compound more frequently, your real returns
+                        will also be higher.
+                      </li>
+                      <li><strong>Practical Difference:</strong> For most typical investment returns, the difference between monthly and annual compounding is approximately 0.1-0.3% per year in effective yield, which can
+                        become significant over long time periods.
+                      </li>
+                    </ul>
+                    <p class="mb-0 text-muted">Our calculator allows you to select different compounding frequencies to see how they affect your long-term results. For most investments like mutual funds and ETFs, monthly
+                      or quarterly compounding is most realistic.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-target="#faq6" data-bs-toggle="collapse" type="button">
+                    <i class="bi bi-question-circle text-primary me-2"></i> Should I use pre-tax or post-tax returns for this calculation?
+                  </button>
+                </h3>
+                <div class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq6">
+                  <div class="accordion-body">
+                    <p>For the most accurate picture of your investment's purchasing power:</p>
+                    <ul>
+                      <li><strong>Ideally use post-tax returns:</strong> Since taxes further reduce your effective returns, using post-tax figures gives you the most realistic view of your investment's purchasing power.
+                      </li>
+                      <li><strong>Account type matters:</strong>
+                        <ul>
+                          <li>For tax-advantaged accounts (401(k), Traditional IRA), you can use pre-tax returns in the calculator, but remember that withdrawals will be taxed later.</li>
+                          <li>For Roth accounts, pre-tax returns are appropriate since withdrawals are tax-free.</li>
+                          <li>For taxable accounts, consider reducing your expected return to account for capital gains taxes and dividend taxes.</li>
+                        </ul>
+                      </li>
+                      <li><strong>Consistency is key:</strong> Whatever approach you choose, be consistent in your calculations and understanding of the results.</li>
+                    </ul>
+                    <p class="mb-0 text-muted">A comprehensive approach would be to do two calculations: one with pre-tax returns to see the theoretical growth, and another with estimated post-tax returns to see a more
+                      realistic outcome, especially for taxable accounts.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <p class="lead mb-3">Still have questions about inflation-adjusted returns?</p>
+          <a class="btn btn-outline-primary" href="contact.html">Contact Our Team <i class="bi bi-arrow-right ms-2"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer"></div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/include.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Initialize form and event listeners
+    initInflationCalculator();
+    setupInflationRatePresets();
+    setupSharePopup();
+
+    // Show calculator
+    document.getElementById('inflationCalculatorForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      calculateInflationAdjustedReturns();
+    });
+  });
+
+  function initInflationCalculator() {
+    // Set min/max values for inputs
+    document.getElementById('initialInvestment').setAttribute('min', '1');
+    document.getElementById('annualContribution').setAttribute('min', '0');
+    document.getElementById('nominalReturn').setAttribute('min', '0');
+    document.getElementById('nominalReturn').setAttribute('max', '100');
+    document.getElementById('inflationRate').setAttribute('min', '0');
+    document.getElementById('inflationRate').setAttribute('max', '50');
+    document.getElementById('investmentLength').setAttribute('min', '1');
+    document.getElementById('investmentLength').setAttribute('max', '100');
+  }
+
+  function setupInflationRatePresets() {
+    // Add event listeners for inflation rate preset buttons
+    document.getElementById('setInflationLow').addEventListener('click', function () {
+      document.getElementById('inflationRate').value = '1.5';
+    });
+
+    document.getElementById('setInflationAvg').addEventListener('click', function () {
+      document.getElementById('inflationRate').value = '2.5';
+    });
+
+    document.getElementById('setInflationHigh').addEventListener('click', function () {
+      document.getElementById('inflationRate').value = '4.5';
+    });
+  }
+
+  function calculateInflationAdjustedReturns() {
+    // Get input values
+    const initialInvestment = parseFloat(document.getElementById('initialInvestment').value);
+    const annualContribution = parseFloat(document.getElementById('annualContribution').value);
+    const nominalReturnRate = parseFloat(document.getElementById('nominalReturn').value) / 100;
+    const inflationRate = parseFloat(document.getElementById('inflationRate').value) / 100;
+    const investmentLength = parseInt(document.getElementById('investmentLength').value);
+    const compoundingFrequency = parseInt(document.getElementById('compoundingFrequency').value);
+
+    // Validate inputs
+    if (isNaN(initialInvestment) || isNaN(nominalReturnRate) || isNaN(inflationRate) || isNaN(investmentLength)) {
+      alert('Please enter valid values for all fields.');
+      return;
+    }
+
+    // Calculate effective rates based on compounding frequency
+    const effectiveNominalRate = Math.pow(1 + nominalReturnRate / compoundingFrequency, compoundingFrequency) - 1;
+    const effectiveInflationRate = Math.pow(1 + inflationRate / compoundingFrequency, compoundingFrequency) - 1;
+    const effectiveRealRate = (1 + effectiveNominalRate) / (1 + effectiveInflationRate) - 1;
+
+    // Calculate year-by-year growth
+    const yearlyData = calculateYearlyData(
+      initialInvestment,
+      annualContribution,
+      nominalReturnRate,
+      inflationRate,
+      investmentLength,
+      compoundingFrequency
+    );
+
+    // Update UI with results
+    updateResultsSummary(yearlyData, effectiveNominalRate, effectiveRealRate, inflationRate, investmentLength);
+    updateYearByYearTable(yearlyData);
+    createGrowthChart(yearlyData);
+    generateInsights(
+      initialInvestment,
+      yearlyData[yearlyData.length - 1].nominalValue,
+      yearlyData[yearlyData.length - 1].realValue,
+      effectiveNominalRate,
+      effectiveRealRate,
+      inflationRate,
+      investmentLength
+    );
+
+    // Show results card
+    document.getElementById('resultsCard').style.display = 'block';
+
+    // Scroll to results
+    setTimeout(() => {
+      document.getElementById('resultsCard').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }, 300);
+  }
+
+  function calculateYearlyData(initialInvestment, annualContribution, nominalRate, inflationRate, years, compoundingFrequency) {
+    const data = [];
+
+    // Initial year
+    let nominalValue = initialInvestment;
+    let realValue = initialInvestment;
+    let cumulativeInflation = 0;
+
+    data.push({
+      year: 0,
+      nominalValue,
+      realValue,
+      contribution: initialInvestment,
+      cumulativeInflation,
+      purchasingPower: 1
+    });
+
+    // Calculate for each subsequent year
+    for (let year = 1; year <= years; year++) {
+      // Start with previous year's value
+      let yearStartNominal = nominalValue;
+
+      // Add annual contribution at the beginning of the year
+      nominalValue += annualContribution;
+
+      // Calculate compounded growth for the year
+      for (let period = 0; period < compoundingFrequency; period++) {
+        nominalValue *= (1 + nominalRate / compoundingFrequency);
+      }
+
+      // Calculate cumulative inflation
+      cumulativeInflation = Math.pow(1 + inflationRate, year) - 1;
+
+      // Calculate real value adjusted for inflation
+      realValue = nominalValue / (1 + cumulativeInflation);
+
+      // Calculate purchasing power (as a ratio of nominal to inflation-adjusted)
+      const purchasingPower = realValue / nominalValue;
+
+      data.push({
+        year,
+        nominalValue,
+        realValue,
+        contribution: year === 0 ? initialInvestment : annualContribution,
+        cumulativeInflation,
+        purchasingPower
+      });
+    }
+
+    return data;
+  }
+
+  function updateResultsSummary(yearlyData, nominalRate, realRate, inflationRate, years) {
+    const finalYear = yearlyData[yearlyData.length - 1];
+    const initialInvestment = yearlyData[0].nominalValue;
+
+    // Calculate total contributions
+    const totalContributions = yearlyData.reduce((total, year) => total + year.contribution, 0);
+
+    // Calculate investment growth (nominal)
+    const nominalGrowth = finalYear.nominalValue - totalContributions;
+
+    // Calculate inflation impact
+    const inflationImpact = finalYear.nominalValue - finalYear.realValue;
+
+    // Calculate purchasing power retention
+    const purchasingPowerRetention = finalYear.realValue / finalYear.nominalValue * 100;
+
+    // Update summary values
+    document.getElementById('summaryInitial').textContent = formatCurrency(initialInvestment);
+    document.getElementById('summaryContributions').textContent = formatCurrency(totalContributions - initialInvestment);
+    document.getElementById('summaryGrowthNominal').textContent = formatCurrency(nominalGrowth);
+    document.getElementById('summaryFinalNominal').textContent = formatCurrency(finalYear.nominalValue);
+    document.getElementById('summaryInflationImpact').textContent = formatCurrency(-inflationImpact);
+    document.getElementById('summaryFinalReal').textContent = formatCurrency(finalYear.realValue);
+    document.getElementById('summaryPurchasingPower').textContent = purchasingPowerRetention.toFixed(1) + '%';
+
+    // Update return analysis
+    document.getElementById('nominalReturnResult').textContent = (nominalRate * 100).toFixed(2) + '%';
+    document.getElementById('realReturnResult').textContent = (realRate * 100).toFixed(2) + '%';
+
+    // Update inflation impact message
+    const returnReduction = ((nominalRate - realRate) * 100).toFixed(2);
+    const purchasingPowerLoss = (100 - purchasingPowerRetention).toFixed(1);
+    document.getElementById('inflationImpactMessage').textContent =
+      `Over ${years} years, inflation has reduced your effective annual return by ${returnReduction}% and decreased your purchasing power by ${purchasingPowerLoss}%.`;
+  }
+
+  function updateYearByYearTable(yearlyData) {
+    const tableBody = document.getElementById('yearByYearTableBody');
+    tableBody.innerHTML = '';
+
+    yearlyData.forEach(yearData => {
+      const row = document.createElement('tr');
+
+      // Highlight certain years
+      if (yearData.year === 0 || yearData.year === yearlyData.length - 1 || yearData.year % 5 === 0) {
+        row.classList.add('table-light');
+      }
+
+      const purchasingPowerClass = getPurchasingPowerClass(yearData.purchasingPower);
+
+      row.innerHTML = `
+        <td>${yearData.year}</td>
+        <td>${formatCurrency(yearData.nominalValue)}</td>
+        <td>${formatCurrency(yearData.realValue)}</td>
+        <td>${yearData.year === 0 ? formatCurrency(yearData.contribution) : formatCurrency(yearData.contribution)}</td>
+        <td>${(yearData.cumulativeInflation * 100).toFixed(2)}%</td>
+        <td><span class="badge ${purchasingPowerClass}">${(yearData.purchasingPower * 100).toFixed(1)}%</span></td>
+      `;
+
+      tableBody.appendChild(row);
+    });
+  }
+
+  function getPurchasingPowerClass(purchasingPower) {
+    if (purchasingPower >= 0.95) return 'bg-success';
+    if (purchasingPower >= 0.8) return 'bg-info';
+    if (purchasingPower >= 0.6) return 'bg-warning';
+    return 'bg-danger';
+  }
+
+  function createGrowthChart(yearlyData) {
+    const ctx = document.getElementById('growthChart').getContext('2d');
+
+    // Destroy existing chart if it exists
+if (window.growthChart instanceof Chart) {
+  window.growthChart.destroy();
+}
+
+
+    // Extract data for chart
+    const years = yearlyData.map(data => `Year ${data.year}`);
+    const nominalValues = yearlyData.map(data => data.nominalValue);
+    const realValues = yearlyData.map(data => data.realValue);
+    const contributions = yearlyData.reduce((acc, data, index) => {
+      const prevTotal = index > 0 ? acc[index - 1] : 0;
+      acc.push(prevTotal + data.contribution);
+      return acc;
+    }, []);
+
+// Create chart
+    window.growthChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: years,
+        datasets: [
+          {
+            label: 'Nominal Value',
+            data: nominalValues,
+            backgroundColor: 'rgba(0, 123, 255, 0.1)',
+            borderColor: 'rgba(0, 123, 255, 1)',
+            borderWidth: 2,
+            fill: true
+          },
+          {
+            label: 'Real Value (Inflation-Adjusted)',
+            data: realValues,
+            backgroundColor: 'rgba(40, 167, 69, 0.1)',
+            borderColor: 'rgba(40, 167, 69, 1)',
+            borderWidth: 2,
+            fill: true
+          },
+          {
+            label: 'Total Contributions',
+            data: contributions,
+            backgroundColor: 'rgba(108, 117, 125, 0.1)',
+            borderColor: 'rgba(108, 117, 125, 1)',
+            borderWidth: 2,
+            borderDash: [5, 5],
+            fill: true
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          y: {
+            beginAtZero: true,
+            title: {
+              display: true,
+              text: 'Value ($)'
+            },
+            ticks: {
+              callback: function (value) {
+                return '$' + value.toLocaleString();
+              }
+            }
+          }
+        },
+        interaction: {
+          mode: 'index',
+          intersect: false
+        },
+        plugins: {
+          tooltip: {
+            callbacks: {
+              label: function (context) {
+                const value = context.raw;
+                return `${context.dataset.label}: ${formatCurrency(value)}`;
+              }
+            }
+          },
+          legend: {
+            position: 'top'
+          }
+        }
+      }
+    });
+  }
+
+  function generateInsights(initialInvestment, finalNominal, finalReal, nominalRate, realRate, inflationRate, years) {
+    const insightsContainer = document.getElementById('insightsContainer');
+    insightsContainer.innerHTML = '';
+
+// Calculate key metrics
+    const lossToInflation = finalNominal - finalReal;
+    const percentLoss = (lossToInflation / finalNominal) * 100;
+    const inflationImpactPerYear = (nominalRate - realRate) * 100;
+
+// Generate insights based on results
+    let insights = '<div class="mb-4">';
+
+// Insight 1: Overall inflation impact
+    insights += `
+  <div class="d-flex mb-3">
+    <div class="me-3 text-primary">
+      <i class="bi bi-graph-down fs-4"></i>
+    </div>
+    <div>
+      <h5 class="h6 mb-1">Inflation Impact Assessment</h5>
+      <p class="mb-0">Over ${years} years, inflation has reduced your investment's purchasing power by <strong class="text-danger">${percentLoss.toFixed(1)}%</strong> (${formatCurrency(lossToInflation)}). This means each dollar at the end of your investment period will buy only <strong>${(100 - percentLoss).toFixed(1)}¢</strong> worth of goods compared to today's prices.</p>
+    </div>
+  </div>
+`;
+
+// Insight 2: Return comparison
+    insights += `
+  <div class="d-flex mb-3">
+    <div class="me-3 text-primary">
+      <i class="bi bi-percent fs-4"></i>
+    </div>
+    <div>
+      <h5 class="h6 mb-1">Return Reality Check</h5>
+      <p class="mb-0">Your nominal return of <strong>${(nominalRate * 100).toFixed(2)}%</strong> translates to a real return of <strong>${(realRate * 100).toFixed(2)}%</strong> after inflation. For every percentage point of inflation, your effective return decreases by approximately 1%. At ${(inflationRate * 100).toFixed(1)}% inflation, this reduces your annual return by <strong>${inflationImpactPerYear.toFixed(2)}%</strong>.</p>
+    </div>
+  </div>
+`;
+
+// Insight 3: Investment recommendations based on inflation level
+    let recommendationText = '';
+    if (inflationRate <= 0.02) {
+      recommendationText = `With low inflation (${(inflationRate * 100).toFixed(1)}%), your purchasing power is well-preserved. Consider a balanced approach with a mix of stocks and bonds to maintain steady growth.`;
+    } else if (inflationRate <= 0.04) {
+      recommendationText = `With moderate inflation (${(inflationRate * 100).toFixed(1)}%), focus on growth investments like stocks and real estate that historically outpace inflation over long periods.`;
+    } else {
+      recommendationText = `With high inflation (${(inflationRate * 100).toFixed(1)}%), consider increasing allocation to inflation hedges like TIPS, I Bonds, commodities, or dividend-growing stocks to protect purchasing power.`;
+    }
+
+    insights += `
+  <div class="d-flex mb-3">
+    <div class="me-3 text-success">
+      <i class="bi bi-lightbulb fs-4"></i>
+    </div>
+    <div>
+      <h5 class="h6 mb-1">Strategic Recommendations</h5>
+      <p class="mb-0">${recommendationText}</p>
+    </div>
+  </div>
+`;
+
+// Insight 4: Long-term perspective
+    insights += `
+  <div class="d-flex mb-3">
+    <div class="me-3 text-info">
+      <i class="bi bi-hourglass-split fs-4"></i>
+    </div>
+    <div>
+      <h5 class="h6 mb-1">Long-Term Perspective</h5>
+      <p class="mb-0">To meet financial goals, aim for a target real return (after inflation) of at least 3-4%. This typically requires a nominal return of 5-7% in normal inflation environments. Regularly review your portfolio to ensure it's positioned to achieve your required real return.</p>
+    </div>
+  </div>
+`;
+
+    insights += '</div>';
+
+// Add action steps
+    insights += `
+  <div class="alert alert-primary">
+    <h5><i class="bi bi-check2-square me-2"></i>Action Steps to Combat Inflation</h5>
+    <ol class="mb-0">
+      <li>Increase your savings rate to compensate for inflation's impact on purchasing power</li>
+      <li>Review your asset allocation annually to ensure it's optimized for the current inflation environment</li>
+      <li>Consider increasing exposure to assets with inflation-adjustment features for a portion of your portfolio</li>
+      <li>When evaluating investment returns, always focus on real (inflation-adjusted) returns rather than nominal figures</li>
+    </ol>
+  </div>
+`;
+
+    insightsContainer.innerHTML = insights;
+  }
+
+  // Setup share popup functionality
+  function setupSharePopup() {
+    const shareBtn = document.getElementById('shareResultsBtn');
+
+    if (shareBtn) {
+      shareBtn.addEventListener('click', function () {
+        const popup = document.getElementById('sharePopup');
+        popup.style.display = popup.style.display === 'none' ? 'block' : 'none';
+
+        // Close popup when clicking outside
+        document.addEventListener('click', function hidePopup(e) {
+          if (!e.target.closest('#sharePopup') && e.target !== shareBtn) {
+            popup.style.display = 'none';
+            document.removeEventListener('click', hidePopup);
+          }
+        });
+      });
+    }
+  }
+
+  // Helper function to format currency
+  function formatCurrency(value) {
+    return '$' + value.toLocaleString('en-US', {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    });
+  }
+
+  // Calculator Navigation Template
+  document.addEventListener('DOMContentLoaded', function () {
+// Create a template div
+    const calcNav = document.createElement('div');
+    calcNav.className = 'calculator-nav bg-light py-3 border-bottom';
+    calcNav.style.display = 'none'; // Hide initially
+
+    calcNav.innerHTML = `
+  <div class="container">
+    <h5 class="text-primary mb-2">Explore Our Other Financial Calculators:</h5>
+    <div class="row g-2">
+      <div class="col-md-3 col-sm-6">
+        <a href="index.html" class="btn btn-outline-primary btn-sm w-100">Market Cap Calculator</a>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <a href="position-sizing.html" class="btn btn-outline-primary btn-sm w-100">Position Sizing Calculator</a>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <a href="tax-harvesting.html" class="btn btn-outline-primary btn-sm w-100">Tax-Efficient Harvesting</a>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <a href="sector-balance.html" class="btn btn-outline-primary btn-sm w-100">Sector Balance Optimizer</a>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <a href="inflation-adjusted-return.html" class="btn btn-outline-primary btn-sm w-100">Inflation-Adjusted Return</a>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <a href="drip-breakeven.html" class="btn btn-outline-primary btn-sm w-100">Dividend Reinvestment</a>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <a href="valuation-confidence.html" class="btn btn-outline-primary btn-sm w-100">Valuation Confidence</a>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <a href="ma-crossover.html" class="btn btn-outline-primary btn-sm w-100">MA Crossover Backtester</a>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <a href="buyback-impact.html" class="btn btn-outline-primary btn-sm w-100">Share Buyback Impact</a>
+      </div>
+    </div>
+    <div class="text-end mt-2">
+      <button class="btn btn-sm btn-link text-muted" id="hideCalcNavBtn">Hide</button>
+    </div>
+  </div>
+`;
+
+// Add toggle button
+    const toggleBtn = document.createElement('button');
+    toggleBtn.className = 'btn btn-sm btn-primary position-fixed';
+    toggleBtn.id = 'showCalcNavBtn';
+    toggleBtn.innerHTML = '<i class="bi bi-calculator me-1"></i> More Calculators';
+    toggleBtn.style.bottom = '20px';
+    toggleBtn.style.right = '20px';
+    toggleBtn.style.zIndex = '1000';
+    toggleBtn.style.borderRadius = '30px';
+    toggleBtn.style.padding = '8px 16px';
+
+// Add to document
+    document.body.appendChild(calcNav);
+    document.body.appendChild(toggleBtn);
+
+// Show/hide functionality
+    document.getElementById('showCalcNavBtn').addEventListener('click', function () {
+      calcNav.style.display = 'block';
+      this.style.display = 'none';
+    });
+
+    document.getElementById('hideCalcNavBtn').addEventListener('click', function () {
+      calcNav.style.display = 'none';
+      document.getElementById('showCalcNavBtn').style.display = 'block';
+    });
+  });
+</script>
+</body>
+</html>
