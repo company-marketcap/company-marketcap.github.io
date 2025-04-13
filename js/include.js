@@ -7,8 +7,10 @@ function loadHTML(selector, file) {
 
 document.addEventListener("DOMContentLoaded", () => {
   // Load header and footer
-  loadHTML("#header", "header.html");
-  loadHTML("#footer", "footer.html");
+loadHTML("#header", "header.html");
+loadHTML("#footer", "footer.html");
+loadHTML("#calcNav", "calculator-nav.html");
+
 
   // Add calculator nav container if it doesn't exist
   if (!document.getElementById('calcNav')) {
