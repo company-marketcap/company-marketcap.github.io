@@ -87,6 +87,15 @@
         font-size: 2rem;
       }
     }
+
+    .share-popup {
+      position: absolute;
+      top: -50px;
+      right: 0;
+      background: white;
+      border: 1px solid #dee2e6;
+      z-index: 1000;
+    }
   </style>
 
   <script type="text/javascript">
@@ -116,7 +125,7 @@
           <h1 class="display-4 fw-bold mb-3">Inflation-Adjusted Return Calculator</h1>
           <p class="lead mb-4">Calculate the true value of your investment returns by adjusting for inflation. See how purchasing power impacts your long-term investment performance.</p>
           <div class="d-flex flex-wrap gap-2">
-            <a class="btn btn-primary btn-lg" href="#calculator">Try Free Calculator <i class="bi bi-arrow-right-circle ms-2"></i></a>
+            <a class="btn btn-primary btn-lg" href="#resultsCard">Try Free Calculator <i class="bi bi-arrow-right-circle ms-2"></i></a>
             <a class="btn btn-outline-secondary btn-lg" href="#features">Learn More</a>
           </div>
           <div class="mt-4 usage-stats">
@@ -275,7 +284,7 @@
     <!-- Results Section -->
     <div class="row justify-content-center mt-4">
       <div class="col-lg-10">
-        <div class="card shadow border-0 results-card" id="resultsCard" style="display:none;">
+        <div class="card shadow border-0 results-card" id="resultsCard">
           <div class="card-header bg-success text-white py-3">
             <div class="d-flex justify-content-between align-items-center">
               <h3 class="h4 mb-0"><i class="bi bi-graph-up me-2"></i>Inflation-Adjusted Results</h3>
@@ -420,15 +429,15 @@
     </button>
     <div class="share-popup shadow-sm p-2 rounded" id="sharePopup" style="display: none;">
       <a class="text-decoration-none me-2"
-          href="https://twitter.com/intent/tweet?text=Check+out+how+inflation+affects+my+investment+returns!&url=https://marketcapinsights.com/inflation-adjusted-return.html" target="_blank">
+          href="https://twitter.com/intent/tweet?text=Check+out+how+inflation+affects+my+investment+returns!&url=https://company-marketcap.github.io/inflation-adjusted-return.html" target="_blank">
         <i class="bi bi-twitter fs-4 text-info"></i>
       </a>
       <a class="text-decoration-none me-2"
-          href="https://www.linkedin.com/shareArticle?mini=true&url=https://marketcapinsights.com/inflation-adjusted-return.html&title=Inflation-Adjusted%20Return%20Calculator" target="_blank">
+          href="https://www.linkedin.com/shareArticle?mini=true&url=https://company-marketcap.github.io/inflation-adjusted-return.html&title=Inflation-Adjusted%20Return%20Calculator" target="_blank">
         <i class="bi bi-linkedin fs-4 text-primary"></i>
       </a>
       <a class="text-decoration-none"
-          href="https://www.facebook.com/sharer/sharer.php?u=https://marketcapinsights.com/inflation-adjusted-return.html" target="_blank">
+          href="https://www.facebook.com/sharer/sharer.php?u=https://company-marketcap.github.io/inflation-adjusted-return.html" target="_blank">
         <i class="bi bi-facebook fs-4 text-secondary"></i>
       </a>
     </div>
@@ -897,6 +906,9 @@
     setupInflationRatePresets();
     setupSharePopup();
 
+    // Calculate and show default results on page load
+    calculateInflationAdjustedReturns();
+
     // Show calculator
     document.getElementById('inflationCalculatorForm').addEventListener('submit', function (e) {
       e.preventDefault();
@@ -920,14 +932,17 @@
     // Add event listeners for inflation rate preset buttons
     document.getElementById('setInflationLow').addEventListener('click', function () {
       document.getElementById('inflationRate').value = '1.5';
+      calculateInflationAdjustedReturns();
     });
 
     document.getElementById('setInflationAvg').addEventListener('click', function () {
       document.getElementById('inflationRate').value = '2.5';
+      calculateInflationAdjustedReturns();
     });
 
     document.getElementById('setInflationHigh').addEventListener('click', function () {
       document.getElementById('inflationRate').value = '4.5';
+      calculateInflationAdjustedReturns();
     });
   }
 
@@ -977,14 +992,6 @@
 
     // Show results card
     document.getElementById('resultsCard').style.display = 'block';
-
-    // Scroll to results
-    setTimeout(() => {
-      document.getElementById('resultsCard').scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }, 300);
   }
 
   function calculateYearlyData(initialInvestment, annualContribution, nominalRate, inflationRate, years, compoundingFrequency) {
@@ -1117,7 +1124,6 @@
       window.growthChart.destroy();
     }
 
-
     // Extract data for chart
     const years = yearlyData.map(data => `Year ${data.year}`);
     const nominalValues = yearlyData.map(data => data.nominalValue);
@@ -1128,7 +1134,7 @@
       return acc;
     }, []);
 
-// Create chart
+    // Create chart
     window.growthChart = new Chart(ctx, {
       type: 'line',
       data: {
@@ -1203,41 +1209,41 @@
     const insightsContainer = document.getElementById('insightsContainer');
     insightsContainer.innerHTML = '';
 
-// Calculate key metrics
+    // Calculate key metrics
     const lossToInflation = finalNominal - finalReal;
     const percentLoss = (lossToInflation / finalNominal) * 100;
     const inflationImpactPerYear = (nominalRate - realRate) * 100;
 
-// Generate insights based on results
+    // Generate insights based on results
     let insights = '<div class="mb-4">';
 
-// Insight 1: Overall inflation impact
+    // Insight 1: Overall inflation impact
     insights += `
-  <div class="d-flex mb-3">
-    <div class="me-3 text-primary">
-      <i class="bi bi-graph-down fs-4"></i>
-    </div>
-    <div>
-      <h5 class="h6 mb-1">Inflation Impact Assessment</h5>
-      <p class="mb-0">Over ${years} years, inflation has reduced your investment's purchasing power by <strong class="text-danger">${percentLoss.toFixed(1)}%</strong> (${formatCurrency(lossToInflation)}). This means each dollar at the end of your investment period will buy only <strong>${(100 - percentLoss).toFixed(1)}¢</strong> worth of goods compared to today's prices.</p>
-    </div>
-  </div>
-`;
+      <div class="d-flex mb-3">
+        <div class="me-3 text-primary">
+          <i class="bi bi-graph-down fs-4"></i>
+        </div>
+        <div>
+          <h5 class="h6 mb-1">Inflation Impact Assessment</h5>
+          <p class="mb-0">Over ${years} years, inflation has reduced your investment's purchasing power by <strong class="text-danger">${percentLoss.toFixed(1)}%</strong> (${formatCurrency(lossToInflation)}). This means each dollar at the end of your investment period will buy only <strong>${(100 - percentLoss).toFixed(1)}¢</strong> worth of goods compared to today's prices.</p>
+        </div>
+      </div>
+    `;
 
-// Insight 2: Return comparison
+    // Insight 2: Return comparison
     insights += `
-  <div class="d-flex mb-3">
-    <div class="me-3 text-primary">
-      <i class="bi bi-percent fs-4"></i>
-    </div>
-    <div>
-      <h5 class="h6 mb-1">Return Reality Check</h5>
-      <p class="mb-0">Your nominal return of <strong>${(nominalRate * 100).toFixed(2)}%</strong> translates to a real return of <strong>${(realRate * 100).toFixed(2)}%</strong> after inflation. For every percentage point of inflation, your effective return decreases by approximately 1%. At ${(inflationRate * 100).toFixed(1)}% inflation, this reduces your annual return by <strong>${inflationImpactPerYear.toFixed(2)}%</strong>.</p>
-    </div>
-  </div>
-`;
+      <div class="d-flex mb-3">
+        <div class="me-3 text-primary">
+          <i class="bi bi-percent fs-4"></i>
+        </div>
+        <div>
+          <h5 class="h6 mb-1">Return Reality Check</h5>
+          <p class="mb-0">Your nominal return of <strong>${(nominalRate * 100).toFixed(2)}%</strong> translates to a real return of <strong>${(realRate * 100).toFixed(2)}%</strong> after inflation. For every percentage point of inflation, your effective return decreases by approximately 1%. At ${(inflationRate * 100).toFixed(1)}% inflation, this reduces your annual return by <strong>${inflationImpactPerYear.toFixed(2)}%</strong>.</p>
+        </div>
+      </div>
+    `;
 
-// Insight 3: Investment recommendations based on inflation level
+    // Insight 3: Investment recommendations based on inflation level
     let recommendationText = '';
     if (inflationRate <= 0.02) {
       recommendationText = `With low inflation (${(inflationRate * 100).toFixed(1)}%), your purchasing power is well-preserved. Consider a balanced approach with a mix of stocks and bonds to maintain steady growth.`;
@@ -1248,44 +1254,44 @@
     }
 
     insights += `
-  <div class="d-flex mb-3">
-    <div class="me-3 text-success">
-      <i class="bi bi-lightbulb fs-4"></i>
-    </div>
-    <div>
-      <h5 class="h6 mb-1">Strategic Recommendations</h5>
-      <p class="mb-0">${recommendationText}</p>
-    </div>
-  </div>
-`;
+      <div class="d-flex mb-3">
+        <div class="me-3 text-success">
+          <i class="bi bi-lightbulb fs-4"></i>
+        </div>
+        <div>
+          <h5 class="h6 mb-1">Strategic Recommendations</h5>
+          <p class="mb-0">${recommendationText}</p>
+        </div>
+      </div>
+    `;
 
-// Insight 4: Long-term perspective
+    // Insight 4: Long-term perspective
     insights += `
-  <div class="d-flex mb-3">
-    <div class="me-3 text-info">
-      <i class="bi bi-hourglass-split fs-4"></i>
-    </div>
-    <div>
-      <h5 class="h6 mb-1">Long-Term Perspective</h5>
-      <p class="mb-0">To meet financial goals, aim for a target real return (after inflation) of at least 3-4%. This typically requires a nominal return of 5-7% in normal inflation environments. Regularly review your portfolio to ensure it's positioned to achieve your required real return.</p>
-    </div>
-  </div>
-`;
+      <div class="d-flex mb-3">
+        <div class="me-3 text-info">
+          <i class="bi bi-hourglass-split fs-4"></i>
+        </div>
+        <div>
+          <h5 class="h6 mb-1">Long-Term Perspective</h5>
+          <p class="mb-0">To meet financial goals, aim for a target real return (after inflation) of at least 3-4%. This typically requires a nominal return of 5-7% in normal inflation environments. Regularly review your portfolio to ensure it's positioned to achieve your required real return.</p>
+        </div>
+      </div>
+    `;
 
     insights += '</div>';
 
-// Add action steps
+    // Add action steps
     insights += `
-  <div class="alert alert-primary">
-    <h5><i class="bi bi-check2-square me-2"></i>Action Steps to Combat Inflation</h5>
-    <ol class="mb-0">
-      <li>Increase your savings rate to compensate for inflation's impact on purchasing power</li>
-      <li>Review your asset allocation annually to ensure it's optimized for the current inflation environment</li>
-      <li>Consider increasing exposure to assets with inflation-adjustment features for a portion of your portfolio</li>
-      <li>When evaluating investment returns, always focus on real (inflation-adjusted) returns rather than nominal figures</li>
-    </ol>
-  </div>
-`;
+      <div class="alert alert-primary">
+        <h5><i class="bi bi-check2-square me-2"></i>Action Steps to Combat Inflation</h5>
+        <ol class="mb-0">
+          <li>Increase your savings rate to compensate for inflation's impact on purchasing power</li>
+          <li>Review your asset allocation annually to ensure it's optimized for the current inflation environment</li>
+          <li>Consider increasing exposure to assets with inflation-adjustment features for a portion of your portfolio</li>
+          <li>When evaluating investment returns, always focus on real (inflation-adjusted) returns rather than nominal figures</li>
+        </ol>
+      </div>
+    `;
 
     insightsContainer.innerHTML = insights;
   }
@@ -1320,50 +1326,50 @@
 
   // Calculator Navigation Template
   document.addEventListener('DOMContentLoaded', function () {
-// Create a template div
+    // Create a template div
     const calcNav = document.createElement('div');
     calcNav.className = 'calculator-nav bg-light py-3 border-bottom';
     calcNav.style.display = 'none'; // Hide initially
 
     calcNav.innerHTML = `
-  <div class="container">
-    <h5 class="text-primary mb-2">Explore Our Other Financial Calculators:</h5>
-    <div class="row g-2">
-      <div class="col-md-3 col-sm-6">
-        <a href="index.html" class="btn btn-outline-primary btn-sm w-100">Market Cap Calculator</a>
+      <div class="container">
+        <h5 class="text-primary mb-2">Explore Our Other Financial Calculators:</h5>
+        <div class="row g-2">
+          <div class="col-md-3 col-sm-6">
+            <a href="index.html" class="btn btn-outline-primary btn-sm w-100">Market Cap Calculator</a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="position-sizing.html" class="btn btn-outline-primary btn-sm w-100">Position Sizing Calculator</a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="tax-harvesting.html" class="btn btn-outline-primary btn-sm w-100">Tax-Efficient Harvesting</a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="sector-balance.html" class="btn btn-outline-primary btn-sm w-100">Sector Balance Optimizer</a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="inflation-adjusted-return.html" class="btn btn-outline-primary btn-sm w-100">Inflation-Adjusted Return</a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="drip-breakeven.html" class="btn btn-outline-primary btn-sm w-100">Dividend Reinvestment</a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="valuation-confidence.html" class="btn btn-outline-primary btn-sm w-100">Valuation Confidence</a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="ma-crossover.html" class="btn btn-outline-primary btn-sm w-100">MA Crossover Backtester</a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="buyback-impact.html" class="btn btn-outline-primary btn-sm w-100">Share Buyback Impact</a>
+          </div>
+        </div>
+        <div class="text-end mt-2">
+          <button class="btn btn-sm btn-link text-muted" id="hideCalcNavBtn">Hide</button>
+        </div>
       </div>
-      <div class="col-md-3 col-sm-6">
-        <a href="position-sizing.html" class="btn btn-outline-primary btn-sm w-100">Position Sizing Calculator</a>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <a href="tax-harvesting.html" class="btn btn-outline-primary btn-sm w-100">Tax-Efficient Harvesting</a>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <a href="sector-balance.html" class="btn btn-outline-primary btn-sm w-100">Sector Balance Optimizer</a>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <a href="inflation-adjusted-return.html" class="btn btn-outline-primary btn-sm w-100">Inflation-Adjusted Return</a>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <a href="drip-breakeven.html" class="btn btn-outline-primary btn-sm w-100">Dividend Reinvestment</a>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <a href="valuation-confidence.html" class="btn btn-outline-primary btn-sm w-100">Valuation Confidence</a>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <a href="ma-crossover.html" class="btn btn-outline-primary btn-sm w-100">MA Crossover Backtester</a>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <a href="buyback-impact.html" class="btn btn-outline-primary btn-sm w-100">Share Buyback Impact</a>
-      </div>
-    </div>
-    <div class="text-end mt-2">
-      <button class="btn btn-sm btn-link text-muted" id="hideCalcNavBtn">Hide</button>
-    </div>
-  </div>
-`;
+    `;
 
-// Add toggle button
+    // Add toggle button
     const toggleBtn = document.createElement('button');
     toggleBtn.className = 'btn btn-sm btn-primary position-fixed';
     toggleBtn.id = 'showCalcNavBtn';
@@ -1374,11 +1380,11 @@
     toggleBtn.style.borderRadius = '30px';
     toggleBtn.style.padding = '8px 16px';
 
-// Add to document
+    // Add to document
     document.body.appendChild(calcNav);
     document.body.appendChild(toggleBtn);
 
-// Show/hide functionality
+    // Show/hide functionality
     document.getElementById('showCalcNavBtn').addEventListener('click', function () {
       calcNav.style.display = 'block';
       this.style.display = 'none';
