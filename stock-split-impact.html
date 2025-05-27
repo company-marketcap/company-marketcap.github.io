@@ -5,7 +5,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Stock Split Impact Calculator - Analyze the Effect of Stock Splits on Your Portfolio</title>
   <meta content="ca-pub-5426315045205785" name="google-adsense-account">
-  <meta name="google-adsense-account" content="ca-pub-5426315045205785">
+  <meta content="ca-pub-5426315045205785" name="google-adsense-account">
   <meta content="Calculate the impact of stock splits on your holdings, including shares, price, and options contracts. Get historical post-split performance data with our free tool." name="description">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" rel="stylesheet">
@@ -188,19 +188,19 @@
 <section class="calculator py-5 bg-light" id="calculator">
   <div class="container">
     <br>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785"
-     crossorigin="anonymous"></script>
-<!-- company-marketcap -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-5426315045205785"
-     data-ad-slot="3146818156"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<br>
+    <script async crossorigin="anonymous"
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785"></script>
+    <!-- company-marketcap -->
+    <ins class="adsbygoogle"
+         data-ad-client="ca-pub-5426315045205785"
+         data-ad-format="auto"
+         data-ad-slot="3146818156"
+         data-full-width-responsive="true"
+         style="display:block"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <br>
 
     <div class="text-center mb-5">
       <h2 class="h2 fw-bold">Stock Split Impact Calculator</h2>
@@ -233,29 +233,17 @@
                   <h3 class="h5 mb-3 border-bottom pb-2"><i class="bi bi-graph-up me-2"></i>Stock Information</h3>
 
                   <div class="mb-3">
-                    <label class="form-label" for="tickerSymbol">Stock Ticker Symbol</label>
-                    <div class="input-group">
-                      <span class="input-group-text">$</span>
-                      <input class="form-control" id="tickerSymbol" placeholder="e.g., AAPL" type="text">
-                      <button class="btn btn-outline-secondary" id="lookupBtn" type="button">
-                        <i class="bi bi-search"></i> Lookup
-                      </button>
-                    </div>
-                    <div class="form-text">Enter the ticker symbol of the stock</div>
-                  </div>
-
-                  <div class="mb-3">
                     <label class="form-label" for="currentPrice">Current Price Before Split ($)</label>
                     <div class="input-group">
                       <span class="input-group-text">$</span>
-                      <input class="form-control" id="currentPrice" min="0.01" step="0.01" type="number">
+                      <input class="form-control" id="currentPrice" min="0.01" step="0.01" type="number" placeholder="Enter current price">
                     </div>
                     <div class="form-text">Current market price per share</div>
                   </div>
 
                   <div class="mb-3">
                     <label class="form-label" for="shareCount">Number of Shares You Own</label>
-                    <input class="form-control" id="shareCount" min="1" step="1" type="number">
+                    <input class="form-control" id="shareCount" min="1" step="1" type="number" placeholder="Enter number of shares">
                     <div class="form-text">Number of shares in your portfolio</div>
                   </div>
 
@@ -326,13 +314,7 @@
                 </div>
 
                 <div class="p-3 h-100 border rounded bg-white shadow-sm" id="historicalSection">
-                  <h3 class="h5 mb-3 border-bottom pb-2"><i class="bi bi-clock-history me-2"></i>Historical Split Performance</h3>
-
-                  <div class="mb-3">
-                    <label class="form-label" for="companyName">Company Name</label>
-                    <input class="form-control" id="companyName" placeholder="e.g., Apple Inc." type="text">
-                    <div class="form-text">Full company name (auto-filled if ticker is looked up)</div>
-                  </div>
+                  <h3 class="h5 mb-3 border-bottom pb-2"><i class="bi bi-clock-history me-2"></i>Additional Settings</h3>
 
                   <div class="mb-3">
                     <label class="form-label" for="splitDate">Expected Split Date</label>
@@ -341,19 +323,19 @@
                   </div>
 
                   <div class="form-check form-switch mb-3">
-                    <input class="form-check-input" id="includeHistoricalAnalysis" type="checkbox" checked>
-                    <label class="form-check-label" for="includeHistoricalAnalysis">Include historical post-split performance analysis</label>
+                    <input checked class="form-check-input" id="includeHistoricalAnalysis" type="checkbox">
+                    <label class="form-check-label" for="includeHistoricalAnalysis">Include detailed tax implications analysis</label>
                   </div>
 
                   <div class="mb-3">
-                    <label class="form-label" for="comparisonPeriod">Historical Comparison Period</label>
+                    <label class="form-label" for="comparisonPeriod">Analysis Period</label>
                     <select class="form-select" id="comparisonPeriod">
                       <option value="30">30 Days</option>
-                      <option value="90" selected>90 Days</option>
+                      <option selected value="90">90 Days</option>
                       <option value="180">180 Days</option>
                       <option value="365">1 Year</option>
                     </select>
-                    <div class="form-text">Post-split performance analysis period</div>
+                    <div class="form-text">Analysis period for calculations</div>
                   </div>
                 </div>
               </div>
@@ -498,25 +480,6 @@
               </div>
             </div>
 
-            <!-- Historical Performance Section -->
-            <div id="historicalPerformanceSection" style="display:none;">
-              <div class="card border-0 shadow-sm mb-4">
-                <div class="card-header bg-primary bg-opacity-10">
-                  <h4 class="h5 mb-0 text-primary"><i class="bi bi-graph-up me-2"></i>Historical Post-Split Performance</h4>
-                </div>
-                <div class="card-body">
-                  <div class="split-history-chart-container">
-                    <canvas id="splitHistoryChart"></canvas>
-                  </div>
-
-                  <h5 class="mb-3">Previous Stock Splits</h5>
-                  <div id="previousSplitsContainer">
-                    <!-- Previous splits will be added here dynamically -->
-                  </div>
-                </div>
-              </div>
-            </div>
-
             <!-- Tax Implications Section -->
             <div class="card border-0 shadow-sm mb-4">
               <div class="card-header bg-warning bg-opacity-10">
@@ -530,7 +493,8 @@
                   <li><strong>Holding period preserved:</strong> The holding period for long-term/short-term capital gains remains unchanged.</li>
                 </ul>
                 <div class="alert alert-warning">
-                  <strong>Important:</strong> While stock splits themselves aren't taxable events, any sales of shares after a split may trigger capital gains taxes. Consult with a tax professional for guidance specific to your situation.
+                  <strong>Important:</strong> While stock splits themselves aren't taxable events, any sales of shares after a split may trigger capital gains taxes. Consult with a tax professional for guidance specific
+                  to your situation.
                 </div>
               </div>
             </div>
@@ -541,7 +505,9 @@
               </div>
               <div>
                 <h5 class="mb-1">Analysis Disclosure</h5>
-                <p class="mb-0 text-muted">This analysis is based on the information provided and historical stock split data. The calculator assumes a proportional adjustment in share price and does not account for market reactions to the split announcement. Historical performance is not indicative of future results. This calculator is provided for educational purposes only and should not be construed as investment advice.</p>
+                <p class="mb-0 text-muted">This analysis is based on the information provided and historical stock split data. The calculator assumes a proportional adjustment in share price and does not account for
+                  market reactions to the split announcement. Historical performance is not indicative of future results. This calculator is provided for educational purposes only and should not be construed as
+                  investment advice.</p>
               </div>
             </div>
 
@@ -581,44 +547,44 @@
     <h5 class="text-primary mb-2">Explore Our Other Calculators:</h5>
     <div class="row g-2">
       <div class="col-md-3 col-sm-6">
-        <a href="index.html" class="btn btn-outline-primary btn-sm w-100">Market Cap Calculator</a>
+        <a class="btn btn-outline-primary btn-sm w-100" href="index.html">Market Cap Calculator</a>
       </div>
       <div class="col-md-3 col-sm-6">
-        <a href="position-sizing.html" class="btn btn-outline-primary btn-sm w-100">Position Sizing Calculator</a>
+        <a class="btn btn-outline-primary btn-sm w-100" href="position-sizing.html">Position Sizing Calculator</a>
       </div>
       <div class="col-md-3 col-sm-6">
-        <a href="tax-harvesting.html" class="btn btn-outline-primary btn-sm w-100">Tax-Efficient Harvesting</a>
+        <a class="btn btn-outline-primary btn-sm w-100" href="tax-harvesting.html">Tax-Efficient Harvesting</a>
       </div>
       <div class="col-md-3 col-sm-6">
-        <a href="sector-balance.html" class="btn btn-outline-primary btn-sm w-100">Sector Balance Optimizer</a>
+        <a class="btn btn-outline-primary btn-sm w-100" href="sector-balance.html">Sector Balance Optimizer</a>
       </div>
       <div class="col-md-3 col-sm-6">
-        <a href="stock-split-impact.html" class="btn btn-outline-primary btn-sm w-100">Stock Split Impact</a>
+        <a class="btn btn-outline-primary btn-sm w-100" href="stock-split-impact.html">Stock Split Impact</a>
       </div>
       <div class="col-md-3 col-sm-6">
-        <a href="dividend-reinvestment.html" class="btn btn-outline-primary btn-sm w-100">Dividend Reinvestment</a>
+        <a class="btn btn-outline-primary btn-sm w-100" href="dividend-reinvestment.html">Dividend Reinvestment</a>
       </div>
       <div class="col-md-3 col-sm-6">
-        <a href="stock-valuation-confidence.html" class="btn btn-outline-primary btn-sm w-100">Valuation Confidence</a>
+        <a class="btn btn-outline-primary btn-sm w-100" href="stock-valuation-confidence.html">Valuation Confidence</a>
       </div>
-            <div class="col-md-3 col-sm-6">
-        <a href="inflation-adjusted-calculator.html" class="btn btn-outline-primary btn-sm w-100">Inflation Adjusted Returns</a>
+      <div class="col-md-3 col-sm-6">
+        <a class="btn btn-outline-primary btn-sm w-100" href="inflation-adjusted-calculator.html">Inflation Adjusted Returns</a>
       </div>
     </div>
     <br>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785"
-     crossorigin="anonymous"></script>
-<!-- company-marketcap - body 1 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-5426315045205785"
-     data-ad-slot="3895194553"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<br>
+    <script async crossorigin="anonymous"
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785"></script>
+    <!-- company-marketcap - body 1 -->
+    <ins class="adsbygoogle"
+         data-ad-client="ca-pub-5426315045205785"
+         data-ad-format="auto"
+         data-ad-slot="3895194553"
+         data-full-width-responsive="true"
+         style="display:block"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <br>
 
   </div>
 </div>
@@ -659,7 +625,7 @@
               </div>
               <h3 class="card-title h5 mb-0">Options Contract Adjustments</h3>
             </div>
-<p class="card-text text-muted">Analyze how stock splits affect your options contracts, including adjustments to strike prices, contract quantities, and overall option value.</p>
+            <p class="card-text text-muted">Analyze how stock splits affect your options contracts, including adjustments to strike prices, contract quantities, and overall option value.</p>
             <div class="mt-3">
               <span class="badge bg-success me-2">Free</span>
               <span class="badge bg-light text-dark">Options included</span>
@@ -751,19 +717,19 @@
 <section class="insights py-5 bg-light">
   <div class="container">
     <br>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785"
-     crossorigin="anonymous"></script>
-<!-- company-marketcap - body 2 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-5426315045205785"
-     data-ad-slot="2282789355"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<br>
+    <script async crossorigin="anonymous"
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785"></script>
+    <!-- company-marketcap - body 2 -->
+    <ins class="adsbygoogle"
+         data-ad-client="ca-pub-5426315045205785"
+         data-ad-format="auto"
+         data-ad-slot="2282789355"
+         data-full-width-responsive="true"
+         style="display:block"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <br>
 
     <div class="text-center mb-5">
       <span class="badge bg-secondary mb-2 p-2">EXPERT KNOWLEDGE</span>
@@ -776,7 +742,8 @@
         <div class="card border-0 shadow-sm h-100">
           <div class="card-body p-4">
             <h3 class="h4 text-primary mb-4"><i class="bi bi-info-circle me-2"></i>What Is a Stock Split?</h3>
-            <p>A stock split is a corporate action in which a company divides its existing shares into multiple shares. While the number of shares outstanding increases, the total dollar value of the shares remains the same because the split does not change the company's value.</p>
+            <p>A stock split is a corporate action in which a company divides its existing shares into multiple shares. While the number of shares outstanding increases, the total dollar value of the shares remains the
+              same because the split does not change the company's value.</p>
 
             <div class="table-responsive mt-4">
               <table class="table table-bordered">
@@ -920,8 +887,10 @@
                 </h3>
                 <div class="accordion-collapse collapse show" data-bs-parent="#faqAccordion" id="faq1">
                   <div class="accordion-body">
-                    <p>No, a stock split does not directly increase the value of your investment. When a stock splits, the number of shares increases, but the price per share decreases proportionally, keeping the total value of your investment the same.</p>
-                    <p class="mb-0 text-muted">For example, if you own 10 shares at $100 each ($1,000 total) and the stock undergoes a 2-for-1 split, you'll own 20 shares at $50 each (still $1,000 total). However, some studies suggest that stocks may perform well after splits due to increased accessibility and liquidity.</p>
+                    <p>No, a stock split does not directly increase the value of your investment. When a stock splits, the number of shares increases, but the price per share decreases proportionally, keeping the total
+                      value of your investment the same.</p>
+                    <p class="mb-0 text-muted">For example, if you own 10 shares at $100 each ($1,000 total) and the stock undergoes a 2-for-1 split, you'll own 20 shares at $50 each (still $1,000 total). However, some
+                      studies suggest that stocks may perform well after splits due to increased accessibility and liquidity.</p>
                   </div>
                 </div>
               </div>
@@ -935,8 +904,10 @@
                 <div class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq2">
                   <div class="accordion-body">
                     <p>Stock splits are not taxable events. Your cost basis per share is adjusted proportionally to reflect the split ratio, keeping your total cost basis unchanged.</p>
-                    <p>For example, if you purchased 100 shares at $50 per share (total cost basis of $5,000) and later the stock has a 2-for-1 split, your adjusted cost basis becomes $25 per share for 200 shares (still $5,000 total).</p>
-                    <p class="mb-0 text-muted">This adjustment ensures that when you eventually sell your shares, the capital gains or losses are calculated correctly. The holding period for determining whether gains are short-term or long-term also remains unchanged by the split.</p>
+                    <p>For example, if you purchased 100 shares at $50 per share (total cost basis of $5,000) and later the stock has a 2-for-1 split, your adjusted cost basis becomes $25 per share for 200 shares (still
+                      $5,000 total).</p>
+                    <p class="mb-0 text-muted">This adjustment ensures that when you eventually sell your shares, the capital gains or losses are calculated correctly. The holding period for determining whether gains are
+                      short-term or long-term also remains unchanged by the split.</p>
                   </div>
                 </div>
               </div>
@@ -955,7 +926,8 @@
                       <li><strong>Contract Quantity:</strong> Increased by the split ratio (e.g., in a 2-for-1 split, 1 contract becomes 2 contracts)</li>
                       <li><strong>Contract Multiplier:</strong> Remains the same (typically 100 shares per contract)</li>
                     </ul>
-                    <p class="mb-0 text-muted">The Options Clearing Corporation (OCC) handles these adjustments automatically. The total value and risk exposure of your options position should remain approximately the same before and after the split, though there may be minor differences due to rounding.</p>
+                    <p class="mb-0 text-muted">The Options Clearing Corporation (OCC) handles these adjustments automatically. The total value and risk exposure of your options position should remain approximately the
+                      same before and after the split, though there may be minor differences due to rounding.</p>
                   </div>
                 </div>
               </div>
@@ -970,7 +942,9 @@
                   <div class="accordion-body">
                     <p>A reverse stock split is the opposite of a regular stock split. It reduces the number of outstanding shares and increases the share price proportionally.</p>
                     <p>For example, in a 1-for-10 reverse split, an investor who owned 1,000 shares at $1 each would end up with 100 shares at $10 each. The total value remains $1,000.</p>
-                    <p class="mb-0 text-muted">Companies typically implement reverse splits to increase their stock price when it has fallen too low, often to meet minimum price requirements for continued listing on exchanges or to attract institutional investors who may have restrictions on purchasing low-priced stocks. Unlike regular splits, reverse splits are often viewed less favorably by the market as they may signal financial distress.</p>
+                    <p class="mb-0 text-muted">Companies typically implement reverse splits to increase their stock price when it has fallen too low, often to meet minimum price requirements for continued listing on
+                      exchanges or to attract institutional investors who may have restrictions on purchasing low-priced stocks. Unlike regular splits, reverse splits are often viewed less favorably by the market as they
+                      may signal financial distress.</p>
                   </div>
                 </div>
               </div>
@@ -990,7 +964,8 @@
                       <li>Any options contracts you hold will be adjusted automatically</li>
                       <li>Your cost basis per share will be recalculated in your brokerage records</li>
                     </ul>
-                    <p class="mb-0 text-muted">While no action is required, it's a good practice to verify that your holdings have been correctly adjusted after the split takes effect, particularly for any standing orders like limit orders which may need to be manually updated to reflect the new price levels.</p>
+                    <p class="mb-0 text-muted">While no action is required, it's a good practice to verify that your holdings have been correctly adjusted after the split takes effect, particularly for any standing
+                      orders like limit orders which may need to be manually updated to reflect the new price levels.</p>
                   </div>
                 </div>
               </div>
@@ -1004,14 +979,16 @@
                 <div class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq6">
                   <div class="accordion-body">
                     <p>Our calculator accounts for fractional shares that may result from certain split ratios:</p>
-                    <p>When a split ratio doesn't divide evenly into your share count, the calculator will show the exact fractional result. For example, if you own 10 shares and there's a 3-for-2 split, you'd end up with 15 shares.</p>
+                    <p>When a split ratio doesn't divide evenly into your share count, the calculator will show the exact fractional result. For example, if you own 10 shares and there's a 3-for-2 split, you'd end up
+                      with 15 shares.</p>
                     <p>However, it's important to note that the handling of fractional shares in actual stock splits varies by brokerage:</p>
                     <ul>
                       <li><strong>Modern brokerages:</strong> Many now support fractional shares and will simply credit your account with the exact fractional amount</li>
                       <li><strong>Traditional brokerages:</strong> May round down to the nearest whole share and pay cash-in-lieu for the fractional portion</li>
                       <li><strong>Direct stock purchase plans:</strong> Often keep track of fractional shares to multiple decimal places</li>
                     </ul>
-                    <p class="mb-0 text-muted">The calculator assumes your brokerage supports fractional shares, but you should check with your specific broker about their policy for handling fractional shares resulting from stock splits.</p>
+                    <p class="mb-0 text-muted">The calculator assumes your brokerage supports fractional shares, but you should check with your specific broker about their policy for handling fractional shares resulting
+                      from stock splits.</p>
                   </div>
                 </div>
               </div>
@@ -1026,19 +1003,19 @@
       </div>
     </div>
     <br>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785"
-     crossorigin="anonymous"></script>
-<!-- company-marketcap - after content -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-5426315045205785"
-     data-ad-slot="1141135755"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<br>
+    <script async crossorigin="anonymous"
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785"></script>
+    <!-- company-marketcap - after content -->
+    <ins class="adsbygoogle"
+         data-ad-client="ca-pub-5426315045205785"
+         data-ad-format="auto"
+         data-ad-slot="1141135755"
+         data-full-width-responsive="true"
+         style="display:block"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <br>
   </div>
 </section>
 
@@ -1050,7 +1027,7 @@
 <script src="js/include.js"></script>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () {
     // Initialize components
     initStockSplitCalculator();
     setupToggleOptions();
@@ -1060,7 +1037,7 @@
   // Initialize the stock split calculator
   function initStockSplitCalculator() {
     // Options toggle switch
-    document.getElementById('hasOptionsSwitch').addEventListener('change', function() {
+    document.getElementById('hasOptionsSwitch').addEventListener('change', function () {
       const optionsSection = document.getElementById('optionsSection');
       const historicalSection = document.getElementById('historicalSection');
 
@@ -1070,16 +1047,6 @@
       } else {
         optionsSection.style.display = 'none';
         historicalSection.style.display = 'block';
-      }
-    });
-
-    // Lookup button
-    document.getElementById('lookupBtn').addEventListener('click', function() {
-      const ticker = document.getElementById('tickerSymbol').value.trim().toUpperCase();
-      if (ticker) {
-        lookupStockInfo(ticker);
-      } else {
-        alert('Please enter a ticker symbol.');
       }
     });
 
@@ -1110,7 +1077,7 @@
     const optionsSection = document.getElementById('optionsSection');
     const historicalSection = document.getElementById('historicalSection');
 
-    hasOptionsSwitch.addEventListener('change', function() {
+    hasOptionsSwitch.addEventListener('change', function () {
       if (this.checked) {
         optionsSection.style.display = 'block';
         historicalSection.style.display = 'none';
@@ -1127,7 +1094,7 @@
     const popup = document.getElementById('sharePopup');
 
     if (shareBtn && popup) {
-      shareBtn.addEventListener('click', function() {
+      shareBtn.addEventListener('click', function () {
         popup.style.display = popup.style.display === 'none' ? 'block' : 'none';
 
         // Hide popup when clicking outside
@@ -1141,46 +1108,9 @@
     }
   }
 
-  // Lookup stock information
-  function lookupStockInfo(ticker) {
-    // In a real implementation, this would fetch data from an API
-    // For demonstration, we'll use sample data for common tickers
-
-    const stockData = {
-      'AAPL': { name: 'Apple Inc.', price: 174.79 },
-      'MSFT': { name: 'Microsoft Corporation', price: 328.66 },
-      'AMZN': { name: 'Amazon.com, Inc.', price: 127.74 },
-      'GOOGL': { name: 'Alphabet Inc.', price: 139.10 },
-      'META': { name: 'Meta Platforms, Inc.', price: 317.53 },
-      'TSLA': { name: 'Tesla, Inc.', price: 212.19 },
-      'NVDA': { name: 'NVIDIA Corporation', price: 454.69 },
-      'JPM': { name: 'JPMorgan Chase & Co.', price: 147.35 },
-      'V': { name: 'Visa Inc.', price: 244.32 },
-      'JNJ': { name: 'Johnson & Johnson', price: 162.43 }
-    };
-
-    if (stockData[ticker]) {
-      // Fill in the data
-      document.getElementById('companyName').value = stockData[ticker].name;
-      document.getElementById('currentPrice').value = stockData[ticker].price.toFixed(2);
-
-      // Set default split date to 30 days from now
-      const futureDate = new Date();
-      futureDate.setDate(futureDate.getDate() + 30);
-      document.getElementById('splitDate').valueAsDate = futureDate;
-
-      // Show message
-      alert(`Stock data for ${ticker} loaded successfully.`);
-    } else {
-      alert(`Stock data for ${ticker} not found. Please enter the price manually.`);
-    }
-  }
-
   // Calculate the impact of the stock split
   function calculateSplitImpact() {
     // Get input values
-    const ticker = document.getElementById('tickerSymbol').value.trim().toUpperCase();
-    const companyName = document.getElementById('companyName').value;
     const currentPrice = parseFloat(document.getElementById('currentPrice').value);
     const shareCount = parseFloat(document.getElementById('shareCount').value);
     const splitRatioNew = parseInt(document.getElementById('splitRatioNew').value);
@@ -1188,7 +1118,7 @@
     const hasOptions = document.getElementById('hasOptionsSwitch').checked;
 
     // Validate essential inputs
-    if (!ticker || !currentPrice || !shareCount || !splitRatioNew || !splitRatioOld) {
+    if (!currentPrice || !shareCount || !splitRatioNew || !splitRatioOld) {
       alert('Please fill in all required fields.');
       return;
     }
@@ -1254,22 +1184,16 @@
       document.getElementById('optionValueChange').textContent = formatCurrency(postSplitOptionValue - preSplitOptionValue);
 
       // Update split summary
-      document.getElementById('splitSummary').textContent = `${companyName || ticker} ${splitRatioNew}:${splitRatioOld} Split Impact (with Options)`;
+      document.getElementById('splitSummary').textContent = `${splitRatioNew}:${splitRatioOld} Split Impact (with Options)`;
       document.getElementById('splitDescription').textContent = `After the ${splitRatioNew}-for-${splitRatioOld} split, your ${shareCount} shares will become ${formatNumber(postSplitShares)}, and the price will adjust from ${formatCurrency(currentPrice)} to approximately ${formatCurrency(postSplitPrice)} per share. Your ${optionType} options will be adjusted from ${contractCount} contract(s) at a strike of ${formatCurrency(strikePrice)} to ${formatNumber(postSplitContracts)} contract(s) at a strike of ${formatCurrency(postSplitStrike)}.`;
     } else {
       // Hide options sections
       document.getElementById('preOptionsDetails').style.display = 'none';
       document.getElementById('postOptionsDetails').style.display = 'none';
-// Update split summary without options
-      document.getElementById('splitSummary').textContent = `${companyName || ticker} ${splitRatioNew}:${splitRatioOld} Split Impact`;
-      document.getElementById('splitDescription').textContent = `After the ${splitRatioNew}-for-${splitRatioOld} split, your ${shareCount} shares will become ${formatNumber(postSplitShares)}, and the price will adjust from ${formatCurrency(currentPrice)} to approximately ${formatCurrency(postSplitPrice)} per share. The total value of your position remains approximately ${formatCurrency(postSplitValue)}.`;
 
-      // Handle historical analysis if requested
-      if (document.getElementById('includeHistoricalAnalysis').checked) {
-        createHistoricalAnalysis(ticker, splitRatioNew, splitRatioOld);
-      } else {
-        document.getElementById('historicalPerformanceSection').style.display = 'none';
-      }
+      // Update split summary without options
+      document.getElementById('splitSummary').textContent = `${splitRatioNew}:${splitRatioOld} Split Impact`;
+      document.getElementById('splitDescription').textContent = `After the ${splitRatioNew}-for-${splitRatioOld} split, your ${shareCount} shares will become ${formatNumber(postSplitShares)}, and the price will adjust from ${formatCurrency(currentPrice)} to approximately ${formatCurrency(postSplitPrice)} per share. The total value of your position remains approximately ${formatCurrency(postSplitValue)}.`;
     }
 
     // Show results
@@ -1284,238 +1208,6 @@
     }, 300);
   }
 
-  // Create historical analysis section
-  function createHistoricalAnalysis(ticker, splitRatioNew, splitRatioOld) {
-    // Show the section
-    document.getElementById('historicalPerformanceSection').style.display = 'block';
-
-    // Get selected comparison period
-    const period = parseInt(document.getElementById('comparisonPeriod').value);
-
-    // In a real implementation, this would fetch historical data from an API
-    // For demonstration, we'll use sample data
-
-    // Sample historical splits for common tickers
-    const historicalSplits = {
-      'AAPL': [
-        { date: '2020-08-31', ratio: '4:1', preSplitPrice: 499.23, performanceData: [3.7, 12.5, -8.3, 32.1] },
-        { date: '2014-06-09', ratio: '7:1', preSplitPrice: 645.57, performanceData: [1.2, 8.7, 15.3, 38.2] },
-        { date: '2005-02-28', ratio: '2:1', preSplitPrice: 88.99, performanceData: [5.8, 18.2, 37.1, 65.3] },
-        { date: '2000-06-21', ratio: '2:1', preSplitPrice: 101.25, performanceData: [-15.3, -32.7, -28.5, -65.8] }
-      ],
-      'MSFT': [
-        { date: '1999-03-29', ratio: '2:1', preSplitPrice: 178.67, performanceData: [4.7, -12.5, -18.3, 12.1] },
-        { date: '1998-02-23', ratio: '2:1', preSplitPrice: 84.50, performanceData: [7.2, 38.7, 45.3, 118.2] },
-        { date: '1996-12-09', ratio: '2:1', preSplitPrice: 82.56, performanceData: [15.8, 28.2, 57.1, 95.3] }
-      ],
-      'AMZN': [
-        { date: '1999-09-02', ratio: '2:1', preSplitPrice: 85.06, performanceData: [-5.3, -22.7, -38.5, -85.8] },
-        { date: '1999-01-05', ratio: '3:1', preSplitPrice: 354.97, performanceData: [4.7, 25.2, 37.1, 5.3] },
-        { date: '1998-06-02', ratio: '2:1', preSplitPrice: 85.68, performanceData: [30.8, 98.2, 157.1, 195.3] }
-      ],
-      'TSLA': [
-        { date: '2022-08-25', ratio: '3:1', preSplitPrice: 891.29, performanceData: [-15.3, -25.7, -18.5, -36.8] },
-        { date: '2020-08-31', ratio: '5:1', preSplitPrice: 2213.40, performanceData: [24.7, 42.5, 103.1, 350.3] }
-      ],
-      'NVDA': [
-        { date: '2021-07-20', ratio: '4:1', preSplitPrice: 751.19, performanceData: [12.3, 28.7, 32.5, -15.8] },
-        { date: '2007-09-11', ratio: '3:2', preSplitPrice: 39.42, performanceData: [8.7, -25.5, -43.1, -70.3] },
-        { date: '2006-04-07', ratio: '2:1', preSplitPrice: 33.73, performanceData: [-10.8, -18.2, 27.1, 95.3] }
-      ]
-    };
-
-    // Default data for tickers not in our sample database
-    const defaultPerformanceData = [5.2, 8.7, 12.3, 18.5]; // 30, 90, 180, 365 days
-
-    // Get data for this ticker or use default
-    let tickerData = historicalSplits[ticker] || [
-      {
-        date: '2020-01-01',
-        ratio: `${splitRatioNew}:${splitRatioOld}`,
-        preSplitPrice: 100.00,
-        performanceData: defaultPerformanceData
-      }
-    ];
-
-    // Create chart with historical performance data
-    createPerformanceChart(tickerData, period);
-
-    // Populate previous splits container
-    const previousSplitsContainer = document.getElementById('previousSplitsContainer');
-    previousSplitsContainer.innerHTML = '';
-
-    if (tickerData.length === 0) {
-      previousSplitsContainer.innerHTML = `
-        <div class="alert alert-info">
-          <i class="bi bi-info-circle me-2"></i>
-          No historical splits found for ${ticker}.
-        </div>
-      `;
-      return;
-    }
-
-    tickerData.forEach(split => {
-      const splitItem = document.createElement('div');
-      splitItem.className = 'historical-split-item';
-
-      // Calculate post-split performance
-      const periodIndex = period === 30 ? 0 : period === 90 ? 1 : period === 180 ? 2 : 3;
-      const performance = split.performanceData[periodIndex];
-      const performanceClass = performance >= 0 ? 'text-success' : 'text-danger';
-      const performanceSign = performance >= 0 ? '+' : '';
-
-      // Split ratio parts
-      const ratioParts = split.ratio.split(':');
-      const ratioNew = ratioParts[0];
-      const ratioOld = ratioParts[1];
-
-      // Calculate post-split price
-      const splitRatio = parseInt(ratioNew) / parseInt(ratioOld);
-      const postSplitPrice = split.preSplitPrice / splitRatio;
-
-      splitItem.innerHTML = `
-        <div class="d-flex justify-content-between align-items-center">
-          <div>
-            <strong>${split.date}</strong>
-            <span class="badge bg-primary ms-2">${split.ratio} Split</span>
-          </div>
-          <div class="text-muted small">
-            ${period}-day performance:
-            <span class="${performanceClass} fw-bold">${performanceSign}${performance.toFixed(1)}%</span>
-          </div>
-        </div>
-        <div class="mt-2 small text-muted">
-          Pre-split price: <strong>${formatCurrency(split.preSplitPrice)}</strong> →
-          Post-split price: <strong>${formatCurrency(postSplitPrice)}</strong>
-        </div>
-      `;
-
-      previousSplitsContainer.appendChild(splitItem);
-    });
-  }
-
-  // Create performance chart
-  function createPerformanceChart(historicalData, period) {
-    const ctx = document.getElementById('splitHistoryChart').getContext('2d');
-
-    // Destroy existing chart if it exists
-  if (window.splitHistoryChart && typeof window.splitHistoryChart.destroy === 'function') {
-    window.splitHistoryChart.destroy();
-  }
-
-
-    // Get performance data for the selected period
-    const periodIndex = period === 30 ? 0 : period === 90 ? 1 : period === 180 ? 2 : 3;
-    const periodLabel = period === 30 ? '30 Days' : period === 90 ? '90 Days' : period === 180 ? '180 Days' : '1 Year';
-
-    // Extract performance data and dates
-    const performances = historicalData.map(split => split.performanceData[periodIndex]);
-    const dates = historicalData.map(split => split.date);
-    const ratios = historicalData.map(split => split.ratio);
-
-    // Calculate average performance
-    const avgPerformance = performances.reduce((sum, val) => sum + val, 0) / performances.length;
-
-    // Create datasets
-    const splitData = performances.map((perf, index) => ({
-      x: index,
-      y: perf,
-      ratio: ratios[index],
-      date: dates[index]
-    }));
-
-    // Calculate S&P 500 average performance after splits (simulated data)
-    const spAvgPerformance = avgPerformance * 0.8; // Simulated: 80% of the stock's performance
-
-    // Create the chart
-    window.splitHistoryChart = new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: dates,
-        datasets: [
-          {
-            label: `Post-Split ${periodLabel} Performance (%)`,
-            data: splitData,
-            backgroundColor: performances.map(perf => perf >= 0 ? 'rgba(40, 167, 69, 0.7)' : 'rgba(220, 53, 69, 0.7)'),
-            borderColor: performances.map(perf => perf >= 0 ? 'rgba(40, 167, 69, 1)' : 'rgba(220, 53, 69, 1)'),
-            borderWidth: 1
-          }
-        ]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        scales: {
-          y: {
-            beginAtZero: false,
-            ticks: {
-              callback: function(value) {
-                return value + '%';
-              }
-            },
-            title: {
-              display: true,
-              text: 'Performance (%)'
-            }
-          },
-          x: {
-            title: {
-              display: true,
-              text: 'Split Date'
-            }
-          }
-        },
-        plugins: {
-          tooltip: {
-            callbacks: {
-              label: function(context) {
-                const splitData = context.raw;
-                return [
-                  `${splitData.ratio} Split on ${splitData.date}`,
-                  `${periodLabel} Performance: ${splitData.y.toFixed(1)}%`
-                ];
-              }
-            }
-          },
-          legend: {
-            display: true,
-            position: 'top'
-          },
-          annotation: {
-            annotations: {
-              line1: {
-                type: 'line',
-                yMin: avgPerformance,
-                yMax: avgPerformance,
-                borderColor: 'rgba(13, 110, 253, 0.7)',
-                borderWidth: 2,
-                borderDash: [5, 5],
-                label: {
-                  display: true,
-                  content: `Stock Avg: ${avgPerformance.toFixed(1)}%`,
-                  position: 'end'
-                }
-              },
-              line2: {
-                type: 'line',
-                yMin: spAvgPerformance,
-                yMax: spAvgPerformance,
-                borderColor: 'rgba(108, 117, 125, 0.7)',
-                borderWidth: 2,
-                borderDash: [2, 2],
-                label: {
-                  display: true,
-                  content: `S&P 500 Avg: ${spAvgPerformance.toFixed(1)}%`,
-                  position: 'start'
-                }
-              }
-            }
-          }
-        }
-      }
-    });
-  }
-
   // Format currency values
   function formatCurrency(value) {
     return '$' + value.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
@@ -1526,5 +1218,7 @@
     return value.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   }
 </script>
+</body>
+</html>
 </body>
 </html>
