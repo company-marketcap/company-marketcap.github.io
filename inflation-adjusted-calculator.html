@@ -992,6 +992,14 @@
 
     // Show results card
     document.getElementById('resultsCard').style.display = 'block';
+
+    // Scroll to results after calculation (add this)
+setTimeout(() => {
+  document.getElementById('resultsCard').scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
+}, 300);
   }
 
   function calculateYearlyData(initialInvestment, annualContribution, nominalRate, inflationRate, years, compoundingFrequency) {
