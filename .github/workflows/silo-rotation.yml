@@ -1,0 +1,46 @@
+name: Monthly Silo Link Rotation
+
+on:
+  schedule:
+    - cron: '0 16 1-3 * *'  # midnight SGT (UTC+8) on the 1st, 2nd, and 3rd of each month
+  workflow_dispatch:
+    inputs:
+      date:
+        description: 'Override month to rotate (YYYY-MM). Leave empty to use today.'
+        required: false
+        default: ''
+
+jobs:
+  rotate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Run silo rotation
+        run: |
+          DATE_ARG=""
+          if [ -n "${{ github.event.inputs.date }}" ]; then
+            DATE_ARG="--date=${{ github.event.inputs.date }}"
+          fi
+          python3 utilities/silo_linking/generate_silo_rotation.py $DATE_ARG
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          LABEL="${{ github.event.inputs.date }}"
+          if [ -z "$LABEL" ]; then LABEL="$(date +%Y-%m)"; fi
+          if git diff --quiet; then
+            echo "No changes — already up to date."
+          else
+            git add *.html
+            git commit -m "chore: rotate silo links $LABEL"
+            git push
+          fi
