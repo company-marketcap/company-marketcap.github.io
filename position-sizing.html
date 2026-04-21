@@ -2,18 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Position Sizing Calculator - Risk-Based Stock Position Management</title>
-  <meta content="ca-pub-5426315045205785" name="google-adsense-account">
+  <meta name="description" content="Calculate optimal stock position sizes based on your risk tolerance, account size, and stop-loss strategy. Manage portfolio risk effectively.">
   <meta name="google-adsense-account" content="ca-pub-5426315045205785">
-  <meta content="Calculate optimal stock position sizes based on your risk tolerance, account size, and stop-loss strategy. Manage portfolio risk effectively." name="description">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet">
-  <link href="css/position-sizing.css" rel="stylesheet">
+  <link rel="canonical" href="https://company-marketcap.github.io/position-sizing.html">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/position-sizing.css">
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1;
+      t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0];
+      y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "qxscsfgx1j");
+  </script>
 </head>
 <body>
-<div id="header"></div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="/">MarketCapInsights</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" id="calculatorsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Calculators</a>
+          <ul class="dropdown-menu" aria-labelledby="calculatorsDropdown">
+            <li><a class="dropdown-item" href="index.html">Market Cap Calculator</a></li>
+            <li><a class="dropdown-item active" href="position-sizing.html">Position Sizing Calculator</a></li>
+            <li><a class="dropdown-item" href="tax-harvesting.html">Tax-Efficient Harvesting</a></li>
+            <li><a class="dropdown-item" href="sector-balance.html">Sector Balance Optimizer</a></li>
+            <li><a class="dropdown-item" href="stock-split-impact.html">Stock Split Impact</a></li>
+            <li><a class="dropdown-item" href="dividend-reinvestment.html">Dividend Reinvestment</a></li>
+            <li><a class="dropdown-item" href="stock-valuation-confidence.html">Valuation Confidence</a></li>
+            <li><a class="dropdown-item" href="inflation-adjusted-calculator.html">Inflation Adjusted Returns</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="privacy-policy.html">Privacy Policy</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="terms.html">Terms</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <!-- Hero Section -->
 <header class="hero-section py-5">
@@ -589,26 +637,6 @@
 
               <div class="accordion-item">
                 <h3 class="accordion-header">
-<button class="accordion-button collapsed" data-bs-target="#faq3" data-bs-toggle="collapse" type="button">
-                    <i class="bi bi-question-circle text-primary me-2"></i> What is the "R-Multiple" shown in the calculator results?
-                  </button>
-                </h3>
-                <div class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq3">
-                  <div class="accordion-body">
-                    <p>The R-Multiple is a concept popularized by trading psychologist Dr. Van Tharp. "R" represents your risk on a trade - the amount you're willing to lose if your stop-loss is hit.</p>
-                    <p>This creates a standardized unit of risk which allows you to:</p>
-                    <ul>
-                      <li>Measure all trades in terms of risk (e.g., "This trade made 3R" means it profited 3 times the initial risk)</li>
-                      <li>Compare the performance of different trading strategies</li>
-                      <li>Think about risk-reward ratios more clearly</li>
-                    </ul>
-                    <p class="mb-0 text-muted">Our calculator shows your R value in dollar terms, which represents the amount you're risking on the trade. A trade that profits $3,000 with an R value of $1,000 would be considered a "3R winner."</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h3 class="accordion-header">
                   <button class="accordion-button collapsed" data-bs-target="#faq4" data-bs-toggle="collapse" type="button">
                     <i class="bi bi-question-circle text-primary me-2"></i> Why might the calculator recommend fewer shares than I want to buy?
                   </button>
@@ -678,12 +706,62 @@
 </section>
 
 
-<div id="footer"></div>
+<footer class="footer py-5 bg-dark text-white">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-4 col-md-6">
+        <h3 class="h5 mb-3 text-white">MarketCapInsights</h3>
+        <p class="mb-4">Providing professional-grade market capitalization analysis tools and calculators completely free for all investors.</p>
+        <div class="d-flex align-items-center">
+          <span class="badge bg-primary p-2 me-2">100% FREE</span>
+          <span class="badge bg-secondary p-2">Trusted by 50,000+ investors</span>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-6">
+        <h3 class="h5 mb-3 text-white">Quick Links</h3>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a class="text-white text-decoration-none" href="/"><i class="bi bi-chevron-right small me-1"></i>Home</a></li>
+          <li class="mb-2"><a class="text-white text-decoration-none" href="index.html#calculator"><i class="bi bi-chevron-right small me-1"></i>Calculator</a></li>
+          <li class="mb-2"><a class="text-white text-decoration-none" href="about.html"><i class="bi bi-chevron-right small me-1"></i>About Us</a></li>
+          <li class="mb-2"><a class="text-white text-decoration-none" href="contact.html"><i class="bi bi-chevron-right small me-1"></i>Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-6">
+        <h3 class="h5 mb-3 text-white">Legal</h3>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a class="text-white text-decoration-none" href="privacy-policy.html"><i class="bi bi-shield-check small me-1"></i>Privacy Policy</a></li>
+          <li class="mb-2"><a class="text-white text-decoration-none" href="terms.html"><i class="bi bi-file-earmark-text small me-1"></i>Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <h3 class="h5 mb-3 text-white">Stay Updated</h3>
+        <p class="mb-3">Subscribe to our newsletter for market insights and calculator updates.</p>
+        <div class="input-group mb-3">
+          <input type="email" class="form-control" placeholder="Your email address" aria-label="Email">
+          <button class="btn btn-primary" type="button">Subscribe</button>
+        </div>
+        <p class="small text-muted mb-0">We respect your privacy and will never share your email.</p>
+      </div>
+    </div>
+    <hr class="my-4 bg-secondary opacity-25">
+    <div class="row align-items-center">
+      <div class="col-md-6 small">
+        <p class="mb-md-0">&copy; 2026 MarketCapInsights. All rights reserved.</p>
+      </div>
+      <div class="col-md-6 text-md-end small">
+        <p class="mb-0">
+          <a class="text-white me-3 text-decoration-none" href="privacy-policy.html">Privacy Policy</a>
+          <a class="text-white me-3 text-decoration-none" href="terms.html">Terms</a>
+          <a class="text-white text-decoration-none" href="contact.html">Contact</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
 
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="js/position-sizing.js"></script>
-<script src="js/include.js"></script>
 </body>
 </html>
