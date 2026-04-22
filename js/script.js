@@ -31,9 +31,10 @@ function initCalculator() {
     if (calculateBtn) {
         calculateBtn.addEventListener('click', performCalculation);
     }
+    performCalculation(true);
 }
 
-function performCalculation() {
+function performCalculation(suppressScroll = false) {
     // Get all input values
     const initialMarketCap = parseFloat(document.getElementById('initialMarketCap').value) || 1000000000;
     const annualGrowthRate = parseFloat(document.getElementById('annualGrowthRate').value) || 15;
@@ -91,12 +92,14 @@ function performCalculation() {
     document.getElementById('resultsCard').classList.add('fade-in');
 
     // Scroll to results
-    setTimeout(() => {
-        document.getElementById('resultsCard').scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
-    }, 300);
+    if (!suppressScroll) {
+        setTimeout(() => {
+            document.getElementById('resultsCard').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }, 300);
+    }
 }
 
 // Calculate projected market cap based on initial value and growth rate

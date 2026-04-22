@@ -233,7 +233,7 @@
 
                   <div class="mb-3">
                     <label class="form-label" for="investmentName">Investment Name/Description</label>
-                    <input class="form-control" id="investmentName" placeholder="e.g., XYZ Stock or ETF" type="text">
+                    <input class="form-control" id="investmentName" placeholder="e.g., XYZ Stock or ETF" type="text" value="XYZ Corp">
                     <div class="form-text">Name or description of the investment</div>
                   </div>
 
@@ -241,7 +241,7 @@
                     <label class="form-label" for="purchasePrice">Original Purchase Price ($)</label>
                     <div class="input-group">
                       <span class="input-group-text">$</span>
-                      <input class="form-control" id="purchasePrice" min="0.01" step="0.01" type="number">
+                      <input class="form-control" id="purchasePrice" min="0.01" step="0.01" type="number" value="10000">
                     </div>
                     <div class="form-text">Total cost basis of the investment</div>
                   </div>
@@ -250,7 +250,7 @@
                     <label class="form-label" for="currentValue">Current Market Value ($)</label>
                     <div class="input-group">
                       <span class="input-group-text">$</span>
-                      <input class="form-control" id="currentValue" min="0" step="0.01" type="number">
+                      <input class="form-control" id="currentValue" min="0" step="0.01" type="number" value="7500">
                     </div>
                     <div class="form-text">Current value of the investment</div>
                   </div>
@@ -457,7 +457,7 @@
     <!-- Results Section -->
     <div class="row justify-content-center mt-4">
       <div class="col-lg-10">
-        <div class="card shadow border-0" id="resultsCard" style="display:none;">
+        <div class="card shadow border-0" id="resultsCard">
           <div class="card-header bg-success text-white py-3">
             <div class="d-flex justify-content-between align-items-center">
               <h3 class="h4 mb-0"><i class="bi bi-check-circle me-2"></i>Tax Harvesting Analysis Results</h3>
@@ -474,8 +474,8 @@
                     <i class="bi bi-info-circle-fill fs-4"></i>
                   </div>
                   <div>
-                    <h5 class="mb-1" id="harvestSummary">Tax-Loss Harvesting Summary</h5>
-                    <p class="mb-0" id="harvestDescription">The summary will appear here after calculation.</p>
+                    <h5 class="mb-1" id="harvestSummary">XYZ Corp — Long-Term Loss Harvest</h5>
+                    <p class="mb-0" id="harvestDescription">Harvesting a $2,500.00 long-term loss from XYZ Corp generates an estimated $675.00 in total tax savings at a 22% federal rate and 5% state rate.</p>
                   </div>
                 </div>
               </div>
@@ -490,23 +490,23 @@
                   <div class="card-body">
                     <div class="row mb-3">
                       <div class="col-6 text-muted">Cost Basis:</div>
-                      <div class="col-6 text-end fw-bold" id="costBasisDisplay">$0.00</div>
+                      <div class="col-6 text-end fw-bold" id="costBasisDisplay">$10,000.00</div>
                     </div>
                     <div class="row mb-3">
                       <div class="col-6 text-muted">Current Value:</div>
-                      <div class="col-6 text-end fw-bold" id="currentValueDisplay">$0.00</div>
+                      <div class="col-6 text-end fw-bold" id="currentValueDisplay">$7,500.00</div>
                     </div>
                     <div class="row mb-3">
                       <div class="col-6 text-muted">Realized Loss:</div>
-                      <div class="col-6 text-end fw-bold" id="realizedLossDisplay">$0.00</div>
+                      <div class="col-6 text-end fw-bold" id="realizedLossDisplay">$2,500.00</div>
                     </div>
                     <div class="row mb-3">
                       <div class="col-6 text-muted">Loss Type:</div>
-                      <div class="col-6 text-end fw-bold" id="lossTypeDisplay">-</div>
+                      <div class="col-6 text-end fw-bold" id="lossTypeDisplay">Long-Term</div>
                     </div>
                     <div class="row mb-3">
                       <div class="col-6 text-muted">Holding Period:</div>
-                      <div class="col-6 text-end fw-bold" id="holdingPeriodDisplay">0 days</div>
+                      <div class="col-6 text-end fw-bold" id="holdingPeriodDisplay">365 days</div>
                     </div>
                   </div>
                 </div>
@@ -528,13 +528,13 @@
                     <div class="row mb-3">
                       <div class="col-6 text-muted">Federal Tax Savings:</div>
                       <div class="col-6 text-end">
-                        <span class="fw-bold" id="federalSavingsDisplay">$0.00</span>
+                        <span class="fw-bold" id="federalSavingsDisplay">$550.00</span>
                       </div>
                     </div>
                     <div class="row mb-3">
                       <div class="col-6 text-muted">State Tax Savings:</div>
                       <div class="col-6 text-end">
-                        <span class="fw-bold" id="stateSavingsDisplay">$0.00</span>
+                        <span class="fw-bold" id="stateSavingsDisplay">$125.00</span>
                       </div>
                     </div>
                     <div class="row mb-3">
@@ -547,14 +547,14 @@
                     <div class="row mb-3">
                       <div class="col-6 text-muted">Total Tax Savings:</div>
                       <div class="col-6 text-end">
-                        <span class="fw-bold text-success" id="totalSavingsDisplay">$0.00</span>
+                        <span class="fw-bold text-success" id="totalSavingsDisplay">$675.00</span>
                       </div>
                     </div>
                     <div class="row mb-3">
                       <div class="col-6 text-muted">Net Benefit:</div>
                       <div class="col-6 text-end">
-                        <span class="fw-bold" id="netBenefitDisplay">$0.00</span>
-                        <span class="diff-indicator bg-success bg-opacity-10 text-success" id="savingsRateDisplay">0%</span>
+                        <span class="fw-bold" id="netBenefitDisplay">$675.00</span>
+                        <span class="diff-indicator bg-success bg-opacity-10 text-success" id="savingsRateDisplay">27.0%</span>
                       </div>
                     </div>
                   </div>
@@ -1144,7 +1144,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
 // Calculate tax savings from harvesting losses
-function calculateTaxSavings() {
+function calculateTaxSavings(suppressScroll = false) {
   // Get input values
   const investmentName = document.getElementById('investmentName').value.trim();
   const purchasePrice = parseFloat(document.getElementById('purchasePrice').value) || 0;
@@ -1262,12 +1262,14 @@ function calculateTaxSavings() {
   document.getElementById('resultsCard').style.display = 'block';
 
   // Scroll to results
-  setTimeout(() => {
-    document.getElementById('resultsCard').scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
-  }, 300);
+  if (!suppressScroll) {
+    setTimeout(() => {
+      document.getElementById('resultsCard').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }, 300);
+  }
 }
 
 // Allocate loss to different types of gains and income for optimal tax savings
@@ -1674,6 +1676,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Set default date values
   document.getElementById('purchaseDate').valueAsDate = new Date(new Date().setFullYear(new Date().getFullYear() - 1));
+
+  // Auto-calculate with defaults
+  calculateTaxSavings(true);
 });
 
   </script>

@@ -234,14 +234,14 @@
                     <label class="form-label" for="currentPrice">Current Price Before Split ($)</label>
                     <div class="input-group">
                       <span class="input-group-text">$</span>
-                      <input class="form-control" id="currentPrice" min="0.01" step="0.01" type="number" placeholder="Enter current price">
+                      <input class="form-control" id="currentPrice" min="0.01" step="0.01" type="number" placeholder="Enter current price" value="150.00">
                     </div>
                     <div class="form-text">Current market price per share</div>
                   </div>
 
                   <div class="mb-3">
                     <label class="form-label" for="shareCount">Number of Shares You Own</label>
-                    <input class="form-control" id="shareCount" min="1" step="1" type="number" placeholder="Enter number of shares">
+                    <input class="form-control" id="shareCount" min="1" step="1" type="number" placeholder="Enter number of shares" value="100">
                     <div class="form-text">Number of shares in your portfolio</div>
                   </div>
 
@@ -353,7 +353,7 @@
     <!-- Results Section -->
     <div class="row justify-content-center mt-4">
       <div class="col-lg-10">
-        <div class="card shadow border-0" id="resultsCard" style="display:none;">
+        <div class="card shadow border-0" id="resultsCard">
           <div class="card-header bg-success text-white py-3">
             <div class="d-flex justify-content-between align-items-center">
               <h3 class="h4 mb-0"><i class="bi bi-check-circle me-2"></i>Stock Split Analysis Results</h3>
@@ -370,8 +370,8 @@
                     <i class="bi bi-info-circle-fill fs-4"></i>
                   </div>
                   <div>
-                    <h5 class="mb-1" id="splitSummary">Stock Split Summary</h5>
-                    <p class="mb-0" id="splitDescription">The summary will appear here after calculation.</p>
+                    <h5 class="mb-1" id="splitSummary">2:1 Split Impact</h5>
+                    <p class="mb-0" id="splitDescription">After the 2-for-1 split, your 100 shares will become 200.00, and the price will adjust from $150.00 to approximately $75.00 per share. The total value of your position remains approximately $15,000.00.</p>
                   </div>
                 </div>
               </div>
@@ -386,15 +386,15 @@
                   <div class="card-body">
                     <div class="row mb-3">
                       <div class="col-6 text-muted">Shares Owned:</div>
-                      <div class="col-6 text-end fw-bold" id="preShareCount">0</div>
+                      <div class="col-6 text-end fw-bold" id="preShareCount">100.00</div>
                     </div>
                     <div class="row mb-3">
                       <div class="col-6 text-muted">Share Price:</div>
-                      <div class="col-6 text-end fw-bold" id="preSharePrice">$0.00</div>
+                      <div class="col-6 text-end fw-bold" id="preSharePrice">$150.00</div>
                     </div>
                     <div class="row mb-3">
                       <div class="col-6 text-muted">Position Value:</div>
-                      <div class="col-6 text-end fw-bold" id="prePositionValue">$0.00</div>
+                      <div class="col-6 text-end fw-bold" id="prePositionValue">$15,000.00</div>
                     </div>
                     <div id="preOptionsDetails" style="display:none;">
                       <hr>
@@ -431,21 +431,21 @@
                     <div class="row mb-3">
                       <div class="col-6 text-muted">Shares Owned:</div>
                       <div class="col-6 text-end">
-                        <span class="fw-bold" id="postShareCount">0</span>
-                        <span class="diff-indicator bg-success bg-opacity-10 text-success" id="shareCountChange">+0</span>
+                        <span class="fw-bold" id="postShareCount">200.00</span>
+                        <span class="diff-indicator bg-success bg-opacity-10 text-success" id="shareCountChange">+100.00</span>
                       </div>
                     </div>
                     <div class="row mb-3">
                       <div class="col-6 text-muted">Share Price:</div>
                       <div class="col-6 text-end">
-                        <span class="fw-bold" id="postSharePrice">$0.00</span>
-                        <span class="diff-indicator bg-warning bg-opacity-10 text-warning" id="sharePriceChange">-$0.00</span>
+                        <span class="fw-bold" id="postSharePrice">$75.00</span>
+                        <span class="diff-indicator bg-warning bg-opacity-10 text-warning" id="sharePriceChange">-$75.00</span>
                       </div>
                     </div>
                     <div class="row mb-3">
                       <div class="col-6 text-muted">Position Value:</div>
                       <div class="col-6 text-end">
-                        <span class="fw-bold" id="postPositionValue">$0.00</span>
+                        <span class="fw-bold" id="postPositionValue">$15,000.00</span>
                         <span class="diff-indicator bg-secondary bg-opacity-10 text-secondary" id="positionValueChange">$0.00</span>
                       </div>
                     </div>
@@ -998,11 +998,13 @@
     document.getElementById('calculateBtn').addEventListener('click', calculateSplitImpact);
 
     // Update split ratio badge when inputs change
+
     document.getElementById('splitRatioNew').addEventListener('input', updateSplitRatioBadge);
     document.getElementById('splitRatioOld').addEventListener('input', updateSplitRatioBadge);
 
     // Initial update of split ratio badge
     updateSplitRatioBadge();
+    calculateSplitImpact(true);
   }
 
   // Update the split ratio badge
@@ -1053,7 +1055,7 @@
   }
 
   // Calculate the impact of the stock split
-  function calculateSplitImpact() {
+  function calculateSplitImpact(suppressScroll = false) {
     // Get input values
     const currentPrice = parseFloat(document.getElementById('currentPrice').value);
     const shareCount = parseFloat(document.getElementById('shareCount').value);
@@ -1144,12 +1146,14 @@
     document.getElementById('resultsCard').style.display = 'block';
 
     // Scroll to results
-    setTimeout(() => {
-      document.getElementById('resultsCard').scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }, 300);
+    if (!suppressScroll) {
+      setTimeout(() => {
+        document.getElementById('resultsCard').scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }, 300);
+    }
   }
 
   // Format currency values

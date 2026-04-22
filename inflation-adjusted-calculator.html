@@ -865,7 +865,7 @@
     setupSharePopup();
 
     // Calculate and show default results on page load
-    calculateInflationAdjustedReturns();
+    calculateInflationAdjustedReturns(true);
 
     // Show calculator
     document.getElementById('inflationCalculatorForm').addEventListener('submit', function (e) {
@@ -904,7 +904,7 @@
     });
   }
 
-  function calculateInflationAdjustedReturns() {
+  function calculateInflationAdjustedReturns(suppressScroll = false) {
     // Get input values
     const initialInvestment = parseFloat(document.getElementById('initialInvestment').value);
     const annualContribution = parseFloat(document.getElementById('annualContribution').value);
@@ -951,13 +951,15 @@
     // Show results card
     document.getElementById('resultsCard').style.display = 'block';
 
-    // Scroll to results after calculation (add this)
-setTimeout(() => {
-  document.getElementById('resultsCard').scrollIntoView({
-    behavior: 'smooth',
-    block: 'start'
-  });
-}, 300);
+    // Scroll to results after calculation
+    if (!suppressScroll) {
+      setTimeout(() => {
+        document.getElementById('resultsCard').scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }, 300);
+    }
   }
 
   function calculateYearlyData(initialInvestment, annualContribution, nominalRate, inflationRate, years, compoundingFrequency) {

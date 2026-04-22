@@ -21,6 +21,7 @@ function initPositionSizingCalculator() {
     if (calculateBtn) {
         calculateBtn.addEventListener('click', calculatePositionSize);
     }
+    calculatePositionSize(true);
 }
 
 // Set up smooth scrolling
@@ -90,7 +91,7 @@ function setupSharePopup() {
 }
 
 // Calculate the position size based on risk parameters
-function calculatePositionSize() {
+function calculatePositionSize(suppressScroll = false) {
     // Get input values
     const accountValue = parseFloat(document.getElementById('accountValue').value) || 100000;
     const riskPercentage = parseFloat(document.getElementById('riskPercentage').value) || 1;
@@ -144,12 +145,14 @@ function calculatePositionSize() {
     document.getElementById('resultsCard').style.display = 'block';
 
     // Scroll to results after a short delay
-    setTimeout(() => {
-        document.getElementById('resultsCard').scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
-    }, 300);
+    if (!suppressScroll) {
+        setTimeout(() => {
+            document.getElementById('resultsCard').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }, 300);
+    }
 }
 
 // Format currency with appropriate suffix

@@ -242,7 +242,7 @@
                     <div class="card-body">
                       <div class="mb-3">
                         <label class="form-label" for="tickerSymbol">Stock Ticker Symbol</label>
-                        <input class="form-control" id="tickerSymbol" placeholder="e.g., AAPL" required type="text">
+                        <input class="form-control" id="tickerSymbol" placeholder="e.g., AAPL" required type="text" value="AAPL">
                         <div class="input-help text-muted mt-1">
                           <small>Enter the stock symbol you want to analyze</small>
                         </div>
@@ -251,7 +251,7 @@
                         <label class="form-label" for="currentPrice">Current Stock Price ($)</label>
                         <div class="input-group">
                           <span class="input-group-text">$</span>
-                          <input class="form-control" id="currentPrice" min="0.01" placeholder="e.g., 150.25" required step="0.01" type="number">
+                          <input class="form-control" id="currentPrice" min="0.01" placeholder="e.g., 150.25" required step="0.01" type="number" value="150.00">
                         </div>
                         <div class="input-help text-muted mt-1">
                           <small>The current market price of the stock</small>
@@ -280,7 +280,7 @@
                         <label class="form-label" for="baseEstimate">Base Case Valuation Estimate ($)</label>
                         <div class="input-group">
                           <span class="input-group-text">$</span>
-                          <input class="form-control" id="baseEstimate" min="0.01" placeholder="e.g., 180.50" required step="0.01" type="number">
+                          <input class="form-control" id="baseEstimate" min="0.01" placeholder="e.g., 180.50" required step="0.01" type="number" value="175.00">
                         </div>
                         <div class="input-help text-muted mt-1">
                           <small>Your most likely price target for the stock</small>
@@ -357,7 +357,7 @@
     <!-- Results Section -->
     <div class="row justify-content-center mt-4">
       <div class="col-lg-10">
-        <div class="card shadow border-0 result-card" id="resultsCard" style="display:none;">
+        <div class="card shadow border-0 result-card" id="resultsCard">
           <div class="card-header bg-success text-white py-3">
             <div class="d-flex justify-content-between align-items-center">
               <h3 class="h4 mb-0"><i class="bi bi-graph-up me-2"></i>Valuation Confidence Analysis Results</h3>
@@ -375,8 +375,8 @@
                   </div>
                   <div class="card-body text-center">
                     <div class="mb-3">
-                      <span class="fs-6 text-muted" id="tickerDisplay">TICKER</span>
-                      <h3 class="display-6 fw-bold mb-0"><span id="lowerBound">$0</span> - <span id="upperBound">$0</span></h3>
+                      <span class="fs-6 text-muted" id="tickerDisplay">AAPL</span>
+                      <h3 class="display-6 fw-bold mb-0"><span id="lowerBound">$74.99</span> - <span id="upperBound">$275.01</span></h3>
                       <p class="lead text-muted" id="confidenceIntervalDisplay">95% Confidence Interval</p>
                     </div>
 
@@ -384,13 +384,13 @@
                       <div class="col-md-4">
                         <div class="bg-light rounded p-3">
                           <p class="mb-1">Current Price</p>
-                          <h5 class="mb-0" id="currentPriceDisplay">$0.00</h5>
+                          <h5 class="mb-0" id="currentPriceDisplay">$150.00</h5>
                         </div>
                       </div>
                       <div class="col-md-4">
                         <div class="bg-light rounded p-3">
                           <p class="mb-1">Base Estimate</p>
-                          <h5 class="mb-0" id="baseEstimateDisplay">$0.00</h5>
+                          <h5 class="mb-0" id="baseEstimateDisplay">$175.00</h5>
                         </div>
                       </div>
                       <div class="col-md-4">
@@ -449,23 +449,23 @@
                     <tbody>
                       <tr>
                         <td><span class="scenario-badge bearish">Bearish</span></td>
-                        <td id="bearishTarget">$0.00</td>
-                        <td class="text-danger" id="bearishChange">-0.0%</td>
-                        <td id="bearishProbability">0%</td>
+                        <td id="bearishTarget">$74.99</td>
+                        <td class="text-danger" id="bearishChange">-50.0%</td>
+                        <td id="bearishProbability">2.5%</td>
                         <td>Lower bound of confidence interval, represents downside risk</td>
                       </tr>
                       <tr>
                         <td><span class="scenario-badge base-case">Base Case</span></td>
-                        <td id="baseCaseTarget">$0.00</td>
-                        <td id="baseCaseChange">+0.0%</td>
+                        <td id="baseCaseTarget">$175.00</td>
+                        <td id="baseCaseChange">+16.7%</td>
                         <td>Highest</td>
                         <td>Most likely outcome based on your valuation estimate</td>
                       </tr>
                       <tr>
                         <td><span class="scenario-badge bullish">Bullish</span></td>
-                        <td id="bullishTarget">$0.00</td>
-                        <td class="text-success" id="bullishChange">+0.0%</td>
-                        <td id="bullishProbability">0%</td>
+                        <td id="bullishTarget">$275.01</td>
+                        <td class="text-success" id="bullishChange">+83.3%</td>
+                        <td id="bullishProbability">2.5%</td>
                         <td>Upper bound of confidence interval, represents upside potential</td>
                       </tr>
                     </tbody>
@@ -485,7 +485,7 @@
                       <div class="card-body text-center p-4">
                         <i class="bi bi-arrow-down-circle text-danger fs-1 mb-3"></i>
                         <h5>Probability of Loss</h5>
-                        <div class="display-6 fw-bold" id="probabilityOfLoss">0%</div>
+                        <div class="display-6 fw-bold" id="probabilityOfLoss">29.8%</div>
                         <p class="text-muted mb-0">Chance of being below current price</p>
                       </div>
                     </div>
@@ -495,7 +495,7 @@
                       <div class="card-body text-center p-4">
                         <i class="bi bi-check-circle text-success fs-1 mb-3"></i>
                         <h5>Probability of Reaching Target</h5>
-                        <div class="display-6 fw-bold" id="probabilityOfTarget">0%</div>
+                        <div class="display-6 fw-bold" id="probabilityOfTarget">50.0%</div>
                         <p class="text-muted mb-0">Chance of reaching base estimate</p>
                       </div>
                     </div>
@@ -505,7 +505,7 @@
                       <div class="card-body text-center p-4">
                         <i class="bi bi-arrow-up-right-circle text-primary fs-1 mb-3"></i>
                         <h5>Probability of 25%+ Gain</h5>
-                        <div class="display-6 fw-bold" id="probabilityOfBigGain">0%</div>
+                        <div class="display-6 fw-bold" id="probabilityOfBigGain">40.7%</div>
                         <p class="text-muted mb-0">Chance of achieving 25%+ return</p>
                       </div>
                     </div>
@@ -1099,10 +1099,11 @@
     confidenceSlider.addEventListener('input', function() {
       confidenceLevelDisplay.textContent = this.value + '%';
     });
+    calculateConfidenceInterval(true);
   }
 
   // Calculate confidence interval and display results
-  function calculateConfidenceInterval() {
+  function calculateConfidenceInterval(suppressScroll = false) {
     // Get input values
     const ticker = document.getElementById('tickerSymbol').value.trim().toUpperCase();
     const currentPrice = parseFloat(document.getElementById('currentPrice').value);
@@ -1207,12 +1208,14 @@
   document.getElementById('resultsCard').style.display = 'block';
 
   // Scroll to results
-  setTimeout(() => {
-    document.getElementById('resultsCard').scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
-  }, 300);
+  if (!suppressScroll) {
+    setTimeout(() => {
+      document.getElementById('resultsCard').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }, 300);
+  }
 }
 
 // Calculate Z-score from confidence level

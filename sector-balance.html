@@ -498,7 +498,7 @@
     <!-- Results Section -->
     <div class="row justify-content-center mt-4">
       <div class="col-lg-10">
-        <div class="card shadow border-0" id="resultsCard" style="display:none;">
+        <div class="card shadow border-0" id="resultsCard">
           <div class="card-header bg-success text-white py-3">
             <div class="d-flex justify-content-between align-items-center">
               <h3 class="h4 mb-0"><i class="bi bi-pie-chart me-2"></i>Portfolio Analysis Results</h3>
@@ -1025,6 +1025,10 @@
 
     // Load sample data if requested
     document.getElementById('loadSamplePortfolioBtn').addEventListener('click', loadSamplePortfolio);
+
+    // Auto-load sample portfolio and analyze on page load
+    loadSamplePortfolio();
+    analyzePortfolio(true);
   });
 
   // Portfolio data structure
@@ -1542,7 +1546,7 @@
   }
 
   // Analyze portfolio and show results
-  function analyzePortfolio() {
+  function analyzePortfolio(suppressScroll = false) {
     if (portfolio.holdings.length === 0) {
       alert('Please add at least one holding before analyzing.');
       return;
@@ -1565,12 +1569,14 @@
     document.getElementById('resultsCard').style.display = 'block';
 
     // Scroll to results
-    setTimeout(() => {
-      document.getElementById('resultsCard').scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }, 300);
+    if (!suppressScroll) {
+      setTimeout(() => {
+        document.getElementById('resultsCard').scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }, 300);
+    }
   }
 
   // Create allocation charts
