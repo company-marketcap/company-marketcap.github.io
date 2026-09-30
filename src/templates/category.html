@@ -1,0 +1,67 @@
+{{INCLUDE:_head.html}}
+{{INCLUDE:_header.html}}
+
+{{INCLUDE:_sidebar.html}}
+
+    <main id="{{PAGE_ID}}-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-5 focus:outline-none" tabindex="-1" data-page-main="{{PAGE_ID}}">
+      {{AD_TOP}}
+
+      <div id="{{PAGE_ID}}-intro-area" class="space-y-4">
+      {{BREADCRUMB}}
+
+        <section id="{{PAGE_ID}}-hero-section" aria-labelledby="{{PAGE_ID}}-hero-heading" data-section="hero">
+          <div id="{{PAGE_ID}}-hero-layout" class="grid gap-6 @4xl:grid-cols-[minmax(0,1fr)_300px] @4xl:items-start">
+            <div id="{{PAGE_ID}}-hero-text-column" class="min-w-0">
+              <div id="{{PAGE_ID}}-hero-title-row" class="flex items-start gap-4">
+                {{HERO_TILE}}
+                <h1 id="{{PAGE_ID}}-hero-heading" class="max-w-3xl font-display text-3xl font-bold leading-[1.1] tracking-tight text-balance sm:text-4xl">{{H1}}</h1>
+              </div>
+              <p id="{{PAGE_ID}}-hero-intro" class="mt-4 max-w-2xl text-[17px] leading-relaxed text-ink-muted">{{SUBTITLE}}</p>
+
+              <nav id="{{PAGE_ID}}-jump-navigation" class="mt-6" aria-labelledby="{{PAGE_ID}}-jump-navigation-heading">
+                <h2 id="{{PAGE_ID}}-jump-navigation-heading" class="text-sm font-bold text-ink-muted">Jump to a sub category</h2>
+                <ul id="{{PAGE_ID}}-jump-link-list" class="mt-2.5 flex flex-wrap gap-2" role="list">
+{{JUMP_LINKS}}
+                </ul>
+              </nav>
+            </div>
+
+            <div id="{{PAGE_ID}}-hero-side-column" class="grid content-start gap-6 @2xl:grid-cols-2 @4xl:grid-cols-1">
+              <section id="{{PAGE_ID}}-calculator-finder-section" class="panel p-4 sm:p-5" aria-labelledby="{{PAGE_ID}}-calculator-finder-heading" data-section="calculator-finder">
+                <h2 id="{{PAGE_ID}}-calculator-finder-heading" class="panel-heading">Find a calculator</h2>
+                <p id="{{PAGE_ID}}-calculator-finder-intro" class="mb-3 mt-0.5 text-sm text-ink-muted">{{FINDER_INTRO}}</p>
+                <search id="{{PAGE_ID}}-hero-search" class="block" data-search-region="hero">
+            <form id="{{PAGE_ID}}-hero-search-form" class="relative" action="/" method="get" data-search-key="hero" data-search-prefill="true">
+              <label for="{{PAGE_ID}}-hero-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="{{PAGE_ID}}-hero-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="{{PAGE_ID}}-hero-search-status" aria-controls="{{PAGE_ID}}-hero-search-results" data-search-input="hero">
+              <p id="{{PAGE_ID}}-hero-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="{{PAGE_ID}}-hero-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+              </section>
+              {{AD_HERO}}
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section id="{{PAGE_ID}}-sub-category-directory-section" class="space-y-8 border-t border-line pt-8" aria-labelledby="{{PAGE_ID}}-sub-category-directory-heading" itemscope itemtype="https://schema.org/ItemList" data-section="sub-category-directory">
+        <meta itemprop="numberOfItems" content="{{DIRECTORY_COUNT}}">
+        <div id="{{PAGE_ID}}-sub-category-directory-intro-block">
+          <h2 id="{{PAGE_ID}}-sub-category-directory-heading" class="font-display text-2xl font-bold tracking-tight sm:text-3xl" itemprop="name">{{DIRECTORY_HEADING}}</h2>
+          <p id="{{PAGE_ID}}-sub-category-directory-intro" class="mt-2 max-w-2xl text-ink-muted">{{DIRECTORY_INTRO}}</p>
+        </div>
+        {{DIRECTORY}}
+      </section>
+
+      {{FAQ}}
+
+            
+
+      {{AD_BOTTOM}}
+    </main>
+
+{{INCLUDE:_footer.html}}
+</body>
+</html>

@@ -1,93 +1,261 @@
 {
-  "_comment": "Nav groups (top-level menu, no page of their own) -> subcategories (each gets a hub page at /<slug>). Order here is nav order. A tool's JSON names its subcategory by slug.",
+  "_comment": "The site has one category page (category.slug) with a section per subcategory. Nav groups organise those sections; each subcategory slug is its section anchor (financial-calculators.html#<slug>). A tool's JSON names its subcategory by slug. color = template colour token (butter, sky, pistachio, lilac, blush, mint, apricot); symbol = 2-letter tile text.",
+  "category": {
+    "slug": "financial-calculators",
+    "name": "Financial calculators",
+    "symbol": "Fc",
+    "color": "butter",
+    "meta_title": "Free Financial Calculators | {site}",
+    "meta_description": "Free financial calculators for mortgages, loans, credit cards, retirement, investing, tax, savings and business. Pick a topic, enter your numbers and get an instant answer.",
+    "h1": "Free financial calculators for every money decision",
+    "subtitle": "Choose a topic below, open a calculator and enter your own numbers to see what you will pay, save or earn. Everything runs in your browser.",
+    "finder_intro": "Type what you want to work out, such as mortgage, 401k or APR.",
+    "directory_heading": "Browse financial calculators by topic",
+    "directory_intro": "Calculators are grouped by what you are trying to do. Items marked coming soon are on the way.",
+    "faq_heading": "Financial calculator questions",
+    "faq": [
+      {
+        "question": "Which financial calculator should I start with?",
+        "answer": "Start with the decision in front of you. Buying a home points to the mortgage and affordability calculators, paying off cards to the debt payoff calculators, and saving for later to the retirement and compound interest calculators."
+      },
+      {
+        "question": "Are these calculators for the United States?",
+        "answer": "Yes. Tax rules, retirement accounts and payroll calculations follow US rules. General tools such as compound interest or loan payments work anywhere, since the maths is the same in any currency."
+      },
+      {
+        "question": "How accurate are the results?",
+        "answer": "Each calculator uses standard formulas, checked against worked examples. Results are estimates based on the numbers you enter, so check important decisions with your lender, plan provider or a tax professional."
+      },
+      {
+        "question": "Is my information saved or shared?",
+        "answer": "No. Every calculation runs in your browser, and nothing you type is sent to a server or stored."
+      }
+    ]
+  },
   "nav_groups": [
     {
       "id": "mortgage-real-estate",
       "name": "Mortgage & Real Estate",
       "subcategories": [
-        {"slug": "mortgage-calculators", "name": "Mortgage & Home Buying", "nav_name": "Mortgage & Home Buying",
-         "description": "Estimate payments, compare loan types and work out how much house you can afford."},
-        {"slug": "home-equity-refinance-calculators", "name": "Home Equity & Refinancing", "nav_name": "Home Equity & Refinance",
-         "description": "See whether refinancing pays off and what borrowing against your home would cost."},
-        {"slug": "real-estate-calculators", "name": "Real Estate & Rental Property", "nav_name": "Real Estate & Rentals",
-         "description": "Analyse rental returns, renting versus buying and property sale outcomes."}
-      ]
+        {
+          "slug": "mortgage-calculators",
+          "name": "Mortgage & Home Buying",
+          "nav_name": "Mortgage & Home Buying",
+          "description": "Estimate payments, compare loan types and work out how much house you can afford.",
+          "symbol": "Mo"
+        },
+        {
+          "slug": "home-equity-refinance-calculators",
+          "name": "Home Equity & Refinancing",
+          "nav_name": "Home Equity & Refinance",
+          "description": "See whether refinancing pays off and what borrowing against your home would cost.",
+          "symbol": "He"
+        },
+        {
+          "slug": "real-estate-calculators",
+          "name": "Real Estate & Rental Property",
+          "nav_name": "Real Estate & Rentals",
+          "description": "Analyse rental returns, renting versus buying and property sale outcomes.",
+          "symbol": "Re"
+        }
+      ],
+      "color": "butter",
+      "symbol": "Mr",
+      "description": "Work out mortgage payments, refinancing and what a property really costs or earns."
     },
     {
       "id": "loans-debt",
       "name": "Loans & Debt",
       "subcategories": [
-        {"slug": "loan-calculators", "name": "Personal & General Loans", "nav_name": "Personal Loans",
-         "description": "Work out loan payments, total interest and how different terms compare."},
-        {"slug": "auto-loan-calculators", "name": "Auto Loans & Leasing", "nav_name": "Auto Loans & Leasing",
-         "description": "Compare car loans, leases, rebates and payoff options."},
-        {"slug": "student-loan-calculators", "name": "Student Loans & Education Savings", "nav_name": "Student Loans & College",
-         "description": "Plan college savings and see how student loan choices affect repayment."},
-        {"slug": "credit-card-debt-calculators", "name": "Credit Cards & Debt Payoff", "nav_name": "Credit Cards & Debt",
-         "description": "Build a payoff plan, compare balance transfers and see the cost of minimum payments."}
-      ]
+        {
+          "slug": "loan-calculators",
+          "name": "Personal & General Loans",
+          "nav_name": "Personal Loans",
+          "description": "Work out loan payments, total interest and how different terms compare.",
+          "symbol": "Lo"
+        },
+        {
+          "slug": "auto-loan-calculators",
+          "name": "Auto Loans & Leasing",
+          "nav_name": "Auto Loans & Leasing",
+          "description": "Compare car loans, leases, rebates and payoff options.",
+          "symbol": "Au"
+        },
+        {
+          "slug": "student-loan-calculators",
+          "name": "Student Loans & Education Savings",
+          "nav_name": "Student Loans & College",
+          "description": "Plan college savings and see how student loan choices affect repayment.",
+          "symbol": "St"
+        },
+        {
+          "slug": "credit-card-debt-calculators",
+          "name": "Credit Cards & Debt Payoff",
+          "nav_name": "Credit Cards & Debt",
+          "description": "Build a payoff plan, compare balance transfers and see the cost of minimum payments.",
+          "symbol": "Cc"
+        }
+      ],
+      "color": "sky",
+      "symbol": "Ld",
+      "description": "Compare loans, plan car and student borrowing, and build a plan to clear debt."
     },
     {
       "id": "retirement",
       "name": "Retirement",
       "subcategories": [
-        {"slug": "retirement-calculators", "name": "Retirement Planning", "nav_name": "Retirement Planning",
-         "description": "Check whether your savings are on track and how long they could last."},
-        {"slug": "retirement-account-calculators", "name": "Retirement Accounts (401k, 403b, 457, IRA, Roth)", "nav_name": "401(k), IRA & Roth",
-         "description": "Model contributions, employer matches, conversions and required minimum distributions."},
-        {"slug": "social-security-annuity-calculators", "name": "Social Security & Annuities", "nav_name": "Social Security & Annuities",
-         "description": "Estimate benefits, compare claiming ages and value annuity income."}
-      ]
+        {
+          "slug": "retirement-calculators",
+          "name": "Retirement Planning",
+          "nav_name": "Retirement Planning",
+          "description": "Check whether your savings are on track and how long they could last.",
+          "symbol": "Rt"
+        },
+        {
+          "slug": "retirement-account-calculators",
+          "name": "Retirement Accounts (401k, 403b, 457, IRA, Roth)",
+          "nav_name": "401(k), IRA & Roth",
+          "description": "Model contributions, employer matches, conversions and required minimum distributions.",
+          "symbol": "Ra"
+        },
+        {
+          "slug": "social-security-annuity-calculators",
+          "name": "Social Security & Annuities",
+          "nav_name": "Social Security & Annuities",
+          "description": "Estimate benefits, compare claiming ages and value annuity income.",
+          "symbol": "Ss"
+        }
+      ],
+      "color": "pistachio",
+      "symbol": "Rt",
+      "description": "Check your retirement savings, model 401(k) and IRA choices and plan your income."
     },
     {
       "id": "investing",
       "name": "Investing",
       "subcategories": [
-        {"slug": "investment-calculators", "name": "Investment Returns & Growth", "nav_name": "Investment Returns",
-         "description": "Project growth, measure returns and compare investment choices."},
-        {"slug": "stock-calculators", "name": "Stocks, Dividends & Trading", "nav_name": "Stocks & Trading",
-         "description": "Size positions, value stocks, and work out dividend and option outcomes."},
-        {"slug": "bond-cd-calculators", "name": "Bonds, CDs & Fixed Income", "nav_name": "Bonds & CDs",
-         "description": "Price bonds, compare CD rates and calculate fixed-income yields."},
-        {"slug": "interest-calculators", "name": "Interest, APR & Time Value of Money", "nav_name": "Interest & APR",
-         "description": "Calculate compound and simple interest, APR and the time value of money."}
-      ]
+        {
+          "slug": "investment-calculators",
+          "name": "Investment Returns & Growth",
+          "nav_name": "Investment Returns",
+          "description": "Project growth, measure returns and compare investment choices.",
+          "symbol": "In"
+        },
+        {
+          "slug": "stock-calculators",
+          "name": "Stocks, Dividends & Trading",
+          "nav_name": "Stocks & Trading",
+          "description": "Size positions, value stocks, and work out dividend and option outcomes.",
+          "symbol": "Sk"
+        },
+        {
+          "slug": "bond-cd-calculators",
+          "name": "Bonds, CDs & Fixed Income",
+          "nav_name": "Bonds & CDs",
+          "description": "Price bonds, compare CD rates and calculate fixed-income yields.",
+          "symbol": "Bd"
+        },
+        {
+          "slug": "interest-calculators",
+          "name": "Interest, APR & Time Value of Money",
+          "nav_name": "Interest & APR",
+          "description": "Calculate compound and simple interest, APR and the time value of money.",
+          "symbol": "Ir"
+        }
+      ],
+      "color": "lilac",
+      "symbol": "Iv",
+      "description": "Project investment growth, value stocks and bonds and understand interest."
     },
     {
       "id": "tax-income",
       "name": "Tax & Income",
       "subcategories": [
-        {"slug": "tax-calculators", "name": "Income Tax & Tax Planning", "nav_name": "Income Tax & Planning",
-         "description": "Estimate federal tax, marginal rates and the tax impact of financial decisions."},
-        {"slug": "salary-paycheck-calculators", "name": "Payroll, Salary & Take-home Pay", "nav_name": "Salary & Paycheck",
-         "description": "Convert pay rates and see what reaches your bank account after deductions."},
-        {"slug": "health-savings-calculators", "name": "Health Savings & Medical Costs", "nav_name": "HSA & Medical Costs",
-         "description": "Plan HSA and FSA contributions and future medical and long-term care costs."},
-        {"slug": "insurance-calculators", "name": "Insurance", "nav_name": "Insurance",
-         "description": "Work out how much life and disability cover your household needs."}
-      ]
+        {
+          "slug": "tax-calculators",
+          "name": "Income Tax & Tax Planning",
+          "nav_name": "Income Tax & Planning",
+          "description": "Estimate federal tax, marginal rates and the tax impact of financial decisions.",
+          "symbol": "Tx"
+        },
+        {
+          "slug": "salary-paycheck-calculators",
+          "name": "Payroll, Salary & Take-home Pay",
+          "nav_name": "Salary & Paycheck",
+          "description": "Convert pay rates and see what reaches your bank account after deductions.",
+          "symbol": "Sa"
+        },
+        {
+          "slug": "health-savings-calculators",
+          "name": "Health Savings & Medical Costs",
+          "nav_name": "HSA & Medical Costs",
+          "description": "Plan HSA and FSA contributions and future medical and long-term care costs.",
+          "symbol": "Hs"
+        },
+        {
+          "slug": "insurance-calculators",
+          "name": "Insurance",
+          "nav_name": "Insurance",
+          "description": "Work out how much life and disability cover your household needs.",
+          "symbol": "Is"
+        }
+      ],
+      "color": "blush",
+      "symbol": "Ti",
+      "description": "Estimate tax, see your take-home pay and plan health savings and insurance."
     },
     {
       "id": "savings-budgeting",
       "name": "Savings & Budgeting",
       "subcategories": [
-        {"slug": "savings-calculators", "name": "Savings & Emergency Funds", "nav_name": "Savings & Emergency Funds",
-         "description": "Set savings goals, size an emergency fund and see what small savings add up to."},
-        {"slug": "budget-calculators", "name": "Budgeting, Net Worth & Cash Flow", "nav_name": "Budgeting & Net Worth",
-         "description": "Build a budget, track net worth and understand where your money goes."},
-        {"slug": "inflation-currency-calculators", "name": "Inflation, Currency & Economics", "nav_name": "Inflation & Currency",
-         "description": "Adjust amounts for inflation and convert between currencies."},
-        {"slug": "everyday-money-calculators", "name": "Everyday Money & Utility Tools", "nav_name": "Everyday Money",
-         "description": "Quick everyday maths: tips, discounts, percentages, fuel costs and dates."}
-      ]
+        {
+          "slug": "savings-calculators",
+          "name": "Savings & Emergency Funds",
+          "nav_name": "Savings & Emergency Funds",
+          "description": "Set savings goals, size an emergency fund and see what small savings add up to.",
+          "symbol": "Sv"
+        },
+        {
+          "slug": "budget-calculators",
+          "name": "Budgeting, Net Worth & Cash Flow",
+          "nav_name": "Budgeting & Net Worth",
+          "description": "Build a budget, track net worth and understand where your money goes.",
+          "symbol": "Bu"
+        },
+        {
+          "slug": "inflation-currency-calculators",
+          "name": "Inflation, Currency & Economics",
+          "nav_name": "Inflation & Currency",
+          "description": "Adjust amounts for inflation and convert between currencies.",
+          "symbol": "Ic"
+        },
+        {
+          "slug": "everyday-money-calculators",
+          "name": "Everyday Money & Utility Tools",
+          "nav_name": "Everyday Money",
+          "description": "Quick everyday maths: tips, discounts, percentages, fuel costs and dates.",
+          "symbol": "Ev"
+        }
+      ],
+      "color": "mint",
+      "symbol": "Sb",
+      "description": "Set savings goals, build a budget and handle everyday money maths."
     },
     {
       "id": "business",
       "name": "Business",
       "subcategories": [
-        {"slug": "business-calculators", "name": "Business Finance & Valuation", "nav_name": "Business Finance",
-         "description": "Break-even, margins, cash flow, depreciation, ratios and business valuation."}
-      ]
+        {
+          "slug": "business-calculators",
+          "name": "Business Finance & Valuation",
+          "nav_name": "Business Finance",
+          "description": "Break-even, margins, cash flow, depreciation, ratios and business valuation.",
+          "symbol": "Bz"
+        }
+      ],
+      "color": "apricot",
+      "symbol": "Bz",
+      "description": "Break-even, margins, cash flow, ratios and valuation for your business."
     }
   ]
 }

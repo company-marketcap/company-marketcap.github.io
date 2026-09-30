@@ -4,14 +4,14 @@ Validate the JSON sources and assemble the build data.
 
 Sources of truth (edit these, never the output):
     src/config/site.json           site-wide settings
-    src/config/categories.json     nav groups -> subcategories (hub pages), in nav order
+    src/config/categories.json     the category page + nav groups -> subcategories (its sections)
     src/content/tools/<slug>.json  one file per calculator: its ENTIRE page
-    src/content/pages/<slug>.json  info pages (about, contact, privacy-policy, terms)
+    src/content/pages/<slug>.json  home page copy/FAQ + info pages (about, contact, privacy-policy, terms)
 
 Output (build artifacts, gitignored — regenerated on every build):
     src/data/site.json    site settings + resolved nav tree
     src/data/tools.json   every tool, validated, in nav order
-    src/data/pages.json   hub pages + info pages
+    src/data/pages.json   home, category page and info pages
 
 Usage:
     python3 src/build_data.py                    # validate + write src/data/
@@ -34,8 +34,8 @@ LIVE_STATUSES = {"built", "verified", "done"}
 CARD_LAYOUTS = {"raw"}
 REQUIRED_WHEN_LIVE = ["meta_title", "meta_description", "h1", "subtitle", "content_html"]
 TITLE_MAX, DESCRIPTION_MAX = 60, 160
-# Page slugs generate.py produces itself; a tool or hub can't use them.
-RESERVED_SLUGS = {"index", "404", "sitemap"}
+# Page slugs generate.py produces itself; a tool can't use them.
+RESERVED_SLUGS = {"index", "home", "404", "sitemap"}
 
 
 class Problems:
@@ -113,8 +113,8 @@ def load_tools(subcats, include_planned, problems):
         for rel in tool.get("related", []):
             if rel not in slugs:
                 problems.error(f"tools/{tool['slug']}.json", f"related slug {rel!r} does not exist")
-        if tool["slug"] in subcats or tool["slug"] in RESERVED_SLUGS:
-            problems.error(f"tools/{tool['slug']}.json", "slug collides with a hub or reserved page")
+        if tool["slug"] in RESERVED_SLUGS:
+            problems.error(f"tools/{tool['slug']}.json", "slug collides with a reserved page")
     # Nav order: subcategory order from categories.json, then each tool's own order, then name.
     sub_order = {slug: i for i, slug in enumerate(subcats)}
     tools.sort(key=lambda t: (sub_order.get(t.get("subcategory"), 999), t.get("order", 999),
@@ -152,21 +152,27 @@ def build(include_planned=False, write=True):
     cats, subcats = load_categories(problems)
     tools = load_tools(subcats, include_planned, problems)
     info_pages = load_info_pages(site, include_planned, problems)
+    home = load_json(PAGES_DIR / "home.json", problems)
+    category = cats["category"]
+    reserved = RESERVED_SLUGS | {category["slug"]} | set(site["info_pages"])
+    for tool in tools:
+        if tool["slug"] in reserved:
+            problems.error(f"tools/{tool['slug']}.json", "slug collides with the category page or an info page")
 
-    # Resolve the nav tree: groups -> subcategories -> live tools. Empty hubs/groups are hidden.
+    # Nav tree: groups -> subcategories -> every tool (live ones are linked, planned ones listed
+    # as "coming soon" by generate.py). Subcategories/groups with no tools at all are hidden.
     nav = []
     for group in cats["nav_groups"]:
         subs = []
         for sub in group["subcategories"]:
-            sub_tools = [t["slug"] for t in tools if t["subcategory"] == sub["slug"] and t["live"]]
+            sub_tools = [t["slug"] for t in tools if t["subcategory"] == sub["slug"]]
             if sub_tools:
                 subs.append(dict(sub, tools=sub_tools))
         if subs:
-            nav.append({"id": group["id"], "name": group["name"], "subcategories": subs})
+            nav.append({k: group[k] for k in ("id", "name", "color", "symbol", "description")} | {"subcategories": subs})
 
-    hubs = [dict(subcats[s["slug"]], tools=s["tools"]) for g in nav for s in g["subcategories"]]
     site_out = dict(site, nav=nav)
-    pages_out = {"hubs": hubs, "info_pages": info_pages}
+    pages_out = {"home": home, "category": category, "info_pages": info_pages}
 
     for w in problems.warnings:
         print(f"warning: {w}")
@@ -183,7 +189,7 @@ def build(include_planned=False, write=True):
 
     counts = {s: sum(1 for t in tools if t["status"] == s) for s in STATUSES}
     print(f"{len(tools)} tools — " + ", ".join(f"{s}: {n}" for s, n in counts.items() if n) +
-          f" · {sum(1 for t in tools if t['live'])} live pages, {len(hubs)} hubs"
+          f" · {sum(1 for t in tools if t['live'])} live tool pages"
           + (" (planned included for preview)" if include_planned else ""))
     return site_out, tools, pages_out
 

@@ -1,41 +1,159 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{META_TITLE}}</title>
-<meta name="description" content="{{META_DESCRIPTION}}">
-<meta name="robots" content="{{ROBOTS}}">
-<link rel="canonical" href="{{CANONICAL_URL}}">
-<meta property="og:title" content="{{META_TITLE}}">
-<meta property="og:description" content="{{META_DESCRIPTION}}">
-<meta property="og:url" content="{{CANONICAL_URL}}">
-<meta property="og:type" content="website">
-<link rel="icon" href="/favicon.ico">
-<link rel="stylesheet" href="/styles.css">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ADSENSE_CLIENT}}" crossorigin="anonymous"></script>
-{{JSON_LD}}
-</head>
-<body>
-<header class="site-header">
-  <a class="site-logo" href="/">{{SITE_NAME}}</a>
-  {{NAV}}
-</header>
-<main class="site-main">
-  {{BREADCRUMB}}
-  <header class="page-hero"><h1>{{H1}}</h1><p class="subtitle">{{SUBTITLE}}</p></header>
-  {{CATEGORY_GRID}}
-</main>
-<footer class="site-footer">{{FOOTER}}</footer>
-<script>
-/* Site-wide nav dropdowns (not tool logic — every page, including info pages, needs it). */
-document.querySelectorAll('.nav-group-toggle').forEach(function (btn) {
-  btn.addEventListener('click', function () {
-    var open = btn.getAttribute('aria-expanded') === 'true';
-    document.querySelectorAll('.nav-group-toggle').forEach(function (b) { b.setAttribute('aria-expanded', 'false'); });
-    btn.setAttribute('aria-expanded', open ? 'false' : 'true');
-  });
-});
-</script>
+{{INCLUDE:_head.html}}
+{{INCLUDE:_header.html}}
+
+{{INCLUDE:_sidebar.html}}
+
+    <main id="home-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-5 focus:outline-none" tabindex="-1" data-page-main="home">
+      <meta itemprop="name" content="Free Online Calculator">
+      <meta itemprop="url" content="https://company-marketcap.github.io/">
+      <meta itemprop="description" content="A free online scientific calculator plus 261 calculators in 6 categories.">
+      {{AD_TOP}}
+
+      <section id="home-hero-section" aria-labelledby="home-hero-heading" data-section="hero">
+        <h1 id="home-hero-heading" class="max-w-3xl font-display text-3xl font-bold leading-[1.1] tracking-tight text-balance sm:text-4xl">{{H1}}</h1>
+        <p id="home-hero-intro" class="mt-3 max-w-2xl text-[17px] leading-relaxed text-ink-muted">{{SUBTITLE}}</p>
+
+        <div id="home-hero-layout" class="mt-6 grid gap-6 @4xl:grid-cols-[minmax(0,1fr)_300px] @4xl:items-start">
+          <section id="home-scientific-calculator-section" class="panel @container p-4 sm:p-5" aria-labelledby="home-scientific-calculator-heading" itemprop="mainEntity" itemscope itemtype="https://schema.org/WebApplication" data-component="scientific-calculator" data-page-slug="home" data-calculator-key="scientific-calculator">
+            <meta itemprop="applicationCategory" content="UtilitiesApplication">
+            <meta itemprop="operatingSystem" content="Any">
+            <meta itemprop="browserRequirements" content="Requires JavaScript">
+            <meta itemprop="url" content="https://company-marketcap.github.io/#home-scientific-calculator-section">
+            <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" hidden>
+              <meta itemprop="price" content="0">
+              <meta itemprop="priceCurrency" content="USD">
+            </div>
+
+            <div id="home-scientific-calculator-toolbar" class="flex flex-wrap items-start justify-between gap-3">
+              <div class="min-w-0">
+                <h2 id="home-scientific-calculator-heading" class="panel-heading" itemprop="name">Scientific calculator</h2>
+                <p id="home-scientific-calculator-hint" class="mt-0.5 text-sm text-ink-muted" itemprop="description">Tap the keys or type on your keyboard, then press Enter to see your answer.</p>
+              </div>
+              <fieldset id="home-scientific-calculator-angle-mode" class="shrink-0">
+                <legend class="sr-only">Angle unit for sin, cos, and tan</legend>
+                <div class="inline-flex rounded-lg border border-line bg-surface-muted p-0.5">
+                  <input id="home-scientific-calculator-angle-degrees" class="peer/degrees sr-only" type="radio" name="home-scientific-calculator-angle-mode" value="degrees" checked>
+                  <label for="home-scientific-calculator-angle-degrees" class="angle-mode-option peer-checked/degrees:bg-lilac peer-checked/degrees:text-lilac-ink peer-focus-visible/degrees:outline-2 peer-focus-visible/degrees:outline-brand">Deg</label>
+                  <input id="home-scientific-calculator-angle-radians" class="peer/radians sr-only" type="radio" name="home-scientific-calculator-angle-mode" value="radians">
+                  <label for="home-scientific-calculator-angle-radians" class="angle-mode-option peer-checked/radians:bg-lilac peer-checked/radians:text-lilac-ink peer-focus-visible/radians:outline-2 peer-focus-visible/radians:outline-brand">Rad</label>
+                </div>
+              </fieldset>
+            </div>
+
+            <div id="home-scientific-calculator-display" class="mt-4 rounded-xl border border-pistachio-ink/15 bg-pistachio px-4 py-3 text-right text-pistachio-ink" role="group" aria-label="Calculator display">
+              <output id="home-scientific-calculator-expression" class="block min-h-6 break-all font-readout text-[15px] opacity-80" for="home-scientific-calculator-keypad" aria-label="Your expression">&nbsp;</output>
+              <output id="home-scientific-calculator-result" class="mt-1 block min-h-11 break-all font-readout text-4xl font-semibold tabular-nums leading-tight data-[state=preview]:opacity-55 data-[state=error]:py-2 data-[state=error]:font-body data-[state=error]:text-base data-[state=error]:font-semibold data-[state=error]:text-blush-ink" for="home-scientific-calculator-keypad" aria-label="Answer" data-state="final">0</output>
+              <p id="home-scientific-calculator-announcer" class="sr-only" aria-live="polite"></p>
+            </div>
+
+            <div id="home-scientific-calculator-keypad" class="mt-4 grid gap-3 @xl:grid-cols-2" role="group" aria-label="Calculator keys">
+              <div id="home-scientific-calculator-function-keys" class="order-2 grid grid-cols-5 gap-1.5 @xl:order-1" role="group" aria-label="Scientific functions">
+                  <button id="home-scientific-calculator-key-sine" type="button" class="calc-key calc-key-function" aria-label="Sine" data-calculator-action="insert" data-calculator-value="sin(">sin</button>
+                  <button id="home-scientific-calculator-key-cosine" type="button" class="calc-key calc-key-function" aria-label="Cosine" data-calculator-action="insert" data-calculator-value="cos(">cos</button>
+                  <button id="home-scientific-calculator-key-tangent" type="button" class="calc-key calc-key-function" aria-label="Tangent" data-calculator-action="insert" data-calculator-value="tan(">tan</button>
+                  <button id="home-scientific-calculator-key-pi" type="button" class="calc-key calc-key-function" aria-label="Pi" data-calculator-action="insert" data-calculator-value="π">π</button>
+                  <button id="home-scientific-calculator-key-euler" type="button" class="calc-key calc-key-function" aria-label="Euler&#x27;s number e" data-calculator-action="insert" data-calculator-value="e">e</button>
+                  <button id="home-scientific-calculator-key-inverse-sine" type="button" class="calc-key calc-key-function" aria-label="Inverse sine" data-calculator-action="insert" data-calculator-value="sin⁻¹(">sin<sup>−1</sup></button>
+                  <button id="home-scientific-calculator-key-inverse-cosine" type="button" class="calc-key calc-key-function" aria-label="Inverse cosine" data-calculator-action="insert" data-calculator-value="cos⁻¹(">cos<sup>−1</sup></button>
+                  <button id="home-scientific-calculator-key-inverse-tangent" type="button" class="calc-key calc-key-function" aria-label="Inverse tangent" data-calculator-action="insert" data-calculator-value="tan⁻¹(">tan<sup>−1</sup></button>
+                  <button id="home-scientific-calculator-key-open-bracket" type="button" class="calc-key calc-key-function" aria-label="Open bracket" data-calculator-action="insert" data-calculator-value="(" data-keyboard-key="(">(</button>
+                  <button id="home-scientific-calculator-key-close-bracket" type="button" class="calc-key calc-key-function" aria-label="Close bracket" data-calculator-action="insert" data-calculator-value=")" data-keyboard-key=")">)</button>
+                  <button id="home-scientific-calculator-key-square" type="button" class="calc-key calc-key-function" aria-label="Square" data-calculator-action="insert" data-calculator-value="²">x<sup>2</sup></button>
+                  <button id="home-scientific-calculator-key-cube" type="button" class="calc-key calc-key-function" aria-label="Cube" data-calculator-action="insert" data-calculator-value="³">x<sup>3</sup></button>
+                  <button id="home-scientific-calculator-key-power" type="button" class="calc-key calc-key-function" aria-label="Power" data-calculator-action="insert" data-calculator-value="^" data-keyboard-key="^">x<sup>y</sup></button>
+                  <button id="home-scientific-calculator-key-exponential" type="button" class="calc-key calc-key-function" aria-label="e to the power of" data-calculator-action="insert" data-calculator-value="e^(">e<sup>x</sup></button>
+                  <button id="home-scientific-calculator-key-power-of-ten" type="button" class="calc-key calc-key-function" aria-label="10 to the power of" data-calculator-action="insert" data-calculator-value="10^(">10<sup>x</sup></button>
+                  <button id="home-scientific-calculator-key-square-root" type="button" class="calc-key calc-key-function" aria-label="Square root" data-calculator-action="insert" data-calculator-value="√(">√x</button>
+                  <button id="home-scientific-calculator-key-cube-root" type="button" class="calc-key calc-key-function" aria-label="Cube root" data-calculator-action="insert" data-calculator-value="∛(">∛x</button>
+                  <button id="home-scientific-calculator-key-nth-root" type="button" class="calc-key calc-key-function" aria-label="Root of any degree. Type the degree first" data-calculator-action="insert" data-calculator-value="ʸ√"><sup>y</sup>√x</button>
+                  <button id="home-scientific-calculator-key-natural-log" type="button" class="calc-key calc-key-function" aria-label="Natural logarithm" data-calculator-action="insert" data-calculator-value="ln(">ln</button>
+                  <button id="home-scientific-calculator-key-log-base-ten" type="button" class="calc-key calc-key-function" aria-label="Logarithm base 10" data-calculator-action="insert" data-calculator-value="log(">log</button>
+                  <button id="home-scientific-calculator-key-reciprocal" type="button" class="calc-key calc-key-function" aria-label="Reciprocal" data-calculator-action="insert" data-calculator-value="⁻¹">1/x</button>
+                  <button id="home-scientific-calculator-key-factorial" type="button" class="calc-key calc-key-function" aria-label="Factorial" data-calculator-action="insert" data-calculator-value="!" data-keyboard-key="!">n!</button>
+                  <button id="home-scientific-calculator-key-percent" type="button" class="calc-key calc-key-function" aria-label="Percent" data-calculator-action="insert" data-calculator-value="%" data-keyboard-key="%">%</button>
+                  <button id="home-scientific-calculator-key-previous-answer" type="button" class="calc-key calc-key-function" aria-label="Previous answer" data-calculator-action="insert" data-calculator-value="Ans">Ans</button>
+                  <button id="home-scientific-calculator-key-random-number" type="button" class="calc-key calc-key-function" aria-label="Random number between 0 and 1" data-calculator-action="random">RND</button>
+              </div>
+              <div id="home-scientific-calculator-number-keys" class="order-1 grid grid-cols-5 gap-1.5 @xl:order-2" role="group" aria-label="Numbers and operators">
+                  <button id="home-scientific-calculator-key-digit-7" type="button" class="calc-key calc-key-digit" aria-label="7" data-calculator-action="insert" data-calculator-value="7" data-keyboard-key="7">7</button>
+                  <button id="home-scientific-calculator-key-digit-8" type="button" class="calc-key calc-key-digit" aria-label="8" data-calculator-action="insert" data-calculator-value="8" data-keyboard-key="8">8</button>
+                  <button id="home-scientific-calculator-key-digit-9" type="button" class="calc-key calc-key-digit" aria-label="9" data-calculator-action="insert" data-calculator-value="9" data-keyboard-key="9">9</button>
+                  <button id="home-scientific-calculator-key-backspace" type="button" class="calc-key calc-key-clear" aria-label="Delete last entry" data-calculator-action="backspace" data-keyboard-key="Backspace">⌫</button>
+                  <button id="home-scientific-calculator-key-all-clear" type="button" class="calc-key calc-key-clear" aria-label="Clear all" data-calculator-action="clear" data-keyboard-key="Escape Delete">AC</button>
+                  <button id="home-scientific-calculator-key-digit-4" type="button" class="calc-key calc-key-digit" aria-label="4" data-calculator-action="insert" data-calculator-value="4" data-keyboard-key="4">4</button>
+                  <button id="home-scientific-calculator-key-digit-5" type="button" class="calc-key calc-key-digit" aria-label="5" data-calculator-action="insert" data-calculator-value="5" data-keyboard-key="5">5</button>
+                  <button id="home-scientific-calculator-key-digit-6" type="button" class="calc-key calc-key-digit" aria-label="6" data-calculator-action="insert" data-calculator-value="6" data-keyboard-key="6">6</button>
+                  <button id="home-scientific-calculator-key-multiply" type="button" class="calc-key calc-key-operator" aria-label="Multiply" data-calculator-action="insert" data-calculator-value="×" data-keyboard-key="* x">×</button>
+                  <button id="home-scientific-calculator-key-divide" type="button" class="calc-key calc-key-operator" aria-label="Divide" data-calculator-action="insert" data-calculator-value="÷" data-keyboard-key="/">÷</button>
+                  <button id="home-scientific-calculator-key-digit-1" type="button" class="calc-key calc-key-digit" aria-label="1" data-calculator-action="insert" data-calculator-value="1" data-keyboard-key="1">1</button>
+                  <button id="home-scientific-calculator-key-digit-2" type="button" class="calc-key calc-key-digit" aria-label="2" data-calculator-action="insert" data-calculator-value="2" data-keyboard-key="2">2</button>
+                  <button id="home-scientific-calculator-key-digit-3" type="button" class="calc-key calc-key-digit" aria-label="3" data-calculator-action="insert" data-calculator-value="3" data-keyboard-key="3">3</button>
+                  <button id="home-scientific-calculator-key-add" type="button" class="calc-key calc-key-operator" aria-label="Add" data-calculator-action="insert" data-calculator-value="+" data-keyboard-key="+">+</button>
+                  <button id="home-scientific-calculator-key-subtract" type="button" class="calc-key calc-key-operator" aria-label="Subtract" data-calculator-action="insert" data-calculator-value="−" data-keyboard-key="-">−</button>
+                  <button id="home-scientific-calculator-key-digit-0" type="button" class="calc-key calc-key-digit" aria-label="0" data-calculator-action="insert" data-calculator-value="0" data-keyboard-key="0">0</button>
+                  <button id="home-scientific-calculator-key-decimal-point" type="button" class="calc-key calc-key-digit" aria-label="Decimal point" data-calculator-action="insert" data-calculator-value="." data-keyboard-key=". ,">.</button>
+                  <button id="home-scientific-calculator-key-exponent-notation" type="button" class="calc-key calc-key-function" aria-label="Times ten to the power of" data-calculator-action="insert" data-calculator-value="E">EXP</button>
+                  <button id="home-scientific-calculator-key-toggle-sign" type="button" class="calc-key calc-key-function" aria-label="Change sign" data-calculator-action="toggle-sign">±</button>
+                  <button id="home-scientific-calculator-key-equals" type="button" class="calc-key calc-key-equals" aria-label="Calculate the answer" data-calculator-action="evaluate" data-keyboard-key="Enter =">=</button>
+              </div>
+            </div>
+
+            <details id="home-scientific-calculator-history" class="mt-4 rounded-xl border border-line" data-calculator-part="history">
+              <summary id="home-scientific-calculator-history-summary" class="focus-ring flex cursor-pointer list-none items-center justify-between rounded-xl px-4 py-2.5 text-sm font-semibold [&::-webkit-details-marker]:hidden">
+                <span>Calculation history</span>
+                <span class="hidden text-xs font-normal text-ink-muted sm:inline">Tap an answer to reuse it</span>
+              </summary>
+              <div class="border-t border-line p-2">
+                <p id="home-scientific-calculator-history-empty" class="px-3 py-2 text-sm text-ink-muted">Your answers will show up here after you press =.</p>
+                <ol id="home-scientific-calculator-history-list" class="space-y-0.5" aria-label="Recent answers"></ol>
+                <button id="home-scientific-calculator-history-clear-button" type="button" class="focus-ring mt-1 rounded-md px-3 py-1.5 text-sm font-semibold text-blush-ink hover:bg-blush" hidden>Clear history</button>
+              </div>
+            </details>
+          </section>
+
+          <div id="home-hero-side-column" class="grid content-start gap-6 @2xl:grid-cols-2 @4xl:grid-cols-1">
+            <section id="home-calculator-finder-section" class="panel p-4 sm:p-5" aria-labelledby="home-calculator-finder-heading" data-section="calculator-finder">
+              <h2 id="home-calculator-finder-heading" class="panel-heading">Find a calculator</h2>
+              <p id="home-calculator-finder-intro" class="mb-3 mt-0.5 text-sm text-ink-muted">Type what you want to work out, then pick a match.</p>
+              <search id="home-hero-search" class="block" data-search-region="hero">
+            <form id="home-hero-search-form" class="relative" action="/" method="get" data-search-key="hero" data-search-prefill="true">
+              <label for="home-hero-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="home-hero-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Try mortgage, 401k, or APR" class="search-input" aria-describedby="home-hero-search-status" aria-controls="home-hero-search-results" data-search-input="hero">
+              <p id="home-hero-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="home-hero-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+            </section>
+
+            <section id="home-side-category-section" class="panel p-4 sm:p-5" aria-labelledby="home-side-category-heading" data-section="side-category-list">
+              <h2 id="home-side-category-heading" class="panel-heading">Browse by category</h2>
+              <ul id="home-side-category-list" class="mt-1" role="list">
+{{SIDE_CATEGORIES}}
+              </ul>
+            </section>
+
+            {{AD_HERO}}
+          </div>
+        </div>
+      </section>
+
+      <section id="home-category-directory-section" class="border-t border-line pt-8" aria-labelledby="home-category-directory-heading" itemscope itemtype="https://schema.org/ItemList" data-section="category-directory">
+        <meta itemprop="numberOfItems" content="{{DIRECTORY_COUNT}}">
+        <h2 id="home-category-directory-heading" class="font-display text-2xl font-bold tracking-tight sm:text-3xl" itemprop="name">{{DIRECTORY_HEADING}}</h2>
+        <p id="home-category-directory-intro" class="mt-2 max-w-2xl text-ink-muted">{{DIRECTORY_INTRO}}</p>
+        <div id="home-category-directory-grid" class="mt-6 grid gap-5 @2xl:grid-cols-2 @6xl:grid-cols-3">
+{{DIRECTORY}}
+        </div>
+      </section>
+
+      {{AD_IN_FEED}}
+
+      {{FAQ}}
+
+      {{AD_BOTTOM}}
+    </main>
+
+{{INCLUDE:_footer.html}}
 </body>
 </html>

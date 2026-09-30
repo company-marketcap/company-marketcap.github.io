@@ -1,0 +1,48 @@
+    <div id="{{PAGE_ID}}-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="{{PAGE_ID}}-right-rail-sticky" class="sticky top-21">
+        {{AD_RIGHT_RAIL}}
+      </div>
+    </div>
+  </div>
+
+  <footer id="{{PAGE_ID}}-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="{{PAGE_ID}}-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="{{PAGE_ID}}-footer-brand">
+        <a id="{{PAGE_ID}}-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="{{PAGE_ID}}-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">{{SITE_NAME}}</span>
+        </a>
+        <p id="{{PAGE_ID}}-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">{{FOOTER_DESCRIPTION}}</p>
+      </div>
+
+      <nav id="{{PAGE_ID}}-footer-categories" aria-labelledby="{{PAGE_ID}}-footer-categories-heading">
+        <h2 id="{{PAGE_ID}}-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+{{FOOTER_CATEGORIES}}
+        </ul>
+      </nav>
+
+      <nav id="{{PAGE_ID}}-footer-company" aria-labelledby="{{PAGE_ID}}-footer-company-heading">
+        <h2 id="{{PAGE_ID}}-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="{{PAGE_ID}}-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="{{PAGE_ID}}-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="{{PAGE_ID}}-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="{{PAGE_ID}}-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="{{PAGE_ID}}-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="{{PAGE_ID}}-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="{{PAGE_ID}}-footer-bottom" class="border-t border-line">
+      <p id="{{PAGE_ID}}-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="{{PAGE_ID}}-footer-year">{{YEAR}}</span> {{SITE_NAME}}. Every calculator is free to use.</p>
+    </div>
+  </footer>

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Project Is
 
-**MarketCapInsights** — a static site of free financial calculators (mortgage, loans, retirement,
+**Company Marketcap** — a static site of free financial calculators (mortgage, loans, retirement,
 investing, tax, savings, business), US market only. Monetized via Google AdSense
 (`ca-pub-5426315045205785`). Hosted on GitHub Pages at `company-marketcap.github.io`.
 
@@ -16,11 +16,12 @@ in `/archive` for reference only — nothing there is built or deployed.
 
 ```
 src/config/site.json            site-wide settings
-src/config/categories.json      7 nav groups -> 23 subcategories (each a hub page)
+src/config/categories.json      the category page; 7 nav groups -> 23 subcategories (its sections)
 src/content/tools/<slug>.json   one file per calculator = its entire page (320 files)
-src/content/pages/<slug>.json   about, contact, privacy-policy, terms
-src/templates/*.html            tool / hub / home / page templates with {{TOKENS}}
-src/static/                     copied to the site root (styles, icons, ads.txt, Search Console file)
+src/content/pages/<slug>.json   home.json (home copy + FAQ); about, contact, privacy-policy, terms
+src/templates/*.html            home / category / tool / page + shared _partials, from the Company
+                                Marketcap design template ({{TOKENS}}, {{INCLUDE:_partial.html}})
+src/static/                     copied to the site root (assets/ css+js+images, ads.txt, icons, ...)
 src/build_data.py               validates all JSON -> src/data/ (gitignored)
 src/generate.py                 build_data + render -> public/ (gitignored)
 ```
@@ -29,8 +30,10 @@ src/generate.py                 build_data + render -> public/ (gitignored)
 
 Key rules:
 - Never edit `public/` — it is regenerated from scratch on every build.
-- A tool only gets a page when its `status` is `built`/`verified`/`done`; `planned` tools exist as
-  data only (nav, hubs and sitemap grow automatically as tools are built).
+- URLs are flat and every internal link ends in `.html`: `/`, `/financial-calculators.html` (the one
+  category page, a section per subcategory at `#<subcategory-slug>`), `/<tool-slug>.html`.
+- A tool only gets a page when its `status` is `built`/`verified`/`done`; `planned` tools are listed on
+  the category page as unlinked "Coming soon" items.
 - Each tool's `script` is fully self-contained (no shared JS runtime file) — an explicit decision:
   adding or fixing one calculator never touches any other page. Duplicate small helpers instead.
 - `compound-interest-calculator.json` is the reference implementation to copy for new tools.
@@ -41,10 +44,11 @@ Key rules:
 ```bash
 python3 src/generate.py                    # validate JSON + render public/
 python3 src/generate.py --include-planned  # render all 320 tools as noindex previews (template work)
-cd public && python3 -m http.server 8811   # local preview (use .html URLs locally)
+cd public && python3 -m http.server 8811   # local preview
 ```
 
-Python standard library only. The build fails with a clear message on invalid JSON, unknown
+Python standard library only (the pages load Tailwind v4 from its browser CDN and compile the
+stylesheet at runtime). The build fails with a clear message on invalid JSON, unknown
 subcategories/related slugs, missing required fields on live tools, or unknown template tokens.
 
 ## Deployment
