@@ -87,7 +87,8 @@ The design comes from the Company Marketcap template (Tailwind v4 compiled in th
 - The build fails on an unknown token. Tokens every template gets: `PAGE_ID`, `PAGE_TYPE`, `SITE_NAME`,
   `META_TITLE`, `META_DESCRIPTION`, `CANONICAL_URL`, `ROBOTS`, `HEAD_EXTRA`, `JSON_LD`,
   `SIDEBAR_CATEGORIES`, `FOOTER_CATEGORIES`, `FOOTER_DESCRIPTION`, `YEAR`, `AD_TOP`, `AD_BOTTOM`,
-  `AD_RIGHT_RAIL`, `H1`, `SUBTITLE`. Page-specific ones are listed in `TEMPLATE_TOKENS` in `generate.py`.
+  `AD_RIGHT_RAIL`, `H1`, `SUBTITLE`, `SIDEBAR_DESKTOP_CLASSES`, `HEADER_NAV_CLASSES` (home drops the
+  desktop sidebar and uses the full width; the sidebar is still its mobile drawer). Page-specific ones are listed in `TEMPLATE_TOKENS` in `generate.py`.
 - Ad slots are generated with the template's `ad-slot` markup; paste AdSense unit code per slot type
   (`ad-top-leaderboard`, `ad-bottom-leaderboard`, `ad-in-feed`, `ad-hero-rectangle`,
   `ad-right-rail-skyscraper`) in `render_ad()` when ads go live.

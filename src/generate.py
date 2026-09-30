@@ -35,7 +35,8 @@ OUT = ROOT / "public"
 
 COMMON_TOKENS = {"PAGE_ID", "PAGE_TYPE", "SITE_NAME", "META_TITLE", "META_DESCRIPTION", "CANONICAL_URL",
                  "ROBOTS", "HEAD_EXTRA", "JSON_LD", "SIDEBAR_CATEGORIES", "FOOTER_CATEGORIES",
-                 "FOOTER_DESCRIPTION", "YEAR", "AD_TOP", "AD_BOTTOM", "AD_RIGHT_RAIL", "H1", "SUBTITLE"}
+                 "FOOTER_DESCRIPTION", "YEAR", "AD_TOP", "AD_BOTTOM", "AD_RIGHT_RAIL", "H1", "SUBTITLE",
+                 "SIDEBAR_DESKTOP_CLASSES", "HEADER_NAV_CLASSES"}
 TEMPLATE_TOKENS = {
     "home.html": COMMON_TOKENS | {"AD_HERO", "AD_IN_FEED", "SIDE_CATEGORIES", "DIRECTORY", "DIRECTORY_COUNT",
                                   "DIRECTORY_HEADING", "DIRECTORY_INTRO", "FAQ"},
@@ -48,6 +49,11 @@ TEMPLATE_TOKENS = {
 TOKEN_RE = re.compile(r"\{\{([A-Z0-9_]+)\}\}")
 INCLUDE_RE = re.compile(r"\{\{INCLUDE:([\w.-]+)\}\}")
 RELATED_COUNT = 6
+# Desktop (lg+) sidebar: a sticky column on every page except home, which uses the full width.
+# Below lg the sidebar is always the hamburger drawer. Home shows the header links from lg instead.
+SIDEBAR_DESKTOP = ("lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none "
+                   "lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent")
+SIDEBAR_DESKTOP_HOME = "lg:hidden"
 HOME_ID = "home"
 SEARCH_INDEX = "assets/data/calculator-search-index.json"
 
@@ -238,6 +244,8 @@ class Site:
             "AD_TOP": render_ad(page_id, "top"), "AD_BOTTOM": render_ad(page_id, "bottom"),
             "AD_RIGHT_RAIL": render_ad(page_id, "right_rail"),
             "H1": esc(fill(h1, self.site)), "SUBTITLE": esc(fill(subtitle, self.site)),
+            "SIDEBAR_DESKTOP_CLASSES": SIDEBAR_DESKTOP_HOME if page_type == "home" else SIDEBAR_DESKTOP,
+            "HEADER_NAV_CLASSES": "hidden lg:block" if page_type == "home" else "hidden xl:block",
         }
 
     # --- listing components ---
