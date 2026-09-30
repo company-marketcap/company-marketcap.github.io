@@ -32,7 +32,7 @@ SITES = ["calculator.net", "dinkytown.net", "fncalculator.com"]
 # Ordered: the first rule whose pattern matches the calculator name wins, so
 # specific topics come before broad ones (e.g. "401k" before "retirement").
 FINANCE_SUBCATEGORIES = [
-    ("Retirement Accounts (401k, IRA, Roth, RRSP, TFSA)",
+    ("Retirement Accounts (401k, 403b, 457, IRA, Roth)",
      r"401 ?\(?k|403 ?\(?b|457|72 ?\(?t\b|\bira\b|roth|\brmd\b|required minimum|rrsp|rrif|tfsa|\blira\b|\bsep\b|simple ira|keogh|self-employed retirement|pension|stretch|net unrealized appreciation|\bnua\b"),
     ("Social Security & Annuities",
      r"social security|annuit|\bcpp\b|\boas\b|canada pension|old age security"),
@@ -94,7 +94,7 @@ OVERRIDES = [(re.compile(rx, re.I), sub) for rx, sub in [
     (r"dealer financing|truck", "Auto Loans & Leasing"),
     (r"equity line", "Home Equity & Refinancing"),
     (r"taxes and insurance|\bpiti\b|\bpmi\b", "Mortgage & Home Buying"),
-    (r"thrift savings", "Retirement Accounts (401k, IRA, Roth, RRSP, TFSA)"),
+    (r"thrift savings", "Retirement Accounts (401k, 403b, 457, IRA, Roth)"),
     (r"retirement planner", "Retirement Planning"),
 ]]
 UNCATEGORIZED = "Uncategorized (review)"
@@ -133,8 +133,8 @@ ALIASES = {
     "roth ira vs traditional ira": "roth vs traditional ira",
     "required minimum distribution rmd": "rmd",
     "required minimum distribution": "rmd",
-    "margin and markup": "margin markup",
-    "margin markup": "margin markup",
+    "margin and markup": "margin",
+    "margin markup": "margin",
     "hourly to salary": "salary hourly",
     "salary to hourly": "salary hourly",
     "hourly salary": "salary hourly",
@@ -153,11 +153,53 @@ ALIASES = {
     "interest only mortgage": "interest only mortgage",
     "internal rate of return irr": "irr",
     "internal rate of return": "irr",
-    "mutual fund expense": "mutual fund fee",
+    "mutual fund expense": "mutual fund",
+    "mutual fund fee": "mutual fund",
     "home rent vs buy": "rent vs buy",
     "lease": "auto lease",
     "car loan": "auto loan",
-    "credit card payoff": "credit card payoff",
+    # Same tool under different names across sites (reviewed by hand).
+    "mortgage tax savings": "mortgage tax saving",
+    "social security benefit": "social security",
+    "municipal bond tax equivalent yield": "tax equivalent yield",
+    "arm vs fixed rate mortgage": "fixed vs adjustable rate mortgage",
+    "currency converter": "currency",
+    "profit margin": "margin",
+    "irr npv": "irr",
+    "estate tax planning": "estate tax",
+    "accelerated debt payoff": "debt payoff",
+    "discount and tax": "discount",
+    "home budget": "budget",
+    "retirement pension": "pension",
+    "investment returns": "investment",
+    "inflation and consumer prices": "inflation",
+    "traditional ira": "ira",
+    "health savings account hsa savings": "hsa",
+    "credit card": "credit card payoff",
+    "amortizing loan": "amortization",
+    "take home paycheck": "paycheck",
+    "paycheck tax": "paycheck",
+    "payroll deductions": "paycheck",
+    "1040 tax": "income tax",
+    "simple federal tax": "income tax",
+    "u s easy tax": "income tax",
+    "should i refinance": "refinance",
+    "loan refinance savings": "refinance",
+    "personal debt consolidation": "debt consolidation",
+    "personal debt consolidator": "debt consolidation",
+    "investment property": "rental property",
+    "business loan": "commercial loan",
+    "market value of bonds": "bond",
+    "balloon mortgage": "balloon loan",
+    "lump sum present value": "present value",
+    "lump sum future value": "future value",
+    "auto rebate vs low interest financing": "cash back or low interest",
+    "low interest financing savings": "cash back or low interest",
+    "mortgage with taxes and insurance": "mortgage",
+    "mortgage with pmi": "mortgage",
+    "fixed rate mortgage": "mortgage",
+    "mortgage for purchase price and down payment piti": "mortgage for purchase price and down payment",
+    "home equity line of credit": "heloc",
 }
 
 # Links on hub pages that are not calculators.
@@ -188,6 +230,19 @@ def clean_name(text):
     return DESCRIPTION_RE.sub("", text)
 
 
+# US-only focus: Canadian calculators (dinkytown's Canadian section and "(Canadian)" versions)
+# and tools for taxes the US doesn't have are excluded and listed on their own sheet.
+NON_US_RE = re.compile(r"canad|\brrsp\b|\brrif\b|\btfsa\b|\bresp\b|\blira\b|\bvat\b|\bgst\b|\bhst\b", re.I)
+
+
+def non_us_reason(r):
+    if r["region"] == "Canada":
+        return "Canadian"
+    if NON_US_RE.search(r["name"]):
+        return "Not applicable in the US"
+    return ""
+
+
 # Yearly editions of the same tool, e.g. "1040 Tax Calculator (Tax Year 2023)".
 TAX_YEAR_RE = re.compile(r"\s*\((tax year \d{4}|prior tax year)\)", re.I)
 
@@ -206,7 +261,8 @@ def norm_key(name):
     k = re.sub(r"\b(canadian|canada|us|u\.s\.)\b", " ", k)
     k = re.sub(r"[^a-z0-9 ]+", " ", k)
     k = re.sub(r"\s+", " ", k).strip()
-    k = ALIASES.get(k, k)
+    while ALIASES.get(k, k) != k:  # aliases may chain
+        k = ALIASES[k]
     return k
 
 
@@ -259,11 +315,17 @@ def extract_dinkytown():
         # Full listing last so hub categories win; catches anything not on a hub.
         "financialcalculators.html": "Full listing",
     }
+    def hub_links(hub):
+        path = mirror / hub
+        if not path.exists():
+            return set()
+        return {a["href"].split("#")[0] for a in soup(path).find_all("a", href=True)}
+
     # French (FR.html) and Spanish (SP.html) pages are translations of English calculators.
-    translated = set()
-    for hub in ("FR.html", "SP.html"):
-        if (mirror / hub).exists():
-            translated |= {a["href"].split("#")[0] for a in soup(mirror / hub).find_all("a", href=True)}
+    # Links in the shared site header appear on those pages too, so anything an English
+    # category page also links to is not a translation.
+    english = set().union(*(hub_links(h) for h in hubs if h != "financialcalculators.html"))
+    translated = (hub_links("FR.html") | hub_links("SP.html")) - english
     rows, by_href = [], {}
     for hub, cat in hubs.items():
         path = mirror / hub
@@ -365,18 +427,18 @@ def sheet_title(ws, title, subtitle, width_cols):
     ws.sheet_view.showGridLines = False
 
 
-def build_workbook(rows, unique):
+def build_workbook(rows, unique, excluded):
     wb = Workbook()
     subcats = [n for n, _ in FINANCE_SUBCATEGORIES] + [UNCATEGORIZED]
     used = [n for n in subcats if any(u["subcategory"] == n for u in unique)]
     colour = {n: PASTELS[i % len(PASTELS)] for i, n in enumerate(used)}
     today = date.today().strftime("%-d %B %Y")
-    source = f"Sources: {', '.join(SITES)}  ·  Generated {today}"
+    source = f"US calculators only  ·  Sources: {', '.join(SITES)}  ·  Generated {today}"
 
     # --- Overview ---------------------------------------------------------
     ws = wb.active
     ws.title = "Overview"
-    sheet_title(ws, "Competitor Finance Calculator Inventory", source, 9)
+    sheet_title(ws, "Competitor Finance Calculator Inventory (US)", source, 9)
 
     kpis = [
         ("Unique finance calculators", len(unique)),
@@ -469,7 +531,7 @@ def build_workbook(rows, unique):
     # --- Calculators (unique, finance) -----------------------------------------
     ws = wb.create_sheet("Calculators")
     headers = ["Subcategory", "Calculator", "Sites (of 3)"] + SITES + \
-              ["Regions", "Name variants on other sites"] + [f"{s} link" for s in SITES] + ["Other URLs"]
+              ["Name variants on other sites"] + [f"{s} link" for s in SITES] + ["Other URLs"]
     sheet_title(ws, "Unique finance calculators", f"{len(unique)} calculators merged across sites  ·  "
                 "✓ = the site has it  ·  links open the competitor page  ·  " + source, len(headers))
     data = []
@@ -477,9 +539,9 @@ def build_workbook(rows, unique):
         extra = [m["url"] for s in SITES for m in u["per_site"][s][1:]]
         data.append([u["subcategory"], u["name"], u["site_count"]] +
                      ["✓" if u["per_site"][s] else "" for s in SITES] +
-                     [u["regions"], "; ".join(u["variants"])] + [""] * len(SITES) + ["\n".join(extra)])
+                     ["; ".join(u["variants"])] + [""] * len(SITES) + ["\n".join(extra)])
     first, last = add_table(ws, "Calculators", headers, data,
-                            [36, 40, 10, 13, 13, 15, 14, 36, 13, 13, 15, 50], first_row=4)
+                            [36, 40, 10, 13, 13, 15, 44, 13, 13, 15, 50], first_row=4)
     for i, u in enumerate(unique):
         r = first + i
         ws.cell(row=r, column=1).fill = fill(colour[u["subcategory"]])
@@ -488,8 +550,8 @@ def build_workbook(rows, unique):
             ws.cell(row=r, column=c).alignment = Alignment(horizontal="center", vertical="top")
         for j, s in enumerate(SITES):
             if u["per_site"][s]:
-                link(ws.cell(row=r, column=9 + j), u["per_site"][s][0]["url"])
-                ws.cell(row=r, column=9 + j).alignment = Alignment(horizontal="center", vertical="top")
+                link(ws.cell(row=r, column=8 + j), u["per_site"][s][0]["url"])
+                ws.cell(row=r, column=8 + j).alignment = Alignment(horizontal="center", vertical="top")
     ws.conditional_formatting.add(f"D{first}:F{last}", CellIsRule(operator="equal", formula=['"✓"'],
                                   fill=fill("C6EFCE"), font=Font(color="006100", bold=True)))
     ws.conditional_formatting.add(f"C{first}:C{last}", ColorScaleRule(
@@ -500,16 +562,16 @@ def build_workbook(rows, unique):
 
     # --- All source rows ---------------------------------------------------------
     ws = wb.create_sheet("All source rows")
-    headers = ["Site", "Site's own category", "Calculator", "Type", "Subcategory", "Region", "Match key", "URL"]
+    headers = ["Site", "Site's own category", "Calculator", "Type", "Subcategory", "Match key", "URL"]
     sheet_title(ws, "Every calculator as listed on each site",
                 "One row per calculator per site, before merging  ·  Match key is what merges rows  ·  " + source,
                 len(headers))
     data = [[r["site"], r["site_category"], r["name"], "Finance" if r["finance"] else "Non-finance",
-             r["subcategory"], r["region"], r["key"], ""] for r in rows]
-    first, _ = add_table(ws, "SourceRows", headers, data, [18, 26, 42, 12, 36, 13, 30, 13],
+             r["subcategory"], r["key"], ""] for r in rows]
+    first, _ = add_table(ws, "SourceRows", headers, data, [18, 26, 42, 12, 36, 30, 13],
                          first_row=4, style="TableStyleMedium9")
     for i, r in enumerate(rows):
-        link(ws.cell(row=first + i, column=8), r["url"])
+        link(ws.cell(row=first + i, column=7), r["url"])
         if r["subcategory"]:
             ws.cell(row=first + i, column=5).fill = fill(colour[r["subcategory"]])
     ws.freeze_panes = "D5"
@@ -524,6 +586,18 @@ def build_workbook(rows, unique):
                          [22, 44, 13], first_row=4, style="TableStyleMedium7")
     for i, r in enumerate(nonfin):
         link(ws.cell(row=first + i, column=3), r["url"])
+    ws.freeze_panes = "A5"
+
+    # --- Excluded (non-US) ---------------------------------------------------------
+    ws = wb.create_sheet("Excluded (non-US)")
+    headers = ["Reason", "Site", "Site's own category", "Calculator", "URL"]
+    sheet_title(ws, "Excluded: non-US calculators",
+                f"{len(excluded)} calculators left out of the US inventory  ·  " + source, len(headers))
+    first, _ = add_table(ws, "Excluded", headers,
+                         [[r["reason"], r["site"], r["site_category"], r["name"], ""] for r in excluded],
+                         [22, 18, 26, 50, 13], first_row=4, style="TableStyleMedium3")
+    for i, r in enumerate(excluded):
+        link(ws.cell(row=first + i, column=5), r["url"])
     ws.freeze_panes = "A5"
 
     for sheet in wb.worksheets:
@@ -546,11 +620,15 @@ def main():
         print(f"{site}: {len(site_rows)} calculators")
         rows.extend(site_rows)
 
+    excluded = [dict(r, reason=non_us_reason(r)) for r in rows if non_us_reason(r)]
+    rows = [r for r in rows if not non_us_reason(r)]
+    print(f"Excluded as non-US: {len(excluded)}")
+
     for r in rows:
         r["key"] = norm_key(r["name"])
         r["subcategory"] = categorize(r["name"]) if r["finance"] else ""
 
-    # Merge the same calculator across sites (and US/Canada variants of it).
+    # Merge the same calculator across sites.
     groups = defaultdict(list)
     for r in rows:
         if r["finance"]:
@@ -558,21 +636,21 @@ def main():
 
     unique = []
     for key, members in groups.items():
-        # Prefer a US/Global name without "(Canadian)" as the display name.
-        display = sorted(members, key=lambda r: ("canad" in r["name"].lower(), len(r["name"])))[0]
+        # Display name: the plainest naming (calculator.net, then fncalculator, then dinkytown).
+        site_rank = {"calculator.net": 0, "fncalculator.com": 1, "dinkytown.net": 2}
+        display = sorted(members, key=lambda r: (site_rank[r["site"]], len(r["name"])))[0]
         per_site = {s: [m for m in members if m["site"] == s] for s in SITES}
         unique.append(dict(
             subcategory=display["subcategory"],
             name=TAX_YEAR_RE.sub("", display["name"]).strip(),
             key=key,
-            regions=", ".join(sorted({m["region"] for m in members})),
             site_count=sum(1 for s in SITES if per_site[s]),
             per_site=per_site,
             variants=sorted({m["name"] for m in members} - {display["name"]}),
         ))
     unique.sort(key=lambda u: (u["subcategory"], -u["site_count"], u["name"].lower()))
 
-    build_workbook(rows, unique)
+    build_workbook(rows, unique, excluded)
     uncategorized = [u["name"] for u in unique if u["subcategory"] == UNCATEGORIZED]
     print(f"Unique finance calculators: {len(unique)}; subcategories used: "
           f"{len({u['subcategory'] for u in unique})}; uncategorized: {len(uncategorized)}")

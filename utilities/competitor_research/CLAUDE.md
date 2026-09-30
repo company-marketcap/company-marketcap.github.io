@@ -45,10 +45,16 @@ Adding a competitor: add an entry to `SITES` in `crawl.py` (`start`, `hosts`, `c
 
 - Each site's own index/category pages are the source of truth for which pages are calculators and
   which category the site files them under (kept in the "All source rows" sheet).
-- dinkytown's French (`FR.html`) and Spanish (`SP.html`) pages are translations and are excluded;
-  its Canadian versions are merged with the US equivalent and flagged in the Regions column.
+- **US only.** Canadian calculators (dinkytown's Canadian section and "(Canadian)" versions) and tools
+  for taxes the US doesn't have (VAT/GST) are excluded by `non_us_reason()` and listed on the
+  "Excluded (non-US)" sheet.
+- dinkytown's French (`FR.html`) and Spanish (`SP.html`) pages are translations and are excluded.
+  Links in its shared header appear on those pages too, so only links no English category page has
+  count as translations.
 - The same calculator across sites is merged by a normalised name key (`norm_key`) plus the `ALIASES`
-  map. Yearly editions ("Tax Year 2023", "Prior Tax Year") merge into one.
+  map, which also holds hand-reviewed same-tool/different-name pairs (e.g. Take-Home Paycheck = US
+  Paycheck Tax = Payroll Deductions). Yearly editions ("Tax Year 2023", "Prior Tax Year") merge into
+  one. Merged names are kept in the "Name variants on other sites" column.
 - Subcategory = first matching rule in `OVERRIDES`, then `FINANCE_SUBCATEGORIES` (ordered, specific
   before broad). Anything unmatched lands in "Uncategorized (review)" — fix by adding a rule or alias,
   not by editing the spreadsheet by hand.
@@ -61,14 +67,14 @@ The new MarketCapInsights is a broad **finance calculators** site organised into
 replacing the current handful of investing calculators.
 
 ### Step 1 — Consolidated calculator inventory ✅
-`calculator_inventory.xlsx`: every unique finance calculator across calculator.net, dinkytown.net and
-fncalculator.com, merged across sites and assigned to one of 23 subcategories, with per-site coverage
-and links. Review the "Calculators" sheet and adjust rules/aliases where a grouping looks wrong.
+`calculator_inventory.xlsx`: every unique US finance calculator across calculator.net, dinkytown.net
+and fncalculator.com, de-duplicated across sites and assigned to one of 23 subcategories, with
+per-site coverage and links. Review the "Calculators" sheet and adjust rules/aliases where a grouping looks wrong.
 
 ### Step 2 — Prioritise
 - Add columns for priority: coverage (on 2–3 sites = proven demand), estimated search volume and
-  keyword difficulty, build effort (S/M/L), and US-only vs global relevance.
-- Decide scope for Canada-specific tools (RRSP, TFSA, RESP, CPP) — separate section or skip.
+  keyword difficulty, and build effort (S/M/L).
+- Scope is the US market only; Canadian and other non-US calculators are out.
 - Cut near-duplicates and niche variants (e.g. many RMD/beneficiary permutations) into one flexible
   calculator with options where it serves users better.
 - Output: a ranked launch list (MVP ≈ 40–60 calculators) plus a backlog.
