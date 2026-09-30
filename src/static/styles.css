@@ -1,0 +1,35 @@
+/* Placeholder styles so generated pages are usable while the real template is designed.
+   Replace wholesale with the new design; class names used by generate.py are listed in
+   src/README.md ("Markup contract"). */
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; color: #1f2933; background: #fff; }
+a { color: #1d4ed8; }
+.site-header, .site-main, .site-footer { max-width: 1100px; margin: 0 auto; padding: 16px; }
+.site-header { display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start; }
+.site-logo { font-weight: 700; font-size: 1.25rem; text-decoration: none; color: inherit; }
+.nav-groups, .nav-subs, .nav-tools, .tool-grid, .category-grid, .footer-links, .breadcrumb ol { list-style: none; margin: 0; padding: 0; }
+.nav-groups { display: flex; flex-wrap: wrap; gap: 8px; }
+.nav-group { position: relative; }
+.nav-group-toggle { font: inherit; background: none; border: 1px solid #d0d7de; border-radius: 6px; padding: 4px 10px; cursor: pointer; }
+.nav-subs { display: none; position: absolute; z-index: 10; background: #fff; border: 1px solid #d0d7de; border-radius: 6px; padding: 8px; min-width: 240px; max-height: 70vh; overflow: auto; }
+.nav-group-toggle[aria-expanded="true"] + .nav-subs { display: block; }
+.nav-sub-link { font-weight: 600; }
+.nav-tools { padding-left: 12px; font-size: .9rem; }
+.breadcrumb ol { display: flex; flex-wrap: wrap; gap: 6px; font-size: .9rem; }
+.breadcrumb li + li::before { content: "›"; margin-right: 6px; color: #6b7280; }
+.subtitle { color: #4b5563; }
+.tool-card, .content-card, .faq, .related-tools { border: 1px solid #e5e7eb; border-radius: 10px; padding: 20px; margin: 20px 0; }
+.tool-grid, .category-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
+.tool-link a, .category-card a { display: block; height: 100%; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px; text-decoration: none; color: inherit; }
+.tool-link-name, .category-name { display: block; font-weight: 600; color: #1d4ed8; }
+.tool-link-desc, .category-desc, .category-count { display: block; font-size: .9rem; color: #4b5563; }
+.disclaimer { font-size: .85rem; color: #6b7280; }
+.tool-preview-note { color: #92400e; background: #fffbeb; padding: 8px 12px; border-radius: 6px; }
+table { border-collapse: collapse; width: 100%; }
+th, td { border-bottom: 1px solid #e5e7eb; padding: 6px 8px; text-align: right; }
+th:first-child, td:first-child { text-align: left; }
+.table-scroll { overflow-x: auto; }
+.faq-item { border-bottom: 1px solid #e5e7eb; padding: 8px 0; }
+.faq-item summary { cursor: pointer; font-weight: 600; }
+.site-footer { border-top: 1px solid #e5e7eb; font-size: .9rem; color: #4b5563; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 16px; }

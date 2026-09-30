@@ -1,0 +1,57 @@
+{
+  "slug": "compound-interest-calculator",
+  "status": "built",
+  "name": "Compound Interest Calculator",
+  "nav_name": "Compound Interest",
+  "subcategory": "interest-calculators",
+  "priority": 2,
+  "order": 30,
+  "meta_title": "Compound Interest Calculator with Monthly Contributions",
+  "meta_description": "Calculate how savings grow with compound interest and monthly contributions. See future value, total interest and a year-by-year growth table.",
+  "h1": "Compound Interest Calculator",
+  "subtitle": "See how your savings grow when interest earns interest, with optional monthly contributions and a year-by-year breakdown.",
+  "card": {
+    "layout": "raw",
+    "fields_html": "<form class=\"calc-form\" id=\"ciForm\" novalidate>\n  <div class=\"calc-field\"><label for=\"ciPrincipal\">Initial deposit ($)</label><input type=\"number\" id=\"ciPrincipal\" min=\"0\" step=\"100\" value=\"10000\" inputmode=\"decimal\"></div>\n  <div class=\"calc-field\"><label for=\"ciMonthly\">Monthly contribution ($)</label><input type=\"number\" id=\"ciMonthly\" min=\"0\" step=\"10\" value=\"200\" inputmode=\"decimal\"></div>\n  <div class=\"calc-field\"><label for=\"ciRate\">Annual interest rate (%)</label><input type=\"number\" id=\"ciRate\" min=\"0\" max=\"100\" step=\"0.1\" value=\"6\" inputmode=\"decimal\"></div>\n  <div class=\"calc-field\"><label for=\"ciYears\">Years</label><input type=\"number\" id=\"ciYears\" min=\"1\" max=\"100\" step=\"1\" value=\"20\" inputmode=\"numeric\"></div>\n  <div class=\"calc-field\"><label for=\"ciCompound\">Compounding</label><select id=\"ciCompound\"><option value=\"365\">Daily</option><option value=\"12\" selected>Monthly</option><option value=\"4\">Quarterly</option><option value=\"2\">Semiannually</option><option value=\"1\">Annually</option></select></div>\n  <p class=\"calc-error\" id=\"ciError\" role=\"alert\" hidden></p>\n</form>\n<div class=\"calc-results\" id=\"ciResults\" aria-live=\"polite\">\n  <div class=\"calc-stat calc-stat-main\"><span class=\"calc-stat-label\">Future value</span><span class=\"calc-stat-value\" id=\"ciFuture\">–</span></div>\n  <div class=\"calc-stat\"><span class=\"calc-stat-label\">Total contributed</span><span class=\"calc-stat-value\" id=\"ciContributed\">–</span></div>\n  <div class=\"calc-stat\"><span class=\"calc-stat-label\">Interest earned</span><span class=\"calc-stat-value\" id=\"ciInterest\">–</span></div>\n</div>\n<details class=\"calc-schedule\"><summary>Year-by-year growth</summary><div class=\"table-scroll\"><table><thead><tr><th scope=\"col\">Year</th><th scope=\"col\">Contributed</th><th scope=\"col\">Interest</th><th scope=\"col\">Balance</th></tr></thead><tbody id=\"ciSchedule\"></tbody></table></div></details>",
+    "extra_scripts": []
+  },
+  "script": "(function () {\n  'use strict';\n  // Compound interest with end-of-month contributions. Contributions compound at the\n  // effective monthly rate implied by the chosen compounding frequency:\n  //   monthlyRate = (1 + r/n)^(n/12) - 1\n  // Verified against closed-form values (e.g. $10,000 at 5% monthly for 10 years = $16,470.09).\n  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 });\n\n  function num(id) {\n    var v = parseFloat(document.getElementById(id).value);\n    return isNaN(v) ? NaN : v;\n  }\n\n  function project(principal, monthly, annualRate, years, n) {\n    var monthlyRate = Math.pow(1 + annualRate / n, n / 12) - 1;\n    var balance = principal, contributed = principal, rows = [];\n    for (var m = 1; m <= years * 12; m++) {\n      balance = balance * (1 + monthlyRate) + monthly;\n      contributed += monthly;\n      if (m % 12 === 0) rows.push({ year: m / 12, contributed: contributed, balance: balance });\n    }\n    return { balance: balance, contributed: contributed, rows: rows };\n  }\n\n  function update() {\n    var principal = num('ciPrincipal'), monthly = num('ciMonthly'), rate = num('ciRate'),\n        years = Math.round(num('ciYears')), n = parseInt(document.getElementById('ciCompound').value, 10);\n    var error = document.getElementById('ciError');\n    var bad = [principal, monthly, rate, years].some(isNaN) || principal < 0 || monthly < 0 ||\n              rate < 0 || rate > 100 || years < 1 || years > 100;\n    error.hidden = !bad;\n    if (bad) {\n      error.textContent = 'Enter non-negative amounts, a rate from 0 to 100% and 1 to 100 years.';\n      return;\n    }\n    var r = project(principal, monthly, rate / 100, years, n);\n    document.getElementById('ciFuture').textContent = money.format(r.balance);\n    document.getElementById('ciContributed').textContent = money.format(r.contributed);\n    document.getElementById('ciInterest').textContent = money.format(r.balance - r.contributed);\n    document.getElementById('ciSchedule').innerHTML = r.rows.map(function (row) {\n      return '<tr><td>' + row.year + '</td><td>' + money.format(row.contributed) + '</td><td>' +\n             money.format(row.balance - row.contributed) + '</td><td>' + money.format(row.balance) + '</td></tr>';\n    }).join('');\n  }\n\n  document.addEventListener('DOMContentLoaded', function () {\n    var form = document.getElementById('ciForm');\n    form.addEventListener('input', update);\n    form.addEventListener('change', update);\n    form.addEventListener('submit', function (e) { e.preventDefault(); });\n    update();\n  });\n})();",
+  "content_html": "<p>Compound interest is interest earned on interest. Each period, the interest your money earns is added to the balance, so the next period's interest is calculated on a slightly larger amount. Over long stretches this snowball effect does most of the work, which is why starting early matters more than almost any other choice.</p>\n<h2>How to use this calculator</h2>\n<ol>\n<li><strong>Initial deposit:</strong> the amount you start with today. Use 0 if you're starting from scratch.</li>\n<li><strong>Monthly contribution:</strong> what you'll add at the end of each month.</li>\n<li><strong>Annual interest rate:</strong> the yearly rate before compounding, as quoted by a bank or as an assumed average investment return.</li>\n<li><strong>Years:</strong> how long the money stays invested.</li>\n<li><strong>Compounding:</strong> how often interest is credited. Savings accounts usually compound daily or monthly; many bonds and CDs compound semiannually or annually.</li>\n</ol>\n<p>Results update as you type. Open <em>Year-by-year growth</em> to see how the balance builds and how the share coming from interest grows each year.</p>\n<h2>The compound interest formula</h2>\n<p>For a single deposit with no further contributions, the future value is:</p>\n<p><code>FV = P × (1 + r/n)<sup>n×t</sup></code></p>\n<p>where <code>P</code> is the starting amount, <code>r</code> the annual rate as a decimal, <code>n</code> the number of compounding periods per year and <code>t</code> the number of years. For example, $10,000 at 5% compounded monthly for 10 years grows to $10,000 × (1 + 0.05/12)<sup>120</sup> ≈ $16,470.09.</p>\n<p>Regular contributions each grow for a different length of time, so the calculator adds them month by month. When the compounding frequency isn't monthly, it converts the annual rate to the equivalent monthly rate, <code>(1 + r/n)<sup>n/12</sup> − 1</code>, so every contribution earns exactly what it would under the chosen compounding schedule.</p>\n<h2>What makes the biggest difference</h2>\n<table>\n<thead><tr><th scope=\"col\">Change (starting from $10,000 + $200/month at 6% for 20 years)</th><th scope=\"col\">Effect</th></tr></thead>\n<tbody>\n<tr><td>Invest for 30 years instead of 20</td><td>Large: time is the strongest lever</td></tr>\n<tr><td>Earn 7% instead of 6%</td><td>Large over long periods</td></tr>\n<tr><td>Contribute $300 instead of $200 a month</td><td>Moderate and predictable</td></tr>\n<tr><td>Compound daily instead of monthly</td><td>Small: a few dollars per thousand</td></tr>\n</tbody>\n</table>\n<p>Try each change above in the calculator to see the exact numbers for your situation. Compounding frequency gets a lot of attention in advertising, but the rate, the time horizon and steady contributions matter far more.</p>\n<h2>Limits of this estimate</h2>\n<ul>\n<li>It assumes a constant rate. Investment returns vary year to year, so treat an assumed market return as an average, not a promise.</li>\n<li>It ignores taxes, fees and inflation. Use an inflation calculator to see what the future balance is worth in today's dollars.</li>\n<li>Contributions are assumed at the end of each month. Contributing at the start of the month would produce a slightly higher balance.</li>\n</ul>",
+  "faq": [
+    {
+      "question": "What is the difference between compound and simple interest?",
+      "answer": "Simple interest is calculated only on the original amount, so it grows by the same dollar amount every year. Compound interest is calculated on the original amount plus all interest already earned, so the yearly gain gets larger over time."
+    },
+    {
+      "question": "How often should interest compound for the best result?",
+      "answer": "More frequent compounding produces a slightly higher balance at the same stated rate, but the difference between daily and monthly compounding is very small. Comparing the annual percentage yield (APY) of two accounts is a more reliable way to see which pays more."
+    },
+    {
+      "question": "What interest rate should I use for stock market investments?",
+      "answer": "There is no guaranteed rate for investments. Many people test a range, such as 4%, 6% and 8%, to see a cautious, middle and optimistic outcome rather than relying on a single figure."
+    },
+    {
+      "question": "Does this calculator account for inflation or taxes?",
+      "answer": "No. The results show the nominal balance before taxes and fees. To see the value in today's money, adjust the result with an inflation calculator, and check how your account is taxed."
+    },
+    {
+      "question": "Is my information stored or sent anywhere?",
+      "answer": "No. The calculation runs entirely in your browser, and nothing you enter is sent to a server or saved."
+    }
+  ],
+  "related": [],
+  "research": {
+    "competitor_count": 2,
+    "competitors": [
+      {
+        "site": "calculator.net",
+        "url": "https://www.calculator.net/compound-interest-calculator.html"
+      },
+      {
+        "site": "fncalculator.com",
+        "url": "https://www.fncalculator.com/financialcalculator?type=interestCalculator"
+      }
+    ],
+    "name_variants": []
+  }
+}

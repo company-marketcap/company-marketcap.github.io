@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{META_TITLE}}</title>
+<meta name="description" content="{{META_DESCRIPTION}}">
+<meta name="robots" content="{{ROBOTS}}">
+<link rel="canonical" href="{{CANONICAL_URL}}">
+<meta property="og:title" content="{{META_TITLE}}">
+<meta property="og:description" content="{{META_DESCRIPTION}}">
+<meta property="og:url" content="{{CANONICAL_URL}}">
+<meta property="og:type" content="website">
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" href="/styles.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ADSENSE_CLIENT}}" crossorigin="anonymous"></script>
+{{JSON_LD}}
+</head>
+<body>
+<header class="site-header">
+  <a class="site-logo" href="/">{{SITE_NAME}}</a>
+  {{NAV}}
+</header>
+<main class="site-main">
+  {{BREADCRUMB}}
+  <header class="page-hero"><h1>{{H1}}</h1><p class="subtitle">{{SUBTITLE}}</p></header>
+  {{CATEGORY_GRID}}
+</main>
+<footer class="site-footer">{{FOOTER}}</footer>
+<script>
+/* Site-wide nav dropdowns (not tool logic — every page, including info pages, needs it). */
+document.querySelectorAll('.nav-group-toggle').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var open = btn.getAttribute('aria-expanded') === 'true';
+    document.querySelectorAll('.nav-group-toggle').forEach(function (b) { b.setAttribute('aria-expanded', 'false'); });
+    btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+  });
+});
+</script>
+</body>
+</html>
