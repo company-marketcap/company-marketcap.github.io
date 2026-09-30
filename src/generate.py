@@ -456,6 +456,15 @@ def search_index(S):
     return entries
 
 
+def unlink_unpublished(content, dead_hrefs):
+    """While an info page isn't published, drop menu items that point at it and turn any other
+    link to it into plain text, so production never links to a missing page."""
+    for h in dead_hrefs:
+        content = re.sub(rf'\s*<li><a [^>]*href="{re.escape(h)}"[^>]*>[^<]*</a></li>', "", content)
+        content = re.sub(rf'<a [^>]*href="{re.escape(h)}"[^>]*>(.*?)</a>', r"\1", content, flags=re.S)
+    return content
+
+
 def sitemap_xml(site, slugs):
     today = date.today().isoformat()
     urls = "".join(f"<url><loc>{esc(url(site, s))}</loc><lastmod>{today}</lastmod></url>" for s in slugs)
@@ -477,8 +486,10 @@ def main():
         shutil.rmtree(OUT)
     shutil.copytree(STATIC, OUT)
 
+    dead = [href(p["slug"]) for p in pages["info_pages"] if not p["live"]]
+
     def write(name, content):
-        (OUT / f"{name}.html").write_text(content, encoding="utf-8")
+        (OUT / f"{name}.html").write_text(unlink_unpublished(content, dead), encoding="utf-8")
 
     indexable = [""]
     write("index", render_home(S))

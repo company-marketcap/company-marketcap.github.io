@@ -34,6 +34,8 @@ LIVE_STATUSES = {"built", "verified", "done"}
 CARD_LAYOUTS = {"raw"}
 REQUIRED_WHEN_LIVE = ["meta_title", "meta_description", "h1", "subtitle", "content_html"]
 TITLE_MAX, DESCRIPTION_MAX = 60, 160
+# Marker for details still to be filled in (e.g. the contact email). A live page can't contain it.
+PLACEHOLDER = "PLACEHOLDER"
 # Page slugs generate.py produces itself; a tool can't use them.
 RESERVED_SLUGS = {"index", "home", "404", "sitemap"}
 
@@ -104,6 +106,8 @@ def load_tools(subcats, include_planned, problems):
             if not tool.get("script", "").strip():
                 problems.error(where, f"status {tool['status']!r} but script is empty")
             check_meta(where, tool, problems)
+            if PLACEHOLDER in json.dumps(tool):
+                problems.error(where, f"status {tool['status']!r} but it still contains a {PLACEHOLDER} marker")
         tool["live"] = live or include_planned
         tool["preview"] = include_planned and not live
         tools.append(tool)
@@ -140,6 +144,8 @@ def load_info_pages(site, include_planned, problems):
                 if not page.get(field, "").strip():
                     problems.error(f"pages/{slug}.json", f"status {page['status']!r} but {field} is empty")
             check_meta(f"pages/{slug}.json", page, problems)
+            if PLACEHOLDER in json.dumps(page):
+                problems.error(f"pages/{slug}.json", f"status {page['status']!r} but it still contains a {PLACEHOLDER} marker")
         page["live"] = live or include_planned
         page["preview"] = include_planned and not live
         pages.append(page)
