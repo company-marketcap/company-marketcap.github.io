@@ -41,7 +41,7 @@ TEMPLATE_TOKENS = {
     "home.html": COMMON_TOKENS | {"AD_HERO", "AD_IN_FEED", "SIDE_CATEGORIES", "DIRECTORY", "DIRECTORY_COUNT",
                                   "DIRECTORY_HEADING", "DIRECTORY_INTRO", "FAQ"},
     "category.html": COMMON_TOKENS | {"BREADCRUMB", "HERO_TILE", "JUMP_LINKS", "FINDER_INTRO", "AD_HERO",
-                                      "DIRECTORY_COUNT", "DIRECTORY_HEADING", "DIRECTORY_INTRO", "DIRECTORY", "FAQ"},
+                                      "DIRECTORY_COUNT", "DIRECTORY", "FAQ"},
     "tool.html": COMMON_TOKENS | {"BREADCRUMB", "SUBCATEGORY_SLUG", "TOOL_CARD", "DISCLAIMER", "AD_IN_FEED",
                                   "CONTENT_SECTIONS", "FAQ", "RELATED_TOOLS", "TOOL_EXTRA_SCRIPTS", "TOOL_SCRIPT"},
     "page.html": COMMON_TOKENS | {"BREADCRUMB", "CONTENT_HTML"},
@@ -49,6 +49,8 @@ TEMPLATE_TOKENS = {
 TOKEN_RE = re.compile(r"\{\{([A-Z0-9_]+)\}\}")
 INCLUDE_RE = re.compile(r"\{\{INCLUDE:([\w.-]+)\}\}")
 RELATED_COUNT = 6
+# Bullet dot before each calculator in the category page cards.
+LIST_BULLET = '<span class="mt-[0.6em] size-1.5 shrink-0 rounded-full bg-current opacity-60" aria-hidden="true"></span>'
 # Desktop (lg+) sidebar: a sticky column on every page except home, which uses the full width.
 # Below lg the sidebar is always the hamburger drawer. Home shows the header links from lg instead.
 SIDEBAR_DESKTOP = ("lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none "
@@ -252,11 +254,12 @@ class Site:
     def tool_list_item(self, page_id, sub, slug):
         t = self.by_slug[slug]
         if t["live"]:
-            return (f'<li><a id="{page_id}-sub-category-{sub["slug"]}-link-{slug}" class="category-calculator-link" '
+            return (f'<li><a id="{page_id}-sub-category-{sub["slug"]}-link-{slug}" class="category-calculator-link flex items-start gap-2.5" '
                     f'href="{href(slug)}" data-calculator-name="{esc(t["name"])}" data-calculator-slug="{slug}" '
-                    f'data-sub-category-slug="{sub["slug"]}" data-category-name="{esc(sub["name"])}">{esc(t["name"])}</a></li>')
-        return (f'<li><span class="category-calculator-link cursor-default opacity-70" aria-disabled="true">{esc(t["name"])}'
-                f' <span class="badge badge-outline">Coming soon</span></span></li>')
+                    f'data-sub-category-slug="{sub["slug"]}" data-category-name="{esc(sub["name"])}">{LIST_BULLET}'
+                    f'<span>{esc(t["name"])}</span></a></li>')
+        return (f'<li><span class="category-calculator-link flex items-start gap-2.5 cursor-default opacity-70" aria-disabled="true">'
+                f'{LIST_BULLET}<span>{esc(t["name"])} <span class="badge badge-outline">Coming soon</span></span></span></li>')
 
     def subcategory_card(self, page_id, position, group, sub):
         c, sid = group["color"], sub["slug"]
@@ -270,7 +273,7 @@ class Site:
                 f'              <span id="{p}-tile" class="category-element-tile" aria-hidden="true"><span class="category-element-count">'
                 f'{len(self.live_in(sub["tools"]))}</span><span class="category-element-symbol">{esc(sub["symbol"])}</span></span>\n'
                 f'              <div class="min-w-0">\n'
-                f'                <h3 id="{p}-heading" class="font-display text-lg font-bold leading-tight"><span itemprop="name">{esc(sub["name"])}</span></h3>\n'
+                f'                <h2 id="{p}-heading" class="font-display text-lg font-bold leading-tight"><span itemprop="name">{esc(sub["name"])} Calculators</span></h2>\n'
                 f'                <p id="{p}-count" class="text-sm opacity-80">{esc(self.count_line(sub["tools"]))}</p>\n'
                 f'              </div>\n            </div>\n'
                 f'            <p id="{p}-description" class="px-4 pt-3 text-sm text-ink-muted" itemprop="description">{esc(sub["description"])}</p>\n'
@@ -342,7 +345,7 @@ def render_category(S):
             cards.append(S.subcategory_card(page_id, position, g, sub))
         groups.append(
             f'<div id="{g["id"]}" class="scroll-mt-24 space-y-4" data-group="{g["id"]}">\n'
-            f'          <h2 id="{page_id}-group-{g["id"]}-heading" class="font-display text-xl font-bold tracking-tight sm:text-2xl">{esc(g["name"])}</h2>\n'
+            f'          <h2 id="{page_id}-group-{g["id"]}-heading" class="font-display text-xl font-bold tracking-tight sm:text-2xl">{esc(g["name"])} Calculators</h2>\n'
             f'          <p id="{page_id}-group-{g["id"]}-intro" class="max-w-2xl text-ink-muted">{esc(g["description"])}</p>\n'
             f'          <div id="{page_id}-sub-category-grid-{gi}" class="grid gap-5 @2xl:grid-cols-2 @6xl:grid-cols-3">\n          '
             + "\n          ".join(cards) + "\n          </div>\n        </div>")
@@ -366,8 +369,6 @@ def render_category(S):
         "FINDER_INTRO": esc(cat["finder_intro"]),
         "AD_HERO": render_ad(page_id, "hero"),
         "DIRECTORY_COUNT": str(len(S.subcats)),
-        "DIRECTORY_HEADING": esc(fill(cat["directory_heading"], site)),
-        "DIRECTORY_INTRO": esc(cat["directory_intro"]),
         "DIRECTORY": "        " + "\n        ".join(groups),
         "FAQ": render_faq(page_id, cat["faq_heading"], cat["faq"]),
     })
