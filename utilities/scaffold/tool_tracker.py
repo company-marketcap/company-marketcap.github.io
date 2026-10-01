@@ -48,6 +48,8 @@ def main():
 
     total = Counter(t["status"] for t in tools)
     live = sum(total[s] for s in ("built", "verified", "done"))
+    has_content = lambda t: bool(t.get("content_html", "").strip())
+    live_no_content = sum(1 for t in tools if t["status"] in ("built", "verified", "done") and not has_content(t))
     out = [
         "# Calculator build tracker",
         "",
@@ -57,8 +59,10 @@ def main():
         "Statuses: `planned` → `in_progress` → `built` (formula checked, page live) → `verified`",
         "(browser-tested) → `done`. Priority = number of competitor sites with the tool (3 = highest;",
         "old-site calculators are 3). Sites: C = calculator.net, D = dinkytown.net, F = fncalculator.com.",
+        "Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculator only, content still to write.",
         "",
-        f"**{live} of {len(tools)} live** · " + " · ".join(f"{s}: {total[s]}" for s in STATUSES),
+        f"**{live} of {len(tools)} live** · " + " · ".join(f"{s}: {total[s]}" for s in STATUSES)
+        + f" · live without content: {live_no_content}",
         "",
         "## By subcategory",
         "",
@@ -71,13 +75,14 @@ def main():
                    f"{c['built'] + c['verified'] + c['done']} | {c['in_progress']} | {c['planned']} |")
 
     for sub in sorted(by_sub, key=lambda s: order.get(s, 999)):
-        out += ["", f"## {subs.get(sub, sub)}", "", "| Pri | Tool | Status | Sites | Notes |", "|---:|---|---|---|---|"]
+        out += ["", f"## {subs.get(sub, sub)}", "", "| Pri | Tool | Status | Content | Sites | Notes |", "|---:|---|---|:---:|---|---|"]
         for t in sorted(by_sub[sub], key=lambda t: (-(t.get("priority") or 0), t.get("order", 0), t["slug"])):
             have = {c["site"] for c in (t.get("research") or {}).get("competitors", [])}
             sites = "".join(code for site, code in SITES if site in have) or "–"
             note = "port from archive" if t.get("legacy") else ""
             status = f"**{t['status']}**" if t["status"] != "planned" else "planned"
-            out.append(f"| {t.get('priority') or ''} | `{t['slug']}` | {status} | {sites} | {note} |")
+            content = "✓" if has_content(t) else "–"
+            out.append(f"| {t.get('priority') or ''} | `{t['slug']}` | {status} | {content} | {sites} | {note} |")
 
     OUT.write_text("\n".join(out) + "\n")
     print(f"Wrote {OUT.relative_to(ROOT)}: {live}/{len(tools)} live")

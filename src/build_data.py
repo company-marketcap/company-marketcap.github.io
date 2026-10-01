@@ -32,7 +32,9 @@ STATUSES = ["planned", "in_progress", "built", "verified", "done"]
 # Statuses that produce a public page. planned/in_progress tools exist only as data.
 LIVE_STATUSES = {"built", "verified", "done"}
 CARD_LAYOUTS = {"raw"}
-REQUIRED_WHEN_LIVE = ["meta_title", "meta_description", "h1", "subtitle", "content_html"]
+# content_html and faq are optional: a tool can go live with just its calculator, and the article
+# is written later (TOOL_TRACKER.md lists which live tools still have no content).
+REQUIRED_WHEN_LIVE = ["meta_title", "meta_description", "h1", "subtitle"]
 TITLE_MAX, DESCRIPTION_MAX = 60, 160
 # Marker for details still to be filled in (e.g. the contact email). A live page can't contain it.
 PLACEHOLDER = "PLACEHOLDER"

@@ -42,8 +42,8 @@ Python 3 standard library only — no pip installs needed for the site build.
 | `card.fields_html` | The calculator's form and results markup. Required when live. |
 | `card.extra_scripts` | CDN script URLs this tool alone needs (e.g. a chart library). Loaded only on this page. |
 | `script` | The tool's complete JavaScript: self-contained IIFE, `'use strict'`, its own `DOMContentLoaded` wiring. No shared runtime file — duplicate small helpers rather than sharing them. Required when live. |
-| `content_html` | Original explanatory content. Plain semantic HTML (h2/h3/p/ul/ol/table/code, no classes), rendered inside `.article-content`. Required when live. |
-| `faq` | `[{"question", "answer"}]` (plain text). Renders the visible FAQ **and** the FAQPage JSON-LD from the same array, so they can't drift apart. Never put an FAQ inside `content_html`. |
+| `content_html` | Original explanatory content. Plain semantic HTML (h2/h3/p/ul/ol/table/code, no classes), rendered inside `.article-content`. Optional: a tool can go live with just its calculator and get its article later (the tracker's Content column shows which). |
+| `faq` | `[{"question", "answer"}]` (plain text). Renders the visible FAQ **and** the FAQPage JSON-LD from the same array, so they can't drift apart. Never put an FAQ inside `content_html`. Optional; empty means no FAQ section or FAQ JSON-LD. |
 | `related` | Optional slugs to show first under "Related calculators"; the rest fill from the same subcategory. |
 | `legacy` | Old-site calculators only: `source` (file in `/archive` to port) and the old `url`. |
 | `research` | Competitor URLs and name variants from the inventory, for reference while building. Not rendered. |
