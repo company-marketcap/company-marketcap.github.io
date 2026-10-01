@@ -432,6 +432,10 @@ def render_tool(S, tool):
     return render("tool.html", values)
 
 
+# AdSense policy: no ads on pages without publisher content (legal, contact, navigation-only pages).
+NO_AD_PAGES = {"contact", "privacy-policy", "terms", "sitemap"}
+
+
 def render_page(S, slug, meta_title, meta_description, h1, subtitle, content_html, preview=False):
     trail = [("Home", "/"), (h1, href(slug))]
     values = S.base(slug, "page", slug, meta_title, meta_description, h1, subtitle, preview=preview)
@@ -440,6 +444,8 @@ def render_page(S, slug, meta_title, meta_description, h1, subtitle, content_htm
         "BREADCRUMB": render_breadcrumb(S.site, slug, trail),
         "CONTENT_HTML": content_html,
     })
+    if slug in NO_AD_PAGES:
+        values.update({"AD_TOP": "", "AD_BOTTOM": "", "AD_RIGHT_RAIL": ""})
     return render("page.html", values)
 
 
