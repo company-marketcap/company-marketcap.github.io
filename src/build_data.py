@@ -19,7 +19,9 @@ Usage:
 """
 import argparse
 import json
+import re
 import sys
+from collections import Counter
 from pathlib import Path
 
 SRC = Path(__file__).resolve().parent
@@ -105,6 +107,12 @@ def load_tools(subcats, include_planned, problems):
                     problems.error(where, f"status {tool['status']!r} but {field} is empty")
             if not tool.get("card", {}).get("fields_html", "").strip():
                 problems.error(where, f"status {tool['status']!r} but card.fields_html is empty")
+            # A repeated id makes getElementById return the wrong element (e.g. an input instead of
+            # the result it shares an id with), so the script silently writes to the wrong place.
+            ids = Counter(re.findall(r'\bid="([^"]+)"', tool.get("card", {}).get("fields_html", "")))
+            dupes = sorted(i for i, n in ids.items() if n > 1)
+            if dupes:
+                problems.error(where, f"duplicate element id(s) in card.fields_html: {', '.join(dupes)}")
             if not tool.get("script", "").strip():
                 problems.error(where, f"status {tool['status']!r} but script is empty")
             check_meta(where, tool, problems)
