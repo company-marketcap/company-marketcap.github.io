@@ -8,7 +8,7 @@ Statuses: `planned` → `in_progress` → `built` (formula checked, page live) �
 old-site calculators are 3). Sites: C = calculator.net, D = dinkytown.net, F = fncalculator.com.
 Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculator only, content still to write.
 
-**320 of 320 live** · planned: 0 · in_progress: 0 · built: 320 · verified: 0 · done: 0 · live without content: 250
+**320 of 320 live** · planned: 0 · in_progress: 0 · built: 320 · verified: 0 · done: 0 · live without content: 320
 
 ## By subcategory
 
@@ -42,17 +42,17 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 
 | Pri | Tool | Status | Content | Sites | Notes |
 |---:|---|---|:---:|---|---|
-| 2 | `adjustable-rate-calculator` | **built** | ✓ | DF |  |
-| 2 | `amortization-calculator` | **built** | ✓ | CD |  |
-| 2 | `bi-weekly-payment-calculator` | **built** | ✓ | DF |  |
-| 2 | `discount-points-calculator` | **built** | ✓ | DF |  |
-| 2 | `fha-loan-calculator` | **built** | ✓ | CD |  |
-| 2 | `fixed-vs-adjustable-rate-calculator` | **built** | ✓ | DF |  |
-| 2 | `house-affordability-calculator` | **built** | ✓ | CF |  |
-| 2 | `interest-only-calculator` | **built** | ✓ | DF |  |
-| 2 | `mortgage-calculator` | **built** | ✓ | CD |  |
-| 2 | `mortgage-payoff-calculator` | **built** | ✓ | CD |  |
-| 2 | `mortgage-tax-saving-calculator` | **built** | ✓ | DF |  |
+| 2 | `adjustable-rate-calculator` | **built** | – | DF |  |
+| 2 | `amortization-calculator` | **built** | – | CD |  |
+| 2 | `bi-weekly-payment-calculator` | **built** | – | DF |  |
+| 2 | `discount-points-calculator` | **built** | – | DF |  |
+| 2 | `fha-loan-calculator` | **built** | – | CD |  |
+| 2 | `fixed-vs-adjustable-rate-calculator` | **built** | – | DF |  |
+| 2 | `house-affordability-calculator` | **built** | – | CF |  |
+| 2 | `interest-only-calculator` | **built** | – | DF |  |
+| 2 | `mortgage-calculator` | **built** | – | CD |  |
+| 2 | `mortgage-payoff-calculator` | **built** | – | CD |  |
+| 2 | `mortgage-tax-saving-calculator` | **built** | – | DF |  |
 | 1 | `15-vs-30-year-mortgage-calculator` | **built** | – | D |  |
 | 1 | `20-vs-30-year-mortgage-calculator` | **built** | – | D |  |
 | 1 | `apr-calculator-for-adjustable-rate-mortgages` | **built** | – | D |  |
@@ -79,9 +79,9 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 
 | Pri | Tool | Status | Content | Sites | Notes |
 |---:|---|---|:---:|---|---|
-| 3 | `refinance-calculator` | **built** | ✓ | CDF |  |
-| 2 | `debt-consolidation-calculator` | **built** | ✓ | CD |  |
-| 2 | `heloc-calculator` | **built** | ✓ | CD |  |
+| 3 | `refinance-calculator` | **built** | – | CDF |  |
+| 2 | `debt-consolidation-calculator` | **built** | – | CD |  |
+| 2 | `heloc-calculator` | **built** | – | CD |  |
 | 1 | `equity-line-of-credit-payments-calculator` | **built** | – | D |  |
 | 1 | `home-equity-debt-consolidation-calculator` | **built** | – | D |  |
 | 1 | `home-equity-loan-calculator` | **built** | – | C |  |
@@ -92,8 +92,8 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 
 | Pri | Tool | Status | Content | Sites | Notes |
 |---:|---|---|:---:|---|---|
-| 3 | `rent-vs-buy-calculator` | **built** | ✓ | CDF |  |
-| 3 | `rental-property-calculator` | **built** | ✓ | CDF |  |
+| 3 | `rent-vs-buy-calculator` | **built** | – | CDF |  |
+| 3 | `rental-property-calculator` | **built** | – | CDF |  |
 | 1 | `1031-exchange-calculator` | **built** | – | D |  |
 | 1 | `1031-exchange-timeline-calculator` | **built** | – | D |  |
 | 1 | `like-kind-exchange-calculator` | **built** | – | D |  |
@@ -108,8 +108,8 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 
 | Pri | Tool | Status | Content | Sites | Notes |
 |---:|---|---|:---:|---|---|
-| 2 | `loan-calculator` | **built** | ✓ | CF |  |
-| 2 | `loan-comparison-calculator` | **built** | ✓ | DF |  |
+| 2 | `loan-calculator` | **built** | – | CF |  |
+| 2 | `loan-comparison-calculator` | **built** | – | DF |  |
 | 1 | `365-360-loan-calculator` | **built** | – | D |  |
 | 1 | `365-365-loan-calculator` | **built** | – | D |  |
 | 1 | `alternative-payment-frequencies-calculator` | **built** | – | D |  |
@@ -126,9 +126,9 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 
 | Pri | Tool | Status | Content | Sites | Notes |
 |---:|---|---|:---:|---|---|
-| 3 | `auto-loan-calculator` | **built** | ✓ | CDF |  |
-| 2 | `boat-loan-calculator` | **built** | ✓ | CD |  |
-| 2 | `lease-calculator` | **built** | ✓ | CF |  |
+| 3 | `auto-loan-calculator` | **built** | – | CDF |  |
+| 2 | `boat-loan-calculator` | **built** | – | CD |  |
+| 2 | `lease-calculator` | **built** | – | CF |  |
 | 1 | `auto-loan-early-payoff-calculator` | **built** | – | D |  |
 | 1 | `auto-rebate-and-financing-options-calculator` | **built** | – | D |  |
 | 1 | `auto-refinance-interest-savings-calculator` | **built** | – | D |  |
@@ -149,7 +149,7 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 
 | Pri | Tool | Status | Content | Sites | Notes |
 |---:|---|---|:---:|---|---|
-| 2 | `college-savings-calculator` | **built** | ✓ | DF |  |
+| 2 | `college-savings-calculator` | **built** | – | DF |  |
 | 1 | `college-cost-calculator` | **built** | – | C |  |
 | 1 | `student-budget-calculator` | **built** | – | D |  |
 | 1 | `student-loan-calculator` | **built** | – | C |  |
@@ -160,10 +160,10 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 
 | Pri | Tool | Status | Content | Sites | Notes |
 |---:|---|---|:---:|---|---|
-| 3 | `credit-card-calculator` | **built** | ✓ | CDF |  |
-| 2 | `credit-card-minimum-calculator` | **built** | ✓ | DF |  |
-| 2 | `debt-payoff-calculator` | **built** | ✓ | CD |  |
-| 2 | `debt-to-income-ratio-calculator` | **built** | ✓ | CD |  |
+| 3 | `credit-card-calculator` | **built** | – | CDF |  |
+| 2 | `credit-card-minimum-calculator` | **built** | – | DF |  |
+| 2 | `debt-payoff-calculator` | **built** | – | CD |  |
+| 2 | `debt-to-income-ratio-calculator` | **built** | – | CD |  |
 | 1 | `consolidation-loan-investment-calculator` | **built** | – | D |  |
 | 1 | `cost-of-debt-calculator` | **built** | – | D |  |
 | 1 | `credit-assessment-calculator` | **built** | – | D |  |
@@ -183,8 +183,8 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 
 | Pri | Tool | Status | Content | Sites | Notes |
 |---:|---|---|:---:|---|---|
-| 3 | `retirement-calculator` | **built** | ✓ | CDF |  |
-| 2 | `retirement-income-analysis` | **built** | ✓ | DF |  |
+| 3 | `retirement-calculator` | **built** | – | CDF |  |
+| 2 | `retirement-income-analysis` | **built** | – | DF |  |
 | 1 | `gross-distribution-calculator` | **built** | – | D |  |
 | 1 | `how-long-will-my-retirement-savings-last-calculator` | **built** | – | D |  |
 | 1 | `life-expectancy-calculator` | **built** | – | D |  |
@@ -204,12 +204,12 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 
 | Pri | Tool | Status | Content | Sites | Notes |
 |---:|---|---|:---:|---|---|
-| 3 | `401k-calculator` | **built** | ✓ | CDF |  |
-| 3 | `rmd-calculator` | **built** | ✓ | CDF |  |
-| 2 | `ira-calculator` | **built** | ✓ | CD |  |
-| 2 | `pension-calculator` | **built** | ✓ | CD |  |
-| 2 | `roth-ira-calculator` | **built** | ✓ | CD |  |
-| 2 | `traditional-ira-vs-roth-ira-calculator` | **built** | ✓ | DF |  |
+| 3 | `401k-calculator` | **built** | – | CDF |  |
+| 3 | `rmd-calculator` | **built** | – | CDF |  |
+| 2 | `ira-calculator` | **built** | – | CD |  |
+| 2 | `pension-calculator` | **built** | – | CD |  |
+| 2 | `roth-ira-calculator` | **built** | – | CD |  |
+| 2 | `traditional-ira-vs-roth-ira-calculator` | **built** | – | DF |  |
 | 1 | `401k-contribution-effects-on-your-paycheck-calculator` | **built** | – | D |  |
 | 1 | `401k-savings-with-profit-sharing-calculator` | **built** | – | D |  |
 | 1 | `401k-spend-it-or-save-it-calculator` | **built** | – | D |  |
@@ -255,8 +255,8 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 
 | Pri | Tool | Status | Content | Sites | Notes |
 |---:|---|---|:---:|---|---|
-| 3 | `social-security-calculator` | **built** | ✓ | CDF |  |
-| 2 | `annuity-calculator` | **built** | ✓ | CF |  |
+| 3 | `social-security-calculator` | **built** | – | CDF |  |
+| 2 | `annuity-calculator` | **built** | – | CF |  |
 | 1 | `annuity-payout-calculator` | **built** | – | C |  |
 | 1 | `fixed-annuity-calculator` | **built** | – | D |  |
 | 1 | `how-important-is-social-security-calculator` | **built** | – | D |  |
@@ -270,15 +270,15 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 
 | Pri | Tool | Status | Content | Sites | Notes |
 |---:|---|---|:---:|---|---|
-| 3 | `inflation-adjusted-calculator` | **built** | ✓ | – | port from archive |
-| 3 | `sector-balance` | **built** | ✓ | – | port from archive |
-| 3 | `irr-calculator` | **built** | ✓ | CDF |  |
-| 3 | `mutual-fund-calculator` | **built** | ✓ | CDF |  |
-| 2 | `asset-allocation-calculator` | **built** | ✓ | DF |  |
-| 2 | `future-value-calculator` | **built** | ✓ | CD |  |
-| 2 | `investment-calculator` | **built** | ✓ | CD |  |
-| 2 | `present-value-calculator` | **built** | ✓ | CD |  |
-| 2 | `roi-calculator` | **built** | ✓ | CF |  |
+| 3 | `inflation-adjusted-calculator` | **built** | – | – | port from archive |
+| 3 | `sector-balance` | **built** | – | – | port from archive |
+| 3 | `irr-calculator` | **built** | – | CDF |  |
+| 3 | `mutual-fund-calculator` | **built** | – | CDF |  |
+| 2 | `asset-allocation-calculator` | **built** | – | DF |  |
+| 2 | `future-value-calculator` | **built** | – | CD |  |
+| 2 | `investment-calculator` | **built** | – | CD |  |
+| 2 | `present-value-calculator` | **built** | – | CD |  |
+| 2 | `roi-calculator` | **built** | – | CF |  |
 | 1 | `annual-rate-of-return-calculator` | **built** | – | D |  |
 | 1 | `asset-allocation-broad-portfolio-calculator` | **built** | – | D |  |
 | 1 | `average-return-calculator` | **built** | – | C |  |
@@ -297,11 +297,11 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 
 | Pri | Tool | Status | Content | Sites | Notes |
 |---:|---|---|:---:|---|---|
-| 3 | `dividend-reinvestment` | **built** | ✓ | – | port from archive |
-| 3 | `market-cap-growth-calculator` | **built** | ✓ | – | port from archive |
-| 3 | `position-sizing` | **built** | ✓ | – | port from archive |
-| 3 | `stock-split-impact` | **built** | ✓ | – | port from archive |
-| 3 | `stock-valuation-confidence` | **built** | ✓ | – | port from archive |
+| 3 | `dividend-reinvestment` | **built** | – | – | port from archive |
+| 3 | `market-cap-growth-calculator` | **built** | – | – | port from archive |
+| 3 | `position-sizing` | **built** | – | – | port from archive |
+| 3 | `stock-split-impact` | **built** | – | – | port from archive |
+| 3 | `stock-valuation-confidence` | **built** | – | – | port from archive |
 | 1 | `annual-stock-option-grants-calculator` | **built** | – | D |  |
 | 1 | `black-scholes-option-calculator` | **built** | – | F |  |
 | 1 | `capm-calculator` | **built** | – | F |  |
@@ -321,9 +321,9 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 
 | Pri | Tool | Status | Content | Sites | Notes |
 |---:|---|---|:---:|---|---|
-| 3 | `bond-calculator` | **built** | ✓ | CDF |  |
-| 3 | `cd-calculator` | **built** | ✓ | CDF |  |
-| 2 | `tax-equivalent-yield-calculator` | **built** | ✓ | DF |  |
+| 3 | `bond-calculator` | **built** | – | CDF |  |
+| 3 | `cd-calculator` | **built** | – | CDF |  |
+| 2 | `tax-equivalent-yield-calculator` | **built** | – | DF |  |
 | 1 | `cd-ladder-calculator` | **built** | – | D |  |
 | 1 | `certificate-of-deposit-for-apy-calculator` | **built** | – | D |  |
 | 1 | `compare-certificate-of-deposit-cd-rates-calculator` | **built** | – | D |  |
@@ -337,9 +337,9 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 
 | Pri | Tool | Status | Content | Sites | Notes |
 |---:|---|---|:---:|---|---|
-| 2 | `apr-calculator` | **built** | ✓ | CF |  |
-| 2 | `cash-back-or-low-interest-calculator` | **built** | ✓ | CD |  |
-| 2 | `compound-interest-calculator` | **built** | ✓ | CF |  |
+| 2 | `apr-calculator` | **built** | – | CF |  |
+| 2 | `cash-back-or-low-interest-calculator` | **built** | – | CD |  |
+| 2 | `compound-interest-calculator` | **built** | – | CF |  |
 | 1 | `apr-advanced-calculator` | **built** | – | F |  |
 | 1 | `compound-savings-calculator` | **built** | – | D |  |
 | 1 | `effective-rate-calculator` | **built** | – | F |  |
@@ -353,9 +353,9 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 
 | Pri | Tool | Status | Content | Sites | Notes |
 |---:|---|---|:---:|---|---|
-| 3 | `tax-harvesting` | **built** | ✓ | – | port from archive |
-| 2 | `estate-tax-calculator` | **built** | ✓ | CD |  |
-| 2 | `income-tax-calculator` | **built** | ✓ | CD |  |
+| 3 | `tax-harvesting` | **built** | – | – | port from archive |
+| 2 | `estate-tax-calculator` | **built** | – | CD |  |
+| 2 | `income-tax-calculator` | **built** | – | CD |  |
 | 1 | `charitable-giving-tax-savings-calculator` | **built** | – | D |  |
 | 1 | `dividend-tax-calculator` | **built** | – | F |  |
 | 1 | `earned-income-credit-eic-calculator` | **built** | – | D |  |
@@ -370,8 +370,8 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 
 | Pri | Tool | Status | Content | Sites | Notes |
 |---:|---|---|:---:|---|---|
-| 3 | `take-home-paycheck-calculator` | **built** | ✓ | CDF |  |
-| 2 | `salary-calculator` | **built** | ✓ | CF |  |
+| 3 | `take-home-paycheck-calculator` | **built** | – | CDF |  |
+| 2 | `salary-calculator` | **built** | – | CF |  |
 | 1 | `civilian-pay-to-equal-military-take-home-pay-calculator` | **built** | – | D |  |
 | 1 | `commission-calculator` | **built** | – | C |  |
 | 1 | `payroll-deductions-calculator-w-4-with-exemptions` | **built** | – | D |  |
@@ -385,7 +385,7 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 
 | Pri | Tool | Status | Content | Sites | Notes |
 |---:|---|---|:---:|---|---|
-| 2 | `us-health-savings-account-calculator` | **built** | ✓ | DF |  |
+| 2 | `us-health-savings-account-calculator` | **built** | – | DF |  |
 | 1 | `health-savings-account-hsa-contribution-calculator` | **built** | – | D |  |
 | 1 | `health-savings-account-hsa-goal-calculator` | **built** | – | D |  |
 | 1 | `health-savings-account-hsa-vs-traditional-health-plan-calculator` | **built** | – | D |  |
@@ -409,7 +409,7 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 
 | Pri | Tool | Status | Content | Sites | Notes |
 |---:|---|---|:---:|---|---|
-| 2 | `savings-goal-calculator` | **built** | ✓ | DF |  |
+| 2 | `savings-goal-calculator` | **built** | – | DF |  |
 | 1 | `compare-savings-rates-calculator` | **built** | – | D |  |
 | 1 | `cool-million-calculator` | **built** | – | D |  |
 | 1 | `dont-delay-your-savings-calculator` | **built** | – | D |  |
@@ -422,7 +422,7 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 
 | Pri | Tool | Status | Content | Sites | Notes |
 |---:|---|---|:---:|---|---|
-| 2 | `budget-calculator` | **built** | ✓ | CD |  |
+| 2 | `budget-calculator` | **built** | – | CD |  |
 | 1 | `benefit-of-spending-less-calculator` | **built** | – | D |  |
 | 1 | `checkbook-balancer` | **built** | – | D |  |
 | 1 | `clergy-housing-allowance-worksheet` | **built** | – | D |  |
@@ -433,15 +433,15 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 
 | Pri | Tool | Status | Content | Sites | Notes |
 |---:|---|---|:---:|---|---|
-| 3 | `inflation-calculator` | **built** | ✓ | CDF |  |
-| 2 | `currency-calculator` | **built** | ✓ | CF |  |
+| 3 | `inflation-calculator` | **built** | – | CDF |  |
+| 2 | `currency-calculator` | **built** | – | CF |  |
 | 1 | `personal-economic-recovery-calculator` | **built** | – | D |  |
 
 ## Everyday Money & Utility
 
 | Pri | Tool | Status | Content | Sites | Notes |
 |---:|---|---|:---:|---|---|
-| 2 | `discount-calculator` | **built** | ✓ | CF |  |
+| 2 | `discount-calculator` | **built** | – | CF |  |
 | 1 | `basic-calculator` | **built** | – | D |  |
 | 1 | `basic-financial-calculator` | **built** | – | D |  |
 | 1 | `date-calculator` | **built** | – | F |  |
@@ -455,9 +455,9 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 
 | Pri | Tool | Status | Content | Sites | Notes |
 |---:|---|---|:---:|---|---|
-| 3 | `business-loan-calculator` | **built** | ✓ | CDF |  |
-| 3 | `margin-calculator` | **built** | ✓ | CDF |  |
-| 2 | `financial-ratios-calculator` | **built** | ✓ | DF |  |
+| 3 | `business-loan-calculator` | **built** | – | CDF |  |
+| 3 | `margin-calculator` | **built** | – | CDF |  |
+| 2 | `financial-ratios-calculator` | **built** | – | DF |  |
 | 1 | `balance-sheet-and-income-statement-analysis` | **built** | – | F |  |
 | 1 | `breakeven-analysis-calculator` | **built** | – | D |  |
 | 1 | `business-debt-consolidation-calculator` | **built** | – | D |  |
