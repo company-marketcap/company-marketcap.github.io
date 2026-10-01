@@ -104,6 +104,8 @@ def main():
     PAGES_DIR.mkdir(parents=True, exist_ok=True)
     cats = json.loads(CATEGORIES.read_text())
     sub_by_name = {s["name"]: s["slug"] for g in cats["nav_groups"] for s in g["subcategories"]}
+    # Subcategories renamed on the site since the inventory was built.
+    sub_by_name["Everyday Money & Utility Tools"] = sub_by_name["Everyday Money & Utility"]
 
     ws = load_workbook(INVENTORY)["Calculators"]
     header = [c.value for c in ws[4]]
