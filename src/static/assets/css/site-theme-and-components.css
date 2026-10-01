@@ -183,6 +183,10 @@ input[type="search"]::-webkit-search-cancel-button { cursor: pointer; }
   .form-select { @apply h-11 w-full rounded-xl border border-line bg-surface px-3 text-[15px] text-ink focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30; }
   .form-hint { @apply mt-1 text-[13px] text-ink-muted; }
   .form-error { @apply mt-1 text-[13px] font-semibold text-blush-ink; }
+  /* Collapsible group of optional inputs inside a calculator form ("More options"). */
+  .form-details { @apply rounded-xl border border-line p-4; }
+  .form-details-summary { @apply focus-ring cursor-pointer text-sm font-semibold text-ink; }
+  .form-details > * + * { @apply mt-4; }
   .button-primary { @apply focus-ring inline-flex h-11 items-center justify-center rounded-xl bg-brand px-5 text-[15px] font-semibold text-brand-ink hover:opacity-90; }
   .button-secondary { @apply focus-ring inline-flex h-11 items-center justify-center rounded-xl border border-line bg-surface px-5 text-[15px] font-semibold text-ink hover:bg-surface-muted; }
   .segmented-option { @apply cursor-pointer rounded-md px-3 py-1.5 text-sm font-semibold text-ink-muted transition-colors hover:text-ink; }

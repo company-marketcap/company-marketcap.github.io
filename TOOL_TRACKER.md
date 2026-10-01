@@ -7,51 +7,51 @@ Statuses: `planned` → `in_progress` → `built` (formula checked, page live) �
 (browser-tested) → `done`. Priority = number of competitor sites with the tool (3 = highest;
 old-site calculators are 3). Sites: C = calculator.net, D = dinkytown.net, F = fncalculator.com.
 
-**27 of 320 live** · planned: 293 · in_progress: 0 · built: 27 · verified: 0 · done: 0
+**70 of 320 live** · planned: 250 · in_progress: 0 · built: 70 · verified: 0 · done: 0
 
 ## By subcategory
 
 | Subcategory | Tools | Live | In progress | Planned |
 |---|---:|---:|---:|---:|
-| Mortgage & Home Buying | 32 | 1 | 0 | 31 |
-| Home Equity & Refinancing | 8 | 1 | 0 | 7 |
+| Mortgage & Home Buying | 32 | 11 | 0 | 21 |
+| Home Equity & Refinancing | 8 | 3 | 0 | 5 |
 | Real Estate & Rental Property | 11 | 2 | 0 | 9 |
-| Personal & General Loans | 13 | 0 | 0 | 13 |
-| Auto Loans & Leasing | 18 | 1 | 0 | 17 |
-| Student Loans & Education Savings | 6 | 0 | 0 | 6 |
-| Credit Cards & Debt Payoff | 18 | 1 | 0 | 17 |
-| Retirement Planning | 16 | 1 | 0 | 15 |
-| Retirement Accounts (401k, 403b, 457, IRA, Roth) | 46 | 2 | 0 | 44 |
-| Social Security & Annuities | 10 | 1 | 0 | 9 |
-| Investment Returns & Growth | 22 | 4 | 0 | 18 |
+| Personal & General Loans | 13 | 2 | 0 | 11 |
+| Auto Loans & Leasing | 18 | 3 | 0 | 15 |
+| Student Loans & Education Savings | 6 | 1 | 0 | 5 |
+| Credit Cards & Debt Payoff | 18 | 4 | 0 | 14 |
+| Retirement Planning | 16 | 2 | 0 | 14 |
+| Retirement Accounts (401k, 403b, 457, IRA, Roth) | 46 | 6 | 0 | 40 |
+| Social Security & Annuities | 10 | 2 | 0 | 8 |
+| Investment Returns & Growth | 22 | 9 | 0 | 13 |
 | Stocks, Dividends & Trading | 19 | 5 | 0 | 14 |
-| Bonds, CDs & Fixed Income | 11 | 2 | 0 | 9 |
-| Interest, APR & Time Value of Money | 11 | 1 | 0 | 10 |
-| Income Tax & Tax Planning | 12 | 1 | 0 | 11 |
-| Payroll, Salary & Take-home Pay | 10 | 1 | 0 | 9 |
-| Health Savings & Medical Costs | 10 | 0 | 0 | 10 |
+| Bonds, CDs & Fixed Income | 11 | 3 | 0 | 8 |
+| Interest, APR & Time Value of Money | 11 | 3 | 0 | 8 |
+| Income Tax & Tax Planning | 12 | 3 | 0 | 9 |
+| Payroll, Salary & Take-home Pay | 10 | 2 | 0 | 8 |
+| Health Savings & Medical Costs | 10 | 1 | 0 | 9 |
 | Insurance | 4 | 0 | 0 | 4 |
-| Savings & Emergency Funds | 8 | 0 | 0 | 8 |
-| Budgeting, Net Worth & Cash Flow | 6 | 0 | 0 | 6 |
-| Inflation, Currency & Economics | 3 | 1 | 0 | 2 |
-| Everyday Money & Utility | 9 | 0 | 0 | 9 |
-| Business Finance & Valuation | 17 | 2 | 0 | 15 |
+| Savings & Emergency Funds | 8 | 1 | 0 | 7 |
+| Budgeting, Net Worth & Cash Flow | 6 | 1 | 0 | 5 |
+| Inflation, Currency & Economics | 3 | 2 | 0 | 1 |
+| Everyday Money & Utility | 9 | 1 | 0 | 8 |
+| Business Finance & Valuation | 17 | 3 | 0 | 14 |
 
 ## Mortgage & Home Buying
 
 | Pri | Tool | Status | Sites | Notes |
 |---:|---|---|---|---|
-| 2 | `adjustable-rate-calculator` | planned | DF |  |
-| 2 | `amortization-calculator` | planned | CD |  |
-| 2 | `bi-weekly-payment-calculator` | planned | DF |  |
-| 2 | `discount-points-calculator` | planned | DF |  |
-| 2 | `fha-loan-calculator` | planned | CD |  |
-| 2 | `fixed-vs-adjustable-rate-calculator` | planned | DF |  |
-| 2 | `house-affordability-calculator` | planned | CF |  |
-| 2 | `interest-only-calculator` | planned | DF |  |
+| 2 | `adjustable-rate-calculator` | **built** | DF |  |
+| 2 | `amortization-calculator` | **built** | CD |  |
+| 2 | `bi-weekly-payment-calculator` | **built** | DF |  |
+| 2 | `discount-points-calculator` | **built** | DF |  |
+| 2 | `fha-loan-calculator` | **built** | CD |  |
+| 2 | `fixed-vs-adjustable-rate-calculator` | **built** | DF |  |
+| 2 | `house-affordability-calculator` | **built** | CF |  |
+| 2 | `interest-only-calculator` | **built** | DF |  |
 | 2 | `mortgage-calculator` | **built** | CD |  |
-| 2 | `mortgage-payoff-calculator` | planned | CD |  |
-| 2 | `mortgage-tax-saving-calculator` | planned | DF |  |
+| 2 | `mortgage-payoff-calculator` | **built** | CD |  |
+| 2 | `mortgage-tax-saving-calculator` | **built** | DF |  |
 | 1 | `15-vs-30-year-mortgage-calculator` | planned | D |  |
 | 1 | `20-vs-30-year-mortgage-calculator` | planned | D |  |
 | 1 | `apr-calculator-for-adjustable-rate-mortgages` | planned | D |  |
@@ -79,8 +79,8 @@ old-site calculators are 3). Sites: C = calculator.net, D = dinkytown.net, F = f
 | Pri | Tool | Status | Sites | Notes |
 |---:|---|---|---|---|
 | 3 | `refinance-calculator` | **built** | CDF |  |
-| 2 | `debt-consolidation-calculator` | planned | CD |  |
-| 2 | `heloc-calculator` | planned | CD |  |
+| 2 | `debt-consolidation-calculator` | **built** | CD |  |
+| 2 | `heloc-calculator` | **built** | CD |  |
 | 1 | `equity-line-of-credit-payments-calculator` | planned | D |  |
 | 1 | `home-equity-debt-consolidation-calculator` | planned | D |  |
 | 1 | `home-equity-loan-calculator` | planned | C |  |
@@ -107,8 +107,8 @@ old-site calculators are 3). Sites: C = calculator.net, D = dinkytown.net, F = f
 
 | Pri | Tool | Status | Sites | Notes |
 |---:|---|---|---|---|
-| 2 | `loan-calculator` | planned | CF |  |
-| 2 | `loan-comparison-calculator` | planned | DF |  |
+| 2 | `loan-calculator` | **built** | CF |  |
+| 2 | `loan-comparison-calculator` | **built** | DF |  |
 | 1 | `365-360-loan-calculator` | planned | D |  |
 | 1 | `365-365-loan-calculator` | planned | D |  |
 | 1 | `alternative-payment-frequencies-calculator` | planned | D |  |
@@ -126,8 +126,8 @@ old-site calculators are 3). Sites: C = calculator.net, D = dinkytown.net, F = f
 | Pri | Tool | Status | Sites | Notes |
 |---:|---|---|---|---|
 | 3 | `auto-loan-calculator` | **built** | CDF |  |
-| 2 | `boat-loan-calculator` | planned | CD |  |
-| 2 | `lease-calculator` | planned | CF |  |
+| 2 | `boat-loan-calculator` | **built** | CD |  |
+| 2 | `lease-calculator` | **built** | CF |  |
 | 1 | `auto-loan-early-payoff-calculator` | planned | D |  |
 | 1 | `auto-rebate-and-financing-options-calculator` | planned | D |  |
 | 1 | `auto-refinance-interest-savings-calculator` | planned | D |  |
@@ -148,7 +148,7 @@ old-site calculators are 3). Sites: C = calculator.net, D = dinkytown.net, F = f
 
 | Pri | Tool | Status | Sites | Notes |
 |---:|---|---|---|---|
-| 2 | `college-savings-calculator` | planned | DF |  |
+| 2 | `college-savings-calculator` | **built** | DF |  |
 | 1 | `college-cost-calculator` | planned | C |  |
 | 1 | `student-budget-calculator` | planned | D |  |
 | 1 | `student-loan-calculator` | planned | C |  |
@@ -160,9 +160,9 @@ old-site calculators are 3). Sites: C = calculator.net, D = dinkytown.net, F = f
 | Pri | Tool | Status | Sites | Notes |
 |---:|---|---|---|---|
 | 3 | `credit-card-calculator` | **built** | CDF |  |
-| 2 | `credit-card-minimum-calculator` | planned | DF |  |
-| 2 | `debt-payoff-calculator` | planned | CD |  |
-| 2 | `debt-to-income-ratio-calculator` | planned | CD |  |
+| 2 | `credit-card-minimum-calculator` | **built** | DF |  |
+| 2 | `debt-payoff-calculator` | **built** | CD |  |
+| 2 | `debt-to-income-ratio-calculator` | **built** | CD |  |
 | 1 | `consolidation-loan-investment-calculator` | planned | D |  |
 | 1 | `cost-of-debt-calculator` | planned | D |  |
 | 1 | `credit-assessment-calculator` | planned | D |  |
@@ -183,7 +183,7 @@ old-site calculators are 3). Sites: C = calculator.net, D = dinkytown.net, F = f
 | Pri | Tool | Status | Sites | Notes |
 |---:|---|---|---|---|
 | 3 | `retirement-calculator` | **built** | CDF |  |
-| 2 | `retirement-income-analysis` | planned | DF |  |
+| 2 | `retirement-income-analysis` | **built** | DF |  |
 | 1 | `gross-distribution-calculator` | planned | D |  |
 | 1 | `how-long-will-my-retirement-savings-last-calculator` | planned | D |  |
 | 1 | `life-expectancy-calculator` | planned | D |  |
@@ -205,10 +205,10 @@ old-site calculators are 3). Sites: C = calculator.net, D = dinkytown.net, F = f
 |---:|---|---|---|---|
 | 3 | `401k-calculator` | **built** | CDF |  |
 | 3 | `rmd-calculator` | **built** | CDF |  |
-| 2 | `ira-calculator` | planned | CD |  |
-| 2 | `pension-calculator` | planned | CD |  |
-| 2 | `roth-ira-calculator` | planned | CD |  |
-| 2 | `traditional-ira-vs-roth-ira-calculator` | planned | DF |  |
+| 2 | `ira-calculator` | **built** | CD |  |
+| 2 | `pension-calculator` | **built** | CD |  |
+| 2 | `roth-ira-calculator` | **built** | CD |  |
+| 2 | `traditional-ira-vs-roth-ira-calculator` | **built** | DF |  |
 | 1 | `401k-contribution-effects-on-your-paycheck-calculator` | planned | D |  |
 | 1 | `401k-savings-with-profit-sharing-calculator` | planned | D |  |
 | 1 | `401k-spend-it-or-save-it-calculator` | planned | D |  |
@@ -255,7 +255,7 @@ old-site calculators are 3). Sites: C = calculator.net, D = dinkytown.net, F = f
 | Pri | Tool | Status | Sites | Notes |
 |---:|---|---|---|---|
 | 3 | `social-security-calculator` | **built** | CDF |  |
-| 2 | `annuity-calculator` | planned | CF |  |
+| 2 | `annuity-calculator` | **built** | CF |  |
 | 1 | `annuity-payout-calculator` | planned | C |  |
 | 1 | `fixed-annuity-calculator` | planned | D |  |
 | 1 | `how-important-is-social-security-calculator` | planned | D |  |
@@ -273,11 +273,11 @@ old-site calculators are 3). Sites: C = calculator.net, D = dinkytown.net, F = f
 | 3 | `sector-balance` | **built** | – | port from archive |
 | 3 | `irr-calculator` | **built** | CDF |  |
 | 3 | `mutual-fund-calculator` | **built** | CDF |  |
-| 2 | `asset-allocation-calculator` | planned | DF |  |
-| 2 | `future-value-calculator` | planned | CD |  |
-| 2 | `investment-calculator` | planned | CD |  |
-| 2 | `present-value-calculator` | planned | CD |  |
-| 2 | `roi-calculator` | planned | CF |  |
+| 2 | `asset-allocation-calculator` | **built** | DF |  |
+| 2 | `future-value-calculator` | **built** | CD |  |
+| 2 | `investment-calculator` | **built** | CD |  |
+| 2 | `present-value-calculator` | **built** | CD |  |
+| 2 | `roi-calculator` | **built** | CF |  |
 | 1 | `annual-rate-of-return-calculator` | planned | D |  |
 | 1 | `asset-allocation-broad-portfolio-calculator` | planned | D |  |
 | 1 | `average-return-calculator` | planned | C |  |
@@ -322,7 +322,7 @@ old-site calculators are 3). Sites: C = calculator.net, D = dinkytown.net, F = f
 |---:|---|---|---|---|
 | 3 | `bond-calculator` | **built** | CDF |  |
 | 3 | `cd-calculator` | **built** | CDF |  |
-| 2 | `tax-equivalent-yield-calculator` | planned | DF |  |
+| 2 | `tax-equivalent-yield-calculator` | **built** | DF |  |
 | 1 | `cd-ladder-calculator` | planned | D |  |
 | 1 | `certificate-of-deposit-for-apy-calculator` | planned | D |  |
 | 1 | `compare-certificate-of-deposit-cd-rates-calculator` | planned | D |  |
@@ -336,8 +336,8 @@ old-site calculators are 3). Sites: C = calculator.net, D = dinkytown.net, F = f
 
 | Pri | Tool | Status | Sites | Notes |
 |---:|---|---|---|---|
-| 2 | `apr-calculator` | planned | CF |  |
-| 2 | `cash-back-or-low-interest-calculator` | planned | CD |  |
+| 2 | `apr-calculator` | **built** | CF |  |
+| 2 | `cash-back-or-low-interest-calculator` | **built** | CD |  |
 | 2 | `compound-interest-calculator` | **built** | CF |  |
 | 1 | `apr-advanced-calculator` | planned | F |  |
 | 1 | `compound-savings-calculator` | planned | D |  |
@@ -353,8 +353,8 @@ old-site calculators are 3). Sites: C = calculator.net, D = dinkytown.net, F = f
 | Pri | Tool | Status | Sites | Notes |
 |---:|---|---|---|---|
 | 3 | `tax-harvesting` | **built** | – | port from archive |
-| 2 | `estate-tax-calculator` | planned | CD |  |
-| 2 | `income-tax-calculator` | planned | CD |  |
+| 2 | `estate-tax-calculator` | **built** | CD |  |
+| 2 | `income-tax-calculator` | **built** | CD |  |
 | 1 | `charitable-giving-tax-savings-calculator` | planned | D |  |
 | 1 | `dividend-tax-calculator` | planned | F |  |
 | 1 | `earned-income-credit-eic-calculator` | planned | D |  |
@@ -370,7 +370,7 @@ old-site calculators are 3). Sites: C = calculator.net, D = dinkytown.net, F = f
 | Pri | Tool | Status | Sites | Notes |
 |---:|---|---|---|---|
 | 3 | `take-home-paycheck-calculator` | **built** | CDF |  |
-| 2 | `salary-calculator` | planned | CF |  |
+| 2 | `salary-calculator` | **built** | CF |  |
 | 1 | `civilian-pay-to-equal-military-take-home-pay-calculator` | planned | D |  |
 | 1 | `commission-calculator` | planned | C |  |
 | 1 | `payroll-deductions-calculator-w-4-with-exemptions` | planned | D |  |
@@ -384,7 +384,7 @@ old-site calculators are 3). Sites: C = calculator.net, D = dinkytown.net, F = f
 
 | Pri | Tool | Status | Sites | Notes |
 |---:|---|---|---|---|
-| 2 | `us-health-savings-account-calculator` | planned | DF |  |
+| 2 | `us-health-savings-account-calculator` | **built** | DF |  |
 | 1 | `health-savings-account-hsa-contribution-calculator` | planned | D |  |
 | 1 | `health-savings-account-hsa-goal-calculator` | planned | D |  |
 | 1 | `health-savings-account-hsa-vs-traditional-health-plan-calculator` | planned | D |  |
@@ -408,7 +408,7 @@ old-site calculators are 3). Sites: C = calculator.net, D = dinkytown.net, F = f
 
 | Pri | Tool | Status | Sites | Notes |
 |---:|---|---|---|---|
-| 2 | `savings-goal-calculator` | planned | DF |  |
+| 2 | `savings-goal-calculator` | **built** | DF |  |
 | 1 | `compare-savings-rates-calculator` | planned | D |  |
 | 1 | `cool-million-calculator` | planned | D |  |
 | 1 | `dont-delay-your-savings-calculator` | planned | D |  |
@@ -421,7 +421,7 @@ old-site calculators are 3). Sites: C = calculator.net, D = dinkytown.net, F = f
 
 | Pri | Tool | Status | Sites | Notes |
 |---:|---|---|---|---|
-| 2 | `budget-calculator` | planned | CD |  |
+| 2 | `budget-calculator` | **built** | CD |  |
 | 1 | `benefit-of-spending-less-calculator` | planned | D |  |
 | 1 | `checkbook-balancer` | planned | D |  |
 | 1 | `clergy-housing-allowance-worksheet` | planned | D |  |
@@ -433,14 +433,14 @@ old-site calculators are 3). Sites: C = calculator.net, D = dinkytown.net, F = f
 | Pri | Tool | Status | Sites | Notes |
 |---:|---|---|---|---|
 | 3 | `inflation-calculator` | **built** | CDF |  |
-| 2 | `currency-calculator` | planned | CF |  |
+| 2 | `currency-calculator` | **built** | CF |  |
 | 1 | `personal-economic-recovery-calculator` | planned | D |  |
 
 ## Everyday Money & Utility
 
 | Pri | Tool | Status | Sites | Notes |
 |---:|---|---|---|---|
-| 2 | `discount-calculator` | planned | CF |  |
+| 2 | `discount-calculator` | **built** | CF |  |
 | 1 | `basic-calculator` | planned | D |  |
 | 1 | `basic-financial-calculator` | planned | D |  |
 | 1 | `date-calculator` | planned | F |  |
@@ -456,7 +456,7 @@ old-site calculators are 3). Sites: C = calculator.net, D = dinkytown.net, F = f
 |---:|---|---|---|---|
 | 3 | `business-loan-calculator` | **built** | CDF |  |
 | 3 | `margin-calculator` | **built** | CDF |  |
-| 2 | `financial-ratios-calculator` | planned | DF |  |
+| 2 | `financial-ratios-calculator` | **built** | DF |  |
 | 1 | `balance-sheet-and-income-statement-analysis` | planned | F |  |
 | 1 | `breakeven-analysis-calculator` | planned | D |  |
 | 1 | `business-debt-consolidation-calculator` | planned | D |  |
