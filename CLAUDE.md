@@ -45,11 +45,20 @@ Key rules:
 python3 src/generate.py                    # validate JSON + render public/
 python3 src/generate.py --include-planned  # render all 320 tools as noindex previews (template work)
 cd public && python3 -m http.server 8811   # local preview
+python3 utilities/scaffold/tool_tracker.py # regenerate TOOL_TRACKER.md after changing any tool status
 ```
 
 Python standard library only (the pages load Tailwind v4 from its browser CDN and compile the
 stylesheet at runtime). The build fails with a clear message on invalid JSON, unknown
 subcategories/related slugs, missing required fields on live tools, or unknown template tokens.
+
+## Building calculators
+
+- `TOOL_TRACKER.md` is the build tracker, generated from each tool's `status` field — never edit it by
+  hand. Work in priority order (priority = number of competitor sites with the tool).
+- Before building a tool, run `utilities/competitor_research/extract_fields.py <slug>` (with the
+  research `.venv`) to get a field brief — competitor inputs, labels, defaults and headings — in
+  `utilities/competitor_research/field_briefs/` (gitignored). Use it to choose inputs; never copy.
 
 ## Deployment
 

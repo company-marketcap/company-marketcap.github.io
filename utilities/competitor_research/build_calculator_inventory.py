@@ -90,7 +90,7 @@ OVERRIDES = [(re.compile(rx, re.I), sub) for rx, sub in [
     (r"tax[- ]equivalent|certificate", "Bonds, CDs & Fixed Income"),
     (r"^stock", "Stocks, Dividends & Trading"),
     (r"earned income credit|\beic\b", "Income Tax & Tax Planning"),
-    (r"civilian pay|military", "Payroll, Salary & Take-home Pay"),
+    (r"civilian pay|military|take[- ]home paycheck", "Payroll, Salary & Take-home Pay"),
     (r"dealer financing|truck", "Auto Loans & Leasing"),
     (r"equity line", "Home Equity & Refinancing"),
     (r"taxes and insurance|\bpiti\b|\bpmi\b", "Mortgage & Home Buying"),

@@ -20,6 +20,7 @@ built from them, which drives the plan for the new site below.
 competitor_research/
   crawl.py                      offline-mirror crawler; sites configured in SITES
   build_calculator_inventory.py builds calculator_inventory.xlsx from the mirrors
+  extract_fields.py             field brief per tool (inputs/defaults/headings) -> field_briefs/
   calculator_inventory.xlsx     consolidated calculator list (output)
   requirements.txt              requests, beautifulsoup4, openpyxl
   .venv/                        shared virtualenv (not committed)
@@ -35,6 +36,7 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt   # first tim
 .venv/bin/python crawl.py <site>                  # mirror a site (resumable; re-run to continue)
 .venv/bin/python crawl.py <site> --max-pages 5    # quick test
 .venv/bin/python build_calculator_inventory.py    # rebuild the spreadsheet
+.venv/bin/python extract_fields.py <slug> [...]   # field brief(s) for tools (or --priority 3)
 ```
 
 Adding a competitor: add an entry to `SITES` in `crawl.py` (`start`, `hosts`, `cdn_hosts`, and
