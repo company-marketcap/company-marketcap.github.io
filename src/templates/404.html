@@ -1,0 +1,122 @@
+{{INCLUDE:_head.html}}
+{{INCLUDE:_header.html}}
+
+{{INCLUDE:_sidebar.html}}
+
+    <main id="{{PAGE_ID}}-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-5 focus:outline-none" tabindex="-1" data-page-main="{{PAGE_ID}}">
+      {{AD_TOP}}
+
+      <section id="{{PAGE_ID}}-hero-section" class="grid items-center gap-8 @3xl:grid-cols-[minmax(0,5fr)_minmax(0,6fr)]" aria-labelledby="{{PAGE_ID}}-hero-heading" data-section="hero">
+        <figure id="{{PAGE_ID}}-cartoon" class="panel m-0 p-4 sm:p-6">
+          <svg id="{{PAGE_ID}}-cartoon-art" class="mx-auto block h-auto w-full max-w-sm text-ink" viewBox="0 0 340 280" role="img" aria-labelledby="{{PAGE_ID}}-cartoon-title {{PAGE_ID}}-cartoon-desc" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+            <title id="{{PAGE_ID}}-cartoon-title">A confused calculator</title>
+            <desc id="{{PAGE_ID}}-cartoon-desc">A cartoon calculator whose display reads 404. It looks worried, holds a magnifying glass, and has lost its equals key, which lies on the ground beside it.</desc>
+            <!-- ground and shadow -->
+            <path d="M18 252h304" stroke-width="3" class="stroke-line"/>
+            <ellipse cx="165" cy="252" rx="78" ry="8" class="fill-line stroke-none"/>
+            <!-- legs -->
+            <path d="M138 226v20m0 0h-14m14 0h12M192 226v20m0 0h-14m14 0h12"/>
+            <!-- body -->
+            <g transform="rotate(-5 165 130)">
+              <rect x="98" y="30" width="136" height="198" rx="18" class="fill-surface-muted"/>
+              <!-- display -->
+              <rect x="112" y="44" width="108" height="46" rx="8" class="fill-mint"/>
+              <text x="208" y="80" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="34" font-weight="700" fill="currentColor" stroke="none" class="fill-mint-ink">404</text>
+              <!-- face -->
+              <circle cx="141" cy="108" r="5.5" fill="currentColor" stroke="none"/>
+              <circle cx="189" cy="108" r="5.5" fill="currentColor" stroke="none"/>
+              <path d="M131 98l14 4M199 98l-14 4" stroke-width="3"/>
+              <path d="M150 124q15-9 30 0" stroke-width="3"/>
+              <!-- sweat drop -->
+              <path d="M214 100q6 9 0 14q-6-5 0-14z" class="fill-sky" stroke-width="2.5"/>
+              <!-- keys -->
+              <rect x="112" y="140" width="22" height="18" rx="5" class="fill-butter"/>
+              <rect x="143" y="140" width="22" height="18" rx="5" class="fill-butter"/>
+              <rect x="174" y="140" width="22" height="18" rx="5" class="fill-butter"/>
+              <rect x="205" y="140" width="15" height="18" rx="5" class="fill-blush"/>
+              <rect x="112" y="165" width="22" height="18" rx="5" class="fill-surface"/>
+              <rect x="143" y="165" width="22" height="18" rx="5" class="fill-surface"/>
+              <rect x="174" y="165" width="22" height="18" rx="5" class="fill-surface"/>
+              <rect x="205" y="165" width="15" height="18" rx="5" class="fill-surface"/>
+              <rect x="112" y="190" width="22" height="18" rx="5" class="fill-surface"/>
+              <rect x="143" y="190" width="22" height="18" rx="5" class="fill-surface"/>
+              <rect x="174" y="190" width="22" height="18" rx="5" class="fill-surface"/>
+              <!-- the missing equals key -->
+              <rect x="205" y="190" width="15" height="18" rx="5" stroke-dasharray="4 5" stroke-width="2.5"/>
+            </g>
+            <!-- left arm: shrug -->
+            <path d="M99 136q-28 4-34 26q-3 10 4 14"/>
+            <path d="M69 176l-6-9m6 9l-9-3" stroke-width="3"/>
+            <!-- right arm with magnifying glass -->
+            <path d="M232 138q26 -2 40 -26"/>
+            <circle cx="288" cy="86" r="22" class="fill-sky" fill-opacity=".55"/>
+            <path d="M272 102l-8 9" stroke-width="5"/>
+            <text x="288" y="95" text-anchor="middle" font-size="26" font-weight="700" fill="currentColor" stroke="none">?</text>
+            <!-- the fallen equals key -->
+            <g transform="rotate(14 276 238)">
+              <rect x="262" y="228" width="28" height="20" rx="6" class="fill-blush"/>
+              <path d="M270 236h12M270 241h12" stroke-width="3"/>
+            </g>
+            <!-- stray decimal point wandering off -->
+            <circle cx="42" cy="240" r="4" fill="currentColor" stroke="none"/>
+            <path d="M52 246q6 3 12 0" stroke-width="2" stroke-dasharray="2 5"/>
+          </svg>
+          <figcaption id="{{PAGE_ID}}-cartoon-caption" class="mt-4 text-center font-display text-lg font-semibold italic leading-snug text-balance text-ink">&ldquo;I ran the numbers three times. This page still doesn&rsquo;t add up.&rdquo;</figcaption>
+        </figure>
+
+        <div id="{{PAGE_ID}}-intro-area" class="space-y-4">
+          <p id="{{PAGE_ID}}-eyebrow" class="badge badge-outline">Error 404</p>
+          <h1 id="{{PAGE_ID}}-hero-heading" class="max-w-3xl font-display text-3xl font-bold leading-[1.1] tracking-tight text-balance sm:text-4xl">{{H1}}</h1>
+          <p id="{{PAGE_ID}}-hero-intro" class="max-w-2xl text-[17px] leading-relaxed text-ink-muted">{{SUBTITLE}}</p>
+          <p id="{{PAGE_ID}}-lost-url" class="max-w-2xl break-all text-sm text-ink-muted" hidden>You asked for <code id="{{PAGE_ID}}-lost-url-path"></code>, which is not a page here.</p>
+
+          <section id="{{PAGE_ID}}-finder-section" class="panel p-4 sm:p-5" aria-labelledby="{{PAGE_ID}}-finder-heading" data-section="calculator-finder">
+            <h2 id="{{PAGE_ID}}-finder-heading" class="panel-heading">Find the calculator you were after</h2>
+            <p id="{{PAGE_ID}}-finder-intro" class="mb-3 mt-0.5 text-sm text-ink-muted">Type what you want to work out, then pick a match.</p>
+            <search id="{{PAGE_ID}}-lost-search" class="block" data-search-region="lost">
+              <form id="{{PAGE_ID}}-lost-search-form" class="relative" action="/" method="get" data-search-key="lost">
+                <label for="{{PAGE_ID}}-lost-search-input" class="sr-only">Search calculators</label>
+                <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+                <input id="{{PAGE_ID}}-lost-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Try mortgage, 401k, or APR" class="search-input" aria-describedby="{{PAGE_ID}}-lost-search-status" aria-controls="{{PAGE_ID}}-lost-search-results" data-search-input="lost">
+                <p id="{{PAGE_ID}}-lost-search-status" class="sr-only" aria-live="polite"></p>
+                <ul id="{{PAGE_ID}}-lost-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+              </form>
+            </search>
+          </section>
+        </div>
+      </section>
+
+      <section id="{{PAGE_ID}}-popular-section" class="space-y-4" aria-labelledby="{{PAGE_ID}}-popular-heading" data-section="popular-calculators">
+        <h2 id="{{PAGE_ID}}-popular-heading" class="font-display text-2xl font-bold tracking-tight">Or start with a favorite</h2>
+        <ul id="{{PAGE_ID}}-popular-list" class="grid gap-3 @xl:grid-cols-2 @4xl:grid-cols-3" role="list">
+{{POPULAR_TOOLS}}
+        </ul>
+        <p id="{{PAGE_ID}}-more-links" class="text-sm text-ink-muted">Still stuck? Go <a href="/">home</a>, browse <a href="{{CATEGORY_URL}}">every calculator</a> or check the <a href="{{SITEMAP_URL}}">sitemap</a>.</p>
+      </section>
+
+      {{AD_BOTTOM}}
+    </main>
+
+    <script>
+      (function () {
+        // Pre-fill the search with whatever the visitor was trying to reach, e.g. /mortgage-calc.html -> "mortgage calc".
+        var input = document.getElementById("{{PAGE_ID}}-lost-search-input");
+        var note = document.getElementById("{{PAGE_ID}}-lost-url");
+        var shown = document.getElementById("{{PAGE_ID}}-lost-url-path");
+        if (!input) { return; }
+        var path = window.location.pathname;
+        var words = "";
+        try {
+          words = decodeURIComponent(path.split("/").filter(Boolean).pop() || "")
+            .replace(/\.html?$/i, "").replace(/[-_+.]+/g, " ").replace(/\s+/g, " ").trim();
+        } catch (error) { words = ""; }
+        if (words && path !== "/404.html") {
+          input.value = words;
+          if (note && shown) { shown.textContent = path; note.hidden = false; }
+        }
+      })();
+    </script>
+
+{{INCLUDE:_footer.html}}
+</body>
+</html>

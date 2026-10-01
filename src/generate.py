@@ -45,6 +45,7 @@ TEMPLATE_TOKENS = {
     "tool.html": COMMON_TOKENS | {"BREADCRUMB", "SUBCATEGORY_SLUG", "TOOL_CARD", "DISCLAIMER", "AD_IN_FEED",
                                   "CONTENT_SECTIONS", "FAQ", "RELATED_TOOLS", "TOOL_EXTRA_SCRIPTS", "TOOL_SCRIPT"},
     "page.html": COMMON_TOKENS | {"BREADCRUMB", "CONTENT_HTML"},
+    "404.html": COMMON_TOKENS | {"POPULAR_TOOLS", "CATEGORY_URL", "SITEMAP_URL"},
 }
 TOKEN_RE = re.compile(r"\{\{([A-Z0-9_]+)\}\}")
 INCLUDE_RE = re.compile(r"\{\{INCLUDE:([\w.-]+)\}\}")
@@ -442,6 +443,29 @@ def render_page(S, slug, meta_title, meta_description, h1, subtitle, content_htm
     return render("page.html", values)
 
 
+POPULAR_404 = ["mortgage-calculator", "compound-interest-calculator", "401k-calculator", "retirement-calculator",
+               "income-tax-calculator", "auto-loan-calculator", "loan-calculator", "savings-calculator",
+               "house-affordability-calculator"]
+
+
+def render_404(S):
+    """Custom 404: cartoon + caption + calculator search, pre-filled from the mistyped URL (see templates/404.html)."""
+    site, page_id = S.site, "404"
+    values = S.base(page_id, "page", "404", f"Page not found (404) | {site['site_name']}", "", "This page doesn\u2019t add up",
+                    "The page you asked for doesn\u2019t exist or has moved. The calculators are all still here, so "
+                    "search for the one you wanted below.", preview=True)
+    items = "\n".join(
+        f'          <li><a id="{page_id}-popular-link-{t}" class="category-calculator-link flex items-start gap-2.5" '
+        f'href="{href(t)}">{LIST_BULLET}<span>{esc(S.by_slug[t]["name"])}</span></a></li>'
+        for t in POPULAR_404 if t in S.by_slug and S.by_slug[t]["live"])
+    values.update({
+        "JSON_LD": json_ld(breadcrumb_ld(site, [("Home", "/"), ("Page not found", href("404"))])),
+        "POPULAR_TOOLS": items,
+        "CATEGORY_URL": href(S.category["slug"]), "SITEMAP_URL": href("sitemap"),
+    })
+    return render("404.html", values)
+
+
 def sitemap_page_html(S):
     cat, parts = S.category, []
     parts.append(f'<p><a href="{href(cat["slug"])}">{esc(cat["name"])}</a></p>')
@@ -520,10 +544,7 @@ def main():
                                  f"Every calculator on {site['site_name']}, grouped by topic.", "Sitemap",
                                  "Every financial calculator on the site, grouped by topic.", sitemap_page_html(S)))
     indexable.append("sitemap")
-    write("404", render_page(S, "404", f"Page not found | {site['site_name']}", "", "Page not found",
-                             "That page doesn't exist or has moved.",
-                             f'<p>Try the <a href="/">home page</a>, the <a href="{href(S.category["slug"])}">financial '
-                             f'calculators</a> or the <a href="{href("sitemap")}">sitemap</a>.</p>', preview=True))
+    write("404", render_404(S))
 
     (OUT / SEARCH_INDEX).parent.mkdir(parents=True, exist_ok=True)
     (OUT / SEARCH_INDEX).write_text(json.dumps(search_index(S), ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
