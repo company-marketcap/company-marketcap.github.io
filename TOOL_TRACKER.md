@@ -8,7 +8,7 @@ Statuses: `planned` → `in_progress` → `built` (formula checked, page live) �
 old-site calculators are 3). Sites: C = calculator.net, D = dinkytown.net, F = fncalculator.com.
 Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculator only, content still to write.
 
-**310 of 320 live** · planned: 10 · in_progress: 0 · built: 310 · verified: 0 · done: 0 · live without content: 240
+**320 of 320 live** · planned: 0 · in_progress: 0 · built: 320 · verified: 0 · done: 0 · live without content: 250
 
 ## By subcategory
 
@@ -22,7 +22,7 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 | Student Loans & Education Savings | 6 | 6 | 0 | 0 |
 | Credit Cards & Debt Payoff | 18 | 18 | 0 | 0 |
 | Retirement Planning | 16 | 16 | 0 | 0 |
-| Retirement Accounts (401k, 403b, 457, IRA, Roth) | 46 | 36 | 0 | 10 |
+| Retirement Accounts (401k, 403b, 457, IRA, Roth) | 46 | 46 | 0 | 0 |
 | Social Security & Annuities | 10 | 10 | 0 | 0 |
 | Investment Returns & Growth | 22 | 22 | 0 | 0 |
 | Stocks, Dividends & Trading | 19 | 19 | 0 | 0 |
@@ -224,22 +224,22 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 | 1 | `72t-calculator` | **built** | – | D |  |
 | 1 | `72t-distribution-impact-calculator` | **built** | – | D |  |
 | 1 | `72t-distributions-substantially-equal-periodic-payments-calculator` | **built** | – | D |  |
-| 1 | `beneficiary-required-minimum-distribution-rmd-current-year-calculator` | planned | – | D |  |
-| 1 | `beneficiary-required-minimum-distributions-rmd-calculator` | planned | – | D |  |
-| 1 | `beneficiary-required-minimum-distributions-rmd-advanced-options-calculator` | planned | – | D |  |
-| 1 | `beneficiary-required-minimum-distributions-rmd-spouse-inherited-ira-calculator` | planned | – | D |  |
-| 1 | `beneficiary-required-minimum-distributions-rmd-spouse-inherited-ira-current-year-calculator` | planned | – | D |  |
+| 1 | `beneficiary-required-minimum-distribution-rmd-current-year-calculator` | **built** | – | D |  |
+| 1 | `beneficiary-required-minimum-distributions-rmd-calculator` | **built** | – | D |  |
+| 1 | `beneficiary-required-minimum-distributions-rmd-advanced-options-calculator` | **built** | – | D |  |
+| 1 | `beneficiary-required-minimum-distributions-rmd-spouse-inherited-ira-calculator` | **built** | – | D |  |
+| 1 | `beneficiary-required-minimum-distributions-rmd-spouse-inherited-ira-current-year-calculator` | **built** | – | D |  |
 | 1 | `individual-401k-contribution-comparison` | **built** | – | D |  |
 | 1 | `individual-401k-savings-calculator` | **built** | – | D |  |
 | 1 | `ira-spend-it-or-save-it-calculator` | **built** | – | D |  |
 | 1 | `payroll-deduction-calculator-with-457-contributions` | **built** | – | D |  |
 | 1 | `pension-plan-retirement-options-calculator` | **built** | – | D |  |
 | 1 | `pension-vs-lump-sum-payout-calculator` | **built** | – | D |  |
-| 1 | `required-minimum-distribution-rmd-current-year-calculator` | planned | – | D |  |
-| 1 | `required-minimum-distribution-rmd-future-projection-calculator` | planned | – | D |  |
-| 1 | `required-minimum-distribution-rmd-stretch-projection-calculator` | planned | – | D |  |
-| 1 | `required-minimum-distribution-rmd-year-to-begin-calculator` | planned | – | D |  |
-| 1 | `rmd-and-stretch-ira-calculator` | planned | – | D |  |
+| 1 | `required-minimum-distribution-rmd-current-year-calculator` | **built** | – | D |  |
+| 1 | `required-minimum-distribution-rmd-future-projection-calculator` | **built** | – | D |  |
+| 1 | `required-minimum-distribution-rmd-stretch-projection-calculator` | **built** | – | D |  |
+| 1 | `required-minimum-distribution-rmd-year-to-begin-calculator` | **built** | – | D |  |
+| 1 | `rmd-and-stretch-ira-calculator` | **built** | – | D |  |
 | 1 | `roth-after-tax-account-or-pre-tax-account-calculator` | **built** | – | D |  |
 | 1 | `roth-401k-conversion-calculator` | **built** | – | D |  |
 | 1 | `roth-401k-vs-traditional-401k-calculator` | **built** | – | D |  |
