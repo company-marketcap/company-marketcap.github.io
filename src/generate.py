@@ -462,6 +462,8 @@ def render_404(S):
         "JSON_LD": json_ld(breadcrumb_ld(site, [("Home", "/"), ("Page not found", href("404"))])),
         "POPULAR_TOOLS": items,
         "CATEGORY_URL": href(S.category["slug"]), "SITEMAP_URL": href("sitemap"),
+        # AdSense policy: no ads on error / non-content pages, so every ad slot is blanked here.
+        "AD_TOP": "", "AD_BOTTOM": "", "AD_RIGHT_RAIL": "",
     })
     return render("404.html", values)
 
