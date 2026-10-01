@@ -8,27 +8,27 @@ Statuses: `planned` → `in_progress` → `built` (formula checked, page live) �
 old-site calculators are 3). Sites: C = calculator.net, D = dinkytown.net, F = fncalculator.com.
 Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculator only, content still to write.
 
-**190 of 320 live** · planned: 130 · in_progress: 0 · built: 190 · verified: 0 · done: 0 · live without content: 120
+**220 of 320 live** · planned: 100 · in_progress: 0 · built: 220 · verified: 0 · done: 0 · live without content: 150
 
 ## By subcategory
 
 | Subcategory | Tools | Live | In progress | Planned |
 |---|---:|---:|---:|---:|
-| Mortgage & Home Buying | 32 | 21 | 0 | 11 |
+| Mortgage & Home Buying | 32 | 27 | 0 | 5 |
 | Home Equity & Refinancing | 8 | 6 | 0 | 2 |
 | Real Estate & Rental Property | 11 | 6 | 0 | 5 |
 | Personal & General Loans | 13 | 8 | 0 | 5 |
-| Auto Loans & Leasing | 18 | 8 | 0 | 10 |
+| Auto Loans & Leasing | 18 | 13 | 0 | 5 |
 | Student Loans & Education Savings | 6 | 5 | 0 | 1 |
-| Credit Cards & Debt Payoff | 18 | 8 | 0 | 10 |
-| Retirement Planning | 16 | 7 | 0 | 9 |
+| Credit Cards & Debt Payoff | 18 | 13 | 0 | 5 |
+| Retirement Planning | 16 | 12 | 0 | 4 |
 | Retirement Accounts (401k, 403b, 457, IRA, Roth) | 46 | 13 | 0 | 33 |
 | Social Security & Annuities | 10 | 8 | 0 | 2 |
-| Investment Returns & Growth | 22 | 13 | 0 | 9 |
-| Stocks, Dividends & Trading | 19 | 15 | 0 | 4 |
-| Bonds, CDs & Fixed Income | 11 | 5 | 0 | 6 |
+| Investment Returns & Growth | 22 | 15 | 0 | 7 |
+| Stocks, Dividends & Trading | 19 | 17 | 0 | 2 |
+| Bonds, CDs & Fixed Income | 11 | 7 | 0 | 4 |
 | Interest, APR & Time Value of Money | 11 | 10 | 0 | 1 |
-| Income Tax & Tax Planning | 12 | 8 | 0 | 4 |
+| Income Tax & Tax Planning | 12 | 11 | 0 | 1 |
 | Payroll, Salary & Take-home Pay | 10 | 7 | 0 | 3 |
 | Health Savings & Medical Costs | 10 | 5 | 0 | 5 |
 | Insurance | 4 | 3 | 0 | 1 |
@@ -54,22 +54,22 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 | 2 | `mortgage-payoff-calculator` | **built** | ✓ | CD |  |
 | 2 | `mortgage-tax-saving-calculator` | **built** | ✓ | DF |  |
 | 1 | `15-vs-30-year-mortgage-calculator` | **built** | – | D |  |
-| 1 | `20-vs-30-year-mortgage-calculator` | planned | – | D |  |
-| 1 | `apr-calculator-for-adjustable-rate-mortgages` | planned | – | D |  |
-| 1 | `apr-mortgage-calculator` | planned | – | D |  |
+| 1 | `20-vs-30-year-mortgage-calculator` | **built** | – | D |  |
+| 1 | `apr-calculator-for-adjustable-rate-mortgages` | **built** | – | D |  |
+| 1 | `apr-mortgage-calculator` | **built** | – | D |  |
 | 1 | `arm-and-interest-only-arm-vs-fixed-rate-mortgage-calculator` | planned | – | D |  |
 | 1 | `balloon-loan-calculator` | **built** | – | D |  |
 | 1 | `biweekly-mortgage-payment-calculator-for-an-existing-mortgage` | planned | – | D |  |
 | 1 | `blended-rate-mortgage-calculator` | **built** | – | D |  |
 | 1 | `combination-mortgage-calculator` | **built** | – | D |  |
 | 1 | `down-payment-calculator` | **built** | – | C |  |
-| 1 | `fixed-rate-mortgage-vs-interest-only-mortgage-calculator` | planned | – | D |  |
+| 1 | `fixed-rate-mortgage-vs-interest-only-mortgage-calculator` | **built** | – | D |  |
 | 1 | `home-buyer-savings-calculator` | planned | – | D |  |
 | 1 | `home-closing-cost-calculator` | **built** | – | D |  |
-| 1 | `interest-only-arm-calculator` | planned | – | D |  |
+| 1 | `interest-only-arm-calculator` | **built** | – | D |  |
 | 1 | `maximum-mortgage-calculator` | **built** | – | D |  |
 | 1 | `mortgage-calculator-for-purchase-price-and-down-payment` | planned | – | D |  |
-| 1 | `mortgage-qualifier-calculator` | planned | – | D |  |
+| 1 | `mortgage-qualifier-calculator` | **built** | – | D |  |
 | 1 | `mortgage-required-income-calculator` | **built** | – | D |  |
 | 1 | `option-arm-calculator` | planned | – | D |  |
 | 1 | `seller-closing-cost-calculator` | **built** | – | D |  |
@@ -132,18 +132,18 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 | 1 | `auto-loan-early-payoff-calculator` | **built** | – | D |  |
 | 1 | `auto-rebate-and-financing-options-calculator` | planned | – | D |  |
 | 1 | `auto-refinance-interest-savings-calculator` | **built** | – | D |  |
-| 1 | `biweekly-payments-for-an-auto-loan-calculator` | planned | – | D |  |
+| 1 | `biweekly-payments-for-an-auto-loan-calculator` | **built** | – | D |  |
 | 1 | `biweekly-payments-for-an-auto-loan-with-fees-calculator` | planned | – | D |  |
 | 1 | `buy-vs-lease-calculator` | **built** | – | D |  |
 | 1 | `credit-union-auto-financing-options-calculator` | planned | – | D |  |
-| 1 | `dealer-financing-vs-credit-union-financing-calculator` | planned | – | D |  |
-| 1 | `home-equity-loan-vs-auto-loan-calculator` | planned | – | D |  |
-| 1 | `lease-vs-cash-calculator` | planned | – | D |  |
+| 1 | `dealer-financing-vs-credit-union-financing-calculator` | **built** | – | D |  |
+| 1 | `home-equity-loan-vs-auto-loan-calculator` | **built** | – | D |  |
+| 1 | `lease-vs-cash-calculator` | **built** | – | D |  |
 | 1 | `motorcycle-loan-calculator` | **built** | – | D |  |
 | 1 | `motorcycle-rv-and-boat-loan-calculator` | planned | – | D |  |
 | 1 | `recreational-vehicle-rv-loan-calculator` | **built** | – | D |  |
 | 1 | `specialty-vehicle-sv-loan-calculator` | planned | – | D |  |
-| 1 | `truck-loan-calculator` | planned | – | D |  |
+| 1 | `truck-loan-calculator` | **built** | – | D |  |
 
 ## Student Loans & Education Savings
 
@@ -164,18 +164,18 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 | 2 | `credit-card-minimum-calculator` | **built** | ✓ | DF |  |
 | 2 | `debt-payoff-calculator` | **built** | ✓ | CD |  |
 | 2 | `debt-to-income-ratio-calculator` | **built** | ✓ | CD |  |
-| 1 | `consolidation-loan-investment-calculator` | planned | – | D |  |
-| 1 | `cost-of-debt-calculator` | planned | – | D |  |
+| 1 | `consolidation-loan-investment-calculator` | **built** | – | D |  |
+| 1 | `cost-of-debt-calculator` | **built** | – | D |  |
 | 1 | `credit-assessment-calculator` | planned | – | D |  |
 | 1 | `credit-card-balance-transfer-comparison` | **built** | – | D |  |
 | 1 | `credit-card-balance-transfer-optimizer-with-promotional-rate` | planned | – | D |  |
-| 1 | `credit-card-optimizer-calculator` | planned | – | D |  |
-| 1 | `how-much-do-you-owe-calculator` | planned | – | D |  |
+| 1 | `credit-card-optimizer-calculator` | **built** | – | D |  |
+| 1 | `how-much-do-you-owe-calculator` | **built** | – | D |  |
 | 1 | `line-of-credit-payoff-calculator` | **built** | – | D |  |
 | 1 | `loan-and-credit-line-payment-calculator` | planned | – | D |  |
 | 1 | `loan-and-credit-line-tax-savings-calculator` | planned | – | D |  |
 | 1 | `loan-early-payoff-calculator` | **built** | – | D |  |
-| 1 | `roll-down-your-credit-card-debt-calculator` | planned | – | D |  |
+| 1 | `roll-down-your-credit-card-debt-calculator` | **built** | – | D |  |
 | 1 | `snowball-debt-elimination-calculator` | **built** | – | D |  |
 | 1 | `stream-lined-snowball-debt-elimination-calculator` | planned | – | D |  |
 
@@ -185,16 +185,16 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 |---:|---|---|:---:|---|---|
 | 3 | `retirement-calculator` | **built** | ✓ | CDF |  |
 | 2 | `retirement-income-analysis` | **built** | ✓ | DF |  |
-| 1 | `gross-distribution-calculator` | planned | – | D |  |
+| 1 | `gross-distribution-calculator` | **built** | – | D |  |
 | 1 | `how-long-will-my-retirement-savings-last-calculator` | **built** | – | D |  |
 | 1 | `life-expectancy-calculator` | **built** | – | D |  |
 | 1 | `net-distribution-calculator` | **built** | – | F |  |
 | 1 | `retirement-account-contribution-accelerator-calculator` | planned | – | D |  |
-| 1 | `retirement-nest-egg-calculator` | planned | – | D |  |
-| 1 | `retirement-plan-withdrawal-calculator` | planned | – | D |  |
-| 1 | `retirement-planner-for-two-working-spouses` | planned | – | D |  |
+| 1 | `retirement-nest-egg-calculator` | **built** | – | D |  |
+| 1 | `retirement-plan-withdrawal-calculator` | **built** | – | D |  |
+| 1 | `retirement-planner-for-two-working-spouses` | **built** | – | D |  |
 | 1 | `retirement-planner-for-two-working-spouses-with-different-retirements` | planned | – | D |  |
-| 1 | `retirement-planner-with-retirement-earnings-calculator` | planned | – | D |  |
+| 1 | `retirement-planner-with-retirement-earnings-calculator` | **built** | – | D |  |
 | 1 | `retirement-planner-with-taxes-for-a-deferred-retirement-savings-plan` | planned | – | D |  |
 | 1 | `retirement-savings-analysis` | **built** | – | F |  |
 | 1 | `retirement-shortfall-calculator` | **built** | – | D |  |
@@ -279,14 +279,14 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 | 2 | `investment-calculator` | **built** | ✓ | CD |  |
 | 2 | `present-value-calculator` | **built** | ✓ | CD |  |
 | 2 | `roi-calculator` | **built** | ✓ | CF |  |
-| 1 | `annual-rate-of-return-calculator` | planned | – | D |  |
+| 1 | `annual-rate-of-return-calculator` | **built** | – | D |  |
 | 1 | `asset-allocation-broad-portfolio-calculator` | planned | – | D |  |
 | 1 | `average-return-calculator` | **built** | – | C |  |
 | 1 | `compare-investment-fees-calculator` | **built** | – | D |  |
 | 1 | `compounding-and-your-return-calculator` | planned | – | D |  |
 | 1 | `inflation-historic-impact-on-investments-calculator` | planned | – | D |  |
 | 1 | `investment-distributions-calculator` | planned | – | D |  |
-| 1 | `investment-goal-calculator` | planned | – | D |  |
+| 1 | `investment-goal-calculator` | **built** | – | D |  |
 | 1 | `investment-income-calculator` | **built** | – | F |  |
 | 1 | `investment-loan-calculator` | **built** | – | D |  |
 | 1 | `investment-questionnaire-broad-portfolio` | planned | – | D |  |
@@ -306,7 +306,7 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 | 1 | `black-scholes-option-calculator` | **built** | – | F |  |
 | 1 | `capm-calculator` | **built** | – | F |  |
 | 1 | `commodities-and-futures-calculator` | **built** | – | F |  |
-| 1 | `company-stock-distribution-analysis-calculator` | planned | – | D |  |
+| 1 | `company-stock-distribution-analysis-calculator` | **built** | – | D |  |
 | 1 | `expected-return-calculator` | **built** | – | F |  |
 | 1 | `fibonacci-calculator` | **built** | – | F |  |
 | 1 | `future-contracts-calculator` | planned | – | D |  |
@@ -314,7 +314,7 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 | 1 | `pivot-point-calculator` | **built** | – | F |  |
 | 1 | `stock-constant-growth-calculator` | **built** | – | F |  |
 | 1 | `stock-non-constant-growth-calculator` | **built** | – | F |  |
-| 1 | `stock-option-calculator` | planned | – | D |  |
+| 1 | `stock-option-calculator` | **built** | – | D |  |
 | 1 | `stock-return-and-capital-gain-calculator` | **built** | – | F |  |
 
 ## Bonds, CDs & Fixed Income
@@ -326,11 +326,11 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 | 2 | `tax-equivalent-yield-calculator` | **built** | ✓ | DF |  |
 | 1 | `cd-ladder-calculator` | **built** | – | D |  |
 | 1 | `certificate-of-deposit-for-apy-calculator` | planned | – | D |  |
-| 1 | `compare-certificate-of-deposit-cd-rates-calculator` | planned | – | D |  |
+| 1 | `compare-certificate-of-deposit-cd-rates-calculator` | **built** | – | D |  |
 | 1 | `credit-union-certificate-calculator` | planned | – | D |  |
 | 1 | `credit-union-certificate-ladder-calculator` | planned | – | D |  |
 | 1 | `investment-questionnaire-cash-fixed-income-and-equities` | planned | – | D |  |
-| 1 | `reit-tax-equivalent-distribution-calculator` | planned | – | D |  |
+| 1 | `reit-tax-equivalent-distribution-calculator` | **built** | – | D |  |
 | 1 | `us-treasury-bill-calculator` | **built** | – | F |  |
 
 ## Interest, APR & Time Value of Money
@@ -356,14 +356,14 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 | 3 | `tax-harvesting` | **built** | ✓ | – | port from archive |
 | 2 | `estate-tax-calculator` | **built** | ✓ | CD |  |
 | 2 | `income-tax-calculator` | **built** | ✓ | CD |  |
-| 1 | `charitable-giving-tax-savings-calculator` | planned | – | D |  |
+| 1 | `charitable-giving-tax-savings-calculator` | **built** | – | D |  |
 | 1 | `dividend-tax-calculator` | **built** | – | F |  |
 | 1 | `earned-income-credit-eic-calculator` | **built** | – | D |  |
 | 1 | `marginal-tax-rate-calculator` | **built** | – | D |  |
 | 1 | `marriage-tax-calculator` | **built** | – | C |  |
-| 1 | `savings-taxes-and-inflation-calculator` | planned | – | D |  |
+| 1 | `savings-taxes-and-inflation-calculator` | **built** | – | D |  |
 | 1 | `self-employment-tax-calculator` | **built** | – | D |  |
-| 1 | `taxable-vs-tax-deferred-investments-calculator` | planned | – | D |  |
+| 1 | `taxable-vs-tax-deferred-investments-calculator` | **built** | – | D |  |
 | 1 | `taxable-vs-tax-deferred-vs-tax-free-investment-calculator` | planned | – | D |  |
 
 ## Payroll, Salary & Take-home Pay
