@@ -5,7 +5,8 @@ utilities/competitor_research/calculator_inventory.xlsx, plus the 8 calculators 
 site in /archive, and stubs for the info pages in src/content/pages/.
 
 Never overwrites an existing file, so it is safe to re-run after the inventory grows: only new
-calculators get stubs. Once a tool's JSON exists, that file is the source of truth — edit it,
+calculators get stubs. Stubs that were merged into another tool (its research.merged_from) are
+not re-created. Once a tool's JSON exists, that file is the source of truth — edit it,
 not this script.
 
 Run with the competitor_research venv (needs openpyxl), from the repo root:
@@ -104,6 +105,12 @@ def main():
     PAGES_DIR.mkdir(parents=True, exist_ok=True)
     cats = json.loads(CATEGORIES.read_text())
     sub_by_name = {s["name"]: s["slug"] for g in cats["nav_groups"] for s in g["subcategories"]}
+    # Subcategories renamed on the site since the inventory was built.
+    sub_by_name["Everyday Money & Utility Tools"] = sub_by_name["Everyday Money & Utility"]
+
+    # Stubs merged into another tool (listed in that tool's research.merged_from) stay deleted.
+    merged = {m["slug"] for f in TOOLS_DIR.glob("*.json")
+              for m in json.loads(f.read_text()).get("research", {}).get("merged_from", [])}
 
     ws = load_workbook(INVENTORY)["Calculators"]
     header = [c.value for c in ws[4]]
@@ -121,6 +128,9 @@ def main():
             raise SystemExit(f"Duplicate slug {slug!r} from {name!r} — rename one in the inventory aliases")
         seen.add(slug)
         per_sub[subcategory] = per_sub.get(subcategory, 0) + 1
+        if slug in merged:
+            skipped += 1
+            continue
         competitors = []
         for site in SITES:
             cell = row[col[f"{site} link"]]

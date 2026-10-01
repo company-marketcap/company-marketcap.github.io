@@ -79,7 +79,14 @@ def main():
         for t in sorted(by_sub[sub], key=lambda t: (-(t.get("priority") or 0), t.get("order", 0), t["slug"])):
             have = {c["site"] for c in (t.get("research") or {}).get("competitors", [])}
             sites = "".join(code for site, code in SITES if site in have) or "–"
-            note = "port from archive" if t.get("legacy") else ""
+            research = t.get("research") or {}
+            notes = ["port from archive"] if t.get("legacy") else []
+            merged = [m for m in research.get("merged_from", []) if m.get("note") != "renamed"]
+            if merged:
+                notes.append(f"absorbs {len(merged)}")
+            if research.get("todo"):
+                notes.append("todo: " + research["todo"])
+            note = "; ".join(notes)
             status = f"**{t['status']}**" if t["status"] != "planned" else "planned"
             content = "✓" if has_content(t) else "–"
             out.append(f"| {t.get('priority') or ''} | `{t['slug']}` | {status} | {content} | {sites} | {note} |")
