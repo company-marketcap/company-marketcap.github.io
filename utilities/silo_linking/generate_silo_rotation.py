@@ -13,9 +13,9 @@ sentence-with-link into each live tool page in public/. Stdlib only.
                     slot_b/c  previous/next page in its chain — chains bridge into each other linearly
                               inside one pillar (the last chain does not wrap to the first)
 
-Planned tools have no page yet, so the live structure is derived from the plan: planned pages are skipped,
-and when a sub-silo is itself planned, the first live page of its chain acts as the sub-silo. When a planned
-tool is built, its status in src/content/tools/<slug>.json is all that changes — re-run and it joins its silo.
+Every tool with a page is linked (a tool whose status isn't built/verified/done is skipped, and if a sub-silo is
+skipped the first live page of its chain acts as the sub-silo). Pages without an article yet get only the intro
+link (slot_a); generate.py shows Related calculators on those pages and drops it once the article exists.
 
 Anchor text rotates among four variants of the tool's best keyword; the sentence rotates among six templates;
 both are chosen deterministically per (source page, slot, month).
@@ -41,6 +41,13 @@ ROOT = HERE.parents[1]
 PAGES_DIR = ROOT / "public"
 PLAN = json.loads((HERE / "silo_plan.json").read_text(encoding="utf-8"))
 LIVE_STATUSES = {"built", "verified", "done"}
+TOOLS_DIR = ROOT / "src" / "content" / "tools"
+
+
+def tool_is_live(slug):
+    """Read the status from the tool JSON at run time, so the plan never goes stale when tools are built."""
+    path = TOOLS_DIR / f"{slug}.json"
+    return path.exists() and json.loads(path.read_text(encoding="utf-8")).get("status") in LIVE_STATUSES
 
 SENTENCES = [
     "Try the {link} to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.",
@@ -93,7 +100,7 @@ def empty(slot):
 # --- live structure ------------------------------------------------------------------------------------
 def live_structure(cluster):
     """Pillar + chains reduced to live pages. A planned sub-silo is replaced by the chain's first live page."""
-    live = lambda n: n["status"] in LIVE_STATUSES  # noqa: E731
+    live = lambda n: tool_is_live(n["slug"])  # noqa: E731
     chains = []
     for ss in cluster["subsilos"]:
         pages = [n for n in ss["chain"] if live(n)]
@@ -201,6 +208,8 @@ def patch(html, slug, link_defs):
     wanted = []
     for d in link_defs:  # slot_a goes into both intro copies
         wanted += [dict(d, slot=s) for s in INTRO_IDS] if d["slot"] == "slot_a" else [d]
+    if not article_paragraph_ends(html, slug):  # no article yet: only the intro link; Related calculators cover the rest
+        wanted = [d for d in wanted if d["slot"] in INTRO_IDS]
     positions = slot_positions(html, slug, [d["slot"] for d in wanted if d["slot"] in SLOT_SECTION])
     for slot, intro_id in INTRO_IDS.items():
         pos = intro_position(html, slug, intro_id)

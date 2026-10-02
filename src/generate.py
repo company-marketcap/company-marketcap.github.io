@@ -469,7 +469,9 @@ def render_tool(S, tool):
         "AD_IN_FEED": render_ad(page_id, "in_feed"),
         "CONTENT_SECTIONS": render_article_cards(page_id, content),
         "FAQ": render_faq(page_id, tool.get("faq_heading") or f'{tool["name"]} questions', tool["faq"]),
-        "RELATED_TOOLS": render_related(S, tool),
+        # Related calculators are the stop-gap navigation for pages without an article; once the article is
+        # imported, the silo links (utilities/silo_linking) take over.
+        "RELATED_TOOLS": "" if content else render_related(S, tool),
         "TOOL_EXTRA_SCRIPTS": extra,
         "TOOL_SCRIPT": f"<script>{tool['script']}</script>" if tool["script"].strip() else "",
     })

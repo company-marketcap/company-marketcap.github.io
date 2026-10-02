@@ -62,7 +62,7 @@ def load_tools(xlsx):
 
 def node(t):
     return {"slug": t["slug"], "name": t["name"], "anchor": t["best_keyword"],
-            "volume": t["best_volume"], "status": t["status"]}
+            "volume": t["best_volume"]}
 
 
 def ranked(tools):
@@ -126,7 +126,7 @@ def report(plan):
         for ss in c["subsilos"]:
             head, rest = ss["chain"][0], ss["chain"][1:]
             lines += [f"### Sub-silo: {head['name']} — {head['volume']:,}  \n*{ss['label']}, {len(rest)} supporting*", ""]
-            lines += [f"- {x['name']} — {x['volume']:,}" + ("" if x["status"] in ("built", "verified", "done") else " *(planned)*") for x in rest]
+            lines += [f"- {x['name']} — {x['volume']:,}"  for x in rest]
             lines.append("")
     return "\n".join(lines) + "\n"
 

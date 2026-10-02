@@ -15,22 +15,22 @@ Volumes are global average monthly searches for each tool's best keyword (the an
 - Mortgage Payoff Calculator — 74,000
 - Interest Only Mortgage Calculator — 18,100
 - Mortgage Discount Points Calculator — 4,400
-- Balloon Loan Calculator — 3,600 *(planned)*
+- Balloon Loan Calculator — 3,600
 - Bi-weekly Payment Calculator — 2,400
-- APR Mortgage Calculator — 1,300 *(planned)*
+- APR Mortgage Calculator — 1,300
 - Adjustable Rate Mortgage Calculator — 1,300
 - Fixed vs Adjustable Rate Mortgage Calculator — 1,000
-- 15 vs. 30-Year Mortgage Calculator — 880 *(planned)*
-- Blended Rate Mortgage Calculator — 320 *(planned)*
-- 20 vs. 30-Year Mortgage Calculator — 70 *(planned)*
-- Combination Mortgage Calculator — 70 *(planned)*
-- Interest-Only ARM Calculator — 50 *(planned)*
-- APR Calculator for Adjustable Rate Mortgages — 10 *(planned)*
+- 15 vs. 30-Year Mortgage Calculator — 880
+- Blended Rate Mortgage Calculator — 320
+- 20 vs. 30-Year Mortgage Calculator — 70
+- Combination Mortgage Calculator — 70
+- Interest-Only ARM Calculator — 50
+- APR Calculator for Adjustable Rate Mortgages — 10
 - Mortgage Tax Saving Calculator — 10
-- Option ARM Calculator — 10 *(planned)*
-- ARM and Interest-Only ARM vs Fixed-Rate Mortgage Calculator — 0 *(planned)*
-- Biweekly Mortgage Payment Calculator for an Existing Mortgage — 0 *(planned)*
-- Fixed Rate Mortgage vs. Interest-Only Mortgage Calculator — 0 *(planned)*
+- Option ARM Calculator — 10
+- ARM and Interest-Only ARM vs Fixed-Rate Mortgage Calculator — 0
+- Biweekly Mortgage Payment Calculator for an Existing Mortgage — 0
+- Fixed Rate Mortgage vs. Interest-Only Mortgage Calculator — 0
 
 ### Sub-silo: Home Equity Loan Calculator — 74,000  
 *Home Equity & Refinancing, 7 supporting*
@@ -48,28 +48,28 @@ Volumes are global average monthly searches for each tool's best keyword (the an
 
 - Rent vs. Buy Calculator — 18,100
 - Rental Property Calculator — 6,600
-- Real Estate Calculator — 3,600 *(planned)*
-- 1031 Exchange Calculator — 480 *(planned)*
-- 1031 Exchange Timeline Calculator — 50 *(planned)*
-- Like Kind Exchange Calculator — 0 *(planned)*
-- Like Kind Tax Deferred Exchange Calculator — 0 *(planned)*
-- Repossession of Personal Property from a Deferred Payment Sale Calculator — 0 *(planned)*
-- Repossession of Personal Property from an Installment Sale Calculator — 0 *(planned)*
-- Repossession of Real Property Calculator — 0 *(planned)*
+- Real Estate Calculator — 3,600
+- 1031 Exchange Calculator — 480
+- 1031 Exchange Timeline Calculator — 50
+- Like Kind Exchange Calculator — 0
+- Like Kind Tax Deferred Exchange Calculator — 0
+- Repossession of Personal Property from a Deferred Payment Sale Calculator — 0
+- Repossession of Personal Property from an Installment Sale Calculator — 0
+- Repossession of Real Property Calculator — 0
 
 ### Sub-silo: House Affordability Calculator — 49,500  
 *Home buying & qualifying, 10 supporting*
 
 - FHA Loan Calculator — 27,100
-- Down Payment Calculator — 12,100 *(planned)*
-- VA Mortgage Calculator — 12,100 *(planned)*
-- Seller Closing Cost Calculator — 5,400 *(planned)*
-- Mortgage Qualifier Calculator — 2,400 *(planned)*
-- Maximum Mortgage Calculator — 1,900 *(planned)*
-- Home Closing Cost Calculator — 720 *(planned)*
-- Mortgage Required Income Calculator — 50 *(planned)*
-- Home Buyer Savings Calculator — 0 *(planned)*
-- Mortgage Calculator for Purchase Price and Down Payment — 0 *(planned)*
+- Down Payment Calculator — 12,100
+- VA Mortgage Calculator — 12,100
+- Seller Closing Cost Calculator — 5,400
+- Mortgage Qualifier Calculator — 2,400
+- Maximum Mortgage Calculator — 1,900
+- Home Closing Cost Calculator — 720
+- Mortgage Required Income Calculator — 50
+- Home Buyer Savings Calculator — 0
+- Mortgage Calculator for Purchase Price and Down Payment — 0
 
 ## Loans & Debt — 55 tools
 
@@ -99,26 +99,26 @@ Volumes are global average monthly searches for each tool's best keyword (the an
 ### Sub-silo: Payment Calculator — 550,000  
 *Personal & General Loans, 11 supporting*
 
-- Personal Loan Calculator — 368,000 *(planned)*
-- Repayment Calculator — 60,500 *(planned)*
+- Personal Loan Calculator — 368,000
+- Repayment Calculator — 60,500
 - Loan Comparison Calculator — 2,400
 - 365/360 Loan Calculator — 480
-- Deferred Payment Loan Calculator — 110 *(planned)*
-- Loan Prequalification Calculator — 90 *(planned)*
-- Existing Loan Calculator — 70 *(planned)*
+- Deferred Payment Loan Calculator — 110
+- Loan Prequalification Calculator — 90
+- Existing Loan Calculator — 70
 - 365/365 Loan Calculator — 50
-- Enhanced Loan Calculator — 50 *(planned)*
-- Alternative Payment Frequencies Calculator — 0 *(planned)*
-- Composition of Loan Payments Calculator — 0 *(planned)*
+- Enhanced Loan Calculator — 50
+- Alternative Payment Frequencies Calculator — 0
+- Composition of Loan Payments Calculator — 0
 
 ### Sub-silo: Student Loan Calculator — 49,500  
 *Student Loans & Education Savings, 5 supporting*
 
 - College Savings Calculator — 4,400
-- Student Budget Calculator — 390 *(planned)*
-- Student Loan Interest Deduction Calculator — 260 *(planned)*
-- College Cost Calculator — 0 *(planned)*
-- Student Loan Consolidation and Debt Payoff Calculator — 0 *(planned)*
+- Student Budget Calculator — 390
+- Student Loan Interest Deduction Calculator — 260
+- College Cost Calculator — 0
+- Student Loan Consolidation and Debt Payoff Calculator — 0
 
 ### Sub-silo: Debt-to-Income Ratio Calculator — 33,100  
 *Credit Cards & Debt Payoff, 17 supporting*
@@ -148,88 +148,88 @@ Volumes are global average monthly searches for each tool's best keyword (the an
 ### Sub-silo: 401(k) Calculator — 165,000  
 *401(k), 403(b) & 457 plans, 15 supporting*
 
-- 457 Plan Withdrawal Calculator — 140 *(planned)*
-- 403(b) Savings Calculator — 110 *(planned)*
-- 401(k) Contribution Effects on Your Paycheck Calculator — 0 *(planned)*
-- 401(k) Save the Max Calculator — 0 *(planned)*
-- 401(k) Savings with Profit Sharing Calculator — 0 *(planned)*
-- 401(k) Spend It or Save It Calculator — 0 *(planned)*
-- 403(b) Savings Calculator without Employer Match — 0 *(planned)*
-- 457 Plan Contribution Effects on Your Paycheck Calculator — 0 *(planned)*
-- 457(b) Savings Calculator — 0 *(planned)*
-- 457(b) Special Catch-Up Election Contribution Calculator — 0 *(planned)*
-- Individual 401(k) Contribution Comparison — 0 *(planned)*
-- Individual 401(k) Savings Calculator — 0 *(planned)*
-- Payroll Deduction Calculator with 457 Contributions — 0 *(planned)*
-- Should You Borrow From a 401(k) or 403(b)? — 0 *(planned)*
-- Tax-Sheltered Annuity (TSA) Calculator — 0 *(planned)*
+- 457 Plan Withdrawal Calculator — 140
+- 403(b) Savings Calculator — 110
+- 401(k) Contribution Effects on Your Paycheck Calculator — 0
+- 401(k) Save the Max Calculator — 0
+- 401(k) Savings with Profit Sharing Calculator — 0
+- 401(k) Spend It or Save It Calculator — 0
+- 403(b) Savings Calculator without Employer Match — 0
+- 457 Plan Contribution Effects on Your Paycheck Calculator — 0
+- 457(b) Savings Calculator — 0
+- 457(b) Special Catch-Up Election Contribution Calculator — 0
+- Individual 401(k) Contribution Comparison — 0
+- Individual 401(k) Savings Calculator — 0
+- Payroll Deduction Calculator with 457 Contributions — 0
+- Should You Borrow From a 401(k) or 403(b)? — 0
+- Tax-Sheltered Annuity (TSA) Calculator — 0
 
 ### Sub-silo: Roth IRA Calculator — 135,000  
 *IRA & Roth, 15 supporting*
 
 - IRA Calculator — 27,100
-- 72(t) Calculator — 4,400 *(planned)*
-- Roth IRA Conversion Calculator — 1,600 *(planned)*
-- Roth 401(k) vs. Traditional 401(k) Calculator — 1,300 *(planned)*
-- Roth 401(k) Conversion Calculator — 40 *(planned)*
+- 72(t) Calculator — 4,400
+- Roth IRA Conversion Calculator — 1,600
+- Roth 401(k) vs. Traditional 401(k) Calculator — 1,300
+- Roth 401(k) Conversion Calculator — 40
 - Traditional IRA vs Roth IRA Calculator — 40
-- 457 Plan: Roth vs. Pre-tax Calculator — 0 *(planned)*
-- 72(t) Distribution Impact Calculator — 0 *(planned)*
-- 72(t) SEPP Calculator: Switch to the RMD Method — 0 *(planned)*
-- IRA Spend It or Save It Calculator — 0 *(planned)*
-- Roth (After-Tax) or Pre-Tax Account Calculator — 0 *(planned)*
-- Roth 403(b) vs. Traditional 403(b) Calculator — 0 *(planned)*
-- Roth Contributions Within Your Retirement Plan Calculator — 0 *(planned)*
-- Roth IRA Conversion with Distributions Calculator — 0 *(planned)*
-- Roth vs. Traditional 401(k) and Your Paycheck Calculator — 0 *(planned)*
+- 457 Plan: Roth vs. Pre-tax Calculator — 0
+- 72(t) Distribution Impact Calculator — 0
+- 72(t) SEPP Calculator: Switch to the RMD Method — 0
+- IRA Spend It or Save It Calculator — 0
+- Roth (After-Tax) or Pre-Tax Account Calculator — 0
+- Roth 403(b) vs. Traditional 403(b) Calculator — 0
+- Roth Contributions Within Your Retirement Plan Calculator — 0
+- Roth IRA Conversion with Distributions Calculator — 0
+- Roth vs. Traditional 401(k) and Your Paycheck Calculator — 0
 
 ### Sub-silo: RMD Calculator — 110,000  
 *RMDs & pensions, 13 supporting*
 
 - Pension Calculator — 74,000
-- Beneficiary RMD Calculator — 14,800 *(planned)*
-- Pension vs. Lump Sum Payout Calculator — 20 *(planned)*
-- RMD Start Date Calculator — 20 *(planned)*
-- Beneficiary RMD Calculator: Current Year — 0 *(planned)*
-- Beneficiary RMD Payout Options Calculator — 0 *(planned)*
-- Inherited IRA Stretch RMD Projection Calculator — 0 *(planned)*
-- Pension Plan Retirement Options Calculator — 0 *(planned)*
-- RMD & Stretch IRA Calculator — 0 *(planned)*
-- Required Minimum Distribution (RMD) Current Year Calculator — 0 *(planned)*
-- Required Minimum Distribution (RMD) Future Projection Calculator — 0 *(planned)*
-- Spouse Inherited IRA RMD Calculator — 0 *(planned)*
-- Spouse Inherited IRA RMD Calculator for the Current Year — 0 *(planned)*
+- Beneficiary RMD Calculator — 14,800
+- Pension vs. Lump Sum Payout Calculator — 20
+- RMD Start Date Calculator — 20
+- Beneficiary RMD Calculator: Current Year — 0
+- Beneficiary RMD Payout Options Calculator — 0
+- Inherited IRA Stretch RMD Projection Calculator — 0
+- Pension Plan Retirement Options Calculator — 0
+- RMD & Stretch IRA Calculator — 0
+- Required Minimum Distribution (RMD) Current Year Calculator — 0
+- Required Minimum Distribution (RMD) Future Projection Calculator — 0
+- Spouse Inherited IRA RMD Calculator — 0
+- Spouse Inherited IRA RMD Calculator for the Current Year — 0
 
 ### Sub-silo: Annuity Calculator — 60,500  
 *Social Security & Annuities, 9 supporting*
 
 - Social Security Calculator — 60,500
-- Annuity Payout Calculator — 12,100 *(planned)*
-- Immediate Annuity Calculator — 8,100 *(planned)*
-- Social Security Breakeven Calculator — 8,100 *(planned)*
-- Fixed Annuity Calculator — 1,900 *(planned)*
-- Social Security Taxable Benefits Calculator — 1,900 *(planned)*
-- Variable Annuity Calculator — 110 *(planned)*
-- How Important Is Social Security? Calculator — 0 *(planned)*
-- Variable Annuity without Surrender Charges Calculator — 0 *(planned)*
+- Annuity Payout Calculator — 12,100
+- Immediate Annuity Calculator — 8,100
+- Social Security Breakeven Calculator — 8,100
+- Fixed Annuity Calculator — 1,900
+- Social Security Taxable Benefits Calculator — 1,900
+- Variable Annuity Calculator — 110
+- How Important Is Social Security? Calculator — 0
+- Variable Annuity without Surrender Charges Calculator — 0
 
 ### Sub-silo: Life Expectancy Calculator — 40,500  
 *Retirement Planning, 14 supporting*
 
 - Retirement Income Analysis — 9,900
-- How Long Will My Retirement Savings Last? — 8,100 *(planned)*
-- Net Distribution Calculator — 1,000 *(planned)*
-- Savings Distribution Calculator — 1,000 *(planned)*
-- Gross Distribution Calculator — 390 *(planned)*
-- Retirement Nest Egg Calculator — 390 *(planned)*
-- Retirement Plan Withdrawal Calculator — 110 *(planned)*
-- Retirement Shortfall Calculator — 50 *(planned)*
-- Retirement Savings Analysis — 10 *(planned)*
-- Retirement Account Contribution Accelerator — 0 *(planned)*
-- Retirement Planner for Two Working Spouses — 0 *(planned)*
-- Retirement Planner for Two Working Spouses with Different Retirements — 0 *(planned)*
-- Retirement Planner with Retirement Earnings Calculator — 0 *(planned)*
-- Retirement Planner with Taxes for a Deferred Retirement Savings Plan — 0 *(planned)*
+- How Long Will My Retirement Savings Last? — 8,100
+- Net Distribution Calculator — 1,000
+- Savings Distribution Calculator — 1,000
+- Gross Distribution Calculator — 390
+- Retirement Nest Egg Calculator — 390
+- Retirement Plan Withdrawal Calculator — 110
+- Retirement Shortfall Calculator — 50
+- Retirement Savings Analysis — 10
+- Retirement Account Contribution Accelerator — 0
+- Retirement Planner for Two Working Spouses — 0
+- Retirement Planner for Two Working Spouses with Different Retirements — 0
+- Retirement Planner with Retirement Earnings Calculator — 0
+- Retirement Planner with Taxes for a Deferred Retirement Savings Plan — 0
 
 ## Investing — 63 tools
 
@@ -258,7 +258,7 @@ Volumes are global average monthly searches for each tool's best keyword (the an
 - Rule of 72 Calculator — 4,400
 - Compound Savings Calculator — 2,900
 - Effective Rate Calculator — 480
-- Cash Back or Low Interest Calculator — 10 *(planned)*
+- Cash Back or Low Interest Calculator — 10
 - APR Advanced Calculator — 0
 
 ### Sub-silo: CD Calculator — 165,000  
@@ -278,23 +278,23 @@ Volumes are global average monthly searches for each tool's best keyword (the an
 ### Sub-silo: Pivot Point Calculator — 6,600  
 *Stocks, Dividends & Trading, 18 supporting*
 
-- Fibonacci Retracement Calculator — 1,000 *(planned)*
+- Fibonacci Retracement Calculator — 1,000
 - Position Sizing Calculator — 1,000
 - Stock Split Calculator — 1,000
-- CAPM Calculator — 720 *(planned)*
-- Stock Option Calculator — 720 *(planned)*
-- Black-Scholes Option Calculator — 260 *(planned)*
-- Expected Return Calculator — 260 *(planned)*
-- Holding Period Return Calculator — 170 *(planned)*
+- CAPM Calculator — 720
+- Stock Option Calculator — 720
+- Black-Scholes Option Calculator — 260
+- Expected Return Calculator — 260
+- Holding Period Return Calculator — 170
 - Market Cap Growth Calculator — 10
-- Stock Constant Growth Calculator — 10 *(planned)*
-- Stock Non-constant Growth Calculator — 10 *(planned)*
-- Annual Stock Option Grants Calculator — 0 *(planned)*
-- Company Stock Distribution Analysis Calculator — 0 *(planned)*
+- Stock Constant Growth Calculator — 10
+- Stock Non-constant Growth Calculator — 10
+- Annual Stock Option Grants Calculator — 0
+- Company Stock Distribution Analysis Calculator — 0
 - Dividend Reinvestment Breakeven Calculator — 0
-- Futures Contracts Margin Calculator — 0 *(planned)*
-- Futures and Commodities Profit Calculator — 0 *(planned)*
-- Stock Return and Capital Gain Calculator — 0 *(planned)*
+- Futures Contracts Margin Calculator — 0
+- Futures and Commodities Profit Calculator — 0
+- Stock Return and Capital Gain Calculator — 0
 - Stock Valuation Confidence Interval Calculator — 0
 
 ### Sub-silo: Investment Loan Calculator — 1,300  
@@ -319,29 +319,29 @@ Volumes are global average monthly searches for each tool's best keyword (the an
 ### Sub-silo: Income Tax Calculator — 550,000  
 *Income Tax & Tax Planning, 11 supporting*
 
-- Self-Employment Tax Calculator — 12,100 *(planned)*
+- Self-Employment Tax Calculator — 12,100
 - Estate Tax Calculator — 9,900
-- Dividend Tax Calculator — 6,600 *(planned)*
-- Earned Income Credit (EIC) Calculator — 5,400 *(planned)*
-- Marginal Tax Rate Calculator — 2,900 *(planned)*
-- Charitable Giving Tax Savings Calculator — 590 *(planned)*
-- Marriage Tax Calculator — 480 *(planned)*
+- Dividend Tax Calculator — 6,600
+- Earned Income Credit (EIC) Calculator — 5,400
+- Marginal Tax Rate Calculator — 2,900
+- Charitable Giving Tax Savings Calculator — 590
+- Marriage Tax Calculator — 480
 - Tax-Loss Harvesting Calculator — 260
-- Savings, Taxes and Inflation Calculator — 0 *(planned)*
-- Taxable vs. Tax-Deferred Investments Calculator — 0 *(planned)*
-- Taxable vs. Tax-Deferred vs. Tax-Free Investment Calculator — 0 *(planned)*
+- Savings, Taxes and Inflation Calculator — 0
+- Taxable vs. Tax-Deferred Investments Calculator — 0
+- Taxable vs. Tax-Deferred vs. Tax-Free Investment Calculator — 0
 
 ### Sub-silo: Salary Increase Calculator — 49,500  
 *Payroll, Salary & Take-home Pay, 8 supporting*
 
-- Hourly Paycheck Calculator — 22,200 *(planned)*
+- Hourly Paycheck Calculator — 22,200
 - Take-Home Paycheck Calculator — 12,100
-- Commission Calculator — 9,900 *(planned)*
-- Payroll Net to Gross Calculator — 480 *(planned)*
-- Payroll Deductions Comparison Calculator — 10 *(planned)*
-- Retirement Contribution Effects on Your Paycheck Calculator — 10 *(planned)*
-- Civilian Pay to Equal Military Take-Home Pay Calculator — 0 *(planned)*
-- W-4 Payroll Deductions Calculator — 0 *(planned)*
+- Commission Calculator — 9,900
+- Payroll Net to Gross Calculator — 480
+- Payroll Deductions Comparison Calculator — 10
+- Retirement Contribution Effects on Your Paycheck Calculator — 10
+- Civilian Pay to Equal Military Take-Home Pay Calculator — 0
+- W-4 Payroll Deductions Calculator — 0
 
 ### Sub-silo: Life Insurance Calculator — 12,100  
 *Insurance, 3 supporting*
@@ -388,12 +388,12 @@ Volumes are global average monthly searches for each tool's best keyword (the an
 *Savings & Emergency Funds, 7 supporting*
 
 - Savings Goal Calculator — 5,400
-- Emergency Savings Calculator — 480 *(planned)*
-- Cool Million Calculator — 50 *(planned)*
-- Compare Savings Rates Calculator — 10 *(planned)*
-- Lunch Savings Calculator — 10 *(planned)*
-- Don't Delay Your Savings Calculator — 0 *(planned)*
-- Vice Savings Calculator — 0 *(planned)*
+- Emergency Savings Calculator — 480
+- Cool Million Calculator — 50
+- Compare Savings Rates Calculator — 10
+- Lunch Savings Calculator — 10
+- Don't Delay Your Savings Calculator — 0
+- Vice Savings Calculator — 0
 
 ### Sub-silo: Budget Calculator — 33,100  
 *Budgeting, Net Worth & Cash Flow, 5 supporting*
@@ -418,7 +418,7 @@ Volumes are global average monthly searches for each tool's best keyword (the an
 - Weighted Average Cost of Capital Calculator — 320
 - Financial Ratios Calculator — 260
 - Working Capital Needs Calculator — 30
-- Balance Sheet and Income Statement Analysis — 20 *(planned)*
+- Balance Sheet and Income Statement Analysis — 20
 - Business Debt Consolidation Calculator — 10
 - Business Forecast Calculator — 10
 - Business Valuation (Discounted Cash Flow) Calculator — 10

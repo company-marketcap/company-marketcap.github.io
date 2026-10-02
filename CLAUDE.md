@@ -32,8 +32,9 @@ Key rules:
 - Never edit `public/` — it is regenerated from scratch on every build.
 - URLs are flat and every internal link ends in `.html`: `/`, `/financial-calculators.html` (the one
   category page, a section per subcategory at `#<subcategory-slug>`), `/<tool-slug>.html`.
-- A tool only gets a page when its `status` is `built`/`verified`/`done`; `planned` tools are listed on
-  the category page as unlinked "Coming soon" items.
+- A tool only gets a page when its `status` is `built`/`verified`/`done` (all 320 are `built` now). A page
+  without an article (`content_html` empty) shows the Related calculators section and only the intro silo link;
+  once the article is imported, Related is dropped and the silo links take over.
 - Each tool's `script` is fully self-contained (no shared JS runtime file) — an explicit decision:
   adding or fixing one calculator never touches any other page. Duplicate small helpers instead.
 - `compound-interest-calculator.json` is the reference implementation to copy for new tools.

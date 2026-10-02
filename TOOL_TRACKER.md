@@ -8,35 +8,35 @@ Statuses: `planned` → `in_progress` → `built` (formula checked, page live) �
 old-site calculators are 3). Sites: C = calculator.net, D = dinkytown.net, F = fncalculator.com.
 Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculator only, content still to write.
 
-**174 of 320 live** · planned: 146 · in_progress: 0 · built: 174 · verified: 0 · done: 0 · live without content: 0
+**320 of 320 live** · planned: 0 · in_progress: 0 · built: 320 · verified: 0 · done: 0 · live without content: 146
 
 ## By subcategory
 
 | Subcategory | Tools | Live | In progress | Planned |
 |---|---:|---:|---:|---:|
-| Mortgage & Home Buying | 32 | 11 | 0 | 21 |
+| Mortgage & Home Buying | 32 | 32 | 0 | 0 |
 | Home Equity & Refinancing | 8 | 8 | 0 | 0 |
-| Real Estate & Rental Property | 11 | 2 | 0 | 9 |
-| Personal & General Loans | 13 | 4 | 0 | 9 |
+| Real Estate & Rental Property | 11 | 11 | 0 | 0 |
+| Personal & General Loans | 13 | 13 | 0 | 0 |
 | Auto Loans & Leasing | 18 | 18 | 0 | 0 |
-| Student Loans & Education Savings | 6 | 1 | 0 | 5 |
+| Student Loans & Education Savings | 6 | 6 | 0 | 0 |
 | Credit Cards & Debt Payoff | 18 | 18 | 0 | 0 |
-| Retirement Planning | 16 | 2 | 0 | 14 |
-| Retirement Accounts (401k, 403b, 457, IRA, Roth) | 46 | 6 | 0 | 40 |
-| Social Security & Annuities | 10 | 2 | 0 | 8 |
+| Retirement Planning | 16 | 16 | 0 | 0 |
+| Retirement Accounts (401k, 403b, 457, IRA, Roth) | 46 | 46 | 0 | 0 |
+| Social Security & Annuities | 10 | 10 | 0 | 0 |
 | Investment Returns & Growth | 22 | 22 | 0 | 0 |
-| Stocks, Dividends & Trading | 19 | 5 | 0 | 14 |
+| Stocks, Dividends & Trading | 19 | 19 | 0 | 0 |
 | Bonds, CDs & Fixed Income | 11 | 11 | 0 | 0 |
-| Interest, APR & Time Value of Money | 11 | 10 | 0 | 1 |
-| Income Tax & Tax Planning | 12 | 3 | 0 | 9 |
-| Payroll, Salary & Take-home Pay | 10 | 2 | 0 | 8 |
+| Interest, APR & Time Value of Money | 11 | 11 | 0 | 0 |
+| Income Tax & Tax Planning | 12 | 12 | 0 | 0 |
+| Payroll, Salary & Take-home Pay | 10 | 10 | 0 | 0 |
 | Health Savings & Medical Costs | 10 | 10 | 0 | 0 |
 | Insurance | 4 | 4 | 0 | 0 |
-| Savings & Emergency Funds | 8 | 1 | 0 | 7 |
+| Savings & Emergency Funds | 8 | 8 | 0 | 0 |
 | Budgeting, Net Worth & Cash Flow | 6 | 6 | 0 | 0 |
 | Inflation, Currency & Economics | 3 | 3 | 0 | 0 |
 | Everyday Money & Utility | 9 | 9 | 0 | 0 |
-| Business Finance & Valuation | 17 | 16 | 0 | 1 |
+| Business Finance & Valuation | 17 | 17 | 0 | 0 |
 
 ## Mortgage & Home Buying
 
@@ -53,27 +53,27 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 | 2 | `mortgage-calculator` | **built** | ✓ | CD |  |
 | 2 | `mortgage-payoff-calculator` | **built** | ✓ | CD |  |
 | 2 | `mortgage-tax-saving-calculator` | **built** | ✓ | DF |  |
-| 1 | `15-vs-30-year-mortgage-calculator` | planned | – | D |  |
-| 1 | `20-vs-30-year-mortgage-calculator` | planned | – | D |  |
-| 1 | `apr-calculator-for-adjustable-rate-mortgages` | planned | – | D |  |
-| 1 | `apr-mortgage-calculator` | planned | – | D |  |
-| 1 | `arm-and-interest-only-arm-vs-fixed-rate-mortgage-calculator` | planned | – | D |  |
-| 1 | `balloon-loan-calculator` | planned | – | D |  |
-| 1 | `biweekly-mortgage-payment-calculator-for-an-existing-mortgage` | planned | – | D |  |
-| 1 | `blended-rate-mortgage-calculator` | planned | – | D |  |
-| 1 | `combination-mortgage-calculator` | planned | – | D |  |
-| 1 | `down-payment-calculator` | planned | – | C |  |
-| 1 | `fixed-rate-mortgage-vs-interest-only-mortgage-calculator` | planned | – | D |  |
-| 1 | `home-buyer-savings-calculator` | planned | – | D |  |
-| 1 | `home-closing-cost-calculator` | planned | – | D |  |
-| 1 | `interest-only-arm-calculator` | planned | – | D |  |
-| 1 | `maximum-mortgage-calculator` | planned | – | D |  |
-| 1 | `mortgage-calculator-for-purchase-price-and-down-payment` | planned | – | D |  |
-| 1 | `mortgage-qualifier-calculator` | planned | – | D |  |
-| 1 | `mortgage-required-income-calculator` | planned | – | D |  |
-| 1 | `option-arm-calculator` | planned | – | D |  |
-| 1 | `seller-closing-cost-calculator` | planned | – | D |  |
-| 1 | `va-mortgage-calculator` | planned | – | C |  |
+| 1 | `15-vs-30-year-mortgage-calculator` | **built** | – | D |  |
+| 1 | `20-vs-30-year-mortgage-calculator` | **built** | – | D |  |
+| 1 | `apr-calculator-for-adjustable-rate-mortgages` | **built** | – | D |  |
+| 1 | `apr-mortgage-calculator` | **built** | – | D |  |
+| 1 | `arm-and-interest-only-arm-vs-fixed-rate-mortgage-calculator` | **built** | – | D |  |
+| 1 | `balloon-loan-calculator` | **built** | – | D |  |
+| 1 | `biweekly-mortgage-payment-calculator-for-an-existing-mortgage` | **built** | – | D |  |
+| 1 | `blended-rate-mortgage-calculator` | **built** | – | D |  |
+| 1 | `combination-mortgage-calculator` | **built** | – | D |  |
+| 1 | `down-payment-calculator` | **built** | – | C |  |
+| 1 | `fixed-rate-mortgage-vs-interest-only-mortgage-calculator` | **built** | – | D |  |
+| 1 | `home-buyer-savings-calculator` | **built** | – | D |  |
+| 1 | `home-closing-cost-calculator` | **built** | – | D |  |
+| 1 | `interest-only-arm-calculator` | **built** | – | D |  |
+| 1 | `maximum-mortgage-calculator` | **built** | – | D |  |
+| 1 | `mortgage-calculator-for-purchase-price-and-down-payment` | **built** | – | D |  |
+| 1 | `mortgage-qualifier-calculator` | **built** | – | D |  |
+| 1 | `mortgage-required-income-calculator` | **built** | – | D |  |
+| 1 | `option-arm-calculator` | **built** | – | D |  |
+| 1 | `seller-closing-cost-calculator` | **built** | – | D |  |
+| 1 | `va-mortgage-calculator` | **built** | – | C |  |
 
 ## Home Equity & Refinancing
 
@@ -94,15 +94,15 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 |---:|---|---|:---:|---|---|
 | 3 | `rent-vs-buy-calculator` | **built** | ✓ | CDF |  |
 | 3 | `rental-property-calculator` | **built** | ✓ | CDF |  |
-| 1 | `1031-exchange-calculator` | planned | – | D |  |
-| 1 | `1031-exchange-timeline-calculator` | planned | – | D |  |
-| 1 | `like-kind-exchange-calculator` | planned | – | D |  |
-| 1 | `like-kind-tax-deferred-exchange-calculator` | planned | – | D |  |
-| 1 | `real-estate-calculator` | planned | – | C |  |
-| 1 | `rent-calculator` | planned | – | C |  |
-| 1 | `repossession-of-personal-property-from-a-deferred-payment-sale-calculator` | planned | – | D |  |
-| 1 | `repossession-of-personal-property-from-an-installment-payment-sale-calculator` | planned | – | D |  |
-| 1 | `repossession-of-real-property-calculator` | planned | – | D |  |
+| 1 | `1031-exchange-calculator` | **built** | – | D |  |
+| 1 | `1031-exchange-timeline-calculator` | **built** | – | D |  |
+| 1 | `like-kind-exchange-calculator` | **built** | – | D |  |
+| 1 | `like-kind-tax-deferred-exchange-calculator` | **built** | – | D |  |
+| 1 | `real-estate-calculator` | **built** | – | C |  |
+| 1 | `rent-calculator` | **built** | – | C |  |
+| 1 | `repossession-of-personal-property-from-a-deferred-payment-sale-calculator` | **built** | – | D |  |
+| 1 | `repossession-of-personal-property-from-an-installment-payment-sale-calculator` | **built** | – | D |  |
+| 1 | `repossession-of-real-property-calculator` | **built** | – | D |  |
 
 ## Personal & General Loans
 
@@ -112,15 +112,15 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 | 2 | `loan-comparison-calculator` | **built** | ✓ | DF |  |
 | 1 | `365-360-loan-calculator` | **built** | ✓ | D |  |
 | 1 | `365-365-loan-calculator` | **built** | ✓ | D |  |
-| 1 | `alternative-payment-frequencies-calculator` | planned | – | D |  |
-| 1 | `composition-of-loan-payments-calculator` | planned | – | D |  |
-| 1 | `deferred-payment-loan-calculator` | planned | – | D |  |
-| 1 | `enhanced-loan-calculator` | planned | – | D |  |
-| 1 | `existing-loan-calculator` | planned | – | D |  |
-| 1 | `loan-prequalification-calculator` | planned | – | D |  |
-| 1 | `payment-calculator` | planned | – | C |  |
-| 1 | `personal-loan-calculator` | planned | – | C |  |
-| 1 | `repayment-calculator` | planned | – | C |  |
+| 1 | `alternative-payment-frequencies-calculator` | **built** | – | D |  |
+| 1 | `composition-of-loan-payments-calculator` | **built** | – | D |  |
+| 1 | `deferred-payment-loan-calculator` | **built** | – | D |  |
+| 1 | `enhanced-loan-calculator` | **built** | – | D |  |
+| 1 | `existing-loan-calculator` | **built** | – | D |  |
+| 1 | `loan-prequalification-calculator` | **built** | – | D |  |
+| 1 | `payment-calculator` | **built** | – | C |  |
+| 1 | `personal-loan-calculator` | **built** | – | C |  |
+| 1 | `repayment-calculator` | **built** | – | C |  |
 
 ## Auto Loans & Leasing
 
@@ -150,11 +150,11 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 | Pri | Tool | Status | Content | Sites | Notes |
 |---:|---|---|:---:|---|---|
 | 2 | `college-savings-calculator` | **built** | ✓ | DF |  |
-| 1 | `college-cost-calculator` | planned | – | C |  |
-| 1 | `student-budget-calculator` | planned | – | D |  |
-| 1 | `student-loan-calculator` | planned | – | C |  |
-| 1 | `student-loan-consolidation-and-debt-payoff-calculator` | planned | – | D |  |
-| 1 | `student-loan-interest-tax-rate-calculator` | planned | – | D |  |
+| 1 | `college-cost-calculator` | **built** | – | C |  |
+| 1 | `student-budget-calculator` | **built** | – | D |  |
+| 1 | `student-loan-calculator` | **built** | – | C |  |
+| 1 | `student-loan-consolidation-and-debt-payoff-calculator` | **built** | – | D |  |
+| 1 | `student-loan-interest-tax-rate-calculator` | **built** | – | D |  |
 
 ## Credit Cards & Debt Payoff
 
@@ -185,20 +185,20 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 |---:|---|---|:---:|---|---|
 | 3 | `retirement-calculator` | **built** | ✓ | CDF |  |
 | 2 | `retirement-income-analysis` | **built** | ✓ | DF |  |
-| 1 | `gross-distribution-calculator` | planned | – | D |  |
-| 1 | `how-long-will-my-retirement-savings-last-calculator` | planned | – | D |  |
-| 1 | `life-expectancy-calculator` | planned | – | D |  |
-| 1 | `net-distribution-calculator` | planned | – | F |  |
-| 1 | `retirement-account-contribution-accelerator-calculator` | planned | – | D |  |
-| 1 | `retirement-nest-egg-calculator` | planned | – | D |  |
-| 1 | `retirement-plan-withdrawal-calculator` | planned | – | D |  |
-| 1 | `retirement-planner-for-two-working-spouses` | planned | – | D |  |
-| 1 | `retirement-planner-for-two-working-spouses-with-different-retirements` | planned | – | D |  |
-| 1 | `retirement-planner-with-retirement-earnings-calculator` | planned | – | D |  |
-| 1 | `retirement-planner-with-taxes-for-a-deferred-retirement-savings-plan` | planned | – | D |  |
-| 1 | `retirement-savings-analysis` | planned | – | F |  |
-| 1 | `retirement-shortfall-calculator` | planned | – | D |  |
-| 1 | `savings-distribution-calculator` | planned | – | D |  |
+| 1 | `gross-distribution-calculator` | **built** | – | D |  |
+| 1 | `how-long-will-my-retirement-savings-last-calculator` | **built** | – | D |  |
+| 1 | `life-expectancy-calculator` | **built** | – | D |  |
+| 1 | `net-distribution-calculator` | **built** | – | F |  |
+| 1 | `retirement-account-contribution-accelerator-calculator` | **built** | – | D |  |
+| 1 | `retirement-nest-egg-calculator` | **built** | – | D |  |
+| 1 | `retirement-plan-withdrawal-calculator` | **built** | – | D |  |
+| 1 | `retirement-planner-for-two-working-spouses` | **built** | – | D |  |
+| 1 | `retirement-planner-for-two-working-spouses-with-different-retirements` | **built** | – | D |  |
+| 1 | `retirement-planner-with-retirement-earnings-calculator` | **built** | – | D |  |
+| 1 | `retirement-planner-with-taxes-for-a-deferred-retirement-savings-plan` | **built** | – | D |  |
+| 1 | `retirement-savings-analysis` | **built** | – | F |  |
+| 1 | `retirement-shortfall-calculator` | **built** | – | D |  |
+| 1 | `savings-distribution-calculator` | **built** | – | D |  |
 
 ## Retirement Accounts (401k, 403b, 457, IRA, Roth)
 
@@ -210,46 +210,46 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 | 2 | `pension-calculator` | **built** | ✓ | CD |  |
 | 2 | `roth-ira-calculator` | **built** | ✓ | CD |  |
 | 2 | `traditional-ira-vs-roth-ira-calculator` | **built** | ✓ | DF |  |
-| 1 | `401k-contribution-effects-on-your-paycheck-calculator` | planned | – | D |  |
-| 1 | `401k-savings-with-profit-sharing-calculator` | planned | – | D |  |
-| 1 | `401k-spend-it-or-save-it-calculator` | planned | – | D |  |
-| 1 | `401k-save-the-max-calculator` | planned | – | F |  |
-| 1 | `403b-savings-calculator` | planned | – | D |  |
-| 1 | `403b-savings-calculator-without-employer-match` | planned | – | D |  |
-| 1 | `457-plan-contribution-effects-on-your-paycheck-calculator` | planned | – | D |  |
-| 1 | `457-plan-withdrawal-calculator` | planned | – | D |  |
-| 1 | `457-plan-roth-vs-pre-tax-calculator` | planned | – | D |  |
-| 1 | `457-savings-calculator` | planned | – | D |  |
-| 1 | `457b-special-catch-up-election-contribution-calculator` | planned | – | D |  |
-| 1 | `72t-calculator` | planned | – | D |  |
-| 1 | `72t-distribution-impact-calculator` | planned | – | D |  |
-| 1 | `72t-distributions-substantially-equal-periodic-payments-calculator` | planned | – | D |  |
-| 1 | `beneficiary-required-minimum-distribution-rmd-current-year-calculator` | planned | – | D |  |
-| 1 | `beneficiary-required-minimum-distributions-rmd-calculator` | planned | – | D |  |
-| 1 | `beneficiary-required-minimum-distributions-rmd-advanced-options-calculator` | planned | – | D |  |
-| 1 | `beneficiary-required-minimum-distributions-rmd-spouse-inherited-ira-calculator` | planned | – | D |  |
-| 1 | `beneficiary-required-minimum-distributions-rmd-spouse-inherited-ira-current-year-calculator` | planned | – | D |  |
-| 1 | `individual-401k-contribution-comparison` | planned | – | D |  |
-| 1 | `individual-401k-savings-calculator` | planned | – | D |  |
-| 1 | `ira-spend-it-or-save-it-calculator` | planned | – | D |  |
-| 1 | `payroll-deduction-calculator-with-457-contributions` | planned | – | D |  |
-| 1 | `pension-plan-retirement-options-calculator` | planned | – | D |  |
-| 1 | `pension-vs-lump-sum-payout-calculator` | planned | – | D |  |
-| 1 | `required-minimum-distribution-rmd-current-year-calculator` | planned | – | D |  |
-| 1 | `required-minimum-distribution-rmd-future-projection-calculator` | planned | – | D |  |
-| 1 | `required-minimum-distribution-rmd-stretch-projection-calculator` | planned | – | D |  |
-| 1 | `required-minimum-distribution-rmd-year-to-begin-calculator` | planned | – | D |  |
-| 1 | `rmd-and-stretch-ira-calculator` | planned | – | D |  |
-| 1 | `roth-after-tax-account-or-pre-tax-account-calculator` | planned | – | D |  |
-| 1 | `roth-401k-conversion-calculator` | planned | – | D |  |
-| 1 | `roth-401k-vs-traditional-401k-calculator` | planned | – | D |  |
-| 1 | `roth-403b-vs-traditional-403b-calculator` | planned | – | D |  |
-| 1 | `roth-contributions-within-your-retirement-plan-calculator` | planned | – | D |  |
-| 1 | `roth-ira-conversion-calculator` | planned | – | D |  |
-| 1 | `roth-ira-conversion-with-distributions-calculator` | planned | – | D |  |
-| 1 | `roth-vs-traditional-401k-and-your-paycheck-calculator` | planned | – | D |  |
-| 1 | `should-you-borrow-from-a-401k-or-403b-calculator` | planned | – | D |  |
-| 1 | `thrift-savings-account-tsa-calculator` | planned | – | D |  |
+| 1 | `401k-contribution-effects-on-your-paycheck-calculator` | **built** | – | D |  |
+| 1 | `401k-savings-with-profit-sharing-calculator` | **built** | – | D |  |
+| 1 | `401k-spend-it-or-save-it-calculator` | **built** | – | D |  |
+| 1 | `401k-save-the-max-calculator` | **built** | – | F |  |
+| 1 | `403b-savings-calculator` | **built** | – | D |  |
+| 1 | `403b-savings-calculator-without-employer-match` | **built** | – | D |  |
+| 1 | `457-plan-contribution-effects-on-your-paycheck-calculator` | **built** | – | D |  |
+| 1 | `457-plan-withdrawal-calculator` | **built** | – | D |  |
+| 1 | `457-plan-roth-vs-pre-tax-calculator` | **built** | – | D |  |
+| 1 | `457-savings-calculator` | **built** | – | D |  |
+| 1 | `457b-special-catch-up-election-contribution-calculator` | **built** | – | D |  |
+| 1 | `72t-calculator` | **built** | – | D |  |
+| 1 | `72t-distribution-impact-calculator` | **built** | – | D |  |
+| 1 | `72t-distributions-substantially-equal-periodic-payments-calculator` | **built** | – | D |  |
+| 1 | `beneficiary-required-minimum-distribution-rmd-current-year-calculator` | **built** | – | D |  |
+| 1 | `beneficiary-required-minimum-distributions-rmd-calculator` | **built** | – | D |  |
+| 1 | `beneficiary-required-minimum-distributions-rmd-advanced-options-calculator` | **built** | – | D |  |
+| 1 | `beneficiary-required-minimum-distributions-rmd-spouse-inherited-ira-calculator` | **built** | – | D |  |
+| 1 | `beneficiary-required-minimum-distributions-rmd-spouse-inherited-ira-current-year-calculator` | **built** | – | D |  |
+| 1 | `individual-401k-contribution-comparison` | **built** | – | D |  |
+| 1 | `individual-401k-savings-calculator` | **built** | – | D |  |
+| 1 | `ira-spend-it-or-save-it-calculator` | **built** | – | D |  |
+| 1 | `payroll-deduction-calculator-with-457-contributions` | **built** | – | D |  |
+| 1 | `pension-plan-retirement-options-calculator` | **built** | – | D |  |
+| 1 | `pension-vs-lump-sum-payout-calculator` | **built** | – | D |  |
+| 1 | `required-minimum-distribution-rmd-current-year-calculator` | **built** | – | D |  |
+| 1 | `required-minimum-distribution-rmd-future-projection-calculator` | **built** | – | D |  |
+| 1 | `required-minimum-distribution-rmd-stretch-projection-calculator` | **built** | – | D |  |
+| 1 | `required-minimum-distribution-rmd-year-to-begin-calculator` | **built** | – | D |  |
+| 1 | `rmd-and-stretch-ira-calculator` | **built** | – | D |  |
+| 1 | `roth-after-tax-account-or-pre-tax-account-calculator` | **built** | – | D |  |
+| 1 | `roth-401k-conversion-calculator` | **built** | – | D |  |
+| 1 | `roth-401k-vs-traditional-401k-calculator` | **built** | – | D |  |
+| 1 | `roth-403b-vs-traditional-403b-calculator` | **built** | – | D |  |
+| 1 | `roth-contributions-within-your-retirement-plan-calculator` | **built** | – | D |  |
+| 1 | `roth-ira-conversion-calculator` | **built** | – | D |  |
+| 1 | `roth-ira-conversion-with-distributions-calculator` | **built** | – | D |  |
+| 1 | `roth-vs-traditional-401k-and-your-paycheck-calculator` | **built** | – | D |  |
+| 1 | `should-you-borrow-from-a-401k-or-403b-calculator` | **built** | – | D |  |
+| 1 | `thrift-savings-account-tsa-calculator` | **built** | – | D |  |
 
 ## Social Security & Annuities
 
@@ -257,14 +257,14 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 |---:|---|---|:---:|---|---|
 | 3 | `social-security-calculator` | **built** | ✓ | CDF |  |
 | 2 | `annuity-calculator` | **built** | ✓ | CF |  |
-| 1 | `annuity-payout-calculator` | planned | – | C |  |
-| 1 | `fixed-annuity-calculator` | planned | – | D |  |
-| 1 | `how-important-is-social-security-calculator` | planned | – | D |  |
-| 1 | `immediate-annuity-calculator` | planned | – | D |  |
-| 1 | `social-security-distribution-calculator` | planned | – | F |  |
-| 1 | `social-security-taxable-benefits-calculator` | planned | – | D |  |
-| 1 | `variable-annuity-calculator` | planned | – | D |  |
-| 1 | `variable-annuity-without-surrender-charges-calculator` | planned | – | D |  |
+| 1 | `annuity-payout-calculator` | **built** | – | C |  |
+| 1 | `fixed-annuity-calculator` | **built** | – | D |  |
+| 1 | `how-important-is-social-security-calculator` | **built** | – | D |  |
+| 1 | `immediate-annuity-calculator` | **built** | – | D |  |
+| 1 | `social-security-distribution-calculator` | **built** | – | F |  |
+| 1 | `social-security-taxable-benefits-calculator` | **built** | – | D |  |
+| 1 | `variable-annuity-calculator` | **built** | – | D |  |
+| 1 | `variable-annuity-without-surrender-charges-calculator` | **built** | – | D |  |
 
 ## Investment Returns & Growth
 
@@ -302,20 +302,20 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 | 3 | `position-sizing` | **built** | ✓ | – | port from archive |
 | 3 | `stock-split-impact` | **built** | ✓ | – | port from archive |
 | 3 | `stock-valuation-confidence` | **built** | ✓ | – | port from archive |
-| 1 | `annual-stock-option-grants-calculator` | planned | – | D |  |
-| 1 | `black-scholes-option-calculator` | planned | – | F |  |
-| 1 | `capm-calculator` | planned | – | F |  |
-| 1 | `commodities-and-futures-calculator` | planned | – | F |  |
-| 1 | `company-stock-distribution-analysis-calculator` | planned | – | D |  |
-| 1 | `expected-return-calculator` | planned | – | F |  |
-| 1 | `fibonacci-calculator` | planned | – | F |  |
-| 1 | `future-contracts-calculator` | planned | – | D |  |
-| 1 | `holding-period-return-calculator` | planned | – | F |  |
-| 1 | `pivot-point-calculator` | planned | – | F |  |
-| 1 | `stock-constant-growth-calculator` | planned | – | F |  |
-| 1 | `stock-non-constant-growth-calculator` | planned | – | F |  |
-| 1 | `stock-option-calculator` | planned | – | D |  |
-| 1 | `stock-return-and-capital-gain-calculator` | planned | – | F |  |
+| 1 | `annual-stock-option-grants-calculator` | **built** | – | D |  |
+| 1 | `black-scholes-option-calculator` | **built** | – | F |  |
+| 1 | `capm-calculator` | **built** | – | F |  |
+| 1 | `commodities-and-futures-calculator` | **built** | – | F |  |
+| 1 | `company-stock-distribution-analysis-calculator` | **built** | – | D |  |
+| 1 | `expected-return-calculator` | **built** | – | F |  |
+| 1 | `fibonacci-calculator` | **built** | – | F |  |
+| 1 | `future-contracts-calculator` | **built** | – | D |  |
+| 1 | `holding-period-return-calculator` | **built** | – | F |  |
+| 1 | `pivot-point-calculator` | **built** | – | F |  |
+| 1 | `stock-constant-growth-calculator` | **built** | – | F |  |
+| 1 | `stock-non-constant-growth-calculator` | **built** | – | F |  |
+| 1 | `stock-option-calculator` | **built** | – | D |  |
+| 1 | `stock-return-and-capital-gain-calculator` | **built** | – | F |  |
 
 ## Bonds, CDs & Fixed Income
 
@@ -338,7 +338,7 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 | Pri | Tool | Status | Content | Sites | Notes |
 |---:|---|---|:---:|---|---|
 | 2 | `apr-calculator` | **built** | ✓ | CF |  |
-| 2 | `cash-back-or-low-interest-calculator` | planned | – | CD |  |
+| 2 | `cash-back-or-low-interest-calculator` | **built** | – | CD |  |
 | 2 | `compound-interest-calculator` | **built** | ✓ | CF |  |
 | 1 | `apr-advanced-calculator` | **built** | ✓ | F |  |
 | 1 | `compound-savings-calculator` | **built** | ✓ | D |  |
@@ -356,15 +356,15 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 | 3 | `tax-harvesting` | **built** | ✓ | – | port from archive |
 | 2 | `estate-tax-calculator` | **built** | ✓ | CD |  |
 | 2 | `income-tax-calculator` | **built** | ✓ | CD |  |
-| 1 | `charitable-giving-tax-savings-calculator` | planned | – | D |  |
-| 1 | `dividend-tax-calculator` | planned | – | F |  |
-| 1 | `earned-income-credit-eic-calculator` | planned | – | D |  |
-| 1 | `marginal-tax-rate-calculator` | planned | – | D |  |
-| 1 | `marriage-tax-calculator` | planned | – | C |  |
-| 1 | `savings-taxes-and-inflation-calculator` | planned | – | D |  |
-| 1 | `self-employment-tax-calculator` | planned | – | D |  |
-| 1 | `taxable-vs-tax-deferred-investments-calculator` | planned | – | D |  |
-| 1 | `taxable-vs-tax-deferred-vs-tax-free-investment-calculator` | planned | – | D |  |
+| 1 | `charitable-giving-tax-savings-calculator` | **built** | – | D |  |
+| 1 | `dividend-tax-calculator` | **built** | – | F |  |
+| 1 | `earned-income-credit-eic-calculator` | **built** | – | D |  |
+| 1 | `marginal-tax-rate-calculator` | **built** | – | D |  |
+| 1 | `marriage-tax-calculator` | **built** | – | C |  |
+| 1 | `savings-taxes-and-inflation-calculator` | **built** | – | D |  |
+| 1 | `self-employment-tax-calculator` | **built** | – | D |  |
+| 1 | `taxable-vs-tax-deferred-investments-calculator` | **built** | – | D |  |
+| 1 | `taxable-vs-tax-deferred-vs-tax-free-investment-calculator` | **built** | – | D |  |
 
 ## Payroll, Salary & Take-home Pay
 
@@ -372,14 +372,14 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 |---:|---|---|:---:|---|---|
 | 3 | `take-home-paycheck-calculator` | **built** | ✓ | CDF |  |
 | 2 | `salary-calculator` | **built** | ✓ | CF |  |
-| 1 | `civilian-pay-to-equal-military-take-home-pay-calculator` | planned | – | D |  |
-| 1 | `commission-calculator` | planned | – | C |  |
-| 1 | `payroll-deductions-calculator-w-4-with-exemptions` | planned | – | D |  |
-| 1 | `payroll-deductions-comparison-calculator` | planned | – | D |  |
-| 1 | `payroll-hourly-paycheck-calculator` | planned | – | D |  |
-| 1 | `payroll-net-to-gross-calculator` | planned | – | D |  |
-| 1 | `retirement-contribution-effects-on-your-paycheck-calculator` | planned | – | D |  |
-| 1 | `salary-increase-calculator` | planned | – | F |  |
+| 1 | `civilian-pay-to-equal-military-take-home-pay-calculator` | **built** | – | D |  |
+| 1 | `commission-calculator` | **built** | – | C |  |
+| 1 | `payroll-deductions-calculator-w-4-with-exemptions` | **built** | – | D |  |
+| 1 | `payroll-deductions-comparison-calculator` | **built** | – | D |  |
+| 1 | `payroll-hourly-paycheck-calculator` | **built** | – | D |  |
+| 1 | `payroll-net-to-gross-calculator` | **built** | – | D |  |
+| 1 | `retirement-contribution-effects-on-your-paycheck-calculator` | **built** | – | D |  |
+| 1 | `salary-increase-calculator` | **built** | – | F |  |
 
 ## Health Savings & Medical Costs
 
@@ -410,13 +410,13 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 | Pri | Tool | Status | Content | Sites | Notes |
 |---:|---|---|:---:|---|---|
 | 2 | `savings-goal-calculator` | **built** | ✓ | DF |  |
-| 1 | `compare-savings-rates-calculator` | planned | – | D |  |
-| 1 | `cool-million-calculator` | planned | – | D |  |
-| 1 | `dont-delay-your-savings-calculator` | planned | – | D |  |
-| 1 | `emergency-savings-calculator` | planned | – | D |  |
-| 1 | `lunch-savings-calculator` | planned | – | D |  |
-| 1 | `savings-calculator` | planned | – | C |  |
-| 1 | `vice-savings-calculator` | planned | – | D |  |
+| 1 | `compare-savings-rates-calculator` | **built** | – | D |  |
+| 1 | `cool-million-calculator` | **built** | – | D |  |
+| 1 | `dont-delay-your-savings-calculator` | **built** | – | D |  |
+| 1 | `emergency-savings-calculator` | **built** | – | D |  |
+| 1 | `lunch-savings-calculator` | **built** | – | D |  |
+| 1 | `savings-calculator` | **built** | – | C |  |
+| 1 | `vice-savings-calculator` | **built** | – | D |  |
 
 ## Budgeting, Net Worth & Cash Flow
 
@@ -458,7 +458,7 @@ Content: ✓ = the tool has its article (`content_html`) and FAQ; – = calculat
 | 3 | `business-loan-calculator` | **built** | ✓ | CDF |  |
 | 3 | `margin-calculator` | **built** | ✓ | CDF |  |
 | 2 | `financial-ratios-calculator` | **built** | ✓ | DF |  |
-| 1 | `balance-sheet-and-income-statement-analysis` | planned | – | F |  |
+| 1 | `balance-sheet-and-income-statement-analysis` | **built** | – | F |  |
 | 1 | `breakeven-analysis-calculator` | **built** | ✓ | D |  |
 | 1 | `business-debt-consolidation-calculator` | **built** | ✓ | D |  |
 | 1 | `business-forecast-calculator` | **built** | ✓ | F |  |
