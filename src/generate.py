@@ -71,6 +71,13 @@ AD_SLOTS = {
     "right_rail_top": ("ad-right-rail-rectangle", "Advertisement, right column", "300 × 250", "h-[250px] w-[300px]"),
     "right_rail": ("ad-right-rail-skyscraper", "Advertisement, right column", "300 × 600", "h-[600px] w-[300px]"),
 }
+# Ad unit pixel sizes: (desktop, mobile) width and height. Leaderboards shrink on phones.
+AD_SIZES = {
+    "top": ((728, 300), (90, 100)), "bottom": ((728, 300), (90, 100)), "in_feed": ((728, 300), (90, 100)),
+    "right_rail_top": ((300, 300), (250, 250)), "right_rail": ((300, 300), (600, 600)),
+}
+AD_CONFIG = {"client": "", "units": {}}   # filled from site.json in main()
+ADSENSE_LOADER = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={client}" crossorigin="anonymous"></script>'
 SEPARATOR_SVG = ('<svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" '
                  'stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg>')
 
@@ -111,7 +118,10 @@ def render(template_name, values):
     missing = used - values.keys()
     if missing:
         raise SystemExit(f"{template_name}: no value for {sorted(missing)}")
-    return TOKEN_RE.sub(lambda m: values[m.group(1)], tpl)
+    page = TOKEN_RE.sub(lambda m: values[m.group(1)], tpl)
+    if 'class="adsbygoogle"' in page:
+        page = page.replace("</head>", "  " + ADSENSE_LOADER.format(client=AD_CONFIG["client"]) + "\n</head>", 1)
+    return page
 
 
 def json_ld(*objects):
@@ -121,13 +131,26 @@ def json_ld(*objects):
 
 # --- shared components -------------------------------------------------------------------
 def render_ad(page_id, slot, suffix=""):
+    """An ad slot. With an AdSense unit id in site.json "ad_units" it renders the live unit; without one it
+    renders the dashed placeholder showing the slot size."""
     key, label, size, frame = AD_SLOTS[slot]
     name = f"{page_id}-{key}{suffix}"
+    unit = AD_CONFIG["units"].get(slot, "")
+    if unit:
+        width, height = AD_SIZES[slot]
+        body = (f'<ins id="{name}-unit" class="adsbygoogle" style="display:inline-block;width:{width[0]}px;height:{height[0]}px" '
+                f'data-ad-client="{AD_CONFIG["client"]}" data-ad-slot="{unit}"></ins>\n'
+                f'            <script>(function(){{var u=document.getElementById("{name}-unit");'
+                f'if(window.innerWidth<768){{u.style.width="{width[1]}px";u.style.height="{height[1]}px";}}'
+                f'if(u.offsetParent!==null&&!/^(localhost|127\\.|\\[::1\\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({{}});}})();</script>')
+        inner = f'<div id="{name}-frame" class="ad-slot-live" data-ad-container="{name}">\n            {body}\n          </div>'
+    else:
+        inner = (f'<div id="{name}-frame" class="ad-slot-frame {frame}" data-ad-container="{name}">\n'
+                 f'            <!-- Paste the ad unit code for "{key}" here -->\n'
+                 f'            <span aria-hidden="true">{size}</span>\n'
+                 f'          </div>')
     return (f'<aside id="{name}" class="ad-slot" aria-label="{label}" data-ad-slot-name="{name}" data-ad-size="{size}">\n'
-            f'          <div id="{name}-frame" class="ad-slot-frame {frame}" data-ad-container="{name}">\n'
-            f'            <!-- Paste the ad unit code for "{key}" here -->\n'
-            f'            <span aria-hidden="true">{size}</span>\n'
-            f'          </div>\n        </aside>')
+            f'          {inner}\n        </aside>')
 
 
 def render_breadcrumb(site, page_id, trail):
@@ -553,6 +576,8 @@ def main():
 
     site, tools, pages = build_data.build(include_planned=args.include_planned)
     S = Site(site, tools, pages)
+    AD_CONFIG["client"] = site.get("adsense_client", "")
+    AD_CONFIG["units"] = site.get("ad_units", {}) if AD_CONFIG["client"] else {}
 
     if OUT.exists():
         shutil.rmtree(OUT)
