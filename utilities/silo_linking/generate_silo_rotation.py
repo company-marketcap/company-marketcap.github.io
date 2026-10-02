@@ -60,14 +60,31 @@ SENTENCES = [
 
 
 # --- anchors & rotation helpers ----------------------------------------------------------------------
-def anchor_variants(keyword):
-    kw = keyword.strip()
+OVERRIDES = {k: v for k, v in json.loads((HERE / "anchor_overrides.json").read_text(encoding="utf-8")).items() if not k.startswith("_")}
+QUESTION_START = re.compile(r"^(should|how|what|when|why|is|can|do|does|will)\b")
+MAX_WORDS = 6  # longer phrases read badly as anchor text
+
+
+def plain(text):
+    """A tool name as a lower-case phrase: '401(k) Calculator' -> '401k calculator'."""
+    t = re.sub(r"\((\w)\)", r"\1", text.lower())
+    t = re.sub(r"[^a-z0-9' ]+", " ", t.replace("&", " and "))
+    return re.sub(r"\s+", " ", t).strip()
+
+
+def anchor_variants(target):
+    """Four anchors at most: the keyword, the tool's own name, 'free …' and '… online'. The last two only suit
+    short noun phrases (so the result stays within MAX_WORDS); questions and long phrases keep just their plain forms."""
+    kw = OVERRIDES.get(target["slug"], target["anchor"]).strip()
     variants = [kw]
-    if not kw.startswith("free "):
-        variants.append(f"free {kw}")
-    if not kw.endswith(" online"):
-        variants.append(f"{kw} online")
-    variants.append(f"use the {kw}")
+    name = plain(target["name"])
+    if len(name.split()) <= MAX_WORDS and not QUESTION_START.match(name):
+        variants.append(name)
+    if len(kw.split()) < MAX_WORDS and not QUESTION_START.match(kw):  # room for the extra word
+        if not kw.startswith("free "):
+            variants.append(f"free {kw}")
+        if not kw.endswith(" online"):
+            variants.append(f"{kw} online")
     return list(dict.fromkeys(variants))
 
 
@@ -88,7 +105,7 @@ def shuffle(items, seed_key, today):
 
 
 def link(src_slug, slot, target, today):
-    anchor = pick(anchor_variants(target["anchor"]), f"{src_slug}_{slot}_anchor", today)
+    anchor = pick(anchor_variants(target), f"{src_slug}_{slot}_anchor", today)
     sentence = pick(SENTENCES, f"{src_slug}_{slot}_sentence", today)
     return {"slot": slot, "anchor": anchor, "url": f"/{target['slug']}.html", "sentence": sentence}
 
