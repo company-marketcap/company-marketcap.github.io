@@ -566,11 +566,25 @@ def unlink_unpublished(content, dead_hrefs):
     return content
 
 
-def sitemap_xml(site, slugs):
+IMG_SRC_RE = re.compile(r'<img\b[^>]*\bsrc="(/assets/images/[^"]+)"')
+
+
+def page_images(html):
+    """Local images in a rendered page, in order, without repeats (the infographics)."""
+    return list(dict.fromkeys(IMG_SRC_RE.findall(html)))
+
+
+def sitemap_xml(site, slugs, images=None):
+    """images: {slug: [site-relative image paths]} -> Google image sitemap entries under each page."""
+    images = images or {}
     today = date.today().isoformat()
-    urls = "".join(f"<url><loc>{esc(url(site, s))}</loc><lastmod>{today}</lastmod></url>" for s in slugs)
+    urls = "".join(
+        f"<url><loc>{esc(url(site, s))}</loc><lastmod>{today}</lastmod>"
+        + "".join(f"<image:image><image:loc>{esc(site['base_url'] + src)}</image:loc></image:image>" for src in images.get(s, []))
+        + "</url>" for s in slugs)
     return ('<?xml version="1.0" encoding="UTF-8"?>\n'
-            f'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>\n')
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+            f'xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">{urls}</urlset>\n')
 
 
 # --- main ----------------------------------------------------------------------------------
@@ -592,8 +606,12 @@ def main():
 
     dead = [href(p["slug"]) for p in pages["info_pages"] if not p["live"]]
 
+    images = {}  # slug -> infographic paths, for the image sitemap (home is slug "")
+
     def write(name, content):
-        (OUT / f"{name}.html").write_text(unlink_unpublished(content, dead), encoding="utf-8")
+        content = unlink_unpublished(content, dead)
+        images["" if name == "index" else name] = page_images(content)
+        (OUT / f"{name}.html").write_text(content, encoding="utf-8")
 
     indexable = [""]
     write("index", render_home(S))
@@ -619,7 +637,7 @@ def main():
 
     (OUT / SEARCH_INDEX).parent.mkdir(parents=True, exist_ok=True)
     (OUT / SEARCH_INDEX).write_text(json.dumps(search_index(S), ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-    (OUT / "sitemap.xml").write_text(sitemap_xml(site, indexable), encoding="utf-8")
+    (OUT / "sitemap.xml").write_text(sitemap_xml(site, indexable, images), encoding="utf-8")
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {site['base_url']}/sitemap.xml\n", encoding="utf-8")
     (OUT / ".nojekyll").write_text("", encoding="utf-8")  # serve files as-is on GitHub Pages
     print(f"Wrote {OUT.relative_to(ROOT)}/ — {len(indexable)} indexable URLs in sitemap.xml")
