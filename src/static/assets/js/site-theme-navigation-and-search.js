@@ -387,6 +387,52 @@ class SiteCalculatorSearchController {
   }
 }
 
+class SiteMobileSearchController {
+  constructor(pageSlug) {
+    this.headerElement = document.getElementById(`${pageSlug}-site-header`);
+    this.openButton = document.getElementById(`${pageSlug}-mobile-search-open-button`);
+    this.closeButton = document.getElementById(`${pageSlug}-mobile-search-close-button`);
+    this.inputElement = document.getElementById(`${pageSlug}-mobile-search-input`);
+    this.resultsElement = document.getElementById(`${pageSlug}-mobile-search-results`);
+    this.desktopQuery = window.matchMedia("(min-width: 768px)");
+  }
+
+  initialize() {
+    if (!this.headerElement || !this.openButton || !this.closeButton || !this.inputElement) {
+      return;
+    }
+    this.openButton.addEventListener("click", () => this.open());
+    this.closeButton.addEventListener("click", () => this.close());
+    this.inputElement.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && !this.resultsElement.querySelector("[data-search-result-index]")) {
+        this.close();
+      }
+    });
+    this.desktopQuery.addEventListener("change", (event) => {
+      if (event.matches) {
+        this.close();
+      }
+    });
+  }
+
+  open() {
+    this.headerElement.dataset.mobileSearch = "open";
+    this.openButton.setAttribute("aria-expanded", "true");
+    this.inputElement.focus();
+  }
+
+  close() {
+    if (this.headerElement.dataset.mobileSearch !== "open") {
+      return;
+    }
+    this.headerElement.dataset.mobileSearch = "closed";
+    this.openButton.setAttribute("aria-expanded", "false");
+    this.inputElement.value = "";
+    this.inputElement.dispatchEvent(new Event("input"));
+    this.openButton.focus();
+  }
+}
+
 class SiteApplication {
   constructor() {
     this.pageSlug = document.body.dataset.pageSlug;
@@ -397,6 +443,7 @@ class SiteApplication {
   initialize() {
     new SiteThemeController(this.pageSlug).initialize();
     new SiteMobileSidebarController(this.pageSlug).initialize();
+    new SiteMobileSearchController(this.pageSlug).initialize();
     this.initializeCalculatorSearches();
     this.updateFooterYear();
   }
