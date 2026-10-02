@@ -6,6 +6,8 @@ config.json and content.html, writes into src/content/tools/<slug>.json:
 
   content_html   <- content.html (image paths rewritten to /assets/images/tools/<slug>/...)
   faq            <- config.json "faqs_json"
+  subtitle       <- the article's opening <p> as plain text (hero intro under the H1); the paragraph
+                    is removed from content_html so it appears once
   meta_title, meta_description, h1  <- meta.json (skip with --keep-meta)
 
 The calculator itself (card, script) is never touched. Infographic SVGs are copied to
@@ -16,6 +18,7 @@ and is still `built` without content is set to `planned` (shown as "Coming soon"
     python3 utilities/scaffold/import_content.py SOURCE_DIR --apply [--demote-rest] [--keep-meta]
 """
 import argparse
+import html as htmllib
 import json
 import re
 import shutil
@@ -67,7 +70,16 @@ def main():
             if not (folder / "images" / img).exists():
                 problems.append(f"{slug}: {img} referenced but not in images/")
 
+        opening = re.match(r"\s*<p>(.*?)</p>\s*", html, re.S)
+        if not opening:
+            skipped.append((slug, "article does not open with a <p>")); continue
+        subtitle = " ".join(htmllib.unescape(re.sub(r"<[^>]+>", "", opening.group(1))).split())
+        if re.search(r"\\\(|\$\$", subtitle):
+            problems.append(f"{slug}: opening paragraph contains a formula (hero does not render math)")
+        html = html[opening.end():].strip()
+
         tool = load(tool_file)
+        tool["subtitle"] = subtitle
         tool["content_html"] = html
         tool["faq"] = faqs
         meta_file = folder / "meta.json"

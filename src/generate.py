@@ -171,7 +171,7 @@ def render_faq(page_id, heading, faq):
     for i, qa in enumerate(faq, 1):
         fid = f"{page_id}-faq-{i}"
         items.append(
-            f'<details id="{fid}" class="faq-item">'
+            f'<details id="{fid}" class="faq-item" open>'
             f'<summary id="{fid}-summary" class="faq-summary"><h3 id="{fid}-question" class="faq-question">'
             f'{esc(qa["question"])}</h3><span class="faq-marker" aria-hidden="true"></span></summary>'
             f'<div id="{fid}-answer" class="faq-answer"><p>{esc(qa["answer"])}</p></div></details>')
@@ -415,6 +415,9 @@ def render_tool(S, tool):
     if tool["meta_description"]:
         app["description"] = tool["meta_description"]
     content = tool["content_html"].strip()
+    extra = "\n".join(f'<script src="{esc(s)}" defer></script>' for s in card.get("extra_scripts", []))
+    if MATH_RE.search(content):
+        extra = (extra + "\n" + KATEX_ASSETS).strip()
     values.update({
         "JSON_LD": json_ld(app, breadcrumb_ld(site, trail), faq_ld(tool["faq"])),
         "BREADCRUMB": render_breadcrumb(site, page_id, trail),
@@ -426,10 +429,22 @@ def render_tool(S, tool):
                              f'{content}\n      </article>') if content else "",
         "FAQ": render_faq(page_id, tool.get("faq_heading") or f'{tool["name"]} questions', tool["faq"]),
         "RELATED_TOOLS": render_related(S, tool),
-        "TOOL_EXTRA_SCRIPTS": "\n".join(f'<script src="{esc(s)}" defer></script>' for s in card.get("extra_scripts", [])),
+        "TOOL_EXTRA_SCRIPTS": extra,
         "TOOL_SCRIPT": f"<script>{tool['script']}</script>" if tool["script"].strip() else "",
     })
     return render("tool.html", values)
+
+
+# KaTeX renders the \\(...\\) and $$...$$ formulas in article content; loaded only on pages that contain them.
+MATH_RE = re.compile(r"\\\(|\$\$")
+KATEX_CDN = "https://cdn.jsdelivr.net/npm/katex@0.16.22/dist"
+KATEX_ASSETS = (
+    f'<link rel="stylesheet" href="{KATEX_CDN}/katex.min.css">\n'
+    f'<script src="{KATEX_CDN}/katex.min.js" defer></script>\n'
+    f'<script src="{KATEX_CDN}/contrib/auto-render.min.js" defer></script>\n'
+    '<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector(".article-content");'
+    'if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},'
+    '{left:"\\\\(",right:"\\\\)",display:false}],throwOnError:false});});</script>')
 
 
 # AdSense policy: no ads on pages without publisher content (legal, contact, navigation-only pages).
