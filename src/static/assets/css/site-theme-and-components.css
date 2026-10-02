@@ -126,6 +126,20 @@ input[type="search"]::-webkit-search-cancel-button { cursor: pointer; }
 .breadcrumb-list { scrollbar-width: none; }
 .breadcrumb-list::-webkit-scrollbar { display: none; }
 
+/* When the results stack under the form (narrow card), separate them with a divider and some space. */
+@container (max-width: 47.999rem) {
+  [id$="-tool"] .grid > div[aria-live="polite"] { border-top: 1px solid var(--site-color-line); padding-top: 1.5rem; }
+}
+
+/* Results panel highlight after Calculate / Reset. */
+@keyframes result-flash {
+  0% { background-color: var(--site-color-pistachio); box-shadow: 0 0 0 4px var(--site-color-brand); }
+  100% { background-color: transparent; box-shadow: 0 0 0 4px transparent; }
+}
+/* Padding with a matching negative margin gives the highlight room around the text without moving the layout. */
+.result-flash { animation: result-flash 1.1s ease-out; border-radius: 0.75rem; padding: 0.875rem; margin: -0.875rem; }
+@media (prefers-reduced-motion: reduce) { .result-flash { animation: none; } }
+
 @layer components {
   .skip-link { @apply sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-3 focus:z-[60] focus:rounded-lg focus:bg-brand focus:px-4 focus:py-2 focus:text-brand-ink; }
   .icon-button { @apply focus-ring inline-flex h-10 min-w-10 shrink-0 items-center justify-center gap-2 rounded-lg border border-line bg-surface px-2.5 text-sm text-ink-muted transition-colors hover:bg-surface-muted hover:text-ink; }
