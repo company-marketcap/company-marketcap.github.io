@@ -48,8 +48,8 @@ cd public && python3 -m http.server 8811   # local preview
 python3 utilities/scaffold/tool_tracker.py # regenerate TOOL_TRACKER.md after changing any tool status
 ```
 
-Python standard library only (the pages load Tailwind v4 from its browser CDN and compile the
-stylesheet at runtime). The build fails with a clear message on invalid JSON, unknown
+Python standard library only, plus Node/npm: `generate.py` runs `src/build_css.py`, which compiles the Tailwind v4
+stylesheet (`src/styles/`) into `public/assets/css/site.css` (`--no-css` skips it). The build fails with a clear message on invalid JSON, unknown
 subcategories/related slugs, missing required fields on live tools, or unknown template tokens.
 
 ## Building calculators

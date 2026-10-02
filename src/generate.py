@@ -25,6 +25,7 @@ import shutil
 from datetime import date
 from pathlib import Path
 
+import build_css
 import build_data
 
 SRC = Path(__file__).resolve().parent
@@ -479,7 +480,8 @@ def render_tool(S, tool):
 MATH_RE = re.compile(r"\\\(|\$\$")
 KATEX_CDN = "https://cdn.jsdelivr.net/npm/katex@0.16.22/dist"
 KATEX_ASSETS = (
-    f'<link rel="stylesheet" href="{KATEX_CDN}/katex.min.css">\n'
+    f'<link rel="stylesheet" href="{KATEX_CDN}/katex.min.css" media="print" onload="this.media=\'all\'">\n'
+    f'<noscript><link rel="stylesheet" href="{KATEX_CDN}/katex.min.css"></noscript>\n'
     f'<script src="{KATEX_CDN}/katex.min.js" defer></script>\n'
     f'<script src="{KATEX_CDN}/contrib/auto-render.min.js" defer></script>\n'
     '<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");'
@@ -574,6 +576,7 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--include-planned", action="store_true",
                     help="also render planned tools/pages as noindex previews (for template work)")
+    ap.add_argument("--no-css", action="store_true", help="skip the Tailwind stylesheet build (needs Node/npx)")
     args = ap.parse_args()
 
     site, tools, pages = build_data.build(include_planned=args.include_planned)
@@ -618,6 +621,8 @@ def main():
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {site['base_url']}/sitemap.xml\n", encoding="utf-8")
     (OUT / ".nojekyll").write_text("", encoding="utf-8")  # serve files as-is on GitHub Pages
     print(f"Wrote {OUT.relative_to(ROOT)}/ — {len(indexable)} indexable URLs in sitemap.xml")
+    if not args.no_css:
+        build_css.build()
 
 
 if __name__ == "__main__":

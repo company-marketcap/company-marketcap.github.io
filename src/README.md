@@ -75,8 +75,8 @@ sidebar are live calculators only (copy never claims a total).
 
 ## Template contract — `templates/`
 
-The design comes from the Company Marketcap template (Tailwind v4 compiled in the browser from
-`static/assets/css/site-theme-and-components.css`; theme, sidebar and search from
+The design comes from the Company Marketcap template (Tailwind v4 compiled at build time by `build_css.py` from
+`styles/site-theme-and-components.css` into `/assets/css/site.css`; theme, sidebar and search from
 `static/assets/js/site-theme-navigation-and-search.js`).
 
 - `_head.html`, `_header.html`, `_sidebar.html`, `_footer.html` are shared partials, pulled in with
