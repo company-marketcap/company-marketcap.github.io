@@ -90,7 +90,7 @@ The design comes from the Company Marketcap template (Tailwind v4 compiled in th
   `AD_RIGHT_RAIL_TOP` (300 × 250, scrolls with the page), `AD_RIGHT_RAIL` (300 × 600, sticky), `H1`, `SUBTITLE`, `SIDEBAR_DESKTOP_CLASSES`, `HEADER_NAV_CLASSES` (home drops the
   desktop sidebar and uses the full width; the sidebar is still its mobile drawer). Page-specific ones are listed in `TEMPLATE_TOKENS` in `generate.py`.
 - Ad slots are generated with the template's `ad-slot` markup; paste AdSense unit code per slot type
-  (`ad-top-leaderboard`, `ad-bottom-leaderboard`, `ad-in-feed`, `ad-hero-rectangle`,
+  (`ad-top-leaderboard`, `ad-bottom-leaderboard`, `ad-in-feed`, `ad-right-rail-rectangle`,
   `ad-right-rail-skyscraper`) in `render_ad()` when ads go live.
 - The search index (`/assets/data/calculator-search-index.json`) is generated: the category page,
   each subcategory section and every live tool.

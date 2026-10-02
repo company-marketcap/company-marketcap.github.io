@@ -40,7 +40,7 @@ COMMON_TOKENS = {"PAGE_ID", "PAGE_TYPE", "SITE_NAME", "META_TITLE", "META_DESCRI
 TEMPLATE_TOKENS = {
     "home.html": COMMON_TOKENS | {"AD_IN_FEED", "SIDE_CATEGORIES", "DIRECTORY", "DIRECTORY_COUNT",
                                   "DIRECTORY_HEADING", "DIRECTORY_INTRO", "FAQ"},
-    "category.html": COMMON_TOKENS | {"BREADCRUMB", "HERO_TILE", "JUMP_LINKS", "FINDER_INTRO", "AD_HERO",
+    "category.html": COMMON_TOKENS | {"BREADCRUMB", "HERO_TILE", "JUMP_LINKS",
                                       "DIRECTORY_COUNT", "DIRECTORY", "FAQ"},
     "tool.html": COMMON_TOKENS | {"BREADCRUMB", "SUBCATEGORY_SLUG", "TOOL_CARD", "DISCLAIMER", "AD_IN_FEED",
                                   "CONTENT_SECTIONS", "FAQ", "RELATED_TOOLS", "TOOL_EXTRA_SCRIPTS", "TOOL_SCRIPT"},
@@ -68,7 +68,6 @@ AD_SLOTS = {
     "top": ("ad-top-leaderboard", "Advertisement, top of page", *LEADERBOARD),
     "bottom": ("ad-bottom-leaderboard", "Advertisement, bottom of page", *LEADERBOARD),
     "in_feed": ("ad-in-feed", "Advertisement", *LEADERBOARD),
-    "hero": ("ad-hero-rectangle", "Advertisement, beside the introduction", "300 × 250", "h-[250px] w-[300px] max-w-full"),
     "right_rail_top": ("ad-right-rail-rectangle", "Advertisement, right column", "300 × 250", "h-[250px] w-[300px]"),
     "right_rail": ("ad-right-rail-skyscraper", "Advertisement, right column", "300 × 600", "h-[600px] w-[300px]"),
 }
@@ -386,8 +385,6 @@ def render_category(S):
                       f'text-{cat["color"]}-ink" aria-hidden="true"><span class="category-element-count">{S.live_count}</span>'
                       f'<span class="category-element-symbol text-2xl">{esc(cat["symbol"])}</span></span>'),
         "JUMP_LINKS": "\n".join(jump),
-        "FINDER_INTRO": esc(cat["finder_intro"]),
-        "AD_HERO": render_ad(page_id, "hero"),
         "DIRECTORY_COUNT": str(len(S.subcats)),
         "DIRECTORY": "        " + "\n        ".join(groups),
         "FAQ": render_faq(page_id, cat["faq_heading"], cat["faq"]),

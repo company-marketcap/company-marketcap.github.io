@@ -10,7 +10,7 @@
       {{BREADCRUMB}}
 
         <section id="{{PAGE_ID}}-hero-section" aria-labelledby="{{PAGE_ID}}-hero-heading" data-section="hero">
-          <div id="{{PAGE_ID}}-hero-layout" class="grid gap-6 @4xl:grid-cols-[minmax(0,1fr)_300px] @4xl:items-start">
+          <div id="{{PAGE_ID}}-hero-layout">
             <div id="{{PAGE_ID}}-hero-text-column" class="min-w-0">
               <div id="{{PAGE_ID}}-hero-title-row" class="flex items-start gap-4">
                 {{HERO_TILE}}
@@ -26,22 +26,6 @@
               </nav>
             </div>
 
-            <div id="{{PAGE_ID}}-hero-side-column" class="grid content-start gap-6 @2xl:grid-cols-2 @4xl:grid-cols-1">
-              <section id="{{PAGE_ID}}-calculator-finder-section" class="panel p-4 sm:p-5" aria-labelledby="{{PAGE_ID}}-calculator-finder-heading" data-section="calculator-finder">
-                <h2 id="{{PAGE_ID}}-calculator-finder-heading" class="panel-heading">Find a calculator</h2>
-                <p id="{{PAGE_ID}}-calculator-finder-intro" class="mb-3 mt-0.5 text-sm text-ink-muted">{{FINDER_INTRO}}</p>
-                <search id="{{PAGE_ID}}-hero-search" class="block" data-search-region="hero">
-            <form id="{{PAGE_ID}}-hero-search-form" class="relative" action="/" method="get" data-search-key="hero" data-search-prefill="true">
-              <label for="{{PAGE_ID}}-hero-search-input" class="sr-only">Search calculators</label>
-              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-              <input id="{{PAGE_ID}}-hero-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="{{PAGE_ID}}-hero-search-status" aria-controls="{{PAGE_ID}}-hero-search-results" data-search-input="hero">
-              <p id="{{PAGE_ID}}-hero-search-status" class="sr-only" aria-live="polite"></p>
-              <ul id="{{PAGE_ID}}-hero-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
-            </form>
-          </search>
-              </section>
-              {{AD_HERO}}
-            </div>
           </div>
         </section>
       </div>
