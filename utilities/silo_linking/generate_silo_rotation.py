@@ -21,8 +21,9 @@ Anchor text rotates among four variants of the tool's best keyword; the sentence
 both are chosen deterministically per (source page, slot, month).
 
 Pages are patched in place with comment markers (<!-- SILO_START:slot_a -->…<!-- SILO_END:slot_a -->):
-slot_a..d land after the first paragraph of the 1st..4th article section (the "guide" headings), never inside
-the calculator card. Run AFTER src/generate.py — the build wipes public/ and knows nothing about the markers.
+slot_a lands at the end of the hero intro (the page renders it twice — the desktop copy and the mobile copy — so
+the same link goes into both, as slot_a and slot_a_m); slot_b..d land after the first paragraph of the 1st..3rd
+article section (the "guide" headings). Nothing is ever injected inside the calculator card. Run AFTER src/generate.py — the build wipes public/ and knows nothing about the markers.
 
     python3 utilities/silo_linking/generate_silo_rotation.py [--dry-run] [--date=YYYY-MM]
 """
@@ -146,7 +147,8 @@ def generate_links(today):
 
 
 # --- HTML patching -------------------------------------------------------------------------------------
-SLOT_SECTION = {"slot_a": 1, "slot_b": 2, "slot_c": 3, "slot_d": 4}  # article section (guide heading) index
+SLOT_SECTION = {"slot_b": 1, "slot_c": 2, "slot_d": 3}  # article section (guide heading) index
+INTRO_IDS = {"slot_a": "hero-intro", "slot_a_m": "hero-intro-mobile"}  # slot_a is injected into both intro copies
 
 
 def article_paragraph_ends(html, slug):
@@ -182,16 +184,29 @@ def slot_positions(html, slug, slots):
     return result
 
 
+def intro_position(html, slug, intro_id):
+    m = re.search(rf'<p\b[^>]*id="{re.escape(slug)}-{intro_id}"[^>]*>', html)
+    end = html.find("</p>", m.end()) if m else -1
+    return end if end != -1 else None
+
+
 def sentence_html(sentence, url, anchor):
     return sentence.replace("{link}", f'<a href="{url}">{html_lib.escape(anchor)}</a>')
 
 
 def patch(html, slug, link_defs):
     # Remove earlier markers first so positions are computed on a clean page, then reinsert all slots.
-    html = re.sub(r" ?<!-- SILO_START:(slot_[a-d]) -->.*?<!-- SILO_END:\1 -->", "", html, flags=re.S)
-    wanted = [d for d in link_defs if d["anchor"]]
-    positions = slot_positions(html, slug, [d["slot"] for d in wanted])
-    errors = [f"INJECT FAILED: {slug}/{d['slot']} — no article paragraph" for d in wanted if d["slot"] not in positions]
+    html = re.sub(r" ?<!-- SILO_START:(slot_[a-d](?:_m)?) -->.*?<!-- SILO_END:\1 -->", "", html, flags=re.S)
+    link_defs = [d for d in link_defs if d["anchor"]]
+    wanted = []
+    for d in link_defs:  # slot_a goes into both intro copies
+        wanted += [dict(d, slot=s) for s in INTRO_IDS] if d["slot"] == "slot_a" else [d]
+    positions = slot_positions(html, slug, [d["slot"] for d in wanted if d["slot"] in SLOT_SECTION])
+    for slot, intro_id in INTRO_IDS.items():
+        pos = intro_position(html, slug, intro_id)
+        if pos is not None:
+            positions[slot] = pos
+    errors = [f"INJECT FAILED: {slug}/{d['slot']} — no target paragraph" for d in wanted if d["slot"] not in positions]
     for d in sorted(wanted, key=lambda d: -positions.get(d["slot"], -1)):
         pos = positions.get(d["slot"])
         if pos is None:
