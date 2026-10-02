@@ -39,9 +39,9 @@ COMMON_TOKENS = {"PAGE_ID", "PAGE_TYPE", "SITE_NAME", "META_TITLE", "META_DESCRI
                  "SIDEBAR_DESKTOP_CLASSES", "HEADER_NAV_CLASSES"}
 TEMPLATE_TOKENS = {
     "home.html": COMMON_TOKENS | {"AD_IN_FEED", "SIDE_CATEGORIES", "DIRECTORY", "DIRECTORY_COUNT",
-                                  "DIRECTORY_HEADING", "DIRECTORY_INTRO", "FAQ"},
+                                  "DIRECTORY_HEADING", "DIRECTORY_INTRO", "CONTENT_SECTIONS", "FAQ"},
     "category.html": COMMON_TOKENS | {"BREADCRUMB", "HERO_TILE", "JUMP_LINKS",
-                                      "DIRECTORY_COUNT", "DIRECTORY", "FAQ"},
+                                      "DIRECTORY_COUNT", "DIRECTORY", "CONTENT_SECTIONS", "FAQ"},
     "tool.html": COMMON_TOKENS | {"BREADCRUMB", "SUBCATEGORY_SLUG", "TOOL_CARD", "DISCLAIMER", "AD_IN_FEED",
                                   "CONTENT_SECTIONS", "FAQ", "RELATED_TOOLS", "TOOL_EXTRA_SCRIPTS", "TOOL_SCRIPT"},
     "page.html": COMMON_TOKENS | {"BREADCRUMB", "CONTENT_HTML"},
@@ -215,9 +215,9 @@ def render_faq(page_id, heading, faq):
             f'<summary id="{fid}-summary" class="faq-summary"><h3 id="{fid}-question" class="faq-question">'
             f'{esc(qa["question"])}</h3><span class="faq-marker" aria-hidden="true"></span></summary>'
             f'<div id="{fid}-answer" class="faq-answer"><p>{esc(qa["answer"])}</p></div></details>')
-    return (f'<section id="{page_id}-faq-section" class="border-t border-line pt-8" aria-labelledby="{page_id}-faq-heading" data-section="faq">\n'
-            f'        <h2 id="{page_id}-faq-heading" class="font-display text-2xl font-bold tracking-tight">{esc(heading)}</h2>\n'
-            f'        <div id="{page_id}-faq-list" class="mt-4 border-t border-line">\n          '
+    return (f'<section id="{page_id}-faq-section" class="panel p-4 sm:p-6" aria-labelledby="{page_id}-faq-heading" data-section="faq">\n'
+            f'        <h2 id="{page_id}-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">{esc(heading)}</h2>\n'
+            f'        <div id="{page_id}-faq-list" class="mt-5 space-y-3">\n          '
             + "\n          ".join(items) + "\n        </div>\n      </section>")
 
 
@@ -367,6 +367,7 @@ def render_home(S):
         "DIRECTORY_COUNT": str(len(site["nav"])),
         "DIRECTORY_HEADING": esc(home["directory_heading"]),
         "DIRECTORY_INTRO": esc(home["directory_intro"]),
+        "CONTENT_SECTIONS": render_article_cards(page_id, home.get("content_html", "").strip()),
         "FAQ": render_faq(page_id, home["faq_heading"], home["faq"]),
     })
     return render("home.html", values)
@@ -410,6 +411,7 @@ def render_category(S):
         "JUMP_LINKS": "\n".join(jump),
         "DIRECTORY_COUNT": str(len(S.subcats)),
         "DIRECTORY": "        " + "\n        ".join(groups),
+        "CONTENT_SECTIONS": render_article_cards(page_id, cat.get("content_html", "").strip()),
         "FAQ": render_faq(page_id, cat["faq_heading"], cat["faq"]),
     })
     return render("category.html", values)

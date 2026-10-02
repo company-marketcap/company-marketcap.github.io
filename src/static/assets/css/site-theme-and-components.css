@@ -192,12 +192,13 @@ input[type="search"]::-webkit-search-cancel-button { cursor: pointer; }
   .category-calculator-list { @apply grid gap-0.5 p-2.5; }
   .category-calculator-link { @apply focus-ring block rounded-md px-2.5 py-1.5 text-[15px] text-ink hover:bg-surface-muted hover:text-brand; }
 
-  .faq-item { @apply border-b border-line; }
-  .faq-summary { @apply focus-ring flex cursor-pointer list-none items-center justify-between gap-4 rounded-md py-4 [&::-webkit-details-marker]:hidden; }
-  .faq-question { @apply font-display text-lg font-semibold leading-snug; }
-  .faq-marker { @apply relative size-4 shrink-0 before:absolute before:inset-x-0 before:top-1/2 before:h-0.5 before:-translate-y-1/2 before:rounded before:bg-ink-muted after:absolute after:inset-y-0 after:left-1/2 after:w-0.5 after:-translate-x-1/2 after:rounded after:bg-ink-muted after:transition-transform; }
+  .faq-item { @apply rounded-xl border border-line bg-surface-muted transition-colors hover:border-brand/40; }
+  .faq-item[open] { @apply bg-surface; }
+  .faq-summary { @apply focus-ring flex cursor-pointer list-none items-center justify-between gap-4 rounded-xl px-4 py-3.5 [&::-webkit-details-marker]:hidden; }
+  .faq-question { @apply font-display text-base font-semibold leading-snug sm:text-[1.0625rem]; }
+  .faq-marker { @apply relative size-7 shrink-0 rounded-full border border-line bg-surface before:absolute before:inset-x-[7px] before:top-1/2 before:h-0.5 before:-translate-y-1/2 before:rounded before:bg-ink-muted after:absolute after:inset-y-[7px] after:left-1/2 after:w-0.5 after:-translate-x-1/2 after:rounded after:bg-ink-muted after:transition-transform; }
   .faq-item[open] .faq-marker { @apply after:scale-y-0; }
-  .faq-answer { @apply max-w-prose pb-5 leading-relaxed text-ink-muted; }
+  .faq-answer { @apply mx-4 border-t border-line pb-4 pt-3 leading-relaxed text-ink-muted; }
 
   .footer-heading { @apply font-display text-base font-bold; }
   .footer-link { @apply focus-ring rounded-sm text-[15px] text-ink-muted hover:text-ink hover:underline hover:underline-offset-4; }
@@ -703,6 +704,8 @@ input[type="search"]::-webkit-search-cancel-button { cursor: pointer; }
   .article-content .heading-anchor:focus-visible { opacity: 1; }
 
   .article-content :is(p, ul, ol, dl, blockquote, address) { max-width: var(--site-reading-measure); }
+  /* Inside article cards the text uses the full card width, in line with the figures and tables. */
+  .panel.article-content :is(p, ul, ol, dl, blockquote, address) { max-width: none; }
   .article-content .article-lead { font-size: 1.1875rem; line-height: 1.6; color: var(--site-color-ink-muted); }
 
   /* Inline elements */
