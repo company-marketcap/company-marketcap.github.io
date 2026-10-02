@@ -35,7 +35,7 @@ OUT = ROOT / "public"
 
 COMMON_TOKENS = {"PAGE_ID", "PAGE_TYPE", "SITE_NAME", "META_TITLE", "META_DESCRIPTION", "CANONICAL_URL",
                  "ROBOTS", "HEAD_EXTRA", "JSON_LD", "SIDEBAR_CATEGORIES", "FOOTER_CATEGORIES",
-                 "FOOTER_DESCRIPTION", "YEAR", "AD_TOP", "AD_BOTTOM", "AD_RIGHT_RAIL", "H1", "SUBTITLE",
+                 "FOOTER_DESCRIPTION", "YEAR", "AD_TOP", "AD_BOTTOM", "AD_RIGHT_RAIL_TOP", "AD_RIGHT_RAIL", "H1", "SUBTITLE",
                  "SIDEBAR_DESKTOP_CLASSES", "HEADER_NAV_CLASSES"}
 TEMPLATE_TOKENS = {
     "home.html": COMMON_TOKENS | {"AD_IN_FEED", "SIDE_CATEGORIES", "DIRECTORY", "DIRECTORY_COUNT",
@@ -69,6 +69,7 @@ AD_SLOTS = {
     "bottom": ("ad-bottom-leaderboard", "Advertisement, bottom of page", *LEADERBOARD),
     "in_feed": ("ad-in-feed", "Advertisement", *LEADERBOARD),
     "hero": ("ad-hero-rectangle", "Advertisement, beside the introduction", "300 × 250", "h-[250px] w-[300px] max-w-full"),
+    "right_rail_top": ("ad-right-rail-rectangle", "Advertisement, right column", "300 × 250", "h-[250px] w-[300px]"),
     "right_rail": ("ad-right-rail-skyscraper", "Advertisement, right column", "300 × 600", "h-[600px] w-[300px]"),
 }
 SEPARATOR_SVG = ('<svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" '
@@ -262,6 +263,7 @@ class Site:
             "FOOTER_DESCRIPTION": esc(self.site["footer_description"]),
             "YEAR": str(date.today().year),
             "AD_TOP": render_ad(page_id, "top"), "AD_BOTTOM": render_ad(page_id, "bottom"),
+            "AD_RIGHT_RAIL_TOP": render_ad(page_id, "right_rail_top"),
             "AD_RIGHT_RAIL": render_ad(page_id, "right_rail"),
             "H1": esc(fill(h1, self.site)), "SUBTITLE": esc(fill(subtitle, self.site)),
             "SIDEBAR_DESKTOP_CLASSES": SIDEBAR_DESKTOP_HOME if page_type == "home" else SIDEBAR_DESKTOP,
@@ -476,7 +478,7 @@ def render_page(S, slug, meta_title, meta_description, h1, subtitle, content_htm
         "CONTENT_HTML": content_html,
     })
     if slug in NO_AD_PAGES:
-        values.update({"AD_TOP": "", "AD_BOTTOM": "", "AD_RIGHT_RAIL": ""})
+        values.update({"AD_TOP": "", "AD_BOTTOM": "", "AD_RIGHT_RAIL_TOP": "", "AD_RIGHT_RAIL": ""})
     return render("page.html", values)
 
 
@@ -500,7 +502,7 @@ def render_404(S):
         "POPULAR_TOOLS": items,
         "CATEGORY_URL": href(S.category["slug"]), "SITEMAP_URL": href("sitemap"),
         # AdSense policy: no ads on error / non-content pages, so every ad slot is blanked here.
-        "AD_TOP": "", "AD_BOTTOM": "", "AD_RIGHT_RAIL": "",
+        "AD_TOP": "", "AD_BOTTOM": "", "AD_RIGHT_RAIL_TOP": "", "AD_RIGHT_RAIL": "",
     })
     return render("404.html", values)
 
