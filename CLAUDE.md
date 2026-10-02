@@ -84,6 +84,9 @@ Settings → Pages → Source = **GitHub Actions** (the old site served the `mai
 - `utilities/silo_linking/generate_silo_rotation.py` — stdlib-only; run **after** `generate.py`. Patches 1-4
   rotating links per live page into `public/` (planned tools are skipped and join their silo once built).
 
+- `src/config/outbound_links.json` holds the sister-site links (Notepadly, Joteo) carried over from the old site;
+  `generate.py` appends each sentence to the end of that tool's article, so a content re-import can't wipe them.
+
 ## Supporting folders
 
 - `utilities/competitor_research/` — offline mirrors of calculator.net, dinkytown.net and

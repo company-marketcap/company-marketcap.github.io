@@ -60,6 +60,8 @@ SIDEBAR_DESKTOP = ("lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100d
 SIDEBAR_DESKTOP_HOME = "lg:hidden"
 HOME_ID = "home"
 SEARCH_INDEX = "assets/data/calculator-search-index.json"
+OUTBOUND_LINKS = {k: v for k, v in json.loads((SRC / "config" / "outbound_links.json").read_text(encoding="utf-8")).items()
+                  if not k.startswith("_")}  # sister-site links appended to a tool's article
 
 esc = html.escape
 
@@ -457,6 +459,10 @@ def render_tool(S, tool):
     if tool["meta_description"]:
         app["description"] = tool["meta_description"]
     content = tool["content_html"].strip()
+    outbound = OUTBOUND_LINKS.get(tool["slug"])
+    if outbound and "</p>" in content:  # end of the article's last paragraph
+        cut = content.rindex("</p>")
+        content = f"{content[:cut]} {outbound}{content[cut:]}"
     extra = "\n".join(f'<script src="{esc(s)}" defer></script>' for s in card.get("extra_scripts", []))
     if MATH_RE.search(content):
         extra = (extra + "\n" + KATEX_ASSETS).strip()
