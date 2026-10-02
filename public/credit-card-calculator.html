@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="en" id="credit-card-calculator-document" data-page-slug="credit-card-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Credit Card Payoff Calculator: Find Your Debt-Free Date</title>
+  <meta name="description" content="Enter your balance, APR and monthly payment to see the month you&#x27;ll be debt-free, how long it takes to pay off your cards and the total interest.">
+  <link rel="canonical" href="https://company-marketcap.github.io/credit-card-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Credit Card Payoff Calculator: Find Your Debt-Free Date">
+  <meta property="og:description" content="Enter your balance, APR and monthly payment to see the month you&#x27;ll be debt-free, how long it takes to pay off your cards and the total interest.">
+  <meta property="og:url" content="https://company-marketcap.github.io/credit-card-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Credit Card Payoff Calculator", "url": "https://company-marketcap.github.io/credit-card-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Enter your balance, APR and monthly payment to see the month you'll be debt-free, how long it takes to pay off your cards and the total interest."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Credit Cards & Debt Payoff", "item": "https://company-marketcap.github.io/financial-calculators.html#credit-card-debt-calculators"}, {"@type": "ListItem", "position": 4, "name": "Credit Card Payoff Calculator", "item": "https://company-marketcap.github.io/credit-card-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How does a credit card payoff calculator work?", "acceptedAnswer": {"@type": "Answer", "text": "It adds one month of interest to each balance, subtracts your payments, and repeats until every balance reaches zero. The number of repeats is your payoff time, and the interest added along the way is your total interest."}}, {"@type": "Question", "name": "Which card does the calculator pay off first?", "acceptedAnswer": {"@type": "Answer", "text": "After the minimum payment on every card, it sends the rest of your monthly budget to the card with the highest interest rate, which is the debt avalanche method. Switching to the smallest balance first (debt snowball) costs a little more interest but clears cards sooner."}}, {"@type": "Question", "name": "What if my monthly budget is lower than my minimum payments?", "acceptedAnswer": {"@type": "Answer", "text": "The calculator raises the budget to the sum of your minimum payments, because you cannot legally pay less than the minimums. Enter a higher budget to see how much sooner you finish."}}, {"@type": "Question", "name": "Why does paying only the minimum take so long?", "acceptedAnswer": {"@type": "Answer", "text": "Minimum payments are often interest plus about 1% of the balance, so they shrink as the balance falls. Most of each early payment goes to interest, and the principal drops slowly."}}, {"@type": "Question", "name": "Should I use a balance transfer to pay off credit card debt?", "acceptedAnswer": {"@type": "Answer", "text": "It can help if the 0% introductory APR period is long enough to clear most of the balance and the transfer fee (often 3% to 5%) is smaller than the interest you would pay. Run the calculator with and without the fee to compare."}}, {"@type": "Question", "name": "Does paying off a credit card improve my credit score?", "acceptedAnswer": {"@type": "Answer", "text": "Usually yes. Lower balances reduce your credit utilization, one of the main factors in a credit score. Closing the paid-off card can raise utilization again, so consider keeping it open at a zero balance."}}, {"@type": "Question", "name": "Does the calculator include new purchases and fees?", "acceptedAnswer": {"@type": "Answer", "text": "Only if you enter them. Use the monthly new charges field for ongoing spending, and add any late fee to the card balance before you calculate. Interest rates are assumed to stay fixed."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="credit-card-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="credit-card-calculator" data-page-type="calculator">
+  <a id="credit-card-calculator-skip-link" href="#credit-card-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="credit-card-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="credit-card-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="credit-card-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="credit-card-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="credit-card-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="credit-card-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="credit-card-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="credit-card-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="credit-card-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="credit-card-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="credit-card-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="credit-card-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="credit-card-calculator-header-search-status" aria-controls="credit-card-calculator-header-search-results" data-search-input="header">
+              <p id="credit-card-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="credit-card-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="credit-card-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="credit-card-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="credit-card-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="credit-card-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="credit-card-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="credit-card-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="credit-card-calculator-mobile-search-status" aria-controls="credit-card-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="credit-card-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="credit-card-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="credit-card-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="credit-card-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="credit-card-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="credit-card-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="credit-card-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="credit-card-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="credit-card-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="credit-card-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="credit-card-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="credit-card-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="credit-card-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="credit-card-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="credit-card-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="credit-card-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="credit-card-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="credit-card-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="credit-card-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="credit-card-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="credit-card-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="credit-card-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="credit-card-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="credit-card-calculator-sidebar-search-status" aria-controls="credit-card-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="credit-card-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="credit-card-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="credit-card-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="credit-card-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="credit-card-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="credit-card-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="credit-card-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="credit-card-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="credit-card-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="credit-card-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="credit-card-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="credit-card-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="credit-card-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="credit-card-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="credit-card-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators" aria-current="true">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="credit-card-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="credit-card-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="credit-card-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="credit-card-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="credit-card-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="credit-card-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="credit-card-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="credit-card-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="credit-card-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="credit-card-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="credit-card-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="credit-card-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="credit-card-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="credit-card-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="credit-card-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="credit-card-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="credit-card-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="credit-card-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="credit-card-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="credit-card-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="credit-card-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="credit-card-calculator" data-calculator-slug="credit-card-calculator" data-sub-category-slug="credit-card-debt-calculators">
+      <aside id="credit-card-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="credit-card-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="credit-card-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="credit-card-calculator-ad-top-leaderboard">
+            <ins id="credit-card-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("credit-card-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="credit-card-calculator-intro-area" class="space-y-4">
+        <nav id="credit-card-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="credit-card-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="credit-card-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="credit-card-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="credit-card-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#credit-card-debt-calculators" itemprop="item"><span itemprop="name">Credit Cards &amp; Debt Payoff</span></a><meta itemprop="position" content="3"></li>
+            <li id="credit-card-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Credit Card Payoff Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/credit-card-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="credit-card-calculator-hero-section" aria-labelledby="credit-card-calculator-hero-heading" data-section="hero">
+          <h1 id="credit-card-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Credit Card Payoff Calculator: Find Your Debt-Free Date</h1>
+          <p id="credit-card-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Wondering how long your balance will really last? The credit card payoff calculator turns your balance, interest rate and monthly payment into a clear answer: the exact month you will be debt-free and the total interest it costs to get there. Run a few what-if payments and you can see which one fits your budget before you commit. <!-- SILO_START:slot_a -->The <a class="silo-link" href="/debt-to-income-ratio-calculator.html">debt to income ratio calculator</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="credit-card-calculator-tool" class="space-y-6" data-page-slug="credit-card-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="ccFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="ccForm" class="space-y-5" novalidate aria-labelledby="ccFormHeading">
+      <h2 id="ccFormHeading" class="panel-heading">Enter your card details</h2>
+      <div><label for="ccBalance" class="form-label">Current balance</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="ccBalance" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="5000" inputmode="decimal"></div></div>
+      <div><label for="ccRate" class="form-label">Interest rate (APR)</label><div class="input-group"><input type="number" id="ccRate" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="0.1" value="22" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">The purchase APR shown on your statement.</p></div>
+      <div><label for="ccMode" class="form-label">What do you want to work out?</label>
+        <select id="ccMode" class="form-select"><option value="payment" selected>How long a fixed payment takes</option><option value="months">The payment to be debt-free by a goal</option></select></div>
+      <div id="ccPaymentField"><label for="ccPayment" class="form-label">Monthly payment</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="ccPayment" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="150" inputmode="decimal"></div><p class="form-hint">The same amount every month, not the shrinking minimum payment.</p></div>
+      <div id="ccMonthsField" hidden><label for="ccMonths" class="form-label">Pay it off in</label><div class="input-group"><input type="number" id="ccMonths" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1" max="600" step="1" value="36" inputmode="numeric"><span class="input-affix">months</span></div></div>
+      <details class="form-details">
+        <summary class="form-details-summary">More options</summary>
+        <div class="mt-4 space-y-5">
+        <div><label for="ccCharges" class="form-label">New charges each month</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="ccCharges" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="0" inputmode="decimal"></div><p class="form-hint">Spending you keep putting on the card while paying it down.</p></div>
+        <div><label for="ccFee" class="form-label">Annual fee</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="ccFee" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="5" value="0" inputmode="decimal"></div><p class="form-hint">Added to the balance every 12 months.</p></div>
+        </div>
+      </details>
+      <p id="ccError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="ccResults" aria-live="polite" aria-labelledby="ccResultsHeading">
+      <h2 id="ccResultsHeading" class="panel-heading">Your payoff plan</h2>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p id="ccPrimaryLabel" class="stat-label">Time to pay off</p><p id="ccPrimary" class="stat-value">–</p><p id="ccPrimaryNote" class="mt-1 text-xs text-ink-muted"></p></div>
+        <div class="stat-card"><p class="stat-label">Total interest</p><p id="ccInterest" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Total paid</p><p id="ccTotal" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Debt-free by</p><p id="ccDate" class="stat-value">–</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="ccScheduleHeading" data-section="schedule">
+  <h2 id="ccScheduleHeading" class="panel-heading">Month-by-month payoff schedule</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">Each payment, the interest charged that month and what is left to pay.</p>
+  <div class="table-scroll mt-5 max-h-[520px]" tabindex="0" role="region" aria-labelledby="ccScheduleHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Month</th><th scope="col">Payment</th><th scope="col">Interest</th><th scope="col">Balance</th></tr></thead>
+      <tbody id="ccSchedule"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="credit-card-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="credit-card-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Wondering how long your balance will really last? The credit card payoff calculator turns your balance, interest rate and monthly payment into a clear answer: the exact month you will be debt-free and the total interest it costs to get there. Run a few what-if payments and you can see which one fits your budget before you commit. <!-- SILO_START:slot_a_m -->The <a class="silo-link" href="/debt-to-income-ratio-calculator.html">debt to income ratio calculator</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="credit-card-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="credit-card-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="credit-card-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="credit-card-calculator-ad-in-feed">
+            <ins id="credit-card-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("credit-card-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="credit-card-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="credit-card-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="credit-card-calculator-guide-heading-1">
+<h2 id="credit-card-calculator-guide-heading-1">Credit Card Payoff Calculator Inputs and Results</h2>
+<p>Every <strong>credit card payoff calculator</strong> works from the same small set of facts about your account. Gather them from your latest statement and the answer takes less than a minute. The more closely your numbers match the statement, the closer the estimate lands to reality. <!-- SILO_START:slot_b -->Next, open the <a class="silo-link" href="/consolidation-loan-investment-calculator.html">free consolidation loan investment calculator</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_b --></p>
+<ul>
+<li><strong>Card balance:</strong> the full amount you owe today, including interest that has already been added.</li>
+<li><strong>Interest rate:</strong> the yearly rate your card issuer charges, usually printed on the statement as the APR.</li>
+<li><strong>Monthly payment:</strong> the fixed amount you plan to send every month.</li>
+<li><strong>Monthly charges:</strong> any new purchases you still put on the card, if applicable.</li>
+</ul>
+<p>Keeping that number visible is good for your financial well-being, because it replaces a vague worry with a plan to pay off your debt on a known date. After you click the calculate button, you get four results: the month and year you become debt-free, the number of payments you need, the <strong>total interest</strong> you pay, and the total of all payments, principal included. A good tool also shows a payment schedule so you can watch each payment shift from interest toward principal.</p>
+
+<h3>Your Credit Card Balance and Annual Percentage Rate</h3>
+<p>Your <strong>credit card balance</strong> is the starting point, and the <strong>annual percentage rate</strong> (APR) decides how fast that balance grows while you owe it. Most credit card issuers compute interest on the average daily balance, then charge one-twelfth of the yearly rate each month. Interest rates on cards commonly run far above those on loans, so a card at 22.74% APR therefore adds roughly 1.895% to the balance every month before your payment is applied.</p>
+
+<h3>Minimum Payment Versus Your Own Monthly Payment</h3>
+<p>The <strong>minimum payment</strong> is the smallest amount your card issuer accepts, and it is built to keep you in debt for years. Your own <strong>monthly payment</strong> can be any larger amount. Because the minimum payments shrink as the balance falls, paying only the minimum stretches the repayment and multiplies the interest charges. Paying a fixed amount above it is the simplest way to change the outcome.</p>
+        </section>
+        <section id="credit-card-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="credit-card-calculator-guide-heading-2">
+<h2 id="credit-card-calculator-guide-heading-2">The Formula Behind a Credit Card Debt Payoff Calculator</h2>
+<p>A <strong>credit card debt payoff calculator</strong> repeats one simple step each month: add interest to the balance, then subtract your payment. First convert the yearly rate into a monthly rate: <!-- SILO_START:slot_c -->If you want to see how the figures change, the <a class="silo-link" href="/credit-card-balance-transfer-optimizer-with-promotional-rate.html">balance transfer optimizer online</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_c --></p>
+<p>$$r = \frac{\text{APR}}{12 \times 100}$$</p>
+<p>When your payment stays fixed, the number of months needed to clear the balance has a closed form:</p>
+<p>$$n = \frac{-\ln\left(1 - \frac{B \times r}{P}\right)}{\ln(1 + r)}$$</p>
+<p>Here \(B\) is the balance, \(r\) is the monthly rate, \(P\) is the monthly payment and \(n\) is the number of payments, rounded up to the next whole month. Your <strong>total interest</strong> is simply \(n \times P\) minus the balance, with the last payment trimmed to what remains. The formula only works when \(P\) is larger than \(B \times r\); if your payment is smaller than the first month's interest, the balance never shrinks.</p>
+<ol>
+<li>Divide the APR by 12 to get the monthly rate.</li>
+<li>Multiply the balance by that rate to get this month's interest.</li>
+<li>Subtract the interest from your payment; the remainder is principal.</li>
+<li>Lower the balance by the principal and repeat until it reaches zero.</li>
+</ol>
+        </section>
+        <section id="credit-card-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="credit-card-calculator-guide-heading-3">
+<h2 id="credit-card-calculator-guide-heading-3">Worked Example: Paying Off $6,842.35 at 22.74% APR</h2>
+<p>Suppose you owe <strong>$6,842.35</strong> at <strong>22.74% APR</strong>. The monthly rate is 1.895%, so the first month's interest is $129.66. The table shows how four different monthly payments change the repayment timeline for that same balance.</p>
+<table>
+<thead><tr><th>Monthly payment</th><th>Months to payoff</th><th>Total interest</th><th>Total paid</th></tr></thead>
+<tbody>
+<tr><td>$215</td><td>50</td><td>$3,740.69</td><td>$10,583.04</td></tr>
+<tr><td>$300</td><td>31</td><td>$2,203.06</td><td>$9,045.41</td></tr>
+<tr><td>$400</td><td>21</td><td>$1,506.23</td><td>$8,348.58</td></tr>
+<tr><td>$500</td><td>16</td><td>$1,153.17</td><td>$7,995.52</td></tr>
+</tbody>
+</table>
+<p>Moving from $215 to $300 a month saves <strong>$1,537.63</strong> in interest and removes 19 months from the debt payoff time. Each extra dollar goes straight to principal, so it stops generating interest charges for every month that remains.</p>
+
+<h3>Month-by-Month Payment Schedule</h3>
+<p>A payment schedule makes the mechanics visible. With a $300 payment, the first three months look like this:</p>
+<table>
+<thead><tr><th>Month</th><th>Interest</th><th>Principal</th><th>Remaining balance</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>$129.66</td><td>$170.34</td><td>$6,672.01</td></tr>
+<tr><td>2</td><td>$126.43</td><td>$173.57</td><td>$6,498.44</td></tr>
+<tr><td>3</td><td>$123.15</td><td>$176.85</td><td>$6,321.59</td></tr>
+</tbody>
+</table>
+<p>Notice that the interest slice shrinks while the principal slice grows, even though the payment never changes. That slow shift is why the early months feel so discouraging, and why a short burst of extra money early on pays off more than the same amount later.</p>
+        </section>
+        <section id="credit-card-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="credit-card-calculator-guide-heading-4">
+<h2 id="credit-card-calculator-guide-heading-4">Pay Off Credit Card Debt Before a Lease Renewal: One Run Through the Calculator</h2>
+<p>Your apartment lease renews in 20 months, and you want the card gone before the new rent kicks in. Your statement shows a balance of <strong>$4,317.82</strong> at <strong>24.49% APR</strong>, with a printed minimum of <strong>$131.30</strong>. That minimum matches a common issuer formula: that month's interest of $88.12 plus 1% of the balance, $43.18.</p>
+<p>You enter the balance and rate, then the minimum as the monthly payment, and click the calculate button. The payoff estimate comes back at <strong>56 payments</strong> and <strong>$2,909.73</strong> in total interest, which is more than two-thirds of what you borrowed, and nearly four years past your deadline.</p>
+<p>So you rerun it with a payment you can actually find in your budget:</p>
+<table>
+<thead><tr><th>Monthly payment</th><th>Payments needed</th><th>Total interest</th></tr></thead>
+<tbody>
+<tr><td>$131.30</td><td>56</td><td>$2,909.73</td></tr>
+<tr><td>$265.00</td><td>21</td><td>$984.80</td></tr>
+<tr><td>$285.00</td><td>19</td><td>$900.83</td></tr>
+</tbody>
+</table>
+<p>The $265 run lands one month after your 20-month deadline, so it fails. At $285 the schedule ends with a final payment of $88.65, and the debt-free month is May 2028, well inside the window. The extra $20 a month also saves <strong>$83.97</strong> in interest compared with $265.</p>
+<p>Your decision is concrete: you move $153.70 a month, the gap between $285 and the minimum, from your discretionary line into an automatic payment dated the day after payday. If a raise arrives, you will rerun the calculator with the new amount instead of guessing how much sooner the balance clears.</p>
+        </section>
+        <section id="credit-card-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="credit-card-calculator-guide-heading-5">
+<h2 id="credit-card-calculator-guide-heading-5">Pay Off a Credit Card Faster with the Debt Avalanche Method</h2>
+<p>When you carry several cards, you need an order of attack. The <strong>debt avalanche method</strong> makes the minimum payments on every card, then sends all remaining money to the card with the highest interest rate. When that card is gone, you roll its payment onto the next-highest rate. This is the cost-efficient order, and many payoff tools assume it, along with fixed rates and no new purchases. Enter each card's balance, rate and payment into the calculator to see how long that order takes.</p>
+
+<h3>Debt Snowball Method and Motivation</h3>
+<p>The <strong>debt snowball method</strong> ignores rates and targets the smallest balance first. It costs a little more, but it delivers early wins, and that <strong>motivation</strong> keeps many people on track. Compare the two on three cards with a $400 monthly budget:</p>
+<table>
+<thead><tr><th>Card</th><th>Balance</th><th>APR</th><th>Minimum</th></tr></thead>
+<tbody>
+<tr><td>Card A</td><td>$2,150</td><td>26.99%</td><td>$65</td></tr>
+<tr><td>Card B</td><td>$3,980</td><td>19.49%</td><td>$110</td></tr>
+<tr><td>Card C</td><td>$710</td><td>14.25%</td><td>$25</td></tr>
+</tbody>
+</table>
+<p>The avalanche clears everything in 21 months with <strong>$1,272.71</strong> in interest. The snowball also finishes in 21 months but costs <strong>$1,363.72</strong>, a gap of $91.01. In exchange, Card C disappears in month 4 instead of month 21. If that early win helps you stay consistent, the small premium is a fair price; if you are disciplined, the avalanche saves more.</p>
+        </section>
+        <section id="credit-card-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="credit-card-calculator-guide-heading-6">
+<h2 id="credit-card-calculator-guide-heading-6">Ways to Pay Off Credit Card Debt Faster</h2>
+<p>Once the calculator shows your timeline, the next question is how to shorten it. These habits work because they move money onto principal sooner:</p>
+<ul>
+<li>Raise your monthly payments by even a small, steady amount.</li>
+<li>Send windfalls such as a tax refund or bonus as lump-sum payments.</li>
+<li>Free up extra money by trimming a budget category and redirecting it to the highest interest card.</li>
+<li>Set up automatic payments so you never trigger late fees or late payment fees.</li>
+<li>Stop adding new purchases while you work toward being debt-free.</li>
+<li>Talk to a financial counselor if the numbers feel out of reach; a card is an unsecured loan, which is why its rate runs so high.</li>
+</ul>
+<p>Late fees and cash advance fees also feed the outstanding balance, so rerun the calculator with the higher figure whenever one posts; the new payoff date shows what the slip really cost. Higher interest rates make that effect stronger, and a card with a low interest rate is far more forgiving of a slip. Pay a missed due date immediately, since one skipped payment can add fees and mark your credit history.</p>
+
+<h3>Balance Transfer and Debt Consolidation</h3>
+<p>A <strong>balance transfer</strong> moves your debt to a new card, often with an introductory 0% APR for a set period. Balance transfer credit cards usually charge an upfront fee of about 3% to 5% of the amount moved, which can still beat months of interest. <strong>Debt consolidation</strong> through personal loans is another route: a debt consolidation loan replaces several cards with one fixed payment and, for borrowers with strong credit, a lower rate. Run both scenarios through the calculator, including the fee, before choosing. A low interest offer helps only if you keep paying on schedule. Whichever you pick, avoid running up the paid-off cards again.</p>
+        </section>
+        <section id="credit-card-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="credit-card-calculator-guide-heading-7">
+<h2 id="credit-card-calculator-guide-heading-7">How Credit Card Debt Affects Your Credit Score</h2>
+<p>Your <strong>credit utilization</strong> is the share of your <strong>credit limit</strong> that you are using, and it is one of the biggest drivers of your <strong>credit score</strong>. A card with a $9,000 limit and a $6,842.35 balance sits at about 76% utilization, which weighs heavily on the score. As the balance falls, utilization falls with it, and credit bureaus tend to reward the change. Check your score regularly so you can see the repayment progress show up.</p>
+        </section>
+        <section id="credit-card-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="credit-card-calculator-guide-heading-8">
+<h2 id="credit-card-calculator-guide-heading-8">Managing Multiple Credit Cards Without Slowing Your Debt Payoff</h2>
+<p>Holding <strong>multiple credit cards</strong> complicates a payoff, because each account needs its own balance, APR and payment in the calculator. Enter every card and the results show which one your surplus should hit first. Align the due date on one day and tie it to your income schedule so no payment is missed; one overlooked date can add fees and undo a month of progress.</p>
+<p>Before closing a paid-off card, remember that it also removes available credit, which can raise your credit utilization. A rarely used card with an annual fee is worth closing. A card kept only for rewards or fraud protection is worth keeping only at a zero balance, because overspending on it restarts the clock. Trim your budget for savings to cover the payment instead, and keep revolving accounts to the number you can actively track.</p>
+        </section>
+        <section id="credit-card-calculator-guide-section-9" class="panel article-content p-4 sm:p-6" aria-labelledby="credit-card-calculator-guide-heading-9">
+<h2 id="credit-card-calculator-guide-heading-9">Using a Credit Card Calculator to Plan Your Debt-Free Date</h2>
+<p>A <strong>credit card calculator</strong> works best as a planning tool, not a one-time curiosity. Rerun it whenever your rate or balance changes, or when a financial advisor suggests a different payment. If you have several cards, a <strong>credit cards payoff calculator</strong> that handles multiple balances shows how the order of repayment affects total interest, while a <strong>credit card debt pay off calculator</strong> built for one card follows a single payback schedule. Either way, the goal is a realistic payoff strategy and a date on the calendar. The simple <strong>payoff calculator</strong> habit of testing a higher payment before you commit is what gets you there, and it keeps the money and finance side of the plan honest.</p>
+        </section>
+      </div>
+
+      <section id="credit-card-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="credit-card-calculator-faq-heading" data-section="faq">
+        <h2 id="credit-card-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Credit Card Payoff Calculator questions</h2>
+        <div id="credit-card-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="credit-card-calculator-faq-1" class="faq-item" open><summary id="credit-card-calculator-faq-1-summary" class="faq-summary"><h3 id="credit-card-calculator-faq-1-question" class="faq-question">How does a credit card payoff calculator work?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="credit-card-calculator-faq-1-answer" class="faq-answer"><p>It adds one month of interest to each balance, subtracts your payments, and repeats until every balance reaches zero. The number of repeats is your payoff time, and the interest added along the way is your total interest.</p></div></details>
+          <details id="credit-card-calculator-faq-2" class="faq-item" open><summary id="credit-card-calculator-faq-2-summary" class="faq-summary"><h3 id="credit-card-calculator-faq-2-question" class="faq-question">Which card does the calculator pay off first?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="credit-card-calculator-faq-2-answer" class="faq-answer"><p>After the minimum payment on every card, it sends the rest of your monthly budget to the card with the highest interest rate, which is the debt avalanche method. Switching to the smallest balance first (debt snowball) costs a little more interest but clears cards sooner.</p></div></details>
+          <details id="credit-card-calculator-faq-3" class="faq-item" open><summary id="credit-card-calculator-faq-3-summary" class="faq-summary"><h3 id="credit-card-calculator-faq-3-question" class="faq-question">What if my monthly budget is lower than my minimum payments?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="credit-card-calculator-faq-3-answer" class="faq-answer"><p>The calculator raises the budget to the sum of your minimum payments, because you cannot legally pay less than the minimums. Enter a higher budget to see how much sooner you finish.</p></div></details>
+          <details id="credit-card-calculator-faq-4" class="faq-item" open><summary id="credit-card-calculator-faq-4-summary" class="faq-summary"><h3 id="credit-card-calculator-faq-4-question" class="faq-question">Why does paying only the minimum take so long?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="credit-card-calculator-faq-4-answer" class="faq-answer"><p>Minimum payments are often interest plus about 1% of the balance, so they shrink as the balance falls. Most of each early payment goes to interest, and the principal drops slowly.</p></div></details>
+          <details id="credit-card-calculator-faq-5" class="faq-item" open><summary id="credit-card-calculator-faq-5-summary" class="faq-summary"><h3 id="credit-card-calculator-faq-5-question" class="faq-question">Should I use a balance transfer to pay off credit card debt?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="credit-card-calculator-faq-5-answer" class="faq-answer"><p>It can help if the 0% introductory APR period is long enough to clear most of the balance and the transfer fee (often 3% to 5%) is smaller than the interest you would pay. Run the calculator with and without the fee to compare.</p></div></details>
+          <details id="credit-card-calculator-faq-6" class="faq-item" open><summary id="credit-card-calculator-faq-6-summary" class="faq-summary"><h3 id="credit-card-calculator-faq-6-question" class="faq-question">Does paying off a credit card improve my credit score?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="credit-card-calculator-faq-6-answer" class="faq-answer"><p>Usually yes. Lower balances reduce your credit utilization, one of the main factors in a credit score. Closing the paid-off card can raise utilization again, so consider keeping it open at a zero balance.</p></div></details>
+          <details id="credit-card-calculator-faq-7" class="faq-item" open><summary id="credit-card-calculator-faq-7-summary" class="faq-summary"><h3 id="credit-card-calculator-faq-7-question" class="faq-question">Does the calculator include new purchases and fees?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="credit-card-calculator-faq-7-answer" class="faq-answer"><p>Only if you enter them. Use the monthly new charges field for ongoing spending, and add any late fee to the card balance before you calculate. Interest rates are assumed to stay fixed.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="credit-card-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="credit-card-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="credit-card-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="credit-card-calculator-ad-bottom-leaderboard">
+            <ins id="credit-card-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("credit-card-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="credit-card-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="credit-card-calculator-right-rail-top" class="mb-6">
+        <aside id="credit-card-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="credit-card-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="credit-card-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="credit-card-calculator-ad-right-rail-rectangle">
+            <ins id="credit-card-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("credit-card-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="credit-card-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="credit-card-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="credit-card-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="credit-card-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="credit-card-calculator-ad-right-rail-skyscraper">
+            <ins id="credit-card-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("credit-card-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="credit-card-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="credit-card-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="credit-card-calculator-footer-brand">
+        <a id="credit-card-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="credit-card-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="credit-card-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="credit-card-calculator-footer-categories" aria-labelledby="credit-card-calculator-footer-categories-heading">
+        <h2 id="credit-card-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="credit-card-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="credit-card-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="credit-card-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="credit-card-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="credit-card-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="credit-card-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="credit-card-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="credit-card-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="credit-card-calculator-footer-company" aria-labelledby="credit-card-calculator-footer-company-heading">
+        <h2 id="credit-card-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="credit-card-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="credit-card-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="credit-card-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="credit-card-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="credit-card-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="credit-card-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="credit-card-calculator-footer-bottom" class="border-t border-line">
+      <p id="credit-card-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="credit-card-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Credit card payoff. Interest each month = balance x APR / 12 (cards accrue daily on the
+  // average daily balance; the monthly approximation is within a few cents per month).
+  // Each month: add interest, new charges and (every 12th month) the annual fee, then pay.
+  // "Pay off by" mode finds the smallest monthly payment (to the cent) that clears the debt
+  // in the target number of months, by bisection over the same simulation.
+  // Verified (scratchpad tests/cc.test.js): with no charges or fee the simulation matches the
+  // closed forms n = -ln(1 - rB/P) / ln(1 + r) and P = rB / (1 - (1 + r)^-n):
+  //   $8,000 at 18%, $200/month -> 62 months (closed form 61.54), total interest $4,308.98;
+  //   $8,000 at 18% in 24 months -> $399.40/month (closed form $399.39, rounded up to the cent);
+  //   $3,000 at 0%, $250/month -> 12 months, $0 interest; payment at or below the first
+  //   month's interest is reported as never paying off.
+  var MAX_MONTHS = 600;
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 });
+  var monthName = new Intl.DateTimeFormat('en-US', { month: 'long', year: 'numeric' });
+
+  function num(id) {
+    var v = parseFloat(document.getElementById(id).value);
+    return isNaN(v) ? NaN : v;
+  }
+
+  function simulate(balance, apr, payment, charges, fee, keepRows) {
+    var r = apr / 12, bal = balance, interestTotal = 0, paidTotal = 0, rows = [];
+    for (var m = 1; m <= MAX_MONTHS; m++) {
+      var interest = bal * r;
+      bal += interest + charges + (m % 12 === 0 ? fee : 0);
+      var pay = Math.min(payment, bal);
+      bal -= pay;
+      interestTotal += interest;
+      paidTotal += pay;
+      if (keepRows) rows.push({ month: m, payment: pay, interest: interest, balance: Math.max(bal, 0) });
+      if (bal <= 0.005) return { months: m, interest: interestTotal, paid: paidTotal, rows: rows, paidOff: true };
+    }
+    return { months: MAX_MONTHS, interest: interestTotal, paid: paidTotal, rows: rows, paidOff: false };
+  }
+
+  function paymentFor(balance, apr, months, charges, fee) {
+    var r = apr / 12;
+    var lo = 0, hi = (balance + (charges + fee) * months) * Math.pow(1 + r, months) + 1;
+    for (var i = 0; i < 200; i++) {
+      var mid = (lo + hi) / 2;
+      var s = simulate(balance, apr, mid, charges, fee, false);
+      if (s.paidOff && s.months <= months) hi = mid; else lo = mid;
+    }
+    var p = Math.ceil(hi * 100 - 1e-6) / 100;
+    var check = simulate(balance, apr, p, charges, fee, false);
+    if (!(check.paidOff && check.months <= months)) p += 0.01;
+    return p;
+  }
+
+  function duration(months) {
+    var y = Math.floor(months / 12), m = months % 12, parts = [];
+    if (y) parts.push(y + (y === 1 ? ' year' : ' years'));
+    if (m || !y) parts.push(m + (m === 1 ? ' month' : ' months'));
+    return parts.join(' ');
+  }
+
+  function set(id, text) { document.getElementById(id).textContent = text; }
+
+  function clearResults(message) {
+    ['ccPrimary', 'ccInterest', 'ccTotal', 'ccDate'].forEach(function (id) { set(id, '–'); });
+    set('ccPrimaryNote', message || '');
+    document.getElementById('ccSchedule').innerHTML = '';
+  }
+
+  function update() {
+    var mode = document.getElementById('ccMode').value;
+    document.getElementById('ccPaymentField').hidden = mode !== 'payment';
+    document.getElementById('ccMonthsField').hidden = mode !== 'months';
+
+    var balance = num('ccBalance'), apr = num('ccRate'), payment = num('ccPayment'),
+        months = Math.round(num('ccMonths')), charges = num('ccCharges'), fee = num('ccFee');
+    if (isNaN(charges)) charges = 0;
+    if (isNaN(fee)) fee = 0;
+    var error = document.getElementById('ccError');
+    var bad = isNaN(balance) || isNaN(apr) || balance <= 0 || apr < 0 || apr > 100 || charges < 0 || fee < 0 ||
+              (mode === 'payment' && (isNaN(payment) || payment <= 0)) ||
+              (mode === 'months' && (isNaN(months) || months < 1 || months > MAX_MONTHS));
+    error.hidden = !bad;
+    if (bad) {
+      error.textContent = mode === 'payment'
+        ? 'Enter a balance above $0, an APR from 0 to 100% and a monthly payment above $0. Charges and fees cannot be negative.'
+        : 'Enter a balance above $0, an APR from 0 to 100% and a payoff goal of 1 to 600 months. Charges and fees cannot be negative.';
+      clearResults('');
+      return;
+    }
+    apr = apr / 100;
+    if (mode === 'months') payment = paymentFor(balance, apr, months, charges, fee);
+
+    var s = simulate(balance, apr, payment, charges, fee, true);
+    if (!s.paidOff) {
+      error.hidden = false;
+      error.textContent = 'At ' + money.format(payment) + ' a month the balance is not paid off within 50 years. ' +
+        'The first month adds about ' + money.format(balance * apr / 12 + charges) + ' in interest and new charges, so pay more than that.';
+      clearResults('');
+      return;
+    }
+    if (mode === 'months') {
+      set('ccPrimaryLabel', 'Monthly payment needed');
+      set('ccPrimary', money.format(payment));
+      set('ccPrimaryNote', 'Pays off in ' + duration(s.months) + '.');
+    } else {
+      set('ccPrimaryLabel', 'Time to pay off');
+      set('ccPrimary', duration(s.months));
+      set('ccPrimaryNote', s.months + (s.months === 1 ? ' payment' : ' payments') + '.');
+    }
+    set('ccInterest', money.format(s.interest));
+    set('ccTotal', money.format(s.paid));
+    var now = new Date();
+    set('ccDate', monthName.format(new Date(now.getFullYear(), now.getMonth() + s.months, 1)));
+    document.getElementById('ccSchedule').innerHTML = s.rows.map(function (row) {
+      return '<tr><td>' + row.month + '</td><td>' + money.format(row.payment) + '</td><td>' +
+             money.format(row.interest) + '</td><td>' + money.format(row.balance) + '</td></tr>';
+    }).join('');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('ccForm');
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

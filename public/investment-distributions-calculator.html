@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="en" id="investment-distributions-calculator-document" data-page-slug="investment-distributions-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Investment Distributions Calculator: Withdrawal Schedule</title>
+  <meta name="description" content="Plan withdrawals from a portfolio by fixed dollar amount, fixed percent or IRS required minimum, and see the balance path year by year.">
+  <link rel="canonical" href="https://company-marketcap.github.io/investment-distributions-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Investment Distributions Calculator: Withdrawal Schedule">
+  <meta property="og:description" content="Plan withdrawals from a portfolio by fixed dollar amount, fixed percent or IRS required minimum, and see the balance path year by year.">
+  <meta property="og:url" content="https://company-marketcap.github.io/investment-distributions-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Investment Distributions Calculator", "url": "https://company-marketcap.github.io/investment-distributions-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Plan withdrawals from a portfolio by fixed dollar amount, fixed percent or IRS required minimum, and see the balance path year by year."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Investment Returns & Growth", "item": "https://company-marketcap.github.io/financial-calculators.html#investment-calculators"}, {"@type": "ListItem", "position": 4, "name": "Investment Distributions Calculator", "item": "https://company-marketcap.github.io/investment-distributions-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How does an investment distributions calculator work?", "acceptedAnswer": {"@type": "Answer", "text": "It starts with your balance, grows it at your expected rate of return, and subtracts each withdrawal on the schedule you choose. It then reports either the largest withdrawal that lasts for your chosen number of years, or how many years a withdrawal you set will last."}}, {"@type": "Question", "name": "What is the difference between maximum withdrawal and years the balance will last?", "acceptedAnswer": {"@type": "Answer", "text": "Maximum withdrawal solves for the biggest periodic amount that uses your balance up exactly at the end of the years you enter. Years balance will last takes the amount you want to withdraw and tells you when the money runs out."}}, {"@type": "Question", "name": "Does the calculator withdraw at the start or end of each period?", "acceptedAnswer": {"@type": "Answer", "text": "Withdrawals come out at the beginning of each period, before that period's growth is earned. This is the more conservative assumption, so your result is slightly lower than an end-of-period model."}}, {"@type": "Question", "name": "How should I choose a rate of return?", "acceptedAnswer": {"@type": "Answer", "text": "Use a rate your actual mix of stocks, bonds and cash could plausibly earn after fees. Run a lower rate next to it, because returns vary and a single constant rate hides the risk of poor early years."}}, {"@type": "Question", "name": "Why add an inflation adjustment to my withdrawals?", "acceptedAnswer": {"@type": "Answer", "text": "Prices rise over time, so a fixed withdrawal buys less each year. Raising the withdrawal for inflation keeps your spending power steady but drains the balance faster."}}, {"@type": "Question", "name": "Are my withdrawals taxed?", "acceptedAnswer": {"@type": "Answer", "text": "Withdrawals from pretax accounts such as a traditional IRA or 401(k) are taxed as ordinary income, while Roth withdrawals generally are not. The after-tax figure uses the federal marginal rate you enter and ignores state tax."}}, {"@type": "Question", "name": "What happens if my balance runs out before the years I entered?", "acceptedAnswer": {"@type": "Answer", "text": "In years-balance-will-last mode the calculator reports the number of years and months until the balance cannot cover another withdrawal. Lower the withdrawal or raise the return to extend it."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="investment-distributions-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="investment-distributions-calculator" data-page-type="calculator">
+  <a id="investment-distributions-calculator-skip-link" href="#investment-distributions-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="investment-distributions-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="investment-distributions-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="investment-distributions-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="investment-distributions-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="investment-distributions-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="investment-distributions-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="investment-distributions-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="investment-distributions-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="investment-distributions-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="investment-distributions-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="investment-distributions-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="investment-distributions-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="investment-distributions-calculator-header-search-status" aria-controls="investment-distributions-calculator-header-search-results" data-search-input="header">
+              <p id="investment-distributions-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="investment-distributions-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="investment-distributions-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="investment-distributions-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="investment-distributions-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="investment-distributions-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="investment-distributions-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="investment-distributions-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="investment-distributions-calculator-mobile-search-status" aria-controls="investment-distributions-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="investment-distributions-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="investment-distributions-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="investment-distributions-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="investment-distributions-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="investment-distributions-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="investment-distributions-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="investment-distributions-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="investment-distributions-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="investment-distributions-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="investment-distributions-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="investment-distributions-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="investment-distributions-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="investment-distributions-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="investment-distributions-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="investment-distributions-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="investment-distributions-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="investment-distributions-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="investment-distributions-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="investment-distributions-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="investment-distributions-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="investment-distributions-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="investment-distributions-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="investment-distributions-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="investment-distributions-calculator-sidebar-search-status" aria-controls="investment-distributions-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="investment-distributions-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="investment-distributions-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="investment-distributions-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="investment-distributions-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="investment-distributions-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="investment-distributions-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="investment-distributions-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="investment-distributions-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="investment-distributions-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="investment-distributions-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="investment-distributions-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="investment-distributions-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="investment-distributions-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="investment-distributions-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="investment-distributions-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="investment-distributions-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="investment-distributions-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="investment-distributions-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="investment-distributions-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators" aria-current="true">Investment Returns</a></li><li><a id="investment-distributions-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="investment-distributions-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="investment-distributions-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="investment-distributions-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="investment-distributions-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="investment-distributions-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="investment-distributions-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="investment-distributions-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="investment-distributions-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="investment-distributions-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="investment-distributions-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="investment-distributions-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="investment-distributions-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="investment-distributions-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="investment-distributions-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="investment-distributions-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="investment-distributions-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="investment-distributions-calculator" data-calculator-slug="investment-distributions-calculator" data-sub-category-slug="investment-calculators">
+      <aside id="investment-distributions-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="investment-distributions-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="investment-distributions-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="investment-distributions-calculator-ad-top-leaderboard">
+            <ins id="investment-distributions-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("investment-distributions-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="investment-distributions-calculator-intro-area" class="space-y-4">
+        <nav id="investment-distributions-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="investment-distributions-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="investment-distributions-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="investment-distributions-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="investment-distributions-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#investment-calculators" itemprop="item"><span itemprop="name">Investment Returns &amp; Growth</span></a><meta itemprop="position" content="3"></li>
+            <li id="investment-distributions-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Investment Distributions Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/investment-distributions-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="investment-distributions-calculator-hero-section" aria-labelledby="investment-distributions-calculator-hero-heading" data-section="hero">
+          <h1 id="investment-distributions-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Investment Distributions Calculator</h1>
+          <p id="investment-distributions-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Wondering how long your nest egg can fund the life you want? This investment distributions calculator shows how long your savings will last when you take regular withdrawals, and what balance is left when the last one is paid. Enter a starting amount, a rate of return and the size of each withdrawal, and you get a year-by-year picture of your investment income instead of a guess. <!-- SILO_START:slot_a -->Pair this with the <a class="silo-link" href="/investment-loan-calculator.html">investment loan calculator online</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="investment-distributions-calculator-tool" class="space-y-6" data-page-slug="investment-distributions-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="dxFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="dxForm" class="space-y-5" novalidate aria-labelledby="dxFormHeading">
+      <h2 id="dxFormHeading" class="panel-heading">Set up the distributions</h2>
+      <div class="form-row form-row-2">
+        <div><label for="dxBalance" class="form-label">Starting balance</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="dxBalance" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1000" value="500000" inputmode="decimal"></div></div>
+        <div><label for="dxRate" class="form-label">Annual return</label><div class="input-group"><input type="number" id="dxRate" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="-50" max="30" step="0.1" value="5" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">Assumed steady average; can be negative.</p></div>
+      </div>
+      <fieldset class="form-fieldset"><legend class="form-legend">Distribution method</legend><div class="form-choice-group"><label class="form-choice"><input type="radio" name="dxMethod" id="dxMethodAmount" class="form-choice-input" value="amount" checked><span class="form-choice-text">Fixed dollar amount</span></label><label class="form-choice"><input type="radio" name="dxMethod" id="dxMethodPercent" class="form-choice-input" value="percent"><span class="form-choice-text">Fixed percent of the balance</span></label><label class="form-choice"><input type="radio" name="dxMethod" id="dxMethodRmd" class="form-choice-input" value="rmd"><span class="form-choice-text">Required minimum (IRS table)</span></label></div></fieldset>
+      <div class="form-row form-row-2">
+        <div id="dxAmountBox"><label for="dxAmount" class="form-label">Amount each period</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="dxAmount" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="2500" inputmode="decimal"></div></div>
+        <div id="dxPercentBox"><label for="dxPercent" class="form-label">Yearly rate of the balance</label><div class="input-group"><input type="number" id="dxPercent" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="0.1" value="4" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">Recalculated on each January balance.</p></div>
+        <div><label for="dxFreq" class="form-label">How often</label><select id="dxFreq" class="form-select"><option value="12" selected>Monthly</option><option value="4">Quarterly</option><option value="1">Annually</option></select><p class="form-hint">Taken at the start of each period.</p></div>
+      </div>
+      <div class="form-row form-row-2">
+        <div><label for="dxAge" class="form-label">Age in the first year</label><div class="input-group"><input type="number" id="dxAge" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="120" step="1" value="65" inputmode="numeric"><span class="input-affix">yrs</span></div></div>
+        <div><label for="dxYears" class="form-label">Years to show</label><div class="input-group"><input type="number" id="dxYears" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1" max="60" step="1" value="30" inputmode="numeric"><span class="input-affix">yrs</span></div></div>
+      </div>
+      <div id="dxRmdBox" hidden><label for="dxRmdStart" class="form-label">Required distributions begin at</label><select id="dxRmdStart" class="form-select"><option value="73" selected>Age 73 (born 1951 to 1959)</option><option value="75">Age 75 (born 1960 or later)</option></select><p class="form-hint">Each year's amount is the January balance divided by the IRS Uniform Lifetime Table factor for that age (Pub. 590-B, used for 2026).</p></div>
+      <div id="dxInflBox" class="space-y-3">
+        <label class="form-choice"><input type="checkbox" id="dxAdjust" class="form-choice-input"><span class="form-choice-text">Raise the amount with inflation each year</span></label>
+        <div><label for="dxInflation" class="form-label">Inflation rate</label><div class="input-group"><input type="number" id="dxInflation" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="20" step="0.1" value="2.5" inputmode="decimal"><span class="input-affix">%</span></div></div>
+      </div>
+      <p id="dxError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="dxResults" aria-live="polite" aria-labelledby="dxResultsHeading">
+      <h2 id="dxResultsHeading" class="panel-heading">Your distributions</h2>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p class="stat-label">Distributions in year 1</p><p id="dxFirstYear" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Total distributed</p><p id="dxTotal" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Balance at the end</p><p id="dxEndBalance" class="stat-value">–</p></div>
+      </div>
+      <div class="mt-5">
+        <div class="result-row"><span class="result-term">First-year payment</span><span id="dxFirstPeriod" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Share of the balance drawn in year 1</span><span id="dxRateDrawn" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Total investment growth</span><span id="dxGrowthTotal" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">How long it lasts</span><span id="dxLasts" class="result-value">–</span></div>
+      </div>
+      <p id="dxNote" class="callout callout-note mt-5" hidden></p>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="dxScheduleHeading" data-section="schedule">
+  <h2 id="dxScheduleHeading" class="panel-heading">Year-by-year distribution schedule</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">The balance path under the chosen method. The rate column shows how much of each January balance was paid out that year.</p>
+  <div class="table-scroll mt-5 max-h-[520px]" tabindex="0" role="region" aria-labelledby="dxScheduleHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Year</th><th scope="col">Age</th><th scope="col">Starting balance</th><th scope="col">Distributions</th><th scope="col">Rate</th><th scope="col">Growth</th><th scope="col">Ending balance</th></tr></thead>
+      <tbody id="dxSchedule"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="investment-distributions-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="investment-distributions-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Wondering how long your nest egg can fund the life you want? This investment distributions calculator shows how long your savings will last when you take regular withdrawals, and what balance is left when the last one is paid. Enter a starting amount, a rate of return and the size of each withdrawal, and you get a year-by-year picture of your investment income instead of a guess. <!-- SILO_START:slot_a_m -->Pair this with the <a class="silo-link" href="/investment-loan-calculator.html">investment loan calculator online</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="investment-distributions-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="investment-distributions-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="investment-distributions-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="investment-distributions-calculator-ad-in-feed">
+            <ins id="investment-distributions-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("investment-distributions-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="investment-distributions-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="investment-distributions-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-distributions-calculator-guide-heading-1">
+<h2 id="investment-distributions-calculator-guide-heading-1">How a Savings Distribution Calculator Works</h2>
+<p>A <strong>savings distribution calculator</strong> runs a simple loop. Each period it subtracts your withdrawal from the account, then lets the remaining balance earn interest until the next withdrawal. Repeat that for every period you plan to draw money out, and the final number is what your account still holds. If the balance reaches zero early, the same loop tells you the month your money ran out. <!-- SILO_START:slot_b -->The <a class="silo-link" href="/sector-balance.html">free portfolio sector balance calculator</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_b --></p>
+<p>Because the loop starts with a withdrawal, the first payment comes out before any growth is earned. That is the conservative way to model <strong>retirement savings</strong>, and it is how most planning tools treat the timing of a distribution.</p>
+
+<h3>Starting amount and rate of return</h3>
+<p>Your <strong>starting amount</strong> is the balance you hold today across the accounts you plan to draw from: brokerage, IRA, 401(k) or savings accounts. The <strong>rate of return</strong> is the average annual growth you expect on that money. A cash-heavy account earns a modest rate, while a stock-heavy one has historically earned more but swings widely from year to year, so it is wise to test several rates rather than trusting one.</p>
+
+<h3>Years of withdrawals and frequency of withdrawals</h3>
+<p>Enter the <strong>years of withdrawals</strong> you want to cover, such as the 25 years between ages 65 and 90. Then pick the <strong>frequency of withdrawals</strong>: monthly, quarterly or annually. Monthly payouts mimic a paycheck, but a quarterly or annual payout leaves more money invested between draws.</p>
+        </section>
+        <section id="investment-distributions-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-distributions-calculator-guide-heading-2">
+<h2 id="investment-distributions-calculator-guide-heading-2">The Formula Behind a Retirement Distribution Calculator</h2>
+<p>Every <strong>retirement distribution calculator</strong> rests on the same recurrence. With a balance \(B\), a periodic withdrawal \(W\) and a periodic interest rate \(i\), the balance after each period is: <!-- SILO_START:slot_c -->Next, open the <a class="silo-link" href="/investment-income-calculator.html">free investment income calculator</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_c --></p>
+<p>$$B_{n} = (B_{n-1} - W) \times (1 + i)$$</p>
+<p>The periodic rate \(i\) is the annual rate divided by the number of withdrawals per year, so a 4.2% annual rate paid monthly gives \(i = 0.042 \div 12 = 0.0035\). When the interest is <strong>compounded</strong> on the same schedule as your withdrawals, this one line is all you need.</p>
+
+<h3>Balance after each periodic withdrawal</h3>
+<p>Start with \(B_0\) equal to your starting balance. After the first <strong>periodic withdrawal</strong> the balance drops by \(W\), then grows by \(i\). Stack 300 of those steps and you have a 25-year plan. Raising \(W\) pulls the balance down faster, and a higher \(i\) slows the decline.</p>
+
+<h3>Solving for how long will my money last</h3>
+<p>To answer <strong>how long will my money last</strong>, keep running the loop until the balance would go negative. The count of completed periods is your answer. A distribution that only earns what it withdraws, where \(W = B \times i\), never runs out, which is the idea behind living on <strong>yield</strong> alone.</p>
+        </section>
+        <section id="investment-distributions-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-distributions-calculator-guide-heading-3">
+<h2 id="investment-distributions-calculator-guide-heading-3">Worked Example: A $612,500 Plan in the Investment Distributions Calculator</h2>
+<p>Suppose you hold a <strong>$612,500</strong> portfolio, expect a <strong>4.2%</strong> annual return, and want <strong>$2,950</strong> every month for <strong>25 years</strong>. Running the loop for 300 months gives these checkpoints for your savings balance:</p>
+<table>
+<thead><tr><th>Year</th><th>Balance at year end</th><th>Withdrawn so far</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>$602,510</td><td>$35,400</td></tr>
+<tr><td>5</td><td>$558,087</td><td>$177,000</td></tr>
+<tr><td>10</td><td>$490,983</td><td>$354,000</td></tr>
+<tr><td>15</td><td>$408,229</td><td>$531,000</td></tr>
+<tr><td>20</td><td>$306,174</td><td>$708,000</td></tr>
+<tr><td>25</td><td>$180,318</td><td>$885,000</td></tr>
+</tbody>
+</table>
+<p>You withdraw <strong>$885,000</strong> in total, which is $272,500 more than you started with, and still hold <strong>$180,318</strong> at the end. The difference is the interest your balance earned along the way: about $452,818.</p>
+
+<h3>Reading the results</h3>
+<p>The balance falls slowly at first because interest replaces most of what you take out, then faster as the principal shrinks and there is less to earn on. That curve is why a plan that looks comfortable at year 10 can feel tight at year 22.</p>
+
+<h3>What changes if returns or withdrawals shift</h3>
+<p>Small changes matter. Raise the monthly withdrawal to $3,400 and the money lasts 283 months, about 23 years and 7 months. Raise it to $3,800 and it lasts 236 months, just under 20 years. Cut the return from 4.2% to 3% with the original $2,950 and the account runs dry after 292 months, roughly 24 years and 4 months, while a 6% return leaves $680,240 after 25 years.</p>
+        </section>
+        <section id="investment-distributions-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-distributions-calculator-guide-heading-4">
+<h2 id="investment-distributions-calculator-guide-heading-4">Bridging Eight Years to Social Security With a Savings Distribution Calculator</h2>
+<p>Marisol Okafor, 62, has just retired and plans to delay Social Security until 70, because each year of delay past full retirement age raises the benefit by roughly 8%. That leaves eight years to cover. Her household needs $60,000 a year from her rollover accounts, which hold <strong>$437,820</strong>.</p>
+<p>She enters a starting amount of $437,820, a <strong>3.6%</strong> annual return, <strong>8 years</strong> of withdrawals and a quarterly withdrawal of <strong>$15,000</strong>, matching the quarterly estimated-tax rhythm she already follows. The tool runs 32 quarterly withdrawals and returns an ending balance of <strong>$24,813</strong>, with $480,000 paid out in total.</p>
+<p>The number she cares about is not the ending balance but whether it stays positive. It does, though a $24,813 cushion is thin. Her next move is a stress test: she changes only the return to 2.0%. This time the balance cannot fund the 32nd withdrawal and runs out after 31 quarters, one payment short of her 70th birthday.</p>
+<p>That result gives her a concrete decision. Rather than lowering her spending, she keeps $15,000 as the base case but earmarks a $20,000 cash reserve outside the rollover to cover the final quarter if returns disappoint. She also saves both runs, 3.6% and 2.0%, so she can compare them against her actual statements each January and adjust before the gap grows.</p>
+        </section>
+        <section id="investment-distributions-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-distributions-calculator-guide-heading-5">
+<h2 id="investment-distributions-calculator-guide-heading-5">Reading Your Results Like an Investment Income Calculator</h2>
+<p>An <strong>investment income calculator</strong> and a distribution tool answer two sides of the same question. One asks what income a given amount can produce, the other asks how long that income can be paid. Look at three outputs together: the ending balance, the total withdrawn and the month the balance hits zero, if it does.</p>
+<ol>
+<li>Check whether the balance reaches zero before your last planned year.</li>
+<li>Compare total withdrawals with your starting amount to see how much came from growth.</li>
+<li>Re-run with a lower return to see how fragile the plan is.</li>
+</ol>
+        </section>
+        <section id="investment-distributions-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-distributions-calculator-guide-heading-6">
+<h2 id="investment-distributions-calculator-guide-heading-6">Choosing Monthly, Quarterly or Annual Withdrawals</h2>
+<p>Withdrawing <strong>monthly</strong> matches how bills arrive, while <strong>quarterly</strong> and <strong>annually</strong> schedules keep more money invested for longer. Over 25 years the gap between them is modest compared with the effect of the withdrawal amount, but it grows when the rate of return is high. Match the schedule to your real spending, then use the calculator to see what the choice costs across all your investments.</p>
+<aside><p><strong>Tip:</strong> if you take a lump sum once a year, set the frequency to annually so the calculator doesn't assume money leaves your account every month.</p></aside>
+        </section>
+        <section id="investment-distributions-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-distributions-calculator-guide-heading-7">
+<h2 id="investment-distributions-calculator-guide-heading-7">Retirement Income Calculator Inputs That Move the Outcome</h2>
+<p>A <strong>retirement income calculator</strong> has only a handful of dials, and they do not matter equally. The withdrawal amount and the rate of return dominate, while the number of years mostly decides how long you must be right about both.</p>
+
+<h3>Rate of return, annual rate of return and yield</h3>
+<p>Use an <strong>annual rate of return</strong> that your actual mix could plausibly earn, after fees. Do not confuse total return with <strong>yield</strong>: tax-free municipal investments and a bond fund may yield 4% in income and still lose value if rates rise, so the balance can fall even while dividends arrive.</p>
+
+<h3>Annual withdrawal increases and the investment amount</h3>
+<p>Prices rise, so many retirees raise their withdrawal each year. If you do, test it. Adding a 2% yearly raise to the example above drains the same $612,500 <strong>investment amount</strong> in 264 months, about 22 years, instead of lasting the full 25.</p>
+        </section>
+        <section id="investment-distributions-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-distributions-calculator-guide-heading-8">
+<h2 id="investment-distributions-calculator-guide-heading-8">Taxes on Systematic Withdrawals</h2>
+<p>Pretax money in a traditional IRA or 401(k) is taxed as ordinary income when it comes out, so a $2,950 withdrawal does not mean $2,950 to spend. Roth money, and the basis in a taxable account, behave differently, and each tax treatment changes how long your investments last. Before relying on the output, decide whether it shows gross or after-<strong>tax</strong> withdrawals and set your marginal tax bracket accordingly.</p>
+
+<h3>IRA rules and required minimum distributions</h3>
+<p>An <strong>IRA</strong> owner must eventually start taking an <strong>RMD</strong>, a required minimum distribution set by age and account balance. Inherited accounts follow separate RMD rules. If your planned withdrawals are smaller than the RMD, the tax authority still expects the larger amount, so check both numbers. Plan the tax bill too: a withdrawal that pushes your income into a higher tax bracket costs more than the same cash taken a year earlier, and state tax rules add another layer.</p>
+        </section>
+        <section id="investment-distributions-calculator-guide-section-9" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-distributions-calculator-guide-heading-9">
+<h2 id="investment-distributions-calculator-guide-heading-9">Asset Mix and Portfolio Choices Behind Your Distributions</h2>
+<p>Your <strong>asset mix</strong> decides which rate of return is realistic. A portfolio that holds mostly bonds and cash can support a lower, steadier distribution, while a stock-heavy asset mix may earn more but with larger swings. Revisit your asset mix every year and rebalance, because withdrawals taken from one holding quietly change the weights of the rest.</p>
+
+<h3>Stocks, bonds and cash</h3>
+<p>Many retirees keep one or two years of spending in <strong>cash</strong>, a core of <strong>bonds</strong> for stability and a slice of <strong>stocks</strong> for growth. A stock index such as the <strong>S&P 500</strong> has rewarded patient holders over long periods, yet it has also fallen sharply in single years, which is why the cash buffer exists. In the calculator, this choice shows up in the rate you enter: a cash-heavy mix argues for a low rate such as 3%, while a stock-heavy mix supports something nearer the 6% case in the worked example.</p>
+
+<h3>A diversified portfolio and mutual fund costs</h3>
+<p>A <strong>diversified</strong> portfolio spreads risk across many holdings, often through a low-cost <strong>mutual fund</strong> or index fund. Watch <strong>fees</strong>: a 1% annual expense reduces a 4.2% gross return to 3.2%, and as the 3% case above shows, that gap can cost years of income.</p>
+        </section>
+        <section id="investment-distributions-calculator-guide-section-10" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-distributions-calculator-guide-heading-10">
+<h2 id="investment-distributions-calculator-guide-heading-10">Sequence of Returns Pressure on Your Retirement Income</h2>
+<p>The biggest threat is the order of returns. A market drop early in retirement hurts more than the same drop late, because you sell shares at low prices to fund withdrawals. That is real <strong>volatility</strong> and a genuine <strong>risk</strong> of <strong>loss of principal</strong> that a fixed-rate calculator smooths over. The calculator applies one constant rate every period, so it hides this problem. Treat the output as one scenario, not a promise, and run a pessimistic case next to it, as the 3% case in the worked example above shows.</p>
+        </section>
+        <section id="investment-distributions-calculator-guide-section-11" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-distributions-calculator-guide-heading-11">
+<h2 id="investment-distributions-calculator-guide-heading-11">Building a Retirement Budget Around Your Income Sources</h2>
+<p>Start with a <strong>retirement budget</strong>: list your <strong>retirement expenses</strong>, split them into essentials and extras, then list your <strong>income sources</strong> such as Social Security, a pension and part-time work. Whatever gap remains is the amount your portfolio must distribute. Plug that gap in as the withdrawal, and the calculator tells you whether the portfolio can carry it.</p>
+        </section>
+        <section id="investment-distributions-calculator-guide-section-12" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-distributions-calculator-guide-heading-12">
+<h2 id="investment-distributions-calculator-guide-heading-12">Investment Calculators, Your Results and Financial Advice</h2>
+<p>Online <strong>investment calculators</strong> are good at arithmetic and poor at judgment. They cannot know your health, your taxes or your <strong>financial strategy</strong> for leaving money to heirs. Take your ending balance and the month your money runs out to a qualified advisor as the starting point for questions, and ask for personal <strong>advice</strong> before you commit to a withdrawal rate, especially when <strong>planning</strong> a decade or more ahead.</p>
+        </section>
+        <section id="investment-distributions-calculator-guide-section-13" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-distributions-calculator-guide-heading-13">
+<h2 id="investment-distributions-calculator-guide-heading-13">Limits of a Hypothetical Distribution Calculator</h2>
+<p>Any <strong>distribution calculator</strong> works with a <strong>hypothetical</strong> constant return, a fixed schedule and no surprise costs. Real markets do not behave that way, so every result is a hypothetical illustration rather than a forecast. Past performance does not guarantee future results, and accounts differ: savings accounts pay little but carry almost no risk, while higher-yielding investments can lose value. Treat the output as a starting point for planning, then review it each year as your account balance and your life change.</p>
+        </section>
+      </div>
+
+      <section id="investment-distributions-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="investment-distributions-calculator-faq-heading" data-section="faq">
+        <h2 id="investment-distributions-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Investment Distributions Calculator questions</h2>
+        <div id="investment-distributions-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="investment-distributions-calculator-faq-1" class="faq-item" open><summary id="investment-distributions-calculator-faq-1-summary" class="faq-summary"><h3 id="investment-distributions-calculator-faq-1-question" class="faq-question">How does an investment distributions calculator work?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="investment-distributions-calculator-faq-1-answer" class="faq-answer"><p>It starts with your balance, grows it at your expected rate of return, and subtracts each withdrawal on the schedule you choose. It then reports either the largest withdrawal that lasts for your chosen number of years, or how many years a withdrawal you set will last.</p></div></details>
+          <details id="investment-distributions-calculator-faq-2" class="faq-item" open><summary id="investment-distributions-calculator-faq-2-summary" class="faq-summary"><h3 id="investment-distributions-calculator-faq-2-question" class="faq-question">What is the difference between maximum withdrawal and years the balance will last?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="investment-distributions-calculator-faq-2-answer" class="faq-answer"><p>Maximum withdrawal solves for the biggest periodic amount that uses your balance up exactly at the end of the years you enter. Years balance will last takes the amount you want to withdraw and tells you when the money runs out.</p></div></details>
+          <details id="investment-distributions-calculator-faq-3" class="faq-item" open><summary id="investment-distributions-calculator-faq-3-summary" class="faq-summary"><h3 id="investment-distributions-calculator-faq-3-question" class="faq-question">Does the calculator withdraw at the start or end of each period?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="investment-distributions-calculator-faq-3-answer" class="faq-answer"><p>Withdrawals come out at the beginning of each period, before that period&#x27;s growth is earned. This is the more conservative assumption, so your result is slightly lower than an end-of-period model.</p></div></details>
+          <details id="investment-distributions-calculator-faq-4" class="faq-item" open><summary id="investment-distributions-calculator-faq-4-summary" class="faq-summary"><h3 id="investment-distributions-calculator-faq-4-question" class="faq-question">How should I choose a rate of return?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="investment-distributions-calculator-faq-4-answer" class="faq-answer"><p>Use a rate your actual mix of stocks, bonds and cash could plausibly earn after fees. Run a lower rate next to it, because returns vary and a single constant rate hides the risk of poor early years.</p></div></details>
+          <details id="investment-distributions-calculator-faq-5" class="faq-item" open><summary id="investment-distributions-calculator-faq-5-summary" class="faq-summary"><h3 id="investment-distributions-calculator-faq-5-question" class="faq-question">Why add an inflation adjustment to my withdrawals?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="investment-distributions-calculator-faq-5-answer" class="faq-answer"><p>Prices rise over time, so a fixed withdrawal buys less each year. Raising the withdrawal for inflation keeps your spending power steady but drains the balance faster.</p></div></details>
+          <details id="investment-distributions-calculator-faq-6" class="faq-item" open><summary id="investment-distributions-calculator-faq-6-summary" class="faq-summary"><h3 id="investment-distributions-calculator-faq-6-question" class="faq-question">Are my withdrawals taxed?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="investment-distributions-calculator-faq-6-answer" class="faq-answer"><p>Withdrawals from pretax accounts such as a traditional IRA or 401(k) are taxed as ordinary income, while Roth withdrawals generally are not. The after-tax figure uses the federal marginal rate you enter and ignores state tax.</p></div></details>
+          <details id="investment-distributions-calculator-faq-7" class="faq-item" open><summary id="investment-distributions-calculator-faq-7-summary" class="faq-summary"><h3 id="investment-distributions-calculator-faq-7-question" class="faq-question">What happens if my balance runs out before the years I entered?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="investment-distributions-calculator-faq-7-answer" class="faq-answer"><p>In years-balance-will-last mode the calculator reports the number of years and months until the balance cannot cover another withdrawal. Lower the withdrawal or raise the return to extend it.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="investment-distributions-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="investment-distributions-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="investment-distributions-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="investment-distributions-calculator-ad-bottom-leaderboard">
+            <ins id="investment-distributions-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("investment-distributions-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="investment-distributions-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="investment-distributions-calculator-right-rail-top" class="mb-6">
+        <aside id="investment-distributions-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="investment-distributions-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="investment-distributions-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="investment-distributions-calculator-ad-right-rail-rectangle">
+            <ins id="investment-distributions-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("investment-distributions-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="investment-distributions-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="investment-distributions-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="investment-distributions-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="investment-distributions-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="investment-distributions-calculator-ad-right-rail-skyscraper">
+            <ins id="investment-distributions-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("investment-distributions-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="investment-distributions-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="investment-distributions-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="investment-distributions-calculator-footer-brand">
+        <a id="investment-distributions-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="investment-distributions-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="investment-distributions-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="investment-distributions-calculator-footer-categories" aria-labelledby="investment-distributions-calculator-footer-categories-heading">
+        <h2 id="investment-distributions-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="investment-distributions-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="investment-distributions-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="investment-distributions-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="investment-distributions-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="investment-distributions-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="investment-distributions-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="investment-distributions-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="investment-distributions-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="investment-distributions-calculator-footer-company" aria-labelledby="investment-distributions-calculator-footer-company-heading">
+        <h2 id="investment-distributions-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="investment-distributions-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="investment-distributions-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="investment-distributions-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="investment-distributions-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="investment-distributions-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="investment-distributions-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="investment-distributions-calculator-footer-bottom" class="border-t border-line">
+      <p id="investment-distributions-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="investment-distributions-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Investment distributions: a withdrawal schedule from one portfolio by one of three methods.
+  //   Growth: the annual return is applied monthly at the equivalent rate j = (1 + r)^(1/12) - 1.
+  //   Each distribution is taken at the start of its period (monthly, quarterly or yearly), then the
+  //   remaining balance grows; a distribution never exceeds the balance left.
+  //   Fixed amount: the same amount every period, optionally raised by inflation once a year.
+  //   Fixed percent: each year's total = start-of-year balance x percent, paid in equal parts.
+  //   Required minimum: each year's total = start-of-year balance / IRS Uniform Lifetime Table
+  //   divisor for the age reached that year (none before the chosen start age), paid in equal parts.
+  // Checked in Node (aq5/tests/dx.test.js): $500,000, 5%, $30,000 yearly for 10 years matches the
+  // closed form B0(1+r)^n - W(1+r)((1+r)^n - 1)/r = $425,215.25; 4% fixed yearly for 10 years =
+  // 500,000 x (0.96 x 1.05)^10 = $541,471.15 (balance never runs out); 0% return with $1,000 monthly
+  // from $10,000 runs out after 10 months; RMD at 73 on $300,000 = 300,000 / 26.5 = $11,320.75 and at
+  // 75 on $100,000 = $4,065.04 (same as the live RMD calculator); no RMD before the start age.
+  // ---- IRS required minimum distribution divisors -----------------------------------------
+  // Uniform Lifetime Table: IRS Publication 590-B (2025), Appendix B, Table III, in effect for
+  // distribution years 2022 and later, still used for 2026. Key = age reached in the year.
+  // Checked against the Pub. 590-B text. Ages 120 and over use 2.0.
+  var UNIFORM_TABLE = {
+    72: 27.4, 73: 26.5, 74: 25.5, 75: 24.6, 76: 23.7, 77: 22.9, 78: 22.0, 79: 21.1, 80: 20.2,
+    81: 19.4, 82: 18.5, 83: 17.7, 84: 16.8, 85: 16.0, 86: 15.2, 87: 14.4, 88: 13.7, 89: 12.9,
+    90: 12.2, 91: 11.5, 92: 10.8, 93: 10.1, 94: 9.5, 95: 8.9, 96: 8.4, 97: 7.8, 98: 7.3,
+    99: 6.8, 100: 6.4, 101: 6.0, 102: 5.6, 103: 5.2, 104: 4.9, 105: 4.6, 106: 4.3, 107: 4.1,
+    108: 3.9, 109: 3.7, 110: 3.5, 111: 3.4, 112: 3.3, 113: 3.1, 114: 3.0, 115: 2.9, 116: 2.8,
+    117: 2.7, 118: 2.5, 119: 2.3, 120: 2.0
+  };
+  // RMD start age (SECURE 2.0 Act): 73 if born 1951-1959, 75 if born 1960 or later.
+  // -------------------------------------------------------------------------------------------
+
+  // --- calc start
+  function divisor(age) {
+    if (age >= 120) return UNIFORM_TABLE[120];
+    return UNIFORM_TABLE[age] || 0;
+  }
+
+  // o: { balance, rate, method: 'amount'|'percent'|'rmd', amount, freq, percent, age, rmdStart,
+  //      years, inflation, adjust }
+  function schedule(o) {
+    var j = Math.pow(1 + o.rate, 1 / 12) - 1, step = 12 / o.freq;
+    var bal = o.balance, rows = [], total = 0, depleted = 0, perPeriod = o.amount;
+    for (var y = 1; y <= o.years; y++) {
+      var age = o.age + y - 1, start = bal, yearTotal = 0, div = 0, pay;
+      if (o.method === 'amount') {
+        pay = perPeriod;
+        if (o.adjust) perPeriod = perPeriod * (1 + o.inflation);
+      } else if (o.method === 'percent') {
+        pay = start * o.percent / o.freq;
+      } else {
+        div = age >= o.rmdStart ? divisor(age) : 0;
+        pay = div ? start / div / o.freq : 0;
+      }
+      var growth = 0;
+      for (var m = 0; m < 12; m++) {
+        if (m % step === 0) {
+          var w = Math.min(bal, pay);
+          bal -= w; yearTotal += w;
+        }
+        var g = bal * j;
+        bal += g; growth += g;
+      }
+      if (bal < 0.005) bal = 0;
+      total += yearTotal;
+      rows.push({ year: y, age: age, start: start, paid: yearTotal, growth: growth, end: bal, divisor: div });
+      if (!depleted && bal === 0 && start > 0 && yearTotal > 0) depleted = y;
+      if (bal === 0) break;
+    }
+    return { rows: rows, total: total, end: bal, depleted: depleted };
+  }
+  // --- calc end
+
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+  var OUTPUTS = ['dxFirstYear', 'dxTotal', 'dxEndBalance', 'dxLasts', 'dxFirstPeriod', 'dxRateDrawn', 'dxGrowthTotal'];
+
+  function num(id) {
+    var v = parseFloat(document.getElementById(id).value);
+    return isNaN(v) ? NaN : v;
+  }
+  function set(id, text) { document.getElementById(id).textContent = text; }
+  function method() {
+    var r = document.querySelector('input[name="dxMethod"]:checked');
+    return r ? r.value : 'amount';
+  }
+
+  function fail(msg) {
+    var error = document.getElementById('dxError');
+    error.hidden = false;
+    error.textContent = msg;
+    OUTPUTS.forEach(function (id) { set(id, '–'); });
+    document.getElementById('dxSchedule').innerHTML = '';
+    document.getElementById('dxNote').hidden = true;
+  }
+
+  function update() {
+    var m = method();
+    document.getElementById('dxAmountBox').hidden = m !== 'amount';
+    document.getElementById('dxPercentBox').hidden = m !== 'percent';
+    document.getElementById('dxRmdBox').hidden = m !== 'rmd';
+    document.getElementById('dxInflBox').hidden = m !== 'amount';
+    document.getElementById('dxError').hidden = true;
+
+    var o = {
+      balance: num('dxBalance'), rate: num('dxRate') / 100, method: m, amount: num('dxAmount'),
+      freq: parseInt(document.getElementById('dxFreq').value, 10), percent: num('dxPercent') / 100,
+      age: Math.round(num('dxAge')), rmdStart: parseInt(document.getElementById('dxRmdStart').value, 10),
+      years: Math.round(num('dxYears')), inflation: num('dxInflation') / 100,
+      adjust: document.getElementById('dxAdjust').checked
+    };
+    if ([o.balance, o.rate, o.age, o.years].some(isNaN) || o.balance < 0 || o.rate < -0.5 || o.rate > 0.3 ||
+        o.age < 0 || o.age > 120 || o.years < 1 || o.years > 60) {
+      return fail('Enter a non-negative balance, a return from -50% to 30%, an age from 0 to 120 and 1 to 60 years.');
+    }
+    if (m === 'amount' && (isNaN(o.amount) || o.amount < 0 || isNaN(o.inflation) || o.inflation < 0 || o.inflation > 0.2)) {
+      return fail('Enter a non-negative distribution amount and an inflation rate from 0% to 20%.');
+    }
+    if (m === 'percent' && (isNaN(o.percent) || o.percent < 0 || o.percent > 1)) {
+      return fail('Enter a yearly distribution rate from 0% to 100%.');
+    }
+    var r = schedule(o);
+    var first = r.rows[0], growthTotal = r.rows.reduce(function (a, row) { return a + row.growth; }, 0);
+    var periodName = { 12: 'month', 4: 'quarter', 1: 'year' }[o.freq];
+    set('dxFirstYear', money.format(first.paid));
+    set('dxFirstPeriod', first.paid > 0 ? money.format(first.paid / o.freq) + ' a ' + periodName : '$0');
+    set('dxTotal', money.format(r.total));
+    set('dxEndBalance', money.format(r.end));
+    set('dxGrowthTotal', money.format(growthTotal));
+    set('dxRateDrawn', first.start > 0 ? (first.paid / first.start * 100).toFixed(2) + '%' : '–');
+    set('dxLasts', o.balance === 0 ? '–' : r.depleted ? 'Runs out in year ' + r.depleted : 'Lasts all ' + o.years + ' years');
+    var note = document.getElementById('dxNote');
+    if (m === 'rmd' && first.paid === 0) {
+      note.hidden = false;
+      note.textContent = 'No required minimum applies until age ' + o.rmdStart + ', so the early years show no distributions.';
+    } else if (r.depleted) {
+      note.hidden = false;
+      note.textContent = 'At these assumptions the portfolio is used up in year ' + r.depleted +
+        (o.age ? ' (age ' + (o.age + r.depleted - 1) + ').' : '.');
+    } else {
+      note.hidden = true;
+    }
+    document.getElementById('dxSchedule').innerHTML = r.rows.map(function (row) {
+      var drawn = row.start > 0 ? (row.paid / row.start * 100).toFixed(2) + '%' : '–';
+      return '<tr><td>' + row.year + '</td><td>' + row.age + '</td><td>' + money.format(row.start) + '</td><td>' +
+             money.format(row.paid) + '</td><td>' + drawn + '</td><td>' + money.format(row.growth) + '</td><td>' +
+             money.format(row.end) + '</td></tr>';
+    }).join('');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('dxForm');
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

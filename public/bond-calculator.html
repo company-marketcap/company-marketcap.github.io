@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="en" id="bond-calculator-document" data-page-slug="bond-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bond Calculator: Price, Yield and Accrued Interest</title>
+  <meta name="description" content="Use this free bond calculator to calculate the price of bonds from yield, face value, coupon and maturity, then check accrued interest in seconds.">
+  <link rel="canonical" href="https://company-marketcap.github.io/bond-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Bond Calculator: Price, Yield and Accrued Interest">
+  <meta property="og:description" content="Use this free bond calculator to calculate the price of bonds from yield, face value, coupon and maturity, then check accrued interest in seconds.">
+  <meta property="og:url" content="https://company-marketcap.github.io/bond-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Bond Calculator", "url": "https://company-marketcap.github.io/bond-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Use this free bond calculator to calculate the price of bonds from yield, face value, coupon and maturity, then check accrued interest in seconds."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Bonds, CDs & Fixed Income", "item": "https://company-marketcap.github.io/financial-calculators.html#bond-cd-calculators"}, {"@type": "ListItem", "position": 4, "name": "Bond Calculator", "item": "https://company-marketcap.github.io/bond-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does a bond calculator tell you?", "acceptedAnswer": {"@type": "Answer", "text": "It discounts a bond's coupon payments and its face value at the market yield to give the bond's price today, and, when you add settlement and maturity dates, the clean price, dirty price and accrued interest."}}, {"@type": "Question", "name": "Why does a bond's price fall when yields rise?", "acceptedAnswer": {"@type": "Answer", "text": "The coupon is fixed, so a buyer who can earn a higher market yield elsewhere will only pay less for the same payments. The price drops until the bond's return matches the new yield."}}, {"@type": "Question", "name": "What is the difference between the clean price and the dirty price?", "acceptedAnswer": {"@type": "Answer", "text": "The clean price excludes interest that has built up since the last coupon payment. The dirty price, also called the invoice price, is the clean price plus accrued interest and is what the buyer actually pays."}}, {"@type": "Question", "name": "How is accrued interest calculated?", "acceptedAnswer": {"@type": "Answer", "text": "It is the annual coupon multiplied by the days since the last coupon payment, divided by the days in the year under the chosen day-count convention."}}, {"@type": "Question", "name": "Which day-count convention should you use?", "acceptedAnswer": {"@type": "Answer", "text": "30/360 is common for corporate and municipal bonds in the United States, Actual/Actual for Treasury securities, and Actual/360 or Actual/365 for money market instruments and some government bonds elsewhere. The accrued interest difference is usually small."}}, {"@type": "Question", "name": "Does the calculator work for savings bonds or zero-coupon bonds?", "acceptedAnswer": {"@type": "Answer", "text": "It is built for fixed-rate coupon bonds. For a zero-coupon bond, enter a coupon of 0 and the price is the discounted face value. Paper savings bonds follow a published Treasury schedule, so use the Treasury's savings bond calculator for those."}}, {"@type": "Question", "name": "Does the result include credit risk?", "acceptedAnswer": {"@type": "Answer", "text": "No. Credit quality, call and put options and supply and demand are not modeled; they only show up through the yield you enter."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="bond-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="bond-calculator" data-page-type="calculator">
+  <a id="bond-calculator-skip-link" href="#bond-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="bond-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="bond-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="bond-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="bond-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="bond-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="bond-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="bond-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="bond-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="bond-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="bond-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="bond-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="bond-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="bond-calculator-header-search-status" aria-controls="bond-calculator-header-search-results" data-search-input="header">
+              <p id="bond-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="bond-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="bond-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="bond-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="bond-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="bond-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="bond-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="bond-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="bond-calculator-mobile-search-status" aria-controls="bond-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="bond-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="bond-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="bond-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="bond-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="bond-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="bond-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="bond-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="bond-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="bond-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="bond-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="bond-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="bond-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="bond-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="bond-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="bond-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="bond-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="bond-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="bond-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="bond-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="bond-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="bond-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="bond-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="bond-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="bond-calculator-sidebar-search-status" aria-controls="bond-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="bond-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="bond-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="bond-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="bond-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="bond-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="bond-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="bond-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="bond-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="bond-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="bond-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="bond-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="bond-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="bond-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="bond-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="bond-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="bond-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="bond-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="bond-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="bond-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="bond-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="bond-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators" aria-current="true">Bonds &amp; CDs</a></li><li><a id="bond-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="bond-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="bond-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="bond-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="bond-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="bond-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="bond-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="bond-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="bond-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="bond-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="bond-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="bond-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="bond-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="bond-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="bond-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="bond-calculator" data-calculator-slug="bond-calculator" data-sub-category-slug="bond-cd-calculators">
+      <aside id="bond-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="bond-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="bond-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="bond-calculator-ad-top-leaderboard">
+            <ins id="bond-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("bond-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="bond-calculator-intro-area" class="space-y-4">
+        <nav id="bond-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="bond-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="bond-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="bond-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="bond-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#bond-cd-calculators" itemprop="item"><span itemprop="name">Bonds, CDs &amp; Fixed Income</span></a><meta itemprop="position" content="3"></li>
+            <li id="bond-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Bond Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/bond-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="bond-calculator-hero-section" aria-labelledby="bond-calculator-hero-heading" data-section="hero">
+          <h1 id="bond-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Bond Calculator: Price, Yield and Accrued Interest</h1>
+          <p id="bond-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Pricing a fixed-rate security by hand means discounting a dozen cash flows, so a bond calculator does the heavy lifting: you enter the face value, coupon rate, yield and years to maturity, and it returns what the bond is worth today along with its total return. Whether you plan to redeem it at maturity or sell early, the same few inputs describe the loan you are making and the income it pays before the coupon date arrives, while the results (price, current yield and accrued interest) show what it adds in savings to an investment portfolio. <!-- SILO_START:slot_a -->Try the <a class="silo-link" href="/cd-calculator.html">cd calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="bond-calculator-tool" class="space-y-6" data-page-slug="bond-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="bdFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="bdForm" class="space-y-5" novalidate aria-labelledby="bdFormHeading">
+      <h2 id="bdFormHeading" class="panel-heading">Enter the bond details</h2>
+      <div><label for="bdMode" class="form-label">What do you want to find?</label>
+        <select id="bdMode" class="form-select"><option value="price" selected>Price from a market yield</option><option value="yield">Yield to maturity from a price</option></select></div>
+      <div class="form-row form-row-2">
+        <div><label for="bdFace" class="form-label">Face value</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="bdFace" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="1000" inputmode="decimal"></div></div>
+        <div><label for="bdCoupon" class="form-label">Annual coupon rate</label><div class="input-group"><input type="number" id="bdCoupon" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="0.125" value="5" inputmode="decimal"><span class="input-affix">%</span></div></div>
+      </div>
+      <div class="form-row form-row-2">
+        <div><label for="bdYears" class="form-label">Years to maturity</label><div class="input-group"><input type="number" id="bdYears" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="0.5" value="10" inputmode="decimal"><span class="input-affix">yrs</span></div></div>
+        <div><label for="bdFreq" class="form-label">Coupon payments</label>
+        <select id="bdFreq" class="form-select"><option value="1">Annually</option><option value="2" selected>Semiannually</option><option value="4">Quarterly</option><option value="12">Monthly</option></select></div>
+      </div>
+      <div id="bdYieldField"><label for="bdYield" class="form-label">Market yield (yield to maturity)</label><div class="input-group"><input type="number" id="bdYield" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="-10" max="100" step="0.05" value="6" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">The annual return investors currently require on similar bonds.</p></div>
+      <div id="bdPriceField" hidden><label for="bdPrice" class="form-label">Bond price</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="bdPrice" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1" value="950" inputmode="decimal"></div><p class="form-hint">The price you would pay, without accrued interest.</p></div>
+      <p id="bdError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="bdResults" aria-live="polite" aria-labelledby="bdResultsHeading">
+      <h2 id="bdResultsHeading" class="panel-heading">Your results</h2>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p id="bdMainLabel" class="stat-label">Bond price</p><p id="bdMain" class="stat-value">–</p><p id="bdYearsNote" class="mt-1 text-xs text-ink-muted"></p></div>
+        <div class="stat-card"><p class="stat-label">Price per $100 of face</p><p id="bdPer100" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Current yield</p><p id="bdCurrent" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Each coupon payment</p><p id="bdCouponPay" class="stat-value">–</p></div>
+      </div>
+      <dl class="mt-5">
+        <div class="result-row"><dt class="result-term">Premium or discount</dt><dd id="bdStatus" class="result-value">–</dd></div>
+        <div class="result-row"><dt class="result-term">Macaulay duration</dt><dd id="bdMacaulay" class="result-value">–</dd></div>
+        <div class="result-row"><dt class="result-term">Modified duration</dt><dd id="bdModified" class="result-value">–</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="bdScheduleHeading" data-section="schedule">
+  <h2 id="bdScheduleHeading" class="panel-heading">Cash flow schedule</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">Every coupon payment, plus the face value at maturity, and what each is worth today at the yield.</p>
+  <div class="table-scroll mt-5 max-h-[520px]" tabindex="0" role="region" aria-labelledby="bdScheduleHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Payment</th><th scope="col">Years</th><th scope="col">Cash flow</th><th scope="col">Present value</th></tr></thead>
+      <tbody id="bdSchedule"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="bond-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="bond-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Pricing a fixed-rate security by hand means discounting a dozen cash flows, so a bond calculator does the heavy lifting: you enter the face value, coupon rate, yield and years to maturity, and it returns what the bond is worth today along with its total return. Whether you plan to redeem it at maturity or sell early, the same few inputs describe the loan you are making and the income it pays before the coupon date arrives, while the results (price, current yield and accrued interest) show what it adds in savings to an investment portfolio. <!-- SILO_START:slot_a_m -->Try the <a class="silo-link" href="/cd-calculator.html">cd calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="bond-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="bond-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="bond-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="bond-calculator-ad-in-feed">
+            <ins id="bond-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("bond-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="bond-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="bond-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="bond-calculator-guide-heading-1">
+<h2 id="bond-calculator-guide-heading-1">Bond Calculator Inputs: What Each Field Means</h2>
+<p>Every tool of this kind asks for the same building blocks, because a bond is simply a loan with a fixed schedule of payments. Knowing what each field represents makes the output far easier to trust. <!-- SILO_START:slot_b -->Try the <a class="silo-link" href="/cash-back-or-low-interest-calculator.html">cash back or low interest calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_b --></p>
+<ul>
+<li><strong>Face value</strong> (also called par value): the principal the issuer repays at maturity, and the base for every coupon payment.</li>
+<li><strong>Coupon rate</strong>: the annual percentage the borrower pays on the face value, not on what you paid.</li>
+<li><strong>Yield</strong>: the return the market currently demands, used as the discount rate in the price formula.</li>
+<li><strong>Time to maturity</strong>: how many years remain before the principal comes back, which sets the number of payments.</li>
+<li><strong>Coupon payment frequency</strong>: annual or semi-annual payments, which changes both the payment size and the discounting period.</li>
+</ul>
+<h3>Face Value and Par Value</h3>
+<p>The face value of most corporate and government issues is $1,000, though other denominations exist. Price is often quoted per $100 of par value, so a quote of 92.84 means $928.40 for a $1,000 note. The principal you receive back never changes, which is why a lower purchase price lifts an investor's total return.</p>
+<h3>Coupon Rate and Coupon Payment Frequency</h3>
+<p>A 4.35% coupon on $1,000 produces $43.50 of interest each year. Paid semi-annually, that becomes two payments of $21.75. The calculator needs the frequency because it divides both the coupon and the yield by the number of periods per year.</p>
+<h3>Time to Maturity and Maturity Date</h3>
+<p>Time to maturity runs from the settlement day to the maturity date. Longer terms mean more coupon payments and greater sensitivity to rate changes, a point that matters in the duration discussion further down.</p>
+        </section>
+        <section id="bond-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="bond-calculator-guide-heading-2">
+<h2 id="bond-calculator-guide-heading-2">How a Bond Pricing Calculator Works</h2>
+<p>A <strong>bond pricing calculator</strong> applies one idea: the price equals the present value of everything the issue will pay you. Each coupon and the final principal are discounted at the market yield for the number of periods until it is received. <!-- SILO_START:slot_c -->The <a class="silo-link" href="/investment-questionnaire-cash-fixed-income-and-equities.html">cash and equities questionnaire</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_c --></p>
+$$P = \sum_{k=1}^{N} \frac{C}{(1+r)^{k}} + \frac{F}{(1+r)^{N}}$$
+<p>Here <strong>C</strong> is the coupon payment per period, <strong>r</strong> is the yield per period, <strong>N</strong> is the number of periods and <strong>F</strong> is the face value. The first term is the stream of coupon payments and the second is the principal, so the two parts together are the full set of cash flows.</p>
+<h3>Bond Structure and Cash Flows</h3>
+<p>The bond structure is what makes this formula possible: a fixed-rate coupon schedule, a known maturity and a stated principal. Features such as call and put options, covenants, credit rating and marketability do not appear in the equation, yet they change what the market will accept as a yield. Pricing a callable or floating issue needs a more advanced model than a simple pricing calculator.</p>
+<h3>Present Value of Each Coupon Payment</h3>
+<p>Every bondholder collects the same coupon, but one due in three years is worth less than one due next year, because its present value is discounted three times. Adding up all fourteen discounted payments in the example below gives $249.07, while the discounted principal contributes the larger share.</p>
+
+<figure><img src="/assets/images/tools/bond-calculator/bond-price-present-value-breakdown.svg" alt="Donut chart splitting a $928.43 bond price into $679.35 of discounted principal and $249.07 of discounted coupon payments"><figcaption>Present value split of the worked-example bond price.</figcaption></figure>
+        </section>
+        <section id="bond-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="bond-calculator-guide-heading-3">
+<h2 id="bond-calculator-guide-heading-3">Worked Example: Pricing a Seven-Year Bond</h2>
+<p>Suppose you are looking at a seven-year note with a $1,000 face value, a 4.35% annual coupon paid semi-annually, while the market yield sits at 5.6%. Each step uses the formula above:</p>
+<ol>
+<li>Coupon payment per period: 4.35% × $1,000 ÷ 2 = $21.75.</li>
+<li>Number of periods: 7 years × 2 = 14.</li>
+<li>Yield per period: 5.6% ÷ 2 = 2.8%.</li>
+<li>Discount all 14 payments and the principal at 2.8% and add them together.</li>
+</ol>
+<table>
+<thead><tr><th>Item</th><th>Value</th></tr></thead>
+<tbody>
+<tr><td>Face value</td><td>$1,000.00</td></tr>
+<tr><td>Annual coupon rate</td><td>4.35%</td></tr>
+<tr><td>Coupon payment (semi-annual)</td><td>$21.75</td></tr>
+<tr><td>Maturity date / time to maturity</td><td>7 years</td></tr>
+<tr><td>Yield</td><td>5.6%</td></tr>
+<tr><td>Present value of coupons</td><td>$249.07</td></tr>
+<tr><td>Present value of principal</td><td>$679.35</td></tr>
+<tr><td>Bond price</td><td><strong>$928.43</strong></td></tr>
+</tbody>
+</table>
+<h3>Reading the Result: Discount, Par or Premium</h3>
+<p>The result of $928.43 sits $71.57 below face value because the 4.35% coupon is lower than the 5.6% market yield. A buyer holding to maturity collects $304.50 in total interest payments plus the $1,000 principal. When the coupon matches the yield, the price equals par, and when the coupon is higher, the price rises to a premium. The current yield here is 4.69%, which is the annual coupon of $43.50 divided by the $928.43 market price.</p>
+        </section>
+        <section id="bond-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="bond-calculator-guide-heading-4">
+<h2 id="bond-calculator-guide-heading-4">Checking a Fixed-Income Offer Before Placing an Order</h2>
+<p>Marguerite is rebuilding the fixed-income part of her savings portfolio, and her broker lists a corporate issue with a $1,000 face value, a 3.875% coupon paid semi-annually and 9 years left. The screen shows an ask yield of 5.12%, and her investment policy statement sets a 5.00% minimum yield for anything she buys, so she wants the dollar price before she commits.</p>
+<p>She enters the face value of 1,000, a coupon rate of 3.875, a yield of 5.12, 9 years to maturity and semi-annual payments. The coupon payment comes out to $19.375 per period, there are 18 periods, and the discount rate is 2.56% per period. The calculator returns a price of <strong>$911.11</strong>, a discount of $88.89 to par, with a current yield of 4.25% (the $38.75 annual coupon over $911.11).</p>
+<table>
+<thead><tr><th>Input or result</th><th>Value</th></tr></thead>
+<tbody>
+<tr><td>Coupon payment per period</td><td>$19.375</td></tr>
+<tr><td>Periods / yield per period</td><td>18 / 2.56%</td></tr>
+<tr><td>Price at 5.12% yield</td><td>$911.11</td></tr>
+<tr><td>Price at 5.40% yield</td><td>$892.42</td></tr>
+</tbody>
+</table>
+<p>The broker's quote of 91.11 matches, so the screen is consistent with the formula. Marguerite's real decision is about the 5.00% floor: a 5.12% yield clears it by 12 basis points, but the margin is thin. She reruns the calculator with only the yield changed to 5.40%, the level where she would be comfortable if the issue slips further, and sees the price drop to $892.42. For a ten-bond lot, that means $9,111.10 at today's quote against $8,924.20 at the lower price. She places a limit order at 91.11 instead of a market order, and keeps the $186.90 difference in mind as the cushion she will not chase.</p>
+        </section>
+        <section id="bond-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="bond-calculator-guide-heading-5">
+<h2 id="bond-calculator-guide-heading-5">Clean Price, Dirty Price and Accrued Interest</h2>
+<p>The example above assumes you buy exactly on a coupon date. In practice most trades happen mid-period, so the price you see quoted and the cash you actually pay differ by the accrued interest.</p>
+$$\text{Accrued interest} = F \times \text{coupon rate} \times \frac{\text{days since last coupon}}{\text{days in year}}$$
+<h3>Clean Price</h3>
+<p>The clean price strips out accrued interest, so it moves only when yields or credit conditions move. Dealers quote it so different issues can be compared on equal terms.</p>
+<h3>Dirty Price (Invoice Price)</h3>
+<p>The dirty price, also called the invoice price, is what the buyer really pays: <strong>dirty price = clean price + accrued interest</strong>. With 74 days since the last coupon payment under a 30/360 count, accrued interest is $1,000 × 4.35% × 74 ÷ 360 = $8.94, so a clean price of $928.43 becomes a dirty price of $937.37. The days since the last coupon payment is what tells the seller how much interest was earned before the sale.</p>
+<figure><img src="/assets/images/tools/bond-calculator/clean-price-dirty-price-accrued-interest-formula.svg" alt="Formula card showing a $928.43 clean price plus $8.94 accrued interest equals a $937.37 dirty price"><figcaption>Clean price plus accrued interest gives the dirty price you actually pay.</figcaption></figure>
+<aside><p><strong>Tip:</strong> If you only enter a clean price into your brokerage order, expect the settlement amount to be higher by the interest accrued days multiplied by the daily coupon.</p></aside>
+        </section>
+        <section id="bond-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="bond-calculator-guide-heading-6">
+<h2 id="bond-calculator-guide-heading-6">Day-Count Conventions Behind the Bond Price</h2>
+<p>Counting interest accrued days is not universal. The day-count convention depends on the market, and the matching dropdown in the calculator changes the accrued interest and the dirty price slightly.</p>
+<ul>
+<li><strong>30/360</strong> (bond basis): every month has 30 days and a year has 360, common for corporate and municipal bonds in the United States.</li>
+<li><strong>Actual/360</strong>: real days elapsed over a 360-day year, typical of money market paper, commercial paper and certificates of deposit.</li>
+<li><strong>Actual/365</strong>: real days over a 365-day year, used by some government bonds outside the US.</li>
+<li><strong>Actual/actual</strong>: real days over the real year length, the standard for Treasury securities.</li>
+</ul>
+<p>The difference between conventions is usually small, at most a few days of accrued interest, but a good calculator lets you choose so the settlement figure matches your broker's statement.</p>
+        </section>
+        <section id="bond-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="bond-calculator-guide-heading-7">
+<h2 id="bond-calculator-guide-heading-7">How Savings Bonds Differ from Market Bonds</h2>
+<p>Savings bonds issued by the Treasury are not traded, so their value follows a published schedule rather than a market yield. You cannot discount them with the formula above; instead you look up the issue date and denomination in a <strong>savings bond calculator</strong> on the Treasury's site. By contrast, a marketable issue changes price every trading day. Use that tool for savings bonds, and return to the formula above for anything that trades.</p>
+        </section>
+        <section id="bond-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="bond-calculator-guide-heading-8">
+<h2 id="bond-calculator-guide-heading-8">Choosing the Yield to Enter for Each Bond Type</h2>
+<p>The yield you enter reflects who issued the security and how financial markets judge that issuer. Government bonds, municipal bonds and corporate bonds each carry a different premium for risk:</p>
+<ul>
+<li><strong>Treasury bonds</strong> and other government bonds: the lowest credit risk, backed by the national budget.</li>
+<li><strong>Municipal bonds</strong>: issued by states and cities, with tax advantages that shape the yield.</li>
+<li><strong>Corporate bonds</strong>: higher yield for higher credit risk, down to high-yield junk bonds with weaker credit quality.</li>
+<li><strong>Zero-coupon bonds</strong>: no coupon at all, so the whole return comes from buying below par and receiving the principal at maturity.</li>
+</ul>
+<p>A higher-risk issuer must offer a higher yield, and entering it lowers the calculated price. Relative to stocks, bonds are lower risk and less volatile, a common stable income choice for retirees and conservative investors, but they still fall in value when interest rates rise.</p>
+        </section>
+        <section id="bond-calculator-guide-section-9" class="panel article-content p-4 sm:p-6" aria-labelledby="bond-calculator-guide-heading-9">
+<h2 id="bond-calculator-guide-heading-9">Why Price and Yield Move in Opposite Directions</h2>
+<p>A <strong>yield calculator</strong> view of the same example shows the inverse relationship. Because the coupon is fixed, a rising yield can only be matched by a falling price.</p>
+<table>
+<thead><tr><th>Market yield</th><th>Price of the $1,000 bond</th><th>Position</th></tr></thead>
+<tbody>
+<tr><td>3.00%</td><td>$1,084.67</td><td>Premium</td></tr>
+<tr><td>4.35%</td><td>$1,000.00</td><td>Par</td></tr>
+<tr><td>5.60%</td><td>$928.43</td><td>Discount</td></tr>
+<tr><td>7.50%</td><td>$830.85</td><td>Discount</td></tr>
+</tbody>
+</table>
+<p>This is why the interest rate environment, supply and demand and inflation all feed into what a seller can get. It also shows why a longer duration means a bigger price swing: more years of fixed payments are exposed to the same discount rate. The <b>current yield</b> and the yield to maturity are two different measures, and the second one is the figure that includes the discount you earn as the price pulls back to par.</p>
+<figure><img src="/assets/images/tools/bond-calculator/bond-price-vs-yield-curve.svg" alt="Line chart showing a $1,000 seven-year bond price falling from $1,084.67 at a 3% yield to $784.39 at 8.5%"><figcaption>Bond price against market yield for the 4.35% coupon example.</figcaption></figure>
+        </section>
+        <section id="bond-calculator-guide-section-10" class="panel article-content p-4 sm:p-6" aria-labelledby="bond-calculator-guide-heading-10">
+<h2 id="bond-calculator-guide-heading-10">Who Uses a Fixed-Income Calculator</h2>
+<p>An investor comparing a primary market purchase with a secondary market quote use it to check value before trading. Retirees mapping out retirement use it to confirm how much income an issue will pay, and savers deciding between certificates of deposit and a loan to a corporation run the same numbers to compare return and risk. This tool is built for a fixed-rate coupon bond, and a financial calculator of this kind will not account for credit quality or call features, so treat its output as the theoretical fair value rather than a guarantee. A yield to maturity assumes you reinvest each coupon at that same yield, the compound interest logic behind the price formula. For capital planning, remember that a bond held to maturity returns the principal regardless of what happened to the market in between.</p>
+        </section>
+      </div>
+
+      <section id="bond-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="bond-calculator-faq-heading" data-section="faq">
+        <h2 id="bond-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Bond Calculator questions</h2>
+        <div id="bond-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="bond-calculator-faq-1" class="faq-item" open><summary id="bond-calculator-faq-1-summary" class="faq-summary"><h3 id="bond-calculator-faq-1-question" class="faq-question">What does a bond calculator tell you?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="bond-calculator-faq-1-answer" class="faq-answer"><p>It discounts a bond&#x27;s coupon payments and its face value at the market yield to give the bond&#x27;s price today, and, when you add settlement and maturity dates, the clean price, dirty price and accrued interest.</p></div></details>
+          <details id="bond-calculator-faq-2" class="faq-item" open><summary id="bond-calculator-faq-2-summary" class="faq-summary"><h3 id="bond-calculator-faq-2-question" class="faq-question">Why does a bond&#x27;s price fall when yields rise?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="bond-calculator-faq-2-answer" class="faq-answer"><p>The coupon is fixed, so a buyer who can earn a higher market yield elsewhere will only pay less for the same payments. The price drops until the bond&#x27;s return matches the new yield.</p></div></details>
+          <details id="bond-calculator-faq-3" class="faq-item" open><summary id="bond-calculator-faq-3-summary" class="faq-summary"><h3 id="bond-calculator-faq-3-question" class="faq-question">What is the difference between the clean price and the dirty price?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="bond-calculator-faq-3-answer" class="faq-answer"><p>The clean price excludes interest that has built up since the last coupon payment. The dirty price, also called the invoice price, is the clean price plus accrued interest and is what the buyer actually pays.</p></div></details>
+          <details id="bond-calculator-faq-4" class="faq-item" open><summary id="bond-calculator-faq-4-summary" class="faq-summary"><h3 id="bond-calculator-faq-4-question" class="faq-question">How is accrued interest calculated?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="bond-calculator-faq-4-answer" class="faq-answer"><p>It is the annual coupon multiplied by the days since the last coupon payment, divided by the days in the year under the chosen day-count convention.</p></div></details>
+          <details id="bond-calculator-faq-5" class="faq-item" open><summary id="bond-calculator-faq-5-summary" class="faq-summary"><h3 id="bond-calculator-faq-5-question" class="faq-question">Which day-count convention should you use?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="bond-calculator-faq-5-answer" class="faq-answer"><p>30/360 is common for corporate and municipal bonds in the United States, Actual/Actual for Treasury securities, and Actual/360 or Actual/365 for money market instruments and some government bonds elsewhere. The accrued interest difference is usually small.</p></div></details>
+          <details id="bond-calculator-faq-6" class="faq-item" open><summary id="bond-calculator-faq-6-summary" class="faq-summary"><h3 id="bond-calculator-faq-6-question" class="faq-question">Does the calculator work for savings bonds or zero-coupon bonds?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="bond-calculator-faq-6-answer" class="faq-answer"><p>It is built for fixed-rate coupon bonds. For a zero-coupon bond, enter a coupon of 0 and the price is the discounted face value. Paper savings bonds follow a published Treasury schedule, so use the Treasury&#x27;s savings bond calculator for those.</p></div></details>
+          <details id="bond-calculator-faq-7" class="faq-item" open><summary id="bond-calculator-faq-7-summary" class="faq-summary"><h3 id="bond-calculator-faq-7-question" class="faq-question">Does the result include credit risk?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="bond-calculator-faq-7-answer" class="faq-answer"><p>No. Credit quality, call and put options and supply and demand are not modeled; they only show up through the yield you enter.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="bond-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="bond-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="bond-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="bond-calculator-ad-bottom-leaderboard">
+            <ins id="bond-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("bond-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="bond-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="bond-calculator-right-rail-top" class="mb-6">
+        <aside id="bond-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="bond-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="bond-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="bond-calculator-ad-right-rail-rectangle">
+            <ins id="bond-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("bond-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="bond-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="bond-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="bond-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="bond-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="bond-calculator-ad-right-rail-skyscraper">
+            <ins id="bond-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("bond-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="bond-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="bond-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="bond-calculator-footer-brand">
+        <a id="bond-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="bond-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="bond-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="bond-calculator-footer-categories" aria-labelledby="bond-calculator-footer-categories-heading">
+        <h2 id="bond-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="bond-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="bond-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="bond-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="bond-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="bond-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="bond-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="bond-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="bond-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="bond-calculator-footer-company" aria-labelledby="bond-calculator-footer-company-heading">
+        <h2 id="bond-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="bond-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="bond-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="bond-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="bond-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="bond-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="bond-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="bond-calculator-footer-bottom" class="border-t border-line">
+      <p id="bond-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="bond-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Bond price and yield to maturity, valued on a coupon date (no accrued interest).
+  // With face F, annual coupon rate c, k payments a year, N = years x k payments and an annual
+  // yield y compounded k times a year (j = y/k):
+  //   price = (cF/k) x (1 - (1 + j)^-N) / j + F x (1 + j)^-N      (j = 0: cF/k x N + F)
+  // Yield to maturity solves that equation for y by bisection (price falls as yield rises).
+  // Macaulay duration = sum(t x PV of each payment) / price, in years; modified = Macaulay / (1 + j).
+  // Verified (scratchpad tests/bd.test.js): face 100, 5% annual coupon, 6% yield, 3 years =
+  // $97.3270; face 1,000, 5% semiannual, 6% yield, 10 years = $925.61; yield of a bond priced
+  // at par = its coupon rate; 3-year 10% annual coupon at a 10% yield has a Macaulay duration of
+  // 2.7355 years (textbook value, shown as 2.736); zero-coupon $1,000, 5 years at 4% annual = $821.93.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+  function num(id) {
+    var v = parseFloat(document.getElementById(id).value);
+    return isNaN(v) ? NaN : v;
+  }
+
+  function pct(x) { return (x * 100).toFixed(3) + '%'; }
+
+  function price(face, coupon, k, n, y) {
+    var c = face * coupon / k, j = y / k;
+    if (Math.abs(j) < 1e-12) return c * n + face;
+    var d = Math.pow(1 + j, -n);
+    return c * (1 - d) / j + face * d;
+  }
+
+  function solveYield(face, coupon, k, n, target) {
+    var lo = -0.5 * k, hi = 10 * k;
+    if (target > price(face, coupon, k, n, lo) || target < price(face, coupon, k, n, hi)) return NaN;
+    for (var i = 0; i < 200; i++) {
+      var mid = (lo + hi) / 2;
+      if (price(face, coupon, k, n, mid) > target) lo = mid; else hi = mid;
+    }
+    return (lo + hi) / 2;
+  }
+
+  function cashFlows(face, coupon, k, n, y) {
+    var c = face * coupon / k, j = y / k, rows = [], weighted = 0, total = 0;
+    for (var t = 1; t <= n; t++) {
+      var cf = c + (t === n ? face : 0), pv = cf / Math.pow(1 + j, t);
+      weighted += (t / k) * pv;
+      total += pv;
+      rows.push({ period: t, years: t / k, cf: cf, pv: pv });
+    }
+    var mac = total > 0 ? weighted / total : 0;
+    return { rows: rows, macaulay: mac, modified: mac / (1 + j) };
+  }
+
+  function set(id, text) { document.getElementById(id).textContent = text; }
+
+  function clear(message) {
+    var error = document.getElementById('bdError');
+    error.hidden = false;
+    error.textContent = message;
+    ['bdMain', 'bdPer100', 'bdCurrent', 'bdCouponPay', 'bdStatus', 'bdMacaulay', 'bdModified'].forEach(function (id) { set(id, '–'); });
+    document.getElementById('bdSchedule').innerHTML = '';
+  }
+
+  function update() {
+    var mode = document.getElementById('bdMode').value;
+    document.getElementById('bdYieldField').hidden = mode !== 'price';
+    document.getElementById('bdPriceField').hidden = mode !== 'yield';
+
+    var face = num('bdFace'), coupon = num('bdCoupon'), years = num('bdYears'),
+        k = parseInt(document.getElementById('bdFreq').value, 10), y = num('bdYield'), p = num('bdPrice');
+    var n = Math.round(years * k);
+    var bad = [face, coupon, years, k].some(isNaN) || face <= 0 || coupon < 0 || coupon > 100 || years <= 0 || years > 100 || n < 1 ||
+              (mode === 'price' && (isNaN(y) || y < -10 || y > 100)) ||
+              (mode === 'yield' && (isNaN(p) || p <= 0));
+    if (bad) {
+      clear(mode === 'price'
+        ? 'Enter a face value above $0, a coupon rate from 0 to 100%, a yield from -10 to 100% and a time to maturity of at least one payment period (up to 100 years).'
+        : 'Enter a face value above $0, a coupon rate from 0 to 100%, a price above $0 and a time to maturity of at least one payment period (up to 100 years).');
+      return;
+    }
+    coupon = coupon / 100;
+    var bondPrice;
+    if (mode === 'price') {
+      y = y / 100;
+      bondPrice = price(face, coupon, k, n, y);
+      set('bdMainLabel', 'Bond price');
+      set('bdMain', money.format(bondPrice));
+    } else {
+      bondPrice = p;
+      y = solveYield(face, coupon, k, n, p);
+      if (isNaN(y)) { clear('No realistic yield produces that price. Check the price and the face value.'); return; }
+      set('bdMainLabel', 'Yield to maturity');
+      set('bdMain', pct(y));
+    }
+    document.getElementById('bdError').hidden = true;
+    var flows = cashFlows(face, coupon, k, n, y), annualCoupon = face * coupon;
+    set('bdPer100', (bondPrice / face * 100).toFixed(3));
+    set('bdCurrent', pct(annualCoupon / bondPrice));
+    set('bdCouponPay', money.format(annualCoupon / k));
+    var diff = bondPrice - face;
+    set('bdStatus', Math.abs(diff) < 0.005 ? 'At par' : (diff > 0 ? 'Premium of ' + money.format(diff) : 'Discount of ' + money.format(-diff)));
+    set('bdMacaulay', flows.macaulay.toFixed(3) + ' years');
+    set('bdModified', flows.modified.toFixed(3));
+    set('bdYearsNote', n + ' payments' + (Math.abs(n / k - years) > 1e-9 ? ' (maturity rounded to ' + (n / k).toFixed(2) + ' years)' : ''));
+    document.getElementById('bdSchedule').innerHTML = flows.rows.map(function (row) {
+      return '<tr><td>' + row.period + '</td><td>' + (Math.round(row.years * 100) / 100) + '</td><td>' +
+             money.format(row.cf) + '</td><td>' + money.format(row.pv) + '</td></tr>';
+    }).join('');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('bdForm');
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

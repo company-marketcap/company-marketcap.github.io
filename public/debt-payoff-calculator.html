@@ -1,0 +1,797 @@
+<!doctype html>
+<html lang="en" id="debt-payoff-calculator-document" data-page-slug="debt-payoff-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Debt Payoff Calculator: Find Your Debt-Free Date</title>
+  <meta name="description" content="Use this free debt payoff calculator to pay off multiple debts faster. Enter balances, rates and minimum payments to see your payoff date and interest saved.">
+  <link rel="canonical" href="https://company-marketcap.github.io/debt-payoff-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Debt Payoff Calculator: Find Your Debt-Free Date">
+  <meta property="og:description" content="Use this free debt payoff calculator to pay off multiple debts faster. Enter balances, rates and minimum payments to see your payoff date and interest saved.">
+  <meta property="og:url" content="https://company-marketcap.github.io/debt-payoff-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Debt Payoff Calculator", "url": "https://company-marketcap.github.io/debt-payoff-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Use this free debt payoff calculator to pay off multiple debts faster. Enter balances, rates and minimum payments to see your payoff date and interest saved."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Credit Cards & Debt Payoff", "item": "https://company-marketcap.github.io/financial-calculators.html#credit-card-debt-calculators"}, {"@type": "ListItem", "position": 4, "name": "Debt Payoff Calculator", "item": "https://company-marketcap.github.io/debt-payoff-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How does a debt payoff calculator work?", "acceptedAnswer": {"@type": "Answer", "text": "It adds interest to each balance every month, subtracts your required payments, sends any extra money to one target debt, and repeats until every balance reaches zero. The month that happens is your debt-free date."}}, {"@type": "Question", "name": "What is the difference between the debt avalanche and debt snowball methods?", "acceptedAnswer": {"@type": "Answer", "text": "The avalanche sends extra money to the debt with the highest interest rate first and usually costs the least interest. The snowball starts with the smallest balance, which gives quicker wins but typically costs somewhat more interest."}}, {"@type": "Question", "name": "What information do I need to use a debt payoff calculator?", "acceptedAnswer": {"@type": "Answer", "text": "For each debt, the current balance, the interest rate (APR) and the minimum monthly payment. Optionally, add an extra amount per month, per year or as a one-time payment."}}, {"@type": "Question", "name": "What does keeping the total monthly amount fixed mean?", "acceptedAnswer": {"@type": "Answer", "text": "When a debt is paid off, the money that went to it is moved onto the remaining debts, so your total monthly amount stays the same until everything is cleared. Choosing No means the freed-up amount is no longer part of the plan."}}, {"@type": "Question", "name": "How long will it take to pay off my debt?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the balances, rates and how much you pay each month. Paying only the minimums can take years longer than adding an extra amount, so compare both by changing the extra payment field."}}, {"@type": "Question", "name": "Should I include my mortgage?", "acceptedAnswer": {"@type": "Answer", "text": "Most people leave a mortgage out because it is secured, long-term and usually lower rate. You can add it if you want one combined schedule; the tool treats every debt in the same way."}}, {"@type": "Question", "name": "Can I set a payoff goal date?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Enter a target number of months and the tool searches for the monthly total needed to be debt-free by then, using the payoff method and extra payments you chose."}}, {"@type": "Question", "name": "Why does the tool say my debts are never paid off?", "acceptedAnswer": {"@type": "Answer", "text": "A payment that does not cover the monthly interest never reduces the balance. Raise that debt's payment or add an extra monthly amount so principal starts to fall."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="debt-payoff-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="debt-payoff-calculator" data-page-type="calculator">
+  <a id="debt-payoff-calculator-skip-link" href="#debt-payoff-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="debt-payoff-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="debt-payoff-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="debt-payoff-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="debt-payoff-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="debt-payoff-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="debt-payoff-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="debt-payoff-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="debt-payoff-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="debt-payoff-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="debt-payoff-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="debt-payoff-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="debt-payoff-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="debt-payoff-calculator-header-search-status" aria-controls="debt-payoff-calculator-header-search-results" data-search-input="header">
+              <p id="debt-payoff-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="debt-payoff-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="debt-payoff-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="debt-payoff-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="debt-payoff-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="debt-payoff-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="debt-payoff-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="debt-payoff-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="debt-payoff-calculator-mobile-search-status" aria-controls="debt-payoff-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="debt-payoff-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="debt-payoff-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="debt-payoff-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="debt-payoff-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="debt-payoff-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="debt-payoff-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="debt-payoff-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="debt-payoff-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="debt-payoff-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="debt-payoff-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="debt-payoff-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="debt-payoff-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="debt-payoff-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="debt-payoff-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="debt-payoff-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="debt-payoff-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="debt-payoff-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="debt-payoff-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="debt-payoff-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="debt-payoff-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="debt-payoff-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="debt-payoff-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="debt-payoff-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="debt-payoff-calculator-sidebar-search-status" aria-controls="debt-payoff-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="debt-payoff-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="debt-payoff-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="debt-payoff-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="debt-payoff-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="debt-payoff-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="debt-payoff-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="debt-payoff-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="debt-payoff-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="debt-payoff-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="debt-payoff-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="debt-payoff-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="debt-payoff-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="debt-payoff-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="debt-payoff-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="debt-payoff-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators" aria-current="true">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="debt-payoff-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="debt-payoff-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="debt-payoff-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="debt-payoff-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="debt-payoff-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="debt-payoff-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="debt-payoff-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="debt-payoff-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="debt-payoff-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="debt-payoff-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="debt-payoff-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="debt-payoff-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="debt-payoff-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="debt-payoff-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="debt-payoff-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="debt-payoff-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="debt-payoff-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="debt-payoff-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="debt-payoff-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="debt-payoff-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="debt-payoff-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="debt-payoff-calculator" data-calculator-slug="debt-payoff-calculator" data-sub-category-slug="credit-card-debt-calculators">
+      <aside id="debt-payoff-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="debt-payoff-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="debt-payoff-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="debt-payoff-calculator-ad-top-leaderboard">
+            <ins id="debt-payoff-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("debt-payoff-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="debt-payoff-calculator-intro-area" class="space-y-4">
+        <nav id="debt-payoff-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="debt-payoff-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="debt-payoff-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="debt-payoff-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="debt-payoff-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#credit-card-debt-calculators" itemprop="item"><span itemprop="name">Credit Cards &amp; Debt Payoff</span></a><meta itemprop="position" content="3"></li>
+            <li id="debt-payoff-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Debt Payoff Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/debt-payoff-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="debt-payoff-calculator-hero-section" aria-labelledby="debt-payoff-calculator-hero-heading" data-section="hero">
+          <h1 id="debt-payoff-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Debt Payoff Calculator: Find Your Debt-Free Date</h1>
+          <p id="debt-payoff-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Use the debt payoff calculator to see exactly when your last balance reaches zero: adding $275 a month to $670 of minimum payments clears $26,990 of debts in 33 months instead of 69. You enter each debt&#x27;s balance, rate and minimum payment, and the tool returns a payoff date plus the interest charges you will pay along the way. This guide explains the math behind those results, compares the two best-known strategies, and shows how to pay off debt faster once you can see your own numbers. <!-- SILO_START:slot_a -->If you want to see how the figures change, the <a class="silo-link" href="/debt-to-income-ratio-calculator.html">debt to income ratio calculator online</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="debt-payoff-calculator-tool" class="space-y-6" data-page-slug="debt-payoff-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="dpFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="dpForm" class="space-y-6" novalidate aria-labelledby="dpFormHeading">
+      <h2 id="dpFormHeading" class="panel-heading">Enter your debts</h2>
+      <fieldset class="form-fieldset">
+        <legend class="form-legend">Your debts</legend>
+        <p class="form-hint">List each card or loan with its current balance, APR and required monthly payment. Rows left with no balance are ignored.</p>
+        <div id="dpDebts" class="space-y-4"></div>
+        <button type="button" id="dpAdd" class="button-secondary">Add a debt</button>
+      </fieldset>
+      <div><label for="dpExtra" class="form-label">Extra payment each month</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="dpExtra" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="25" value="200" inputmode="decimal"></div><p class="form-hint">On top of all the minimums. Avalanche and snowball both put it toward one target debt at a time.</p></div>
+      <p id="dpError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="dpResults" aria-live="polite" aria-labelledby="dpResultsHeading">
+      <h2 id="dpResultsHeading" class="panel-heading">Your payoff plans</h2>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p class="stat-label">Debt-free with avalanche</p><p id="dpAvTime" class="stat-value">–</p><p id="dpAvNote" class="mt-1 text-xs text-ink-muted"></p></div>
+        <div class="stat-card"><p class="stat-label">Avalanche total interest</p><p id="dpAvInterest" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Interest saved vs minimums</p><p id="dpSaved" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Avalanche vs snowball</p><p id="dpDiff" class="stat-value">–</p><p id="dpDiffNote" class="mt-1 text-xs text-ink-muted"></p></div>
+      </div>
+      <p id="dpMinNote" class="callout callout-warning mt-5 text-sm" hidden></p>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="dpCompareHeading" data-section="compare">
+  <h2 id="dpCompareHeading" class="panel-heading">Avalanche vs snowball vs minimums</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">The avalanche and snowball plans pay the same total each month; only the order of attack differs.</p>
+  <div class="table-scroll mt-5" tabindex="0" role="region" aria-labelledby="dpCompareHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Plan</th><th scope="col">Debt-free in</th><th scope="col">Debt-free by</th><th scope="col">Total interest</th><th scope="col">Total paid</th></tr></thead>
+      <tbody id="dpCompare"></tbody>
+    </table>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="dpOrderHeading" data-section="order">
+  <h2 id="dpOrderHeading" class="panel-heading">When each debt is paid off</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">Listed in avalanche order. Freed-up payments roll on to the next debt in each plan.</p>
+  <div class="table-scroll mt-5" tabindex="0" role="region" aria-labelledby="dpOrderHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Debt</th><th scope="col">Balance</th><th scope="col">APR</th><th scope="col">Avalanche</th><th scope="col">Snowball</th></tr></thead>
+      <tbody id="dpOrder"></tbody>
+    </table>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="dpYearsHeading" data-section="years">
+  <h2 id="dpYearsHeading" class="panel-heading">Total balance at the end of each year</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">What you still owe across all debts under each plan.</p>
+  <div class="table-scroll mt-5 max-h-[520px]" tabindex="0" role="region" aria-labelledby="dpYearsHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Year</th><th scope="col">Avalanche</th><th scope="col">Snowball</th><th scope="col">Minimums only</th></tr></thead>
+      <tbody id="dpYears"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="debt-payoff-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="debt-payoff-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Use the debt payoff calculator to see exactly when your last balance reaches zero: adding $275 a month to $670 of minimum payments clears $26,990 of debts in 33 months instead of 69. You enter each debt&#x27;s balance, rate and minimum payment, and the tool returns a payoff date plus the interest charges you will pay along the way. This guide explains the math behind those results, compares the two best-known strategies, and shows how to pay off debt faster once you can see your own numbers. <!-- SILO_START:slot_a_m -->If you want to see how the figures change, the <a class="silo-link" href="/debt-to-income-ratio-calculator.html">debt to income ratio calculator online</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="debt-payoff-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="debt-payoff-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="debt-payoff-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="debt-payoff-calculator-ad-in-feed">
+            <ins id="debt-payoff-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("debt-payoff-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="debt-payoff-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="debt-payoff-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="debt-payoff-calculator-guide-heading-1">
+<h2 id="debt-payoff-calculator-guide-heading-1">How the Debt Payoff Calculator Works</h2>
+<p>Think of this tool as a <strong>debt repayment calculator</strong> that replays your finances one month at a time. Each month it adds interest to every balance, subtracts your required payments, sends any extra money to a target debt, and repeats until every balance is zero. The month that happens is your <strong>debt-free date</strong>, and the interest it added up on the way is your <strong>total interest</strong> bill. <!-- SILO_START:slot_b -->Pair this with the <a class="silo-link" href="/credit-card-optimizer-calculator.html">credit card optimizer calculator</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_b --></p>
+
+<h3>Balance owed, interest rate and minimum payment</h3>
+<p>Every debt needs three numbers. The <strong>balance owed</strong> is what you still have to repay today. The <strong>interest rate</strong> is the yearly cost of borrowing it. The <strong>minimum payment</strong> is the smallest amount your lender requires each month. Some versions also ask for one optional number: the <strong>extra payment</strong> you can add on top of all your minimums.</p>
+<table>
+<thead><tr><th>Input</th><th>What to enter</th><th>Where to find it</th></tr></thead>
+<tbody>
+<tr><td>Balance</td><td>Current amount owed on each debt</td><td>Latest statement or online account</td></tr>
+<tr><td>Interest rate (APR)</td><td>Yearly percentage charged</td><td>Cardmember agreement or loan documents</td></tr>
+<tr><td>Monthly payment</td><td>Minimum due each month</td><td>Statement</td></tr>
+<tr><td>Extra payment</td><td>Money you can add each month</td><td>Your budget</td></tr>
+</tbody>
+</table>
+
+<h3>What the results tell you</h3>
+<p>After you click the calculate button, you get a month-by-month schedule. It shows the order in which each debt disappears, the interest charges for the whole plan, and how many months you save compared with paying only the minimums. A good <strong>debt calculator</strong> also lets you change the extra amount and rerun the plan, so you can see how each additional dollar moves your payoff date.</p>
+        </section>
+        <section id="debt-payoff-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="debt-payoff-calculator-guide-heading-2">
+<h2 id="debt-payoff-calculator-guide-heading-2">Gather Your Debts Before You Pay Off Debt</h2>
+<p>The output is only as accurate as the inputs, so spend ten minutes collecting real figures before you try to <strong>pay off debt</strong> on paper. Open each account, write down the balance, the APR and the minimum, and keep the list in one place. Rough guesses produce a rough date; statement figures produce a date you can plan around.</p>
+
+<h3>Finding your annual percentage rate</h3>
+<p>Your <strong>annual percentage rate</strong>, usually shown as <strong>APR</strong>, is on every credit card statement and in your loan paperwork. On a card, the APR is the interest rate expressed as a yearly figure. Watch for a <strong>penalty APR</strong>: one late payment can trigger a higher rate that quietly inflates your interest expenses. If a card charges different rates for purchases and cash advances, enter the rate that applies to most of your balance.</p>
+
+<h3>Debts to include and leave out</h3>
+<p>Include every <strong>credit card</strong>, <strong>personal loan</strong>, <strong>student loan</strong>, <strong>auto loan</strong> and <strong>medical debt</strong> you are repaying. Most guides leave out your <strong>mortgage</strong>, because it is secured, long and usually low-rate. Everything else is <strong>nonmortgage debt</strong> and belongs in the plan:</p>
+<ul>
+<li>Credit cards, store cards and lines of credit</li>
+<li>Student loans and personal loans</li>
+<li>Auto loans and medical bills on payment plans</li>
+<li>Any balance a friend or relative expects you to repay</li>
+</ul>
+        </section>
+        <section id="debt-payoff-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="debt-payoff-calculator-guide-heading-3">
+<h2 id="debt-payoff-calculator-guide-heading-3">Debt Repayment Calculator Formula and Interest Charges</h2>
+<p>You do not need to run the numbers by hand, but knowing what the <strong>repayment plan</strong> is doing behind the scenes helps you trust it. Two ideas drive everything: how interest accrues each month, and how long a fixed payment takes to wipe out a balance.</p>
+
+<h3>Monthly interest and the daily periodic rate</h3>
+<p>Card issuers divide your APR by 365 to get a <strong>daily periodic rate</strong>, then multiply it by your <strong>average daily balance</strong>. Most calculators simplify that to one step per month: divide the APR by 12 and multiply by the balance.</p>
+$$\text{Monthly interest} = \text{Balance} \times \frac{\text{APR}}{12}$$
+<p>On a $4,350 card at 22.9% APR, the first month's interest charges are $4,350 &times; 0.229 &divide; 12 = <strong>$83.01</strong>. The rest of your payment reduces the <strong>principal</strong>, which is why paying only the minimum on a high-rate card feels like standing still.</p>
+
+<h3>Months to pay off a single loan balance</h3>
+<p>For one <strong>loan balance</strong> with a fixed payment, the number of months follows from the monthly rate \(r = \text{APR} \div 12\), the balance \(B\) and the payment \(P\):</p>
+$$n = \frac{-\ln\left(1 - \frac{r \times B}{P}\right)}{\ln(1 + r)}$$
+<p>If \(P\) is not larger than \(r \times B\), the payment never covers the interest and the debt never ends. That is the reason a calculator flags a payment that is too small.</p>
+
+<h3>Worked example: four debts and a $275 extra payment</h3>
+<p>Here is a realistic case with $26,990 in total. Your minimums add up to $670 a month, and you can add $275, so $945 goes to debts every month. In month one, interest across all four accounts is $230.29, which leaves $714.71 to reduce principal.</p>
+<table>
+<thead><tr><th>Debt</th><th>Balance</th><th>Interest rate (APR)</th><th>Minimum payment</th></tr></thead>
+<tbody>
+<tr><td>Credit card</td><td>$4,350</td><td>22.9%</td><td>$110</td></tr>
+<tr><td>Personal loan</td><td>$7,800</td><td>11.5%</td><td>$190</td></tr>
+<tr><td>Auto loan</td><td>$13,600</td><td>6.4%</td><td>$310</td></tr>
+<tr><td>Medical bill</td><td>$1,240</td><td>0%</td><td>$60</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>$26,990</strong></td><td>&nbsp;</td><td><strong>$670</strong></td></tr>
+</tbody>
+</table>
+<p>Paying only the minimums and never rolling freed-up money forward, the last balance disappears in month 69 and the interest charges reach $7,705.43. Adding the extra payment and rolling each cleared minimum into the next target cuts that to 33 months.</p>
+<figure><img src="/assets/images/tools/debt-payoff-calculator/debt-payoff-first-month-interest-vs-principal.svg" alt="Donut chart splitting a $945 first monthly debt payment into $714.71 of principal and $230.29 of interest across a credit card, personal loan and auto loan"><figcaption>In month one, about a quarter of the $945 goes to interest charges; the rest reduces what you owe.</figcaption></figure>
+        </section>
+        <section id="debt-payoff-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="debt-payoff-calculator-guide-heading-4">
+<h2 id="debt-payoff-calculator-guide-heading-4">Debt Avalanche vs Debt Snowball: Choosing a Repayment Plan</h2>
+<p>Both strategies pay every minimum on time and aim all spare cash at one debt. They differ only in which debt gets the spare cash first, and that choice sets your <strong>payoff sequence</strong>.</p>
+
+<h3>Highest interest rate first: the debt avalanche method</h3>
+<p>The <strong>debt avalanche method</strong> targets the account with the <strong>highest interest rate first</strong>, whatever its size. It produces the <strong>lowest total interest</strong> because the most expensive money is repaid earliest. In the example above, the 22.9% credit card goes first and is cleared in month 13, then the freed-up $110 joins the medical bill, then the personal loan in month 24 and the auto loan in month 33.</p>
+
+<h3>Smallest balance first: the debt snowball method</h3>
+<p>The <strong>debt snowball method</strong> starts with the <strong>smallest balance first</strong> and ignores rates. The $1,240 medical bill disappears in month 4, an early sign of progress, then the card in month 15, the personal loan in month 25 and the auto loan in month 33. These <strong>quick wins</strong> are a real source of <strong>motivation</strong>, and personal finance is as much <strong>behavior</strong> as arithmetic. A person who quits in month eight gets no benefit from a perfect spreadsheet.</p>
+
+<h3>Side-by-side results</h3>
+<table>
+<thead><tr><th>Plan</th><th>Months to debt-free</th><th>Total interest</th></tr></thead>
+<tbody>
+<tr><td>Minimum payments only</td><td>69</td><td>$7,705.43</td></tr>
+<tr><td>Snowball with $275 extra</td><td>33</td><td>$3,649.01</td></tr>
+<tr><td>Avalanche with $275 extra</td><td>33</td><td>$3,408.48</td></tr>
+</tbody>
+</table>
+<p>Both plans finish in the same month here, and the avalanche saves $240.53 more. Compared with minimums alone, the avalanche saves $4,296.95 and 36 months. If you want the cheapest route, use a <strong>debt snowball calculator</strong> only when you value the early wins more than $240.53; otherwise follow the highest rate.</p>
+<figure><img src="/assets/images/tools/debt-payoff-calculator/debt-snowball-vs-avalanche-payoff-order.svg" alt="Paired bars showing the month each of four debts is paid off under the debt avalanche and debt snowball methods"><figcaption>Both plans finish in month 33, but they clear the four debts in a different payoff sequence.</figcaption></figure>
+        </section>
+        <section id="debt-payoff-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="debt-payoff-calculator-guide-heading-5">
+<h2 id="debt-payoff-calculator-guide-heading-5">Finding a Debt-Free Date for Three Accounts</h2>
+<p>Dana, a lab technician, has a fixed-term contract that ends in 48 months and wants every account cleared before it does. Dana opens the calculator and enters three debts: a store card with $3,127.46 at 26.99% and a $94 minimum, a federal student loan with $18,420.11 at 5.05% and a $201 minimum, and a 0% dental plan with $2,380 left and a $120 minimum. The minimums total $415 a month on $23,927.57 owed.</p>
+<p>First Dana runs it with no extra money. The payoff schedule ends in month 71 with $5,171.97 in interest charges, well past the contract date. Next comes an extra $180 a month, sent to the highest rate first. The schedule now shows the store card cleared in month 14, the dental plan in month 20 and the student loan in month 45, with $2,726.95 in interest. Choosing smallest balance first instead moves the finish to month 46 and the interest to $3,104.36, so the card, not the dental plan, goes first.</p>
+<table>
+<thead><tr><th>Extra each month</th><th>Debt-free month</th><th>Total interest</th></tr></thead>
+<tbody>
+<tr><td>$0</td><td>71</td><td>$5,171.97</td></tr>
+<tr><td>$180</td><td>45</td><td>$2,726.95</td></tr>
+<tr><td>$350</td><td>34</td><td>$1,958.47</td></tr>
+</tbody>
+</table>
+<p>Month 45 clears the 48-month deadline by only three months, and a single unexpected bill would erase that margin. Dana changes one input, raising the extra to $350 by pausing a $170 subscription bundle and a gym membership. The result drops to month 34 with $1,958.47 in interest, a saving of $768.48 and 11 months. The 0% plan still ends in month 20, so no deferred-interest clock ever starts. Dana sets a $350 automatic transfer for payday and reruns the schedule after the next statement.</p>
+        </section>
+        <section id="debt-payoff-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="debt-payoff-calculator-guide-heading-6">
+<h2 id="debt-payoff-calculator-guide-heading-6">Reading Your Debt-Free Date and Payoff Date</h2>
+<p>The result worth acting on is the date, not the interest figure. A <strong>payoff date</strong> of 33 months out turns a vague wish into a <strong>timeline</strong> with checkpoints, and each cleared account is a milestone you can mark on a calendar.</p>
+
+<h3>Why your repayment date keeps moving</h3>
+<p>Your <strong>repayment date</strong> is an estimate. It shifts earlier whenever you add money, and later whenever you add new charges. The tool assumes you stop using the credit card, that the <strong>interest rate</strong> stays fixed, and that fees are ignored. Re-enter your balances every few months to keep the estimate honest.</p>
+<figure><img src="/assets/images/tools/debt-payoff-calculator/debt-payoff-calculator-balance-over-time.svg" alt="Line chart of total debt falling from $26,990 to $0 over 33 months with the avalanche order and $275 extra each month"><figcaption>The example's total debt falls steadily to zero in month 33.</figcaption></figure>
+
+<h3>How much each extra dollar shortens the plan</h3>
+<p>The same four debts, repaid with the avalanche order, respond strongly to small changes in the monthly amount you add. The first $100 does the most work per dollar, and the gains taper as the plan gets shorter.</p>
+<table>
+<thead><tr><th>Added each month</th><th>Months to debt-free</th><th>Total interest</th></tr></thead>
+<tbody>
+<tr><td>$0 (only rolling cleared minimums forward)</td><td>51</td><td>$6,793.32</td></tr>
+<tr><td>$100</td><td>42</td><td>$4,826.96</td></tr>
+<tr><td>$275</td><td>33</td><td>$3,408.48</td></tr>
+<tr><td>$500</td><td>26</td><td>$2,542.48</td></tr>
+<tr><td>$800</td><td>20</td><td>$1,923.48</td></tr>
+</tbody>
+</table>
+<p>Notice that rolling freed-up minimums forward alone moves the finish line from month 69 to month 51. That habit costs nothing, which makes it the first lever to pull.</p>
+
+<h3>Setting a debt payoff goal</h3>
+<p>You can also work backwards. A <strong>debt payoff goal</strong> says "I want to be debt-free in 24 months"; a <strong>debt payoff goal calculator</strong> then reports the <strong>monthly payment</strong> required to hit it. For the example debts, a 24-month goal needs a noticeably higher payment than $945, so compare the number with your <strong>income</strong> before you commit.</p>
+        </section>
+        <section id="debt-payoff-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="debt-payoff-calculator-guide-heading-7">
+<h2 id="debt-payoff-calculator-guide-heading-7">Ways to Get Out of Debt Faster</h2>
+<p>Once the plan is on screen, three levers shorten it: lower the rate, raise the payment, or both. These ideas help you <strong>get out of debt</strong> sooner without changing the underlying math.</p>
+
+<h3>Debt consolidation and balance transfer options</h3>
+<p><strong>Debt consolidation</strong> replaces several debts with one new loan, ideally at a lower rate and a single payment. A <strong>balance transfer</strong> moves <strong>credit card debt</strong> onto a card with a low introductory rate, usually for a transfer fee. Compare the fees against the interest you would save, and confirm there is no <strong>payoff penalty</strong> on the loans you are replacing. A <strong>home equity loan</strong> is another route, but it puts your house behind the debt. A dedicated consolidation tool can model the numbers, and the <strong>consolidation</strong> only helps if you stop adding new balances afterward.</p>
+
+<h3>Budget, income and emergency fund</h3>
+<p>The extra-payment input is only as real as the money behind it. Raise it by tightening your <strong>budget</strong>, adding <strong>income</strong> or trimming <strong>spending</strong>, then rerun the tool to see the new date. Keep a small <strong>emergency fund</strong> first, because an unplanned bill put on a credit card pushes your payoff date back. Testing steady extra payments against your <strong>savings</strong> cushion shows what it buys: a steadier <strong>financial</strong> position and a clear route to <strong>financial freedom</strong>.</p>
+
+<h3>When the schedule says you need help</h3>
+<p>If the calculator shows a schedule that never reaches zero, or a date you cannot reach, talk to a nonprofit <strong>credit counseling</strong> agency. A <strong>counselor</strong> can review your accounts, negotiate lower rates through a <strong>debt management program</strong>, and explain your options. <strong>Bankruptcy</strong> is a last resort that damages your credit score, so speak with an attorney before you consider it. Some lenders also offer a hardship plan if you call before you miss a due date, and <strong>borrowers</strong> who ask early usually keep more options open.</p>
+        </section>
+        <section id="debt-payoff-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="debt-payoff-calculator-guide-heading-8">
+<h2 id="debt-payoff-calculator-guide-heading-8">Mistakes That Push Back Your Plan to Pay Down Debts</h2>
+<p>Each of these mistakes changes the date or the cost the calculator reports, so it pays to spot them early. The <strong>stress</strong> of owing money is also easier to manage when your schedule matches your real accounts.</p>
+
+<h3>Five habits that stall progress</h3>
+<ol>
+<li>Guessing a rate instead of reading the statement, which shifts the reported debt-free month by weeks.</li>
+<li>Adding fresh purchases to a card in the plan, so the figure you entered is no longer true.</li>
+<li>Letting a cleared account's old amount vanish into everyday spending instead of rolling it onto the next target, a habit worth 18 months in the example above.</li>
+<li>Skipping the cushion, then reaching for a card when an unplanned bill arrives.</li>
+<li>Ignoring a schedule that never reaches zero until <strong>bankruptcy</strong> looks like the only option left.</li>
+</ol>
+
+<h3>Is an early payoff always the goal?</h3>
+<p>An <strong>early payoff</strong> of every account is not always necessary. Use the avalanche results to see which low-rate accounts can run to term while you finish the costly ones, and check each agreement for a fee before you close anything ahead of schedule, as careful <strong>borrowers</strong> do.</p>
+
+<h3>Keeping your schedule current</h3>
+<p>Rerun the calculator after every raise, bonus, new bill or rate change, and mark each cleared account on the schedule. Those two routines keep your <strong>financial</strong> plan matched to your real numbers, and a current schedule is the best protection for your <strong>financial</strong> progress.</p>
+        </section>
+      </div>
+
+      <section id="debt-payoff-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="debt-payoff-calculator-faq-heading" data-section="faq">
+        <h2 id="debt-payoff-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Debt Payoff Calculator questions</h2>
+        <div id="debt-payoff-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="debt-payoff-calculator-faq-1" class="faq-item" open><summary id="debt-payoff-calculator-faq-1-summary" class="faq-summary"><h3 id="debt-payoff-calculator-faq-1-question" class="faq-question">How does a debt payoff calculator work?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="debt-payoff-calculator-faq-1-answer" class="faq-answer"><p>It adds interest to each balance every month, subtracts your required payments, sends any extra money to one target debt, and repeats until every balance reaches zero. The month that happens is your debt-free date.</p></div></details>
+          <details id="debt-payoff-calculator-faq-2" class="faq-item" open><summary id="debt-payoff-calculator-faq-2-summary" class="faq-summary"><h3 id="debt-payoff-calculator-faq-2-question" class="faq-question">What is the difference between the debt avalanche and debt snowball methods?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="debt-payoff-calculator-faq-2-answer" class="faq-answer"><p>The avalanche sends extra money to the debt with the highest interest rate first and usually costs the least interest. The snowball starts with the smallest balance, which gives quicker wins but typically costs somewhat more interest.</p></div></details>
+          <details id="debt-payoff-calculator-faq-3" class="faq-item" open><summary id="debt-payoff-calculator-faq-3-summary" class="faq-summary"><h3 id="debt-payoff-calculator-faq-3-question" class="faq-question">What information do I need to use a debt payoff calculator?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="debt-payoff-calculator-faq-3-answer" class="faq-answer"><p>For each debt, the current balance, the interest rate (APR) and the minimum monthly payment. Optionally, add an extra amount per month, per year or as a one-time payment.</p></div></details>
+          <details id="debt-payoff-calculator-faq-4" class="faq-item" open><summary id="debt-payoff-calculator-faq-4-summary" class="faq-summary"><h3 id="debt-payoff-calculator-faq-4-question" class="faq-question">What does keeping the total monthly amount fixed mean?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="debt-payoff-calculator-faq-4-answer" class="faq-answer"><p>When a debt is paid off, the money that went to it is moved onto the remaining debts, so your total monthly amount stays the same until everything is cleared. Choosing No means the freed-up amount is no longer part of the plan.</p></div></details>
+          <details id="debt-payoff-calculator-faq-5" class="faq-item" open><summary id="debt-payoff-calculator-faq-5-summary" class="faq-summary"><h3 id="debt-payoff-calculator-faq-5-question" class="faq-question">How long will it take to pay off my debt?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="debt-payoff-calculator-faq-5-answer" class="faq-answer"><p>It depends on the balances, rates and how much you pay each month. Paying only the minimums can take years longer than adding an extra amount, so compare both by changing the extra payment field.</p></div></details>
+          <details id="debt-payoff-calculator-faq-6" class="faq-item" open><summary id="debt-payoff-calculator-faq-6-summary" class="faq-summary"><h3 id="debt-payoff-calculator-faq-6-question" class="faq-question">Should I include my mortgage?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="debt-payoff-calculator-faq-6-answer" class="faq-answer"><p>Most people leave a mortgage out because it is secured, long-term and usually lower rate. You can add it if you want one combined schedule; the tool treats every debt in the same way.</p></div></details>
+          <details id="debt-payoff-calculator-faq-7" class="faq-item" open><summary id="debt-payoff-calculator-faq-7-summary" class="faq-summary"><h3 id="debt-payoff-calculator-faq-7-question" class="faq-question">Can I set a payoff goal date?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="debt-payoff-calculator-faq-7-answer" class="faq-answer"><p>Yes. Enter a target number of months and the tool searches for the monthly total needed to be debt-free by then, using the payoff method and extra payments you chose.</p></div></details>
+          <details id="debt-payoff-calculator-faq-8" class="faq-item" open><summary id="debt-payoff-calculator-faq-8-summary" class="faq-summary"><h3 id="debt-payoff-calculator-faq-8-question" class="faq-question">Why does the tool say my debts are never paid off?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="debt-payoff-calculator-faq-8-answer" class="faq-answer"><p>A payment that does not cover the monthly interest never reduces the balance. Raise that debt&#x27;s payment or add an extra monthly amount so principal starts to fall.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="debt-payoff-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="debt-payoff-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="debt-payoff-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="debt-payoff-calculator-ad-bottom-leaderboard">
+            <ins id="debt-payoff-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("debt-payoff-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="debt-payoff-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="debt-payoff-calculator-right-rail-top" class="mb-6">
+        <aside id="debt-payoff-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="debt-payoff-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="debt-payoff-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="debt-payoff-calculator-ad-right-rail-rectangle">
+            <ins id="debt-payoff-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("debt-payoff-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="debt-payoff-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="debt-payoff-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="debt-payoff-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="debt-payoff-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="debt-payoff-calculator-ad-right-rail-skyscraper">
+            <ins id="debt-payoff-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("debt-payoff-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="debt-payoff-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="debt-payoff-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="debt-payoff-calculator-footer-brand">
+        <a id="debt-payoff-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="debt-payoff-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="debt-payoff-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="debt-payoff-calculator-footer-categories" aria-labelledby="debt-payoff-calculator-footer-categories-heading">
+        <h2 id="debt-payoff-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="debt-payoff-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="debt-payoff-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="debt-payoff-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="debt-payoff-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="debt-payoff-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="debt-payoff-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="debt-payoff-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="debt-payoff-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="debt-payoff-calculator-footer-company" aria-labelledby="debt-payoff-calculator-footer-company-heading">
+        <h2 id="debt-payoff-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="debt-payoff-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="debt-payoff-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="debt-payoff-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="debt-payoff-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="debt-payoff-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="debt-payoff-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="debt-payoff-calculator-footer-bottom" class="border-t border-line">
+      <p id="debt-payoff-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="debt-payoff-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Debt payoff: avalanche vs snowball vs minimum payments only.
+  // Each month every open debt is charged interest = balance x APR / 12 (rounded to the cent),
+  // then receives its own minimum payment (capped at what it owes). In the avalanche and snowball
+  // plans the monthly budget stays fixed at (sum of all minimums + extra payment), so whatever is
+  // left after the minimums - including the minimums of debts already paid off - goes to the
+  // target debt: highest APR first (avalanche, ties -> smaller balance) or smallest starting
+  // balance first (snowball, ties -> higher APR). "Minimums only" pays each debt its own minimum
+  // with no extra and no rollover. Minimum payments are treated as fixed amounts.
+  // Verified (scratchpad w2debt/dp.test.js):
+  //   one debt of $10,000 at 12% with a $222.45 minimum (closed-form level payment
+  //   rB / (1 - (1 + r)^-60) = $222.44, rounded up) -> 60 months, interest within $0.10 of the
+  //   closed form (cent rounding of each month's interest);
+  //   a two-debt case ($1,000 at 12% min $50, $500 at 24% min $25, $100 extra) re-done in plain
+  //   code month by month -> both 10 months and $90.40 interest, the 24% debt cleared in month 5;
+  //   with zero interest the payoff month equals total debt / budget, rounded up;
+  //   avalanche interest <= snowball interest across 2,000 random debt sets, and total paid =
+  //   starting balances + interest in every plan;
+  //   default example ($21,700 over four debts, $200 extra): avalanche 29 months and $3,960.55
+  //   interest; snowball 30 months and $4,315.41; minimums only 58 months and $7,645.93.
+  var MAX_MONTHS = 1200;
+  var MAX_DEBTS = 10;
+  var DEFAULTS = [
+    { name: 'Credit card', balance: 6500, apr: 24.99, min: 195 },
+    { name: 'Store card', balance: 1200, apr: 29.99, min: 45 },
+    { name: 'Car loan', balance: 9800, apr: 7.9, min: 310 },
+    { name: 'Personal loan', balance: 4200, apr: 13.5, min: 145 }
+  ];
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  var monthName = new Intl.DateTimeFormat('en-US', { month: 'short', year: 'numeric' });
+  var rowCounter = 0;
+
+  function cents(x) { return Math.round(x * 100) / 100; }
+
+  function payoffOrder(debts, strategy) {
+    var idx = debts.map(function (d, i) { return i; });
+    idx.sort(function (a, b) {
+      var da = debts[a], db = debts[b];
+      if (strategy === 'avalanche') return (db.apr - da.apr) || (da.balance - db.balance) || (a - b);
+      return (da.balance - db.balance) || (db.apr - da.apr) || (a - b);
+    });
+    return idx;
+  }
+
+  // debts: [{ balance, apr (decimal), min }]; strategy: 'minimum' | 'avalanche' | 'snowball'.
+  function simulate(debts, extra, strategy) {
+    var n = debts.length, bal = debts.map(function (d) { return d.balance; });
+    var paidOffMonth = debts.map(function (d) { return d.balance > 0.005 ? 0 : -1; });
+    var order = payoffOrder(debts, strategy);
+    var budget = debts.reduce(function (s, d) { return s + d.min; }, 0) + extra;
+    var totalInterest = 0, totalPaid = 0, yearEnd = [];
+    for (var m = 1; m <= MAX_MONTHS; m++) {
+      var open = 0;
+      for (var i = 0; i < n; i++) {
+        if (bal[i] <= 0.005) continue;
+        var interest = cents(bal[i] * debts[i].apr / 12);
+        bal[i] += interest;
+        totalInterest += interest;
+      }
+      var avail = budget;
+      for (i = 0; i < n; i++) {
+        if (bal[i] <= 0.005) continue;
+        var pay = Math.min(debts[i].min, bal[i]);
+        bal[i] -= pay; avail -= pay; totalPaid += pay;
+      }
+      if (strategy !== 'minimum') {
+        for (var k = 0; k < n && avail > 0.005; k++) {
+          var j = order[k];
+          if (bal[j] <= 0.005) continue;
+          var more = Math.min(avail, bal[j]);
+          bal[j] -= more; avail -= more; totalPaid += more;
+        }
+      }
+      for (i = 0; i < n; i++) {
+        if (bal[i] <= 0.005) { if (paidOffMonth[i] === 0) paidOffMonth[i] = m; bal[i] = 0; } else open++;
+      }
+      if (m % 12 === 0 || open === 0) yearEnd.push(bal.reduce(function (s, b) { return s + b; }, 0));
+      if (open === 0) return { paidOff: true, months: m, interest: totalInterest, paid: totalPaid, payoffMonth: paidOffMonth, yearEnd: yearEnd };
+    }
+    return { paidOff: false, months: MAX_MONTHS, interest: totalInterest, paid: totalPaid, payoffMonth: paidOffMonth, yearEnd: yearEnd };
+  }
+
+  function duration(months) {
+    var y = Math.floor(months / 12), m = months % 12, parts = [];
+    if (y) parts.push(y + (y === 1 ? ' year' : ' years'));
+    if (m || !y) parts.push(m + (m === 1 ? ' month' : ' months'));
+    return parts.join(' ');
+  }
+
+  function dateAfter(months) {
+    var now = new Date();
+    return monthName.format(new Date(now.getFullYear(), now.getMonth() + months, 1));
+  }
+
+  function set(id, text) { document.getElementById(id).textContent = text; }
+
+  function clearBody(id) {
+    var body = document.getElementById(id);
+    while (body.firstChild) body.removeChild(body.firstChild);
+    return body;
+  }
+
+  function addRow(body, cells) {
+    var tr = document.createElement('tr');
+    cells.forEach(function (text) {
+      var td = document.createElement('td');
+      td.textContent = text;
+      tr.appendChild(td);
+    });
+    body.appendChild(tr);
+  }
+
+  // ---- Debt rows (built with DOM methods; user text is only ever set as values/textContent) ----
+  function el(tag, className, text) {
+    var e = document.createElement(tag);
+    if (className) e.className = className;
+    if (text) e.textContent = text;
+    return e;
+  }
+
+  function numberField(id, label, value, affix, affixFirst, step, max) {
+    var wrap = el('div');
+    var lab = el('label', 'form-label', label);
+    lab.setAttribute('for', id);
+    var group = el('div', 'input-group');
+    var input = el('input', 'min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none');
+    input.type = 'number'; input.id = id; input.min = '0'; input.step = step; input.inputMode = 'decimal';
+    if (max) input.max = max;
+    input.value = value === '' ? '' : String(value);
+    var a = el('span', 'input-affix', affix);
+    if (affixFirst) { group.appendChild(a); group.appendChild(input); } else { group.appendChild(input); group.appendChild(a); }
+    wrap.appendChild(lab); wrap.appendChild(group);
+    return wrap;
+  }
+
+  function addDebtRow(d) {
+    var list = document.getElementById('dpDebts');
+    rowCounter++;
+    var n = rowCounter;
+    var row = el('div', 'space-y-3 rounded-xl border border-line p-4');
+    row.setAttribute('data-debt-row', String(n));
+    var head = el('div', 'flex items-center justify-between gap-3');
+    var title = el('p', 'text-sm font-semibold text-ink', 'Debt');
+    title.setAttribute('data-debt-title', '');
+    var remove = el('button', 'button-secondary h-9 px-3 text-sm', 'Remove');
+    remove.type = 'button';
+    remove.setAttribute('data-remove', '');
+    remove.addEventListener('click', function () {
+      if (list.querySelectorAll('[data-debt-row]').length <= 1) return;
+      row.remove();
+      refreshRows();
+      update();
+    });
+    head.appendChild(title); head.appendChild(remove);
+    row.appendChild(head);
+
+    var nameWrap = el('div');
+    var nameLabel = el('label', 'form-label', 'Name');
+    nameLabel.setAttribute('for', 'dpName' + n);
+    var name = el('input', 'form-control');
+    name.type = 'text'; name.id = 'dpName' + n; name.maxLength = 40; name.autocomplete = 'off';
+    name.placeholder = 'e.g. Visa card';
+    name.value = d.name || '';
+    nameWrap.appendChild(nameLabel); nameWrap.appendChild(name);
+    row.appendChild(nameWrap);
+
+    var pair = el('div', 'form-row form-row-2');
+    pair.appendChild(numberField('dpBal' + n, 'Balance', d.balance, '$', true, '100'));
+    pair.appendChild(numberField('dpApr' + n, 'APR', d.apr, '%', false, '0.1', '100'));
+    row.appendChild(pair);
+    row.appendChild(numberField('dpMin' + n, 'Minimum monthly payment', d.min, '$', true, '5'));
+    list.appendChild(row);
+    refreshRows();
+  }
+
+  function refreshRows() {
+    var rows = document.getElementById('dpDebts').querySelectorAll('[data-debt-row]');
+    rows.forEach(function (row, i) {
+      row.querySelector('[data-debt-title]').textContent = 'Debt ' + (i + 1);
+      var btn = row.querySelector('[data-remove]');
+      btn.disabled = rows.length <= 1;
+      btn.setAttribute('aria-label', 'Remove debt ' + (i + 1));
+    });
+    document.getElementById('dpAdd').disabled = rows.length >= MAX_DEBTS;
+  }
+
+  function readDebts() {
+    var out = [], ok = true;
+    var rows = document.getElementById('dpDebts').querySelectorAll('[data-debt-row]');
+    rows.forEach(function (row, i) {
+      var n = row.getAttribute('data-debt-row');
+      var name = document.getElementById('dpName' + n).value.trim() || ('Debt ' + (i + 1));
+      var balEl = document.getElementById('dpBal' + n), aprEl = document.getElementById('dpApr' + n), minEl = document.getElementById('dpMin' + n);
+      var bal = parseFloat(balEl.value), apr = parseFloat(aprEl.value), min = parseFloat(minEl.value);
+      if (balEl.value.trim() === '' || bal === 0) {
+        [balEl, aprEl, minEl].forEach(function (e) { e.setAttribute('aria-invalid', 'false'); });
+        return; // empty row: ignored
+      }
+      var badBal = isNaN(bal) || bal < 0 || bal > 1e8, badApr = isNaN(apr) || apr < 0 || apr > 100, badMin = isNaN(min) || min <= 0;
+      balEl.setAttribute('aria-invalid', String(badBal));
+      aprEl.setAttribute('aria-invalid', String(badApr));
+      minEl.setAttribute('aria-invalid', String(badMin));
+      if (badBal || badApr || badMin) { ok = false; return; }
+      out.push({ name: name, balance: bal, apr: apr / 100, min: min });
+    });
+    return { ok: ok, debts: out };
+  }
+
+  function clearResults() {
+    ['dpAvTime', 'dpAvInterest', 'dpSaved', 'dpDiff'].forEach(function (id) { set(id, '–'); });
+    set('dpAvNote', ''); set('dpDiffNote', '');
+    clearBody('dpCompare'); clearBody('dpOrder'); clearBody('dpYears');
+  }
+
+  function update() {
+    var error = document.getElementById('dpError');
+    var extra = parseFloat(document.getElementById('dpExtra').value);
+    if (document.getElementById('dpExtra').value.trim() === '') extra = 0;
+    var input = readDebts();
+    var problem = '';
+    if (!input.ok) problem = 'Check the highlighted debts: balances of $0 or more, APRs from 0 to 100% and minimum payments above $0.';
+    else if (!input.debts.length) problem = 'Enter at least one debt with a balance above $0.';
+    else if (isNaN(extra) || extra < 0) problem = 'Enter an extra monthly payment of $0 or more.';
+    if (problem) { error.hidden = false; error.textContent = problem; clearResults(); return; }
+
+    var debts = input.debts;
+    var av = simulate(debts, extra, 'avalanche'), sb = simulate(debts, extra, 'snowball'), mn = simulate(debts, 0, 'minimum');
+    if (!av.paidOff) {
+      error.hidden = false;
+      error.textContent = 'Your total monthly payment does not keep up with the interest, so these debts are not paid off within 100 years. Raise the minimum or extra payments.';
+      clearResults();
+      return;
+    }
+    error.hidden = true;
+    error.textContent = '';
+    set('dpAvTime', duration(av.months));
+    set('dpAvNote', 'Debt-free by ' + dateAfter(av.months) + '.');
+    set('dpAvInterest', money.format(av.interest));
+    set('dpSaved', mn.paidOff ? money.format(Math.max(mn.interest - av.interest, 0)) : 'Not comparable');
+    var diff = sb.interest - av.interest;
+    set('dpDiff', money.format(Math.abs(diff)));
+    set('dpDiffNote', Math.abs(diff) < 0.005 ? 'Both plans cost the same here.'
+      : (diff > 0 ? 'Extra interest the snowball costs' : 'Interest the snowball saves') +
+        (sb.months !== av.months ? '; it finishes ' + duration(Math.abs(sb.months - av.months)) + (sb.months > av.months ? ' later.' : ' sooner.') : '; same finish date.'));
+
+    var compare = clearBody('dpCompare');
+    [['Avalanche (highest APR first)', av], ['Snowball (smallest balance first)', sb], ['Minimum payments only', mn]].forEach(function (p) {
+      var s = p[1];
+      addRow(compare, [p[0], s.paidOff ? duration(s.months) : 'Over 100 years', s.paidOff ? dateAfter(s.months) : '–',
+        s.paidOff ? money.format(s.interest) : '–', s.paidOff ? money.format(s.paid) : '–']);
+    });
+    var minNote = document.getElementById('dpMinNote');
+    minNote.hidden = mn.paidOff;
+    if (!mn.paidOff) minNote.textContent = 'At least one minimum payment does not cover that debt’s monthly interest, so minimum payments alone never clear it.';
+
+    var order = clearBody('dpOrder');
+    var avOrder = payoffOrder(debts, 'avalanche');
+    avOrder.forEach(function (i) {
+      var d = debts[i];
+      addRow(order, [d.name, money.format(d.balance), (d.apr * 100).toFixed(2).replace(/\.?0+$/, '') + '%',
+        dateAfter(av.payoffMonth[i]) + ' (month ' + av.payoffMonth[i] + ')',
+        dateAfter(sb.payoffMonth[i]) + ' (month ' + sb.payoffMonth[i] + ')']);
+    });
+
+    var years = clearBody('dpYears');
+    var total = debts.reduce(function (s, d) { return s + d.balance; }, 0);
+    var count = Math.max(av.yearEnd.length, sb.yearEnd.length, mn.paidOff ? mn.yearEnd.length : 0);
+    function at(s, y) { return y < s.yearEnd.length ? s.yearEnd[y] : (s.paidOff ? 0 : NaN); }
+    addRow(years, ['Today', money.format(total), money.format(total), money.format(total)]);
+    for (var y = 0; y < count; y++) {
+      var vm = at(mn, y);
+      addRow(years, ['Year ' + (y + 1), money.format(at(av, y)), money.format(at(sb, y)), isNaN(vm) ? '–' : money.format(vm)]);
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    DEFAULTS.forEach(addDebtRow);
+    var form = document.getElementById('dpForm');
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    document.getElementById('dpAdd').addEventListener('click', function () {
+      if (document.getElementById('dpDebts').querySelectorAll('[data-debt-row]').length >= MAX_DEBTS) return;
+      addDebtRow({ name: '', balance: '', apr: '', min: '' });
+      update();
+    });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

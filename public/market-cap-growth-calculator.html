@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="en" id="market-cap-growth-calculator-document" data-page-slug="market-cap-growth-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Market Cap Growth Calculator: Project Market Capitalization</title>
+  <meta name="description" content="Project your company&#x27;s market capitalization: enter share price, outstanding shares, growth rate and years to see its future market value and investment size.">
+  <link rel="canonical" href="https://company-marketcap.github.io/market-cap-growth-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Market Cap Growth Calculator: Project Market Capitalization">
+  <meta property="og:description" content="Project your company&#x27;s market capitalization: enter share price, outstanding shares, growth rate and years to see its future market value and investment size.">
+  <meta property="og:url" content="https://company-marketcap.github.io/market-cap-growth-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Market Cap Growth Calculator", "url": "https://company-marketcap.github.io/market-cap-growth-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Project your company's market capitalization: enter share price, outstanding shares, growth rate and years to see its future market value and investment size."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Stocks, Dividends & Trading", "item": "https://company-marketcap.github.io/financial-calculators.html#stock-calculators"}, {"@type": "ListItem", "position": 4, "name": "Market Cap Growth Calculator", "item": "https://company-marketcap.github.io/market-cap-growth-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does a market cap growth calculator show?", "acceptedAnswer": {"@type": "Answer", "text": "It multiplies today's share price by the shares outstanding to get the current market cap, then compounds that value at your expected growth rate for the number of years you choose, giving a projected market capitalization."}}, {"@type": "Question", "name": "How do I calculate market capitalization?", "acceptedAnswer": {"@type": "Answer", "text": "Multiply the price of a single share by the number of outstanding shares. A stock at $41.35 with 62.8 million shares has a market cap of about $2.60 billion."}}, {"@type": "Question", "name": "What are large-cap, mid-cap and small-cap companies?", "acceptedAnswer": {"@type": "Answer", "text": "Large-cap companies have a market cap of roughly $10 billion or more, mid-cap companies fall between about $2 billion and $10 billion, and small-cap companies are below about $2 billion."}}, {"@type": "Question", "name": "Is market cap growth the same as my investment return?", "acceptedAnswer": {"@type": "Answer", "text": "No. Your return depends on the price you paid, dividends and any reinvested earnings. Market cap growth only describes how the company's total equity value changes."}}, {"@type": "Question", "name": "Which growth rate should I enter?", "acceptedAnswer": {"@type": "Answer", "text": "Start with a conservative figure near the long-term average annual return of the index or sector, then rerun the calculator with a lower and a higher rate to see the range of outcomes."}}, {"@type": "Question", "name": "Why does the compound frequency change the result?", "acceptedAnswer": {"@type": "Answer", "text": "More frequent compounding applies growth to a larger base more often, so the projected market cap ends slightly higher than with annual compounding at the same nominal rate."}}, {"@type": "Question", "name": "Does a stock split change the projected market cap?", "acceptedAnswer": {"@type": "Answer", "text": "No. A split multiplies the shares and divides the price by the same factor, so market cap is unchanged; only the implied share price differs."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="market-cap-growth-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="market-cap-growth-calculator" data-page-type="calculator">
+  <a id="market-cap-growth-calculator-skip-link" href="#market-cap-growth-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="market-cap-growth-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="market-cap-growth-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="market-cap-growth-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="market-cap-growth-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="market-cap-growth-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="market-cap-growth-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="market-cap-growth-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="market-cap-growth-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="market-cap-growth-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="market-cap-growth-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="market-cap-growth-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="market-cap-growth-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="market-cap-growth-calculator-header-search-status" aria-controls="market-cap-growth-calculator-header-search-results" data-search-input="header">
+              <p id="market-cap-growth-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="market-cap-growth-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="market-cap-growth-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="market-cap-growth-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="market-cap-growth-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="market-cap-growth-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="market-cap-growth-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="market-cap-growth-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="market-cap-growth-calculator-mobile-search-status" aria-controls="market-cap-growth-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="market-cap-growth-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="market-cap-growth-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="market-cap-growth-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="market-cap-growth-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="market-cap-growth-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="market-cap-growth-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="market-cap-growth-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="market-cap-growth-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="market-cap-growth-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="market-cap-growth-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="market-cap-growth-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="market-cap-growth-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="market-cap-growth-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="market-cap-growth-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="market-cap-growth-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="market-cap-growth-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="market-cap-growth-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="market-cap-growth-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="market-cap-growth-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="market-cap-growth-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="market-cap-growth-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="market-cap-growth-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="market-cap-growth-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="market-cap-growth-calculator-sidebar-search-status" aria-controls="market-cap-growth-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="market-cap-growth-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="market-cap-growth-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="market-cap-growth-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="market-cap-growth-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="market-cap-growth-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="market-cap-growth-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="market-cap-growth-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="market-cap-growth-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="market-cap-growth-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="market-cap-growth-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="market-cap-growth-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="market-cap-growth-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="market-cap-growth-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="market-cap-growth-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="market-cap-growth-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="market-cap-growth-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="market-cap-growth-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="market-cap-growth-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="market-cap-growth-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="market-cap-growth-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators" aria-current="true">Stocks &amp; Trading</a></li><li><a id="market-cap-growth-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="market-cap-growth-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="market-cap-growth-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="market-cap-growth-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="market-cap-growth-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="market-cap-growth-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="market-cap-growth-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="market-cap-growth-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="market-cap-growth-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="market-cap-growth-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="market-cap-growth-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="market-cap-growth-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="market-cap-growth-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="market-cap-growth-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="market-cap-growth-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="market-cap-growth-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="market-cap-growth-calculator" data-calculator-slug="market-cap-growth-calculator" data-sub-category-slug="stock-calculators">
+      <aside id="market-cap-growth-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="market-cap-growth-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="market-cap-growth-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="market-cap-growth-calculator-ad-top-leaderboard">
+            <ins id="market-cap-growth-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("market-cap-growth-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="market-cap-growth-calculator-intro-area" class="space-y-4">
+        <nav id="market-cap-growth-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="market-cap-growth-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="market-cap-growth-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="market-cap-growth-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="market-cap-growth-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#stock-calculators" itemprop="item"><span itemprop="name">Stocks, Dividends &amp; Trading</span></a><meta itemprop="position" content="3"></li>
+            <li id="market-cap-growth-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Market Cap Growth Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/market-cap-growth-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="market-cap-growth-calculator-hero-section" aria-labelledby="market-cap-growth-calculator-hero-heading" data-section="hero">
+          <h1 id="market-cap-growth-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Market Cap Growth Calculator: Project Market Capitalization</h1>
+          <p id="market-cap-growth-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Wondering how big a company could get if its stock keeps compounding? A market cap growth calculator takes today&#x27;s share price and the number of outstanding shares, applies the yearly growth you expect, and shows the projected market cap at the end of your time horizon. It is a quick way for an investor to see which size band a company might reach, and how much investment growth that path implies, before putting real money to work. <!-- SILO_START:slot_a -->If you want to see how the figures change, the <a class="silo-link" href="/pivot-point-calculator.html">pivot point calculator online</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="market-cap-growth-calculator-tool" class="space-y-6" data-page-slug="market-cap-growth-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="mcFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="mcForm" class="space-y-5" novalidate aria-labelledby="mcFormHeading">
+      <h2 id="mcFormHeading" class="panel-heading">Company assumptions</h2>
+      <div><label for="mcCap" class="form-label">Current market cap</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="mcCap" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1000000" value="1000000000" inputmode="decimal"></div><p class="form-hint">Share price × shares outstanding. $1,000,000,000 = $1 billion.</p></div>
+      <div class="form-row form-row-2">
+        <div><label for="mcGrowth" class="form-label">Annual growth rate</label>
+          <div class="input-group"><input type="number" id="mcGrowth" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="-90" max="100" step="0.5" value="12" inputmode="decimal"><span class="input-affix">%</span></div></div>
+        <div><label for="mcYears" class="form-label">Years</label>
+          <div class="input-group"><input type="number" id="mcYears" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1" max="50" step="1" value="10" inputmode="numeric"><span class="input-affix">yrs</span></div></div>
+      </div>
+      <div class="form-row form-row-2">
+        <div><label for="mcPs" class="form-label">Price-to-sales ratio</label>
+          <div class="input-group"><input type="number" id="mcPs" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="0.1" value="4" inputmode="decimal"><span class="input-affix">×</span></div></div>
+        <div><label for="mcMargin" class="form-label">Net profit margin</label>
+          <div class="input-group"><input type="number" id="mcMargin" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="-100" max="100" step="0.5" value="15" inputmode="decimal"><span class="input-affix">%</span></div></div>
+      </div>
+      <div><label for="mcPe" class="form-label">Comparison P/E ratio</label><div class="input-group"><input type="number" id="mcPe" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="0.5" value="20" inputmode="decimal"><span class="input-affix">×</span></div><p class="form-hint">A peer or industry average price-to-earnings ratio, used as a sanity check.</p></div>
+      <h2 class="panel-heading pt-2">Your investment</h2>
+      <div class="form-row form-row-2">
+        <div><label for="mcInvest" class="form-label">Initial investment</label>
+          <div class="input-group"><span class="input-affix">$</span><input type="number" id="mcInvest" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="10000" inputmode="decimal"></div></div>
+        <div><label for="mcMonthly" class="form-label">Monthly addition</label>
+          <div class="input-group"><span class="input-affix">$</span><input type="number" id="mcMonthly" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="50" value="200" inputmode="decimal"></div></div>
+      </div>
+      <details class="form-details">
+        <summary class="form-details-summary">More options: dividends</summary>
+        <div class="form-row form-row-2 mt-3">
+          <div><label for="mcYield" class="form-label">Dividend yield</label>
+            <div class="input-group"><input type="number" id="mcYield" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="20" step="0.1" value="0" inputmode="decimal"><span class="input-affix">%</span></div></div>
+          <div><label for="mcReinvest" class="form-label">Dividends</label>
+            <select id="mcReinvest" class="form-select"><option value="yes" selected>Reinvest</option><option value="no">Take as cash</option></select></div>
+        </div>
+        <p class="form-hint">Paid quarterly as a share of your holding's value. Leave at 0 for a company that pays no dividend.</p>
+      </details>
+      <p id="mcError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="mcResults" aria-live="polite" aria-labelledby="mcResultsHeading">
+      <h2 id="mcResultsHeading" class="panel-heading">Projection after <span id="mcYearsOut">10</span> years</h2>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p class="stat-label">Projected market cap</p><p id="mcFutureCap" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Growth multiple</p><p id="mcMultiple" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Implied annual revenue</p><p id="mcRevenue" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Implied annual earnings</p><p id="mcEarnings" class="stat-value">–</p></div>
+      </div>
+      <dl class="mt-5">
+        <div class="result-row"><dt class="result-term">Implied P/E (P/S ÷ margin)</dt><dd id="mcImpliedPe" class="result-value">–</dd></div>
+        <div class="result-row"><dt class="result-term">Market cap at the comparison P/E</dt><dd id="mcAtPe" class="result-value">–</dd></div>
+      </dl>
+      <h3 class="panel-heading mt-6">Your investment</h3>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p class="stat-label">Ending value</p><p id="mcValue" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Total invested</p><p id="mcContributed" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Total gain</p><p id="mcGain" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Return on investment</p><p id="mcRoi" class="stat-value">–</p></div>
+      </div>
+      <p id="mcCashNote" class="form-hint mt-3" hidden></p>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="mcScheduleHeading" data-section="schedule">
+  <h2 id="mcScheduleHeading" class="panel-heading">Year-by-year projection</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">Revenue and earnings are implied by holding the price-to-sales ratio and net margin constant.</p>
+  <div class="table-scroll mt-5 max-h-[520px]" tabindex="0" role="region" aria-labelledby="mcScheduleHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Year</th><th scope="col">Market cap</th><th scope="col">Revenue</th><th scope="col">Earnings</th><th scope="col">Your investment</th></tr></thead>
+      <tbody id="mcSchedule"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="market-cap-growth-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="market-cap-growth-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Wondering how big a company could get if its stock keeps compounding? A market cap growth calculator takes today&#x27;s share price and the number of outstanding shares, applies the yearly growth you expect, and shows the projected market cap at the end of your time horizon. It is a quick way for an investor to see which size band a company might reach, and how much investment growth that path implies, before putting real money to work. <!-- SILO_START:slot_a_m -->If you want to see how the figures change, the <a class="silo-link" href="/pivot-point-calculator.html">pivot point calculator online</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="market-cap-growth-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="market-cap-growth-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="market-cap-growth-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="market-cap-growth-calculator-ad-in-feed">
+            <ins id="market-cap-growth-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("market-cap-growth-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="market-cap-growth-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="market-cap-growth-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="market-cap-growth-calculator-guide-heading-1">
+<h2 id="market-cap-growth-calculator-guide-heading-1">What a Market Cap Growth Calculator Measures</h2>
+<p>A standard market cap calculator answers one question: what is the company worth today? Growth adds a second question: what could it be worth in a few years if shareholders keep earning the same return rate? The tool multiplies the two numbers that define a public company's <strong>market value</strong>, then compounds the result forward year by year. Because it works with a single growth assumption, the output is a projection, never a forecast of what will actually happen. <!-- SILO_START:slot_b -->Try the <a class="silo-link" href="/company-stock-distribution-analysis-calculator.html">company stock distribution analysis calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_b --></p>
+
+<h3>Market Cap Defined: Share Price Times Outstanding Shares</h3>
+<p>The <strong>market capitalization</strong> of a company is the <strong>total equity value</strong> the stock market assigns to it right now. You get it by multiplying the <strong>price of a single share</strong> by the <strong>number of outstanding shares</strong>, meaning the shares that shareholders currently hold. Treasury stock sits outside that count. Because the stock price changes all day, the figure for a <strong>publicly traded</strong> business moves with it, and the <strong>market value of a stock</strong> is therefore a snapshot rather than a fixed fact.</p>
+
+<h3>Large-Cap, Mid-Cap and Small-Cap Bands</h3>
+<p>Investors use market cap as shorthand for <strong>company size</strong>, and the bands matter because they change how a portfolio behaves:</p>
+<ul>
+<li><strong>Large-cap:</strong> about $10 billion and above, usually mature businesses with steadier results.</li>
+<li><strong>Mid-cap:</strong> roughly $2 billion to $10 billion, established but still expanding.</li>
+<li><strong>Small-cap:</strong> under about $2 billion, often younger firms with the widest swings in both directions.</li>
+</ul>
+<p>Watching a projection cross one of those lines is often more useful than the raw number itself, because index membership, fund mandates and analyst coverage tend to follow the band.</p>
+        </section>
+        <section id="market-cap-growth-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="market-cap-growth-calculator-guide-heading-2">
+<h2 id="market-cap-growth-calculator-guide-heading-2">Market Capitalization Formula and Growth Formula</h2>
+<p>The <strong>market capitalization formula</strong> has only two inputs. Starting market cap is the share price \(P\) times the shares outstanding \(S\): <!-- SILO_START:slot_c -->Next, open the <a class="silo-link" href="/stock-valuation-confidence.html">stock valuation confidence interval calculator online</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_c --></p>
+<p>$$MC_0 = P \times S$$</p>
+<p>To project it forward, the calculator applies the growth rate \(g\) for \(n\) years:</p>
+<p>$$MC_n = MC_0 \times (1 + g)^{n}$$</p>
+<p>If you want the reverse, the growth rate a company needs to move from one valuation to another, solve for \(g\):</p>
+<p>$$g = \left(\frac{MC_n}{MC_0}\right)^{\frac{1}{n}} - 1$$</p>
+<figure><img src="/assets/images/tools/market-cap-growth-calculator/market-cap-growth-formula-breakdown.svg" alt="Two-step market cap growth formula: share price times outstanding shares, then compounded by growth rate, with a $2.60 billion to $10.51 billion example"><figcaption>The market capitalization formula and the growth step, filled in with the worked example.</figcaption></figure>
+
+
+<h3>Compound Frequency and the Growth Rate</h3>
+<p>Annual steps are the default, but <strong>compounding</strong> can happen more often. With \(m\) periods per year the projection becomes \(MC_n = MC_0 \times (1 + g/m)^{m n}\). A higher <strong>compound frequency</strong> lifts the final figure slightly, the same way <strong>compound interest</strong> works in a savings account. Use annual compounding when you think in yearly <strong>average return</strong> terms and a finer frequency only when your growth estimate is expressed that way.</p>
+        </section>
+        <section id="market-cap-growth-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="market-cap-growth-calculator-guide-heading-3">
+<h2 id="market-cap-growth-calculator-guide-heading-3">How to Use the Market Capitalization Calculator</h2>
+<p>The <strong>market capitalization calculator</strong> above needs five entries and returns the result the moment you click the Calculate button:</p>
+<ol>
+<li><strong>Share price:</strong> the latest <strong>stock price</strong> in dollars.</li>
+<li><strong>Outstanding shares:</strong> the count reported in the company's latest filing.</li>
+<li><strong>Annual growth rate:</strong> the percentage you expect the company's value to grow each year.</li>
+<li><strong>Years to grow:</strong> how far ahead you want to look.</li>
+<li><strong>Compounding frequency:</strong> annual, quarterly, monthly or daily.</li>
+</ol>
+
+<h3>Starting Amount: Share Price and Number of Outstanding Shares</h3>
+<p>Think of today's market cap as the <strong>starting amount</strong> of the projection, much like an <strong>initial investment</strong> in an ordinary growth tool. Pull the price from a live quote and the share count from the most recent quarterly report. Using a stale count is the most common source of error, since buybacks and new issuance change it every quarter.</p>
+
+<h3>Rate of Return and Years to Grow</h3>
+<p>The <strong>rate of return</strong> field carries the biggest weight in the result. Small differences compound hard: a few extra points of yearly growth can add billions over a decade. The <strong>years to grow</strong> field sets the <strong>time horizon</strong>, and longer horizons magnify every assumption you make. Run several combinations instead of trusting one, because every investment case looks different once the time frame changes.</p>
+        </section>
+        <section id="market-cap-growth-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="market-cap-growth-calculator-guide-heading-4">
+<h2 id="market-cap-growth-calculator-guide-heading-4">Worked Example: A Mid-Cap Company Growing 15% a Year</h2>
+<p>Take a company whose stock trades at <strong>$41.35</strong> with <strong>62.8 million</strong> outstanding shares. The calculation is simple:</p>
+<p>$$MC_0 = 41.35 \times 62{,}800{,}000 = \$2{,}596{,}780{,}000$$</p>
+<p>That is about <strong>$2.60 billion</strong>, a mid-cap company sitting just above the small-cap line. Now assume 15% yearly growth with annual compounding and no change in the share count. Over ten years the multiplier is \(1.15^{10} = 4.0456\), so the projected market cap is about <strong>$10.51 billion</strong>, and the implied share price is <strong>$167.28</strong>.</p>
+
+<h3>Reading the Accumulation Schedule</h3>
+<p>The accumulation schedule below shows how the projection builds each year. Notice that growth is back-loaded: the first five years add roughly $2.6 billion, while the final five add more than $5 billion.</p>
+<table>
+<thead><tr><th>Year</th><th>Projected market cap ($ million)</th><th>Implied share price ($)</th></tr></thead>
+<tbody>
+<tr><td>0</td><td>2,596.8</td><td>41.35</td></tr>
+<tr><td>2</td><td>3,434.2</td><td>54.69</td></tr>
+<tr><td>4</td><td>4,541.8</td><td>72.32</td></tr>
+<tr><td>6</td><td>6,006.5</td><td>95.65</td></tr>
+<tr><td>8</td><td>7,943.6</td><td>126.49</td></tr>
+<tr><td>9</td><td>9,135.2</td><td>145.46</td></tr>
+<tr><td>10</td><td>10,505.4</td><td>167.28</td></tr>
+</tbody>
+</table>
+<p>The company crosses the $10 billion large-cap threshold after roughly 9.65 years, so under this assumption it graduates from mid-cap to large-cap just before the tenth year ends.</p>
+<figure><img src="/assets/images/tools/market-cap-growth-calculator/market-cap-growth-projection-chart.svg" alt="Line chart of projected market cap rising from $2.60 billion to $10.51 billion over ten years at 15% annual growth"><figcaption>Projected market cap by year, crossing the $10 billion large-cap line at year 9.65.</figcaption></figure>
+
+
+<h3>How the Growth Rate Changes the Outcome</h3>
+<p>Running the same company at three different yearly rates shows how sensitive the answer is. Every row starts from the same $2.60 billion:</p>
+<table>
+<thead><tr><th>Growth rate</th><th>Year 4 ($ billion)</th><th>Year 8 ($ billion)</th><th>Year 10 ($ billion)</th></tr></thead>
+<tbody>
+<tr><td>8%</td><td>3.53</td><td>4.81</td><td>5.61</td></tr>
+<tr><td>12%</td><td>4.09</td><td>6.43</td><td>8.07</td></tr>
+<tr><td>15%</td><td>4.54</td><td>7.94</td><td>10.51</td></tr>
+</tbody>
+</table>
+<p>Only the 15% case reaches large-cap territory. Switching to monthly compounding at a 15% nominal rate lifts the ten-year result to about $11.53 billion, which shows why the compounding setting should match how you framed the growth number.</p>
+<figure><img src="/assets/images/tools/market-cap-growth-calculator/market-cap-growth-rate-scenarios.svg" alt="Bar chart comparing year-10 market cap at 8%, 12% and 15% annual growth rates"><figcaption>The same company at three growth rates: only 15% reaches the large-cap band.</figcaption></figure>
+        </section>
+        <section id="market-cap-growth-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="market-cap-growth-calculator-guide-heading-5">
+<h2 id="market-cap-growth-calculator-guide-heading-5">Checking a Regional Grocer with the Market Cap Calculator</h2>
+<p>Priya Nair is reviewing a regional grocery chain her fund might add as a small holding, and her investment committee wants one number: where could the company's market capitalization sit in five years? She starts with a live quote of <strong>$18.73</strong> a share and the latest filing's <strong>212.4 million</strong> outstanding shares.</p>
+<p>Into the market cap growth tool she types the price, the share count, <strong>9%</strong> annual growth (a little below the chain's recent revenue pace, to stay cautious), <strong>5</strong> years and annual compounding. The calculator multiplies \(18.73 \times 212{,}400{,}000\) and returns a current market cap of <strong>$3.98 billion</strong>, then compounds it to a projected market cap of <strong>$6.12 billion</strong>, with an implied share price of <strong>$28.82</strong> if the share count holds.</p>
+<p>Both numbers sit inside the $2 billion to $10 billion mid-cap range, so the company would stay mid-cap the whole way. That matters because her fund's mandate treats anything above $10 billion as large-cap and moves it to a different sleeve.</p>
+<p>She then asks the reverse question: what yearly growth would carry the chain to $10 billion in five years? Solving \(g = (10 / 3.978)^{1/5} - 1\) gives <strong>20.2%</strong> a year, more than double the roughly 10% long-run average of the S&P 500. Rerunning the tool at 13% instead of 9% lifts the five-year result to <strong>$7.33 billion</strong>, still mid-cap.</p>
+<p>The decision follows from those two runs. Priya recommends a half-size position of 1.5% of the fund, sets $6.12 billion as the base case, and flags $7.33 billion as the upside, rather than assuming a path into the large-cap sleeve.</p>
+        </section>
+        <section id="market-cap-growth-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="market-cap-growth-calculator-guide-heading-6">
+<h2 id="market-cap-growth-calculator-guide-heading-6">Investment Growth Calculator vs Market Cap Projection</h2>
+<p>An <strong>investment growth calculator</strong> follows the dollars you put in: an initial amount, <strong>recurring investments</strong>, an <strong>additional contribution</strong> each period, the <strong>interest earned</strong> and the <strong>final balance</strong>. It tracks <strong>total contributions</strong> separately from growth. A market cap projection works differently, because the company's own value is the thing that compounds, and nobody makes a deposit into it. An <strong>investment calculator</strong> answers "what will my money become?"; the market cap tool answers "how large could this business become?"</p>
+
+<h3>Why Market Cap Growth Is Not Your Investment Return</h3>
+<p>Your personal <strong>return on investment</strong> (ROI) depends on the price you paid, not on the company's size. If the market cap rises 4x but you bought after most of that move, your result will be smaller. Dividends and <strong>reinvested earnings</strong> also add to <strong>investment growth</strong> without showing up in market cap. Treat the projection as context for an investment decision, and run your own return numbers separately, since the time you buy matters as much as the company you pick.</p>
+
+<h3>Fully Diluted Market Cap and Free Float</h3>
+<p>Two adjustments change what the share count means. The <strong>fully diluted market cap</strong> counts options, warrants and convertibles as if they were already exercised, which gives a more conservative picture for a company that pays heavily in stock. The <strong>free float</strong> removes shares held by insiders and strategic owners, leaving the portion that actually trades. Neither replaces the basic figure, but both help when a headline number looks too good.</p>
+        </section>
+        <section id="market-cap-growth-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="market-cap-growth-calculator-guide-heading-7">
+<h2 id="market-cap-growth-calculator-guide-heading-7">Choosing a Realistic Expected Rate of Return</h2>
+<p>The <strong>expected rate of return</strong> is the weakest link in any projection. Pick it from evidence, not hope. The <strong>S&P 500</strong> has delivered a <strong>historical average</strong> near 10% a year before <strong>inflation</strong>, and a mature large company rarely sustains more than that for long. A fast-growing small business can run well above it for a few years and then fade.</p>
+<ul>
+<li>Use the <strong>average annual return</strong> of the index or sector for steady businesses.</li>
+<li>Subtract <strong>inflation</strong> if you want the projection in today's purchasing power.</li>
+<li>Try a conservative, a base and an aggressive case, then compare the three results.</li>
+<li>Shorter horizons deserve lower confidence, because one bad year changes the picture a lot.</li>
+</ul>
+<p>Before you enter the growth rate, benchmark it against the <strong>annual return</strong> of other assets. <strong>Bonds</strong> typically pay less, and government bonds sit at the safe end of that comparison, while <strong>real estate</strong> and <strong>commodities</strong> sit in different parts of the risk spectrum. <strong>Crypto</strong> follows the same market capitalization logic, with coin supply instead of shares, so the calculator's math still applies, but its swings are so wide that one growth input says far less about where it ends up.</p>
+        </section>
+        <section id="market-cap-growth-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="market-cap-growth-calculator-guide-heading-8">
+<h2 id="market-cap-growth-calculator-guide-heading-8">Who Uses a Market Cap Growth Calculator and Why</h2>
+<p>Most people who run this kind of projection are <strong>investors</strong> sizing up a new investment, but the audience is wider than that, and anyone investing in public companies can benefit. Analysts use it to test how much a company must grow to justify a target price. Founders and employees with equity use it to picture what their shares might be worth later. A <strong>financial advisor</strong> can use it to show a client how much of a long-term gain is realistic and how much is wishful thinking.</p>
+
+<h3>Projecting a Fund's Market Capitalization for Retirement Investing</h3>
+<p>Anyone <strong>investing</strong> toward <strong>retirement</strong> thinks in decades, and the projection fits that rhythm. Enter a broad fund's or index's combined market capitalization, a conservative yearly growth rate and a 20- or 30-year horizon, and the calculator shows the total size those companies could reach. Pair that with a standard <strong>investment calculator</strong> that tracks your own deposits, and you get both sides of the story: how big the businesses become and how your <strong>balance</strong> follows.</p>
+
+<h3>Comparing Companies Across Sizes</h3>
+<p>Because the output is a plain dollar figure, you can line up several <strong>companies</strong> side by side and see which one needs the least heroic growth to reach the next band. A small-cap firm that must triple to hit mid-cap status carries more execution <strong>risk</strong> than a mid-cap firm that only needs a 40% gain to reach large-cap. That comparison is another <strong>example</strong> of why growth rate and starting size should be read together rather than separately.</p>
+
+\1Compare the growth rate you entered with the <strong>returns</strong> that <strong>stocks</strong> as a group, <strong>bonds</strong>, <strong>real estate</strong> and <strong>commodities</strong> have historically offered, because the projected market cap is only as credible as that input, and extra risk should come with extra growth. A longer <strong>time</strong> horizon and a longer-held <strong>investment</strong> give compounding more room, but they also give the original assumptions more room to break.</p>
+        </section>
+        <section id="market-cap-growth-calculator-guide-section-9" class="panel article-content p-4 sm:p-6" aria-labelledby="market-cap-growth-calculator-guide-heading-9">
+<h2 id="market-cap-growth-calculator-guide-heading-9">Limits of Market Cap Projections</h2>
+<p>Every projection here is <strong>hypothetical</strong>. These <strong>projections</strong> cannot promise <strong>future results</strong>, because share counts, prices and growth all change. A single compounding rate also hides the bumpy path real companies take, which includes down years, buybacks and acquisitions. Over a long-term horizon the <strong>risk</strong> of a wrong assumption grows with each additional year.</p>
+
+<h3>Stock Splits, Buybacks and Share Count Changes</h3>
+<p>A <strong>stock split</strong> multiplies shares and divides the price, so market cap stays the same. That means a split should not move your projection, only the implied share price. Buybacks shrink the share count and issuance grows it, so the implied price in the schedule is only exact when shares stay constant.</p>
+
+<h3>Market Cap vs Enterprise Value and Valuation</h3>
+<p><strong>Enterprise value</strong> adds debt and subtracts cash to estimate what it would cost to buy the whole business. A rich <strong>valuation</strong> multiple on market cap alone can look different once debt is included, so compare both before judging a company's <strong>share value</strong>. Market cap measures equity only.</p>
+
+<h3>Stocks, ETFs and Mutual Funds: Sizing Positions by Projected Market Cap</h3>
+<p>Individual <strong>stocks</strong> let you target one company's growth, while <strong>ETFs</strong> and <strong>mutual funds</strong> hold baskets sorted by size. Use the projected market cap to see whether a holding is likely to move from mid-cap into large-cap, and rebalance toward it or away from it as that happens. Most investors <strong>diversify</strong> across all three bands, keeping a core of large-cap holdings and a smaller slice of mid-cap and small-cap names, and a projection shows how much weight a single position deserves in your <strong>portfolio</strong> as it grows.</p>
+        </section>
+      </div>
+
+      <section id="market-cap-growth-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="market-cap-growth-calculator-faq-heading" data-section="faq">
+        <h2 id="market-cap-growth-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Market Cap Growth Calculator questions</h2>
+        <div id="market-cap-growth-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="market-cap-growth-calculator-faq-1" class="faq-item" open><summary id="market-cap-growth-calculator-faq-1-summary" class="faq-summary"><h3 id="market-cap-growth-calculator-faq-1-question" class="faq-question">What does a market cap growth calculator show?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="market-cap-growth-calculator-faq-1-answer" class="faq-answer"><p>It multiplies today&#x27;s share price by the shares outstanding to get the current market cap, then compounds that value at your expected growth rate for the number of years you choose, giving a projected market capitalization.</p></div></details>
+          <details id="market-cap-growth-calculator-faq-2" class="faq-item" open><summary id="market-cap-growth-calculator-faq-2-summary" class="faq-summary"><h3 id="market-cap-growth-calculator-faq-2-question" class="faq-question">How do I calculate market capitalization?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="market-cap-growth-calculator-faq-2-answer" class="faq-answer"><p>Multiply the price of a single share by the number of outstanding shares. A stock at $41.35 with 62.8 million shares has a market cap of about $2.60 billion.</p></div></details>
+          <details id="market-cap-growth-calculator-faq-3" class="faq-item" open><summary id="market-cap-growth-calculator-faq-3-summary" class="faq-summary"><h3 id="market-cap-growth-calculator-faq-3-question" class="faq-question">What are large-cap, mid-cap and small-cap companies?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="market-cap-growth-calculator-faq-3-answer" class="faq-answer"><p>Large-cap companies have a market cap of roughly $10 billion or more, mid-cap companies fall between about $2 billion and $10 billion, and small-cap companies are below about $2 billion.</p></div></details>
+          <details id="market-cap-growth-calculator-faq-4" class="faq-item" open><summary id="market-cap-growth-calculator-faq-4-summary" class="faq-summary"><h3 id="market-cap-growth-calculator-faq-4-question" class="faq-question">Is market cap growth the same as my investment return?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="market-cap-growth-calculator-faq-4-answer" class="faq-answer"><p>No. Your return depends on the price you paid, dividends and any reinvested earnings. Market cap growth only describes how the company&#x27;s total equity value changes.</p></div></details>
+          <details id="market-cap-growth-calculator-faq-5" class="faq-item" open><summary id="market-cap-growth-calculator-faq-5-summary" class="faq-summary"><h3 id="market-cap-growth-calculator-faq-5-question" class="faq-question">Which growth rate should I enter?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="market-cap-growth-calculator-faq-5-answer" class="faq-answer"><p>Start with a conservative figure near the long-term average annual return of the index or sector, then rerun the calculator with a lower and a higher rate to see the range of outcomes.</p></div></details>
+          <details id="market-cap-growth-calculator-faq-6" class="faq-item" open><summary id="market-cap-growth-calculator-faq-6-summary" class="faq-summary"><h3 id="market-cap-growth-calculator-faq-6-question" class="faq-question">Why does the compound frequency change the result?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="market-cap-growth-calculator-faq-6-answer" class="faq-answer"><p>More frequent compounding applies growth to a larger base more often, so the projected market cap ends slightly higher than with annual compounding at the same nominal rate.</p></div></details>
+          <details id="market-cap-growth-calculator-faq-7" class="faq-item" open><summary id="market-cap-growth-calculator-faq-7-summary" class="faq-summary"><h3 id="market-cap-growth-calculator-faq-7-question" class="faq-question">Does a stock split change the projected market cap?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="market-cap-growth-calculator-faq-7-answer" class="faq-answer"><p>No. A split multiplies the shares and divides the price by the same factor, so market cap is unchanged; only the implied share price differs.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="market-cap-growth-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="market-cap-growth-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="market-cap-growth-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="market-cap-growth-calculator-ad-bottom-leaderboard">
+            <ins id="market-cap-growth-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("market-cap-growth-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="market-cap-growth-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="market-cap-growth-calculator-right-rail-top" class="mb-6">
+        <aside id="market-cap-growth-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="market-cap-growth-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="market-cap-growth-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="market-cap-growth-calculator-ad-right-rail-rectangle">
+            <ins id="market-cap-growth-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("market-cap-growth-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="market-cap-growth-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="market-cap-growth-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="market-cap-growth-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="market-cap-growth-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="market-cap-growth-calculator-ad-right-rail-skyscraper">
+            <ins id="market-cap-growth-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("market-cap-growth-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="market-cap-growth-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="market-cap-growth-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="market-cap-growth-calculator-footer-brand">
+        <a id="market-cap-growth-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="market-cap-growth-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="market-cap-growth-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="market-cap-growth-calculator-footer-categories" aria-labelledby="market-cap-growth-calculator-footer-categories-heading">
+        <h2 id="market-cap-growth-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="market-cap-growth-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="market-cap-growth-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="market-cap-growth-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="market-cap-growth-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="market-cap-growth-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="market-cap-growth-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="market-cap-growth-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="market-cap-growth-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="market-cap-growth-calculator-footer-company" aria-labelledby="market-cap-growth-calculator-footer-company-heading">
+        <h2 id="market-cap-growth-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="market-cap-growth-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="market-cap-growth-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="market-cap-growth-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="market-cap-growth-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="market-cap-growth-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="market-cap-growth-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="market-cap-growth-calculator-footer-bottom" class="border-t border-line">
+      <p id="market-cap-growth-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="market-cap-growth-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Market cap growth projection.
+  //   Market cap in year t = cap0 × (1 + g)^t
+  //   Implied revenue = market cap ÷ P/S;  implied earnings = revenue × net margin
+  //   Implied P/E = market cap ÷ earnings = P/S ÷ margin; value at a comparison P/E = earnings × P/E
+  // The investment is assumed to track the market cap (no dilution or buybacks): monthly growth
+  // (1 + g)^(1/12) − 1, additions at the end of each month, dividends of yield/4 of the holding's
+  // value paid quarterly and either reinvested or kept as cash.
+  // Checks (scratchpad tests/market-cap-growth.test.js): $1B at 15% for 10 yrs = $4.0456B (closed form);
+  // $10,000 at 12% for 10 yrs with no additions = $31,058.48 = 10,000 × 1.12^10; $200/month at 0% for
+  // 10 yrs = $24,000 invested, $0 gain; $10,000 + $200/month at 12% for 10 yrs = $75,444.49, matching
+  // 10,000 × 1.12^10 + 200 × ((1 + i)^120 − 1) / i with i = 1.12^(1/12) − 1; 4% yield reinvested at 0% growth for 1 yr = 1.01^4.
+  // Fixes vs the old site: removed random "volatility" (results changed on every click), the hidden
+  // 2%/yr dividend and the invented growth-linked margin; a 0 entry is no longer replaced by a default.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 });
+  var big = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', notation: 'compact', maximumFractionDigits: 2 });
+
+  function num(id) {
+    var v = parseFloat(document.getElementById(id).value);
+    return isNaN(v) ? NaN : v;
+  }
+
+  function bigMoney(v) {
+    if (Math.abs(v) < 0.005) v = 0;
+    return Math.abs(v) >= 1e6 ? big.format(v) : money.format(v);
+  }
+
+  function project(o) {
+    var g = o.growth / 100, margin = o.margin / 100, y = o.yieldPct / 100;
+    var monthlyGrowth = Math.pow(1 + g, 1 / 12) - 1;
+    var balance = o.invest, contributed = o.invest, cash = 0, rows = [];
+    for (var m = 1; m <= o.years * 12; m++) {
+      balance = balance * (1 + monthlyGrowth);
+      if (m % 3 === 0 && y > 0) {
+        var dividend = balance * y / 4;
+        if (o.reinvest) balance += dividend; else cash += dividend;
+      }
+      balance += o.monthly;
+      contributed += o.monthly;
+      if (m % 12 === 0) {
+        var year = m / 12, cap = o.cap * Math.pow(1 + g, year), revenue = cap / o.ps;
+        rows.push({ year: year, cap: cap, revenue: revenue, earnings: revenue * margin, value: balance + cash });
+      }
+    }
+    var last = rows[rows.length - 1];
+    return { cap: last.cap, revenue: last.revenue, earnings: last.earnings, balance: balance, cash: cash,
+             contributed: contributed, total: balance + cash, rows: rows };
+  }
+
+  function update() {
+    var o = {
+      cap: num('mcCap'), growth: num('mcGrowth'), years: Math.round(num('mcYears')), ps: num('mcPs'),
+      margin: num('mcMargin'), pe: num('mcPe'), invest: num('mcInvest'), monthly: num('mcMonthly'),
+      yieldPct: num('mcYield'), reinvest: document.getElementById('mcReinvest').value === 'yes'
+    };
+    var error = document.getElementById('mcError');
+    var msg = '';
+    if ([o.cap, o.growth, o.years, o.ps, o.margin, o.pe, o.invest, o.monthly, o.yieldPct].some(isNaN)) msg = 'Fill in every field with a number.';
+    else if (o.cap <= 0 || o.ps <= 0 || o.pe <= 0) msg = 'Market cap, price-to-sales and P/E must be greater than 0.';
+    else if (o.growth < -90 || o.growth > 100) msg = 'Enter a growth rate from -90% to 100%.';
+    else if (o.years < 1 || o.years > 50) msg = 'Enter 1 to 50 years.';
+    else if (o.margin < -100 || o.margin > 100) msg = 'Enter a net margin from -100% to 100%.';
+    else if (o.invest < 0 || o.monthly < 0) msg = 'Investment amounts cannot be negative.';
+    else if (o.yieldPct < 0 || o.yieldPct > 20) msg = 'Enter a dividend yield from 0% to 20%.';
+    error.hidden = !msg;
+    error.textContent = msg;
+    if (msg) return;
+
+    var r = project(o);
+    document.getElementById('mcYearsOut').textContent = String(o.years);
+    document.getElementById('mcFutureCap').textContent = bigMoney(r.cap);
+    document.getElementById('mcMultiple').textContent = (r.cap / o.cap).toFixed(2) + '×';
+    document.getElementById('mcRevenue').textContent = bigMoney(r.revenue);
+    document.getElementById('mcEarnings').textContent = bigMoney(r.earnings);
+    if (o.margin > 0) {
+      document.getElementById('mcImpliedPe').textContent = (o.ps / (o.margin / 100)).toFixed(1) + '×';
+      document.getElementById('mcAtPe').textContent = bigMoney(r.earnings * o.pe);
+    } else {
+      document.getElementById('mcImpliedPe').textContent = 'n/a (no profit)';
+      document.getElementById('mcAtPe').textContent = 'n/a (no profit)';
+    }
+    var gain = r.total - r.contributed;
+    document.getElementById('mcValue').textContent = money.format(r.total);
+    document.getElementById('mcContributed').textContent = money.format(r.contributed);
+    document.getElementById('mcGain').textContent = money.format(gain);
+    document.getElementById('mcRoi').textContent = r.contributed > 0 ? (gain / r.contributed * 100).toFixed(2) + '%' : '–';
+    var note = document.getElementById('mcCashNote');
+    note.hidden = !(r.cash > 0);
+    note.textContent = r.cash > 0 ? 'Ending value includes ' + money.format(r.cash) + ' of dividends taken as cash (not reinvested).' : '';
+    document.getElementById('mcSchedule').innerHTML = r.rows.map(function (row) {
+      return '<tr><td>' + row.year + '</td><td>' + bigMoney(row.cap) + '</td><td>' + bigMoney(row.revenue) + '</td><td>' +
+             bigMoney(row.earnings) + '</td><td>' + money.format(row.value) + '</td></tr>';
+    }).join('');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('mcForm');
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

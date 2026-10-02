@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="en" id="fha-loan-calculator-document" data-page-slug="fha-loan-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FHA Loan Calculator: FHA Mortgage Payment Estimator</title>
+  <meta name="description" content="Use this FHA loan calculator to estimate your monthly payment, including mortgage insurance and property taxes, and see the total interest over the life of your loan.">
+  <link rel="canonical" href="https://company-marketcap.github.io/fha-loan-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="FHA Loan Calculator: FHA Mortgage Payment Estimator">
+  <meta property="og:description" content="Use this FHA loan calculator to estimate your monthly payment, including mortgage insurance and property taxes, and see the total interest over the life of your loan.">
+  <meta property="og:url" content="https://company-marketcap.github.io/fha-loan-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "FHA Loan Calculator", "url": "https://company-marketcap.github.io/fha-loan-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Use this FHA loan calculator to estimate your monthly payment, including mortgage insurance and property taxes, and see the total interest over the life of your loan."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Mortgage & Home Buying", "item": "https://company-marketcap.github.io/financial-calculators.html#mortgage-calculators"}, {"@type": "ListItem", "position": 4, "name": "FHA Loan Calculator", "item": "https://company-marketcap.github.io/fha-loan-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does an FHA loan calculator estimate?", "acceptedAnswer": {"@type": "Answer", "text": "It estimates your total monthly payment on a mortgage insured by the Federal Housing Administration: principal and interest, the annual mortgage insurance premium, property tax, homeowners insurance and any HOA dues, plus loan totals and a payoff schedule."}}, {"@type": "Question", "name": "How much is the upfront MIP on an FHA loan?", "acceptedAnswer": {"@type": "Answer", "text": "The upfront mortgage insurance premium is 1.75% of the base loan amount. Most borrowers roll it into the loan rather than paying it at closing, which is why the loan amount with upfront MIP is higher than price minus down payment."}}, {"@type": "Question", "name": "How much is the annual MIP, and how long does it last?", "acceptedAnswer": {"@type": "Answer", "text": "The annual MIP is typically 0.50% to 0.55% of the base loan for 30-year loans on standard amounts, depending on your down payment. With less than 10% down it usually lasts the full term; with 10% or more it can end after 11 years. Use the duration field to model either case."}}, {"@type": "Question", "name": "What is the minimum down payment for an FHA loan?", "acceptedAnswer": {"@type": "Answer", "text": "The minimum is 3.5% of the purchase price for borrowers with a credit score of 580 or higher. Scores between 500 and 579 generally need at least 10% down."}}, {"@type": "Question", "name": "Does the monthly payment include property taxes and insurance?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, when the optional costs box is checked. Lenders usually collect property tax and homeowners insurance monthly into an escrow account, so the calculator divides your yearly amounts by 12 and adds them to the payment."}}, {"@type": "Question", "name": "How do extra payments change my FHA loan?", "acceptedAnswer": {"@type": "Answer", "text": "Extra monthly, yearly or one-time payments go straight to principal, which shortens the payoff date and cuts total interest. Enter an amount and its start date to see the new payoff month and the updated yearly schedule."}}, {"@type": "Question", "name": "Can I refinance an FHA loan to remove mortgage insurance?", "acceptedAnswer": {"@type": "Answer", "text": "Often yes. Once you have enough equity and a strong credit profile, refinancing into a conventional loan can drop the annual MIP, though you will pay closing costs on the new loan."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="fha-loan-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="fha-loan-calculator" data-page-type="calculator">
+  <a id="fha-loan-calculator-skip-link" href="#fha-loan-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="fha-loan-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="fha-loan-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="fha-loan-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="fha-loan-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="fha-loan-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="fha-loan-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="fha-loan-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="fha-loan-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="fha-loan-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="fha-loan-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="fha-loan-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="fha-loan-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="fha-loan-calculator-header-search-status" aria-controls="fha-loan-calculator-header-search-results" data-search-input="header">
+              <p id="fha-loan-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="fha-loan-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="fha-loan-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="fha-loan-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="fha-loan-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="fha-loan-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="fha-loan-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="fha-loan-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="fha-loan-calculator-mobile-search-status" aria-controls="fha-loan-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="fha-loan-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="fha-loan-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="fha-loan-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="fha-loan-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="fha-loan-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="fha-loan-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="fha-loan-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="fha-loan-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="fha-loan-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="fha-loan-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="fha-loan-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="fha-loan-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="fha-loan-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="fha-loan-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="fha-loan-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="fha-loan-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="fha-loan-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="fha-loan-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="fha-loan-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="fha-loan-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="fha-loan-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="fha-loan-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="fha-loan-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="fha-loan-calculator-sidebar-search-status" aria-controls="fha-loan-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="fha-loan-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="fha-loan-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="fha-loan-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="fha-loan-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="fha-loan-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="fha-loan-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="fha-loan-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="fha-loan-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="fha-loan-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators" aria-current="true">Mortgage &amp; Home Buying</a></li><li><a id="fha-loan-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="fha-loan-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="fha-loan-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="fha-loan-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="fha-loan-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="fha-loan-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="fha-loan-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="fha-loan-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="fha-loan-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="fha-loan-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="fha-loan-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="fha-loan-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="fha-loan-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="fha-loan-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="fha-loan-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="fha-loan-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="fha-loan-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="fha-loan-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="fha-loan-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="fha-loan-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="fha-loan-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="fha-loan-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="fha-loan-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="fha-loan-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="fha-loan-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="fha-loan-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="fha-loan-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="fha-loan-calculator" data-calculator-slug="fha-loan-calculator" data-sub-category-slug="mortgage-calculators">
+      <aside id="fha-loan-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="fha-loan-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="fha-loan-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="fha-loan-calculator-ad-top-leaderboard">
+            <ins id="fha-loan-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("fha-loan-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="fha-loan-calculator-intro-area" class="space-y-4">
+        <nav id="fha-loan-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="fha-loan-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="fha-loan-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="fha-loan-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="fha-loan-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#mortgage-calculators" itemprop="item"><span itemprop="name">Mortgage &amp; Home Buying</span></a><meta itemprop="position" content="3"></li>
+            <li id="fha-loan-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">FHA Loan Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/fha-loan-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="fha-loan-calculator-hero-section" aria-labelledby="fha-loan-calculator-hero-heading" data-section="hero">
+          <h1 id="fha-loan-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">FHA Loan Calculator: FHA Mortgage Payment Estimator</h1>
+          <p id="fha-loan-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Wondering what a government-backed mortgage will really cost you each month? The FHA loan calculator turns your home price, down payment, interest rate and loan term into a complete monthly payment, with mortgage insurance, taxes and homeowners insurance already folded in. Built for first-time homebuyers and anyone who wants to qualify with a lower credit score, it shows how FHA loans behave before a lender ever pulls your file. <!-- SILO_START:slot_a -->The <a class="silo-link" href="/house-affordability-calculator.html">free house affordability calculator</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="fha-loan-calculator-tool" class="space-y-6" data-page-slug="fha-loan-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="fhFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="fhForm" class="space-y-5" novalidate aria-labelledby="fhFormHeading">
+      <h2 id="fhFormHeading" class="panel-heading">Enter your FHA loan details</h2>
+<div><label for="fhPrice" class="form-label">Home price</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="fhPrice" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1000" value="400000" inputmode="decimal"></div></div>
+<div><label for="fhDown" class="form-label">Down payment</label><div class="input-group"><input type="number" id="fhDown" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="any" value="3.5" inputmode="decimal" aria-describedby="fhDownHint"><select id="fhDownUnit" aria-label="Down payment unit" class="shrink-0 border-l border-line bg-surface-muted px-2 text-sm font-semibold text-ink-muted focus:outline-none"><option value="percent" selected>%</option><option value="dollar">$</option></select></div><p id="fhDownHint" class="form-hint"></p></div>
+<div class="form-row form-row-2">
+<div><label for="fhRate" class="form-label">Interest rate</label><div class="input-group"><input type="number" id="fhRate" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="30" step="0.125" value="6.25" inputmode="decimal"><span class="input-affix">%</span></div></div>
+<div><label for="fhTerm" class="form-label">Loan term</label><select id="fhTerm" class="form-select"><option value="30" selected>30 years</option><option value="25">25 years</option><option value="20">20 years</option><option value="15">15 years</option><option value="10">10 years</option></select></div>
+</div>
+<label class="form-choice"><input type="checkbox" id="fhFinance" class="form-choice-input" checked><span class="form-choice-text">Add the upfront MIP to the loan<span class="form-choice-note">Most borrowers do. Untick to pay it in cash at closing.</span></span></label>
+<h3 class="pt-2 font-display text-base font-bold">Taxes, insurance and fees</h3>
+<div class="form-row form-row-2">
+<div><label for="fhTax" class="form-label">Property tax</label><div class="input-group"><input type="number" id="fhTax" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="any" value="1.1" inputmode="decimal"><select id="fhTaxUnit" aria-label="Property tax unit" class="shrink-0 border-l border-line bg-surface-muted px-2 text-sm font-semibold text-ink-muted focus:outline-none"><option value="percent" selected>% / yr</option><option value="dollar">$ / yr</option></select></div></div>
+<div><label for="fhIns" class="form-label">Home insurance</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="fhIns" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="1800" inputmode="decimal"><span class="input-affix">/ yr</span></div></div>
+</div>
+<div><label for="fhHoa" class="form-label">HOA dues</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="fhHoa" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="0" inputmode="decimal"><span class="input-affix">/ mo</span></div></div>
+      <p id="fhError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="fhResults" aria-live="polite" aria-labelledby="fhResultsHeading">
+      <h2 id="fhResultsHeading" class="panel-heading">Your results</h2>
+<div class="stat-grid mt-4">
+<div class="stat-card stat-card-highlight"><p class="stat-label">Monthly payment (first year)</p><p id="fhMonthly" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">Total loan amount</p><p id="fhLoan" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">Upfront MIP</p><p id="fhUfmip" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">Annual MIP rate</p><p id="fhMipRate" class="stat-value">–</p></div>
+</div>
+<h3 class="mt-6 font-display text-base font-bold">Monthly payment breakdown</h3>
+<div class="mt-2">
+<div class="result-row"><span class="result-term">Principal and interest</span><span id="fhPI" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Annual MIP (monthly share)</span><span id="fhMip" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Property tax</span><span id="fhTaxMo" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Home insurance</span><span id="fhInsMo" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">HOA dues</span><span id="fhHoaMo" class="result-value">–</span></div>
+</div>
+<p id="fhMipNote" class="form-hint"></p>
+<h3 class="mt-6 font-display text-base font-bold">Over the life of the loan</h3>
+<div class="mt-2">
+<div class="result-row"><span class="result-term">Base loan amount</span><span id="fhBase" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Loan-to-value (base loan)</span><span id="fhLtv" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Annual MIP charged for</span><span id="fhDuration" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Total MIP (upfront and annual)</span><span id="fhTotalMip" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Total interest</span><span id="fhTotalInterest" class="result-value">–</span></div>
+</div>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="fhScheduleHeading" data-section="schedule">
+  <h2 id="fhScheduleHeading" class="panel-heading">Year-by-year schedule</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">Principal, interest and annual MIP paid each year. Property tax, insurance and HOA dues are not included.</p>
+  <div class="table-scroll mt-5 max-h-[520px]" tabindex="0" role="region" aria-labelledby="fhScheduleHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Year</th><th scope="col">Principal</th><th scope="col">Interest</th><th scope="col">Annual MIP</th><th scope="col">Ending balance</th></tr></thead>
+      <tbody id="fhSchedule"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="fha-loan-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="fha-loan-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Wondering what a government-backed mortgage will really cost you each month? The FHA loan calculator turns your home price, down payment, interest rate and loan term into a complete monthly payment, with mortgage insurance, taxes and homeowners insurance already folded in. Built for first-time homebuyers and anyone who wants to qualify with a lower credit score, it shows how FHA loans behave before a lender ever pulls your file. <!-- SILO_START:slot_a_m -->The <a class="silo-link" href="/house-affordability-calculator.html">free house affordability calculator</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="fha-loan-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="fha-loan-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="fha-loan-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="fha-loan-calculator-ad-in-feed">
+            <ins id="fha-loan-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("fha-loan-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="fha-loan-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="fha-loan-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="fha-loan-calculator-guide-heading-1">
+<h2 id="fha-loan-calculator-guide-heading-1">How the FHA Loan Calculator Works</h2>
+<p>An FHA loan is a mortgage insured by the Federal Housing Administration, which is why borrowers with modest savings or a lower credit score can often qualify when a conventional loan is out of reach. The calculator mirrors how a lender builds your <strong>FHA mortgage payment</strong>: it starts with the money you borrow, adds the insurance premiums the program requires, then layers on the housing costs a lender collects through escrow. Treat this FHA mortgage calculator as a copy of the lender's worksheet: each input below changes a different part of that total. <!-- SILO_START:slot_b -->If you want to see how the figures change, the <a class="silo-link" href="/like-kind-exchange-calculator.html">like kind exchange calculator online</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_b --></p>
+
+<h3>Home Price and Down Payment</h3>
+<p>Your <strong>home price</strong> is the purchase price you and the seller agree on. Your <strong>down payment</strong> is the cash you pay at closing, and it is subtracted from the price to give the base loan amount. FHA loans allow a down payment as low as 3.5% when your credit score is 580 or higher, and borrowers with a 10% down payment get a shorter insurance period, covered later in this guide.</p>
+
+<h3>Interest Rate and Loan Term</h3>
+<p>The <strong>interest rate</strong> is the yearly cost of borrowing, usually a fixed interest rate that stays the same for the whole loan. Your <strong>loan term</strong> is the number of years you take to repay it. A 30-year term gives the smallest monthly payment, while a 15-year term costs more each month but removes a large share of the total interest. Current mortgage rates change daily, so enter the quote your lender gave you rather than an advertised average.</p>
+
+<h3>Mortgage Insurance Premium: Upfront MIP and Annual MIP</h3>
+<p>All FHA loans carry a <strong>mortgage insurance premium</strong> (MIP) in two parts. The <strong>upfront MIP</strong> is 1.75% of the base loan amount and is normally rolled into the loan, so you borrow a little more instead of paying it at closing. The <strong>annual MIP</strong> is a yearly percentage of the loan, divided by 12 and added to each monthly payment. Together they replace the private mortgage insurance a conventional loan would charge, and they are the main reason an FHA payment looks different from a conventional one.</p>
+
+<h3>Property Tax, Home Insurance and HOA Dues</h3>
+<p><strong>Property tax</strong> depends on the assessed value of the home and your local rate, and your loan servicer typically collects it monthly. <strong>Home insurance</strong>, also called homeowners insurance, protects the house against fire, storms and liability, and a lender will not close without it. <strong>HOA dues</strong> are not part of the mortgage itself, but they still belong in your budget because they raise your total out-of-pocket cost each month.</p>
+        </section>
+        <section id="fha-loan-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="fha-loan-calculator-guide-heading-2">
+<h2 id="fha-loan-calculator-guide-heading-2">FHA Mortgage Payment Formula</h2>
+<p>The principal and interest portion of the <strong>FHA loan payment</strong> uses the standard amortizing-loan formula, applied to the base loan plus the upfront MIP: <!-- SILO_START:slot_c -->The <a class="silo-link" href="/home-closing-cost-calculator.html">free home closing cost calculator</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_c --></p>
+<p>$$M = L \times \frac{i\,(1+i)^{n}}{(1+i)^{n}-1}$$</p>
+<p>Here \(M\) is the monthly principal and interest, \(L\) is the total loan amount including the upfront MIP, \(i\) is the monthly interest rate (the annual rate divided by 12) and \(n\) is the number of monthly installments. The full monthly figure then adds the other recurring costs:</p>
+<p>$$\text{Total} = M + \frac{L_{base} \times \text{MIP}_{annual}}{12} + \frac{\text{Tax}}{12} + \frac{\text{Insurance}}{12} + \text{HOA}$$</p>
+<table>
+<thead><tr><th>Part of the payment</th><th>How it is calculated</th><th>Who receives it</th></tr></thead>
+<tbody>
+<tr><td>Principal and interest</td><td>Amortization formula on the total loan amount</td><td>Your lender or loan servicer</td></tr>
+<tr><td>Annual MIP (monthly share)</td><td>Base loan × annual MIP rate ÷ 12</td><td>FHA insurance fund</td></tr>
+<tr><td>Property taxes</td><td>Assessed value × local tax rate ÷ 12</td><td>Local government, through your escrow account</td></tr>
+<tr><td>Home insurance</td><td>Yearly premium ÷ 12</td><td>Insurer, through escrow</td></tr>
+<tr><td>HOA dues</td><td>Flat monthly fee</td><td>Homeowners association, paid directly</td></tr>
+</tbody>
+</table>
+        </section>
+        <section id="fha-loan-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="fha-loan-calculator-guide-heading-3">
+<h2 id="fha-loan-calculator-guide-heading-3">Worked Example: A $342,500 FHA Loan Payment</h2>
+<p>Suppose you are buying a <strong>$342,500</strong> house with a <strong>5% down payment ($17,125)</strong> on a 30-year fixed <strong>6.375%</strong> mortgage. Your base loan is $325,375 and the upfront MIP is 1.75% of that, or $5,694.06, so the <strong>total loan amount is $331,069.06</strong>. Because 5% down puts your loan-to-value ratio at exactly 95%, the annual MIP rate is 0.50%. Taxes run at 1.1% of the price and homeowners insurance is $1,680 a year, with no HOA. Running the numbers through the formula gives the monthly breakdown below.</p>
+<table>
+<thead><tr><th>Monthly breakdown</th><th>Amount</th></tr></thead>
+<tbody>
+<tr><td>Principal and interest</td><td>$2,065.44</td></tr>
+<tr><td>Annual MIP (0.50% of $325,375 ÷ 12)</td><td>$135.57</td></tr>
+<tr><td>Property tax ($3,767.50 ÷ 12)</td><td>$313.96</td></tr>
+<tr><td>Home insurance ($1,680 ÷ 12)</td><td>$140.00</td></tr>
+<tr><td><strong>Total monthly payment</strong></td><td><strong>$2,654.97</strong></td></tr>
+</tbody>
+</table>
+<p>The loan totals tell the longer story. Over 360 payments you repay $743,558.48 in principal and interest, which means the <strong>total interest is $412,489.42</strong> on top of the $331,069.06 you borrowed. A pie chart of the first payment would show about 78% going to principal and interest, 5% to mortgage insurance and 17% to taxes and homeowners insurance.</p>
+<figure><img src="/assets/images/tools/fha-loan-calculator/fha-loan-calculator-monthly-payment-breakdown.svg" alt="Donut chart splitting a $2,654.97 monthly FHA payment into principal and interest, property tax, home insurance and annual MIP"><figcaption>Principal and interest take $2,065.44 of the first month's payment; escrow items and MIP cover the other $589.53.</figcaption></figure>
+
+<h3>Amortization Schedule Milestones</h3>
+<p>An <strong>amortization schedule</strong> lists how each payment splits between interest and principal. Early payments are mostly interest, and the balance falls slowly at first and then faster. A bar chart of the schedule shows interest shrinking and principal growing every year.</p>
+<table>
+<thead><tr><th>Payment number</th><th>Interest portion</th><th>Principal portion</th><th>Ending balance</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>$1,758.80</td><td>$306.64</td><td>$330,762.42</td></tr>
+<tr><td>60 (year 5)</td><td>$1,646.27</td><td>$419.17</td><td>$309,467.61</td></tr>
+<tr><td>120 (year 10)</td><td>$1,489.40</td><td>$576.04</td><td>$279,781.88</td></tr>
+<tr><td>240 (year 20)</td><td>$977.56</td><td>$1,087.88</td><td>$182,923.15</td></tr>
+<tr><td>360 (payoff date)</td><td>$10.91</td><td>$2,054.53</td><td>$0.00</td></tr>
+</tbody>
+</table>
+<p>After ten years you have paid down only about $51,000 of the $331,069.06 balance, which is why a prepayment strategy matters more on a government-backed loan than most people expect.</p>
+<figure><img src="/assets/images/tools/fha-loan-calculator/fha-loan-amortization-schedule-balance-curve.svg" alt="Line chart of the remaining balance on a $331,069.06 FHA loan falling from year 0 to year 30"><figcaption>The balance drops about $51,000 in ten years, then accelerates as more of each payment goes to principal.</figcaption></figure>
+        </section>
+        <section id="fha-loan-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="fha-loan-calculator-guide-heading-4">
+<h2 id="fha-loan-calculator-guide-heading-4">How Your Down Payment Changes the Monthly FHA Loan Payment</h2>
+<p>The same $342,500 house at the same 6.375% rate shows how sensitive an FHA loan is to your <strong>down payment</strong>. Going from the 3.5% minimum to a 10% down payment trims the monthly figure by more than $160 and moves you to a lower insurance tier.</p>
+<table>
+<thead><tr><th>Down payment</th><th>Loan amount with upfront MIP</th><th>Annual MIP rate</th><th>Total monthly payment</th></tr></thead>
+<tbody>
+<tr><td>3.5% ($11,987.50)</td><td>$336,296.47</td><td>0.55%</td><td>$2,703.50</td></tr>
+<tr><td>5% ($17,125.00)</td><td>$331,069.06</td><td>0.50%</td><td>$2,654.97</td></tr>
+<tr><td>10% ($34,250.00)</td><td>$313,644.38</td><td>0.50%</td><td>$2,539.13</td></tr>
+</tbody>
+</table>
+<figure><img src="/assets/images/tools/fha-loan-calculator/fha-down-payment-vs-monthly-payment.svg" alt="Bar chart comparing the total monthly payment at 3.5%, 5% and 10% down on a $342,500 home"><figcaption>Each step up in down payment lowers the monthly total, with 10% down saving $164.37 versus 3.5%.</figcaption></figure>
+<p>A <strong>10% down payment</strong> also changes how long the annual premium lasts. Borrowers who put down at least 10% can have the annual MIP removed after <strong>11 years</strong>, while smaller down payments keep it for the life of the loan.</p>
+        </section>
+        <section id="fha-loan-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="fha-loan-calculator-guide-heading-5">
+<h2 id="fha-loan-calculator-guide-heading-5">FHA Loan Requirements for Borrowers</h2>
+<p>The calculator estimates a payment, but a lender decides whether you can actually get the loan. During underwriting, your <strong>FHA loan requirements</strong> are checked against a short list of standards, so confirm that FHA loans are within reach before you fall in love with a house.</p>
+<ul>
+<li>A minimum <strong>credit score</strong> of 580 for the 3.5% down payment, or 500 to 579 with at least 10% down</li>
+<li>Proof of steady income and employment history</li>
+<li>A property that passes an FHA appraisal and will serve as your primary residence</li>
+<li>A <strong>debt-to-income ratio</strong> that generally stays near 43%, with a higher credit score sometimes allowing more</li>
+<li>A loan amount within the FHA loan limits for your county</li>
+</ul>
+
+<h3>Credit Score and Debt-to-Income Ratio</h3>
+<p>Credit and income work together. A stronger score can offset a higher debt load, and a lower debt-to-income ratio can offset a score near the minimum. Add up your monthly debts plus the estimated housing payment from the calculator, then divide by your gross monthly income to see where you stand before you apply.</p>
+
+<h3>Loan-to-Value and Home Affordability</h3>
+<p>The <strong>loan-to-value</strong> ratio compares your base loan to the home's value, and the calculator works it out from your price and the amount you put down to pick your annual MIP tier. For home affordability, many lenders prefer that your full housing payment stays below about 31% of gross monthly income, so the total the calculator returns, $2,654.97 in the worked example, fits comfortably with an income of roughly $8,600 a month. If the number looks tight, lower the price field and run it again.</p>
+        </section>
+        <section id="fha-loan-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="fha-loan-calculator-guide-heading-6">
+<h2 id="fha-loan-calculator-guide-heading-6">Checking a $219,900 Purchase with the FHA Mortgage Calculator</h2>
+<p>Dana has a signed offer on a $219,900 townhouse and $7,900 in savings, so the first question is whether a 3.5% down payment of $7,696.50 leaves her payment under her lender's ceiling. Her gross income is $5,450 a month, her credit score is 662, and she still owes $412 a month on a car loan.</p>
+<p>She enters a $219,900 price, 3.5% down, a 6.875% rate and a 30-year term, with property tax at 1.35% of the price and $1,236 a year for insurance. The calculator adds the upfront MIP of $3,713.56 to the $212,203.50 base loan, so she borrows $215,917.06, and because her loan-to-value is 96.5% the annual MIP rate is 0.55%.</p>
+<table>
+<thead><tr><th>Line</th><th>Monthly amount</th></tr></thead>
+<tbody>
+<tr><td>Principal and interest</td><td>$1,418.42</td></tr>
+<tr><td>Annual MIP</td><td>$97.26</td></tr>
+<tr><td>Property tax</td><td>$247.39</td></tr>
+<tr><td>Home insurance</td><td>$103.00</td></tr>
+<tr><td><strong>Estimated payment</strong></td><td><strong>$1,866.07</strong></td></tr>
+</tbody>
+</table>
+<p>She divides $1,866.07 by $5,450 and gets 34.2% of income for housing. Adding the $412 car payment brings her total monthly debt to $2,278.07, or 41.8% of income, which sits under the 43% debt-to-income guideline lenders commonly apply to FHA files but leaves only 1.2 points of room.</p>
+<p>That thin margin decides her next step. She reruns the estimate with a 5% down payment of $10,995, which her savings plus a gift from her brother can cover. The loan-to-value drops to 95%, the annual MIP rate falls to 0.50%, and the payment becomes $1,833.80, a saving of $32.27 a month that lowers her debt ratio to 41.2%. She takes that second figure to her loan officer.</p>
+        </section>
+        <section id="fha-loan-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="fha-loan-calculator-guide-heading-7">
+<h2 id="fha-loan-calculator-guide-heading-7">FHA Mortgage vs. Conventional Loan</h2>
+<p>The choice between an FHA mortgage and a <strong>conventional loan</strong> comes down to credit, savings and how long you plan to stay. Weighing the pros and cons below helps you decide whether the lower entry bar is worth the mortgage insurance.</p>
+<h3>Pros and Cons of FHA Loans</h3>
+<ul>
+<li><strong>Pro:</strong> lower credit score and down payment minimums, which suits low-income and first-time homebuyers</li>
+<li><strong>Pro:</strong> competitive mortgage rates because the Federal Housing Administration insures the lender against default</li>
+<li><strong>Con:</strong> the upfront MIP plus an annual MIP that can last the entire term</li>
+<li><strong>Con:</strong> FHA loan limits and appraisal standards that can exclude some properties</li>
+</ul>
+<p>If you later build equity and your credit improves, you can refinance into a conventional loan to drop the annual premium. Veterans may also compare a VA loan, which has no monthly mortgage insurance, and rehab buyers should look at the FHA 203k program, which bundles renovation costs into one mortgage.</p>
+        </section>
+        <section id="fha-loan-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="fha-loan-calculator-guide-heading-8">
+<h2 id="fha-loan-calculator-guide-heading-8">Cash to Close and Closing Costs on an FHA Mortgage</h2>
+<p>A payment that fits your budget is only half of the picture. <strong>Cash to close</strong> is the money you need on closing day, and it combines your down payment with <strong>closing costs</strong>, which commonly run 3% to 6% of the loan. On the $342,500 example, that means $17,125 for the down payment plus roughly $9,900 to $19,900 in closing costs, so plan for something between $27,000 and $37,000. Down payment assistance programs that pair with FHA loans can cover part of this, and getting <strong>pre-qualified</strong> or <strong>preapproved</strong> early shows you which programs your lender offers.</p>
+        </section>
+        <section id="fha-loan-calculator-guide-section-9" class="panel article-content p-4 sm:p-6" aria-labelledby="fha-loan-calculator-guide-heading-9">
+<h2 id="fha-loan-calculator-guide-heading-9">Ways to Lower Your Monthly FHA Loan Payment</h2>
+<p>If the estimate lands above what feels comfortable, a few levers move the number quickly:</p>
+<ol>
+<li>Raise your down payment, even by a small amount, to shrink the loan and the annual MIP.</li>
+<li>Improve your credit score before you lock a rate.</li>
+<li>Shop several lenders, since a quarter-point drop in the interest rate changes every payment for 30 years.</li>
+<li>Choose a lower home price or a property with lower taxes.</li>
+<li>Make <strong>extra monthly payments</strong> toward principal; the escrow portion stays the same, but you shorten the payoff date and cut total interest.</li>
+</ol>
+<p>The 15-year route is the most dramatic example. The same $331,069.06 loan at an assumed 6.000% on a <strong>15-year</strong> term costs $3,383.28 a month all-in, yet the total interest falls to $171,805.74, which is $240,683.68 less than the 30-year schedule.</p>
+        </section>
+        <section id="fha-loan-calculator-guide-section-10" class="panel article-content p-4 sm:p-6" aria-labelledby="fha-loan-calculator-guide-heading-10">
+<h2 id="fha-loan-calculator-guide-heading-10">Using the FHA Loan Calculator Before You Apply</h2>
+<p>Open the FHA mortgage loan calculator with your own price range, then try three versions: your expected down payment, the 3.5% minimum and a stretch goal such as 10%. Compare each monthly payment with your income and the escrow account your servicer will manage, and keep the printed figures when you talk to a loan officer. That small habit turns a vague budget into a concrete target for housing, homeownership and the day you finally pick up the keys.</p>
+        </section>
+      </div>
+
+      <section id="fha-loan-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="fha-loan-calculator-faq-heading" data-section="faq">
+        <h2 id="fha-loan-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">FHA Loan Calculator questions</h2>
+        <div id="fha-loan-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="fha-loan-calculator-faq-1" class="faq-item" open><summary id="fha-loan-calculator-faq-1-summary" class="faq-summary"><h3 id="fha-loan-calculator-faq-1-question" class="faq-question">What does an FHA loan calculator estimate?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="fha-loan-calculator-faq-1-answer" class="faq-answer"><p>It estimates your total monthly payment on a mortgage insured by the Federal Housing Administration: principal and interest, the annual mortgage insurance premium, property tax, homeowners insurance and any HOA dues, plus loan totals and a payoff schedule.</p></div></details>
+          <details id="fha-loan-calculator-faq-2" class="faq-item" open><summary id="fha-loan-calculator-faq-2-summary" class="faq-summary"><h3 id="fha-loan-calculator-faq-2-question" class="faq-question">How much is the upfront MIP on an FHA loan?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="fha-loan-calculator-faq-2-answer" class="faq-answer"><p>The upfront mortgage insurance premium is 1.75% of the base loan amount. Most borrowers roll it into the loan rather than paying it at closing, which is why the loan amount with upfront MIP is higher than price minus down payment.</p></div></details>
+          <details id="fha-loan-calculator-faq-3" class="faq-item" open><summary id="fha-loan-calculator-faq-3-summary" class="faq-summary"><h3 id="fha-loan-calculator-faq-3-question" class="faq-question">How much is the annual MIP, and how long does it last?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="fha-loan-calculator-faq-3-answer" class="faq-answer"><p>The annual MIP is typically 0.50% to 0.55% of the base loan for 30-year loans on standard amounts, depending on your down payment. With less than 10% down it usually lasts the full term; with 10% or more it can end after 11 years. Use the duration field to model either case.</p></div></details>
+          <details id="fha-loan-calculator-faq-4" class="faq-item" open><summary id="fha-loan-calculator-faq-4-summary" class="faq-summary"><h3 id="fha-loan-calculator-faq-4-question" class="faq-question">What is the minimum down payment for an FHA loan?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="fha-loan-calculator-faq-4-answer" class="faq-answer"><p>The minimum is 3.5% of the purchase price for borrowers with a credit score of 580 or higher. Scores between 500 and 579 generally need at least 10% down.</p></div></details>
+          <details id="fha-loan-calculator-faq-5" class="faq-item" open><summary id="fha-loan-calculator-faq-5-summary" class="faq-summary"><h3 id="fha-loan-calculator-faq-5-question" class="faq-question">Does the monthly payment include property taxes and insurance?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="fha-loan-calculator-faq-5-answer" class="faq-answer"><p>Yes, when the optional costs box is checked. Lenders usually collect property tax and homeowners insurance monthly into an escrow account, so the calculator divides your yearly amounts by 12 and adds them to the payment.</p></div></details>
+          <details id="fha-loan-calculator-faq-6" class="faq-item" open><summary id="fha-loan-calculator-faq-6-summary" class="faq-summary"><h3 id="fha-loan-calculator-faq-6-question" class="faq-question">How do extra payments change my FHA loan?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="fha-loan-calculator-faq-6-answer" class="faq-answer"><p>Extra monthly, yearly or one-time payments go straight to principal, which shortens the payoff date and cuts total interest. Enter an amount and its start date to see the new payoff month and the updated yearly schedule.</p></div></details>
+          <details id="fha-loan-calculator-faq-7" class="faq-item" open><summary id="fha-loan-calculator-faq-7-summary" class="faq-summary"><h3 id="fha-loan-calculator-faq-7-question" class="faq-question">Can I refinance an FHA loan to remove mortgage insurance?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="fha-loan-calculator-faq-7-answer" class="faq-answer"><p>Often yes. Once you have enough equity and a strong credit profile, refinancing into a conventional loan can drop the annual MIP, though you will pay closing costs on the new loan.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="fha-loan-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="fha-loan-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="fha-loan-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="fha-loan-calculator-ad-bottom-leaderboard">
+            <ins id="fha-loan-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("fha-loan-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="fha-loan-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="fha-loan-calculator-right-rail-top" class="mb-6">
+        <aside id="fha-loan-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="fha-loan-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="fha-loan-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="fha-loan-calculator-ad-right-rail-rectangle">
+            <ins id="fha-loan-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("fha-loan-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="fha-loan-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="fha-loan-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="fha-loan-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="fha-loan-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="fha-loan-calculator-ad-right-rail-skyscraper">
+            <ins id="fha-loan-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("fha-loan-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="fha-loan-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="fha-loan-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="fha-loan-calculator-footer-brand">
+        <a id="fha-loan-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="fha-loan-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="fha-loan-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="fha-loan-calculator-footer-categories" aria-labelledby="fha-loan-calculator-footer-categories-heading">
+        <h2 id="fha-loan-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="fha-loan-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="fha-loan-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="fha-loan-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="fha-loan-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="fha-loan-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="fha-loan-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="fha-loan-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="fha-loan-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="fha-loan-calculator-footer-company" aria-labelledby="fha-loan-calculator-footer-company-heading">
+        <h2 id="fha-loan-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="fha-loan-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="fha-loan-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="fha-loan-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="fha-loan-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="fha-loan-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="fha-loan-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="fha-loan-calculator-footer-bottom" class="border-t border-line">
+      <p id="fha-loan-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="fha-loan-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // ---- FHA mortgage insurance rules (in effect for 2026) -------------------------------------
+  // Source: HUD Mortgagee Letter 2023-05 (Feb 22, 2023; effective for case numbers endorsed on or
+  // after March 20, 2023), Handbook 4000.1 Appendix 1.0. Forward purchase loans, standard programs.
+  //   Upfront MIP: 175 bps of the base loan amount; financed in full or paid in full in cash.
+  //   Annual MIP (bps) and how long it is charged, by term, base loan amount and LTV:
+  //     Term > 15 yrs, base loan <= $832,750: LTV <= 95% 50 bps; > 95% 55 bps
+  //     Term > 15 yrs, base loan >  $832,750: LTV <= 95% 70 bps; > 95% 75 bps
+  //     Term <= 15 yrs, base loan <= $832,750: LTV <= 90% 15 bps; > 90% 40 bps
+  //     Term <= 15 yrs, base loan >  $832,750: LTV <= 78% 15; 78-90% 40; > 90% 65 bps
+  //     Duration: 11 years if LTV <= 90%, otherwise the full mortgage term.
+  //   Minimum down payment: 3.5% (credit score 580+; 10% for 500-579).
+  //   Annual MIP amount (HUD "Monthly (Periodic) MIP Calculation"): each policy year, average the 12
+  //   scheduled month-start balances of the original amortization, multiply by the annual rate,
+  //   divide by (1 + upfront factor) if the upfront MIP is financed, then divide by 12.
+  // County FHA loan limits are not checked: they vary by county and change every year.
+  var MIP_YEAR_LABEL = '2026';
+  var UFMIP_RATE = 0.0175;
+  // ML 2023-05 sets the loan-size threshold at the national conforming loan limit, which FHFA
+  // resets each year: $832,750 for 2026 (FHFA release, Nov. 25, 2025). ML 2023-05 printed the
+  // 2023 value, $726,200.
+  var MIP_LOAN_THRESHOLD = 832750;
+  var MIN_DOWN_PCT = 3.5;
+  function annualMipRule(base, ltvPct, years) {
+    var big = base > MIP_LOAN_THRESHOLD, bps;
+    if (years > 15) bps = big ? (ltvPct <= 95 ? 70 : 75) : (ltvPct <= 95 ? 50 : 55);
+    else if (!big) bps = ltvPct <= 90 ? 15 : 40;
+    else bps = ltvPct <= 78 ? 15 : (ltvPct <= 90 ? 40 : 65);
+    return { rate: bps / 10000, months: ltvPct <= 90 ? 132 : years * 12 };
+  }
+  // ---------------------------------------------------------------------------------------------
+  // Payment: M = L * i / (1 - (1 + i)^-n), i = rate / 12, n = years * 12 (M = L / n at 0%), where L
+  // includes the upfront MIP when it is financed.
+  // Verified in Node (scratchpad tests/w2b): HUD's own worked example on its MIP calculation page
+  //   ($106,605 at 7.5%, 0.50% annual MIP, 2.25% upfront factor, financed) gives $43.26/mo in year 1
+  //   and $42.85/mo in year 2, matching HUD exactly; $400,000 with 3.5% down: base $386,000, upfront
+  //   MIP $6,755, loan $392,755, P&I $2,418.26 (closed form), 0.55% for the full term, first-year MIP
+  //   $175.98; LTV boundaries 95.00/95.01%, 90.00/90.01% and 78.00/78.01% and the $832,750 threshold
+  //   select the ML 2023-05 rate and duration; P&I on $491,250 at 7.373% = $3,392.27 matches a
+  //   published calculator's default; no NaN/Infinity on blank or bad input.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 });
+  var money0 = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+
+  function el(id) { return document.getElementById(id); }
+  function setText(id, text) { el(id).textContent = text; }
+
+  function read(id, blankAsZero) {
+    var raw = String(el(id).value).trim();
+    if (raw === '') return blankAsZero ? 0 : NaN;
+    var v = Number(raw);
+    return isFinite(v) ? v : NaN;
+  }
+
+  function round2(v) { return Math.round(v * 100 + 1e-9) / 100; }
+
+  function payment(principal, annualPct, months) {
+    if (months <= 0 || principal <= 0) return 0;
+    var i = annualPct / 1200;
+    if (i === 0) return principal / months;
+    return principal * i / (1 - Math.pow(1 + i, -months));
+  }
+
+  // Scheduled amortization with HUD's annual MIP, recalculated each policy year.
+  function fhaSchedule(loan, ratePct, months, mipRate, mipMonths, financed) {
+    var pay = payment(loan, ratePct, months), bal = loan, rows = [], monthlyMip = 0, sum = 0;
+    var totalInterest = 0, totalMip = 0;
+    for (var m = 1; m <= months; m++) {
+      if ((m - 1) % 12 === 0) {
+        sum = 0;
+        var b = bal;
+        for (var k = 0; k < 12 && m + k <= months; k++) {
+          sum += b;
+          b = Math.max(0, b + b * ratePct / 1200 - pay);
+        }
+        var annual = round2(sum / 12 * mipRate);
+        if (financed) annual = round2(annual / (1 + UFMIP_RATE));
+        monthlyMip = round2(annual / 12);
+      }
+      var mip = m <= mipMonths ? monthlyMip : 0;
+      var interest = bal * ratePct / 1200;
+      var principal = m === months ? bal : Math.min(pay - interest, bal);
+      bal -= principal;
+      if (bal < 0.005) bal = 0;
+      totalInterest += interest;
+      totalMip += mip;
+      rows.push({ n: m, principal: principal, interest: interest, mip: mip, balance: bal });
+    }
+    return { pay: pay, rows: rows, totalInterest: totalInterest, totalMip: totalMip, firstMip: rows.length ? rows[0].mip : 0 };
+  }
+
+  function clearResults() {
+    ['fhMonthly', 'fhLoan', 'fhUfmip', 'fhMipRate', 'fhPI', 'fhMip', 'fhTaxMo', 'fhInsMo', 'fhHoaMo', 'fhBase', 'fhLtv',
+     'fhDuration', 'fhTotalMip', 'fhTotalInterest'].forEach(function (id) { setText(id, '–'); });
+    setText('fhMipNote', '');
+    setText('fhDownHint', 'FHA minimum: 3.5% with a credit score of 580 or higher.');
+    el('fhSchedule').innerHTML = '';
+  }
+
+  function update() {
+    var price = read('fhPrice'), down = read('fhDown'), downUnit = el('fhDownUnit').value, rate = read('fhRate'),
+        years = parseInt(el('fhTerm').value, 10), financed = el('fhFinance').checked,
+        tax = read('fhTax', true), taxUnit = el('fhTaxUnit').value, ins = read('fhIns', true), hoa = read('fhHoa', true);
+    var downAmt = downUnit === 'percent' ? price * down / 100 : down;
+    var msg = '';
+    if (isNaN(price) || price <= 0) msg = 'Enter a home price greater than $0.';
+    else if (isNaN(down) || down < 0 || !(downAmt < price)) msg = 'Enter a down payment of 0 or more that is less than the home price.';
+    else if (downAmt < price * MIN_DOWN_PCT / 100 - 0.005) msg = 'FHA loans need at least 3.5% down (' + money.format(price * MIN_DOWN_PCT / 100) + ' here), or 10% with a credit score of 500 to 579.';
+    else if (isNaN(rate) || rate < 0 || rate > 30) msg = 'Enter an interest rate from 0% to 30%.';
+    else if (isNaN(years) || years < 1) msg = 'Choose a loan term.';
+    else if ([tax, ins, hoa].some(function (v) { return isNaN(v) || v < 0; })) msg = 'Taxes, insurance and HOA dues cannot be negative.';
+    else if (taxUnit === 'percent' && tax > 20) msg = 'Enter a property tax rate of 20% or less.';
+    var error = el('fhError');
+    error.hidden = !msg;
+    error.textContent = msg;
+    if (msg) { clearResults(); return; }
+
+    var base = price - downAmt;
+    var ltv = Math.round(base / price * 10000) / 100;
+    var ufmip = round2(base * UFMIP_RATE);
+    var loan = financed ? base + ufmip : base;
+    var rule = annualMipRule(base, ltv, years);
+    var months = years * 12;
+    var r = fhaSchedule(loan, rate, months, rule.rate, rule.months, financed);
+    var annualTax = taxUnit === 'percent' ? price * tax / 100 : tax;
+
+    setText('fhDownHint', (downUnit === 'percent' ? '= ' + money.format(downAmt) : '= ' + (downAmt / price * 100).toFixed(2) + '% of the price') +
+      '. FHA minimum: 3.5% with a credit score of 580 or higher.');
+    setText('fhMonthly', money.format(r.pay + r.firstMip + annualTax / 12 + ins / 12 + hoa));
+    setText('fhLoan', money.format(loan));
+    setText('fhUfmip', money.format(ufmip));
+    setText('fhMipRate', (rule.rate * 100).toFixed(2) + '%');
+    setText('fhPI', money.format(r.pay));
+    setText('fhMip', money.format(r.firstMip));
+    setText('fhTaxMo', money.format(annualTax / 12));
+    setText('fhInsMo', money.format(ins / 12));
+    setText('fhHoaMo', money.format(hoa));
+    setText('fhBase', money.format(base));
+    setText('fhLtv', ltv.toFixed(2) + '%');
+    setText('fhDuration', rule.months >= months ? 'The full ' + years + '-year term' : '11 years (132 payments)');
+    setText('fhTotalMip', money.format(ufmip + r.totalMip));
+    setText('fhTotalInterest', money.format(r.totalInterest));
+    setText('fhMipNote', 'Annual MIP of ' + (rule.rate * 100).toFixed(2) + '% applies to a ' + years + '-year loan with ' +
+      (base > MIP_LOAN_THRESHOLD ? 'a base amount above ' : 'a base amount of ') + money0.format(MIP_LOAN_THRESHOLD) +
+      (base > MIP_LOAN_THRESHOLD ? '' : ' or less') + ' at ' + ltv.toFixed(2) + '% LTV (HUD rates in effect for ' + MIP_YEAR_LABEL +
+      '). It is recalculated each year on the scheduled balance, so it falls slowly.' +
+      (financed ? '' : ' Upfront MIP of ' + money.format(ufmip) + ' is due in cash at closing.'));
+
+    var html = [], p = 0, intr = 0, mip = 0;
+    r.rows.forEach(function (row) {
+      p += row.principal; intr += row.interest; mip += row.mip;
+      if (row.n % 12 === 0) {
+        html.push('<tr><td>' + row.n / 12 + '</td><td>' + money.format(p) + '</td><td>' + money.format(intr) + '</td><td>' +
+          money.format(mip) + '</td><td>' + money.format(row.balance) + '</td></tr>');
+        p = 0; intr = 0; mip = 0;
+      }
+    });
+    el('fhSchedule').innerHTML = html.join('');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = el('fhForm');
+    if (!form) return;
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

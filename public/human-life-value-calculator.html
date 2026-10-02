@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="en" id="human-life-value-calculator-document" data-page-slug="human-life-value-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Human Life Value Calculator | Economic Value of Income</title>
+  <meta name="description" content="Work out your human life value: the present value of your future after-tax earnings, less what you spend on yourself, from now until retirement.">
+  <link rel="canonical" href="https://company-marketcap.github.io/human-life-value-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Human Life Value Calculator | Economic Value of Income">
+  <meta property="og:description" content="Work out your human life value: the present value of your future after-tax earnings, less what you spend on yourself, from now until retirement.">
+  <meta property="og:url" content="https://company-marketcap.github.io/human-life-value-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Human Life Value Calculator", "url": "https://company-marketcap.github.io/human-life-value-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Work out your human life value: the present value of your future after-tax earnings, less what you spend on yourself, from now until retirement."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Insurance", "item": "https://company-marketcap.github.io/financial-calculators.html#insurance-calculators"}, {"@type": "ListItem", "position": 4, "name": "Human Life Value Calculator", "item": "https://company-marketcap.github.io/human-life-value-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is human life value (HLV)?", "acceptedAnswer": {"@type": "Answer", "text": "Human life value is the present value of the income you are expected to earn between now and retirement, after your own expenses and taxes. It estimates the financial loss your family would face if you died, which makes it a common starting point for sizing life insurance."}}, {"@type": "Question", "name": "How is human life value calculated?", "acceptedAnswer": {"@type": "Answer", "text": "The calculator takes your net income (income after taxes and personal expenses), grows it by your expected income growth each year for the working years left, and discounts each year back to today at your chosen rate of return. The sum is your human life value."}}, {"@type": "Question", "name": "How much life insurance do I need based on my HLV?", "acceptedAnswer": {"@type": "Answer", "text": "Add your loans and debts to your human life value, then subtract your savings, other assets and existing life insurance. What remains is the life insurance need, the amount of new cover that closes the gap."}}, {"@type": "Question", "name": "What is the difference between HLV and an income multiplier?", "acceptedAnswer": {"@type": "Answer", "text": "An income multiplier simply sets cover at a fixed number of times your yearly income, such as 10 to 20 times. HLV uses your own age, retirement date, growth and discount rate, so it reflects how many earning years you actually have left."}}, {"@type": "Question", "name": "Why does my HLV fall as I get older?", "acceptedAnswer": {"@type": "Answer", "text": "Each year closer to retirement removes a year of future income from the sum. Even if your salary rises, fewer remaining working years usually mean a lower human life value, though debts and dependents can keep the life insurance need high."}}, {"@type": "Question", "name": "How often should I recalculate my HLV?", "acceptedAnswer": {"@type": "Answer", "text": "Recalculate at least once a year and after major life events such as marriage, a new child, a home purchase, a new loan or a big change in income. Each of these shifts your income, liabilities or dependents."}}, {"@type": "Question", "name": "Which discount rate should I use?", "acceptedAnswer": {"@type": "Answer", "text": "Use the after-tax return you realistically expect if your family invested a lump sum. A higher rate lowers your HLV, because a smaller amount would grow into the same income; a cautious rate gives a more conservative, higher figure."}}, {"@type": "Question", "name": "Can I use the human life value calculator if I am self-employed?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Enter your average net business income as annual income, set the tax rate that applies to you and include business debts in your loans. Because self-employed income varies, consider recalculating more often."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="human-life-value-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="human-life-value-calculator" data-page-type="calculator">
+  <a id="human-life-value-calculator-skip-link" href="#human-life-value-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="human-life-value-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="human-life-value-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="human-life-value-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="human-life-value-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="human-life-value-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="human-life-value-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="human-life-value-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="human-life-value-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="human-life-value-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="human-life-value-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="human-life-value-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="human-life-value-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="human-life-value-calculator-header-search-status" aria-controls="human-life-value-calculator-header-search-results" data-search-input="header">
+              <p id="human-life-value-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="human-life-value-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="human-life-value-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="human-life-value-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="human-life-value-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="human-life-value-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="human-life-value-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="human-life-value-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="human-life-value-calculator-mobile-search-status" aria-controls="human-life-value-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="human-life-value-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="human-life-value-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="human-life-value-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="human-life-value-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="human-life-value-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="human-life-value-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="human-life-value-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="human-life-value-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="human-life-value-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="human-life-value-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="human-life-value-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="human-life-value-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="human-life-value-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="human-life-value-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="human-life-value-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="human-life-value-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="human-life-value-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="human-life-value-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="human-life-value-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="human-life-value-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="human-life-value-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="human-life-value-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="human-life-value-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="human-life-value-calculator-sidebar-search-status" aria-controls="human-life-value-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="human-life-value-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="human-life-value-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="human-life-value-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="human-life-value-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="human-life-value-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="human-life-value-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="human-life-value-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="human-life-value-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="human-life-value-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="human-life-value-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="human-life-value-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="human-life-value-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="human-life-value-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="human-life-value-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="human-life-value-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="human-life-value-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="human-life-value-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="human-life-value-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="human-life-value-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="human-life-value-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="human-life-value-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="human-life-value-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="human-life-value-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="human-life-value-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="human-life-value-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="human-life-value-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators" aria-current="true">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="human-life-value-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="human-life-value-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="human-life-value-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="human-life-value-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="human-life-value-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="human-life-value-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="human-life-value-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="human-life-value-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="human-life-value-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="human-life-value-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="human-life-value-calculator" data-calculator-slug="human-life-value-calculator" data-sub-category-slug="insurance-calculators">
+      <aside id="human-life-value-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="human-life-value-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="human-life-value-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="human-life-value-calculator-ad-top-leaderboard">
+            <ins id="human-life-value-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("human-life-value-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="human-life-value-calculator-intro-area" class="space-y-4">
+        <nav id="human-life-value-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="human-life-value-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="human-life-value-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="human-life-value-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="human-life-value-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#insurance-calculators" itemprop="item"><span itemprop="name">Insurance</span></a><meta itemprop="position" content="3"></li>
+            <li id="human-life-value-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Human Life Value Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/human-life-value-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="human-life-value-calculator-hero-section" aria-labelledby="human-life-value-calculator-hero-heading" data-section="hero">
+          <h1 id="human-life-value-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Human Life Value Calculator</h1>
+          <p id="human-life-value-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">The human life value calculator on this page turns your paycheck into one number: the present value of everything you will earn between now and retirement. Enter your age, income and personal expenses, and your HLV shows how much money your family would need today to replace your paycheck, which you can then compare with the life insurance you already hold. Because the result rests on your future earnings rather than a hunch, it gives you a defensible starting point for choosing a policy. <!-- SILO_START:slot_a -->The <a class="silo-link" href="/life-insurance-calculator.html">life insurance calculator online</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="human-life-value-calculator-tool" class="space-y-6" data-page-slug="human-life-value-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="hlFormHeading" data-section="calculator">
+<div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+<form id="hlForm" class="space-y-5" novalidate aria-labelledby="hlFormHeading">
+<h2 id="hlFormHeading" class="panel-heading">Enter your earnings</h2>
+<div class="form-row form-row-2">
+<div><label for="hlAge" class="form-label">Current age</label><div class="input-group"><input type="number" id="hlAge" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="16" max="90" step="1" value="40" inputmode="numeric"><span class="input-affix">yrs</span></div></div>
+<div><label for="hlRetireAge" class="form-label">Retirement age</label><div class="input-group"><input type="number" id="hlRetireAge" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="17" max="90" step="1" value="65" inputmode="numeric"><span class="input-affix">yrs</span></div></div>
+</div>
+<div class="form-row form-row-2">
+<div><label for="hlIncome" class="form-label">Annual income before tax</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="hlIncome" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1000" value="80000" inputmode="decimal"></div><p class="form-hint">Your own earnings only.</p></div>
+<div><label for="hlGrowth" class="form-label">Yearly income growth</label><div class="input-group"><input type="number" id="hlGrowth" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="-10" max="20" step="0.1" value="3" inputmode="decimal"><span class="input-affix">%</span></div></div>
+</div>
+<div class="form-row form-row-2">
+<div><label for="hlTax" class="form-label">Income tax rate</label><div class="input-group"><input type="number" id="hlTax" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="1" value="20" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">Average rate on your pay: federal, state and payroll taxes.</p></div>
+<div><label for="hlConsumption" class="form-label">Share spent on yourself</label><div class="input-group"><input type="number" id="hlConsumption" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="1" value="25" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">Your own food, clothing, transport and so on — money your family would not need to replace.</p></div>
+</div>
+<div><label for="hlDiscount" class="form-label">Discount rate</label><div class="input-group"><input type="number" id="hlDiscount" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="20" step="0.1" value="5" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">The yearly return a lump sum could earn. A higher rate gives a lower value.</p></div>
+<details class="form-details">
+<summary class="form-details-summary">More options</summary>
+<div><label for="hlBenefits" class="form-label">Yearly employer benefits</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="hlBenefits" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="0" inputmode="decimal"></div><p class="form-hint">Value of benefits your family would lose, such as health cover or retirement contributions. Not taxed here.</p></div>
+<div><label for="hlCover" class="form-label">Existing life insurance</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="hlCover" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10000" value="0" inputmode="decimal"></div><p class="form-hint">Shows how much of the value is not yet covered.</p></div>
+</details>
+<p id="hlError" class="form-error" role="alert" hidden></p>
+</form>
+<div id="hlResults" aria-live="polite" aria-labelledby="hlResultsHeading">
+<h2 id="hlResultsHeading" class="panel-heading">Your results</h2>
+<div class="stat-grid mt-4">
+<div class="stat-card stat-card-highlight"><p class="stat-label">Human life value</p><p id="hlValue" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">Future family share, undiscounted</p><p id="hlTotal" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">Family share in year one</p><p id="hlFirst" class="stat-value">–</p></div>
+</div>
+<dl class="key-value-list mt-4">
+<div class="key-value-row"><dt>Working years left</dt><dd id="hlYears">–</dd></div>
+<div class="key-value-row"><dt>Value as a multiple</dt><dd id="hlMultiple">–</dd></div>
+<div class="key-value-row"><dt>Not covered by existing insurance</dt><dd id="hlGap">–</dd></div>
+</dl>
+<p class="form-hint mt-3">Human life value is the amount that, invested today at the discount rate, would replace the earnings your family would lose — after tax and after what you spend on yourself — until your retirement age. Income is assumed to arrive at the end of each year.</p>
+</div>
+</div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="hlScheduleHeading" data-section="schedule">
+<h2 id="hlScheduleHeading" class="panel-heading">Year-by-year earnings</h2>
+<p class="mt-0.5 text-sm text-ink-muted">Each working year's income, the part your family relies on, and what that part is worth today.</p>
+<div class="table-scroll mt-5 max-h-[520px]" tabindex="0" role="region" aria-labelledby="hlScheduleHeading">
+<table class="data-table">
+<thead><tr><th scope="col">Year</th><th scope="col">Age</th><th scope="col">Gross income</th><th scope="col">After tax</th><th scope="col">Family share</th><th scope="col">Value today</th></tr></thead>
+<tbody id="hlSchedule"></tbody>
+</table>
+</div>
+</section>
+        <p id="human-life-value-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="human-life-value-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">The human life value calculator on this page turns your paycheck into one number: the present value of everything you will earn between now and retirement. Enter your age, income and personal expenses, and your HLV shows how much money your family would need today to replace your paycheck, which you can then compare with the life insurance you already hold. Because the result rests on your future earnings rather than a hunch, it gives you a defensible starting point for choosing a policy. <!-- SILO_START:slot_a_m -->The <a class="silo-link" href="/life-insurance-calculator.html">life insurance calculator online</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="human-life-value-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="human-life-value-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="human-life-value-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="human-life-value-calculator-ad-in-feed">
+            <ins id="human-life-value-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("human-life-value-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="human-life-value-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="human-life-value-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="human-life-value-calculator-guide-heading-1">
+<h2 id="human-life-value-calculator-guide-heading-1">Human Life Value in Life Insurance: What HLV Means</h2>
+<p><strong>Human life value</strong> is the economic value of your ability to earn. Dr. Solomon S. Huebner, often called the father of insurance education, developed the idea at the Wharton School in the early 1900s with a simple argument: a person who will earn money for decades is an asset, and an asset that your family depends on should be protected. Picture an orchard that reliably yields $65,000 a year for 28 years. Nobody would leave it uninsured, yet many households leave the earning power behind their entire lifestyle with little or no protection. <!-- SILO_START:slot_b -->If you want to see how the figures change, the <a class="silo-link" href="/payroll-hourly-paycheck-calculator.html">free hourly paycheck calculator</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_b --></p>
+<p>In practice, <strong>HLV</strong> converts that earning power into a single lump sum. It is the amount you would need to invest today so that, drawn down year by year, it matches the income you would have brought home until retirement. That is why the number is usually used to size a policy: it answers the question "what is my family losing if my paycheck stops?"</p>
+
+<h3>Annual Income as Your Family's Financial Security</h3>
+<p>Your <strong>annual income</strong> is the engine of the calculation, but only the part your family actually lives on counts. A spouse, children or aging parents rely on the money left over after you pay your own costs, which is why the result is personal. Two people with the same salary can end up with very different figures once their dependents, debts and savings are factored in, and the right life cover for each of them differs too.</p>
+
+<h3>Economic Value and the Human Life Approach</h3>
+<p>The method is sometimes called the human life approach. It treats <strong>economic value</strong> as the thing being insured, not the person's worth in any wider sense. The figure says nothing about how much a life matters; it measures only the income stream that dependents would lose and that a death benefit can replace.</p>
+        </section>
+        <section id="human-life-value-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="human-life-value-calculator-guide-heading-2">
+<h2 id="human-life-value-calculator-guide-heading-2">Human Life Value Formula for Your Earning Years</h2>
+<p>The <strong>human life value formula</strong> adds up each future year of net income, grows it by your expected raises and discounts it back to today's money. In its fullest form it is a present-value sum: <!-- SILO_START:slot_c -->If you want to see how the figures change, the <a class="silo-link" href="/comprehensive-life-insurance-analysis.html">comprehensive life insurance analysis online</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_c --></p>
+<p>$$HLV = \sum_{t=1}^{n} \frac{(\text{Income} - \text{Expenses}) \times (1 + g)^{t-1}}{(1 + r)^{t}}$$</p>
+<p>Here <em>n</em> is the number of working years left, <em>g</em> is the yearly income growth and <em>r</em> is the discount rate. If you assume no raises and no discounting, the formula collapses into the quick version most guides quote:</p>
+<p>$$HLV = (\text{Annual Income} - \text{Personal Expenses}) \times \text{Years to Retirement}$$</p>
+<p>The quick version overstates your value because it treats a dollar earned in 25 years as equal to a dollar today. The full version corrects for that with the <strong>time value of money</strong>, so a dollar earned late in your working life counts for less than one earned this year.</p>
+<figure><img src="/assets/images/tools/human-life-value-calculator/human-life-value-time-value-of-money-area-chart.svg" alt="Stacked area chart splitting each of 28 future years of net income into its present value and the value lost to discounting at 6.5%"><figcaption>Later paychecks are worth less today, which is why the present value of future income is lower than the simple total.</figcaption></figure>
+        </section>
+        <section id="human-life-value-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="human-life-value-calculator-guide-heading-3">
+<h2 id="human-life-value-calculator-guide-heading-3">How to Calculate Human Life Value Step by Step</h2>
+<p>You can calculate human life value by hand with five inputs, or let an <strong>HLV calculator</strong> do the arithmetic. Work through the steps in this order.</p>
+
+<h3>Net Income: Annual Income Minus Personal Expenses</h3>
+<p>Start with your gross <strong>annual income</strong>: salary, regular bonuses and any dependable side earnings. Subtract the <strong>personal expenses</strong> you spend on yourself, including the taxes you pay, because your family does not need to replace that share. What remains is your <strong>net income</strong>, sometimes called net dependable income.</p>
+
+<h3>Years to Retirement and Working Years</h3>
+<p>Subtract your age from your planned <strong>retirement age</strong> to find the <strong>years to retirement</strong>. These are your remaining <strong>working years</strong>, the earning years that the calculation covers. Retiring later lengthens the stream and raises the result; retiring earlier shortens it.</p>
+
+<h3>Income Growth and Discount Rate</h3>
+<p>Add the <strong>income growth</strong> you expect each year, for instance a 3% raise, and a <strong>discount rate</strong> that reflects the return on investments your family could earn on a lump sum. A higher discount rate shrinks the present value because a smaller pot would grow into the same future income; a higher expected income growth does the opposite.</p>
+<figure><img src="/assets/images/tools/human-life-value-calculator/hlv-calculator-discount-rate-income-growth-grid.svg" alt="Heatmap grid of HLV from $913,026 to $1,435,809 across discount rates of 5.5% to 7.5% and income growth of 2% to 4%, with the $1,131,999 example outlined"><figcaption>How discount rate and income growth assumptions change the result of the HLV calculator.</figcaption></figure>
+
+<h3>Present Value of Future Income</h3>
+<p>Discount every future year back to today and add them up. The sum is the <strong>present value</strong> of your future income, the core of your HLV. It is the lump sum that, invested at your chosen rate of return, could pay out your net income each year until your planned retirement.</p>
+        </section>
+        <section id="human-life-value-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="human-life-value-calculator-guide-heading-4">
+<h2 id="human-life-value-calculator-guide-heading-4">Human Life Value Worked Example: A 34-Year-Old Earning $96,400</h2>
+<p>Here is how the human life value calculator handles a 34-year-old who plans to retire at 62 and brings home a gross <strong>annual income</strong> of $96,400. Their <strong>personal expenses</strong> and taxes total $31,200 a year, so net income is $65,200. They expect 3% income growth and use a 6.5% discount rate over 28 working years. They also carry $168,500 in debts, hold $45,000 in current savings and have a $250,000 term policy through work.</p>
+<table>
+<thead><tr><th>Step</th><th>Input or result</th><th>Amount</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Annual income</td><td>$96,400</td></tr>
+<tr><td>2</td><td>Less personal expenses and taxes</td><td>$31,200</td></tr>
+<tr><td>3</td><td>Net income your family depends on</td><td>$65,200</td></tr>
+<tr><td>4</td><td>Working years until age 62</td><td>28</td></tr>
+<tr><td>5</td><td>Present value of future income (HLV)</td><td>$1,131,999</td></tr>
+<tr><td>6</td><td>Plus outstanding liabilities</td><td>$168,500</td></tr>
+<tr><td>7</td><td>Less savings and existing life cover</td><td>$295,000</td></tr>
+<tr><td>8</td><td>Additional life insurance needed</td><td>$1,005,499</td></tr>
+</tbody>
+</table>
+<p>The <strong>HLV</strong> is $1,131,999, and the gap after adding debts and subtracting assets is $1,005,499. Skipping the discounting would have produced $65,200 × 28 = $1,825,600, which is about 61% too high, and that difference is exactly what the discount rate removes.</p>
+<figure><img src="/assets/images/tools/human-life-value-calculator/human-life-value-calculator-coverage-gap-waterfall.svg" alt="Waterfall chart taking a $1,131,999 human life value, adding $168,500 of debts and subtracting $45,000 of savings and $250,000 of existing life cover to reach $1,005,499 of additional cover"><figcaption>From human life value to the life insurance cover left to buy: debts raise the target, savings and existing cover reduce it.</figcaption></figure>
+
+<h3>Reading the Result Against a Rule of Thumb</h3>
+<p>A common <strong>rule of thumb</strong> says to hold 15 times your income, which would be $1,446,000 here. The calculated HLV of $1,131,999 sits below that, because the rule ignores the 28 years that remain. Treat the quick multiple as a sanity check and the calculated figure as the answer.</p>
+        </section>
+        <section id="human-life-value-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="human-life-value-calculator-guide-heading-5">
+<h2 id="human-life-value-calculator-guide-heading-5">How the HLV Calculator Works</h2>
+<p>The <strong>HLV calculator</strong> follows the same logic as the worked example, in seconds. It asks for these inputs and returns the figures that matter for a policy decision:</p>
+<ul>
+<li><strong>Current age</strong> and desired retirement age, from which it counts your working years</li>
+<li><strong>Annual income</strong> and yearly personal expenses, which give your net income</li>
+<li>Income growth and the discount rate, the two assumptions that steer the present value</li>
+<li>Outstanding loans, current savings and existing life cover, which turn your HLV into a coverage gap</li>
+</ul>
+<p>Click the button and this human life value calculator returns your <strong>human life value</strong>, the total your family would need, and the additional cover that remains after subtracting what you already have.</p>
+
+<h3>Existing Life Cover, Savings and Outstanding Liabilities</h3>
+<p>Your HLV is a gross figure. To judge what to buy, add your <strong>outstanding liabilities</strong>, such as a home loan or car loan, because your family would have to settle them. Then subtract <strong>existing life cover</strong> and your savings and investments, since those assets already protect your family. The remainder is the coverage gap.</p>
+
+<h4>Savings That Count Toward the Gap</h4>
+<p>Cash, brokerage balances and retirement accounts all reduce what a new policy has to cover, but only count what your family could realistically reach. A locked retirement account may not be available right away.</p>
+
+<h3>Why Debts and Dependents Change the Answer</h3>
+<p>A good HLV calculator asks about debts because they add to the amount a policy must cover, and <strong>dependents</strong> raise the stakes of leaving a gap. A household with a spouse and two children needs a policy that clears the mortgage and still covers children's education, while a single earner with no <strong>dependents</strong> may need much less.</p>
+        </section>
+        <section id="human-life-value-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="human-life-value-calculator-guide-heading-6">
+<h2 id="human-life-value-calculator-guide-heading-6">A 41-Year-Old Tests Employer Life Cover With the HLV Calculator</h2>
+<p>Dana, a 41-year-old project engineer, has a benefits enrollment deadline on Friday and one question: is the group policy that comes with the job enough? The paperwork says $300,000, and a coworker insists "two times salary is plenty."</p>
+<p>Dana opens the calculator with a gross salary of $118,350, personal expenses and taxes of $44,920, retirement at 65, 2.5% income growth and a 5.8% discount rate. Net income is $73,430 across 24 working years. Next come the household figures: a $221,600 mortgage balance plus a $14,900 car loan, $62,300 in savings and the $300,000 group policy.</p>
+<p>The calculator returns a <strong>human life value</strong> of <strong>$1,185,049</strong>. Adding $236,500 of loans, then subtracting savings and the group policy, leaves a gap of <strong>$1,059,249</strong>. Dana notices that the HLV is almost exactly 10 times salary ($1,183,500), the bottom of the 10-to-20-times range quoted for the income multiplier, so the calculation and the quick check agree on the floor.</p>
+<ul>
+<li>Group cover of $300,000 replaces about 4 years of net income, not 24</li>
+<li>Changing retirement age from 65 to 61 lowers the HLV to $1,044,495, so the target is not very sensitive to that choice</li>
+<li>The mortgage alone is 74% of the group policy</li>
+</ul>
+<p>The decision follows directly: Dana keeps the group policy, since it costs nothing, but requests quotes for a $1,100,000 level term policy running 24 years, matching the years to retirement. The extra $40,751 above the gap leaves room for a first year of inflation. The coworker's "two times salary" would have been $236,700, less than a quarter of what the calculation says the family needs.</p>
+        </section>
+        <section id="human-life-value-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="human-life-value-calculator-guide-heading-7">
+<h2 id="human-life-value-calculator-guide-heading-7">Human Life Value at Different Life Stages</h2>
+<p>Your HLV does not stay put. It tends to peak early, when many working years remain, and shrinks as retirement nears. The table holds income steady at $96,400 and the same assumptions as the example, so only the working years change.</p>
+<table>
+<thead><tr><th>Age</th><th>Life stage</th><th>Working years</th><th>HLV</th></tr></thead>
+<tbody>
+<tr><td>24</td><td>Early career, no dependents</td><td>38</td><td>$1,339,607</td></tr>
+<tr><td>34</td><td>Young family, mortgage</td><td>28</td><td>$1,131,999</td></tr>
+<tr><td>44</td><td>Peak earning, school costs</td><td>18</td><td>$842,020</td></tr>
+<tr><td>54</td><td>Pre-retirement, fewer liabilities</td><td>8</td><td>$436,985</td></tr>
+</tbody>
+</table>
+<p>Real obligations move the other way. Marriage, a new mortgage and children add dependents and debts in your thirties and forties, so the coverage gap can stay large even as the HLV itself falls. By your mid-fifties, the combination of fewer working years, a bigger net worth and independent children often lets you reduce cover.</p>
+        </section>
+        <section id="human-life-value-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="human-life-value-calculator-guide-heading-8">
+<h2 id="human-life-value-calculator-guide-heading-8">Human Life Value Approach vs Needs Analysis and Other Methods</h2>
+<p>The <strong>human life value approach</strong> is one of three ways to size life insurance. Understanding how each differs tells you when to trust which.</p>
+
+<h3>Income Multiplier Rule of Thumb</h3>
+<p>The <strong>income multiplier</strong> method sets cover at 10 to 20 times your yearly pay. It is fast and takes no inputs, but it ignores your age, debts, inflation and existing cover, so use it only as a rough check.</p>
+
+<h3>Expense-Based Approach and Needs Analysis</h3>
+<p>The <strong>expense-based approach</strong> totals what your family will spend, including household expenses, children's education, healthcare and future goals. A <strong>needs analysis</strong> works the same way. It can be precise, but unlike the HLV method, which starts from the income you would lose, it depends on forecasting spending for decades, and the result is only as good as those forecasts.</p>
+
+<h3>Income Replacement Approach</h3>
+<p>The <strong>income replacement approach</strong> is the HLV method in its simplest form: replace the income your family would lose until you would have retired. It is the most direct measure of what a death benefit has to do, which is why it anchors this calculator.</p>
+        </section>
+        <section id="human-life-value-calculator-guide-section-9" class="panel article-content p-4 sm:p-6" aria-labelledby="human-life-value-calculator-guide-heading-9">
+<h2 id="human-life-value-calculator-guide-heading-9">How Much Life Cover Do You Need? Using Your Life Value</h2>
+<p>Turning your <strong>life value</strong> into a purchase means picking a <strong>sum assured</strong> that closes the coverage gap rather than matching your gross HLV. For the example, the gap of roughly $1.0 million points to a new <strong>term insurance</strong> policy of about that size on top of the existing $250,000 term plan.</p>
+
+<h3>Term Insurance and Premiums</h3>
+<p>Once the gap is known, term cover is usually the most affordable way to buy a death benefit of that size because it pays out only if you die within the term. Premiums stay lower the younger and healthier you are when you buy, which is one reason the example buyer should act at 34 rather than 44, and why a policy sized to the $1,005,499 gap costs less now than later.</p>
+
+<h3>Inflation Rate and Purchasing Power</h3>
+<p>The <strong>inflation rate</strong> erodes what a fixed payout can buy. If you set the discount rate against expected inflation, the figure already protects your family's <strong>purchasing power</strong>. Remember that a payout sized today must still cover costs decades later, so a generous growth assumption is safer than a stingy one.</p>
+
+<h3>Underinsurance and Overinsurance</h3>
+<p><strong>Underinsurance</strong> leaves your family exposed when they need support most. <strong>Overinsurance</strong> means paying premiums for cover nobody needs. A calculated HLV keeps you between the two: a gap near zero means your cover is adequate, a positive gap means you are underinsured and a negative one means you are overinsured.</p>
+        </section>
+        <section id="human-life-value-calculator-guide-section-10" class="panel article-content p-4 sm:p-6" aria-labelledby="human-life-value-calculator-guide-heading-10">
+<h2 id="human-life-value-calculator-guide-heading-10">Benefits of Using a Human Life Value Calculator</h2>
+<p>A calculator replaces guesswork with arithmetic you can check. Its main advantages:</p>
+<ul>
+<li>It gives life cover based on your own income and obligations, not an agent's rule of thumb</li>
+<li>It adjusts for inflation and discounting automatically, which spreadsheets get wrong</li>
+<li>It counts loans and existing coverage so you pay for only the gap</li>
+<li>It protects the family's financial security and your budget at once, since the premium matches the need</li>
+<li>It lets you test inflation, growth and retirement scenarios in seconds</li>
+<li>It documents your assumptions so you can recalculate with the same method next year</li>
+</ul>
+<p>An HLV calculator also makes comparison easy. Change one input, such as retirement age, and you see immediately how much a decision moves the answer, which is useful in financial planning conversations with a spouse or advisor.</p>
+        </section>
+        <section id="human-life-value-calculator-guide-section-11" class="panel article-content p-4 sm:p-6" aria-labelledby="human-life-value-calculator-guide-heading-11">
+<h2 id="human-life-value-calculator-guide-heading-11">Using Your HLV to Choose Life Insurance Cover</h2>
+<p>A calculated HLV is only useful once it becomes a purchase, and the gap figure from an online HLV calculator is the bridge: HLV plus liabilities, minus savings and existing cover. Your <strong>monthly expenses</strong> help here as a cross-check on the personal-expenses input, since what the household spends each month should sit comfortably inside the net income the formula assumes. Then compare the gap with any <strong>existing insurance</strong>, including group cover from an employer, which often ends when you change jobs and is less certain coverage than a policy you own.</p>
+
+<h3>Debt, Investment and Future Financial Needs</h3>
+<p>Clear <strong>debt</strong> comes first, because the liabilities input is what lifts the gap above your HLV: a payout that leaves your spouse with a mortgage payment but no paycheck solves little. After the loans are settled, the remainder can go into an <strong>investment</strong> account that funds <strong>future financial needs</strong> such as tuition. The assumed <strong>investment returns</strong> are the same discount rate you entered, so a payout earning 6.5% a year lasts far longer than one parked in a low-interest account, and a generous inflation assumption keeps the payout's buying power intact.</p>
+
+
+<h3>Family Protection Checklist</h3>
+<ul>
+<li>List every dependent and how long each will rely on your human life value</li>
+<li>Add the balances of your loans, from the home loan to the car loan</li>
+<li>Estimate the family's financial needs for education and healthcare</li>
+<li>Subtract savings, investments and existing life insurance cover</li>
+<li>Round the remaining gap up to a policy amount you can afford</li>
+</ul>
+<p>Buying early also helps. A policy bought at 34 locks in today's health rating, so the <strong>financial protection</strong> costs less than the same life insurance bought at 44, and the extra insurance coverage can be reviewed each year as your circumstances change.</p>
+        </section>
+        <section id="human-life-value-calculator-guide-section-12" class="panel article-content p-4 sm:p-6" aria-labelledby="human-life-value-calculator-guide-heading-12">
+<h2 id="human-life-value-calculator-guide-heading-12">When to Recalculate Your Life Value</h2>
+<p>Your HLV is a snapshot, not a lifetime verdict, so <strong>recalculate</strong> it once a year as an <strong>annual review</strong> and whenever one of these life events occurs:</p>
+<ul>
+<li>Marriage, or the birth of a child, which adds dependents</li>
+<li>A new mortgage or large loan, which adds liabilities</li>
+<li>A big raise or career change, which changes your net income</li>
+<li>Approaching retirement, when fewer working years and higher savings shrink the gap</li>
+</ul>
+<p>A short review each year keeps your <strong>insurance coverage</strong> aligned with reality, which matters more than a perfect initial estimate.</p>
+        </section>
+        <section id="human-life-value-calculator-guide-section-13" class="panel article-content p-4 sm:p-6" aria-labelledby="human-life-value-calculator-guide-heading-13">
+<h2 id="human-life-value-calculator-guide-heading-13">Human Life Value Calculators vs Other Life Insurance Calculators</h2>
+<p>A general <strong>life insurance calculator</strong> often stops at a rough multiple, while human life value calculators work from your actual earnings, liabilities and years to retirement. Some tools also show a <strong>maximum potential</strong> figure, which is simply income times working years, and a more detailed <strong>cash flow</strong> view that adds raises and returns on assets. The detailed view matches what this tool does: it reflects expected income growth and the rate of return, so the answer is a present value rather than an inflated total.</p>
+<p>Whichever human life value calculator you choose, treat the output as guidance, not advice. Your <strong>wealth</strong>, health, family and a professional's input all matter in the final decision.</p>
+        </section>
+      </div>
+
+      <section id="human-life-value-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="human-life-value-calculator-faq-heading" data-section="faq">
+        <h2 id="human-life-value-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Human Life Value Calculator questions</h2>
+        <div id="human-life-value-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="human-life-value-calculator-faq-1" class="faq-item" open><summary id="human-life-value-calculator-faq-1-summary" class="faq-summary"><h3 id="human-life-value-calculator-faq-1-question" class="faq-question">What is human life value (HLV)?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="human-life-value-calculator-faq-1-answer" class="faq-answer"><p>Human life value is the present value of the income you are expected to earn between now and retirement, after your own expenses and taxes. It estimates the financial loss your family would face if you died, which makes it a common starting point for sizing life insurance.</p></div></details>
+          <details id="human-life-value-calculator-faq-2" class="faq-item" open><summary id="human-life-value-calculator-faq-2-summary" class="faq-summary"><h3 id="human-life-value-calculator-faq-2-question" class="faq-question">How is human life value calculated?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="human-life-value-calculator-faq-2-answer" class="faq-answer"><p>The calculator takes your net income (income after taxes and personal expenses), grows it by your expected income growth each year for the working years left, and discounts each year back to today at your chosen rate of return. The sum is your human life value.</p></div></details>
+          <details id="human-life-value-calculator-faq-3" class="faq-item" open><summary id="human-life-value-calculator-faq-3-summary" class="faq-summary"><h3 id="human-life-value-calculator-faq-3-question" class="faq-question">How much life insurance do I need based on my HLV?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="human-life-value-calculator-faq-3-answer" class="faq-answer"><p>Add your loans and debts to your human life value, then subtract your savings, other assets and existing life insurance. What remains is the life insurance need, the amount of new cover that closes the gap.</p></div></details>
+          <details id="human-life-value-calculator-faq-4" class="faq-item" open><summary id="human-life-value-calculator-faq-4-summary" class="faq-summary"><h3 id="human-life-value-calculator-faq-4-question" class="faq-question">What is the difference between HLV and an income multiplier?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="human-life-value-calculator-faq-4-answer" class="faq-answer"><p>An income multiplier simply sets cover at a fixed number of times your yearly income, such as 10 to 20 times. HLV uses your own age, retirement date, growth and discount rate, so it reflects how many earning years you actually have left.</p></div></details>
+          <details id="human-life-value-calculator-faq-5" class="faq-item" open><summary id="human-life-value-calculator-faq-5-summary" class="faq-summary"><h3 id="human-life-value-calculator-faq-5-question" class="faq-question">Why does my HLV fall as I get older?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="human-life-value-calculator-faq-5-answer" class="faq-answer"><p>Each year closer to retirement removes a year of future income from the sum. Even if your salary rises, fewer remaining working years usually mean a lower human life value, though debts and dependents can keep the life insurance need high.</p></div></details>
+          <details id="human-life-value-calculator-faq-6" class="faq-item" open><summary id="human-life-value-calculator-faq-6-summary" class="faq-summary"><h3 id="human-life-value-calculator-faq-6-question" class="faq-question">How often should I recalculate my HLV?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="human-life-value-calculator-faq-6-answer" class="faq-answer"><p>Recalculate at least once a year and after major life events such as marriage, a new child, a home purchase, a new loan or a big change in income. Each of these shifts your income, liabilities or dependents.</p></div></details>
+          <details id="human-life-value-calculator-faq-7" class="faq-item" open><summary id="human-life-value-calculator-faq-7-summary" class="faq-summary"><h3 id="human-life-value-calculator-faq-7-question" class="faq-question">Which discount rate should I use?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="human-life-value-calculator-faq-7-answer" class="faq-answer"><p>Use the after-tax return you realistically expect if your family invested a lump sum. A higher rate lowers your HLV, because a smaller amount would grow into the same income; a cautious rate gives a more conservative, higher figure.</p></div></details>
+          <details id="human-life-value-calculator-faq-8" class="faq-item" open><summary id="human-life-value-calculator-faq-8-summary" class="faq-summary"><h3 id="human-life-value-calculator-faq-8-question" class="faq-question">Can I use the human life value calculator if I am self-employed?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="human-life-value-calculator-faq-8-answer" class="faq-answer"><p>Yes. Enter your average net business income as annual income, set the tax rate that applies to you and include business debts in your loans. Because self-employed income varies, consider recalculating more often.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="human-life-value-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="human-life-value-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="human-life-value-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="human-life-value-calculator-ad-bottom-leaderboard">
+            <ins id="human-life-value-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("human-life-value-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="human-life-value-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="human-life-value-calculator-right-rail-top" class="mb-6">
+        <aside id="human-life-value-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="human-life-value-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="human-life-value-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="human-life-value-calculator-ad-right-rail-rectangle">
+            <ins id="human-life-value-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("human-life-value-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="human-life-value-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="human-life-value-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="human-life-value-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="human-life-value-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="human-life-value-calculator-ad-right-rail-skyscraper">
+            <ins id="human-life-value-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("human-life-value-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="human-life-value-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="human-life-value-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="human-life-value-calculator-footer-brand">
+        <a id="human-life-value-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="human-life-value-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="human-life-value-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="human-life-value-calculator-footer-categories" aria-labelledby="human-life-value-calculator-footer-categories-heading">
+        <h2 id="human-life-value-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="human-life-value-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="human-life-value-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="human-life-value-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="human-life-value-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="human-life-value-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="human-life-value-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="human-life-value-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="human-life-value-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="human-life-value-calculator-footer-company" aria-labelledby="human-life-value-calculator-footer-company-heading">
+        <h2 id="human-life-value-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="human-life-value-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="human-life-value-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="human-life-value-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="human-life-value-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="human-life-value-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="human-life-value-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="human-life-value-calculator-footer-bottom" class="border-t border-line">
+      <p id="human-life-value-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="human-life-value-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Human life value: the present value of the earnings a household would lose, net of the
+  // earner's own living costs, from now until retirement.
+  // Year k (k = 1 .. years to retirement), received at the end of the year:
+  //   gross pay_k = income x (1 + g)^(k-1); benefits_k = benefits x (1 + g)^(k-1)
+  //   family share_k = (gross pay_k x (1 - tax rate) + benefits_k) x (1 - personal consumption share)
+  //   human life value = sum of family share_k / (1 + d)^k
+  // Closed form (growing annuity): PV = C1 / (d - g) x [1 - ((1 + g) / (1 + d))^n],
+  // or n x C1 / (1 + d) when d = g.
+  // Verified (Node, scratch tests): $80,000, 20% tax, 25% consumption, 3% growth, 5% discount,
+  // 25 years: C1 = $48,000; PV = 48,000 / 0.02 x (1 - (1.03/1.05)^25) = $916,083.78, matching the
+  // year-by-year sum; with g = d = 4% and 10 years, C1 = $10,000 gives 10 x 10,000 / 1.04 =
+  // $96,153.85; with 0% growth and 0% discount the value equals the plain total.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+
+  // --- calc start
+  function lifeValue(p) {
+    var n = p.retireAge - p.age, pv = 0, total = 0, rows = [];
+    for (var k = 1; k <= n; k++) {
+      var grow = Math.pow(1 + p.growth, k - 1);
+      var gross = p.income * grow, ben = p.benefits * grow;
+      var afterTax = gross * (1 - p.tax) + ben;
+      var family = afterTax * (1 - p.consumption);
+      var disc = family / Math.pow(1 + p.discount, k);
+      pv += disc;
+      total += family;
+      rows.push({ year: k, age: p.age + k - 1, gross: gross, afterTax: afterTax, family: family, pv: disc });
+    }
+    return { pv: pv, total: total, years: n, first: rows.length ? rows[0].family : 0, rows: rows };
+  }
+
+  // --- calc end
+
+  function num(id) {
+    var v = parseFloat(document.getElementById(id).value);
+    return isNaN(v) ? NaN : v;
+  }
+  function setText(id, text) { document.getElementById(id).textContent = text; }
+
+  function update() {
+    var p = { age: Math.round(num('hlAge')), retireAge: Math.round(num('hlRetireAge')), income: num('hlIncome'),
+              growth: num('hlGrowth'), tax: num('hlTax'), consumption: num('hlConsumption'), discount: num('hlDiscount'),
+              benefits: num('hlBenefits'), cover: num('hlCover') };
+    var error = document.getElementById('hlError');
+    var msg = '';
+    if (Object.keys(p).some(function (k) { return isNaN(p[k]); })) msg = 'Fill in every field.';
+    else if (p.age < 16 || p.age > 90 || p.retireAge <= p.age || p.retireAge > 90) msg = 'Enter an age from 16 to 90 and a retirement age after it (up to 90).';
+    else if (p.income < 0 || p.benefits < 0 || p.cover < 0 || p.income + p.benefits <= 0) msg = 'Enter an income above $0 (and amounts of $0 or more).';
+    else if (p.growth < -10 || p.growth > 20 || p.discount < 0 || p.discount > 20) msg = 'Enter income growth from -10% to 20% and a discount rate from 0% to 20%.';
+    else if (p.tax < 0 || p.tax > 100 || p.consumption < 0 || p.consumption > 100) msg = 'Enter the tax rate and personal spending share from 0% to 100%.';
+    error.hidden = msg === '';
+    if (msg) { error.textContent = msg; return; }
+    ['growth', 'tax', 'consumption', 'discount'].forEach(function (k) { p[k] /= 100; });
+    var r = lifeValue(p);
+    setText('hlValue', money.format(r.pv));
+    setText('hlTotal', money.format(r.total));
+    setText('hlFirst', money.format(r.first));
+    setText('hlYears', r.years + (r.years === 1 ? ' year' : ' years'));
+    setText('hlMultiple', p.income > 0 ? (r.pv / p.income).toFixed(1) + '× your current income' : '–');
+    var gap = r.pv - p.cover;
+    setText('hlGap', gap > 0 ? money.format(gap) : 'None — existing cover meets this value');
+    document.getElementById('hlSchedule').innerHTML = r.rows.map(function (row) {
+      return '<tr><td>' + row.year + '</td><td>' + row.age + '</td><td>' + money.format(row.gross) + '</td><td>' +
+        money.format(row.afterTax) + '</td><td>' + money.format(row.family) + '</td><td>' + money.format(row.pv) + '</td></tr>';
+    }).join('');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('hlForm');
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

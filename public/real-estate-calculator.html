@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en" id="real-estate-calculator-document" data-page-slug="real-estate-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Real Estate Calculator: Home Equity and Sale Proceeds</title>
+  <meta name="description" content="Project a home’s value, your equity and the cash you would walk away with after selling costs, plus the full cost of owning it for the years you hold it.">
+  <link rel="canonical" href="https://company-marketcap.github.io/real-estate-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Real Estate Calculator: Home Equity and Sale Proceeds">
+  <meta property="og:description" content="Project a home’s value, your equity and the cash you would walk away with after selling costs, plus the full cost of owning it for the years you hold it.">
+  <meta property="og:url" content="https://company-marketcap.github.io/real-estate-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Real Estate Calculator", "url": "https://company-marketcap.github.io/real-estate-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Project a home’s value, your equity and the cash you would walk away with after selling costs, plus the full cost of owning it for the years you hold it."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Real Estate & Rental Property", "item": "https://company-marketcap.github.io/financial-calculators.html#real-estate-calculators"}, {"@type": "ListItem", "position": 4, "name": "Real Estate Calculator", "item": "https://company-marketcap.github.io/real-estate-calculator.html"}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="real-estate-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="real-estate-calculator" data-page-type="calculator">
+  <a id="real-estate-calculator-skip-link" href="#real-estate-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="real-estate-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="real-estate-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="real-estate-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="real-estate-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="real-estate-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="real-estate-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="real-estate-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="real-estate-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="real-estate-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="real-estate-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="real-estate-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="real-estate-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="real-estate-calculator-header-search-status" aria-controls="real-estate-calculator-header-search-results" data-search-input="header">
+              <p id="real-estate-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="real-estate-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="real-estate-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="real-estate-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="real-estate-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="real-estate-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="real-estate-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="real-estate-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="real-estate-calculator-mobile-search-status" aria-controls="real-estate-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="real-estate-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="real-estate-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="real-estate-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="real-estate-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="real-estate-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="real-estate-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="real-estate-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="real-estate-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="real-estate-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="real-estate-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="real-estate-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="real-estate-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="real-estate-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="real-estate-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="real-estate-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="real-estate-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="real-estate-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="real-estate-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="real-estate-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="real-estate-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="real-estate-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="real-estate-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="real-estate-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="real-estate-calculator-sidebar-search-status" aria-controls="real-estate-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="real-estate-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="real-estate-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="real-estate-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="real-estate-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="real-estate-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="real-estate-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="real-estate-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="real-estate-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="real-estate-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="real-estate-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="real-estate-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators" aria-current="true">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="real-estate-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="real-estate-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="real-estate-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="real-estate-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="real-estate-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="real-estate-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="real-estate-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="real-estate-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="real-estate-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="real-estate-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="real-estate-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="real-estate-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="real-estate-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="real-estate-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="real-estate-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="real-estate-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="real-estate-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="real-estate-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="real-estate-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="real-estate-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="real-estate-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="real-estate-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="real-estate-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="real-estate-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="real-estate-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="real-estate-calculator" data-calculator-slug="real-estate-calculator" data-sub-category-slug="real-estate-calculators">
+      <aside id="real-estate-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="real-estate-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="real-estate-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="real-estate-calculator-ad-top-leaderboard">
+            <ins id="real-estate-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("real-estate-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="real-estate-calculator-intro-area" class="space-y-4">
+        <nav id="real-estate-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="real-estate-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="real-estate-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="real-estate-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="real-estate-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#real-estate-calculators" itemprop="item"><span itemprop="name">Real Estate &amp; Rental Property</span></a><meta itemprop="position" content="3"></li>
+            <li id="real-estate-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Real Estate Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/real-estate-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="real-estate-calculator-hero-section" aria-labelledby="real-estate-calculator-hero-heading" data-section="hero">
+          <h1 id="real-estate-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Real Estate Calculator</h1>
+          <p id="real-estate-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Project what a home could be worth when you sell, the equity you would have built, the cash you would walk away with after selling costs, and what owning it cost along the way. <!-- SILO_START:slot_a -->If you want to see how the figures change, the <a class="silo-link" href="/rent-calculator.html">free rent calculator</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="real-estate-calculator-tool" class="space-y-6" data-page-slug="real-estate-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="reFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="reForm" class="space-y-5" novalidate aria-labelledby="reFormHeading">
+      <h2 id="reFormHeading" class="panel-heading">Enter your purchase and plans</h2>
+<h3 class="pt-2 font-display text-base font-bold">Buying</h3>
+<div><label for="rePrice" class="form-label">Purchase price</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="rePrice" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1000" value="400000" inputmode="decimal"></div></div>
+<div><label for="reDown" class="form-label">Down payment</label><div class="input-group"><input type="number" id="reDown" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="any" value="20" inputmode="decimal"><select id="reDownUnit" aria-label="Down payment unit" class="shrink-0 border-l border-line bg-surface-muted px-2 text-sm font-semibold text-ink-muted focus:outline-none"><option value="percent" selected>%</option><option value="dollar">$</option></select></div></div>
+<div class="form-row form-row-2">
+<div><label for="reRate" class="form-label">Interest rate</label><div class="input-group"><input type="number" id="reRate" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="30" step="0.125" value="6.5" inputmode="decimal"><span class="input-affix">%</span></div></div>
+<div><label for="reTerm" class="form-label">Loan term</label><div class="input-group"><input type="number" id="reTerm" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1" max="50" step="1" value="30" inputmode="numeric"><span class="input-affix">yrs</span></div></div>
+</div>
+<div><label for="reBuyCost" class="form-label">Buying closing costs</label><div class="input-group"><input type="number" id="reBuyCost" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="15" step="0.5" value="3" inputmode="decimal"><span class="input-affix">% of price</span></div></div>
+<h3 class="pt-2 font-display text-base font-bold">Holding and selling</h3>
+<div class="form-row form-row-2">
+<div><label for="reGrowth" class="form-label">Yearly change in value</label><div class="input-group"><input type="number" id="reGrowth" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="-20" max="20" step="0.5" value="3" inputmode="decimal" aria-describedby="reGrowthHint"><span class="input-affix">%</span></div><p id="reGrowthHint" class="form-hint">Use a negative number for a fall.</p></div>
+<div><label for="reYears" class="form-label">Years until you sell</label><div class="input-group"><input type="number" id="reYears" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1" max="50" step="1" value="10" inputmode="numeric"><span class="input-affix">yrs</span></div></div>
+</div>
+<div><label for="reSellCost" class="form-label">Selling costs</label><div class="input-group"><input type="number" id="reSellCost" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="15" step="0.5" value="6" inputmode="decimal" aria-describedby="reSellCostHint"><span class="input-affix">% of sale price</span></div><p id="reSellCostHint" class="form-hint">Agent commissions plus the seller’s closing costs and transfer taxes.</p></div>
+<h3 class="pt-2 font-display text-base font-bold">Ownership costs</h3>
+<div class="form-row form-row-2">
+<div><label for="reTax" class="form-label">Property tax</label><div class="input-group"><input type="number" id="reTax" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="10" step="0.05" value="1.1" inputmode="decimal" aria-describedby="reTaxHint"><span class="input-affix">% / yr</span></div><p id="reTaxHint" class="form-hint">Of the home’s value each year.</p></div>
+<div><label for="reIns" class="form-label">Home insurance</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="reIns" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="1800" inputmode="decimal"><span class="input-affix">/ yr</span></div></div>
+</div>
+<div class="form-row form-row-2">
+<div><label for="reMaint" class="form-label">Maintenance</label><div class="input-group"><input type="number" id="reMaint" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="10" step="0.25" value="1" inputmode="decimal" aria-describedby="reMaintHint"><span class="input-affix">% / yr</span></div><p id="reMaintHint" class="form-hint">Of the home’s value each year.</p></div>
+<div><label for="reHoa" class="form-label">HOA dues</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="reHoa" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="0" inputmode="decimal"><span class="input-affix">/ mo</span></div></div>
+</div>
+      <p id="reError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="reResults" aria-live="polite" aria-labelledby="reResultsHeading">
+      <h2 id="reResultsHeading" class="panel-heading">Your results</h2>
+<div class="stat-grid mt-4">
+<div class="stat-card stat-card-highlight"><p class="stat-label">Cash from the sale</p><p id="reNet" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">Home value when you sell</p><p id="reValueOut" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">Loan balance when you sell</p><p id="reBalanceOut" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">Equity before selling costs</p><p id="reEquityOut" class="stat-value">–</p></div>
+</div>
+<div class="callout callout-note mt-5"><p id="reBreakEven">–</p></div>
+<h3 class="mt-6 font-display text-base font-bold">Where the sale money comes from</h3>
+<div class="mt-2">
+<div class="result-row"><span class="result-term">Down payment and buying costs</span><span id="reCashIn" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Principal you repaid</span><span id="rePrincipal" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Change in value</span><span id="reAppreciation" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Selling costs</span><span id="reSellCosts" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Gain over the money you put in</span><span id="reGain" class="result-value">–</span></div>
+</div>
+<h3 class="mt-6 font-display text-base font-bold">Cost of owning while you hold it</h3>
+<div class="mt-2">
+<div class="result-row"><span class="result-term">Monthly principal and interest</span><span id="rePI" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Mortgage interest</span><span id="reInterest" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Property tax</span><span id="reTaxTotal" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Home insurance</span><span id="reInsTotal" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Maintenance</span><span id="reMaintTotal" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">HOA dues</span><span id="reHoaTotal" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Buying and selling costs</span><span id="reTxnTotal" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Total cost of owning</span><span id="reCostTotal" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Average per month</span><span id="reCostMonthly" class="result-value">–</span></div>
+</div>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="reScheduleHeading" data-section="schedule">
+  <h2 id="reScheduleHeading" class="panel-heading">If you sold at the end of each year</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">Values are at the end of each year. Cash from the sale is after selling costs and paying off the loan. The gain compares it with your down payment, buying costs and principal repaid.</p>
+  <div class="table-scroll mt-5 max-h-[520px]" tabindex="0" role="region" aria-labelledby="reScheduleHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Year</th><th scope="col">Home value</th><th scope="col">Loan balance</th><th scope="col">Equity</th><th scope="col">Cash from sale</th><th scope="col">Gain</th></tr></thead>
+      <tbody id="reSchedule"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="real-estate-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="real-estate-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Project what a home could be worth when you sell, the equity you would have built, the cash you would walk away with after selling costs, and what owning it cost along the way. <!-- SILO_START:slot_a_m -->If you want to see how the figures change, the <a class="silo-link" href="/rent-calculator.html">free rent calculator</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="real-estate-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="real-estate-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="real-estate-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="real-estate-calculator-ad-in-feed">
+            <ins id="real-estate-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("real-estate-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      
+
+      
+
+      <nav id="real-estate-calculator-related-section" class="border-t border-line pt-8" aria-labelledby="real-estate-calculator-related-heading" data-section="related-calculators">
+        <h2 id="real-estate-calculator-related-heading" class="guide-heading">Related calculators</h2>
+        <ul id="real-estate-calculator-related-list" class="mt-5 grid gap-3 @2xl:grid-cols-2 @5xl:grid-cols-3" role="list">
+          <li><a id="real-estate-calculator-related-link-rent-vs-buy-calculator" class="related-link" href="/rent-vs-buy-calculator.html" data-calculator-name="Rent vs. Buy Calculator" data-category-name="Real Estate &amp; Rental Property">Rent vs. Buy Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
+          <li><a id="real-estate-calculator-related-link-rental-property-calculator" class="related-link" href="/rental-property-calculator.html" data-calculator-name="Rental Property Calculator" data-category-name="Real Estate &amp; Rental Property">Rental Property Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
+          <li><a id="real-estate-calculator-related-link-mortgage-calculator" class="related-link" href="/mortgage-calculator.html" data-calculator-name="Mortgage Calculator" data-category-name="Mortgage &amp; Home Buying">Mortgage Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
+          <li><a id="real-estate-calculator-related-link-house-affordability-calculator" class="related-link" href="/house-affordability-calculator.html" data-calculator-name="House Affordability Calculator" data-category-name="Mortgage &amp; Home Buying">House Affordability Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
+          <li><a id="real-estate-calculator-related-link-1031-exchange-calculator" class="related-link" href="/1031-exchange-calculator.html" data-calculator-name="1031 Exchange Calculator" data-category-name="Real Estate &amp; Rental Property">1031 Exchange Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
+          <li><a id="real-estate-calculator-related-link-1031-exchange-timeline-calculator" class="related-link" href="/1031-exchange-timeline-calculator.html" data-calculator-name="1031 Exchange Timeline Calculator" data-category-name="Real Estate &amp; Rental Property">1031 Exchange Timeline Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
+        </ul>
+      </nav>
+
+      <aside id="real-estate-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="real-estate-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="real-estate-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="real-estate-calculator-ad-bottom-leaderboard">
+            <ins id="real-estate-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("real-estate-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="real-estate-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="real-estate-calculator-right-rail-top" class="mb-6">
+        <aside id="real-estate-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="real-estate-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="real-estate-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="real-estate-calculator-ad-right-rail-rectangle">
+            <ins id="real-estate-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("real-estate-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="real-estate-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="real-estate-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="real-estate-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="real-estate-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="real-estate-calculator-ad-right-rail-skyscraper">
+            <ins id="real-estate-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("real-estate-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="real-estate-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="real-estate-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="real-estate-calculator-footer-brand">
+        <a id="real-estate-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="real-estate-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="real-estate-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="real-estate-calculator-footer-categories" aria-labelledby="real-estate-calculator-footer-categories-heading">
+        <h2 id="real-estate-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="real-estate-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="real-estate-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="real-estate-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="real-estate-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="real-estate-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="real-estate-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="real-estate-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="real-estate-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="real-estate-calculator-footer-company" aria-labelledby="real-estate-calculator-footer-company-heading">
+        <h2 id="real-estate-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="real-estate-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="real-estate-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="real-estate-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="real-estate-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="real-estate-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="real-estate-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="real-estate-calculator-footer-bottom" class="border-t border-line">
+      <p id="real-estate-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="real-estate-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+
+<script>(function () {
+  'use strict';
+  // Buy a home, hold it, sell it: value, equity, sale proceeds and the cost of owning it.
+  //   Value after y years: V(y) = P * (1 + g)^y (annual appreciation g, may be negative).
+  //   Loan balance after m payments: B = L(1+i)^m - M((1+i)^m - 1)/i, i = rate/12 (L - M*m at 0%),
+  //   with M = L * i / (1 - (1 + i)^-n).
+  //   Net proceeds if sold in year y = V(y) * (1 - selling cost %) - B(12y).
+  //   Gain over your money = net proceeds - (down payment + buying costs + principal repaid)
+  //                        = appreciation - buying costs - selling costs.
+  //   Ownership costs in year y: property tax and maintenance as a % of the value at the start of
+  //   the year; insurance and HOA dues flat.
+  // Verified in Node (scratchpad tests/w3re): $400,000 at 3% for 10 yrs = $537,566.55 (closed form);
+  //   balance on $320,000 at 6.5% for 30 yrs after 120 payments = $271,283.60, equal to the closed
+  //   form above and a month-by-month loop; gain identity (appreciation - buying - selling costs)
+  //   holds to the cent; 0% appreciation never breaks even; 0% rate and negative appreciation
+  //   work; a hold longer than the loan term leaves a $0 balance; no NaN/Infinity on bad input.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 });
+  var money0 = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+
+  function el(id) { return document.getElementById(id); }
+  function setText(id, text) { el(id).textContent = text; }
+
+  function read(id, blankAsZero) {
+    var raw = String(el(id).value).trim();
+    if (raw === '') return blankAsZero ? 0 : NaN;
+    var v = Number(raw);
+    return isFinite(v) ? v : NaN;
+  }
+
+  function payment(loan, i, n) {
+    if (loan <= 0 || n <= 0) return 0;
+    if (i === 0) return loan / n;
+    return loan * i / (1 - Math.pow(1 + i, -n));
+  }
+
+  // Month-by-month so the interest paid each year is exact; returns per-year totals.
+  function loanByYear(loan, i, n, years) {
+    var pay = payment(loan, i, n), bal = loan, out = [];
+    for (var y = 1; y <= years; y++) {
+      var interest = 0, principal = 0;
+      for (var k = 1; k <= 12; k++) {
+        var m = (y - 1) * 12 + k;
+        if (m > n || bal <= 0) break;
+        var mi = bal * i;
+        var pr = m === n ? bal : Math.min(pay - mi, bal);
+        bal -= pr;
+        if (bal < 0.005) bal = 0;
+        interest += mi; principal += pr;
+      }
+      out.push({ interest: interest, principal: principal, balance: bal });
+    }
+    return { pay: pay, years: out };
+  }
+
+  function duration(y) { return y + (y === 1 ? ' year' : ' years'); }
+
+  function clearResults() {
+    ['reNet', 'reValueOut', 'reBalanceOut', 'reEquityOut', 'rePI', 'reCashIn', 'rePrincipal', 'reAppreciation', 'reSellCosts',
+     'reGain', 'reInterest', 'reTaxTotal', 'reInsTotal', 'reMaintTotal', 'reHoaTotal', 'reTxnTotal', 'reCostTotal', 'reCostMonthly']
+      .forEach(function (id) { setText(id, '–'); });
+    setText('reBreakEven', '–');
+    el('reSchedule').innerHTML = '';
+  }
+
+  function update() {
+    var price = read('rePrice'), down = read('reDown', true), downUnit = el('reDownUnit').value,
+        rate = read('reRate'), term = read('reTerm'), buyPct = read('reBuyCost', true), growth = read('reGrowth', true),
+        years = read('reYears'), sellPct = read('reSellCost', true),
+        tax = read('reTax', true), ins = read('reIns', true), maint = read('reMaint', true), hoa = read('reHoa', true);
+    var downAmt = downUnit === 'percent' ? price * down / 100 : down;
+    var msg = '';
+    if (isNaN(price) || price <= 0) msg = 'Enter a purchase price greater than $0.';
+    else if (isNaN(down) || down < 0 || downAmt > price) msg = 'Enter a down payment from 0 up to the purchase price.';
+    else if (isNaN(rate) || rate < 0 || rate > 30) msg = 'Enter an interest rate from 0% to 30%.';
+    else if (isNaN(term) || term < 1 || term > 50 || term % 1 !== 0) msg = 'Enter a loan term of 1 to 50 whole years.';
+    else if (isNaN(years) || years < 1 || years > 50 || years % 1 !== 0) msg = 'Enter how long you keep the home: 1 to 50 whole years.';
+    else if (isNaN(growth) || growth < -20 || growth > 20) msg = 'Enter a yearly change in value from -20% to 20%.';
+    else if ([buyPct, sellPct, tax, ins, maint, hoa].some(function (v) { return isNaN(v) || v < 0; })) msg = 'Costs cannot be negative.';
+    else if (buyPct > 15 || sellPct > 15) msg = 'Enter buying and selling costs of 15% or less.';
+    else if (tax > 10 || maint > 10) msg = 'Enter property tax and maintenance of 10% of the value or less.';
+    var error = el('reError');
+    error.hidden = !msg;
+    error.textContent = msg;
+    if (msg) { clearResults(); return; }
+
+    var loan = price - downAmt, g = growth / 100, i = rate / 1200, n = term * 12;
+    var ln = loanByYear(loan, i, n, years);
+    var buyCost = price * buyPct / 100;
+    var cashIn = downAmt + buyCost;
+    var rows = [], principalPaid = 0, totals = { interest: 0, tax: 0, ins: 0, maint: 0, hoa: 0 }, breakEven = 0;
+    for (var y = 1; y <= years; y++) {
+      var startValue = price * Math.pow(1 + g, y - 1), value = price * Math.pow(1 + g, y);
+      var ly = ln.years[y - 1];
+      principalPaid += ly.principal;
+      totals.interest += ly.interest;
+      totals.tax += startValue * tax / 100;
+      totals.maint += startValue * maint / 100;
+      totals.ins += ins;
+      totals.hoa += hoa * 12;
+      var net = value * (1 - sellPct / 100) - ly.balance;
+      var gain = net - cashIn - principalPaid;
+      if (!breakEven && gain >= 0) breakEven = y;
+      rows.push({ year: y, value: value, balance: ly.balance, equity: value - ly.balance, net: net, gain: gain });
+    }
+    var last = rows[rows.length - 1];
+    var sellCost = last.value * sellPct / 100;
+    var txn = buyCost + sellCost;
+    var costTotal = totals.interest + totals.tax + totals.ins + totals.maint + totals.hoa + txn;
+
+    setText('reNet', money0.format(last.net));
+    setText('reValueOut', money0.format(last.value));
+    setText('reBalanceOut', money0.format(last.balance));
+    setText('reEquityOut', money0.format(last.equity));
+    setText('rePI', money.format(ln.pay));
+    setText('reCashIn', money.format(cashIn));
+    setText('rePrincipal', money.format(principalPaid));
+    setText('reAppreciation', money.format(last.value - price));
+    setText('reSellCosts', money.format(sellCost));
+    setText('reGain', money.format(last.gain));
+    setText('reInterest', money.format(totals.interest));
+    setText('reTaxTotal', money.format(totals.tax));
+    setText('reInsTotal', money.format(totals.ins));
+    setText('reMaintTotal', money.format(totals.maint));
+    setText('reHoaTotal', money.format(totals.hoa));
+    setText('reTxnTotal', money.format(txn));
+    setText('reCostTotal', money.format(costTotal));
+    setText('reCostMonthly', money.format(costTotal / (years * 12)));
+    setText('reBreakEven', breakEven
+      ? 'After ' + duration(breakEven) + ', the home’s rise in value covers your buying and selling costs, so selling would return at least the down payment, buying costs and principal you put in.'
+      : 'Within ' + duration(years) + ', the home’s rise in value does not cover your buying and selling costs, so selling would return less than the down payment, buying costs and principal you put in.');
+
+    el('reSchedule').innerHTML = rows.map(function (row) {
+      return '<tr><td>' + row.year + '</td><td>' + money0.format(row.value) + '</td><td>' + money0.format(row.balance) + '</td><td>' +
+        money0.format(row.equity) + '</td><td>' + money0.format(row.net) + '</td><td>' + money0.format(row.gain) + '</td></tr>';
+    }).join('');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = el('reForm');
+    if (!form) return;
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

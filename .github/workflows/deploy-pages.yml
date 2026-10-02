@@ -1,23 +1,38 @@
 name: Build and deploy site
 
-# Builds public/ from src/ (JSON is the single source of truth) and deploys it to GitHub Pages.
+# Builds public/ from src/ (JSON is the single source of truth) and deploys it to GitHub Pages. public/ is also
+# committed (for preview and history, like webcam-test) but the deploy never depends on it: it always rebuilds fresh.
 # One-time setup: repo Settings -> Pages -> Build and deployment -> Source = "GitHub Actions".
 
 on:
   push:
     branches: [main]
-  schedule:
-    - cron: '0 16 1 * *'   # 00:00 SGT on the 1st: redeploy so the monthly silo-link rotation changes
+    paths:
+      - 'src/**'
+      - 'utilities/silo_linking/**'
+      - 'package.json'
+      - 'package-lock.json'
+      # silo-rotation.yml's monthly commit only touches public/*.html (never src/); without this a manual push of
+      # regenerated pages would not redeploy. The job rebuilds from src/ regardless, so it just reproduces the
+      # same rotation.
+      - 'public/**'
+      - '.github/workflows/deploy-pages.yml'
   workflow_dispatch:
+    inputs:
+      date:
+        description: 'Silo rotation month to build (YYYY-MM). Leave empty to use today. Set by silo-rotation.yml.'
+        required: false
+        default: ''
 
 permissions:
   contents: read
   pages: write
   id-token: write
 
+# Only one deploy at a time; let an in-flight run finish rather than canceling it mid-publish.
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -38,7 +53,12 @@ jobs:
         run: python3 src/generate.py
 
       - name: Patch this month's silo links into public/
-        run: python3 utilities/silo_linking/generate_silo_rotation.py
+        env:
+          ROTATION_DATE: ${{ github.event.inputs.date }}
+        run: |
+          DATE_ARG=""
+          if [ -n "$ROTATION_DATE" ]; then DATE_ARG="--date=$ROTATION_DATE"; fi
+          python3 utilities/silo_linking/generate_silo_rotation.py $DATE_ARG
 
       - uses: actions/upload-pages-artifact@v3
         with:

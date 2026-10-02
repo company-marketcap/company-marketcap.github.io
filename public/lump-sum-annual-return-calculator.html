@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="en" id="lump-sum-annual-return-calculator-document" data-page-slug="lump-sum-annual-return-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lump Sum Annual Return Calculator (CAGR)</title>
+  <meta name="description" content="Find the annual return on a single lump-sum investment from its amount, ending value and time held, and see what other returns would have produced.">
+  <link rel="canonical" href="https://company-marketcap.github.io/lump-sum-annual-return-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Lump Sum Annual Return Calculator (CAGR)">
+  <meta property="og:description" content="Find the annual return on a single lump-sum investment from its amount, ending value and time held, and see what other returns would have produced.">
+  <meta property="og:url" content="https://company-marketcap.github.io/lump-sum-annual-return-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Lump Sum Annual Return Calculator", "url": "https://company-marketcap.github.io/lump-sum-annual-return-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Find the annual return on a single lump-sum investment from its amount, ending value and time held, and see what other returns would have produced."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Investment Returns & Growth", "item": "https://company-marketcap.github.io/financial-calculators.html#investment-calculators"}, {"@type": "ListItem", "position": 4, "name": "Lump Sum Annual Return Calculator", "item": "https://company-marketcap.github.io/lump-sum-annual-return-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a lump sum investment?", "acceptedAnswer": {"@type": "Answer", "text": "A lump sum is a single, one-time deposit that you leave invested without adding more money. Its growth depends only on the amount, the rate of return, the compounding method and how long it stays invested."}}, {"@type": "Question", "name": "How do I calculate the annual return on a lump sum?", "acceptedAnswer": {"@type": "Answer", "text": "Divide the final balance by the amount you invested, raise the result to the power of one over the number of years, and subtract one. The answer is the average compound annual return, which is lower than the total gain divided by the years because it accounts for compounding."}}, {"@type": "Question", "name": "What rate of return should I enter?", "acceptedAnswer": {"@type": "Answer", "text": "Match the rate to what you hold. Long-run stock index averages are often quoted near 10% before inflation, bonds and CDs pay less, and savings accounts less still. Many people use 6% to 7% for a diversified portfolio and run a conservative and an optimistic case as well."}}, {"@type": "Question", "name": "Does compounding more often make a big difference?", "acceptedAnswer": {"@type": "Answer", "text": "A little. Moving from annual to daily compounding adds a modest amount over many years. The rate of return and the length of time matter far more than the compound frequency."}}, {"@type": "Question", "name": "Does this calculator include inflation, taxes or fees?", "acceptedAnswer": {"@type": "Answer", "text": "No. The result is a hypothetical projection at a constant rate. Inflation, taxes and fund fees all reduce what you actually keep, so lower your estimated rate to reflect them."}}, {"@type": "Question", "name": "Can I add recurring investments to the lump sum?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Enter a recurring amount and choose monthly or annually, and whether it is paid at the beginning or end of each period. Leave it at zero to see a pure lump sum."}}, {"@type": "Question", "name": "What does the interest rate variance range do?", "acceptedAnswer": {"@type": "Answer", "text": "It shows how much the final balance changes if your return is a few percentage points lower or higher than the estimate, giving you a quick low and high case."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="lump-sum-annual-return-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="lump-sum-annual-return-calculator" data-page-type="calculator">
+  <a id="lump-sum-annual-return-calculator-skip-link" href="#lump-sum-annual-return-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="lump-sum-annual-return-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="lump-sum-annual-return-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="lump-sum-annual-return-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="lump-sum-annual-return-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="lump-sum-annual-return-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="lump-sum-annual-return-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="lump-sum-annual-return-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="lump-sum-annual-return-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="lump-sum-annual-return-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="lump-sum-annual-return-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="lump-sum-annual-return-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="lump-sum-annual-return-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="lump-sum-annual-return-calculator-header-search-status" aria-controls="lump-sum-annual-return-calculator-header-search-results" data-search-input="header">
+              <p id="lump-sum-annual-return-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="lump-sum-annual-return-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="lump-sum-annual-return-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="lump-sum-annual-return-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="lump-sum-annual-return-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="lump-sum-annual-return-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="lump-sum-annual-return-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="lump-sum-annual-return-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="lump-sum-annual-return-calculator-mobile-search-status" aria-controls="lump-sum-annual-return-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="lump-sum-annual-return-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="lump-sum-annual-return-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="lump-sum-annual-return-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="lump-sum-annual-return-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="lump-sum-annual-return-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="lump-sum-annual-return-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="lump-sum-annual-return-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="lump-sum-annual-return-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="lump-sum-annual-return-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="lump-sum-annual-return-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="lump-sum-annual-return-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="lump-sum-annual-return-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="lump-sum-annual-return-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="lump-sum-annual-return-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="lump-sum-annual-return-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="lump-sum-annual-return-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="lump-sum-annual-return-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="lump-sum-annual-return-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="lump-sum-annual-return-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="lump-sum-annual-return-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="lump-sum-annual-return-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="lump-sum-annual-return-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="lump-sum-annual-return-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="lump-sum-annual-return-calculator-sidebar-search-status" aria-controls="lump-sum-annual-return-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="lump-sum-annual-return-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="lump-sum-annual-return-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="lump-sum-annual-return-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="lump-sum-annual-return-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="lump-sum-annual-return-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="lump-sum-annual-return-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="lump-sum-annual-return-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="lump-sum-annual-return-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="lump-sum-annual-return-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="lump-sum-annual-return-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="lump-sum-annual-return-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="lump-sum-annual-return-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="lump-sum-annual-return-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="lump-sum-annual-return-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="lump-sum-annual-return-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="lump-sum-annual-return-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="lump-sum-annual-return-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="lump-sum-annual-return-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="lump-sum-annual-return-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators" aria-current="true">Investment Returns</a></li><li><a id="lump-sum-annual-return-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="lump-sum-annual-return-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="lump-sum-annual-return-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="lump-sum-annual-return-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="lump-sum-annual-return-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="lump-sum-annual-return-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="lump-sum-annual-return-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="lump-sum-annual-return-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="lump-sum-annual-return-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="lump-sum-annual-return-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="lump-sum-annual-return-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="lump-sum-annual-return-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="lump-sum-annual-return-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="lump-sum-annual-return-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="lump-sum-annual-return-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="lump-sum-annual-return-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="lump-sum-annual-return-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="lump-sum-annual-return-calculator" data-calculator-slug="lump-sum-annual-return-calculator" data-sub-category-slug="investment-calculators">
+      <aside id="lump-sum-annual-return-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="lump-sum-annual-return-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="lump-sum-annual-return-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="lump-sum-annual-return-calculator-ad-top-leaderboard">
+            <ins id="lump-sum-annual-return-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("lump-sum-annual-return-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="lump-sum-annual-return-calculator-intro-area" class="space-y-4">
+        <nav id="lump-sum-annual-return-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="lump-sum-annual-return-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="lump-sum-annual-return-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="lump-sum-annual-return-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="lump-sum-annual-return-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#investment-calculators" itemprop="item"><span itemprop="name">Investment Returns &amp; Growth</span></a><meta itemprop="position" content="3"></li>
+            <li id="lump-sum-annual-return-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Lump Sum Annual Return Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/lump-sum-annual-return-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="lump-sum-annual-return-calculator-hero-section" aria-labelledby="lump-sum-annual-return-calculator-hero-heading" data-section="hero">
+          <h1 id="lump-sum-annual-return-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Lump Sum Annual Return Calculator</h1>
+          <p id="lump-sum-annual-return-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Wondering what a single deposit turns into after a decade or two? The lump sum annual return calculator takes one investment, a time horizon and a yearly percentage, then shows the final balance and the annual return hiding behind it, so you can judge a plan with numbers instead of hope. <!-- SILO_START:slot_a -->Try the <a class="silo-link" href="/investment-calculator.html">investment calculator online</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="lump-sum-annual-return-calculator-tool" class="space-y-6" data-page-slug="lump-sum-annual-return-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="lsFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="lsForm" class="space-y-5" novalidate aria-labelledby="lsFormHeading">
+      <h2 id="lsFormHeading" class="panel-heading">Enter your lump sum</h2>
+      <div><label for="lsStart" class="form-label">Amount invested</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="lsStart" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="10000" inputmode="decimal"></div><p class="form-hint">A single amount put in at the start, with nothing added or taken out afterwards.</p></div>
+      <div><label for="lsEnd" class="form-label">Ending value</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="lsEnd" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="15000" inputmode="decimal"></div></div>
+      <div class="form-row form-row-2">
+        <div><label for="lsYears" class="form-label">Years held</label><div class="input-group"><input type="number" id="lsYears" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="1" value="5" inputmode="numeric"><span class="input-affix">yrs</span></div></div>
+        <div><label for="lsMonths" class="form-label">Plus months</label><div class="input-group"><input type="number" id="lsMonths" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="11" step="1" value="0" inputmode="numeric"><span class="input-affix">mos</span></div></div>
+      </div>
+      <p id="lsError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="lsResults" aria-live="polite" aria-labelledby="lsResultsHeading">
+      <h2 id="lsResultsHeading" class="panel-heading">Your results</h2>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p class="stat-label">Annual return</p><p id="lsRate" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Total return</p><p id="lsTotal" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Gain or loss</p><p id="lsGain" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Growth multiple</p><p id="lsMultiple" class="stat-value">–</p></div>
+      </div>
+      <div class="mt-5">
+        <div class="result-row"><span class="result-term">Same growth, compounded monthly</span><span id="lsMonthly" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Same growth, compounded daily</span><span id="lsDaily" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Same growth, compounded continuously</span><span id="lsContinuous" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Time to double at this rate</span><span id="lsDouble" class="result-value">–</span></div>
+      </div>
+      <p id="lsSummary" class="mt-4 text-sm text-ink-muted"></p>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="lsCompareHeading" data-section="comparison">
+  <h2 id="lsCompareHeading" class="panel-heading">What other annual returns would have produced</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">Your amount and holding period at a range of steady annual returns, next to your actual result. The last column is the difference from your ending value.</p>
+  <div class="table-scroll mt-5" tabindex="0" role="region" aria-labelledby="lsCompareHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Annual return</th><th scope="col">Ending value</th><th scope="col">Gain or loss</th><th scope="col">Versus your result</th></tr></thead>
+      <tbody id="lsCompare"></tbody>
+    </table>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="lsScheduleHeading" data-section="schedule">
+  <h2 id="lsScheduleHeading" class="panel-heading">Year-by-year growth at your annual return</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">The steady path that turns your amount into your ending value. Real investments rarely move this smoothly.</p>
+  <div class="table-scroll mt-5 max-h-[520px]" tabindex="0" role="region" aria-labelledby="lsScheduleHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Year</th><th scope="col">Starting balance</th><th scope="col">Growth</th><th scope="col">Ending balance</th></tr></thead>
+      <tbody id="lsSchedule"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="lump-sum-annual-return-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="lump-sum-annual-return-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Wondering what a single deposit turns into after a decade or two? The lump sum annual return calculator takes one investment, a time horizon and a yearly percentage, then shows the final balance and the annual return hiding behind it, so you can judge a plan with numbers instead of hope. <!-- SILO_START:slot_a_m -->Try the <a class="silo-link" href="/investment-calculator.html">investment calculator online</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="lump-sum-annual-return-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="lump-sum-annual-return-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="lump-sum-annual-return-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="lump-sum-annual-return-calculator-ad-in-feed">
+            <ins id="lump-sum-annual-return-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("lump-sum-annual-return-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="lump-sum-annual-return-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="lump-sum-annual-return-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="lump-sum-annual-return-calculator-guide-heading-1">
+<h2 id="lump-sum-annual-return-calculator-guide-heading-1">How the lump sum annual return calculator works</h2>
+<p>A lump sum is a single, one-time deposit that you leave alone while it grows. Because nothing else goes in after day one, the whole result depends on only four things: the <strong>initial investment</strong>, the length of time, the rate of return and how often the gains are added back. That simplicity is why a <strong>lump sum future value calculator</strong> is the cleanest way to understand compounding returns before you move on to more complicated plans. <!-- SILO_START:slot_b -->Next, open the <a class="silo-link" href="/present-value-calculator.html">present value calculator</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_b --></p>
+<p>You work with the following inputs:</p>
+<ul>
+<li><strong>Initial deposit:</strong> the amount you put in on the start date. If you already hold an account, enter its current value instead.</li>
+<li><strong>Years of investment growth:</strong> the gap between the start date and the end date, in years.</li>
+<li><strong>Estimated rate of return:</strong> the percentage you expect the money to earn each year, before fees and taxes.</li>
+<li><strong>Compounding method:</strong> annual, quarterly, monthly or daily, which sets the compound frequency.</li>
+</ul>
+<p>Click the Calculate button and the tool returns the <strong>final balance</strong>, the <strong>interest earned</strong> and the effective yearly percentage. Because a lump sum has no recurring investments, your total contributions always equal the starting amount, and every dollar above it is growth.</p>
+
+<h3>Initial investment versus additional contribution</h3>
+<p>If you later add an additional contribution every month, you are no longer measuring a pure lump sum, because each new deposit starts compounding on its own date. Keep the two ideas separate: this page assumes one deposit and nothing else, which makes the return rate easy to read back from the answer.</p>
+        </section>
+        <section id="lump-sum-annual-return-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="lump-sum-annual-return-calculator-guide-heading-2">
+<h2 id="lump-sum-annual-return-calculator-guide-heading-2">Future value formula for a one-time investment</h2>
+<p>The future value calculation behind the tool is the standard compound interest equation: <!-- SILO_START:slot_c -->Try the <a class="silo-link" href="/average-return-calculator.html">average return calculator online</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_c --></p>
+<p>$$FV = P \times \left(1 + \frac{r}{n}\right)^{n \times t}$$</p>
+<p>Here <strong>P</strong> is the principal you invest, <strong>r</strong> is the annual rate written as a decimal, <strong>n</strong> is the number of compounding periods per year and <strong>t</strong> is the number of years. Your interest earned is simply \(FV - P\), and the growth multiple is \(FV \div P\).</p>
+<p>The effective yearly percentage, which tells you what the money truly earns after compounding, comes from a second equation:</p>
+<p>$$EAR = \left(1 + \frac{r}{n}\right)^{n} - 1$$</p>
+
+<h3>Why the compounding method matters</h3>
+<p>The more often gains are credited, the sooner they begin earning gains of their own. For stocks and mutual funds most people simply pick annual compounding, while savings accounts and CDs often credit interest monthly or daily, so check with your institution before choosing the setting.</p>
+        </section>
+        <section id="lump-sum-annual-return-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="lump-sum-annual-return-calculator-guide-heading-3">
+<h2 id="lump-sum-annual-return-calculator-guide-heading-3">Worked example with an investment growth calculator</h2>
+<p>Suppose you place <strong>$18,430</strong> in a diversified index fund and leave it for <strong>14 years</strong> at an expected <strong>7.35%</strong> a year, compounded monthly. Plugging the values into the formula gives:</p>
+<p>$$FV = 18{,}430 \times \left(1 + \frac{0.0735}{12}\right)^{12 \times 14} = 51{,}410.44$$</p>
+<p>Your <strong>final balance is $51,410.44</strong>. Subtract the $18,430 principal and the <strong>interest earned is $32,980.44</strong>, a growth multiple of 2.79. The effective yearly percentage works out to 7.60%, slightly above the stated 7.35% because of monthly compounding. The table below follows the same investment growth through the years, a compact version of an accumulation schedule.</p>
+<figure><img src="/assets/images/tools/lump-sum-annual-return-calculator/lump-sum-investment-growth-over-14-years.svg" alt="Stacked area chart of an $18,430 lump sum growing to $51,410.44 over 14 years, split into initial investment and interest earned"><figcaption>The initial investment stays flat while interest earned compounds to $32,980.44 by year 14.</figcaption></figure>
+<table>
+<thead><tr><th>Year</th><th>Balance</th><th>Interest earned so far</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>$19,831.18</td><td>$1,401.18</td></tr>
+<tr><td>2</td><td>$21,338.89</td><td>$2,908.89</td></tr>
+<tr><td>3</td><td>$22,961.23</td><td>$4,531.23</td></tr>
+<tr><td>5</td><td>$26,585.31</td><td>$8,155.31</td></tr>
+<tr><td>7</td><td>$30,781.40</td><td>$12,351.40</td></tr>
+<tr><td>10</td><td>$38,349.37</td><td>$19,919.37</td></tr>
+<tr><td>12</td><td>$44,402.23</td><td>$25,972.23</td></tr>
+<tr><td>14</td><td>$51,410.44</td><td>$32,980.44</td></tr>
+</tbody>
+</table>
+<p>Notice how the return builds on itself. The first year adds about $1,401, yet years 12 to 14 add roughly $7,008 in only two years. That accelerating curve is the practical meaning of compounding, and it is why <em>time</em> matters more than almost any other input.</p>
+        </section>
+        <section id="lump-sum-annual-return-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="lump-sum-annual-return-calculator-guide-heading-4">
+<h2 id="lump-sum-annual-return-calculator-guide-heading-4">Finding your average annual return from a final balance</h2>
+<p>Sometimes you already know both numbers and want the missing rate. An <strong>annual return on investment calculator</strong> reverses the formula to solve for the <strong>average annual return</strong>, also called the compound annual growth rate:</p>
+<p>$$r = \left(\frac{FV}{P}\right)^{\frac{1}{t}} - 1$$</p>
+<p>Imagine that a $18,430 deposit is worth $41,260 after 14 years. The ratio is 2.2387, and its 14th root minus one gives an annual rate of return of <strong>5.93%</strong>, which tells you the gain was $22,830 in total. This is not the same as dividing the total gain by the years, which would suggest 8.85% a year and badly overstate the result, because it ignores compounding.</p>
+
+<h3>Reading your return rate against a benchmark</h3>
+<p>Once you have the number, compare it with something realistic. Long-term figures vary: the <strong>S&P 500</strong> has returned roughly 10% a year as a historical average before inflation, bonds have often paid less, and a high-yield savings account or CDs may pay a few percent. A return rate far above those marks should make you ask what extra risk is hiding behind it. Treat each benchmark as a long-run investment return, not a yearly guarantee: the index has had single years down more than 35% and others up more than 30%, and the smooth average conceals both. Investing for fifteen years or more gives those swings time to even out.</p>
+        </section>
+        <section id="lump-sum-annual-return-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="lump-sum-annual-return-calculator-guide-heading-5">
+<h2 id="lump-sum-annual-return-calculator-guide-heading-5">Compound frequency and compounding method compared</h2>
+<p>Using the same $18,430, 14 years and 7.35%, here is how the choice of compound frequency changes the final balance:</p>
+<table>
+<thead><tr><th>Compounding method</th><th>Periods per year</th><th>Final balance</th></tr></thead>
+<tbody>
+<tr><td>Annual</td><td>1</td><td>$49,745.52</td></tr>
+<tr><td>Quarterly</td><td>4</td><td>$51,092.62</td></tr>
+<tr><td>Monthly</td><td>12</td><td>$51,410.44</td></tr>
+<tr><td>Daily compounding</td><td>365</td><td>$51,566.70</td></tr>
+</tbody>
+</table>
+<p>Moving from annual to daily compounding adds only $1,821.18 over fourteen years. The rate itself matters far more than the frequency, so do not chase a slightly better compounding schedule at the expense of a sound investment plan.</p>
+        </section>
+        <section id="lump-sum-annual-return-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="lump-sum-annual-return-calculator-guide-heading-6">
+<h2 id="lump-sum-annual-return-calculator-guide-heading-6">Choosing an expected rate of return</h2>
+<p>Your single most sensitive input is the expected rate of return. Holding the principal, term and monthly compounding fixed, the table shows how steeply the result moves:</p>
+<table>
+<thead><tr><th>Annual return</th><th>Final balance</th><th>Total interest</th></tr></thead>
+<tbody>
+<tr><td>5.00%</td><td>$37,059.53</td><td>$18,629.53</td></tr>
+<tr><td>6.00%</td><td>$42,601.38</td><td>$24,171.38</td></tr>
+<tr><td>7.35%</td><td>$51,410.44</td><td>$32,980.44</td></tr>
+<tr><td>9.00%</td><td>$64,668.76</td><td>$46,238.76</td></tr>
+<tr><td>10.00%</td><td>$74,305.03</td><td>$55,875.03</td></tr>
+</tbody>
+</table>
+<figure><img src="/assets/images/tools/lump-sum-annual-return-calculator/lump-sum-final-balance-by-rate-and-years.svg" alt="Heatmap of final balance for an $18,430 lump sum at annual returns from 5% to 10% over 5 to 25 years"><figcaption>Final balance by annual return and years, with the 7.35% over 14 years example outlined.</figcaption></figure>
+<p>A single percentage point of difference swings the outcome by thousands of dollars, so run a conservative, a middle and an optimistic case. Lower the historical average by a couple of points for caution, and treat the result as a projection, not a promise.</p>
+<ul>
+<li><strong>Stocks and stock market funds:</strong> higher potential return with real swings in value.</li>
+<li><strong>Bonds and CDs:</strong> steadier income at a lower return.</li>
+<li><strong>Savings accounts:</strong> the least volatility and the smallest growth.</li>
+<li><strong>Mutual funds and an ETF:</strong> a way to hold many holdings at once, with your return depending on what is inside.</li>
+</ul>
+        </section>
+        <section id="lump-sum-annual-return-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="lump-sum-annual-return-calculator-guide-heading-7">
+<h2 id="lump-sum-annual-return-calculator-guide-heading-7">Checking a retirement rollover with the annual return on investment calculator</h2>
+<p>Priya Raman is 41 and has just received a $27,845.60 rollover from a former employer's plan. Before choosing a fund she wants to know what annual return she needs for it to reach $62,000 by age 56, fifteen years away, with no further deposits.</p>
+<p>She opens the tool in its solve-for-rate mode and enters an initial investment of $27,845.60, a final balance of $62,000 and 15 years. The calculator divides 62,000 by 27,845.60 to get a growth multiple of 2.2266, takes the 15th root and subtracts one. The result is an <strong>annual rate of return of 5.48%</strong>.</p>
+<p>She compares that figure with what she can actually buy. A broad bond index fund has been paying about 4% a year, which would leave her at roughly $50,148, nearly $11,900 short. The long-run S&P 500 average of about 10% is far above what she needs, so she does not have to take full stock-market risk to reach her goal.</p>
+<p>Next she changes one input. With a 60% stock and 40% bond mix she assumes 6.5%, reruns the lump sum calculation, and gets a final balance of $71,614 after 15 years. That is a cushion of about $9,600 over the $62,000 target, enough to absorb a weak decade without changing the plan.</p>
+<p>Her decision is concrete: she will roll the money into the 60/40 mix, keep the 5.48% figure as her minimum acceptable return, and revisit the account at age 48. If the balance sits below $40,500 then, she will treat it as a signal to add deposits rather than hope the rate improves.</p>
+        </section>
+        <section id="lump-sum-annual-return-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="lump-sum-annual-return-calculator-guide-heading-8">
+<h2 id="lump-sum-annual-return-calculator-guide-heading-8">Time horizon and the rule of 72 for a lump sum</h2>
+<p>The years input drives the final balance more than any other field in the calculator, because the growth compounds. The <strong>rule of 72</strong> is a quick check on the doubling point the tool computes exactly: divide 72 by the annual percentage and you get the approximate years needed to double. At 7.35% that is 72 &divide; 7.35, or about 9.8 years, which matches the table above, where $18,430 passes $36,860 shortly before year ten.</p>
+<p>Stretching the same deposit to longer horizons, still at 7.35% compounded monthly, shows the payoff of patience:</p>
+<table>
+<thead><tr><th>Years of investment growth</th><th>Final balance</th><th>Growth multiple</th></tr></thead>
+<tbody>
+<tr><td>5</td><td>$26,585.31</td><td>1.44</td></tr>
+<tr><td>10</td><td>$38,349.37</td><td>2.08</td></tr>
+<tr><td>14</td><td>$51,410.44</td><td>2.79</td></tr>
+<tr><td>20</td><td>$79,797.82</td><td>4.33</td></tr>
+<tr><td>25</td><td>$115,108.52</td><td>6.25</td></tr>
+</tbody>
+</table>
+<p>The last eleven years, from year 14 to year 25, add more than $63,000, nearly twice the total gained in the first fourteen. An investor who starts early and leaves the capital untouched gets the most out of this effect, while someone who withdraws money midway resets the clock on what that portion could have earned.</p>
+
+<h3>Matching the interest rate to the type of holding</h3>
+<p>Pick an interest rate that fits where the money will actually sit. A cash deposit tracks the rate your bank advertises, whereas a stock index fund has no promised figure at all, so you are really choosing a reasonable assumption. When in doubt, look at the multi-decade record for the relevant index and shave a little off it, since investing always carries the chance that the next decade lags the last one.</p>
+        </section>
+        <section id="lump-sum-annual-return-calculator-guide-section-9" class="panel article-content p-4 sm:p-6" aria-labelledby="lump-sum-annual-return-calculator-guide-heading-9">
+<h2 id="lump-sum-annual-return-calculator-guide-heading-9">Limits of a lump sum projection</h2>
+<p>Every investment calculator gives a <strong>hypothetical</strong> answer, built on a constant rate for the whole period. Real markets are uneven, so the numbers here describe a smooth line that no actual portfolio follows, and they are offered for educational purposes, not as future results.</p>
+<h3>Inflation, taxes and fees</h3>
+<p>The simple formula ignores <strong>inflation</strong>, <strong>taxes</strong> and <strong>fees</strong>, and each of them lowers what you keep. At 3% yearly inflation, the $51,410.44 in the example would buy what about $33,988 buys today. A fund charging a 1% fee quietly cuts the effective return, and capital gains taxes reduce it again when you sell.</p>
+<h3>Risk, volatility and diversification</h3>
+<p>A higher assumption in the calculator means a wider range of real outcomes, because higher expected return usually comes with more risk, meaning more volatility and a real chance of a loss of principal. You can reduce that exposure with a diversified portfolio and sensible asset allocation, spreading money across stocks, bonds, real estate and commodities rather than betting on one. Diversification does not remove risk, but it softens the blow when one holding falls.</p>
+        </section>
+        <section id="lump-sum-annual-return-calculator-guide-section-10" class="panel article-content p-4 sm:p-6" aria-labelledby="lump-sum-annual-return-calculator-guide-heading-10">
+<h2 id="lump-sum-annual-return-calculator-guide-heading-10">Ways to use a lump sum investment plan</h2>
+<p>A lump sum figure is most useful when it answers a decision. A few common uses:</p>
+<ul>
+<li>Testing a retirement goal, such as whether an inheritance can reach a target by a given age.</li>
+<li>Comparing a bonus or windfall invested today against spending it.</li>
+<li>Checking what rate you need from your capital to hit a savings target.</li>
+<li>Reviewing how a past deposit performed against the market.</li>
+</ul>
+<p>Before you commit a large amount, run the calculator three times with different assumptions and write down the spread. If the pessimistic case still meets your goal, the plan has a margin of safety; if only the optimistic case works, you either need more time, a larger deposit or a lower target.</p>
+<p>If the answer looks tight, use the projected final balance as a starting point for a conversation with a financial advisor or brokerage representative, who can review your finance picture, your risk tolerance and your income needs before you commit. A calculator frames the question; it does not know your net worth or your comfort with losses, and a professional estimate of those personal factors should sit beside it.</p>
+        </section>
+      </div>
+
+      <section id="lump-sum-annual-return-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="lump-sum-annual-return-calculator-faq-heading" data-section="faq">
+        <h2 id="lump-sum-annual-return-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Lump Sum Annual Return Calculator questions</h2>
+        <div id="lump-sum-annual-return-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="lump-sum-annual-return-calculator-faq-1" class="faq-item" open><summary id="lump-sum-annual-return-calculator-faq-1-summary" class="faq-summary"><h3 id="lump-sum-annual-return-calculator-faq-1-question" class="faq-question">What is a lump sum investment?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="lump-sum-annual-return-calculator-faq-1-answer" class="faq-answer"><p>A lump sum is a single, one-time deposit that you leave invested without adding more money. Its growth depends only on the amount, the rate of return, the compounding method and how long it stays invested.</p></div></details>
+          <details id="lump-sum-annual-return-calculator-faq-2" class="faq-item" open><summary id="lump-sum-annual-return-calculator-faq-2-summary" class="faq-summary"><h3 id="lump-sum-annual-return-calculator-faq-2-question" class="faq-question">How do I calculate the annual return on a lump sum?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="lump-sum-annual-return-calculator-faq-2-answer" class="faq-answer"><p>Divide the final balance by the amount you invested, raise the result to the power of one over the number of years, and subtract one. The answer is the average compound annual return, which is lower than the total gain divided by the years because it accounts for compounding.</p></div></details>
+          <details id="lump-sum-annual-return-calculator-faq-3" class="faq-item" open><summary id="lump-sum-annual-return-calculator-faq-3-summary" class="faq-summary"><h3 id="lump-sum-annual-return-calculator-faq-3-question" class="faq-question">What rate of return should I enter?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="lump-sum-annual-return-calculator-faq-3-answer" class="faq-answer"><p>Match the rate to what you hold. Long-run stock index averages are often quoted near 10% before inflation, bonds and CDs pay less, and savings accounts less still. Many people use 6% to 7% for a diversified portfolio and run a conservative and an optimistic case as well.</p></div></details>
+          <details id="lump-sum-annual-return-calculator-faq-4" class="faq-item" open><summary id="lump-sum-annual-return-calculator-faq-4-summary" class="faq-summary"><h3 id="lump-sum-annual-return-calculator-faq-4-question" class="faq-question">Does compounding more often make a big difference?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="lump-sum-annual-return-calculator-faq-4-answer" class="faq-answer"><p>A little. Moving from annual to daily compounding adds a modest amount over many years. The rate of return and the length of time matter far more than the compound frequency.</p></div></details>
+          <details id="lump-sum-annual-return-calculator-faq-5" class="faq-item" open><summary id="lump-sum-annual-return-calculator-faq-5-summary" class="faq-summary"><h3 id="lump-sum-annual-return-calculator-faq-5-question" class="faq-question">Does this calculator include inflation, taxes or fees?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="lump-sum-annual-return-calculator-faq-5-answer" class="faq-answer"><p>No. The result is a hypothetical projection at a constant rate. Inflation, taxes and fund fees all reduce what you actually keep, so lower your estimated rate to reflect them.</p></div></details>
+          <details id="lump-sum-annual-return-calculator-faq-6" class="faq-item" open><summary id="lump-sum-annual-return-calculator-faq-6-summary" class="faq-summary"><h3 id="lump-sum-annual-return-calculator-faq-6-question" class="faq-question">Can I add recurring investments to the lump sum?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="lump-sum-annual-return-calculator-faq-6-answer" class="faq-answer"><p>Yes. Enter a recurring amount and choose monthly or annually, and whether it is paid at the beginning or end of each period. Leave it at zero to see a pure lump sum.</p></div></details>
+          <details id="lump-sum-annual-return-calculator-faq-7" class="faq-item" open><summary id="lump-sum-annual-return-calculator-faq-7-summary" class="faq-summary"><h3 id="lump-sum-annual-return-calculator-faq-7-question" class="faq-question">What does the interest rate variance range do?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="lump-sum-annual-return-calculator-faq-7-answer" class="faq-answer"><p>It shows how much the final balance changes if your return is a few percentage points lower or higher than the estimate, giving you a quick low and high case.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="lump-sum-annual-return-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="lump-sum-annual-return-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="lump-sum-annual-return-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="lump-sum-annual-return-calculator-ad-bottom-leaderboard">
+            <ins id="lump-sum-annual-return-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("lump-sum-annual-return-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="lump-sum-annual-return-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="lump-sum-annual-return-calculator-right-rail-top" class="mb-6">
+        <aside id="lump-sum-annual-return-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="lump-sum-annual-return-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="lump-sum-annual-return-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="lump-sum-annual-return-calculator-ad-right-rail-rectangle">
+            <ins id="lump-sum-annual-return-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("lump-sum-annual-return-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="lump-sum-annual-return-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="lump-sum-annual-return-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="lump-sum-annual-return-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="lump-sum-annual-return-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="lump-sum-annual-return-calculator-ad-right-rail-skyscraper">
+            <ins id="lump-sum-annual-return-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("lump-sum-annual-return-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="lump-sum-annual-return-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="lump-sum-annual-return-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="lump-sum-annual-return-calculator-footer-brand">
+        <a id="lump-sum-annual-return-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="lump-sum-annual-return-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="lump-sum-annual-return-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="lump-sum-annual-return-calculator-footer-categories" aria-labelledby="lump-sum-annual-return-calculator-footer-categories-heading">
+        <h2 id="lump-sum-annual-return-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="lump-sum-annual-return-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="lump-sum-annual-return-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="lump-sum-annual-return-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="lump-sum-annual-return-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="lump-sum-annual-return-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="lump-sum-annual-return-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="lump-sum-annual-return-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="lump-sum-annual-return-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="lump-sum-annual-return-calculator-footer-company" aria-labelledby="lump-sum-annual-return-calculator-footer-company-heading">
+        <h2 id="lump-sum-annual-return-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="lump-sum-annual-return-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="lump-sum-annual-return-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="lump-sum-annual-return-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="lump-sum-annual-return-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="lump-sum-annual-return-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="lump-sum-annual-return-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="lump-sum-annual-return-calculator-footer-bottom" class="border-t border-line">
+      <p id="lump-sum-annual-return-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="lump-sum-annual-return-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Annual return implied by a single lump sum P growing (or shrinking) to an ending value E over
+  // t years (years + months / 12), with no deposits or withdrawals in between:
+  //   R = (E / P)^(1/t) - 1   (compound annual growth rate, compounded once a year)
+  // Same growth quoted other ways: compounded monthly 12 x ((1 + R)^(1/12) - 1), daily
+  // 365 x ((1 + R)^(1/365) - 1), continuously ln(1 + R). Years to double = ln 2 / ln(1 + R).
+  // Comparison table: ending value at another annual return x = P x (1 + x)^t.
+  // CHECKS (Node, scratch tests/ls.test.js): $10,000 -> $20,000 in 10 years = 7.1773% a year
+  // (2^(1/10) - 1) and doubles in exactly 10.0 years; $10,000 -> $15,000 in 5 years = 8.4472%;
+  // $10,000 -> $10,000 = 0%; $10,000 -> $8,000 in 2 years = -10.5573%; 18 months 1,000 -> 1,200
+  // = 12.9243%; 8.4472% compounded monthly quotes as 8.1368% and continuously as 8.1093% (ln 1.5 / 5);
+  // re-growing $10,000 at the implied rate for the period returns the ending value exactly.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 });
+  var COMPARE = [-0.04, -0.02, 0, 0.02, 0.04, 0.06, 0.08, 0.10, 0.12, 0.15];
+  var IDS = ['lsRate', 'lsTotal', 'lsGain', 'lsMultiple', 'lsMonthly', 'lsDaily', 'lsContinuous', 'lsDouble'];
+
+  function num(id) {
+    var v = parseFloat(document.getElementById(id).value);
+    return isNaN(v) ? NaN : v;
+  }
+  function set(id, text) { document.getElementById(id).textContent = text; }
+  function pct(x, d) { return (x * 100).toFixed(d) + '%'; }
+  function signed(x) { return (x < 0 ? '−' : x > 0 ? '+' : '') + money.format(Math.abs(x)); }
+  function nominal(R, n) { return n * (Math.pow(1 + R, 1 / n) - 1); }
+
+  function implied(P, E, t) { return E > 0 ? Math.pow(E / P, 1 / t) - 1 : -1; }
+
+  function growthRows(P, R, t) {
+    var rows = [], bal = P, whole = Math.floor(t + 1e-9), rest = t - whole;
+    for (var y = 1; y <= whole; y++) {
+      var end = P * Math.pow(1 + R, y);
+      rows.push({ label: String(y), start: bal, end: end });
+      bal = end;
+    }
+    if (rest > 1e-9) rows.push({ label: (whole + rest).toFixed(2).replace(/0$/, ''), start: bal, end: P * Math.pow(1 + R, t) });
+    return rows;
+  }
+
+  function clear(msg) {
+    var error = document.getElementById('lsError');
+    error.hidden = !msg;
+    error.textContent = msg;
+    IDS.forEach(function (id) { set(id, '–'); });
+    set('lsSummary', '');
+    document.getElementById('lsCompare').innerHTML = '';
+    document.getElementById('lsSchedule').innerHTML = '';
+  }
+
+  function update() {
+    var P = num('lsStart'), E = num('lsEnd'), yrs = num('lsYears'), mos = num('lsMonths');
+    if (isNaN(mos)) mos = 0;
+    if (isNaN(yrs)) yrs = 0;
+    var t = Math.round(yrs) + Math.round(mos) / 12;
+    if (isNaN(P) || P <= 0) return clear('Enter an amount invested above $0.');
+    if (isNaN(E) || E < 0) return clear('Enter an ending value of $0 or more.');
+    if (yrs < 0 || mos < 0 || mos > 11 || yrs > 100 || t < 1 / 12) return clear('Enter a holding period of at least one month (0 to 100 years and 0 to 11 months).');
+    document.getElementById('lsError').hidden = true;
+
+    var R = implied(P, E, t), lost = R <= -1;
+    set('lsRate', pct(R, 2));
+    set('lsTotal', pct(E / P - 1, 2));
+    set('lsGain', signed(E - P));
+    set('lsMultiple', (E / P).toFixed(2) + '×');
+    set('lsMonthly', lost ? '–' : pct(nominal(R, 12), 2));
+    set('lsDaily', lost ? '–' : pct(nominal(R, 365), 2));
+    set('lsContinuous', lost ? '–' : pct(Math.log(1 + R), 2));
+    set('lsDouble', R > 0 ? (Math.log(2) / Math.log(1 + R)).toFixed(1) + ' years' : 'Never at this rate');
+    var period = (Math.round(yrs) ? Math.round(yrs) + (Math.round(yrs) === 1 ? ' year' : ' years') : '') +
+                 (Math.round(yrs) && Math.round(mos) ? ' and ' : '') +
+                 (Math.round(mos) ? Math.round(mos) + (Math.round(mos) === 1 ? ' month' : ' months') : '');
+    set('lsSummary', 'Turning ' + money.format(P) + ' into ' + money.format(E) + ' over ' + period +
+        ' works out to ' + pct(R, 2) + ' a year, compounded annually.');
+
+    var list = COMPARE.map(function (x) { return { rate: x, yours: false }; });
+    var match = list.filter(function (it) { return Math.abs(it.rate - R) < 5e-5; })[0];
+    if (match) match.yours = true; else list.push({ rate: R, yours: true });
+    list.sort(function (a, b) { return a.rate - b.rate; });
+    var tbody = document.getElementById('lsCompare');
+    tbody.textContent = '';
+    list.forEach(function (it) {
+      var end = it.yours ? E : P * Math.pow(1 + it.rate, t), tr = document.createElement('tr');
+      [pct(it.rate, 2), money.format(end), signed(end - P), it.yours ? '–' : signed(end - E)].forEach(function (text, i) {
+        var td = document.createElement(i === 0 ? 'th' : 'td');
+        if (i === 0) td.setAttribute('scope', 'row');
+        td.textContent = text;
+        if (i === 0 && it.yours) {
+          var b = document.createElement('span');
+          b.className = 'badge badge-sky ml-2';
+          b.textContent = 'Your result';
+          td.appendChild(b);
+        }
+        tr.appendChild(td);
+      });
+      tbody.appendChild(tr);
+    });
+
+    document.getElementById('lsSchedule').innerHTML = growthRows(P, R, t).map(function (row) {
+      return '<tr><td>' + row.label + '</td><td>' + money.format(row.start) + '</td><td>' + signed(row.end - row.start) +
+             '</td><td>' + money.format(row.end) + '</td></tr>';
+    }).join('');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('lsForm');
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+name: Monthly Silo Link Rotation
+
+on:
+  schedule:
+    - cron: '0 16 1-3 * *'  # midnight SGT (UTC+8) on the 1st-3rd of every month
+  workflow_dispatch:
+    inputs:
+      date:
+        description: 'Override date to rotate (YYYY-MM). Leave empty to use today.'
+        required: false
+        default: ''
+
+jobs:
+  rotate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run silo rotation
+        env:
+          ROTATION_DATE: ${{ github.event.inputs.date }}
+        run: |
+          DATE_ARG=""
+          if [ -n "$ROTATION_DATE" ]; then DATE_ARG="--date=$ROTATION_DATE"; fi
+          python3 utilities/silo_linking/generate_silo_rotation.py $DATE_ARG
+
+      - name: Commit and push if changed
+        id: commit
+        env:
+          ROTATION_DATE: ${{ github.event.inputs.date }}
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          LABEL="$ROTATION_DATE"
+          if [ -z "$LABEL" ]; then LABEL="$(date -u +%Y-M%m)"; fi
+          if git diff --quiet; then
+            echo "No changes - already up to date."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git add public/*.html
+            git commit -m "chore: rotate silo links $LABEL"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+          echo "date=$ROTATION_DATE" >> "$GITHUB_OUTPUT"
+
+      # A push made with the default GITHUB_TOKEN never fires other workflows' `on: push` triggers (GitHub's
+      # anti-loop safeguard), so the commit above alone would never redeploy the live site. Dispatch
+      # deploy-pages.yml explicitly instead - an API-triggered workflow_dispatch is exempt from that restriction.
+      - name: Trigger Pages deploy
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ROTATION_DATE: ${{ steps.commit.outputs.date }}
+        run: |
+          if [ -n "$ROTATION_DATE" ]; then
+            gh workflow run deploy-pages.yml --ref main -f date="$ROTATION_DATE"
+          else
+            gh workflow run deploy-pages.yml --ref main
+          fi

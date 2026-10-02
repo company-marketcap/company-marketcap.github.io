@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en" id="future-contracts-calculator-document" data-page-slug="future-contracts-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Futures Margin Calculator: Daily Mark-to-Market</title>
+  <meta name="description" content="Track a futures position day by day: variation margin, margin account balance, margin calls back to initial margin and your return on the cash put in.">
+  <link rel="canonical" href="https://company-marketcap.github.io/future-contracts-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Futures Margin Calculator: Daily Mark-to-Market">
+  <meta property="og:description" content="Track a futures position day by day: variation margin, margin account balance, margin calls back to initial margin and your return on the cash put in.">
+  <meta property="og:url" content="https://company-marketcap.github.io/future-contracts-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Futures Contracts Margin Calculator", "url": "https://company-marketcap.github.io/future-contracts-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Track a futures position day by day: variation margin, margin account balance, margin calls back to initial margin and your return on the cash put in."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Stocks, Dividends & Trading", "item": "https://company-marketcap.github.io/financial-calculators.html#stock-calculators"}, {"@type": "ListItem", "position": 4, "name": "Futures Contracts Margin Calculator", "item": "https://company-marketcap.github.io/future-contracts-calculator.html"}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="future-contracts-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="future-contracts-calculator" data-page-type="calculator">
+  <a id="future-contracts-calculator-skip-link" href="#future-contracts-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="future-contracts-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="future-contracts-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="future-contracts-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="future-contracts-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="future-contracts-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="future-contracts-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="future-contracts-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="future-contracts-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="future-contracts-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="future-contracts-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="future-contracts-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="future-contracts-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="future-contracts-calculator-header-search-status" aria-controls="future-contracts-calculator-header-search-results" data-search-input="header">
+              <p id="future-contracts-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="future-contracts-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="future-contracts-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="future-contracts-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="future-contracts-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="future-contracts-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="future-contracts-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="future-contracts-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="future-contracts-calculator-mobile-search-status" aria-controls="future-contracts-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="future-contracts-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="future-contracts-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="future-contracts-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="future-contracts-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="future-contracts-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="future-contracts-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="future-contracts-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="future-contracts-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="future-contracts-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="future-contracts-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="future-contracts-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="future-contracts-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="future-contracts-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="future-contracts-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="future-contracts-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="future-contracts-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="future-contracts-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="future-contracts-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="future-contracts-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="future-contracts-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="future-contracts-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="future-contracts-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="future-contracts-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="future-contracts-calculator-sidebar-search-status" aria-controls="future-contracts-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="future-contracts-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="future-contracts-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="future-contracts-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="future-contracts-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="future-contracts-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="future-contracts-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="future-contracts-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="future-contracts-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="future-contracts-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="future-contracts-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="future-contracts-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="future-contracts-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="future-contracts-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="future-contracts-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="future-contracts-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="future-contracts-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="future-contracts-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="future-contracts-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="future-contracts-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="future-contracts-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators" aria-current="true">Stocks &amp; Trading</a></li><li><a id="future-contracts-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="future-contracts-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="future-contracts-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="future-contracts-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="future-contracts-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="future-contracts-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="future-contracts-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="future-contracts-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="future-contracts-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="future-contracts-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="future-contracts-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="future-contracts-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="future-contracts-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="future-contracts-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="future-contracts-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="future-contracts-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="future-contracts-calculator" data-calculator-slug="future-contracts-calculator" data-sub-category-slug="stock-calculators">
+      <aside id="future-contracts-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="future-contracts-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="future-contracts-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="future-contracts-calculator-ad-top-leaderboard">
+            <ins id="future-contracts-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("future-contracts-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="future-contracts-calculator-intro-area" class="space-y-4">
+        <nav id="future-contracts-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="future-contracts-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="future-contracts-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="future-contracts-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="future-contracts-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#stock-calculators" itemprop="item"><span itemprop="name">Stocks, Dividends &amp; Trading</span></a><meta itemprop="position" content="3"></li>
+            <li id="future-contracts-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Futures Contracts Margin Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/future-contracts-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="future-contracts-calculator-hero-section" aria-labelledby="future-contracts-calculator-hero-heading" data-section="hero">
+          <h1 id="future-contracts-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Futures Contracts Margin Calculator</h1>
+          <p id="future-contracts-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Enter a futures position and a series of daily settlement prices to follow the margin account day by day, with variation margin, any margin calls and the cash you would need to put in. <!-- SILO_START:slot_a -->The <a class="silo-link" href="/pivot-point-calculator.html">pivot point calculator online</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="future-contracts-calculator-tool" class="space-y-6" data-page-slug="future-contracts-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="fmFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="fmForm" class="space-y-5" novalidate aria-labelledby="fmFormHeading">
+      <h2 id="fmFormHeading" class="panel-heading">Enter the position and daily prices</h2>
+      <div class="form-row form-row-2"><div><label for="fmSide" class="form-label">Position</label><select id="fmSide" class="form-select"><option value="long" selected>Long (bought)</option><option value="short">Short (sold)</option></select></div><div><label for="fmContracts" class="form-label">Contracts</label><div class="input-group"><input type="number" id="fmContracts" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1" step="1" value="2" inputmode="numeric"></div></div></div>
+      <div class="form-row form-row-2"><div><label for="fmEntry" class="form-label">Trade price</label><div class="input-group"><input type="number" id="fmEntry" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="0.01" value="75.00" inputmode="decimal"></div></div><div><label for="fmMult" class="form-label">Contract multiplier</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="fmMult" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1" value="1000" inputmode="decimal" aria-describedby="fmMultHint"></div><p id="fmMultHint" class="form-hint">Dollars gained or lost per contract when the price moves 1.00.</p></div></div>
+      <div class="form-row form-row-2"><div><label for="fmInitial" class="form-label">Initial margin per contract</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="fmInitial" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="6000" inputmode="decimal"></div></div><div><label for="fmMaint" class="form-label">Maintenance margin per contract</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="fmMaint" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="5000" inputmode="decimal"></div></div></div><p class="form-hint">Margin levels are set by the exchange and your broker, and change over time. Check the current figures for your contract.</p>
+      <div><label for="fmPrices" class="form-label">Daily settlement prices</label><textarea id="fmPrices" class="form-textarea" rows="4" aria-describedby="fmPricesHint">74.20, 73.65, 74.10, 72.80, 71.90, 72.60, 73.40, 74.75, 75.30, 76.10</textarea><p id="fmPricesHint" class="form-hint">One price per trading day after you open the position, separated by a comma and a space or by new lines.</p></div>
+      <div><label for="fmOnCall" class="form-label">When a margin call comes</label><select id="fmOnCall" class="form-select"><option value="meet" selected>Deposit cash back up to the initial margin</option><option value="close">Don’t deposit: the position is closed out</option></select></div>
+      <details class="form-details"><summary class="form-details-summary">More options</summary><div><label for="fmExtra" class="form-label">Extra cash above the initial margin</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="fmExtra" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="0" inputmode="decimal" aria-describedby="fmExtraHint"></div><p id="fmExtraHint" class="form-hint">A cushion deposited at the start makes margin calls less likely.</p></div></details>
+      <p id="fmError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="fmResults" aria-live="polite" aria-labelledby="fmResultsHeading">
+      <h2 id="fmResultsHeading" class="panel-heading">Margin account results</h2>
+      <div class="stat-grid mt-4"><div class="stat-card stat-card-highlight"><p class="stat-label">Total gain or loss</p><p id="fmPnl" class="stat-value">–</p><p id="fmPnlNote" class="mt-1 text-xs text-ink-muted"></p></div><div class="stat-card"><p class="stat-label">Margin calls paid</p><p id="fmCalls" class="stat-value">–</p><p id="fmCallsNote" class="mt-1 text-xs text-ink-muted"></p></div><div class="stat-card"><p class="stat-label">Ending account balance</p><p id="fmEnding" class="stat-value">–</p><p id="fmEndingNote" class="mt-1 text-xs text-ink-muted"></p></div><div class="stat-card"><p class="stat-label">Total cash put in</p><p id="fmCash" class="stat-value">–</p><p id="fmCashNote" class="mt-1 text-xs text-ink-muted"></p></div><div class="stat-card"><p class="stat-label">Lowest balance</p><p id="fmLow" class="stat-value">–</p><p id="fmLowNote" class="mt-1 text-xs text-ink-muted"></p></div><div class="stat-card"><p class="stat-label">Return on cash put in</p><p id="fmReturn" class="stat-value">–</p><p id="fmReturnNote" class="mt-1 text-xs text-ink-muted"></p></div></div>
+      <div id="fmClosed" class="callout callout-warning mt-5" hidden><p class="callout-title">Position closed out</p><p id="fmClosedText" class="text-sm"></p></div>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="fmDaysHeading" data-section="days">
+  <h2 id="fmDaysHeading" class="panel-heading">Daily mark-to-market</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">Each day the position is settled at that day’s price: the change is paid into or out of the margin account as variation margin.</p>
+  <div class="table-scroll mt-5 max-h-[520px]" tabindex="0" role="region" aria-labelledby="fmDaysHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Day</th><th scope="col">Settlement price</th><th scope="col">Price change</th><th scope="col">Variation margin</th><th scope="col">Cumulative gain or loss</th><th scope="col">Balance</th><th scope="col">Margin call</th><th scope="col">Balance after deposit</th></tr></thead>
+      <tbody id="fmDays"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="future-contracts-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="future-contracts-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Enter a futures position and a series of daily settlement prices to follow the margin account day by day, with variation margin, any margin calls and the cash you would need to put in. <!-- SILO_START:slot_a_m -->The <a class="silo-link" href="/pivot-point-calculator.html">pivot point calculator online</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="future-contracts-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="future-contracts-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="future-contracts-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="future-contracts-calculator-ad-in-feed">
+            <ins id="future-contracts-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("future-contracts-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      
+
+      
+
+      <nav id="future-contracts-calculator-related-section" class="border-t border-line pt-8" aria-labelledby="future-contracts-calculator-related-heading" data-section="related-calculators">
+        <h2 id="future-contracts-calculator-related-heading" class="guide-heading">Related calculators</h2>
+        <ul id="future-contracts-calculator-related-list" class="mt-5 grid gap-3 @2xl:grid-cols-2 @5xl:grid-cols-3" role="list">
+          <li><a id="future-contracts-calculator-related-link-commodities-and-futures-calculator" class="related-link" href="/commodities-and-futures-calculator.html" data-calculator-name="Futures and Commodities Profit Calculator" data-category-name="Stocks, Dividends &amp; Trading">Futures and Commodities Profit Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
+          <li><a id="future-contracts-calculator-related-link-position-sizing" class="related-link" href="/position-sizing.html" data-calculator-name="Position Sizing Calculator" data-category-name="Stocks, Dividends &amp; Trading">Position Sizing Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
+          <li><a id="future-contracts-calculator-related-link-roi-calculator" class="related-link" href="/roi-calculator.html" data-calculator-name="ROI Calculator" data-category-name="Investment Returns &amp; Growth">ROI Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
+          <li><a id="future-contracts-calculator-related-link-holding-period-return-calculator" class="related-link" href="/holding-period-return-calculator.html" data-calculator-name="Holding Period Return Calculator" data-category-name="Stocks, Dividends &amp; Trading">Holding Period Return Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
+          <li><a id="future-contracts-calculator-related-link-dividend-reinvestment" class="related-link" href="/dividend-reinvestment.html" data-calculator-name="Dividend Reinvestment Breakeven Calculator" data-category-name="Stocks, Dividends &amp; Trading">Dividend Reinvestment Breakeven Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
+          <li><a id="future-contracts-calculator-related-link-market-cap-growth-calculator" class="related-link" href="/market-cap-growth-calculator.html" data-calculator-name="Market Cap Growth Calculator" data-category-name="Stocks, Dividends &amp; Trading">Market Cap Growth Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
+        </ul>
+      </nav>
+
+      <aside id="future-contracts-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="future-contracts-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="future-contracts-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="future-contracts-calculator-ad-bottom-leaderboard">
+            <ins id="future-contracts-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("future-contracts-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="future-contracts-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="future-contracts-calculator-right-rail-top" class="mb-6">
+        <aside id="future-contracts-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="future-contracts-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="future-contracts-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="future-contracts-calculator-ad-right-rail-rectangle">
+            <ins id="future-contracts-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("future-contracts-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="future-contracts-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="future-contracts-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="future-contracts-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="future-contracts-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="future-contracts-calculator-ad-right-rail-skyscraper">
+            <ins id="future-contracts-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("future-contracts-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="future-contracts-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="future-contracts-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="future-contracts-calculator-footer-brand">
+        <a id="future-contracts-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="future-contracts-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="future-contracts-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="future-contracts-calculator-footer-categories" aria-labelledby="future-contracts-calculator-footer-categories-heading">
+        <h2 id="future-contracts-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="future-contracts-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="future-contracts-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="future-contracts-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="future-contracts-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="future-contracts-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="future-contracts-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="future-contracts-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="future-contracts-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="future-contracts-calculator-footer-company" aria-labelledby="future-contracts-calculator-footer-company-heading">
+        <h2 id="future-contracts-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="future-contracts-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="future-contracts-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="future-contracts-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="future-contracts-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="future-contracts-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="future-contracts-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="future-contracts-calculator-footer-bottom" class="border-t border-line">
+      <p id="future-contracts-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="future-contracts-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+
+<script>(function () {
+  'use strict';
+  // Futures daily mark-to-market (daily settlement) of one position held over a price series.
+  //   Each day: variation margin = (settle_t - settle_(t-1)) x multiplier x contracts x (+1 long,
+  //   -1 short), with settle_0 = the trade price. Balance += variation margin.
+  //   If the balance falls below the maintenance margin (per contract x contracts), a margin call
+  //   asks for enough cash to bring it back up to the initial margin (not just maintenance):
+  //   call = initial requirement - balance. "Meet calls": the cash is deposited the same day.
+  //   "Close out": the position is closed at that day's settlement and later days are ignored.
+  //   Check: ending balance = cash put in + total gain/loss.
+  // Verified (scratchpad b7opt/tests/fm.test.js), by hand: the default long 2 x 1,000 at 75.00,
+  //   $6,000 initial / $5,000 maintenance: day 2 balance $9,300 -> call $2,700; day 5 $8,500 ->
+  //   call $3,500; ending balance $20,400 = $18,200 put in + $2,200 gain (= 1.10 x 2,000);
+  //   the textbook gold example (long 2 x 100 oz at $1,250, $6,000 / $4,500 per contract, 16
+  //   settlement prices) gives calls of $4,020 (day 7) and $3,780 (day 11) and an ending balance of
+  //   $15,180 = $19,800 put in - $4,620 loss, worked by hand; a short position mirrors the long.
+  var MAX_DAYS = 1000;
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  var priceFmt = new Intl.NumberFormat('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 6 });
+
+  function raw(id) { return document.getElementById(id).value.trim(); }
+  function num(id) { var v = parseFloat(raw(id)); return isNaN(v) ? NaN : v; }
+  function set(id, text) { document.getElementById(id).textContent = text; }
+  function clearBody(id) {
+    var body = document.getElementById(id);
+    while (body.firstChild) body.removeChild(body.firstChild);
+    return body;
+  }
+  function addRow(body, cells) {
+    var tr = document.createElement('tr');
+    cells.forEach(function (text) { var td = document.createElement('td'); td.textContent = text; tr.appendChild(td); });
+    body.appendChild(tr);
+  }
+  function signedMoney(x) {
+    if (Math.abs(x) < 0.005) return money.format(0);
+    return (x > 0 ? '+' : '−') + money.format(Math.abs(x));
+  }
+  function signedPrice(x) {
+    if (Math.abs(x) < 1e-9) return '0.00';
+    return (x > 0 ? '+' : '−') + priceFmt.format(Math.abs(x));
+  }
+  function cents(x) { return Math.round(x * 100) / 100; }
+
+  function parsePrices(text) {
+    var parts = text.split(/[;\s]+|,\s+/).filter(function (s) { return s !== ''; });
+    var out = [];
+    for (var i = 0; i < parts.length; i++) {
+      if (!/^\$?\d*\.?\d+$/.test(parts[i])) return null;
+      out.push(parseFloat(parts[i].replace(/^\$/, '')));
+    }
+    return out;
+  }
+
+  function markToMarket(o) {
+    var side = o.side === 'short' ? -1 : 1;
+    var initReq = o.initial * o.contracts, maintReq = o.maint * o.contracts;
+    var balance = initReq + o.extra, cashIn = balance, cum = 0, prev = o.entry;
+    var rows = [], calls = 0, callTotal = 0, low = balance, closedDay = 0;
+    for (var d = 0; d < o.prices.length; d++) {
+      var p = o.prices[d];
+      var vm = cents((p - prev) * o.multiplier * o.contracts * side);
+      balance = cents(balance + vm); cum = cents(cum + vm);
+      if (balance < low) low = balance;
+      var call = 0, before = balance;
+      if (balance < maintReq - 0.005) {
+        call = cents(initReq - balance);
+        if (o.onCall === 'close') { closedDay = d + 1; rows.push({ day: d + 1, price: p, change: p - prev, vm: vm, cum: cum, before: before, call: call, after: balance }); break; }
+        calls++; callTotal = cents(callTotal + call); cashIn = cents(cashIn + call); balance = initReq;
+      }
+      rows.push({ day: d + 1, price: p, change: p - prev, vm: vm, cum: cum, before: before, call: call, after: balance });
+      prev = p;
+    }
+    return { rows: rows, calls: calls, callTotal: callTotal, cashIn: cashIn, ending: balance, cum: cum, low: low, initReq: initReq, maintReq: maintReq, closedDay: closedDay };
+  }
+
+  var RESULT_IDS = ['fmPnl', 'fmCalls', 'fmEnding', 'fmCash', 'fmLow', 'fmReturn'];
+  function clearResults() {
+    RESULT_IDS.forEach(function (id) { set(id, '–'); set(id + 'Note', ''); });
+    document.getElementById('fmClosed').hidden = true;
+    clearBody('fmDays');
+  }
+
+  function update() {
+    var error = document.getElementById('fmError');
+    var contracts = num('fmContracts'), mult = num('fmMult'), entry = num('fmEntry'), initial = num('fmInitial'),
+        maint = num('fmMaint'), extra = raw('fmExtra') === '' ? 0 : num('fmExtra');
+    var prices = parsePrices(raw('fmPrices'));
+    var problem = '';
+    if (isNaN(contracts) || contracts < 1 || contracts > 100000 || Math.round(contracts) !== contracts) problem = 'Enter a whole number of contracts, 1 or more.';
+    else if (isNaN(mult) || mult <= 0) problem = 'Enter a contract multiplier above 0 (dollars per 1.00 move in the price).';
+    else if (isNaN(entry) || entry < 0) problem = 'Enter the trade price, 0 or more.';
+    else if (isNaN(initial) || initial <= 0) problem = 'Enter an initial margin above $0 per contract.';
+    else if (isNaN(maint) || maint <= 0 || maint > initial) problem = 'Enter a maintenance margin above $0 and no higher than the initial margin.';
+    else if (isNaN(extra) || extra < 0) problem = 'Enter extra cash of $0 or more.';
+    else if (prices === null) problem = 'Daily prices must be numbers separated by a comma and a space, spaces or new lines, with no thousands separators.';
+    else if (!prices.length) problem = 'Enter at least one daily settlement price.';
+    else if (prices.length > MAX_DAYS) problem = 'Enter at most ' + MAX_DAYS + ' daily prices.';
+    error.hidden = !problem;
+    error.textContent = problem;
+    if (problem) { clearResults(); return; }
+
+    var r = markToMarket({ side: document.getElementById('fmSide').value, contracts: contracts, multiplier: mult, entry: entry,
+      initial: initial, maint: maint, extra: extra, prices: prices, onCall: document.getElementById('fmOnCall').value });
+    var days = r.rows.length;
+    set('fmPnl', signedMoney(r.cum));
+    set('fmPnlNote', 'Sum of the daily variation margin over ' + days + (days === 1 ? ' day.' : ' days.'));
+    if (r.closedDay) {
+      set('fmCalls', 'Closed out');
+      set('fmCallsNote', 'A call for ' + money.format(r.rows[days - 1].call) + ' on day ' + r.closedDay + ' was not met.');
+    } else {
+      set('fmCalls', money.format(r.callTotal));
+      set('fmCallsNote', r.calls ? r.calls + (r.calls === 1 ? ' margin call' : ' margin calls') + ' met by depositing cash.' : 'The balance never fell below maintenance margin.');
+    }
+    set('fmEnding', money.format(r.ending));
+    set('fmEndingNote', r.closedDay ? 'Left in the account when the position was closed.' : (r.ending > r.initReq ? money.format(r.ending - r.initReq) + ' above the initial margin could be withdrawn.' : 'At or below the ' + money.format(r.initReq) + ' initial margin.'));
+    set('fmCash', money.format(r.cashIn));
+    set('fmCashNote', 'Opening deposit of ' + money.format(r.initReq + extra) + (r.calls ? ' plus margin calls.' : '.'));
+    set('fmLow', money.format(r.low));
+    set('fmLowNote', 'Maintenance level is ' + money.format(r.maintReq) + '.');
+    var ret = r.cum / r.cashIn;
+    set('fmReturn', (ret >= 0 ? '+' : '−') + (Math.abs(ret) * 100).toFixed(2) + '%');
+    set('fmReturnNote', 'Gain or loss divided by all the cash put in. Notional value at the trade price: ' + money.format(entry * mult * contracts) + '.');
+
+    var closed = document.getElementById('fmClosed');
+    closed.hidden = !r.closedDay;
+    if (r.closedDay) set('fmClosedText', 'The balance fell to ' + money.format(r.rows[days - 1].before) + ' on day ' + r.closedDay + ', below the ' + money.format(r.maintReq) + ' maintenance level. Without the ' + money.format(r.rows[days - 1].call) + ' deposit, the position is closed at that day’s price and the remaining days are not shown.');
+
+    var tb = clearBody('fmDays');
+    r.rows.forEach(function (row) {
+      addRow(tb, [String(row.day), priceFmt.format(row.price), signedPrice(row.change), signedMoney(row.vm), signedMoney(row.cum),
+        money.format(row.before), row.call ? money.format(row.call) + (r.closedDay === row.day ? ' (not met)' : '') : '–', money.format(row.after)]);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('fmForm');
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();
+</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

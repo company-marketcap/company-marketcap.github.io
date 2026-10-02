@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="en" id="tip-calculator-document" data-page-slug="tip-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tip Calculator: Tip Amount and Bill Split</title>
+  <meta name="description" content="Use this free tip calculator to calculate the tip amount, total with gratuity and cost per person. Enter your bill, choose a percentage and split it with your group.">
+  <link rel="canonical" href="https://company-marketcap.github.io/tip-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Tip Calculator: Tip Amount and Bill Split">
+  <meta property="og:description" content="Use this free tip calculator to calculate the tip amount, total with gratuity and cost per person. Enter your bill, choose a percentage and split it with your group.">
+  <meta property="og:url" content="https://company-marketcap.github.io/tip-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Tip Calculator", "url": "https://company-marketcap.github.io/tip-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Use this free tip calculator to calculate the tip amount, total with gratuity and cost per person. Enter your bill, choose a percentage and split it with your group."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Everyday Money & Utility", "item": "https://company-marketcap.github.io/financial-calculators.html#everyday-money-calculators"}, {"@type": "ListItem", "position": 4, "name": "Tip Calculator", "item": "https://company-marketcap.github.io/tip-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much should I tip at a restaurant?", "acceptedAnswer": {"@type": "Answer", "text": "In the United States, 15% to 20% of the bill is the usual range for good service at a sit-down restaurant, with 18% to 20% common in large cities. Counter service or coffee often warrants $1 to $2 or about 10%."}}, {"@type": "Question", "name": "Should I tip on the pre-tax or post-tax amount?", "acceptedAnswer": {"@type": "Answer", "text": "Both are common. Many diners tip on the pre-tax subtotal because sales tax is not part of the service. Tick \"Do not tip on tax\" and enter the tax to calculate the tip on the pre-tax amount."}}, {"@type": "Question", "name": "How do I calculate a tip without a calculator?", "acceptedAnswer": {"@type": "Answer", "text": "Move the decimal point one place left to find 10% of the bill, double it for 20%, or add half of the 10% figure to get 15%."}}, {"@type": "Question", "name": "How do I split the bill and tip evenly?", "acceptedAnswer": {"@type": "Answer", "text": "Enter the number of people. The calculator divides the tip and the total evenly and shows the tip per person and total per person."}}, {"@type": "Question", "name": "What if a service charge is already on my bill?", "acceptedAnswer": {"@type": "Answer", "text": "Check the receipt first. If an automatic gratuity is included, you generally do not need to add another tip, though you can add extra for exceptional service."}}, {"@type": "Question", "name": "What is the formula for a tip?", "acceptedAnswer": {"@type": "Answer", "text": "Tip = tip base x tip percentage / 100, and total = bill + tip. To get the final amount in one step, multiply the bill by 1 plus the decimal tip rate, for example 1.18 for an 18% tip."}}, {"@type": "Question", "name": "Is tipping expected in every country?", "acceptedAnswer": {"@type": "Answer", "text": "No. Tipping is widely expected in the United States and Canada, but in countries such as Japan it is often declined or considered rude, and in much of Europe a service charge is already included."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="tip-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="tip-calculator" data-page-type="calculator">
+  <a id="tip-calculator-skip-link" href="#tip-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="tip-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="tip-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="tip-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="tip-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="tip-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="tip-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="tip-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="tip-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="tip-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="tip-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="tip-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="tip-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="tip-calculator-header-search-status" aria-controls="tip-calculator-header-search-results" data-search-input="header">
+              <p id="tip-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="tip-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="tip-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="tip-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="tip-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="tip-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="tip-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="tip-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="tip-calculator-mobile-search-status" aria-controls="tip-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="tip-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="tip-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="tip-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="tip-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="tip-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="tip-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="tip-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="tip-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="tip-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="tip-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="tip-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="tip-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="tip-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="tip-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="tip-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="tip-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="tip-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="tip-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="tip-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="tip-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="tip-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="tip-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="tip-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="tip-calculator-sidebar-search-status" aria-controls="tip-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="tip-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="tip-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="tip-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="tip-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="tip-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="tip-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="tip-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="tip-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="tip-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="tip-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="tip-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="tip-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="tip-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="tip-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="tip-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="tip-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="tip-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="tip-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="tip-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="tip-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="tip-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="tip-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="tip-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="tip-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="tip-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="tip-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="tip-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="tip-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="tip-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="tip-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators" aria-current="true">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="tip-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="tip-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="tip-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="tip-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="tip-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="tip-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="tip-calculator" data-calculator-slug="tip-calculator" data-sub-category-slug="everyday-money-calculators">
+      <aside id="tip-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="tip-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="tip-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="tip-calculator-ad-top-leaderboard">
+            <ins id="tip-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("tip-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="tip-calculator-intro-area" class="space-y-4">
+        <nav id="tip-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="tip-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="tip-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="tip-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="tip-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#everyday-money-calculators" itemprop="item"><span itemprop="name">Everyday Money &amp; Utility</span></a><meta itemprop="position" content="3"></li>
+            <li id="tip-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Tip Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/tip-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="tip-calculator-hero-section" aria-labelledby="tip-calculator-hero-heading" data-section="hero">
+          <h1 id="tip-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Tip Calculator: Tip Amount and Bill Split</h1>
+          <p id="tip-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Whether you are settling up after a quiet dinner or a loud birthday table, a tip calculator turns a receipt into a fair gratuity in seconds: enter the bill, choose a percentage, and see the tip amount, the total with tip and what each person owes. Behind that single result sit a few decisions that change the number, such as whether the subtotal or the tax-inclusive total is the base, how many people share the check, and whether a service charge is already printed on the bill. This guide explains each of them with one fully worked example. <!-- SILO_START:slot_a -->Next, open the <a class="silo-link" href="/date-calculator.html">free date calculator</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="tip-calculator-tool" class="space-y-6" data-page-slug="tip-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="tpFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="tpForm" class="space-y-5" novalidate aria-labelledby="tpFormHeading">
+      <h2 id="tpFormHeading" class="panel-heading">Enter your bill</h2>
+<div><label for="tpBill" class="form-label">Bill amount</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="tpBill" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="0.01" value="60.00" inputmode="decimal"></div><p class="form-hint">The check before tax. If your check already includes tax, enter that total and leave the tax rate at 0.</p></div>
+<div class="form-row form-row-2">
+<div><label for="tpRate" class="form-label">Tip</label><div class="input-group"><input type="number" id="tpRate" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="1" value="18" inputmode="decimal"><span class="input-affix">%</span></div></div>
+<div><label for="tpPeople" class="form-label">Split between</label><div class="input-group"><input type="number" id="tpPeople" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1" max="100" step="1" value="1" inputmode="numeric"><span class="input-affix">people</span></div></div>
+</div>
+<details class="form-details"><summary class="form-details-summary">More options</summary>
+<div><label for="tpTax" class="form-label">Sales tax rate</label><div class="input-group"><input type="number" id="tpTax" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="30" step="0.01" value="0" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">Added to the bill. Use your local combined rate.</p></div>
+<label class="form-choice"><input type="checkbox" id="tpPreTax" class="form-choice-input" checked><span class="form-choice-text">Calculate the tip on the amount before tax</span></label>
+<div><label for="tpRound" class="form-label">Round up</label><select id="tpRound" class="form-select"><option value="none" selected>Don’t round</option><option value="share">Each person’s share to the next dollar</option><option value="total">The total to the next dollar</option></select><p class="form-hint">Rounding up adds the extra cents to the tip.</p></div>
+</details>
+      <p id="tpError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="tpResults" aria-live="polite" aria-labelledby="tpResultsHeading">
+      <h2 id="tpResultsHeading" class="panel-heading">Your results</h2>
+<div class="stat-grid mt-4">
+<div class="stat-card stat-card-highlight"><p class="stat-label">Each person pays</p><p id="tpShare" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">Tip</p><p id="tpTip" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">Total with tip</p><p id="tpTotal" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">Tip per person</p><p id="tpShareTip" class="stat-value">–</p></div>
+</div>
+<div class="mt-5">
+<div class="result-row"><span class="result-term">Bill</span><span id="tpRowBill" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Sales tax</span><span id="tpRowTax" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Tip</span><span id="tpRowTip" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Total</span><span id="tpRowTotal" class="result-value">–</span></div>
+<p id="tpEffRate" class="form-hint"></p>
+<p id="tpSplitNote" class="form-hint" hidden></p>
+</div>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="tpCompareHeading" data-section="schedule">
+  <h2 id="tpCompareHeading" class="panel-heading">Compare tip amounts</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">The same bill at common tip rates, without rounding.</p>
+  <div class="table-scroll mt-5" tabindex="0" role="region" aria-labelledby="tpCompareHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Tip rate</th><th scope="col">Tip</th><th scope="col">Total</th><th scope="col">Per person</th></tr></thead>
+      <tbody id="tpCompare"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="tip-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="tip-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Whether you are settling up after a quiet dinner or a loud birthday table, a tip calculator turns a receipt into a fair gratuity in seconds: enter the bill, choose a percentage, and see the tip amount, the total with tip and what each person owes. Behind that single result sit a few decisions that change the number, such as whether the subtotal or the tax-inclusive total is the base, how many people share the check, and whether a service charge is already printed on the bill. This guide explains each of them with one fully worked example. <!-- SILO_START:slot_a_m -->Next, open the <a class="silo-link" href="/date-calculator.html">free date calculator</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="tip-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="tip-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="tip-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="tip-calculator-ad-in-feed">
+            <ins id="tip-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("tip-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="tip-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="tip-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="tip-calculator-guide-heading-1">
+<h2 id="tip-calculator-guide-heading-1">How the Tip Calculator Works</h2>
+<p>The tool takes a short list of inputs and returns a short list of results. Everything it does is multiplication and division, which is why you can reproduce any answer by hand once you know the pattern. The inputs are the <strong>bill amount</strong>, the <strong>tip percentage</strong> you want to leave, an optional <strong>tax</strong> line, and the <strong>number of people</strong> splitting the check. The outputs are the <strong>tip amount</strong>, the <strong>total with tip</strong>, the <strong>tip per person</strong> and the <strong>total per person</strong>. <!-- SILO_START:slot_b -->The <a class="silo-link" href="/basic-financial-calculator.html">basic financial calculator online</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_b --></p>
+
+<h3>Bill amount, tip percentage and number of people</h3>
+<p>Start with the figure printed on your check. If the receipt lists a food <strong>subtotal</strong> and a separate tax line, enter them separately so the tool can show you both versions of the tip. Next, choose a tip percentage: most diners in the United States land between 15% and 20% for a sit-down meal, while counter service might justify only 10% or a couple of dollars. Finally, enter the party size if you want an even split. Quick presets such as 15%, 18% and 20% cover most meals, and a custom tip field handles anything else.</p>
+<ul>
+<li><strong>Bill:</strong> the pre-tax subtotal, or the full amount if your receipt shows only one line.</li>
+<li><strong>Tip percentage:</strong> your reaction to the service, from 10% for a disappointing visit to 25% for an outstanding one.</li>
+<li><strong>Tax:</strong> optional, entered only when you want the tip based on the pre-tax figure.</li>
+<li><strong>Number of people:</strong> used to divide the total evenly.</li>
+</ul>
+
+<h3>Pre-tax vs post-tax: choosing the tip base</h3>
+<p>The <strong>tip base</strong> is the amount your percentage is applied to. Many diners tip on the <strong>pre-tax</strong> subtotal, reasoning that sales tax is a government charge and not part of the meal your server delivered. Other diners, and some point-of-sale systems that print suggested tips, use the <strong>post-tax</strong> total, which makes the gratuity a little larger. Neither is a rule, and whether to leave a tip on tax at all is a matter of etiquette and personal judgment, entirely discretionary. The tool lets you switch the base so you can match whichever convention you follow, and the worked example below shows exactly how much the choice matters on a real check.</p>
+
+<aside><p><strong>Quick check:</strong> if your receipt already prints suggested tip amounts, look at whether they were calculated before or after tax, then mirror that choice so your numbers agree with theirs.</p></aside>
+        </section>
+        <section id="tip-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="tip-calculator-guide-heading-2">
+<h2 id="tip-calculator-guide-heading-2">How to Calculate a Tip: Formulas</h2>
+<p>Learning how to calculate a tip takes one formula. The tip is the tip base multiplied by the percentage written as a decimal, and the total is everything added together: <!-- SILO_START:slot_c -->Pair this with the <a class="silo-link" href="/finance-calculator.html">free finance calculator</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_c --></p>
+<p>$$\text{Tip} = \text{Base} \times \frac{\text{Tip \%}}{100}$$</p>
+<p>$$\text{Total} = \text{Subtotal} + \text{Tax} + \text{Tip}$$</p>
+<p>$$\text{Per person} = \frac{\text{Total}}{\text{Number of people}}$$</p>
+
+<h3>The one-step multiplier</h3>
+<p>If you only want the final amount to pay, you can skip the separate tip line and <strong>multiply</strong> the total bill by one plus the decimal percentage. Multiply the check amount once, and you have the final figure. A 20% gratuity becomes a multiplier of 1.20, and an 18% gratuity becomes 1.18. A bill of $48.00 with an 18% tip is therefore \(48.00 \times 1.18 = 56.64\), and the tip itself is \(48.00 \times 0.18 = 8.64\). Use the multiplier when the tax is already inside the bill amount and you do not need the tip shown separately.</p>
+
+<h3>Removing a service charge from the bill</h3>
+<p>Some restaurants add a <strong>service charge</strong> or auto-gratuity to larger tables. To see what the bill would have been without it, <strong>divide</strong> the printed total by one plus the charge rate. A total of $184.30 that includes a 20% service charge was $184.30 ÷ 1.20 = $153.58 before the charge. That also tells you whether the printed gratuity already covers what you intended to leave, so you do not tip twice by accident.</p>
+        </section>
+        <section id="tip-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="tip-calculator-guide-heading-3">
+<h2 id="tip-calculator-guide-heading-3">Worked Example with the Restaurant Tip Calculator</h2>
+<p>Three friends finish dinner. The receipt shows a food <strong>subtotal of $93.40</strong> and <strong>8.25% sales tax</strong>, which is $7.71. They agree on an <strong>18% tip on the pre-tax subtotal</strong> because the service was attentive but not exceptional. Here is the full calculation.</p>
+<table>
+<thead><tr><th>Step</th><th>Calculation</th><th>Result</th></tr></thead>
+<tbody>
+<tr><td>Sales tax</td><td>$93.40 × 0.0825</td><td>$7.71</td></tr>
+<tr><td>Tip amount (pre-tax base)</td><td>$93.40 × 0.18</td><td>$16.81</td></tr>
+<tr><td>Total with tip</td><td>$93.40 + $7.71 + $16.81</td><td>$117.92</td></tr>
+<tr><td>Total per person (3 people)</td><td>$117.92 ÷ 3</td><td>$39.31</td></tr>
+</tbody>
+</table>
+<figure><img src="/assets/images/tools/tip-calculator/tip-calculator-bill-total-waterfall.svg" alt="Waterfall chart showing a $93.40 subtotal plus $7.71 sales tax and a $16.81 tip adding up to a $117.92 total with tip"><figcaption>How the subtotal, sales tax and an 18% tip build the final total for the worked example.</figcaption></figure>
+<p>Had they used the post-tax base instead, the tip would be \(101.11 \times 0.18 = 18.20\), the total would be $119.31 and each person would pay $39.77. Choosing the pre-tax base saves the table $1.39 overall, which is about 46 cents each. The percentage is the same, and only the base changed, so the difference is small but it is real money over many meals.</p>
+<figure><img src="/assets/images/tools/tip-calculator/pre-tax-vs-post-tax-tip-base-comparison.svg" alt="Dumbbell chart comparing tip amounts at 15, 18, 20 and 25 percent when the tip base is the pre-tax subtotal versus the post-tax total"><figcaption>The post-tax tip base adds a small, steady amount at every tip percentage.</figcaption></figure>
+
+<h3>Rounding the share per person</h3>
+<p>Three equal shares of $117.92 come to $39.31 each, which adds up to $117.93, one cent over. Rounding like this is normal. Most groups round up to a clean number, such as $40 each, and leave the extra 69 cents as a slightly larger gratuity for the server. A simple round-up like that keeps the payment easy for everyone.</p>
+        </section>
+        <section id="tip-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="tip-calculator-guide-heading-4">
+<h2 id="tip-calculator-guide-heading-4">Calculate Tip in Your Head</h2>
+<p>You will not always have a phone out, and a little <strong>mental math</strong> goes a long way. The method relies on one easy move: shift the <strong>decimal point</strong> one place to the left to find 10% of the bill.</p>
+<ol>
+<li>Find 10% by moving the decimal point one place left. For $93.40 that is $9.34.</li>
+<li>Double it for 20%: $9.34 × 2 = $18.68.</li>
+<li>Add half of the 10% figure to get 15%: $9.34 + $4.67 = $14.01.</li>
+<li>For 18%, take the 20% figure and subtract a tenth of it, which lands near $16.81.</li>
+</ol>
+<p>These shortcuts get you within a few cents of the exact answer, which is plenty at the table. Keep the calculator for splitting a check, adding tax or checking an unusual percentage.</p>
+        </section>
+        <section id="tip-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="tip-calculator-guide-heading-5">
+<h2 id="tip-calculator-guide-heading-5">Working Out the Gratuity and Bill Split for a Team Lunch</h2>
+<p>Dana books a Thursday lunch for five teammates, and the receipt lands with a <strong>subtotal of $168.35</strong> and <strong>7% sales tax of $11.78</strong>. At the bottom, the printer suggests 18%, 20% or 22% tips, so Dana opens the calculator to see whether those suggestions are built on the pre-tax or post-tax amount.</p>
+<p>First entry: bill $168.35, tax $11.78, tip 20% on the pre-tax subtotal, five people. The tip amount comes back as <strong>$33.67</strong>, the total with tip as <strong>$213.80</strong>, and each person owes <strong>$42.76</strong>. Then Dana switches the base to the post-tax total of $180.13. The 20% tip becomes <strong>$36.03</strong>, which matches the 20% figure on the receipt exactly, so the printer was using the post-tax base. The gap between the two is $2.36 across the table.</p>
+<ul>
+<li>Printed 18% on the post-tax base: $32.42.</li>
+<li>Printed 22% on the post-tax base: $39.63.</li>
+<li>Pre-tax 20%, the figure Dana first entered: $33.67.</li>
+</ul>
+<p>The server handled all five orders alone and recovered quickly from a kitchen error, so the table agrees on the full 20% as the figure to type into the calculator. The standard U.S. range for sit-down dining is 15% to 20%, so 20% sits at its top. Dana picks the post-tax $36.03, so the new total is $216.16 and each share is <strong>$43.23</strong>. Everyone pays the same, which leaves a single cent to round off, and Dana types that new share into the group chat before the cards come out.</p>
+        </section>
+        <section id="tip-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="tip-calculator-guide-heading-6">
+<h2 id="tip-calculator-guide-heading-6">Gratuity Calculator Tip Chart</h2>
+<p>Restaurant diners who tip often will find a quick-reference table handy when they want a <strong>tip chart</strong> instead of typing numbers. The rows below use five bill sizes and four common percentages, each computed from the formula above.</p>
+<table>
+<thead><tr><th>Bill amount</th><th>15% tip</th><th>18% tip</th><th>20% tip</th><th>25% tip</th></tr></thead>
+<tbody>
+<tr><td>$35.00</td><td>$5.25</td><td>$6.30</td><td>$7.00</td><td>$8.75</td></tr>
+<tr><td>$48.00</td><td>$7.20</td><td>$8.64</td><td>$9.60</td><td>$12.00</td></tr>
+<tr><td>$72.00</td><td>$10.80</td><td>$12.96</td><td>$14.40</td><td>$18.00</td></tr>
+<tr><td>$93.40</td><td>$14.01</td><td>$16.81</td><td>$18.68</td><td>$23.35</td></tr>
+<tr><td>$130.00</td><td>$19.50</td><td>$23.40</td><td>$26.00</td><td>$32.50</td></tr>
+</tbody>
+</table>
+<p>The same table works as a <strong>gratuity calculator</strong> cheat sheet: find the row closest to your bill, scan across to the percentage you chose, and add the amount to your check. The values assume the bill column is your tip base, so if you tip on the pre-tax subtotal, use the subtotal and not the total.</p>
+        </section>
+        <section id="tip-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="tip-calculator-guide-heading-7">
+<h2 id="tip-calculator-guide-heading-7">How Much to Tip for Different Services</h2>
+<p>The question of <strong>how much to tip</strong> depends on who served you and how. In the United States, <strong>tipping</strong> is customary, and a tip is <strong>expected</strong> at most sit-down restaurants. The practice is often built into how workers are paid, since the wages of many tipped employees sit below the standard minimum wage and gratuities make up the difference on payroll. That is why tipping culture matters so much to servers, and why this kind of tipping is treated differently from a voluntary gift. Whatever range you settle on, it becomes the percentage you enter in the calculator. The ranges below are practical starting points, not rules, and you should adjust them for exceptional or poor service.</p>
+
+<h3>Restaurants, bars and coffee shops</h3>
+<ul>
+<li><strong>Full-service restaurants:</strong> 15% to 20% of the bill for good service, with 18% to 20% common in big cities. The server usually shares the tip with the kitchen and support staff.</li>
+<li><strong>Bars:</strong> $1 to $2 per drink for beer or a glass of wine, or about 20% on cocktails. Bartenders who craft complicated drinks appreciate the higher end.</li>
+<li><strong>Counter service and coffee:</strong> $1 to $2, or around 10% on a large custom order. It is optional, but it is a small gesture of gratitude.</li>
+<li><strong>Takeout pickup:</strong> 0% to 10%, since nobody waited on you.</li>
+</ul>
+
+<h3>Delivery, rides and personal care</h3>
+<ul>
+<li><strong>Food delivery:</strong> about 15% of the order or $5 at minimum, more in bad weather or for long distances. The same guidance applies to pizza delivery.</li>
+<li><strong>Taxi and rideshare:</strong> 15% to 20% when you tip in the app.</li>
+<li><strong>Hotel housekeeping:</strong> $1 to $2 per night left daily, because different staff may clean your room on different days.</li>
+<li><strong>Hairstylist or barber:</strong> 15% to 20% of the service price, and a bit more for color work.</li>
+<li><strong>Tour guide:</strong> $5 or more per person for a half-day tour, depending on the length and the quality of service.</li>
+</ul>
+
+<h3>When to tip more, and when to tip less</h3>
+<p>Leave a higher percentage after a fine-dining meal, an unusually attentive server, or a large group that kept the waitstaff busy. A good waiter who remembers your preferences earns it. Check the bill first, because many restaurants add an automatic gratuity for large parties, and you rarely need to add more on top. If the service was poor, speak with a manager first, then consider a lower percentage instead of none at all, since many servers depend on tips for most of their income.</p>
+        </section>
+        <section id="tip-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="tip-calculator-guide-heading-8">
+<h2 id="tip-calculator-guide-heading-8">Split the Bill: Tip per Person</h2>
+<p>A shared check is where a <strong>bill splitter</strong> earns its keep. The calculator divides the subtotal, tax, tip and total by your <strong>party size</strong>, so you see both the <strong>tip per person</strong> and the <strong>total per person</strong>. This <strong>even split</strong> works well when everyone ordered something similar and wants to <strong>split the bill</strong> without arguments.</p>
+<figure><img src="/assets/images/tools/tip-calculator/restaurant-bill-split-total-per-person-grid.svg" alt="Heatmap of the total per person when a restaurant bill is split between 2 and 6 people at 15 to 25 percent tip"><figcaption>Total per person by party size and tip percentage, with the three-person, 18% case outlined.</figcaption></figure>
+<p>When one guest had several drinks and another had only a salad, an <strong>itemized</strong> split is fairer. In that case, add up each person's items, apply the same tax rate and tip percentage to their own subtotal, and then total it all. Anyone who wants a quick <strong>bill split</strong> for a large group can do an even division first, then adjust for the exceptions. To <strong>split the check</strong> well, agree on the tip percentage before anyone pays, so nobody feels the gratuity was chosen for them.</p>
+<dl>
+<dt>Tip base</dt>
+<dd>The part of the bill your percentage multiplies, either the subtotal or the subtotal plus tax.</dd>
+<dt>Gratuity</dt>
+<dd>Another word for a tip, usually printed on a receipt when it has been added automatically.</dd>
+<dt>Service charge</dt>
+<dd>A fee the restaurant adds for large parties or events, which may or may not go to the staff.</dd>
+</dl>
+        </section>
+        <section id="tip-calculator-guide-section-9" class="panel article-content p-4 sm:p-6" aria-labelledby="tip-calculator-guide-heading-9">
+<h2 id="tip-calculator-guide-heading-9">Tipping Customs Around the World</h2>
+<p>Tipping is not universal, and what is polite in one country can be awkward in another. In the United States and Canada it is widely <strong>expected</strong> at restaurants, while in <strong>Japan</strong> tips are often refused and can be seen as insulting. Elsewhere in <strong>Europe</strong>, a service charge is frequently included, and diners round up the bill or leave the change as a modest thank-you. Tipping rules differ across countries, and because tipping norms are tied to local culture, the right amount of money in one place can be wrong in the next.</p>
+<ul>
+<li><strong>United States and Canada:</strong> 15% to 20% is expected at sit-down restaurants.</li>
+<li><strong>Brazil and Chile:</strong> around 10%, often already included as a service line.</li>
+<li><strong>Australia and China:</strong> not expected, though a small gesture for a tour guide is welcome.</li>
+<li><strong>Japan:</strong> no tipping, and good service is simply part of the price.</li>
+</ul>
+<p>When you travel, research the customs of each country before you go, since tipping in some countries is expected and in others discouraged. It is also worth paying in the <strong>local currency</strong>, because converting a tip at a poor <strong>exchange rate</strong> quietly shrinks the money your server receives. In many places, handing over <strong>cash</strong> rather than adding the tip to a card payment is the most direct way to make sure the gratuity reaches the person who earned it, and leaving cash is often the more welcome option. Once you know the local norm, enter that percentage into the calculator to see the tip amount for your bill.</p>
+        </section>
+        <section id="tip-calculator-guide-section-10" class="panel article-content p-4 sm:p-6" aria-labelledby="tip-calculator-guide-heading-10">
+<h2 id="tip-calculator-guide-heading-10">How Service Quality Sets the Tip Amount You Enter</h2>
+<p>A fixed habit is easy, but a sliding scale respects what actually happened at the table. The percentage is the one input the calculator cannot guess for you: it multiplies your base by whatever you type, and it tells the server how the visit went.</p>
+<ul>
+<li><strong>10%:</strong> the service had real problems, such as long unexplained waits or wrong orders that were never fixed.</li>
+<li><strong>15%:</strong> acceptable service, with nothing memorable either way.</li>
+<li><strong>18% to 20%:</strong> attentive, friendly service where drinks were refilled and mistakes were handled quickly.</li>
+<li><strong>25% or more:</strong> exceptional service, a complicated order handled gracefully, or a table that stayed long after the kitchen closed.</li>
+</ul>
+
+<h3>Tipping on discounts and coupons</h3>
+<p>If you pay with a coupon or a happy-hour discount, tip on the amount the meal would have cost before the discount. Your server carried the same plates either way, and a smaller bill should not shrink their pay. For example, a $72.00 order reduced to $60.00 by a coupon still deserves 18% of the original figure, which is $12.96, and not 18% of the reduced one. In the calculator, enter the pre-discount amount in the bill field.</p>
+
+<h3>Common mistakes to avoid</h3>
+<p>The most frequent error is tipping twice: once through an automatic service charge and again by hand, so check the bill field before adding anything. The second is entering the post-tax total in the bill field when you meant to use the subtotal, which nudges every result upward. The third is forgetting to round per-person shares consistently, so the table ends up a few cents short. Reading the receipt carefully before you open the calculator prevents all three.</p>
+        </section>
+        <section id="tip-calculator-guide-section-11" class="panel article-content p-4 sm:p-6" aria-labelledby="tip-calculator-guide-heading-11">
+<h2 id="tip-calculator-guide-heading-11">Using This Free Tip Calculator Every Time You Dine</h2>
+<p>A free tip calculator removes the guesswork from the end of a restaurant meal, and from every other moment when you owe someone gratitude in the form of money: choose the percentage, pick your base, set the party size, and read the result. It also helps you double-check a gratuity printed on your receipt and compare what each person owes before cards come out. With the formulas above, you can verify any result by hand, which makes the answer easier to trust and easier to explain to the rest of the table.</p>
+        </section>
+      </div>
+
+      <section id="tip-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="tip-calculator-faq-heading" data-section="faq">
+        <h2 id="tip-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Tip Calculator questions</h2>
+        <div id="tip-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="tip-calculator-faq-1" class="faq-item" open><summary id="tip-calculator-faq-1-summary" class="faq-summary"><h3 id="tip-calculator-faq-1-question" class="faq-question">How much should I tip at a restaurant?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="tip-calculator-faq-1-answer" class="faq-answer"><p>In the United States, 15% to 20% of the bill is the usual range for good service at a sit-down restaurant, with 18% to 20% common in large cities. Counter service or coffee often warrants $1 to $2 or about 10%.</p></div></details>
+          <details id="tip-calculator-faq-2" class="faq-item" open><summary id="tip-calculator-faq-2-summary" class="faq-summary"><h3 id="tip-calculator-faq-2-question" class="faq-question">Should I tip on the pre-tax or post-tax amount?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="tip-calculator-faq-2-answer" class="faq-answer"><p>Both are common. Many diners tip on the pre-tax subtotal because sales tax is not part of the service. Tick &quot;Do not tip on tax&quot; and enter the tax to calculate the tip on the pre-tax amount.</p></div></details>
+          <details id="tip-calculator-faq-3" class="faq-item" open><summary id="tip-calculator-faq-3-summary" class="faq-summary"><h3 id="tip-calculator-faq-3-question" class="faq-question">How do I calculate a tip without a calculator?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="tip-calculator-faq-3-answer" class="faq-answer"><p>Move the decimal point one place left to find 10% of the bill, double it for 20%, or add half of the 10% figure to get 15%.</p></div></details>
+          <details id="tip-calculator-faq-4" class="faq-item" open><summary id="tip-calculator-faq-4-summary" class="faq-summary"><h3 id="tip-calculator-faq-4-question" class="faq-question">How do I split the bill and tip evenly?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="tip-calculator-faq-4-answer" class="faq-answer"><p>Enter the number of people. The calculator divides the tip and the total evenly and shows the tip per person and total per person.</p></div></details>
+          <details id="tip-calculator-faq-5" class="faq-item" open><summary id="tip-calculator-faq-5-summary" class="faq-summary"><h3 id="tip-calculator-faq-5-question" class="faq-question">What if a service charge is already on my bill?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="tip-calculator-faq-5-answer" class="faq-answer"><p>Check the receipt first. If an automatic gratuity is included, you generally do not need to add another tip, though you can add extra for exceptional service.</p></div></details>
+          <details id="tip-calculator-faq-6" class="faq-item" open><summary id="tip-calculator-faq-6-summary" class="faq-summary"><h3 id="tip-calculator-faq-6-question" class="faq-question">What is the formula for a tip?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="tip-calculator-faq-6-answer" class="faq-answer"><p>Tip = tip base x tip percentage / 100, and total = bill + tip. To get the final amount in one step, multiply the bill by 1 plus the decimal tip rate, for example 1.18 for an 18% tip.</p></div></details>
+          <details id="tip-calculator-faq-7" class="faq-item" open><summary id="tip-calculator-faq-7-summary" class="faq-summary"><h3 id="tip-calculator-faq-7-question" class="faq-question">Is tipping expected in every country?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="tip-calculator-faq-7-answer" class="faq-answer"><p>No. Tipping is widely expected in the United States and Canada, but in countries such as Japan it is often declined or considered rude, and in much of Europe a service charge is already included.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="tip-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="tip-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="tip-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="tip-calculator-ad-bottom-leaderboard">
+            <ins id="tip-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("tip-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="tip-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="tip-calculator-right-rail-top" class="mb-6">
+        <aside id="tip-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="tip-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="tip-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="tip-calculator-ad-right-rail-rectangle">
+            <ins id="tip-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("tip-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="tip-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="tip-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="tip-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="tip-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="tip-calculator-ad-right-rail-skyscraper">
+            <ins id="tip-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("tip-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="tip-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="tip-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="tip-calculator-footer-brand">
+        <a id="tip-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="tip-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="tip-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="tip-calculator-footer-categories" aria-labelledby="tip-calculator-footer-categories-heading">
+        <h2 id="tip-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="tip-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="tip-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="tip-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="tip-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="tip-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="tip-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="tip-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="tip-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="tip-calculator-footer-company" aria-labelledby="tip-calculator-footer-company-heading">
+        <h2 id="tip-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="tip-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="tip-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="tip-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="tip-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="tip-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="tip-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="tip-calculator-footer-bottom" class="border-t border-line">
+      <p id="tip-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="tip-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Tip and bill split.
+  //   tax   = round2(bill x tax%)
+  //   tip   = round2(tip base x tip%), tip base = bill (pre-tax, default) or bill + tax
+  //   total = bill + tax + tip; each share = total / people, worked in whole cents so any
+  //   leftover cent is shown rather than lost.
+  //   Rounding up: "share" rounds each person's share up to the next whole dollar (total = share x
+  //   people); "total" rounds the total up to the next dollar. The extra goes to the tip, and the
+  //   effective tip rate = tip / tip base.
+  // Verified (Node scratch test): $60, 18% -> tip $10.80, total $70.80; $85.50, 8% tax, 20% on the
+  // pre-tax bill, 3 people -> tax $6.84, tip $17.10, total $109.44, $36.48 each; same bill rounded
+  // up per person -> $37 each, total $111.00, tip $18.66 (21.82%); $100, 0% tip, 3 people -> $33.34
+  // for 1 person and $33.33 for 2.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  var pct = new Intl.NumberFormat('en-US', { maximumFractionDigits: 2 });
+  var COMPARE = [10, 15, 18, 20, 22, 25];
+
+  function num(id) {
+    var s = String(document.getElementById(id).value).trim();
+    if (s === '') return NaN;
+    var v = Number(s);
+    return isFinite(v) ? v : NaN;
+  }
+  function cents(x) { return Math.round(x * 100 + 1e-7 * Math.sign(x)); }
+  function set(id, text) { document.getElementById(id).textContent = text; }
+
+  // All money values are returned in whole cents.
+  function tipBill(o) {
+    var billC = cents(o.bill);
+    var taxC = cents(o.bill * o.taxRate / 100);
+    var baseC = o.preTax ? billC : billC + taxC;
+    var tipC = cents(baseC * o.tipRate / 100 / 100);
+    var totalC = billC + taxC + tipC;
+    if (o.round === 'share') {
+      var perC = Math.ceil(totalC / o.people / 100 - 1e-9) * 100;
+      totalC = perC * o.people;
+    } else if (o.round === 'total') {
+      totalC = Math.ceil(totalC / 100 - 1e-9) * 100;
+    }
+    tipC = totalC - billC - taxC;
+    var shareLow = Math.floor(totalC / o.people);
+    var extra = totalC - shareLow * o.people; // people who pay one cent more
+    return { bill: billC, tax: taxC, base: baseC, tip: tipC, total: totalC,
+             shareLow: shareLow, extra: extra,
+             effRate: baseC > 0 ? tipC / baseC * 100 : 0 };
+  }
+
+  function update() {
+    var o = { bill: num('tpBill'), tipRate: num('tpRate'), people: num('tpPeople'),
+              taxRate: num('tpTax'), preTax: document.getElementById('tpPreTax').checked,
+              round: document.getElementById('tpRound').value };
+    var error = document.getElementById('tpError');
+    var bad = [o.bill, o.tipRate, o.people, o.taxRate].some(isNaN) || o.bill < 0 || o.bill > 1e9 ||
+              o.tipRate < 0 || o.tipRate > 100 || o.taxRate < 0 || o.taxRate > 30 ||
+              o.people < 1 || o.people > 100 || Math.floor(o.people) !== o.people;
+    error.hidden = !bad;
+    if (bad) {
+      error.textContent = 'Enter a bill of $0 or more, a tip from 0 to 100%, a tax rate from 0 to 30% and 1 to 100 people (whole number).';
+      ['tpTip', 'tpTotal', 'tpShare', 'tpShareTip', 'tpRowBill', 'tpRowTax', 'tpRowTip', 'tpRowTotal'].forEach(function (id) { set(id, '–'); });
+      set('tpEffRate', '');
+      document.getElementById('tpSplitNote').hidden = true;
+      document.getElementById('tpCompare').innerHTML = '';
+      return;
+    }
+    var r = tipBill(o);
+    set('tpTip', money.format(r.tip / 100));
+    set('tpTotal', money.format(r.total / 100));
+    var shareHigh = r.shareLow + (r.extra > 0 ? 1 : 0);
+    set('tpShare', money.format(shareHigh / 100));
+    set('tpShareTip', money.format(r.tip / o.people / 100));
+    set('tpRowBill', money.format(r.bill / 100));
+    set('tpRowTax', money.format(r.tax / 100));
+    set('tpRowTip', money.format(r.tip / 100));
+    set('tpRowTotal', money.format(r.total / 100));
+    set('tpEffRate', o.round !== 'none' || o.tipRate !== Math.round(r.effRate * 100) / 100
+      ? 'Effective tip rate after rounding: ' + pct.format(r.effRate) + '% of ' + money.format(r.base / 100) + '.'
+      : 'Tip of ' + pct.format(o.tipRate) + '% on ' + money.format(r.base / 100) + (o.preTax && r.tax > 0 ? ' (the bill before tax).' : '.'));
+    var note = document.getElementById('tpSplitNote');
+    note.hidden = r.extra === 0;
+    if (r.extra > 0) {
+      note.textContent = 'The total doesn’t split evenly to the cent: ' + r.extra + (r.extra === 1 ? ' person pays ' : ' people pay ') +
+        money.format(shareHigh / 100) + ' and ' + (o.people - r.extra) + (o.people - r.extra === 1 ? ' person pays ' : ' people pay ') +
+        money.format(r.shareLow / 100) + '.';
+    }
+    var rates = COMPARE.indexOf(o.tipRate) === -1 ? COMPARE.concat([o.tipRate]).sort(function (a, b) { return a - b; }) : COMPARE;
+    document.getElementById('tpCompare').innerHTML = rates.map(function (rate) {
+      var c = tipBill({ bill: o.bill, tipRate: rate, people: o.people, taxRate: o.taxRate, preTax: o.preTax, round: 'none' });
+      var share = c.shareLow + (c.extra > 0 ? 1 : 0);
+      var mine = rate === o.tipRate ? ' (yours)' : '';
+      return '<tr><td>' + pct.format(rate) + '%' + mine + '</td><td>' + money.format(c.tip / 100) + '</td><td>' +
+             money.format(c.total / 100) + '</td><td>' + money.format(share / 100) + '</td></tr>';
+    }).join('');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('tpForm');
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

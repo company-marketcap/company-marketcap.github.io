@@ -1,0 +1,695 @@
+<!doctype html>
+<html lang="en" id="tax-harvesting-document" data-page-slug="tax-harvesting">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tax-Loss Harvesting Calculator: Estimate Your Savings</title>
+  <meta name="description" content="Estimate what you could save with this free tax-loss harvesting calculator. Enter your gains, losses and bracket to see how much of your taxes you can offset.">
+  <link rel="canonical" href="https://company-marketcap.github.io/tax-harvesting.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Tax-Loss Harvesting Calculator: Estimate Your Savings">
+  <meta property="og:description" content="Estimate what you could save with this free tax-loss harvesting calculator. Enter your gains, losses and bracket to see how much of your taxes you can offset.">
+  <meta property="og:url" content="https://company-marketcap.github.io/tax-harvesting.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Tax-Loss Harvesting Calculator", "url": "https://company-marketcap.github.io/tax-harvesting.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Estimate what you could save with this free tax-loss harvesting calculator. Enter your gains, losses and bracket to see how much of your taxes you can offset."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Income Tax & Tax Planning", "item": "https://company-marketcap.github.io/financial-calculators.html#tax-calculators"}, {"@type": "ListItem", "position": 4, "name": "Tax-Loss Harvesting Calculator", "item": "https://company-marketcap.github.io/tax-harvesting.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is tax-loss harvesting?", "acceptedAnswer": {"@type": "Answer", "text": "Tax-loss harvesting means selling an investment that has dropped below what you paid, then using that realized loss to offset capital gains and, within limits, ordinary income. You usually reinvest the proceeds in a similar but not identical holding so your market exposure stays close to where it was."}}, {"@type": "Question", "name": "How much of a loss can I deduct against ordinary income?", "acceptedAnswer": {"@type": "Answer", "text": "After your losses have cancelled all of your capital gains, up to $3,000 of the remainder can reduce ordinary income each year ($1,500 if you are married filing separately). Anything larger is carried forward to future tax years."}}, {"@type": "Question", "name": "What is the wash-sale rule?", "acceptedAnswer": {"@type": "Answer", "text": "If you buy the same or a substantially identical security within 30 days before or after selling at a loss, the loss is generally disallowed for the current year. The calculator assumes your loss is allowed, so check the rule before you trade."}}, {"@type": "Question", "name": "Does tax-loss harvesting work in a 401(k) or IRA?", "acceptedAnswer": {"@type": "Answer", "text": "No. Losses inside tax-deferred retirement accounts cannot be deducted, so harvesting only applies to investments held in a taxable brokerage account."}}, {"@type": "Question", "name": "Why does the length of ownership matter?", "acceptedAnswer": {"@type": "Answer", "text": "Assets held one year or less produce short-term gains taxed at ordinary-income rates, while assets held longer receive lower long-term rates. A short-term loss usually offsets the more heavily taxed gains first, which is why the holding period changes the result."}}, {"@type": "Question", "name": "Why is the TLH net benefit smaller than my tax savings today?", "acceptedAnswer": {"@type": "Answer", "text": "Harvesting lowers the cost basis of the replacement investment, so a larger gain is waiting when you finally sell. The net benefit shows what is left after that deferred tax, which is why a lower future tax rate or a longer holding period helps."}}, {"@type": "Question", "name": "What does the estimated gain until final sale mean?", "acceptedAnswer": {"@type": "Answer", "text": "It is your expected growth, as a percentage, between now and the day you finally sell the replacement investment. A higher figure raises both final sale amounts and the final tax bill, so try a few values to see how sensitive the result is."}}, {"@type": "Question", "name": "Is this calculator tax advice?", "acceptedAnswer": {"@type": "Answer", "text": "No. It gives an estimate from the numbers you enter and simplified federal brackets, and it does not model every rule such as the net investment income tax or deduction phase-outs. Confirm your own situation with a tax advisor."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="tax-harvesting-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="tax-harvesting" data-page-type="calculator">
+  <a id="tax-harvesting-skip-link" href="#tax-harvesting-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="tax-harvesting-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="tax-harvesting-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="tax-harvesting-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="tax-harvesting-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="tax-harvesting-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="tax-harvesting-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="tax-harvesting-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="tax-harvesting-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="tax-harvesting-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="tax-harvesting-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="tax-harvesting-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="tax-harvesting-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="tax-harvesting-header-search-status" aria-controls="tax-harvesting-header-search-results" data-search-input="header">
+              <p id="tax-harvesting-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="tax-harvesting-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="tax-harvesting-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="tax-harvesting-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="tax-harvesting-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="tax-harvesting-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="tax-harvesting-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="tax-harvesting-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="tax-harvesting-mobile-search-status" aria-controls="tax-harvesting-mobile-search-results" data-search-input="mobile">
+            <p id="tax-harvesting-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="tax-harvesting-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="tax-harvesting-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="tax-harvesting-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="tax-harvesting-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="tax-harvesting-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="tax-harvesting-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="tax-harvesting-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="tax-harvesting-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="tax-harvesting-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="tax-harvesting-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="tax-harvesting-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="tax-harvesting-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="tax-harvesting-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="tax-harvesting-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="tax-harvesting-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="tax-harvesting-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="tax-harvesting-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="tax-harvesting-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="tax-harvesting-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="tax-harvesting-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="tax-harvesting-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="tax-harvesting-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="tax-harvesting-sidebar-search-status" aria-controls="tax-harvesting-sidebar-search-results" data-search-input="sidebar">
+              <p id="tax-harvesting-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="tax-harvesting-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="tax-harvesting-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="tax-harvesting-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="tax-harvesting-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="tax-harvesting-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="tax-harvesting-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="tax-harvesting-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="tax-harvesting-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="tax-harvesting-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="tax-harvesting-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="tax-harvesting-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="tax-harvesting-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="tax-harvesting-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="tax-harvesting-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="tax-harvesting-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="tax-harvesting-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="tax-harvesting-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="tax-harvesting-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="tax-harvesting-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="tax-harvesting-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="tax-harvesting-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="tax-harvesting-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators" aria-current="true">Income Tax &amp; Planning</a></li><li><a id="tax-harvesting-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="tax-harvesting-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="tax-harvesting-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="tax-harvesting-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="tax-harvesting-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="tax-harvesting-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="tax-harvesting-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="tax-harvesting-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="tax-harvesting-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="tax-harvesting-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="tax-harvesting-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="tax-harvesting-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="tax-harvesting-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="tax-harvesting" data-calculator-slug="tax-harvesting" data-sub-category-slug="tax-calculators">
+      <aside id="tax-harvesting-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="tax-harvesting-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="tax-harvesting-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="tax-harvesting-ad-top-leaderboard">
+            <ins id="tax-harvesting-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("tax-harvesting-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="tax-harvesting-intro-area" class="space-y-4">
+        <nav id="tax-harvesting-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="tax-harvesting-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="tax-harvesting-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="tax-harvesting-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="tax-harvesting-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#tax-calculators" itemprop="item"><span itemprop="name">Income Tax &amp; Tax Planning</span></a><meta itemprop="position" content="3"></li>
+            <li id="tax-harvesting-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Tax-Loss Harvesting Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/tax-harvesting.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="tax-harvesting-hero-section" aria-labelledby="tax-harvesting-hero-heading" data-section="hero">
+          <h1 id="tax-harvesting-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Tax-Loss Harvesting Calculator: Estimate Your Savings</h1>
+          <p id="tax-harvesting-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Selling a stock at a loss feels bad, but the tax-loss harvesting calculator on this page shows how that investment loss can offset gains and shrink your taxes. Enter the capital gains you have already realized, the losses you are thinking about selling, and your rates, and you will see your estimated tax savings before you place a single trade. Below, you will learn the formula, a full worked example, and the rules that can quietly undo the benefit. <!-- SILO_START:slot_a -->The <a class="silo-link" href="/income-tax-calculator.html">income tax calculator</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="tax-harvesting-tool" class="space-y-6" data-page-slug="tax-harvesting" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="thFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="thForm" class="space-y-5" novalidate aria-labelledby="thFormHeading">
+      <div class="flex flex-wrap items-center justify-between gap-2"><h2 id="thFormHeading" class="panel-heading">Enter the loss and your tax picture</h2><span class="badge badge-sky">2026 federal tax rules</span></div>
+      <div class="form-row form-row-2">
+        <div><label for="thBasis" class="form-label">Cost basis of the position</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="thBasis" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="20000" inputmode="decimal"></div></div>
+        <div><label for="thValue" class="form-label">Current value</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="thValue" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="12000" inputmode="decimal"></div></div>
+      </div>
+      <div class="form-row form-row-2">
+        <div><label for="thHolding" class="form-label">Held for</label>
+          <select id="thHolding" class="form-select"><option value="short" selected>One year or less (short-term)</option><option value="long">More than one year (long-term)</option></select></div>
+        <div><label for="thSaleDate" class="form-label">Planned sale date</label><input type="date" id="thSaleDate" class="form-input"></div>
+      </div>
+      <div><label for="thStatus" class="form-label">Filing status</label>
+        <select id="thStatus" class="form-select"><option value="single" selected>Single</option><option value="mfj">Married filing jointly</option><option value="hoh">Head of household</option><option value="mfs">Married filing separately</option></select></div>
+      <div><label for="thIncome" class="form-label">Taxable income before capital gains</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="thIncome" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1000" value="90000" inputmode="decimal"></div><p class="form-hint">Taxable income after deductions, leaving out this year's capital gains and losses.</p></div>
+      <div class="form-row form-row-2">
+        <div><label for="thStGains" class="form-label">Other short-term gains this year</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="thStGains" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" step="100" value="2000" inputmode="decimal"></div></div>
+        <div><label for="thLtGains" class="form-label">Other long-term gains this year</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="thLtGains" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" step="100" value="3000" inputmode="decimal"></div></div>
+      </div>
+      <p class="form-hint">Net gains already realized or expected in 2026, including fund capital gain distributions. Enter a net loss as a negative number.</p>
+      <details class="form-details">
+        <summary class="form-details-summary">More options</summary>
+        <div class="mt-4 space-y-5">
+          <div class="form-row form-row-2">
+            <div><label for="thStCarry" class="form-label">Short-term loss carryover</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="thStCarry" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="0" inputmode="decimal"></div></div>
+            <div><label for="thLtCarry" class="form-label">Long-term loss carryover</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="thLtCarry" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="0" inputmode="decimal"></div></div>
+          </div>
+          <p class="form-hint">Unused capital losses brought forward from 2025, from last year's Schedule D.</p>
+          <div class="form-row form-row-2">
+            <div><label for="thState" class="form-label">State income tax rate</label><div class="input-group"><input type="number" id="thState" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="20" step="0.1" value="5" inputmode="decimal"><span class="input-affix">%</span></div></div>
+            <div><label for="thCosts" class="form-label">Trading costs</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="thCosts" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1" value="0" inputmode="decimal"></div></div>
+          </div>
+          <label class="form-choice"><input type="checkbox" id="thNiit" class="form-choice-input"><span class="form-choice-text">I pay the 3.8% net investment income tax<span class="form-choice-note">Applies when modified AGI is above $200,000 (single or head of household), $250,000 (joint) or $125,000 (separate).</span></span></label>
+        </div>
+      </details>
+      <p id="thError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="thResults" aria-live="polite" aria-labelledby="thResultsHeading">
+      <h2 id="thResultsHeading" class="panel-heading">Estimated tax savings</h2>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p class="stat-label">Net tax savings for 2026</p><p id="thNet" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Loss harvested</p><p id="thLoss" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Savings per dollar of loss</p><p id="thRate" class="stat-value">–</p></div>
+      </div>
+      <dl class="mt-5">
+        <div class="result-row"><dt class="result-term">Federal income tax saved</dt><dd id="thFed" class="result-value">–</dd></div>
+        <div class="result-row"><dt class="result-term">State income tax saved (estimate)</dt><dd id="thStateSave" class="result-value">–</dd></div>
+        <div class="result-row"><dt class="result-term">Net investment income tax saved</dt><dd id="thNiitSave" class="result-value">–</dd></div>
+        <div class="result-row"><dt class="result-term">Trading costs</dt><dd id="thCostsShow" class="result-value">–</dd></div>
+        <div class="result-row"><dt class="result-term">Loss used against capital gains</dt><dd id="thOffGains" class="result-value">–</dd></div>
+        <div class="result-row"><dt class="result-term">Loss used against ordinary income</dt><dd id="thOffIncome" class="result-value">–</dd></div>
+        <div class="result-row"><dt class="result-term">Loss carried forward to 2027</dt><dd id="thCarried" class="result-value">–</dd></div>
+      </dl>
+      <h3 class="mt-6 font-display text-base font-bold">Wash sale window</h3>
+      <dl class="mt-2">
+        <div class="result-row"><dt class="result-term">Don't buy the same or a substantially identical security from</dt><dd id="thWashStart" class="result-value">–</dd></div>
+        <div class="result-row"><dt class="result-term">through</dt><dd id="thWashEnd" class="result-value">–</dd></div>
+        <div class="result-row"><dt class="result-term">Earliest repurchase date</dt><dd id="thRebuy" class="result-value">–</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="thTableHeading" data-section="schedule">
+  <h2 id="thTableHeading" class="panel-heading">Federal tax without and with the harvest</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">2026 federal brackets and capital gains rates. Excludes credits, the alternative minimum tax and special 25% and 28% gain categories.</p>
+  <div class="table-scroll mt-5" tabindex="0" role="region" aria-labelledby="thTableHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Item</th><th scope="col">Without harvesting</th><th scope="col">With harvesting</th></tr></thead>
+      <tbody id="thTable"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="tax-harvesting-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="tax-harvesting-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Selling a stock at a loss feels bad, but the tax-loss harvesting calculator on this page shows how that investment loss can offset gains and shrink your taxes. Enter the capital gains you have already realized, the losses you are thinking about selling, and your rates, and you will see your estimated tax savings before you place a single trade. Below, you will learn the formula, a full worked example, and the rules that can quietly undo the benefit. <!-- SILO_START:slot_a_m -->The <a class="silo-link" href="/income-tax-calculator.html">income tax calculator</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="tax-harvesting-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="tax-harvesting-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="tax-harvesting-ad-in-feed-frame" class="ad-slot-live" data-ad-container="tax-harvesting-ad-in-feed">
+            <ins id="tax-harvesting-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("tax-harvesting-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="tax-harvesting-guide" class="space-y-6" data-section="guide">
+        <section id="tax-harvesting-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="tax-harvesting-guide-heading-1">
+<h2 id="tax-harvesting-guide-heading-1">How a Tax-Loss Harvesting Calculator Estimates Your Tax Savings</h2>
+<p>Every investor who sells winners during the year owes <strong>capital gains tax</strong> on the profit, and the taxes on capital gains add up quickly. A tax-loss harvesting tool compares two versions of your year: one where you keep every losing position, and one where you sell the <em>underperforming</em> holdings and let each <strong>realized loss</strong> absorb part of your gains. The difference between the two tax bills is your <strong>estimated tax benefit</strong>. <!-- SILO_START:slot_b -->The <a class="silo-link" href="/dividend-tax-calculator.html">dividend tax calculator</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_b --></p>
+<p>The calculator needs only a handful of inputs, and every one of them is a number you can pull from your brokerage statement or year-to-date gain and loss report.</p>
+<table>
+<thead><tr><th>Input</th><th>What it means</th><th>Where to find it</th></tr></thead>
+<tbody>
+<tr><td>Short-term gains</td><td>Profit on assets held one year or less</td><td>Brokerage realized gain and loss report</td></tr>
+<tr><td>Long-term gains</td><td>Profit on assets held more than one year</td><td>Brokerage realized gain and loss report</td></tr>
+<tr><td>Short-term losses to harvest</td><td>Unrealized losses on lots held one year or less</td><td>Open tax lot view for each holding</td></tr>
+<tr><td>Long-term losses to harvest</td><td>Unrealized losses on lots held more than one year</td><td>Open tax lot view for each holding</td></tr>
+<tr><td>Short-term tax rate</td><td>Your ordinary income bracket</td><td>Last year's return or current <strong>tax bracket</strong> tables</td></tr>
+<tr><td>Long-term tax rate</td><td>0%, 15% or 20% for most investors</td><td>Taxable income against the long-term thresholds</td></tr>
+</tbody>
+</table>
+
+<h3>The tax-loss harvesting formula</h3>
+<p>Losses are netted in a strict order. Short-term losses meet short-term gains first, long-term losses meet long-term gains first, and any leftover loss in one bucket then crosses over to the other. Once both buckets are netted, the result is taxed at the matching rate:</p>
+<p>$$\text{Net ST} = \text{ST gains} - \text{ST losses} \qquad \text{Net LT} = \text{LT gains} - \text{LT losses}$$</p>
+<p>$$\text{Tax savings} = \text{Tax before harvesting} - \text{Tax after harvesting}$$</p>
+<p>Where one bucket nets to a loss and the other to a gain, the two are combined first, and the remaining gain is taxed at the long-term rate when the long-term bucket holds the final gain. If the combined result is still a loss, up to <strong>$3,000</strong> of it reduces ordinary income ($1,500 for married couples filing separately), and anything beyond that is <strong>carried forward</strong> to the next tax year.</p>
+        </section>
+        <section id="tax-harvesting-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="tax-harvesting-guide-heading-2">
+<h2 id="tax-harvesting-guide-heading-2">How Tax Loss Harvesting Works Step by Step</h2>
+<p>Understanding how tax loss harvesting works makes the calculator's output far easier to trust. The process has four moves, and the order matters. <!-- SILO_START:slot_c -->Next, open the <a class="silo-link" href="/taxable-vs-tax-deferred-vs-tax-free-investment-calculator.html">taxable vs tax-deferred calculator</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_c --></p>
+<ol>
+<li><strong>Sell the loser.</strong> You sell a position whose <strong>sale price</strong> sits below your <strong>cost basis</strong>, which locks in a <strong>capital loss</strong> for the current tax year.</li>
+<li><strong>Net it against gains.</strong> The loss is used to offset capital gains of the same type first, then gains of the other type, which lowers the capital gains taxes you owe.</li>
+<li><strong>Reinvest the proceeds.</strong> You <strong>reinvest</strong> the cash in shares of a similar but not <strong>substantially identical</strong> holding so your <strong>market exposure</strong> and <strong>asset allocation</strong> stay close to target.</li>
+<li><strong>Carry the rest forward.</strong> Any loss that is still unused goes into a <strong>loss bank</strong> that you can <strong>carry forward</strong> year after year.</li>
+</ol>
+<p>The strategy defers tax rather than erasing it: harvesting lowers your cost basis in the replacement holding, so a larger gain is waiting when you eventually sell. Even so, deferral has real value, because money you do not send to the IRS this year keeps compounding in your <strong>portfolio</strong>.</p>
+
+<h3>Why harvesting losses supports rebalancing</h3>
+<p>Harvesting losses and <strong>rebalancing</strong> pull in the same direction: the replacement trade moves your allocation back toward target while the loss becomes <strong>tax-deductible</strong> against gains, which is the amount the calculator estimates. That is why many <strong>tax-efficient</strong> plans pair harvesting reviews with their allocation check-ups.</p>
+        </section>
+        <section id="tax-harvesting-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="tax-harvesting-guide-heading-3">
+<h2 id="tax-harvesting-guide-heading-3">Worked Example: Harvesting Losses on a Mixed Portfolio</h2>
+<p>Consider an investor with a taxable brokerage account who realized gains earlier in the year and now wants to see the effect of <strong>harvesting losses</strong> in December. This <strong>hypothetical</strong> case uses a 32% short-term rate and a 15% long-term rate.</p>
+<table>
+<thead><tr><th>Item</th><th>Amount</th></tr></thead>
+<tbody>
+<tr><td>Realized short-term gains</td><td>$6,200</td></tr>
+<tr><td>Realized long-term gains</td><td>$14,650</td></tr>
+<tr><td>Short-term losses harvested</td><td>$11,840</td></tr>
+<tr><td>Long-term losses harvested</td><td>$4,320</td></tr>
+<tr><td>Short-term rate</td><td>32%</td></tr>
+<tr><td>Long-term rate</td><td>15%</td></tr>
+</tbody>
+</table>
+<h3>Tax before harvesting</h3>
+<p>Without any sales at a loss, the short-term gains cost \(6{,}200 \times 0.32 = \$1{,}984\) and the long-term gains cost \(14{,}650 \times 0.15 = \$2{,}197.50\), for a total of <strong>$4,181.50</strong>.</p>
+<h3>Tax after harvesting</h3>
+<p>The short-term bucket nets to \(6{,}200 - 11{,}840 = -\$5{,}640\), a loss. The long-term bucket nets to \(14{,}650 - 4{,}320 = \$10{,}330\), a gain. Because the short-term loss spills over, it reduces the long-term gain to \(10{,}330 - 5{,}640 = \$4{,}690\). At 15%, that remaining gain produces a <strong>tax bill of $703.50</strong>.</p>
+<figure><img src="/assets/images/tools/tax-harvesting/tax-loss-harvesting-gains-and-losses-netting-waterfall.svg" alt="Waterfall chart of $6,200 short-term and $14,650 long-term gains reduced by $11,840 and $4,320 of harvested losses to a $4,690 taxable gain"><figcaption>How harvested losses net against realized gains in the worked example, leaving $4,690 to tax.</figcaption></figure>
+<table>
+<thead><tr><th>Step</th><th>Calculation</th><th>Result</th></tr></thead>
+<tbody>
+<tr><td>Tax before harvesting</td><td>$1,984.00 + $2,197.50</td><td>$4,181.50</td></tr>
+<tr><td>Net short-term</td><td>$6,200 − $11,840</td><td>−$5,640</td></tr>
+<tr><td>Net long-term</td><td>$14,650 − $4,320</td><td>$10,330</td></tr>
+<tr><td>Combined taxable gain</td><td>$10,330 − $5,640</td><td>$4,690</td></tr>
+<tr><td>Tax after harvesting</td><td>$4,690 × 15%</td><td>$703.50</td></tr>
+<tr><td><strong>Estimated tax savings</strong></td><td>$4,181.50 − $703.50</td><td><strong>$3,478.00</strong></td></tr>
+</tbody>
+</table>
+<p>The harvest cut this investor's <strong>effective tax rate</strong> on $20,850 of gains from about 20.1% to 3.4%. Notice that the $11,840 short-term loss did double duty: it wiped out every dollar of the expensive 32% gains and then reduced the cheaper 15% bucket as well.</p>
+<figure><img src="/assets/images/tools/tax-harvesting/tax-loss-harvesting-calculator-before-after-tax-bill.svg" alt="Paired bars comparing a $4,181.50 tax bill before harvesting with a $703.50 bill after, a $3,478 saving"><figcaption>The same gains and rates produce a $3,478.00 lower tax bill once the losses are harvested.</figcaption></figure>
+
+<h3>When losses exceed gains</h3>
+<p>The calculator also handles the opposite case, where your <strong>capital losses</strong> are larger than everything you gained. Suppose you have only $4,000 of long-term gains but harvest $11,900 of long-term losses at a 32% bracket.</p>
+<table>
+<thead><tr><th>Step</th><th>Result</th></tr></thead>
+<tbody>
+<tr><td>Net long-term result ($4,000 − $11,900)</td><td>−$7,900</td></tr>
+<tr><td>Gains tax avoided ($4,000 × 15%)</td><td>$600</td></tr>
+<tr><td>Deducted against ordinary income ($3,000 × 32%)</td><td>$960</td></tr>
+<tr><td>Total savings this year</td><td>$1,560</td></tr>
+<tr><td>Loss carried forward to next year</td><td>$4,900</td></tr>
+</tbody>
+</table>
+        </section>
+        <section id="tax-harvesting-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="tax-harvesting-guide-heading-4">
+<h2 id="tax-harvesting-guide-heading-4">Short-Term vs Long-Term Capital Gains Tax Rates</h2>
+<p>The holding period decides which rate table applies, and that is exactly why a harvested loss is not equally valuable in every bucket. <strong>Short-term capital gains</strong> come from assets held one year or less and are taxed as <strong>ordinary income</strong>, so they follow your <strong>marginal tax rate</strong> from 10% up to 37%. <strong>Long-term capital gains</strong> receive <strong>preferential tax treatment</strong> at 0%, 15% or 20% depending on your <strong>taxable income</strong> and <strong>filing status</strong>.</p>
+<table>
+<thead><tr><th>Gain type</th><th>Holding period</th><th>Federal tax rate</th></tr></thead>
+<tbody>
+<tr><td>Short-term</td><td>One year or less</td><td>10% to 37% (ordinary-income rates)</td></tr>
+<tr><td>Long-term</td><td>More than one year</td><td>0%, 15% or 20%</td></tr>
+</tbody>
+</table>
+<h3>Why short-term losses are worth more</h3>
+<p>A dollar of short-term loss first erases a dollar of gain that would have been taxed at your full ordinary rate. In the worked example, that is a 32% saving per dollar instead of 15%. Capital gains of this kind are the most expensive to owe, and taxes on them fall fastest when you harvest. Whenever you have a choice of which lot to sell, the lot that creates a short-term loss usually delivers the larger <strong>tax benefit</strong>.</p>
+<h3>State taxes on capital gains and the net investment income tax</h3>
+<p>The calculator shows federal results, but your real <strong>tax liability</strong> may include more. Most states tax capital gains as regular income, so <strong>state taxes</strong> can raise the total taxes you pay and raise the value of every harvested dollar. High earners may also owe the 3.8% <strong>net investment income tax</strong>, which harvesting reduces by lowering net investment income. Add those percentages to your rate inputs for a fuller picture.</p>
+        </section>
+        <section id="tax-harvesting-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="tax-harvesting-guide-heading-5">
+<h2 id="tax-harvesting-guide-heading-5">The Wash-Sale Rule and Other Limits on Loss Harvesting</h2>
+<p>The calculator assumes every harvested loss is allowed, so the <strong>wash-sale rule</strong> is the biggest trap: a wash sale would wipe out the estimate. If you buy the same or a <em>substantially identical</em> security within 30 days before or after the sale, the loss is <strong>disallowed</strong> for the current year, even if the investment itself clearly lost money. That creates a 61-day window around every sale, and it also covers purchases made in a spouse's account or an <strong>IRA</strong>.</p>
+<ul>
+<li><strong>Retirement accounts do not count as a harvest location.</strong> Losses inside your <strong>401(k)s</strong> or other <strong>retirement accounts</strong> are not deductible, so the strategy only works in taxable accounts.</li>
+<li><strong>Replacement choice matters.</strong> Swapping an S&amp;P 500 fund for a total market fund is a common approach, but where two funds track the same index, the IRS may treat them as <strong>substantially identical</strong>.</li>
+<li><strong>Automatic reinvestment can trigger a violation.</strong> A dividend reinvested inside the 30-day window can disallow part of a loss, and so can a decision to rebuy the same fund too early.</li>
+<li><strong>Transaction costs reduce the gain.</strong> Commissions and bid-ask spreads on thinly traded <strong>stocks</strong> or <strong>mutual funds</strong> come straight out of your savings.</li>
+</ul>
+<h3>Risks to weigh before you sell</h3>
+<p>Every <strong>strategy</strong> carries <strong>risk</strong>. Your replacement holding could rally while you are locked out of the original, or tax rates could rise and make the deferred gain more expensive later. A <strong>tax advisor</strong> or <strong>financial advisor</strong> can confirm how these <strong>tax implications</strong> apply to your situation, since this page is educational and not personal tax advice.</p>
+        </section>
+        <section id="tax-harvesting-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="tax-harvesting-guide-heading-6">
+<h2 id="tax-harvesting-guide-heading-6">Running a Year-End Loss Harvesting Check on a Brokerage Account</h2>
+<p>Marguerite Oyelaran, a consultant in Denver, opens her <strong>brokerage</strong> account on December 9 and sees $23,410 of realized long-term gains from selling a stake in a semiconductor ETF in March. Her taxable income puts her in the 24% bracket for ordinary income and the 15% bracket for long-term gains, so that sale already carries about $3,511.50 in federal capital gains tax.</p>
+<p>She reviews her open lots and finds two <em>underperforming</em> positions: a clean-energy fund lot bought in February showing a $7,285 short-term loss, and an older bond fund lot with a $5,140 long-term loss. She types $0 for short-term gains, $23,410 for long-term gains, $7,285 and $5,140 for the two losses, and 24% and 15% for her rates.</p>
+<p>The result: the long-term loss cuts the long-term gain to $18,270, and the $7,285 short-term loss reduces it again to $10,985. At 15%, her tax falls to $1,647.75, which is <strong>$1,863.75</strong> of tax savings. The estimate sits above the $1,500 she had set as her minimum to justify trading costs, so she moves ahead.</p>
+<p>Before selling, she checks a rule the loss harvesting estimate cannot see: her dividend reinvestment plan on the clean-energy fund. She switches it off, sells both lots, and buys a broader clean-technology fund that tracks a different index. The loss harvesting estimate guided the decision, but the wash-sale check protected it.</p>
+        </section>
+        <section id="tax-harvesting-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="tax-harvesting-guide-heading-7">
+<h2 id="tax-harvesting-guide-heading-7">Who Benefits Most from Tax-Gain Harvesting and TLH</h2>
+<p>Not every investor sees the same estimate. <strong>TLH</strong> pays off most for people with large realized gains, high ordinary-income brackets, and plenty of positions currently below cost, so the calculator returns its biggest results for them. A related idea, <strong>tax-gain harvesting</strong>, deliberately sells winners in a year when you fall in the 0% long-term bracket, resetting the cost basis at no federal cost.</p>
+<h3>Good candidates for harvesting</h3>
+<ul>
+<li>Investors who sold a concentrated position or a rental property and face a large one-time gain and heavy capital gains taxes.</li>
+<li>Savers who hold many separate <strong>tax lot</strong> purchases made at different prices, giving more lots to choose from.</li>
+<li>People in a high <strong>tax bracket</strong>, where each dollar of loss is worth the most.</li>
+<li>Anyone with a stale <strong>carry forward</strong> balance who wants to use it up against new gains.</li>
+</ul>
+<h3>Poor candidates for harvesting</h3>
+<ul>
+<li>Holders in the 0% long-term bracket, who may owe no taxes on capital gains to begin with.</li>
+<li>Investors whose positions are all in retirement accounts.</li>
+<li>Anyone planning to repurchase the same security within 30 days.</li>
+</ul>
+        </section>
+        <section id="tax-harvesting-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="tax-harvesting-guide-heading-8">
+<h2 id="tax-harvesting-guide-heading-8">Choosing Which Lots Give the Biggest Realized Loss</h2>
+<p>Whichever lot you pick, its loss is what you enter into the calculator's loss inputs, so the estimate reflects only the lots you actually plan to sell. Most brokerages default to first-in, first-out when you sell part of a position, which may not pick the lot you want. Ask for specific lot identification instead, so you can sell the highest-cost lot and book the biggest loss. Sorting open lots by unrealized loss, then by holding period, shows quickly which sale gives the most savings per trade. A few large losses are usually better than many tiny ones, because each trade carries costs and adds paperwork to your return.</p>
+<p>Before you confirm anything, compare the loss you would book with the cost of the replacement trade and with the rate that loss will offset. A $400 long-term loss that offsets a 15% gain saves only $60, which a wide spread or a commission can erase.</p>
+        </section>
+        <section id="tax-harvesting-guide-section-9" class="panel article-content p-4 sm:p-6" aria-labelledby="tax-harvesting-guide-heading-9">
+<h2 id="tax-harvesting-guide-heading-9">Reporting Harvested Losses and Planning the Next Tax Year</h2>
+<p>You report sales on Form 8949 and total them on Schedule D, and your broker's 1099-B lists the cost basis and holding period for each lot. Residents of India report the same sales on Schedule CG instead. Keep your own record of any loss that is <strong>carried forward</strong>, because every investment sale adds to the record, and the unused amount follows you into later years until it is fully absorbed. Good <strong>tax planning</strong> treats harvesting as a repeating habit rather than a December scramble: review lots quarterly, track your remaining carryover, and revisit your rates each time your income changes.</p>
+<p>Taxes on capital gains change every year, so each investment decision deserves a fresh look. Run the numbers again whenever your gains or losses move. A fresh estimate takes seconds, and it keeps your harvesting decisions tied to what the markets and your <strong>investment</strong> accounts are actually doing. Used this way, the calculator is a planning aid for <strong>investing</strong> more efficiently, not a reason to sell something you would otherwise keep.</p>
+        </section>
+      </div>
+
+      <section id="tax-harvesting-faq-section" class="panel p-4 sm:p-6" aria-labelledby="tax-harvesting-faq-heading" data-section="faq">
+        <h2 id="tax-harvesting-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Tax-Loss Harvesting Calculator questions</h2>
+        <div id="tax-harvesting-faq-list" class="mt-5 space-y-3">
+          <details id="tax-harvesting-faq-1" class="faq-item" open><summary id="tax-harvesting-faq-1-summary" class="faq-summary"><h3 id="tax-harvesting-faq-1-question" class="faq-question">What is tax-loss harvesting?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="tax-harvesting-faq-1-answer" class="faq-answer"><p>Tax-loss harvesting means selling an investment that has dropped below what you paid, then using that realized loss to offset capital gains and, within limits, ordinary income. You usually reinvest the proceeds in a similar but not identical holding so your market exposure stays close to where it was.</p></div></details>
+          <details id="tax-harvesting-faq-2" class="faq-item" open><summary id="tax-harvesting-faq-2-summary" class="faq-summary"><h3 id="tax-harvesting-faq-2-question" class="faq-question">How much of a loss can I deduct against ordinary income?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="tax-harvesting-faq-2-answer" class="faq-answer"><p>After your losses have cancelled all of your capital gains, up to $3,000 of the remainder can reduce ordinary income each year ($1,500 if you are married filing separately). Anything larger is carried forward to future tax years.</p></div></details>
+          <details id="tax-harvesting-faq-3" class="faq-item" open><summary id="tax-harvesting-faq-3-summary" class="faq-summary"><h3 id="tax-harvesting-faq-3-question" class="faq-question">What is the wash-sale rule?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="tax-harvesting-faq-3-answer" class="faq-answer"><p>If you buy the same or a substantially identical security within 30 days before or after selling at a loss, the loss is generally disallowed for the current year. The calculator assumes your loss is allowed, so check the rule before you trade.</p></div></details>
+          <details id="tax-harvesting-faq-4" class="faq-item" open><summary id="tax-harvesting-faq-4-summary" class="faq-summary"><h3 id="tax-harvesting-faq-4-question" class="faq-question">Does tax-loss harvesting work in a 401(k) or IRA?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="tax-harvesting-faq-4-answer" class="faq-answer"><p>No. Losses inside tax-deferred retirement accounts cannot be deducted, so harvesting only applies to investments held in a taxable brokerage account.</p></div></details>
+          <details id="tax-harvesting-faq-5" class="faq-item" open><summary id="tax-harvesting-faq-5-summary" class="faq-summary"><h3 id="tax-harvesting-faq-5-question" class="faq-question">Why does the length of ownership matter?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="tax-harvesting-faq-5-answer" class="faq-answer"><p>Assets held one year or less produce short-term gains taxed at ordinary-income rates, while assets held longer receive lower long-term rates. A short-term loss usually offsets the more heavily taxed gains first, which is why the holding period changes the result.</p></div></details>
+          <details id="tax-harvesting-faq-6" class="faq-item" open><summary id="tax-harvesting-faq-6-summary" class="faq-summary"><h3 id="tax-harvesting-faq-6-question" class="faq-question">Why is the TLH net benefit smaller than my tax savings today?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="tax-harvesting-faq-6-answer" class="faq-answer"><p>Harvesting lowers the cost basis of the replacement investment, so a larger gain is waiting when you finally sell. The net benefit shows what is left after that deferred tax, which is why a lower future tax rate or a longer holding period helps.</p></div></details>
+          <details id="tax-harvesting-faq-7" class="faq-item" open><summary id="tax-harvesting-faq-7-summary" class="faq-summary"><h3 id="tax-harvesting-faq-7-question" class="faq-question">What does the estimated gain until final sale mean?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="tax-harvesting-faq-7-answer" class="faq-answer"><p>It is your expected growth, as a percentage, between now and the day you finally sell the replacement investment. A higher figure raises both final sale amounts and the final tax bill, so try a few values to see how sensitive the result is.</p></div></details>
+          <details id="tax-harvesting-faq-8" class="faq-item" open><summary id="tax-harvesting-faq-8-summary" class="faq-summary"><h3 id="tax-harvesting-faq-8-question" class="faq-question">Is this calculator tax advice?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="tax-harvesting-faq-8-answer" class="faq-answer"><p>No. It gives an estimate from the numbers you enter and simplified federal brackets, and it does not model every rule such as the net investment income tax or deduction phase-outs. Confirm your own situation with a tax advisor.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="tax-harvesting-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="tax-harvesting-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="tax-harvesting-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="tax-harvesting-ad-bottom-leaderboard">
+            <ins id="tax-harvesting-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("tax-harvesting-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="tax-harvesting-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="tax-harvesting-right-rail-top" class="mb-6">
+        <aside id="tax-harvesting-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="tax-harvesting-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="tax-harvesting-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="tax-harvesting-ad-right-rail-rectangle">
+            <ins id="tax-harvesting-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("tax-harvesting-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="tax-harvesting-right-rail-sticky" class="sticky top-21">
+        <aside id="tax-harvesting-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="tax-harvesting-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="tax-harvesting-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="tax-harvesting-ad-right-rail-skyscraper">
+            <ins id="tax-harvesting-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("tax-harvesting-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="tax-harvesting-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="tax-harvesting-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="tax-harvesting-footer-brand">
+        <a id="tax-harvesting-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="tax-harvesting-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="tax-harvesting-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="tax-harvesting-footer-categories" aria-labelledby="tax-harvesting-footer-categories-heading">
+        <h2 id="tax-harvesting-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="tax-harvesting-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="tax-harvesting-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="tax-harvesting-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="tax-harvesting-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="tax-harvesting-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="tax-harvesting-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="tax-harvesting-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="tax-harvesting-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="tax-harvesting-footer-company" aria-labelledby="tax-harvesting-footer-company-heading">
+        <h2 id="tax-harvesting-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="tax-harvesting-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="tax-harvesting-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="tax-harvesting-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="tax-harvesting-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="tax-harvesting-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="tax-harvesting-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="tax-harvesting-footer-bottom" class="border-t border-line">
+      <p id="tax-harvesting-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="tax-harvesting-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // ===== Tax figures: tax year 2026 =====
+  // Ordinary brackets and capital gains breakpoints: IRS Rev. Proc. 2025-32, sections 4.01 and 4.03
+  // (2026 inflation adjustments, as amended by the One, Big, Beautiful Bill Act).
+  // Capital loss deduction limit: IRC section 1211(b), $3,000 ($1,500 married filing separately), not indexed.
+  // Net investment income tax: IRC section 1411, 3.8%; thresholds are not indexed.
+  // Wash sale window: IRC section 1091, 30 days before or after the sale.
+  var TAX_YEAR = 2026;
+  var BRACKETS = { // upper limit of each band; rates 10, 12, 22, 24, 32, 35, 37%
+    single: [12400, 50400, 105700, 201775, 256225, 640600],
+    mfj: [24800, 100800, 211400, 403550, 512450, 768700],
+    hoh: [17700, 67450, 105700, 201750, 256200, 640600],
+    mfs: [12400, 50400, 105700, 201775, 256225, 384350]
+  };
+  var RATES = [0.10, 0.12, 0.22, 0.24, 0.32, 0.35, 0.37];
+  var CG_BREAKS = { // taxable income where the 0% rate ends and the 15% rate ends
+    single: [49450, 545500], mfj: [98900, 613700], hoh: [66200, 579600], mfs: [49450, 306850]
+  };
+  var LOSS_LIMIT = { single: 3000, mfj: 3000, hoh: 3000, mfs: 1500 };
+  var NIIT_RATE = 0.038;
+  // ======================================
+  // Method: federal tax is worked out twice, without and with the harvested loss, using the
+  // Schedule D netting rules (short-term and long-term netted separately, then against each other;
+  // a net loss is deductible up to the limit and the rest carries forward, short-term used first)
+  // and the qualified dividends and capital gain tax worksheet stacking (preferential gains on top).
+  // Verified: single, $90,000 ordinary taxable income, $2,000 short-term and $3,000 long-term gains,
+  // $8,000 short-term loss -> tax $15,402 before, $13,852 after, saving $1,550
+  // (= $2,000 x 22% + $3,000 x 15% + $3,000 x 22%), nothing carried forward; 5% state -> $400.
+  // Rate-table checks: single $92,000 ordinary = $14,952; MFJ $211,400 = $35,932 (Rev. Proc. table).
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0 });
+
+  function num(id) {
+    var el = document.getElementById(id);
+    var v = el ? parseFloat(el.value) : NaN;
+    return isNaN(v) ? NaN : v;
+  }
+  function optNum(id) { var v = num(id); return isNaN(v) ? 0 : v; }
+  function set(id, text) { var el = document.getElementById(id); if (el) el.textContent = text; }
+  function signed(v) { return v < 0 ? '−' + money.format(-v) : money.format(v); }
+
+  function ordinaryTax(income, status) {
+    var limits = BRACKETS[status], tax = 0, lower = 0;
+    for (var i = 0; i < RATES.length; i++) {
+      var upper = i < limits.length ? limits[i] : Infinity;
+      if (income > lower) tax += (Math.min(income, upper) - lower) * RATES[i];
+      lower = upper;
+    }
+    return tax;
+  }
+
+  function federal(status, ordinary, st, lt) {
+    var net = st + lt, pref = 0, ordGain = 0, deduction = 0, used = 0, carrySt = 0, carryLt = 0;
+    if (net >= 0) {
+      pref = lt > 0 ? Math.min(lt, net) : 0;
+      ordGain = net - pref;
+    } else {
+      deduction = Math.min(-net, LOSS_LIMIT[status]);
+      used = Math.min(deduction, Math.max(0, ordinary));
+      if (st < 0 && lt < 0) {
+        carrySt = Math.max(0, -st - used);
+        carryLt = -lt - Math.max(0, used - (-st));
+      } else if (st < 0) {
+        carrySt = -net - used;
+      } else {
+        carryLt = -net - used;
+      }
+    }
+    var taxable = Math.max(0, ordinary + ordGain + pref - deduction);
+    var gains = Math.min(pref, taxable), base = taxable - gains;
+    var b = CG_BREAKS[status];
+    var mid = Math.max(0, Math.min(taxable, b[1]) - Math.max(base, b[0]));
+    var top = Math.max(0, taxable - Math.max(base, b[1]));
+    var tax = Math.min(ordinaryTax(base, status) + 0.15 * mid + 0.20 * top, ordinaryTax(taxable, status));
+    return { st: st, lt: lt, included: Math.max(0, net), used: used, taxable: taxable, tax: tax,
+             carrySt: carrySt, carryLt: carryLt, carry: carrySt + carryLt };
+  }
+
+  function harvest(p) {
+    var st = p.stGains - p.stCarry, lt = p.ltGains - p.ltCarry;
+    var before = federal(p.status, p.ordinary, st, lt);
+    var after = p.longTerm ? federal(p.status, p.ordinary, st, lt - p.loss) : federal(p.status, p.ordinary, st - p.loss, lt);
+    var fed = before.tax - after.tax;
+    var state = p.stateRate * (before.taxable - after.taxable);
+    var niit = p.niit ? NIIT_RATE * (before.included - after.included) : 0;
+    var net = fed + state + niit - p.costs;
+    return {
+      before: before, after: after, fed: fed, state: state, niit: niit, net: net,
+      offsetGains: before.included - after.included, offsetIncome: after.used - before.used,
+      carried: after.carry - before.carry
+    };
+  }
+
+  function parseDate(v) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(v || '');
+    if (!m) return null;
+    var d = new Date(+m[1], +m[2] - 1, +m[3]);
+    return isNaN(d.getTime()) ? null : d;
+  }
+  function addDays(d, n) { return new Date(d.getFullYear(), d.getMonth(), d.getDate() + n); }
+  function longDate(d) { return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }); }
+
+  function fill(rows) {
+    var body = document.getElementById('thTable');
+    while (body.firstChild) body.removeChild(body.firstChild);
+    rows.forEach(function (cells) {
+      var tr = document.createElement('tr');
+      cells.forEach(function (t, i) {
+        var td = document.createElement(i === 0 ? 'th' : 'td');
+        if (i === 0) td.setAttribute('scope', 'row');
+        td.textContent = t;
+        tr.appendChild(td);
+      });
+      body.appendChild(tr);
+    });
+  }
+
+  function update() {
+    var status = document.getElementById('thStatus').value;
+    var ordinary = num('thIncome'), stGains = num('thStGains'), ltGains = num('thLtGains'),
+        basis = num('thBasis'), value = num('thValue');
+    var stCarry = optNum('thStCarry'), ltCarry = optNum('thLtCarry'), stateRate = optNum('thState'), costs = optNum('thCosts');
+    var error = document.getElementById('thError');
+    var msg = '';
+    if ([ordinary, stGains, ltGains, basis, value].some(isNaN)) msg = 'Fill in your income, gains, cost basis and current value.';
+    else if (ordinary < 0 || basis < 0 || value < 0) msg = 'Income, cost basis and current value cannot be negative.';
+    else if (stCarry < 0 || ltCarry < 0 || costs < 0) msg = 'Enter carryovers and trading costs as positive amounts.';
+    else if (stateRate < 0 || stateRate > 20) msg = 'Use a state tax rate from 0% to 20%.';
+    else if (value >= basis) msg = 'This position is worth at least what you paid, so there is no loss to harvest.';
+    error.hidden = !msg;
+    error.textContent = msg;
+    if (msg) return;
+
+    var p = { status: status, ordinary: ordinary, stGains: stGains, ltGains: ltGains, stCarry: stCarry, ltCarry: ltCarry,
+              loss: basis - value, longTerm: document.getElementById('thHolding').value === 'long',
+              stateRate: stateRate / 100, niit: document.getElementById('thNiit').checked, costs: costs };
+    var r = harvest(p);
+    set('thNet', money.format(r.net));
+    set('thLoss', money.format(p.loss) + (p.longTerm ? ' long-term' : ' short-term'));
+    set('thRate', p.loss > 0 ? (r.net / p.loss * 100).toFixed(1) + '%' : '–');
+    set('thFed', money.format(r.fed));
+    set('thStateSave', money.format(r.state));
+    set('thNiitSave', money.format(r.niit));
+    set('thCostsShow', costs > 0 ? '−' + money.format(costs) : money.format(0));
+    set('thOffGains', money.format(r.offsetGains));
+    set('thOffIncome', money.format(r.offsetIncome));
+    set('thCarried', money.format(r.carried));
+
+    var b = r.before, a = r.after, next = String(TAX_YEAR + 1);
+    fill([
+      ['Net short-term gain (loss)', signed(b.st), signed(a.st)],
+      ['Net long-term gain (loss)', signed(b.lt), signed(a.lt)],
+      ['Capital loss deducted from income', money.format(b.used), money.format(a.used)],
+      ['Federal taxable income', money.format(b.taxable), money.format(a.taxable)],
+      ['Federal income tax', money.format(b.tax), money.format(a.tax)],
+      ['Short-term loss carried to ' + next, money.format(b.carrySt), money.format(a.carrySt)],
+      ['Long-term loss carried to ' + next, money.format(b.carryLt), money.format(a.carryLt)]
+    ]);
+
+    var dateEl = document.getElementById('thSaleDate');
+    var sale = parseDate(dateEl.value);
+    if (sale) {
+      set('thWashStart', longDate(addDays(sale, -30)));
+      set('thWashEnd', longDate(addDays(sale, 30)));
+      set('thRebuy', longDate(addDays(sale, 31)));
+    } else {
+      set('thWashStart', '–'); set('thWashEnd', '–'); set('thRebuy', 'Enter a sale date');
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('thForm');
+    if (!form) return;
+    var dateEl = document.getElementById('thSaleDate');
+    if (!dateEl.value) {
+      var t = new Date();
+      dateEl.value = t.getFullYear() + '-' + ('0' + (t.getMonth() + 1)).slice(-2) + '-' + ('0' + t.getDate()).slice(-2);
+    }
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

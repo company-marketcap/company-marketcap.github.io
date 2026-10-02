@@ -1,0 +1,732 @@
+<!doctype html>
+<html lang="en" id="mortgage-calculator-document" data-page-slug="mortgage-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mortgage Calculator: Free Monthly Payment Estimate</title>
+  <meta name="description" content="Use this free mortgage calculator to estimate your monthly payment with taxes, insurance and PMI, then see total interest, your payoff date and an amortization schedule.">
+  <link rel="canonical" href="https://company-marketcap.github.io/mortgage-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Mortgage Calculator: Free Monthly Payment Estimate">
+  <meta property="og:description" content="Use this free mortgage calculator to estimate your monthly payment with taxes, insurance and PMI, then see total interest, your payoff date and an amortization schedule.">
+  <meta property="og:url" content="https://company-marketcap.github.io/mortgage-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Mortgage Calculator", "url": "https://company-marketcap.github.io/mortgage-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Use this free mortgage calculator to estimate your monthly payment with taxes, insurance and PMI, then see total interest, your payoff date and an amortization schedule."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Mortgage & Home Buying", "item": "https://company-marketcap.github.io/financial-calculators.html#mortgage-calculators"}, {"@type": "ListItem", "position": 4, "name": "Mortgage Calculator", "item": "https://company-marketcap.github.io/mortgage-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How is a monthly mortgage payment calculated?", "acceptedAnswer": {"@type": "Answer", "text": "The loan repayment uses the amortization formula M = L × i(1+i)^n / ((1+i)^n − 1), where L is the loan amount, i is the monthly interest rate and n is the number of monthly payments. Property tax, home insurance, PMI and HOA fees are then added to that figure."}}, {"@type": "Question", "name": "What is included in a mortgage payment?", "acceptedAnswer": {"@type": "Answer", "text": "Most payments combine principal, interest, property taxes, homeowners insurance and, if your down payment is under 20%, private mortgage insurance. Association dues are often added to the estimate even though they are billed separately."}}, {"@type": "Question", "name": "How much should I put down on a home?", "acceptedAnswer": {"@type": "Answer", "text": "Many conventional loans accept as little as 3% down, FHA loans allow 3.5%, and VA and USDA loans can need nothing down. Putting 20% down avoids PMI and lowers your monthly payment, but you should keep savings for closing costs and repairs."}}, {"@type": "Question", "name": "When can I stop paying PMI?", "acceptedAnswer": {"@type": "Answer", "text": "On a conventional loan you can usually ask your lender to cancel PMI once your balance falls to 80% of the home's original value, and it ends automatically at 78%. FHA loans carry their own mortgage insurance premium with different rules."}}, {"@type": "Question", "name": "Is a 15-year or a 30-year mortgage better?", "acceptedAnswer": {"@type": "Answer", "text": "A 15-year term has a higher monthly payment but far less total interest, while a 30-year term lowers the monthly payment and costs more over time. Run both terms in the calculator and compare the payment with your budget."}}, {"@type": "Question", "name": "How do extra payments change my mortgage?", "acceptedAnswer": {"@type": "Answer", "text": "Extra money sent toward principal shortens the loan and cuts total interest, because the next month's interest is charged on a smaller balance. Enter a monthly, yearly or one-time extra payment to see the new payoff date and the interest saved."}}, {"@type": "Question", "name": "Do bi-weekly payments save money?", "acceptedAnswer": {"@type": "Answer", "text": "Paying half of the monthly payment every two weeks makes 26 half-payments a year, which equals one extra monthly payment. That shortens the loan and reduces interest; the bi-weekly results show the effect for your numbers."}}, {"@type": "Question", "name": "Does this calculator include closing costs?", "acceptedAnswer": {"@type": "Answer", "text": "No. Closing costs, usually 2% to 5% of the loan amount, plus moving costs and maintenance are one-time or irregular expenses outside the monthly payment. Add them to the 'Other costs' field only if they recur."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="mortgage-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="mortgage-calculator" data-page-type="calculator">
+  <a id="mortgage-calculator-skip-link" href="#mortgage-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="mortgage-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="mortgage-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="mortgage-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="mortgage-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="mortgage-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="mortgage-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="mortgage-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="mortgage-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="mortgage-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="mortgage-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="mortgage-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="mortgage-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="mortgage-calculator-header-search-status" aria-controls="mortgage-calculator-header-search-results" data-search-input="header">
+              <p id="mortgage-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="mortgage-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="mortgage-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="mortgage-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="mortgage-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="mortgage-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="mortgage-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="mortgage-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="mortgage-calculator-mobile-search-status" aria-controls="mortgage-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="mortgage-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="mortgage-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="mortgage-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="mortgage-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="mortgage-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="mortgage-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="mortgage-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="mortgage-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="mortgage-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="mortgage-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="mortgage-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="mortgage-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="mortgage-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="mortgage-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="mortgage-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="mortgage-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="mortgage-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="mortgage-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="mortgage-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="mortgage-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="mortgage-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="mortgage-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="mortgage-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="mortgage-calculator-sidebar-search-status" aria-controls="mortgage-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="mortgage-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="mortgage-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="mortgage-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="mortgage-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="mortgage-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="mortgage-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="mortgage-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="mortgage-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="mortgage-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators" aria-current="true">Mortgage &amp; Home Buying</a></li><li><a id="mortgage-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="mortgage-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="mortgage-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="mortgage-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="mortgage-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="mortgage-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="mortgage-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="mortgage-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="mortgage-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="mortgage-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="mortgage-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="mortgage-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="mortgage-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="mortgage-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="mortgage-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="mortgage-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="mortgage-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="mortgage-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="mortgage-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="mortgage-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="mortgage-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="mortgage-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="mortgage-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="mortgage-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="mortgage-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="mortgage-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="mortgage-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="mortgage-calculator" data-calculator-slug="mortgage-calculator" data-sub-category-slug="mortgage-calculators">
+      <aside id="mortgage-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="mortgage-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="mortgage-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="mortgage-calculator-ad-top-leaderboard">
+            <ins id="mortgage-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("mortgage-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="mortgage-calculator-intro-area" class="space-y-4">
+        <nav id="mortgage-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="mortgage-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="mortgage-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="mortgage-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="mortgage-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#mortgage-calculators" itemprop="item"><span itemprop="name">Mortgage &amp; Home Buying</span></a><meta itemprop="position" content="3"></li>
+            <li id="mortgage-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Mortgage Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/mortgage-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="mortgage-calculator-hero-section" aria-labelledby="mortgage-calculator-hero-heading" data-section="hero">
+          <h1 id="mortgage-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Mortgage Calculator: Free Monthly Payment Estimate</h1>
+          <p id="mortgage-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Wondering what a home will really cost each month? Our mortgage calculator turns a home price, a down payment, an interest rate and a loan term into one all-in monthly payment, so you can see the true cost of owning before you talk to a lender. Every figure on this page comes from the same formula the calculator runs, which means you can check the math yourself. <!-- SILO_START:slot_a -->The <a class="silo-link" href="/home-equity-loan-calculator.html">home equity loan calculator</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="mortgage-calculator-tool" class="space-y-6" data-page-slug="mortgage-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="mcFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="mcForm" class="space-y-5" novalidate aria-labelledby="mcFormHeading">
+      <h2 id="mcFormHeading" class="panel-heading">Enter your home loan details</h2>
+<div><label for="mcPrice" class="form-label">Home price</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="mcPrice" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1000" value="425000" inputmode="decimal"></div></div>
+<div><label for="mcDown" class="form-label">Down payment</label><div class="input-group"><input type="number" id="mcDown" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="any" value="15" inputmode="decimal" aria-describedby="mcDownHint"><select id="mcDownUnit" aria-label="Down payment unit" class="shrink-0 border-l border-line bg-surface-muted px-2 text-sm font-semibold text-ink-muted focus:outline-none"><option value="percent" selected>%</option><option value="dollar">$</option></select></div><p id="mcDownHint" class="form-hint"></p></div>
+<div class="form-row form-row-2">
+<div><label for="mcRate" class="form-label">Interest rate</label><div class="input-group"><input type="number" id="mcRate" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="30" step="0.125" value="6.5" inputmode="decimal"><span class="input-affix">%</span></div></div>
+<div><label for="mcTerm" class="form-label">Loan term</label><div class="input-group"><input type="number" id="mcTerm" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1" max="50" step="1" value="30" inputmode="numeric"><span class="input-affix">yrs</span></div></div>
+</div>
+<div class="form-row form-row-2">
+<div><label for="mcStartMonth" class="form-label">First payment month</label><select id="mcStartMonth" class="form-select"><option value="0" selected>January</option><option value="1">February</option><option value="2">March</option><option value="3">April</option><option value="4">May</option><option value="5">June</option><option value="6">July</option><option value="7">August</option><option value="8">September</option><option value="9">October</option><option value="10">November</option><option value="11">December</option></select></div>
+<div><label for="mcStartYear" class="form-label">First payment year</label><div class="input-group"><input type="number" id="mcStartYear" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1900" max="2200" step="1" value="" inputmode="numeric"></div></div>
+</div>
+<h3 class="pt-2 font-display text-base font-bold">Taxes, insurance and fees</h3>
+<div class="form-row form-row-2">
+<div><label for="mcTax" class="form-label">Property tax</label><div class="input-group"><input type="number" id="mcTax" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="any" value="1.1" inputmode="decimal"><select id="mcTaxUnit" aria-label="Property tax unit" class="shrink-0 border-l border-line bg-surface-muted px-2 text-sm font-semibold text-ink-muted focus:outline-none"><option value="percent" selected>% / yr</option><option value="dollar">$ / yr</option></select></div></div>
+<div><label for="mcInsurance" class="form-label">Home insurance</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="mcInsurance" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="1800" inputmode="decimal"><span class="input-affix">/ yr</span></div></div>
+</div>
+<div class="form-row form-row-2">
+<div><label for="mcPmi" class="form-label">PMI rate</label><div class="input-group"><input type="number" id="mcPmi" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="5" step="0.05" value="0.5" inputmode="decimal" aria-describedby="mcPmiHint"><span class="input-affix">% / yr</span></div><p id="mcPmiHint" class="form-hint">Applies only with less than 20% down.</p></div>
+<div><label for="mcHoa" class="form-label">HOA dues</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="mcHoa" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="0" inputmode="decimal"><span class="input-affix">/ mo</span></div></div>
+</div>
+<details class="form-details"><summary class="form-details-summary">Extra payments</summary><div class="mt-4 space-y-5">
+<div><label for="mcExtraMonthly" class="form-label">Extra every month</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="mcExtraMonthly" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="50" value="0" inputmode="decimal" aria-describedby="mcExtraMonthlyHint"></div><p id="mcExtraMonthlyHint" class="form-hint">Added to every payment from the first.</p></div>
+<div><label for="mcExtraYearly" class="form-label">Extra once a year</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="mcExtraYearly" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="0" inputmode="decimal" aria-describedby="mcExtraYearlyHint"></div><p id="mcExtraYearlyHint" class="form-hint">Paid with every 12th payment.</p></div>
+<div class="form-row form-row-2">
+<div><label for="mcExtraOnce" class="form-label">One-time extra</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="mcExtraOnce" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1000" value="0" inputmode="decimal"></div></div>
+<div><label for="mcExtraOnceAt" class="form-label">With payment number</label><div class="input-group"><input type="number" id="mcExtraOnceAt" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1" step="1" value="12" inputmode="numeric" aria-describedby="mcExtraOnceAtHint"></div><p id="mcExtraOnceAtHint" class="form-hint">Payment 1 is the first month.</p></div>
+</div>
+</div></details>
+      <p id="mcError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="mcResults" aria-live="polite" aria-labelledby="mcResultsHeading">
+      <h2 id="mcResultsHeading" class="panel-heading">Your results</h2>
+<div class="stat-grid mt-4">
+<div class="stat-card stat-card-highlight"><p class="stat-label">Monthly payment</p><p id="mcMonthlyTotal" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">Loan amount</p><p id="mcLoanAmount" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">Total interest</p><p id="mcTotalInterest" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">Payoff date</p><p id="mcPayoffDate" class="stat-value">–</p></div>
+</div>
+<h3 class="mt-6 font-display text-base font-bold">Monthly payment breakdown</h3>
+<div class="mt-2">
+<div class="result-row"><span class="result-term">Principal and interest</span><span id="mcPI" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Property tax</span><span id="mcTaxMonthly" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Home insurance</span><span id="mcInsMonthly" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">PMI</span><span id="mcPmiMonthly" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">HOA dues</span><span id="mcHoaMonthly" class="result-value">–</span></div>
+</div>
+<p id="mcPmiNote" class="form-hint"></p>
+<h3 class="mt-6 font-display text-base font-bold">Over the life of the loan</h3>
+<div class="mt-2">
+<div class="result-row"><span class="result-term">Down payment</span><span id="mcDownAmount" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Number of payments</span><span id="mcPaymentCount" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Total principal and interest</span><span id="mcTotalPI" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Total PMI</span><span id="mcTotalPmi" class="result-value">–</span></div>
+</div>
+<div id="mcSavings" class="callout callout-success mt-5" hidden><p class="callout-title">Effect of your extra payments</p><div class="result-row"><span class="result-term">Interest saved</span><span id="mcInterestSaved" class="result-value">–</span></div><div class="result-row"><span class="result-term">Paid off sooner by</span><span id="mcTimeSaved" class="result-value">–</span></div></div>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="mcScheduleHeading" data-section="schedule">
+  <h2 id="mcScheduleHeading" class="panel-heading">Amortization schedule</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">Principal and interest only, including any extra payments. Property tax, insurance, PMI and HOA dues are not part of the loan balance.</p>
+  <div class="mt-4 max-w-[220px]"><label for="mcView" class="form-label">Show</label><select id="mcView" class="form-select"><option value="year" selected>By year</option><option value="month">By month</option></select></div>
+  <div class="table-scroll mt-5 max-h-[520px]" tabindex="0" role="region" aria-labelledby="mcScheduleHeading">
+    <table class="data-table">
+      <thead id="mcScheduleHead"><tr><th scope="col">Year</th><th scope="col">Principal</th><th scope="col">Interest</th><th scope="col">Ending balance</th></tr></thead>
+      <tbody id="mcSchedule"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="mortgage-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="mortgage-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Wondering what a home will really cost each month? Our mortgage calculator turns a home price, a down payment, an interest rate and a loan term into one all-in monthly payment, so you can see the true cost of owning before you talk to a lender. Every figure on this page comes from the same formula the calculator runs, which means you can check the math yourself. <!-- SILO_START:slot_a_m -->The <a class="silo-link" href="/home-equity-loan-calculator.html">home equity loan calculator</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="mortgage-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="mortgage-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="mortgage-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="mortgage-calculator-ad-in-feed">
+            <ins id="mortgage-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("mortgage-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="mortgage-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="mortgage-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="mortgage-calculator-guide-heading-1">
+<h2 id="mortgage-calculator-guide-heading-1">How the Mortgage Calculator Works Out Your Monthly Mortgage Payment</h2>
+<p>Your <strong>monthly mortgage payment</strong> is built from up to five pieces: the loan repayment itself (principal and interest), property taxes, home insurance, private mortgage insurance and homeowners association dues. A good calculator adds all of them, because the number your lender collects is rarely just principal and interest. Lenders often bundle the extras into an <strong>escrow account</strong>, which is why the check you write can be hundreds of dollars higher than the bare loan repayment.</p>
+
+<h3>Principal and Interest</h3>
+<p>The <strong>principal and interest</strong> portion repays the money you borrow plus what the lender charges for lending it. On a fixed-rate loan this part never changes, but the split between the two does: early payments are mostly interest, later payments are mostly principal. That shifting split is what the amortization schedule below lays out month by month.</p>
+
+<h3>Property Taxes and Home Insurance</h3>
+<p>Local governments assess <strong>property taxes</strong> yearly, and your lender divides the bill by twelve and adds it to each payment. <strong>Home insurance</strong> works the same way: an annual premium that covers fire, storm and theft damage is split into monthly slices. Because both are set by where the home sits and what it is worth, they move independently of your interest rate.</p>
+
+<h3>Private Mortgage Insurance and HOA Fees</h3>
+<p><strong>Private mortgage insurance</strong> (<strong>PMI</strong>) protects the lender, not you, when your down payment is under 20% of the price. <strong>HOA fees</strong> are paid to a homeowners association for shared services such as landscaping, exterior upkeep or water and sewer. Neither one builds equity, but both raise your monthly payment, so they belong in any honest estimate.</p>
+        </section>
+        <section id="mortgage-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="mortgage-calculator-guide-heading-2">
+<h2 id="mortgage-calculator-guide-heading-2">The Mortgage Payment Calculator Formula</h2>
+<p>The principal-and-interest part of the payment follows a standard amortization formula. In it, <strong>L</strong> is the loan amount, <strong>i</strong> is the monthly interest rate (the annual percentage rate divided by 12) and <strong>n</strong> is the number of monthly payments, which is the loan term in years times 12.</p>
+$$M = L \times \frac{i(1+i)^{n}}{(1+i)^{n}-1}$$
+<p>The full monthly cost then stacks the extras on top of that result:</p>
+$$\text{Total monthly payment} = M + \frac{\text{Property tax}}{12} + \frac{\text{Home insurance}}{12} + \text{PMI} + \text{HOA}$$
+<p>A <strong>30-year fixed</strong> loan has <strong>n = 360</strong> payments, and a <strong>15-year fixed</strong> loan has <strong>n = 180</strong>. Total interest equals <strong>M × n − L</strong>, and the loan amount is simply the home price minus the down payment.</p>
+        </section>
+        <section id="mortgage-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="mortgage-calculator-guide-heading-3">
+<h2 id="mortgage-calculator-guide-heading-3">Home Loan Calculator Walkthrough: A $462,500 Purchase</h2>
+<p>To see the formula in action, take a house priced at <strong>$462,500</strong> with <strong>12% down</strong>. The down payment is $55,500, leaving a <strong>loan amount</strong> of <strong>$407,000</strong>. The rate is 6.625% on a 30-year fixed term, the annual property tax is $4,860, the annual home insurance premium is $1,740, the HOA charges $65 a month, and PMI costs 0.55% of the loan per year.</p>
+<table>
+<thead><tr><th>Payment component</th><th>Monthly cost</th><th>How it is figured</th></tr></thead>
+<tbody>
+<tr><td>Principal and interest</td><td>$2,606.07</td><td>Amortization formula on $407,000</td></tr>
+<tr><td>Property taxes</td><td>$405.00</td><td>$4,860 ÷ 12</td></tr>
+<tr><td>Home insurance</td><td>$145.00</td><td>$1,740 ÷ 12</td></tr>
+<tr><td>Private mortgage insurance</td><td>$186.54</td><td>$407,000 × 0.55% ÷ 12</td></tr>
+<tr><td>HOA fees</td><td>$65.00</td><td>Flat monthly dues</td></tr>
+<tr><td><strong>Total monthly payment</strong></td><td><strong>$3,407.61</strong></td><td>Sum of the five parts</td></tr>
+</tbody>
+</table>
+<p>Over 360 payments, the loan repayment alone adds up to <strong>$938,183.62</strong>, so the <strong>total interest</strong> is <strong>$531,183.62</strong>, more than the home loan itself. In the first year, $26,830.47 of the payments goes to interest and only $4,442.32 reduces the <strong>principal balance</strong>. The <strong>payoff date</strong> lands exactly 30 years after the first payment.</p>
+<figure><img src="/assets/images/tools/mortgage-calculator/mortgage-calculator-monthly-payment-breakdown.svg" alt="Donut chart splitting a $3,407.61 monthly mortgage payment into principal and interest, property taxes, PMI, home insurance and HOA fees"><figcaption>Principal and interest make up about 76.5% of the $3,407.61 monthly payment in the worked example.</figcaption></figure>
+        </section>
+        <section id="mortgage-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="mortgage-calculator-guide-heading-4">
+<h2 id="mortgage-calculator-guide-heading-4">Mortgage Calculator Inputs: Home Price, Down Payment, Interest Rate and Loan Term</h2>
+<p>Each field you enter changes the result in a different way, so it helps to know which levers matter most.</p>
+
+<h3>Home Price and Loan Amount</h3>
+<p>The <strong>home price</strong> sets the ceiling for everything else. Subtract your down payment and you get the <strong>loan amount</strong>, the figure that interest is charged on. Property taxes and home insurance are usually estimated from the price as well.</p>
+
+<h3>Down Payment</h3>
+<p>Your <strong>down payment</strong> is the cash you pay upfront. A bigger one shrinks the loan, lowers the monthly payment and can remove PMI entirely. Using the $462,500 purchase and a 6.625% rate on 30 years:</p>
+<table>
+<thead><tr><th>Down payment</th><th>Loan amount</th><th>Principal and interest</th><th>PMI</th></tr></thead>
+<tbody>
+<tr><td>5%</td><td>$439,375</td><td>$2,813.37</td><td>$201.38</td></tr>
+<tr><td>10%</td><td>$416,250</td><td>$2,665.29</td><td>$190.78</td></tr>
+<tr><td>12%</td><td>$407,000</td><td>$2,606.07</td><td>$186.54</td></tr>
+<tr><td>20%</td><td>$370,000</td><td>$2,369.15</td><td>None</td></tr>
+</tbody>
+</table>
+
+<h3>Interest Rate</h3>
+<p>The <strong>interest rate</strong> is the annual cost of borrowing, expressed as a percentage. Because it compounds over hundreds of payments, a small change moves the monthly figure noticeably. On the same $407,000 loan:</p>
+<table>
+<thead><tr><th>Interest rate</th><th>Principal and interest</th><th>Change vs. 6.625%</th></tr></thead>
+<tbody>
+<tr><td>5.625%</td><td>$2,342.92</td><td>−$263.14</td></tr>
+<tr><td>6.125%</td><td>$2,472.97</td><td>−$133.09</td></tr>
+<tr><td>6.625%</td><td>$2,606.07</td><td>Base case</td></tr>
+<tr><td>7.125%</td><td>$2,742.03</td><td>+$135.97</td></tr>
+<tr><td>7.625%</td><td>$2,880.72</td><td>+$274.65</td></tr>
+</tbody>
+</table>
+<figure><img src="/assets/images/tools/mortgage-calculator/mortgage-payment-by-interest-rate.svg" alt="Bar chart of the monthly principal and interest payment on a $407,000 30-year loan at rates from 5.625% to 7.625%"><figcaption>Each half-point change in the interest rate moves the monthly repayment by roughly $135.</figcaption></figure>
+
+<h3>Loan Term</h3>
+<p>The <strong>loan term</strong> is how long you take to repay. Shorter terms cost more each month but far less in total interest. At the same 6.625% rate, a 15-year term lifts the loan repayment to <strong>$3,573.43</strong> but cuts total interest to <strong>$236,218.24</strong>, compared with $531,183.62 on 30 years.</p>
+
+<h3>Loan Program: Fixed Rate vs Adjustable Rate</h3>
+<p>The <strong>loan program</strong> decides whether your rate stays put. A <strong>fixed rate</strong> locks the same payment for the whole term. An <strong>adjustable rate</strong> loan starts lower, then resets on a schedule, so its payment can climb. The calculator assumes a fixed rate, so treat an adjustable-rate estimate as the best case.</p>
+        </section>
+        <section id="mortgage-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="mortgage-calculator-guide-heading-5">
+<h2 id="mortgage-calculator-guide-heading-5">How to Use the Mortgage Payment Calculator Step by Step</h2>
+<p>Running a scenario in the calculator takes about a minute once you have a few numbers on hand. Work through the fields in this order and the result will be a realistic figure rather than a rough guess.</p>
+<ol>
+<li><strong>Enter the price</strong> of the home you are considering, or the price you would like to stay under.</li>
+<li><strong>Add your down payment</strong> as a dollar figure or a percentage of the price. Include only cash you can spare after covering moving costs and an emergency fund.</li>
+<li><strong>Type the rate</strong> from a recent lender quote rather than a headline advertisement, because advertised rates often assume excellent credit and paid discount points.</li>
+<li><strong>Pick the term</strong>, usually 30 or 15 years.</li>
+<li><strong>Fill in the extras</strong>: yearly tax, yearly insurance, monthly association dues and monthly PMI if your down payment is below 20%.</li>
+<li><strong>Click calculate</strong> and read both the total and the breakdown, then change one input at a time to see which one moves the answer most.</li>
+</ol>
+<p>Changing one field at a time is the habit that makes the calculator useful. In the $462,500 example, moving the rate by half a point shifts the payment by about $135, while moving the down payment from 10% to 12% shifts it by about $59. Seeing those sizes side by side in the results tells you where negotiating effort pays off.</p>
+        </section>
+        <section id="mortgage-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="mortgage-calculator-guide-heading-6">
+<h2 id="mortgage-calculator-guide-heading-6">Affordability Rules of Thumb for a Mortgage Estimate</h2>
+<p>Once the calculator returns your total, test it against the two ratios lenders usually apply, often called the 28/36 rule. The first says the full housing payment should stay at or below <strong>28% of gross monthly income</strong>. The second says all monthly debts together, housing plus car loans, student loans and card minimums, should stay at or below <strong>36%</strong>.</p>
+<p>Apply that to the $3,407.61 payment from the example. Dividing by 0.28 gives a required gross income of about <strong>$12,170 a month</strong>, or roughly $146,040 a year. At 36%, total monthly debts could reach about $4,381, which leaves only about $974 a month for every other obligation. If your other debts exceed that, a smaller loan or a larger down payment brings the ratios back into range. These are guidelines, not laws: some lenders approve higher ratios for borrowers with large savings or very high scores, and many households choose to stay below them for peace of mind. If the ratios fail, run the calculator again with a smaller loan or a larger down payment and compare the new total with the guideline.</p>
+        </section>
+        <section id="mortgage-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="mortgage-calculator-guide-heading-7">
+<h2 id="mortgage-calculator-guide-heading-7">Common Estimating Mistakes That Skew Your Mortgage Payment</h2>
+<p>Most surprises at the closing table trace back to a handful of shortcuts taken when filling in the calculator.</p>
+<h3>Leaving Out the Extras</h3>
+<p>A calculator result that shows only the loan repayment makes a house look about $800 a month cheaper than it will feel. In the worked example, taxes, insurance, PMI and association dues add $801.54 on top of the repayment of $2,606.07.</p>
+<h3>Using Placeholder Tax and Insurance Figures</h3>
+<p>The tax and insurance fields in the calculator default to national averages. A coastal condo and a rural farmhouse at the same price can differ by thousands of dollars a year in both categories, so look up the listing's actual tax bill and request a real insurance quote, then enter both for an accurate total.</p>
+<h3>Ignoring the Rate Lock and Timing</h3>
+<p>A quoted rate applies only while it is locked. Enter the locked rate in the calculator, and run it again if the lock expires and the rate changes, because your payment changes with it. Ask how long the lock lasts and what an extension costs.</p>
+<h3>Stretching to the Maximum Approval</h3>
+<p>Approval tells you the most a lender will risk, not the most you should spend. Use the calculator to test a loan below your approval limit, compare the resulting total with your actual monthly budget, and leave room for repairs and savings.</p>
+        </section>
+        <section id="mortgage-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="mortgage-calculator-guide-heading-8">
+<h2 id="mortgage-calculator-guide-heading-8">Reading Your Amortization Schedule</h2>
+<p>An <strong>amortization schedule</strong> lists every one of your <strong>monthly payments</strong> and shows how much goes to interest, how much goes to principal and what balance remains. For the $407,000 loan, the first payment sends $2,246.98 to interest and just $359.09 to principal. The balance falls slowly at first, then speeds up:</p>
+<table>
+<thead><tr><th>End of year</th><th>Remaining balance</th><th>Equity at $462,500 value</th></tr></thead>
+<tbody>
+<tr><td>5</td><td>$381,540</td><td>$80,960</td></tr>
+<tr><td>10</td><td>$346,114</td><td>$116,386</td></tr>
+<tr><td>15</td><td>$296,821</td><td>$165,679</td></tr>
+<tr><td>20</td><td>$228,232</td><td>$234,268</td></tr>
+<tr><td>25</td><td>$132,795</td><td>$329,705</td></tr>
+</tbody>
+</table>
+<p>Your <strong>equity</strong> is the home value minus what you still owe. In this example the balance drops below 80% of the original price, $370,000, in month 82, which is the point where you can ask your lender to cancel PMI.</p>
+<figure><img src="/assets/images/tools/mortgage-calculator/mortgage-amortization-balance-over-30-years.svg" alt="Line chart of the remaining balance on a $407,000 30-year mortgage with the month PMI can be cancelled marked"><figcaption>The balance drops below $370,000 in month 82, the point where PMI can be cancelled.</figcaption></figure>
+        </section>
+        <section id="mortgage-calculator-guide-section-9" class="panel article-content p-4 sm:p-6" aria-labelledby="mortgage-calculator-guide-heading-9">
+<h2 id="mortgage-calculator-guide-heading-9">A Teacher Checks a Home Loan Calculator Before Making an Offer</h2>
+<p>Dana earns $9,150 a month before tax and has found a $338,750 condo. Before calling a lender, Dana opens the mortgage calculator to see whether the payment fits inside the 28% front-end guideline, which for this income means <strong>$2,562</strong>.</p>
+<p>The savings account holds $32,200, so that becomes the down payment, leaving a loan of <strong>$306,550</strong>. Dana types in a lender's quoted rate of 6.375%, a 30-year term, an annual tax bill of $3,912 copied from the listing, home insurance of $1,284 a year from an agent's quote, HOA dues of $212 a month from the condo documents, and PMI at 0.62% of the loan a year, because the down payment is under 10%.</p>
+<p>The result appears as a breakdown: <strong>$1,912.47</strong> for principal and interest, $326.00 for taxes, $107.00 for insurance, $212.00 for dues and $158.38 for PMI. The total monthly mortgage payment is <strong>$2,715.86</strong>, or 29.7% of gross income, which is above the $2,562 guideline by $153.86.</p>
+<p>Seeing the PMI line is what changes Dana's plan. Raising the down payment to 20% ($67,750) removes PMI entirely, and a second run shows a loan of $271,000 and a payment of <strong>$2,335.69</strong>, or 25.5% of income, comfortably under the guideline. That takes $35,550 more in savings, about 14 months at $2,540 a month ($35,560), so Dana decides to keep saving, track mortgage rates monthly and rerun the numbers before any offer.</p>
+        </section>
+        <section id="mortgage-calculator-guide-section-10" class="panel article-content p-4 sm:p-6" aria-labelledby="mortgage-calculator-guide-heading-10">
+<h2 id="mortgage-calculator-guide-heading-10">Home Loan Types: Conventional, FHA, VA, USDA and Jumbo</h2>
+<p>Every <strong>loan type</strong> carries its own down payment rule, fee structure and rate, so the same price can produce different payments.</p>
+
+<h3>Conventional Loan</h3>
+<p>A <strong>conventional loan</strong> is backed by private lenders, not a government agency. Buyers can put as little as 3% down, though a down payment below 20% triggers PMI. A strong <strong>credit score</strong> and a modest <strong>debt-to-income</strong> ratio earn the best pricing.</p>
+
+<h3>FHA Loan</h3>
+<p>An <strong>FHA loan</strong> allows 3.5% down with more flexible credit rules, which is why many first-time homebuyers choose it. It charges its own <strong>mortgage insurance</strong> premium instead of PMI.</p>
+
+<h3>VA Loan and USDA Loan</h3>
+<p>A <strong>VA loan</strong> serves active-duty service members and veterans, and a <strong>USDA loan</strong> serves eligible rural buyers. Both can be had with no money down, so the loan amount equals the full price.</p>
+
+<h3>Jumbo Mortgages</h3>
+<p><strong>Jumbo mortgages</strong> exceed the conforming limits set for agency-backed loans. They often demand larger down payments, bigger cash reserves and stronger credit, and lenders price them individually.</p>
+        </section>
+        <section id="mortgage-calculator-guide-section-11" class="panel article-content p-4 sm:p-6" aria-labelledby="mortgage-calculator-guide-heading-11">
+<h2 id="mortgage-calculator-guide-heading-11">How Extra Payments and a Refinance Change Your House Payment</h2>
+<p>Paying more than the minimum is the simplest way to shorten the schedule. With <strong>extra payments</strong> of $200 a month on the $407,000 loan, the loan is repaid in 294 months instead of 360 and the total interest falls to $415,217.73, a saving of <strong>$115,965.89</strong>. That kind of <strong>early repayment</strong> works because every extra dollar goes straight to the principal balance.</p>
+<p>You can also <strong>refinance</strong>, replacing the loan with a new one at a lower rate or a different term. Refinancing makes sense when the new rate is meaningfully lower and you will stay in the home long enough to recover the <strong>closing costs</strong>, which often run 2% to 5% of the loan amount. People who already hold a low rate sometimes tap their equity with a <strong>HELOC</strong> or a <strong>second mortgage</strong> instead, so the first loan keeps its rate. Some buyers look for <strong>assumable mortgages</strong>, which let them take over the seller's existing rate.</p>
+        </section>
+        <section id="mortgage-calculator-guide-section-12" class="panel article-content p-4 sm:p-6" aria-labelledby="mortgage-calculator-guide-heading-12">
+<h2 id="mortgage-calculator-guide-heading-12">Ways to Lower Your Monthly Mortgage Payment</h2>
+<p>If the estimate lands above your budget, these changes help most:</p>
+<ul>
+<li><strong>Raise your down payment</strong> to borrow less and, at 20%, avoid private mortgage insurance.</li>
+<li><strong>Shop several lenders</strong> and compare the interest rate and fees on each loan estimate.</li>
+<li><strong>Improve your credit score</strong> before applying, since a better score earns a lower rate.</li>
+<li><strong>Choose a longer loan term</strong> to spread the principal over more monthly payments, accepting more total interest.</li>
+<li><strong>Cancel PMI</strong> once your equity reaches 20% of the home value.</li>
+<li><strong>Look for down payment assistance</strong> programs that cover part of the upfront cost.</li>
+<li><strong>Appeal your property tax assessment</strong> if the valuation looks too high.</li>
+</ul>
+        </section>
+        <section id="mortgage-calculator-guide-section-13" class="panel article-content p-4 sm:p-6" aria-labelledby="mortgage-calculator-guide-heading-13">
+<h2 id="mortgage-calculator-guide-heading-13">Housing Costs a Free Mortgage Calculator Leaves Out</h2>
+<p>A <strong>free mortgage calculator</strong> estimates the loan, but <strong>homeownership</strong> costs more than the payment. Before you commit to a number, make room in your <strong>budget</strong> for these:</p>
+<ul>
+<li><strong>Closing costs:</strong> fees paid when the sale completes, commonly 2% to 5% of the loan amount.</li>
+<li><strong>Maintenance:</strong> roofs, appliances, heating and cooling systems and repairs that arrive without warning.</li>
+<li><strong>Utilities and moving:</strong> new accounts, deposits and the cost of the move itself.</li>
+<li><strong>Rising bills:</strong> property taxes and insurance premiums can increase, so your escrow payment may change even with a fixed rate.</li>
+<li><strong>Selling costs:</strong> agent commissions and transaction fees if you sell later.</li>
+</ul>
+<p>Lenders also check <strong>affordability</strong> through your debt-to-income ratio, comparing total monthly debts with your income. Getting <strong>pre-qualified</strong> with a lender gives a firmer picture than any estimate.</p>
+        </section>
+        <section id="mortgage-calculator-guide-section-14" class="panel article-content p-4 sm:p-6" aria-labelledby="mortgage-calculator-guide-heading-14">
+<h2 id="mortgage-calculator-guide-heading-14">Testing Mortgage Rates Against Your House Payment</h2>
+<p>Day-to-day <strong>mortgage rates</strong> follow the bond market, the <strong>Federal Reserve</strong>'s policy path and <strong>inflation</strong> news, so a quoted rate can move within days. You cannot predict those swings, so use a <strong>mortgage calculator with PMI and taxes</strong> to test a range: enter your quoted rate, then half a point higher and lower, as the rate table above shows. If you can afford the higher result comfortably, you are protected against a rate that moves before you lock. <strong>Real estate</strong> costs also differ by region, so adjust the tax and insurance fields for the area where you plan to buy.</p>
+        </section>
+      </div>
+
+      <section id="mortgage-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="mortgage-calculator-faq-heading" data-section="faq">
+        <h2 id="mortgage-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Mortgage Calculator questions</h2>
+        <div id="mortgage-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="mortgage-calculator-faq-1" class="faq-item" open><summary id="mortgage-calculator-faq-1-summary" class="faq-summary"><h3 id="mortgage-calculator-faq-1-question" class="faq-question">How is a monthly mortgage payment calculated?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="mortgage-calculator-faq-1-answer" class="faq-answer"><p>The loan repayment uses the amortization formula M = L × i(1+i)^n / ((1+i)^n − 1), where L is the loan amount, i is the monthly interest rate and n is the number of monthly payments. Property tax, home insurance, PMI and HOA fees are then added to that figure.</p></div></details>
+          <details id="mortgage-calculator-faq-2" class="faq-item" open><summary id="mortgage-calculator-faq-2-summary" class="faq-summary"><h3 id="mortgage-calculator-faq-2-question" class="faq-question">What is included in a mortgage payment?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="mortgage-calculator-faq-2-answer" class="faq-answer"><p>Most payments combine principal, interest, property taxes, homeowners insurance and, if your down payment is under 20%, private mortgage insurance. Association dues are often added to the estimate even though they are billed separately.</p></div></details>
+          <details id="mortgage-calculator-faq-3" class="faq-item" open><summary id="mortgage-calculator-faq-3-summary" class="faq-summary"><h3 id="mortgage-calculator-faq-3-question" class="faq-question">How much should I put down on a home?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="mortgage-calculator-faq-3-answer" class="faq-answer"><p>Many conventional loans accept as little as 3% down, FHA loans allow 3.5%, and VA and USDA loans can need nothing down. Putting 20% down avoids PMI and lowers your monthly payment, but you should keep savings for closing costs and repairs.</p></div></details>
+          <details id="mortgage-calculator-faq-4" class="faq-item" open><summary id="mortgage-calculator-faq-4-summary" class="faq-summary"><h3 id="mortgage-calculator-faq-4-question" class="faq-question">When can I stop paying PMI?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="mortgage-calculator-faq-4-answer" class="faq-answer"><p>On a conventional loan you can usually ask your lender to cancel PMI once your balance falls to 80% of the home&#x27;s original value, and it ends automatically at 78%. FHA loans carry their own mortgage insurance premium with different rules.</p></div></details>
+          <details id="mortgage-calculator-faq-5" class="faq-item" open><summary id="mortgage-calculator-faq-5-summary" class="faq-summary"><h3 id="mortgage-calculator-faq-5-question" class="faq-question">Is a 15-year or a 30-year mortgage better?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="mortgage-calculator-faq-5-answer" class="faq-answer"><p>A 15-year term has a higher monthly payment but far less total interest, while a 30-year term lowers the monthly payment and costs more over time. Run both terms in the calculator and compare the payment with your budget.</p></div></details>
+          <details id="mortgage-calculator-faq-6" class="faq-item" open><summary id="mortgage-calculator-faq-6-summary" class="faq-summary"><h3 id="mortgage-calculator-faq-6-question" class="faq-question">How do extra payments change my mortgage?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="mortgage-calculator-faq-6-answer" class="faq-answer"><p>Extra money sent toward principal shortens the loan and cuts total interest, because the next month&#x27;s interest is charged on a smaller balance. Enter a monthly, yearly or one-time extra payment to see the new payoff date and the interest saved.</p></div></details>
+          <details id="mortgage-calculator-faq-7" class="faq-item" open><summary id="mortgage-calculator-faq-7-summary" class="faq-summary"><h3 id="mortgage-calculator-faq-7-question" class="faq-question">Do bi-weekly payments save money?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="mortgage-calculator-faq-7-answer" class="faq-answer"><p>Paying half of the monthly payment every two weeks makes 26 half-payments a year, which equals one extra monthly payment. That shortens the loan and reduces interest; the bi-weekly results show the effect for your numbers.</p></div></details>
+          <details id="mortgage-calculator-faq-8" class="faq-item" open><summary id="mortgage-calculator-faq-8-summary" class="faq-summary"><h3 id="mortgage-calculator-faq-8-question" class="faq-question">Does this calculator include closing costs?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="mortgage-calculator-faq-8-answer" class="faq-answer"><p>No. Closing costs, usually 2% to 5% of the loan amount, plus moving costs and maintenance are one-time or irregular expenses outside the monthly payment. Add them to the &#x27;Other costs&#x27; field only if they recur.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="mortgage-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="mortgage-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="mortgage-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="mortgage-calculator-ad-bottom-leaderboard">
+            <ins id="mortgage-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("mortgage-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="mortgage-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="mortgage-calculator-right-rail-top" class="mb-6">
+        <aside id="mortgage-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="mortgage-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="mortgage-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="mortgage-calculator-ad-right-rail-rectangle">
+            <ins id="mortgage-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("mortgage-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="mortgage-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="mortgage-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="mortgage-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="mortgage-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="mortgage-calculator-ad-right-rail-skyscraper">
+            <ins id="mortgage-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("mortgage-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="mortgage-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="mortgage-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="mortgage-calculator-footer-brand">
+        <a id="mortgage-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="mortgage-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="mortgage-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="mortgage-calculator-footer-categories" aria-labelledby="mortgage-calculator-footer-categories-heading">
+        <h2 id="mortgage-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="mortgage-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="mortgage-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="mortgage-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="mortgage-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="mortgage-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="mortgage-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="mortgage-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="mortgage-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="mortgage-calculator-footer-company" aria-labelledby="mortgage-calculator-footer-company-heading">
+        <h2 id="mortgage-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="mortgage-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="mortgage-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="mortgage-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="mortgage-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="mortgage-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="mortgage-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="mortgage-calculator-footer-bottom" class="border-t border-line">
+      <p id="mortgage-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="mortgage-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Mortgage payment with taxes, insurance, PMI, HOA and extra payments.
+  //   Principal & interest: M = L * i / (1 - (1 + i)^-n), i = annual rate / 12, n = years * 12
+  //   (M = L / n at 0%). Each month: interest = balance * i; principal = M - interest (+ extras).
+  //   PMI = annual PMI rate * original loan / 12, charged only when the loan is more than 80% of the
+  //   home price, until the balance falls to 78% of the price or the term reaches its midpoint.
+  // Verified in Node (scratchpad tests): $200,000 at 6% for 30 yrs = $1,199.10/mo, total interest
+  //   $231,676.38; $320,000 at 7.373% for 30 yrs = $2,209.72/mo (cross-checked with a published
+  //   calculator's default); $300,000 at 0% for 30 yrs = $833.33/mo; final balance is exactly 0;
+  //   PMI months match an independent loop (109 payments for $360,000 at 6.5% on a $400,000 home);
+  //   payoff month with a fixed extra matches n = -ln(1 - L*i/(M+X)) / ln(1+i); extra payments
+  //   never overpay; no NaN/Infinity on blank or bad input.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 });
+  var MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  var last = null;
+
+  function el(id) { return document.getElementById(id); }
+
+  function read(id, blankAsZero) {
+    var raw = String(el(id).value).trim();
+    if (raw === '') return blankAsZero ? 0 : NaN;
+    var v = Number(raw);
+    return isFinite(v) ? v : NaN;
+  }
+
+  function monthlyPayment(principal, annualRate, months) {
+    if (months <= 0 || principal <= 0) return 0;
+    var i = annualRate / 12;
+    if (i === 0) return principal / months;
+    return principal * i / (1 - Math.pow(1 + i, -months));
+  }
+
+  function amortize(o) {
+    var pay = monthlyPayment(o.loan, o.rate, o.months);
+    var i = o.rate / 12, bal = o.loan, rows = [];
+    var totalInterest = 0, totalPmi = 0, pmiMonths = 0;
+    var pmiMonthly = o.pmiRate * o.loan / 12;
+    var pmiOn = pmiMonthly > 0 && o.loan > 0.8 * o.homeValue;
+    for (var m = 1; m <= o.months && bal > 0.005; m++) {
+      var interest = bal * i;
+      var pmi = (pmiOn && bal > 0.78 * o.homeValue && m <= o.months / 2) ? pmiMonthly : 0;
+      var principal = Math.min(pay - interest, bal);
+      var extra = o.extraMonthly + (m % 12 === 0 ? o.extraYearly : 0) + (m === o.onceAt ? o.once : 0);
+      extra = Math.max(0, Math.min(extra, bal - principal));
+      bal -= principal + extra;
+      if (bal < 0.005) bal = 0;
+      totalInterest += interest;
+      totalPmi += pmi;
+      if (pmi > 0) pmiMonths++;
+      rows.push({ n: m, interest: interest, principal: principal + extra, pmi: pmi, balance: bal });
+    }
+    return { payment: pay, rows: rows, totalInterest: totalInterest, totalPmi: totalPmi, pmiMonths: pmiMonths };
+  }
+
+  function monthLabel(start, offset) {
+    var t = start + offset;
+    return MONTHS[t % 12] + ' ' + Math.floor(t / 12);
+  }
+
+  function duration(months) {
+    var y = Math.floor(months / 12), m = months % 12, parts = [];
+    if (y) parts.push(y + (y === 1 ? ' year' : ' years'));
+    if (m || !y) parts.push(m + (m === 1 ? ' month' : ' months'));
+    return parts.join(' ');
+  }
+
+  function setText(id, text) { el(id).textContent = text; }
+
+  function clearResults() {
+    ['mcMonthlyTotal', 'mcLoanAmount', 'mcTotalInterest', 'mcPayoffDate', 'mcPI', 'mcTaxMonthly',
+     'mcInsMonthly', 'mcPmiMonthly', 'mcHoaMonthly', 'mcDownAmount', 'mcPaymentCount', 'mcTotalPI',
+     'mcTotalPmi'].forEach(function (id) { setText(id, '–'); });
+    setText('mcPmiNote', '');
+    setText('mcDownHint', '');
+    el('mcSavings').hidden = true;
+    el('mcSchedule').innerHTML = '';
+    last = null;
+  }
+
+  function renderSchedule() {
+    var head = el('mcScheduleHead'), body = el('mcSchedule');
+    if (!last) { body.innerHTML = ''; return; }
+    var rows = last.rows, start = last.start, html = [];
+    if (el('mcView').value === 'month') {
+      head.innerHTML = '<tr><th scope="col">Month</th><th scope="col">Payment</th><th scope="col">Principal</th><th scope="col">Interest</th><th scope="col">Balance</th></tr>';
+      rows.forEach(function (row) {
+        html.push('<tr><td>' + monthLabel(start, row.n - 1) + '</td><td>' + money.format(row.principal + row.interest) +
+          '</td><td>' + money.format(row.principal) + '</td><td>' + money.format(row.interest) + '</td><td>' +
+          money.format(row.balance) + '</td></tr>');
+      });
+    } else {
+      head.innerHTML = '<tr><th scope="col">Year</th><th scope="col">Principal</th><th scope="col">Interest</th><th scope="col">Ending balance</th></tr>';
+      var year = null, p = 0, intr = 0, bal = 0;
+      rows.forEach(function (row, idx) {
+        var y = Math.floor((start + row.n - 1) / 12);
+        if (year !== null && y !== year) {
+          html.push('<tr><td>' + year + '</td><td>' + money.format(p) + '</td><td>' + money.format(intr) + '</td><td>' + money.format(bal) + '</td></tr>');
+          p = 0; intr = 0;
+        }
+        year = y; p += row.principal; intr += row.interest; bal = row.balance;
+        if (idx === rows.length - 1) {
+          html.push('<tr><td>' + year + '</td><td>' + money.format(p) + '</td><td>' + money.format(intr) + '</td><td>' + money.format(bal) + '</td></tr>');
+        }
+      });
+    }
+    body.innerHTML = html.join('');
+  }
+
+  function update() {
+    var price = read('mcPrice'), down = read('mcDown'), downUnit = el('mcDownUnit').value,
+        years = read('mcTerm'), rate = read('mcRate'),
+        startMonth = parseInt(el('mcStartMonth').value, 10), startYear = read('mcStartYear'),
+        tax = read('mcTax', true), taxUnit = el('mcTaxUnit').value, ins = read('mcInsurance', true),
+        pmiRate = read('mcPmi', true), hoa = read('mcHoa', true),
+        exMonthly = read('mcExtraMonthly', true), exYearly = read('mcExtraYearly', true),
+        exOnce = read('mcExtraOnce', true), exOnceAt = read('mcExtraOnceAt', true);
+    var downAmt = downUnit === 'percent' ? price * down / 100 : down;
+    var error = el('mcError'), msg = '';
+    if (isNaN(price) || price <= 0) msg = 'Enter a home price greater than $0.';
+    else if (isNaN(down) || down < 0 || !(downAmt < price)) msg = 'Enter a down payment of 0 or more that is less than the home price.';
+    else if (isNaN(years) || years < 1 || years > 50 || years % 1 !== 0) msg = 'Enter a loan term of 1 to 50 whole years.';
+    else if (isNaN(rate) || rate < 0 || rate > 30) msg = 'Enter an interest rate from 0% to 30%.';
+    else if (isNaN(startMonth) || isNaN(startYear) || startYear < 1900 || startYear > 2200 || startYear % 1 !== 0) msg = 'Enter a valid first payment month and year.';
+    else if ([tax, ins, pmiRate, hoa, exMonthly, exYearly, exOnce].some(function (v) { return isNaN(v) || v < 0; })) msg = 'Taxes, insurance, PMI, HOA and extra payments cannot be negative.';
+    else if (taxUnit === 'percent' && tax > 20) msg = 'Enter a property tax rate of 20% or less.';
+    else if (pmiRate > 5) msg = 'Enter a PMI rate of 5% or less.';
+    else if (exOnce > 0 && (isNaN(exOnceAt) || exOnceAt < 1 || exOnceAt % 1 !== 0)) msg = 'Enter the payment number (1 or higher) for the one-time extra payment.';
+    error.hidden = !msg;
+    error.textContent = msg;
+    if (msg) { clearResults(); return; }
+
+    var loan = price - downAmt, months = years * 12;
+    var annualTax = taxUnit === 'percent' ? price * tax / 100 : tax;
+    var opts = { loan: loan, rate: rate / 100, months: months, homeValue: price, pmiRate: pmiRate / 100,
+                 extraMonthly: 0, extraYearly: 0, once: 0, onceAt: 0 };
+    var base = amortize(opts);
+    opts.extraMonthly = exMonthly; opts.extraYearly = exYearly; opts.once = exOnce; opts.onceAt = exOnceAt;
+    var r = amortize(opts);
+    var start = startYear * 12 + startMonth;
+    var firstPmi = r.rows.length ? r.rows[0].pmi : 0;
+
+    setText('mcDownHint', downUnit === 'percent' ? '= ' + money.format(downAmt) : '= ' + (downAmt / price * 100).toFixed(1) + '% of the price');
+    setText('mcMonthlyTotal', money.format(r.payment + annualTax / 12 + ins / 12 + firstPmi + hoa));
+    setText('mcLoanAmount', money.format(loan));
+    setText('mcTotalInterest', money.format(r.totalInterest));
+    setText('mcPayoffDate', monthLabel(start, r.rows.length - 1));
+    setText('mcPI', money.format(r.payment));
+    setText('mcTaxMonthly', money.format(annualTax / 12));
+    setText('mcInsMonthly', money.format(ins / 12));
+    setText('mcPmiMonthly', money.format(firstPmi));
+    setText('mcHoaMonthly', money.format(hoa));
+    setText('mcDownAmount', money.format(downAmt));
+    setText('mcPaymentCount', String(r.rows.length));
+    setText('mcTotalPI', money.format(loan + r.totalInterest));
+    setText('mcTotalPmi', money.format(r.totalPmi));
+
+    var note;
+    if (loan <= 0.8 * price) note = 'No PMI: the loan is 80% or less of the home price.';
+    else if (pmiRate === 0) note = 'PMI not included. Enter your lender’s PMI rate to add it.';
+    else note = 'PMI charged for ' + r.pmiMonths + ' payments, through ' + monthLabel(start, r.pmiMonths - 1) + '.';
+    setText('mcPmiNote', note);
+
+    var hasExtra = exMonthly > 0 || exYearly > 0 || (exOnce > 0 && exOnceAt <= months);
+    el('mcSavings').hidden = !hasExtra;
+    setText('mcInterestSaved', money.format(Math.max(0, base.totalInterest - r.totalInterest)));
+    setText('mcTimeSaved', duration(Math.max(0, base.rows.length - r.rows.length)));
+
+    last = { rows: r.rows, start: start };
+    renderSchedule();
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = el('mcForm');
+    if (!form) return;
+    var now = new Date(), next = now.getFullYear() * 12 + now.getMonth() + 1;
+    el('mcStartMonth').value = String(next % 12);
+    el('mcStartYear').value = String(Math.floor(next / 12));
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    el('mcView').addEventListener('change', renderSchedule);
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="en" id="annuity-calculator-document" data-page-slug="annuity-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Annuity Calculator: Estimate Growth and Monthly Income</title>
+  <meta name="description" content="Use this free annuity calculator to project how regular deposits grow, then estimate the monthly income your balance could pay in retirement. Compare payout options.">
+  <link rel="canonical" href="https://company-marketcap.github.io/annuity-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Annuity Calculator: Estimate Growth and Monthly Income">
+  <meta property="og:description" content="Use this free annuity calculator to project how regular deposits grow, then estimate the monthly income your balance could pay in retirement. Compare payout options.">
+  <meta property="og:url" content="https://company-marketcap.github.io/annuity-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Annuity Calculator", "url": "https://company-marketcap.github.io/annuity-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Use this free annuity calculator to project how regular deposits grow, then estimate the monthly income your balance could pay in retirement. Compare payout options."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Social Security & Annuities", "item": "https://company-marketcap.github.io/financial-calculators.html#social-security-annuity-calculators"}, {"@type": "ListItem", "position": 4, "name": "Annuity Calculator", "item": "https://company-marketcap.github.io/annuity-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does an annuity calculator show?", "acceptedAnswer": {"@type": "Answer", "text": "It projects the balance of an annuity during the accumulation phase: your starting principal plus regular additions, compounded at the interest rate you enter. The result is your end balance, total additions and interest earned."}}, {"@type": "Question", "name": "What is the difference between an annuity due and an ordinary annuity?", "acceptedAnswer": {"@type": "Answer", "text": "With an annuity due, each addition is made at the beginning of the period and earns interest for the full period. With an ordinary (immediate) annuity, additions are made at the end of the period, so the end balance is slightly lower."}}, {"@type": "Question", "name": "How are annuity payouts different from accumulation?", "acceptedAnswer": {"@type": "Answer", "text": "Accumulation is the saving stage, when your balance grows. The payout stage starts at annuitization, when the insurer converts the balance into income, and the monthly amount depends on your age, payout option and rates at purchase."}}, {"@type": "Question", "name": "What is a surrender charge?", "acceptedAnswer": {"@type": "Answer", "text": "A surrender charge is a percentage of your balance the insurer deducts if you withdraw or cancel early, usually during the first several years of the contract. This calculator applies the charge that matches the withdrawal year you set."}}, {"@type": "Question", "name": "Are annuity earnings taxed?", "acceptedAnswer": {"@type": "Answer", "text": "Earnings in a deferred annuity are tax-deferred, so you pay ordinary income tax only when you withdraw them. Withdrawals before age 59½ can also add a 10% IRS early withdrawal penalty."}}, {"@type": "Question", "name": "How do immediate and deferred annuities differ?", "acceptedAnswer": {"@type": "Answer", "text": "An immediate annuity begins paying income within about a year of purchase. A deferred annuity waits, letting the balance grow first; the longer the deferral, the larger the eventual income can be."}}, {"@type": "Question", "name": "What interest rate should I enter?", "acceptedAnswer": {"@type": "Answer", "text": "Use the initial rate your contract guarantees, then an expected average rate for later years. The minimum guaranteed rate acts as a floor, so test a lower figure to see the worst case your contract allows."}}, {"@type": "Question", "name": "Does the calculator include fees?", "acceptedAnswer": {"@type": "Answer", "text": "No. Annual fees, riders and commissions reduce real balances, so treat the result as an upper-end projection and compare it against the contract's actual cost terms."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="annuity-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="annuity-calculator" data-page-type="calculator">
+  <a id="annuity-calculator-skip-link" href="#annuity-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="annuity-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="annuity-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="annuity-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="annuity-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="annuity-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="annuity-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="annuity-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="annuity-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="annuity-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="annuity-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="annuity-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="annuity-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="annuity-calculator-header-search-status" aria-controls="annuity-calculator-header-search-results" data-search-input="header">
+              <p id="annuity-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="annuity-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="annuity-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="annuity-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="annuity-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="annuity-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="annuity-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="annuity-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="annuity-calculator-mobile-search-status" aria-controls="annuity-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="annuity-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="annuity-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="annuity-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="annuity-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="annuity-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="annuity-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="annuity-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="annuity-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="annuity-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="annuity-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="annuity-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="annuity-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="annuity-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="annuity-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="annuity-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="annuity-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="annuity-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="annuity-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="annuity-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="annuity-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="annuity-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="annuity-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="annuity-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="annuity-calculator-sidebar-search-status" aria-controls="annuity-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="annuity-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="annuity-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="annuity-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="annuity-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="annuity-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="annuity-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="annuity-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="annuity-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="annuity-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="annuity-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="annuity-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="annuity-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="annuity-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="annuity-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="annuity-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="annuity-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="annuity-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="annuity-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators" aria-current="true">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="annuity-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="annuity-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="annuity-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="annuity-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="annuity-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="annuity-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="annuity-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="annuity-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="annuity-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="annuity-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="annuity-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="annuity-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="annuity-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="annuity-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="annuity-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="annuity-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="annuity-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="annuity-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="annuity-calculator" data-calculator-slug="annuity-calculator" data-sub-category-slug="social-security-annuity-calculators">
+      <aside id="annuity-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="annuity-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="annuity-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="annuity-calculator-ad-top-leaderboard">
+            <ins id="annuity-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("annuity-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="annuity-calculator-intro-area" class="space-y-4">
+        <nav id="annuity-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="annuity-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="annuity-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="annuity-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="annuity-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#social-security-annuity-calculators" itemprop="item"><span itemprop="name">Social Security &amp; Annuities</span></a><meta itemprop="position" content="3"></li>
+            <li id="annuity-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Annuity Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/annuity-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="annuity-calculator-hero-section" aria-labelledby="annuity-calculator-hero-heading" data-section="hero">
+          <h1 id="annuity-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Annuity Calculator: Estimate Growth and Monthly Income</h1>
+          <p id="annuity-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Wondering what your savings could grow into, and how much monthly income that pile could pay you later? This annuity calculator projects the end balance of a contract built with a lump sum plus regular deposits, then shows the steady paycheck that balance could fund once you stop saving and start collecting. <!-- SILO_START:slot_a -->Next, open the <a class="silo-link" href="/retirement-calculator.html">free retirement calculator</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="annuity-calculator-tool" class="space-y-6" data-page-slug="annuity-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="anFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="anForm" class="space-y-5" novalidate aria-labelledby="anFormHeading">
+      <h2 id="anFormHeading" class="panel-heading">Enter your annuity</h2>
+      <div><label for="anStart" class="form-label">Starting principal</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="anStart" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1000" value="25000" inputmode="decimal"></div><p class="form-hint">The amount you put in at the start.</p></div>
+      <div class="form-row form-row-2">
+        <div><label for="anAnnual" class="form-label">Yearly addition</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="anAnnual" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="5000" inputmode="decimal"></div></div>
+        <div><label for="anMonthly" class="form-label">Monthly addition</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="anMonthly" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="50" value="0" inputmode="decimal"></div></div>
+      </div>
+      <div class="form-row form-row-2">
+        <div><label for="anRate" class="form-label">Annual growth rate</label><div class="input-group"><input type="number" id="anRate" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="30" step="0.1" value="5" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">Credited rate after fees.</p></div>
+        <div><label for="anYears" class="form-label">Years to grow</label><div class="input-group"><input type="number" id="anYears" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1" max="60" step="1" value="15" inputmode="numeric"><span class="input-affix">yrs</span></div></div>
+      </div>
+      <div><label for="anTiming" class="form-label">Additions are made at the</label>
+        <select id="anTiming" class="form-select"><option value="begin">Start of each period (annuity due)</option><option value="end" selected>End of each period (ordinary annuity)</option></select></div>
+      <details class="form-details"><summary class="form-details-summary">Income from the balance</summary>
+        <p class="form-hint">Estimate the level monthly income the ending balance could pay for a set number of years. This is a simple payout model, not an insurer's quote.</p>
+        <div class="form-row form-row-2">
+          <div><label for="anPayYears" class="form-label">Pay out over</label><div class="input-group"><input type="number" id="anPayYears" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1" max="50" step="1" value="20" inputmode="numeric"><span class="input-affix">yrs</span></div></div>
+          <div><label for="anPayRate" class="form-label">Growth during payout</label><div class="input-group"><input type="number" id="anPayRate" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="30" step="0.1" value="4" inputmode="decimal"><span class="input-affix">%</span></div></div>
+        </div>
+      </details>
+      <p id="anError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="anResults" aria-live="polite" aria-labelledby="anResultsHeading">
+      <h2 id="anResultsHeading" class="panel-heading">Your results</h2>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p class="stat-label">Ending balance</p><p id="anBalance" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Total additions</p><p id="anAdded" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Growth earned</p><p id="anGrowth" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Estimated monthly income</p><p id="anIncome" class="stat-value">–</p></div>
+      </div>
+      <div class="mt-5">
+        <div class="result-row"><span class="result-term">Starting principal</span><span id="anStartOut" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Growth as a share of the balance</span><span id="anShare" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Total income paid out</span><span id="anPaidOut" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Payout length</span><span id="anPayLength" class="result-value">–</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="anScheduleHeading" data-section="schedule">
+  <h2 id="anScheduleHeading" class="panel-heading">Accumulation schedule</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">Money added and growth credited in each year while the annuity builds up.</p>
+  <div class="table-scroll mt-5 max-h-[520px]" tabindex="0" role="region" aria-labelledby="anScheduleHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Year</th><th scope="col">Additions</th><th scope="col">Growth</th><th scope="col">Balance</th></tr></thead>
+      <tbody id="anSchedule"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="annuity-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="annuity-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Wondering what your savings could grow into, and how much monthly income that pile could pay you later? This annuity calculator projects the end balance of a contract built with a lump sum plus regular deposits, then shows the steady paycheck that balance could fund once you stop saving and start collecting. <!-- SILO_START:slot_a_m -->Next, open the <a class="silo-link" href="/retirement-calculator.html">free retirement calculator</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="annuity-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="annuity-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="annuity-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="annuity-calculator-ad-in-feed">
+            <ins id="annuity-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("annuity-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="annuity-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="annuity-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="annuity-calculator-guide-heading-1">
+<h2 id="annuity-calculator-guide-heading-1">How a Fixed Annuity Calculator Projects Your Savings Growth</h2>
+<p>An annuity is an insurance <strong>contract</strong> between you and an <strong>insurance company</strong>, and <strong>insurance companies</strong> set the rate you key into the projection: you hand over money now, and the insurer promises growth first and payments afterward. A <strong>fixed annuity</strong> makes that promise simple, because it credits a stated interest rate instead of following the stock market. The projection below follows that logic one month at a time, so every balance you see is a plain consequence of the rate, the deposits and the clock. <!-- SILO_START:slot_b -->Pair this with the <a class="silo-link" href="/401k-calculator.html">free 401k calculator</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_b --></p>
+
+<h3>Accumulation Phase and Annuitization</h3>
+<p>Every deferred contract has two stages. During the <strong>accumulation phase</strong> you add money and the balance compounds, with taxes on the growth postponed. When you flip the contract into income mode, a step called <strong>annuitization</strong>, the insurer starts sending payments and the balance stops being yours to withdraw freely. The accumulation side is what you model first, because the size of the pot decides everything that follows in the <strong>distribution phase</strong>.</p>
+
+<h3>Starting Principal and Monthly Additions</h3>
+<p>Your <strong>starting principal</strong> is the lump sum you place in the contract on day one. Your <strong>contribution</strong> is whatever you add after that, whether you think of it as an <strong>annual contribution</strong> or a fixed monthly amount. Timing matters a little: a deposit made at the start of each month earns one extra month of interest compared with one made at the end, which is the difference between an annuity due and an ordinary annuity.</p>
+
+<h3>Interest Rate Assumptions</h3>
+<p>The <strong>interest rate</strong> is the most sensitive input. Many fixed contracts pay a higher introductory rate for a few years and then fall back toward a <strong>minimum guaranteed rate</strong> written into the contract, so a single rate is a simplification you should stress-test with a lower figure. Ask what <strong>rate of return</strong> you would need to reach your goal, then check whether the contract's guarantees come close to it.</p>
+
+<p>For a series of equal monthly deposits, the end value follows this relationship, where <em>i</em> is the annual rate divided by 12 and <em>n</em> is the number of months:</p>
+$$FV = P \times (1+i)^{n} + PMT \times \frac{(1+i)^{n}-1}{i} \times (1+i)$$
+<p>Here \(P\) is the starting principal and \(PMT\) is the monthly addition; the last factor \((1+i)\) applies only when deposits land at the beginning of each month.</p>
+        </section>
+        <section id="annuity-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="annuity-calculator-guide-heading-2">
+<h2 id="annuity-calculator-guide-heading-2">Annuity Payout Calculator Formula for Monthly Income</h2>
+<p>Growth is only half the story. Once the pot exists, the question becomes how much <strong>income</strong> it can support, and that is where an <strong>annuity payout calculator</strong> earns its keep. It reverses the accumulation math: instead of asking what deposits grow into, it asks what level payment drains a balance to zero over a chosen number of months.</p>
+$$PMT = B \times \frac{j}{1-(1+j)^{-N}}$$
+<p>In this version \(B\) is the balance you are converting, \(j\) is the monthly payout rate and \(N\) is the number of monthly <strong>payments</strong>. A longer payout window or a lower rate shrinks each check, which is exactly the trade-off insurers price when they quote you a <strong>lifetime income</strong> figure.</p>
+
+<h3>Monthly Income From a Lump Sum</h3>
+<p>A fixed-term payout is the easiest case to verify by hand, because nothing depends on a <strong>life expectancy</strong> table. Real quotes for a life contract also fold in your age, your health class and prevailing <strong>bond</strong> yields, so treat any fixed-term figure as a sanity check on the size of each monthly payment rather than an offer.</p>
+
+<h3>Payout Option and Payout Structure</h3>
+<p>Your <strong>payout option</strong> controls how long checks last and who collects them. A <strong>payout structure</strong> that guarantees ten years of checks to heirs pays slightly less each month than one that stops at death, because the insurer is promising to cover a longer potential stretch.</p>
+        </section>
+        <section id="annuity-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="annuity-calculator-guide-heading-3">
+<h2 id="annuity-calculator-guide-heading-3">Annuity Estimator Worked Example: $42,500 Grown Over 15 Years</h2>
+<p>Suppose you open a contract with a <strong>starting balance</strong> of <strong>$42,500</strong>, add <strong>$375</strong> at the start of every month, and assume a <strong>4.85%</strong> yearly rate compounded monthly for <strong>15 years</strong>. Running the formula above, the principal alone grows to roughly $87,842 and the stream of additions grows to about $99,388, so your <strong>end balance</strong> lands at <strong>$187,229.54</strong>. You deposit $42,500 plus $67,500 in additions, which means <strong>$77,229.54</strong> of that balance is <strong>interest earned</strong>. <!-- SILO_START:slot_d -->Pair this with the <a class="silo-link" href="/social-security-distribution-calculator.html">social security breakeven calculator online</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_d --></p>
+
+<h3>Accumulation Schedule by Year</h3>
+<p>The <strong>accumulation schedule</strong> below samples the balance at the end of selected years so you can see the curve steepen as interest begins to earn its own interest.</p>
+<table>
+<thead>
+<tr><th>Year</th><th>Deposits to date</th><th>End balance</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>$47,000</td><td>$49,227.68</td></tr>
+<tr><td>3</td><td>$56,000</td><td>$63,700.52</td></tr>
+<tr><td>5</td><td>$65,000</td><td>$79,644.46</td></tr>
+<tr><td>10</td><td>$87,500</td><td>$126,959.38</td></tr>
+<tr><td>15</td><td>$110,000</td><td>$187,229.54</td></tr>
+</tbody>
+</table>
+<p>Notice that the balance gains $7,061 in year two but $13,248 in year fifteen, even though your monthly addition never changed. That widening gap is <strong>compound</strong> growth at work, and it is why starting early beats adding more later.</p>
+<figure><img src="/assets/images/tools/annuity-calculator/annuity-balance-growth-over-15-years.svg" alt="Line chart of a contract balance growing from $42,500 to $187,229.54 over 15 years, with marked balances at years 5, 10 and 15"><figcaption>Balance at the end of years 5, 10 and 15 for $375 monthly additions at 4.85%.</figcaption></figure>
+
+<h3>End Balance Check: Beginning vs End of Month</h3>
+<p>Moving every deposit to the end of its month lowers the result to $186,829.47, a drop of $400.07. The difference is small for monthly deposits but widens fast if you contribute once a year, so match the timing to how you actually fund the contract.</p>
+
+<h3>Total Return and Where the Growth Comes From</h3>
+<p>Your <strong>total return</strong> of $77,229.54 breaks down into three shares of the final balance: 22.7% from the starting lump sum, 36.1% from your additions and 41.2% from interest. Interest is the biggest slice, which is the whole case for letting money sit in a <strong>tax-deferred</strong> wrapper rather than withdrawing gains along the way. The $77,229.54 here is the same interest-earned result the projection reports, before any tax is deducted.</p>
+<figure><img src="/assets/images/tools/annuity-calculator/annuity-end-balance-breakdown.svg" alt="Donut chart splitting a $187,229.54 end balance into starting principal, monthly additions and interest earned"><figcaption>Shares of the final balance: 22.7% starting principal, 36.1% additions, 41.2% interest.</figcaption></figure>
+
+<h3>Turning the Balance Into Payments</h3>
+<p>Now convert that $187,229.54 into a 20-year period-certain stream at a 4.20% payout rate. The formula gives <strong>$1,154.40 per month</strong>, or $277,056.62 in total over 240 months. Stretch the window to 25 years and the check falls to $1,009.06 per month, since the same pot has to cover 60 more <strong>payments</strong>.</p>
+<figure><img src="/assets/images/tools/annuity-calculator/annuity-monthly-income-by-payout-window.svg" alt="Bar chart of monthly income from a $187,229.54 balance paid out over 15, 20, 25 and 30 years at 4.20%"><figcaption>Level monthly payment from the same balance as the payout window lengthens.</figcaption></figure>
+        </section>
+        <section id="annuity-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="annuity-calculator-guide-heading-4">
+<h2 id="annuity-calculator-guide-heading-4">Checking a Retirement Income Gap With an Annuities Calculator</h2>
+<p>Dana is 52 and has worked out that Social Security plus a small pension will leave a gap of $1,050 a month at 63. A deferred fixed contract bought years ago holds $58,317, and Dana wants to know whether feeding it $520 a month at the start of each month closes that gap.</p>
+<p>Dana enters a starting balance of $58,317, a $520 monthly addition, a 4.35% rate, and 11 years, the stretch until age 63. The projection returns an end balance of <strong>$182,167.49</strong>: $58,317 of principal, $68,640 of additions and $55,210.49 of interest. Age 63 also clears the 59½ line the IRS uses for the 10% early withdrawal penalty, so no penalty applies when income begins.</p>
+<p>Next comes the conversion. Dana spreads that balance over 20 years at a 4.00% payout rate, using the payout formula, and gets <strong>$1,103.90 a month</strong>, which covers the $1,050 gap with $53.90 to spare.</p>
+<p>The 4.35% rate is not guaranteed, though. The contract's minimum guaranteed rate is 3.25%, so Dana reruns the growth with only that field changed. The end balance drops to $165,941.08, a shortfall of $16,226.42, and the same 20-year payout falls to $1,005.57, which is $44.43 short of the gap.</p>
+<table>
+<thead>
+<tr><th>Scenario</th><th>Rate</th><th>Monthly addition</th><th>End balance</th><th>20-year check</th></tr>
+</thead>
+<tbody>
+<tr><td>Expected</td><td>4.35%</td><td>$520</td><td>$182,167.49</td><td>$1,103.90</td></tr>
+<tr><td>Floor</td><td>3.25%</td><td>$520</td><td>$165,941.08</td><td>$1,005.57</td></tr>
+<tr><td>Floor, higher addition</td><td>3.25%</td><td>$575</td><td>$174,677.89</td><td>$1,058.51</td></tr>
+</tbody>
+</table>
+<p>Raising the addition to $575 a month under the floor rate lifts the check to $1,058.51, so Dana sets up the $575 transfer, which keeps the plan above $1,050 even if the credited rate never rises above the guarantee.</p>
+        </section>
+        <section id="annuity-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="annuity-calculator-guide-heading-5">
+<h2 id="annuity-calculator-guide-heading-5">Immediate Annuity and Deferred Annuity Choices in an Income Annuity Estimator</h2>
+<p>An <strong>income annuity estimator</strong> asks when you want checks to begin, and that start date, together with your payout option, changes the inputs and results you read from the projection. The answer splits contracts into two families with very different jobs.</p>
+
+<h3>Immediate Annuity vs Deferred Annuity</h3>
+<p>An <strong>immediate annuity</strong>, often sold as a single premium immediate annuity, starts paying within about a year of your <strong>premium</strong>, so it has almost no accumulation phase. A <strong>deferred annuity</strong> waits, sometimes for decades, and the longer the wait the larger each future check can be because your <strong>lump sum</strong> keeps growing and the insurer expects fewer years of payments. Retirees who need cash flow now lean immediate; savers still working lean deferred.</p>
+
+<h3>Single Life vs Joint Life Payments</h3>
+<p>A <strong>single life</strong> payout stops at your death and therefore pays the most each month. A <strong>joint life</strong> option keeps paying while either of two people is alive, which gives <strong>spousal protection</strong> at the price of a smaller check. If a <strong>spouse</strong> depends on the income, the lower payment is usually the cost of that safety net.</p>
+
+<h3>Life Annuity With Period Certain</h3>
+<p>A <strong>life annuity</strong> with a <strong>period certain</strong> pays for as long as you live but guarantees a minimum number of years of checks to a <strong>beneficiary</strong>. It works as a middle path: more <strong>legacy protection</strong> than a single life contract, more lifetime coverage than a pure fixed-term deal. Some contracts also attach a <strong>death benefit</strong> that returns unused premium.</p>
+
+<h3>Fixed Annuity, Variable Annuity and Indexed Annuity</h3>
+<p>A <strong>variable annuity</strong> lets you pick <strong>mutual funds</strong> inside the contract, so its value follows <strong>stocks</strong> and bonds and can fall below what you put in. An <strong>indexed annuity</strong> ties credited interest to an index such as the <strong>S&P 500</strong> but applies a <strong>cap</strong> and uses <strong>crediting formulas</strong> that pass along only part of the gain, in exchange for a floor on losses. The projection here models the fixed-rate case, which skips that machinery entirely, and a <strong>multi-year guarantee annuities</strong> product, known as a <strong>MYGA</strong>, locks one rate for a set term much like <strong>certificates of deposit</strong> do, with tax deferral added on top.</p>
+
+<h3>Federal Employees and Thrift Savings Plan Annuities</h3>
+<p>If you are a <strong>federal</strong> worker, a <strong>TSP annuity calculator</strong> estimates what part of your <strong>Thrift Savings Plan</strong> balance could buy as a life income, using your age, any joint annuitant and the rate on the day you buy. In the projection above, that balance is simply your starting balance and the payout input. The resulting life annuity is separate from the basic <strong>pension</strong> your retirement system pays, so model it as an addition rather than a replacement.</p>
+        </section>
+        <section id="annuity-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="annuity-calculator-guide-heading-6">
+<h2 id="annuity-calculator-guide-heading-6">Annuities Calculator Variables That Change Your Lifetime Income</h2>
+<p>Whichever contract you pick, an <strong>annuities calculator</strong> is only as good as the assumptions you feed it, and a few of them deserve more scrutiny than the rest.</p>
+
+<h3>Age and Withdrawal Age</h3>
+<p>Your <strong>current age</strong> and your <strong>withdrawal age</strong> set how many years of accumulation you have, and your age at purchase sets the payout. The older you are when income begins, the shorter the insurer's expected payout stretch, so each monthly <strong>benefits</strong> check rises. Withdrawing before 59½ typically adds a 10% <strong>early withdrawal penalty</strong> on the earnings, on top of ordinary <strong>taxes</strong>.</p>
+
+<h3>Tax-Deferred Growth and Your Tax Rate</h3>
+<p>The projection above is pre-tax: earnings in a deferred contract are not taxed until you take them out, which is why the comparison hinges on your <strong>tax rate</strong> today versus in retirement. The <strong>tax shields</strong> work best when your bracket falls later. Unlike IRAs or <strong>401(k)s</strong>, a nonqualified contract has no annual limit on how much <strong>deposit</strong> you can make.</p>
+
+<h3>Inflation and Cost-of-Living Adjustments</h3>
+<p>A level check buys less every year because of <strong>inflation</strong>. Most fixed contracts omit <strong>cost-of-living adjustments</strong>, so a $1,154.40 payment today will have noticeably less purchasing power in 20 years, and you should weigh whether the contract offers an inflation rider or whether you need other growth assets alongside it.</p>
+        </section>
+        <section id="annuity-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="annuity-calculator-guide-heading-7">
+<h2 id="annuity-calculator-guide-heading-7">Payout Calculator Limits: Surrender Charges, Fees and Liquidity</h2>
+<p>A <strong>payout calculator</strong> shows gross math, but the contract's cost terms decide what you actually keep. Review them before you commit.</p>
+
+<h3>Surrender Charges Schedule</h3>
+<p>If you cancel early, the insurer deducts a <strong>surrender charge</strong> that is a percentage of the balance, often starting near 7% to 9% and stepping down over five to nine years. The projection excludes surrender charges and fees, so a real balance runs lower, and pulling out the $79,644.46 from our example in year five could cost thousands, which is why the <strong>surrender fee</strong> schedule belongs in your notes next to the interest rate. Every contract sets its own <strong>withdrawal</strong> allowances, and many permit about 10% a year without penalty.</p>
+
+<h3>Surrender Charges and Liquidity</h3>
+<p>Because of those <strong>surrender charges</strong>, and the way a single surrender charge can apply to a partial withdrawal, an annuity is a long-term <strong>investment</strong> and not a place for emergency money. <strong>Liquidity</strong> is the price you pay for the guarantees, and the penalty period can outlast your patience if your plans change.</p>
+
+<h3>Commission and Annual Fees</h3>
+<p>Because annuities are insurance products, sellers may earn a <strong>commission</strong> baked into the contract, and variable products add annual <strong>fees</strong> for the contract, the funds and any riders. Those <strong>fees</strong> reduce the projected balance and are not modeled, so compare them across offers with a <strong>financial</strong> planner who is not paid on the sale.</p>
+        </section>
+        <section id="annuity-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="annuity-calculator-guide-heading-8">
+<h2 id="annuity-calculator-guide-heading-8">Annuity Payout vs 401(k), IRA and Pension Income</h2>
+<p>Take the monthly income figure from the projection and set it beside your other income sources. An <strong>annuity payout</strong> makes sense as one leg of a wider <strong>retirement plan</strong>, not the whole of it. Annuities trade growth for certainty: they usually earn less than the <strong>stock market</strong>, land near <strong>fixed income</strong> yields such as <strong>treasury bonds</strong>, and carry less <strong>portfolio risk</strong> as a result. They fit best for a retiree whose goal is <strong>guaranteed income</strong> to cover essentials, with other money left to chase <strong>savings potential</strong>.</p>
+<ul>
+<li>Use the guaranteed check to cover fixed bills so the rest of your <strong>investment</strong> mix can stay invested.</li>
+<li>Pair it with a <strong>money market</strong> reserve for short-term needs, since the contract itself is illiquid.</li>
+<li>Check <strong>financial</strong> strength ratings of the insurer, because the promise is only as good as the company behind it.</li>
+</ul>
+<p>Whether you call it <strong>retirement income</strong>, <strong>guaranteed retirement income</strong> or simply a paycheck, the planning question is the same: how much of your <strong>retirement planning</strong> budget needs to be certain? Your answer is the share of savings you move into a contract, and the projection above tells you what that share could pay.</p>
+<p>Remember that an <strong>annuity owner</strong> and the <strong>annuitant</strong> can be different people, and that an <strong>investor</strong> who annuitizes generally cannot reverse the decision. Before you sign, stress-test the projection with a lower rate, a longer payout window and a later start, and keep any <strong>savings</strong> you cannot afford to lock up outside the contract. Treat that conservative <strong>risk</strong> check as part of the <strong>investment</strong> decision, not an afterthought.</p>
+        </section>
+      </div>
+
+      <section id="annuity-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="annuity-calculator-faq-heading" data-section="faq">
+        <h2 id="annuity-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Annuity Calculator questions</h2>
+        <div id="annuity-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="annuity-calculator-faq-1" class="faq-item" open><summary id="annuity-calculator-faq-1-summary" class="faq-summary"><h3 id="annuity-calculator-faq-1-question" class="faq-question">What does an annuity calculator show?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="annuity-calculator-faq-1-answer" class="faq-answer"><p>It projects the balance of an annuity during the accumulation phase: your starting principal plus regular additions, compounded at the interest rate you enter. The result is your end balance, total additions and interest earned.</p></div></details>
+          <details id="annuity-calculator-faq-2" class="faq-item" open><summary id="annuity-calculator-faq-2-summary" class="faq-summary"><h3 id="annuity-calculator-faq-2-question" class="faq-question">What is the difference between an annuity due and an ordinary annuity?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="annuity-calculator-faq-2-answer" class="faq-answer"><p>With an annuity due, each addition is made at the beginning of the period and earns interest for the full period. With an ordinary (immediate) annuity, additions are made at the end of the period, so the end balance is slightly lower.</p></div></details>
+          <details id="annuity-calculator-faq-3" class="faq-item" open><summary id="annuity-calculator-faq-3-summary" class="faq-summary"><h3 id="annuity-calculator-faq-3-question" class="faq-question">How are annuity payouts different from accumulation?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="annuity-calculator-faq-3-answer" class="faq-answer"><p>Accumulation is the saving stage, when your balance grows. The payout stage starts at annuitization, when the insurer converts the balance into income, and the monthly amount depends on your age, payout option and rates at purchase.</p></div></details>
+          <details id="annuity-calculator-faq-4" class="faq-item" open><summary id="annuity-calculator-faq-4-summary" class="faq-summary"><h3 id="annuity-calculator-faq-4-question" class="faq-question">What is a surrender charge?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="annuity-calculator-faq-4-answer" class="faq-answer"><p>A surrender charge is a percentage of your balance the insurer deducts if you withdraw or cancel early, usually during the first several years of the contract. This calculator applies the charge that matches the withdrawal year you set.</p></div></details>
+          <details id="annuity-calculator-faq-5" class="faq-item" open><summary id="annuity-calculator-faq-5-summary" class="faq-summary"><h3 id="annuity-calculator-faq-5-question" class="faq-question">Are annuity earnings taxed?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="annuity-calculator-faq-5-answer" class="faq-answer"><p>Earnings in a deferred annuity are tax-deferred, so you pay ordinary income tax only when you withdraw them. Withdrawals before age 59½ can also add a 10% IRS early withdrawal penalty.</p></div></details>
+          <details id="annuity-calculator-faq-6" class="faq-item" open><summary id="annuity-calculator-faq-6-summary" class="faq-summary"><h3 id="annuity-calculator-faq-6-question" class="faq-question">How do immediate and deferred annuities differ?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="annuity-calculator-faq-6-answer" class="faq-answer"><p>An immediate annuity begins paying income within about a year of purchase. A deferred annuity waits, letting the balance grow first; the longer the deferral, the larger the eventual income can be.</p></div></details>
+          <details id="annuity-calculator-faq-7" class="faq-item" open><summary id="annuity-calculator-faq-7-summary" class="faq-summary"><h3 id="annuity-calculator-faq-7-question" class="faq-question">What interest rate should I enter?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="annuity-calculator-faq-7-answer" class="faq-answer"><p>Use the initial rate your contract guarantees, then an expected average rate for later years. The minimum guaranteed rate acts as a floor, so test a lower figure to see the worst case your contract allows.</p></div></details>
+          <details id="annuity-calculator-faq-8" class="faq-item" open><summary id="annuity-calculator-faq-8-summary" class="faq-summary"><h3 id="annuity-calculator-faq-8-question" class="faq-question">Does the calculator include fees?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="annuity-calculator-faq-8-answer" class="faq-answer"><p>No. Annual fees, riders and commissions reduce real balances, so treat the result as an upper-end projection and compare it against the contract&#x27;s actual cost terms.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="annuity-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="annuity-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="annuity-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="annuity-calculator-ad-bottom-leaderboard">
+            <ins id="annuity-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("annuity-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="annuity-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="annuity-calculator-right-rail-top" class="mb-6">
+        <aside id="annuity-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="annuity-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="annuity-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="annuity-calculator-ad-right-rail-rectangle">
+            <ins id="annuity-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("annuity-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="annuity-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="annuity-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="annuity-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="annuity-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="annuity-calculator-ad-right-rail-skyscraper">
+            <ins id="annuity-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("annuity-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="annuity-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="annuity-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="annuity-calculator-footer-brand">
+        <a id="annuity-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="annuity-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="annuity-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="annuity-calculator-footer-categories" aria-labelledby="annuity-calculator-footer-categories-heading">
+        <h2 id="annuity-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="annuity-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="annuity-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="annuity-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="annuity-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="annuity-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="annuity-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="annuity-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="annuity-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="annuity-calculator-footer-company" aria-labelledby="annuity-calculator-footer-company-heading">
+        <h2 id="annuity-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="annuity-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="annuity-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="annuity-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="annuity-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="annuity-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="annuity-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="annuity-calculator-footer-bottom" class="border-t border-line">
+      <p id="annuity-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="annuity-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Annuity accumulation, stepped monthly. The annual growth rate r is an effective yearly rate, so
+  // the monthly rate is (1 + r)^(1/12) - 1. Yearly additions land at the start or end of each year,
+  // monthly additions at the start or end of each month (annuity due vs ordinary annuity).
+  // Payout estimate: level monthly payment that runs the ending balance to $0 over the payout years,
+  //   PMT = B x j / (1 - (1 + j)^-n), divided by (1 + j) when paid at the start of each month,
+  //   with j = (1 + payout rate)^(1/12) - 1 and n = payout years x 12.
+  // Checked in Node (an.test.js): $20,000 + $10,000 a year at the start, 6%, 10 years = $175,533.38
+  // (= 20000 x 1.06^10 + 10000 x 1.06 x (1.06^10 - 1) / 0.06; also the default result shown by a
+  // competitor's annuity calculator); end-of-year version = $167,624.90; monthly additions only,
+  // $200 for 10 years at 0% = $24,000; $100,000 paid out over 20 years at 4% gives a payment whose
+  // present value equals $100,000 and leaves a $0 balance after 240 months.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 });
+  var OUTPUTS = ['anBalance', 'anAdded', 'anGrowth', 'anIncome', 'anStartOut', 'anShare', 'anPaidOut', 'anPayLength'];
+
+  // --- calc start
+  // p: start, annual, monthly, rate (decimal, effective yearly), years, due (bool)
+  function accumulate(p) {
+    var j = Math.pow(1 + p.rate, 1 / 12) - 1;
+    var bal = p.start, added = 0, rows = [], yAdd = 0, yGrowth = 0;
+    for (var m = 1; m <= p.years * 12; m++) {
+      var monthStart = 0, monthEnd = 0;
+      if (p.due) { monthStart += p.monthly; if (m % 12 === 1) monthStart += p.annual; }
+      else { monthEnd += p.monthly; if (m % 12 === 0) monthEnd += p.annual; }
+      bal += monthStart;
+      var g = bal * j;
+      bal += g + monthEnd;
+      added += monthStart + monthEnd; yAdd += monthStart + monthEnd; yGrowth += g;
+      if (m % 12 === 0) { rows.push({ year: m / 12, added: yAdd, growth: yGrowth, balance: bal }); yAdd = 0; yGrowth = 0; }
+    }
+    return { balance: bal, added: added, rows: rows };
+  }
+
+  function payout(balance, rate, years, due) {
+    var j = Math.pow(1 + rate, 1 / 12) - 1, n = years * 12;
+    var pmt = j === 0 ? balance / n : balance * j / (1 - Math.pow(1 + j, -n));
+    if (due) pmt /= 1 + j;
+    return pmt;
+  }
+  // --- calc end
+
+  function num(id) {
+    var v = parseFloat(document.getElementById(id).value);
+    return isNaN(v) ? NaN : v;
+  }
+
+  function fail(msg) {
+    var error = document.getElementById('anError');
+    error.hidden = false;
+    error.textContent = msg;
+    OUTPUTS.forEach(function (id) { document.getElementById(id).textContent = '–'; });
+    document.getElementById('anSchedule').innerHTML = '';
+  }
+
+  function update() {
+    var start = num('anStart'), annual = num('anAnnual'), monthly = num('anMonthly'), rate = num('anRate'),
+        years = num('anYears'), payYears = num('anPayYears'), payRate = num('anPayRate');
+    var due = document.getElementById('anTiming').value === 'begin';
+    document.getElementById('anError').hidden = true;
+    if ([start, annual, monthly, rate, years, payYears, payRate].some(isNaN)) return fail('Fill in every field with a number (0 is fine for amounts you do not use).');
+    if (start < 0 || annual < 0 || monthly < 0) return fail('Amounts cannot be negative.');
+    if (start + annual + monthly <= 0) return fail('Enter a starting principal or an addition.');
+    if (rate < 0 || rate > 30 || payRate < 0 || payRate > 30) return fail('Enter growth rates from 0 to 30%.');
+    years = Math.round(years); payYears = Math.round(payYears);
+    if (years < 1 || years > 60) return fail('Enter 1 to 60 years to grow.');
+    if (payYears < 1 || payYears > 50) return fail('Enter a payout period of 1 to 50 years.');
+    var r = accumulate({ start: start, annual: annual, monthly: monthly, rate: rate / 100, years: years, due: due });
+    var pmt = payout(r.balance, payRate / 100, payYears, due);
+    var growth = r.balance - start - r.added;
+    document.getElementById('anBalance').textContent = money.format(r.balance);
+    document.getElementById('anAdded').textContent = money.format(r.added);
+    document.getElementById('anGrowth').textContent = money.format(growth);
+    document.getElementById('anIncome').textContent = money.format(pmt);
+    document.getElementById('anStartOut').textContent = money.format(start);
+    document.getElementById('anShare').textContent = (r.balance > 0 ? growth / r.balance * 100 : 0).toFixed(1) + '%';
+    document.getElementById('anPaidOut').textContent = money.format(pmt * payYears * 12);
+    document.getElementById('anPayLength').textContent = payYears + (payYears === 1 ? ' year' : ' years') + ' (' + payYears * 12 + ' payments)';
+    document.getElementById('anSchedule').innerHTML = r.rows.map(function (row) {
+      return '<tr><td>' + row.year + '</td><td>' + money.format(row.added) + '</td><td>' +
+             money.format(row.growth) + '</td><td>' + money.format(row.balance) + '</td></tr>';
+    }).join('');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('anForm');
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

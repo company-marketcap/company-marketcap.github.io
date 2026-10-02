@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en" id="dividend-tax-calculator-document" data-page-slug="dividend-tax-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dividend Tax Calculator: Qualified vs Ordinary (2026)</title>
+  <meta name="description" content="Estimate 2026 federal tax on qualified and ordinary dividends using the 0%, 15% and 20% rates, your tax bracket and the 3.8% net investment income tax.">
+  <link rel="canonical" href="https://company-marketcap.github.io/dividend-tax-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Dividend Tax Calculator: Qualified vs Ordinary (2026)">
+  <meta property="og:description" content="Estimate 2026 federal tax on qualified and ordinary dividends using the 0%, 15% and 20% rates, your tax bracket and the 3.8% net investment income tax.">
+  <meta property="og:url" content="https://company-marketcap.github.io/dividend-tax-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Dividend Tax Calculator", "url": "https://company-marketcap.github.io/dividend-tax-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Estimate 2026 federal tax on qualified and ordinary dividends using the 0%, 15% and 20% rates, your tax bracket and the 3.8% net investment income tax."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Income Tax & Tax Planning", "item": "https://company-marketcap.github.io/financial-calculators.html#tax-calculators"}, {"@type": "ListItem", "position": 4, "name": "Dividend Tax Calculator", "item": "https://company-marketcap.github.io/dividend-tax-calculator.html"}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="dividend-tax-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="dividend-tax-calculator" data-page-type="calculator">
+  <a id="dividend-tax-calculator-skip-link" href="#dividend-tax-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="dividend-tax-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="dividend-tax-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="dividend-tax-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="dividend-tax-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="dividend-tax-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="dividend-tax-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="dividend-tax-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="dividend-tax-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="dividend-tax-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="dividend-tax-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="dividend-tax-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="dividend-tax-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="dividend-tax-calculator-header-search-status" aria-controls="dividend-tax-calculator-header-search-results" data-search-input="header">
+              <p id="dividend-tax-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="dividend-tax-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="dividend-tax-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="dividend-tax-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="dividend-tax-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="dividend-tax-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="dividend-tax-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="dividend-tax-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="dividend-tax-calculator-mobile-search-status" aria-controls="dividend-tax-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="dividend-tax-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="dividend-tax-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="dividend-tax-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="dividend-tax-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="dividend-tax-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="dividend-tax-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="dividend-tax-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="dividend-tax-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="dividend-tax-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="dividend-tax-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="dividend-tax-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="dividend-tax-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="dividend-tax-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="dividend-tax-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="dividend-tax-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="dividend-tax-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="dividend-tax-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="dividend-tax-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="dividend-tax-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="dividend-tax-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="dividend-tax-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="dividend-tax-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="dividend-tax-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="dividend-tax-calculator-sidebar-search-status" aria-controls="dividend-tax-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="dividend-tax-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="dividend-tax-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="dividend-tax-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="dividend-tax-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="dividend-tax-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="dividend-tax-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="dividend-tax-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="dividend-tax-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="dividend-tax-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="dividend-tax-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="dividend-tax-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="dividend-tax-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="dividend-tax-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="dividend-tax-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="dividend-tax-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="dividend-tax-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="dividend-tax-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="dividend-tax-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="dividend-tax-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="dividend-tax-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="dividend-tax-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="dividend-tax-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="dividend-tax-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators" aria-current="true">Income Tax &amp; Planning</a></li><li><a id="dividend-tax-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="dividend-tax-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="dividend-tax-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="dividend-tax-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="dividend-tax-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="dividend-tax-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="dividend-tax-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="dividend-tax-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="dividend-tax-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="dividend-tax-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="dividend-tax-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="dividend-tax-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="dividend-tax-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="dividend-tax-calculator" data-calculator-slug="dividend-tax-calculator" data-sub-category-slug="tax-calculators">
+      <aside id="dividend-tax-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="dividend-tax-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="dividend-tax-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="dividend-tax-calculator-ad-top-leaderboard">
+            <ins id="dividend-tax-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("dividend-tax-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="dividend-tax-calculator-intro-area" class="space-y-4">
+        <nav id="dividend-tax-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="dividend-tax-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="dividend-tax-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="dividend-tax-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="dividend-tax-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#tax-calculators" itemprop="item"><span itemprop="name">Income Tax &amp; Tax Planning</span></a><meta itemprop="position" content="3"></li>
+            <li id="dividend-tax-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Dividend Tax Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/dividend-tax-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="dividend-tax-calculator-hero-section" aria-labelledby="dividend-tax-calculator-hero-heading" data-section="hero">
+          <h1 id="dividend-tax-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Dividend Tax Calculator</h1>
+          <p id="dividend-tax-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Estimate how much federal tax you will owe on your dividends in 2026, with qualified dividends at the 0%, 15% or 20% rates, ordinary dividends at your bracket and the 3.8% net investment income tax. <!-- SILO_START:slot_a -->Try the <a class="silo-link" href="/income-tax-calculator.html">free income tax calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="dividend-tax-calculator-tool" class="space-y-6" data-page-slug="dividend-tax-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="dtFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="dtForm" class="space-y-5" novalidate aria-labelledby="dtFormHeading">
+      <h2 id="dtFormHeading" class="panel-heading">Enter your 2026 income</h2>
+      <div><label for="dtStatus" class="form-label">Filing status</label>
+        <select id="dtStatus" class="form-select"><option value="single" selected>Single</option><option value="mfj">Married filing jointly</option><option value="mfs">Married filing separately</option><option value="hoh">Head of household</option></select></div>
+      <div class="form-row form-row-2">
+        <div><label for="dtTotal" class="form-label">Total ordinary dividends</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="dtTotal" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="12000" inputmode="decimal"></div><p class="form-hint">Form 1099-DIV box 1a, which includes qualified dividends.</p></div>
+        <div><label for="dtQualified" class="form-label">Of which qualified</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="dtQualified" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="10000" inputmode="decimal"></div><p class="form-hint">Form 1099-DIV box 1b.</p></div>
+      </div>
+      <div><label for="dtOther" class="form-label">Other income</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="dtOther" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1000" value="60000" inputmode="decimal"></div><p class="form-hint">Wages, interest, retirement income and other taxable income before deductions, not counting dividends.</p></div>
+      <div><label for="dtDeduction" class="form-label">Deductions</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="dtDeduction" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="16100" inputmode="decimal"></div><p id="dtDeductionHint" class="form-hint">2026 standard deduction for your filing status: $16,100. Enter your itemized total if larger.</p></div>
+      <details class="form-details"><summary class="form-details-summary">More options</summary>
+        <div><label for="dtInvest" class="form-label">Other investment income</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="dtInvest" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="0" inputmode="decimal"></div><p class="form-hint">Interest, rents and capital gains already included in other income. Counts toward the 3.8% tax only.</p></div>
+        <div><label for="dtState" class="form-label">State income tax rate on dividends</label><div class="input-group"><input type="number" id="dtState" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="20" step="0.1" value="0" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">Most states tax all dividends as ordinary income.</p></div>
+      </details>
+      <p id="dtError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="dtResults" aria-live="polite" aria-labelledby="dtResultsHeading">
+      <h2 id="dtResultsHeading" class="panel-heading">Your results</h2>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p class="stat-label">Tax on your dividends</p><p id="dtTax" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Effective rate on dividends</p><p id="dtRate" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Dividends after tax</p><p id="dtAfter" class="stat-value">–</p></div>
+      </div>
+      <div class="mt-5">
+        <h3 class="text-sm font-semibold text-ink">Breakdown</h3>
+        <div class="result-row"><span class="result-term">Tax on qualified dividends</span><span id="dtQualTax" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Tax on nonqualified dividends</span><span id="dtOrdTax" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Net investment income tax (3.8%)</span><span id="dtNiit" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">State tax</span><span id="dtStateTax" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Taxable income with dividends</span><span id="dtTaxable" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Saved by qualified treatment</span><span id="dtSaved" class="result-value">–</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="dtBandsHeading" data-section="schedule">
+  <h2 id="dtBandsHeading" class="panel-heading">How your dividends are taxed</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">Dividends sit on top of your other income: nonqualified dividends fill your ordinary brackets first, then qualified dividends use the 2026 capital gains rates.</p>
+  <div class="table-scroll mt-5" tabindex="0" role="region" aria-labelledby="dtBandsHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Portion</th><th scope="col">Rate</th><th scope="col">Amount</th><th scope="col">Tax</th></tr></thead>
+      <tbody id="dtBands"></tbody>
+    </table>
+  </div>
+  <div class="mt-5">
+    <h3 class="text-sm font-semibold text-ink">2026 qualified dividend rates by taxable income</h3>
+    <div class="table-scroll mt-3">
+      <table class="data-table">
+        <thead><tr><th scope="col">Filing status</th><th scope="col">0% up to</th><th scope="col">15% up to</th><th scope="col">20% above</th><th scope="col">3.8% NIIT above (MAGI)</th></tr></thead>
+        <tbody id="dtRates"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+        <p id="dividend-tax-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="dividend-tax-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Estimate how much federal tax you will owe on your dividends in 2026, with qualified dividends at the 0%, 15% or 20% rates, ordinary dividends at your bracket and the 3.8% net investment income tax. <!-- SILO_START:slot_a_m -->Try the <a class="silo-link" href="/income-tax-calculator.html">free income tax calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="dividend-tax-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="dividend-tax-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="dividend-tax-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="dividend-tax-calculator-ad-in-feed">
+            <ins id="dividend-tax-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("dividend-tax-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      
+
+      
+
+      <nav id="dividend-tax-calculator-related-section" class="border-t border-line pt-8" aria-labelledby="dividend-tax-calculator-related-heading" data-section="related-calculators">
+        <h2 id="dividend-tax-calculator-related-heading" class="guide-heading">Related calculators</h2>
+        <ul id="dividend-tax-calculator-related-list" class="mt-5 grid gap-3 @2xl:grid-cols-2 @5xl:grid-cols-3" role="list">
+          <li><a id="dividend-tax-calculator-related-link-income-tax-calculator" class="related-link" href="/income-tax-calculator.html" data-calculator-name="Income Tax Calculator" data-category-name="Income Tax &amp; Tax Planning">Income Tax Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
+          <li><a id="dividend-tax-calculator-related-link-tax-harvesting" class="related-link" href="/tax-harvesting.html" data-calculator-name="Tax-Loss Harvesting Calculator" data-category-name="Income Tax &amp; Tax Planning">Tax-Loss Harvesting Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
+          <li><a id="dividend-tax-calculator-related-link-dividend-reinvestment" class="related-link" href="/dividend-reinvestment.html" data-calculator-name="Dividend Reinvestment Breakeven Calculator" data-category-name="Stocks, Dividends &amp; Trading">Dividend Reinvestment Breakeven Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
+          <li><a id="dividend-tax-calculator-related-link-tax-equivalent-yield-calculator" class="related-link" href="/tax-equivalent-yield-calculator.html" data-calculator-name="Tax-Equivalent Yield Calculator" data-category-name="Bonds, CDs &amp; Fixed Income">Tax-Equivalent Yield Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
+          <li><a id="dividend-tax-calculator-related-link-estate-tax-calculator" class="related-link" href="/estate-tax-calculator.html" data-calculator-name="Estate Tax Calculator" data-category-name="Income Tax &amp; Tax Planning">Estate Tax Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
+          <li><a id="dividend-tax-calculator-related-link-charitable-giving-tax-savings-calculator" class="related-link" href="/charitable-giving-tax-savings-calculator.html" data-calculator-name="Charitable Giving Tax Savings Calculator" data-category-name="Income Tax &amp; Tax Planning">Charitable Giving Tax Savings Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
+        </ul>
+      </nav>
+
+      <aside id="dividend-tax-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="dividend-tax-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="dividend-tax-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="dividend-tax-calculator-ad-bottom-leaderboard">
+            <ins id="dividend-tax-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("dividend-tax-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="dividend-tax-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="dividend-tax-calculator-right-rail-top" class="mb-6">
+        <aside id="dividend-tax-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="dividend-tax-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="dividend-tax-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="dividend-tax-calculator-ad-right-rail-rectangle">
+            <ins id="dividend-tax-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("dividend-tax-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="dividend-tax-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="dividend-tax-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="dividend-tax-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="dividend-tax-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="dividend-tax-calculator-ad-right-rail-skyscraper">
+            <ins id="dividend-tax-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("dividend-tax-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="dividend-tax-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="dividend-tax-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="dividend-tax-calculator-footer-brand">
+        <a id="dividend-tax-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="dividend-tax-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="dividend-tax-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="dividend-tax-calculator-footer-categories" aria-labelledby="dividend-tax-calculator-footer-categories-heading">
+        <h2 id="dividend-tax-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="dividend-tax-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="dividend-tax-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="dividend-tax-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="dividend-tax-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="dividend-tax-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="dividend-tax-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="dividend-tax-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="dividend-tax-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="dividend-tax-calculator-footer-company" aria-labelledby="dividend-tax-calculator-footer-company-heading">
+        <h2 id="dividend-tax-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="dividend-tax-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="dividend-tax-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="dividend-tax-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="dividend-tax-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="dividend-tax-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="dividend-tax-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="dividend-tax-calculator-footer-bottom" class="border-t border-line">
+      <p id="dividend-tax-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="dividend-tax-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+
+<script>(function () {
+  'use strict';
+  // ===== Tax figures: tax year 2026 =====
+  // Ordinary brackets, standard deductions and capital gains breakpoints: IRS Rev. Proc. 2025-32,
+  // sections 4.01, 4.03 and 4.14 (2026 inflation adjustments, as amended by P.L. 119-21).
+  // Net investment income tax: IRC section 1411, 3.8% of the smaller of net investment income or
+  // MAGI over the threshold; thresholds are statutory and not indexed.
+  var TAX_YEAR = 2026;
+  var BRACKETS = { // upper limit of each band; rates 10, 12, 22, 24, 32, 35, 37%
+    single: [12400, 50400, 105700, 201775, 256225, 640600],
+    mfj: [24800, 100800, 211400, 403550, 512450, 768700],
+    hoh: [17700, 67450, 105700, 201750, 256200, 640600],
+    mfs: [12400, 50400, 105700, 201775, 256225, 384350]
+  };
+  var RATES = [0.10, 0.12, 0.22, 0.24, 0.32, 0.35, 0.37];
+  var CG_BREAKS = { // taxable income where the 0% rate ends and the 15% rate ends
+    single: [49450, 545500], mfj: [98900, 613700], hoh: [66200, 579600], mfs: [49450, 306850]
+  };
+  var STANDARD_DEDUCTION = { single: 16100, mfj: 32200, mfs: 16100, hoh: 24150 };
+  var NIIT_RATE = 0.038, NIIT_THRESHOLD = { single: 200000, hoh: 200000, mfj: 250000, mfs: 125000 };
+  // ======================================
+  // Method: the Qualified Dividends and Capital Gain Tax Worksheet. Taxable income = other income
+  // + all dividends - deductions; qualified dividends sit on top at 0/15/20%, the rest is taxed at
+  // the ordinary brackets (tax = smaller of that and regular tax on everything). The dividend tax is
+  // the federal tax with dividends minus the tax without them, plus NIIT and the state rate.
+  // MAGI for NIIT is approximated as other income + dividends (no foreign exclusions).
+  // Checked in Node (scratch tests, by hand): single, $60,000 other, $16,100 deduction, $12,000
+  //   dividends of which $10,000 qualified -> taxable $55,900; ordinary tax on $45,900 = $5,260;
+  //   $3,550 of qualified at 0% and $6,450 at 15% = $967.50; without dividends tax on $43,900 =
+  //   $5,020 -> $240 (12% of $2,000) + $967.50 = $1,207.50. Single $250,000 other + $20,000
+  //   qualified -> 15% = $3,000 + NIIT 3.8% x $20,000 = $760. MFJ $0 other, $80,000 qualified,
+  //   $32,200 deduction -> taxable $47,800, all at 0%. Rate-table check: single $92,000 = $14,952.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  var whole = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+  var STATUS_NAMES = { single: 'Single', mfj: 'Married filing jointly', mfs: 'Married filing separately', hoh: 'Head of household' };
+
+  function ordinaryTax(income, status) {
+    var limits = BRACKETS[status], tax = 0, lower = 0;
+    for (var i = 0; i < RATES.length; i++) {
+      var upper = i < limits.length ? limits[i] : Infinity;
+      if (income > lower) tax += (Math.min(income, upper) - lower) * RATES[i];
+      lower = upper;
+    }
+    return tax;
+  }
+
+  // Ordinary-rate bands that the slice of income from `from` to `to` falls into.
+  function ordinarySlices(from, to, status) {
+    var limits = BRACKETS[status], out = [], lower = 0;
+    for (var i = 0; i < RATES.length; i++) {
+      var upper = i < limits.length ? limits[i] : Infinity;
+      var amt = Math.max(0, Math.min(to, upper) - Math.max(from, lower));
+      if (amt > 0) out.push({ rate: RATES[i], amount: amt });
+      lower = upper;
+    }
+    return out;
+  }
+
+  function dividendTax(p) {
+    var nonQual = p.total - p.qualified;
+    var taxable = Math.max(0, p.other + p.total - p.deduction);
+    var taxableWithout = Math.max(0, p.other - p.deduction);
+    var pref = Math.min(p.qualified, taxable), base = taxable - pref;
+    var b = CG_BREAKS[p.status];
+    var zero = Math.max(0, Math.min(taxable, b[0]) - base);
+    var mid = Math.max(0, Math.min(taxable, b[1]) - Math.max(base, b[0]));
+    var top = Math.max(0, taxable - Math.max(base, b[1]));
+    var withDiv = Math.min(ordinaryTax(base, p.status) + 0.15 * mid + 0.20 * top, ordinaryTax(taxable, p.status));
+    var without = ordinaryTax(taxableWithout, p.status);
+    var fed = withDiv - without;
+    var ordTax = ordinaryTax(base, p.status) - without;
+    var qualTax = fed - ordTax;
+    var magi = p.other + p.total;
+    var niit = NIIT_RATE * Math.max(0, Math.min(p.total + p.invest, magi - NIIT_THRESHOLD[p.status]));
+    // Only the dividends' share of NIIT: the tax with them minus the tax without them.
+    var niitWithout = NIIT_RATE * Math.max(0, Math.min(p.invest, p.other - NIIT_THRESHOLD[p.status]));
+    var niitDiv = niit - niitWithout;
+    var state = p.total * p.stateRate;
+    var allOrdinary = ordinaryTax(taxable, p.status) - without;
+    return {
+      nonQual: nonQual, taxable: taxable, fed: fed, ordTax: ordTax, qualTax: qualTax, niit: niitDiv, state: state,
+      total: fed + niitDiv + state, saved: Math.max(0, allOrdinary - fed),
+      ordSlices: ordinarySlices(taxableWithout, base, p.status), zero: zero, mid: mid, top: top
+    };
+  }
+
+  function num(id) {
+    var el = document.getElementById(id);
+    var v = el ? parseFloat(el.value) : NaN;
+    return isNaN(v) ? NaN : v;
+  }
+  function set(id, text) { var el = document.getElementById(id); if (el) el.textContent = text; }
+  function pctText(r) { return (Math.round(r * 1000) / 10) + '%'; }
+
+  var lastStatus = 'single';
+  function update() {
+    var status = document.getElementById('dtStatus').value;
+    var dedEl = document.getElementById('dtDeduction');
+    // Keep the deduction in step with the filing status while it still shows a standard amount.
+    if (status !== lastStatus && parseFloat(dedEl.value) === STANDARD_DEDUCTION[lastStatus]) dedEl.value = String(STANDARD_DEDUCTION[status]);
+    lastStatus = status;
+    set('dtDeductionHint', TAX_YEAR + ' standard deduction for your filing status: ' + whole.format(STANDARD_DEDUCTION[status]) +
+        '. Enter your itemized total if larger.');
+    var p = { status: status, total: num('dtTotal'), qualified: num('dtQualified'), other: num('dtOther'),
+              deduction: num('dtDeduction'), invest: num('dtInvest'), stateRate: num('dtState') };
+    if (isNaN(p.invest)) p.invest = 0;
+    if (isNaN(p.stateRate)) p.stateRate = 0;
+    var error = document.getElementById('dtError');
+    var bad = [p.total, p.qualified, p.other, p.deduction].some(isNaN) || p.total < 0 || p.qualified < 0 ||
+              p.other < 0 || p.deduction < 0 || p.invest < 0 || p.stateRate < 0 || p.stateRate > 20 || p.qualified > p.total;
+    error.hidden = !bad;
+    if (bad) {
+      error.textContent = p.qualified > p.total ? 'Qualified dividends are part of total ordinary dividends, so they cannot be larger.'
+        : 'Enter amounts of 0 or more and a state rate from 0 to 20%.';
+      return;
+    }
+    p.stateRate /= 100;
+    var r = dividendTax(p);
+    set('dtTax', money.format(r.total));
+    set('dtRate', p.total > 0 ? pctText(r.total / p.total) : '–');
+    set('dtAfter', money.format(p.total - r.total));
+    set('dtQualTax', money.format(r.qualTax));
+    set('dtOrdTax', money.format(r.ordTax));
+    set('dtNiit', money.format(r.niit));
+    set('dtStateTax', money.format(r.state));
+    set('dtTaxable', whole.format(r.taxable));
+    set('dtSaved', money.format(r.saved));
+
+    var rows = [];
+    function row(label, rate, amt, tax) {
+      rows.push('<tr><td>' + label + '</td><td>' + rate + '</td><td>' + money.format(amt) + '</td><td>' + money.format(tax) + '</td></tr>');
+    }
+    var sheltered = r.nonQual + p.qualified - r.ordSlices.reduce(function (s, x) { return s + x.amount; }, 0) - r.zero - r.mid - r.top;
+    if (sheltered > 0.005) row('Covered by deductions', '0%', sheltered, 0);
+    r.ordSlices.forEach(function (s) { row('Nonqualified', pctText(s.rate), s.amount, s.amount * s.rate); });
+    if (r.zero > 0) row('Qualified', '0%', r.zero, 0);
+    if (r.mid > 0) row('Qualified', '15%', r.mid, r.mid * 0.15);
+    if (r.top > 0) row('Qualified', '20%', r.top, r.top * 0.20);
+    if (r.niit > 0) row('Net investment income tax', '3.8%', r.niit / NIIT_RATE, r.niit);
+    if (r.state > 0) row('State', pctText(p.stateRate), p.total, r.state);
+    if (!rows.length) rows.push('<tr><td colspan="4">Enter your dividends to see how they are taxed.</td></tr>');
+    document.getElementById('dtBands').innerHTML = rows.join('');
+
+    document.getElementById('dtRates').innerHTML = ['single', 'mfj', 'mfs', 'hoh'].map(function (s) {
+      return '<tr><td>' + STATUS_NAMES[s] + '</td><td>' + whole.format(CG_BREAKS[s][0]) + '</td><td>' + whole.format(CG_BREAKS[s][1]) +
+             '</td><td>' + whole.format(CG_BREAKS[s][1]) + '</td><td>' + whole.format(NIIT_THRESHOLD[s]) + '</td></tr>';
+    }).join('');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('dtForm');
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

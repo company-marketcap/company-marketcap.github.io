@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en" id="investment-savings-and-distributions-calculator-document" data-page-slug="investment-savings-and-distributions-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Investment Savings and Distributions Calculator</title>
+  <meta name="description" content="Plan years of saving followed by years of withdrawals: see the balance you build, the most you can withdraw, and a year-by-year balance path.">
+  <link rel="canonical" href="https://company-marketcap.github.io/investment-savings-and-distributions-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Investment Savings and Distributions Calculator">
+  <meta property="og:description" content="Plan years of saving followed by years of withdrawals: see the balance you build, the most you can withdraw, and a year-by-year balance path.">
+  <meta property="og:url" content="https://company-marketcap.github.io/investment-savings-and-distributions-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Investment Savings and Distributions Calculator", "url": "https://company-marketcap.github.io/investment-savings-and-distributions-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Plan years of saving followed by years of withdrawals: see the balance you build, the most you can withdraw, and a year-by-year balance path."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Investment Returns & Growth", "item": "https://company-marketcap.github.io/financial-calculators.html#investment-calculators"}, {"@type": "ListItem", "position": 4, "name": "Investment Savings and Distributions Calculator", "item": "https://company-marketcap.github.io/investment-savings-and-distributions-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does the investment savings and distributions calculator tell me?", "acceptedAnswer": {"@type": "Answer", "text": "It shows how much of your savings remains after a series of regular withdrawals, how much you withdrew in total, how much the account earned, and whether the money lasts for the whole period you chose."}}, {"@type": "Question", "name": "When is each withdrawal taken?", "acceptedAnswer": {"@type": "Answer", "text": "At the beginning of each period. Taking money first means that payout does not earn growth for that period, which is a slightly cautious assumption."}}, {"@type": "Question", "name": "Which rate of return should I use?", "acceptedAnswer": {"@type": "Answer", "text": "Use a realistic long-run average for where the money is invested. Savings accounts and CDs pay a rate you can look up; stocks and funds vary widely, so test a cautious rate alongside an optimistic one."}}, {"@type": "Question", "name": "What does the compounding setting do?", "acceptedAnswer": {"@type": "Answer", "text": "It sets how often earned interest or income is added to the balance. The more often it is added, the sooner earnings begin to earn growth of their own. Ask your financial institution how often a savings account or CD compounds."}}, {"@type": "Question", "name": "How do I see how long my money will last?", "acceptedAnswer": {"@type": "Answer", "text": "Enter your balance and a planned withdrawal for a long period. If the balance reaches zero early, the results show roughly when it runs out, and you can lower the withdrawal or shorten the period until it lasts."}}, {"@type": "Question", "name": "Can I raise my withdrawals each year to keep up with inflation?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Enter an annual withdrawal increase and the calculator raises each year's payout by that percentage, which usually shortens how long the savings last."}}, {"@type": "Question", "name": "Does the tax rate field change the result?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. If you enter a marginal tax bracket, earnings are reduced by that rate before they are added back to the account. Leave it at 0 to ignore taxes."}}, {"@type": "Question", "name": "Is the result a guarantee?", "acceptedAnswer": {"@type": "Answer", "text": "No. It is a hypothetical illustration based on a steady return. Real returns vary, and past performance does not guarantee future results."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="investment-savings-and-distributions-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="investment-savings-and-distributions-calculator" data-page-type="calculator">
+  <a id="investment-savings-and-distributions-calculator-skip-link" href="#investment-savings-and-distributions-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="investment-savings-and-distributions-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="investment-savings-and-distributions-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="investment-savings-and-distributions-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="investment-savings-and-distributions-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="investment-savings-and-distributions-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="investment-savings-and-distributions-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="investment-savings-and-distributions-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="investment-savings-and-distributions-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="investment-savings-and-distributions-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="investment-savings-and-distributions-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="investment-savings-and-distributions-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="investment-savings-and-distributions-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="investment-savings-and-distributions-calculator-header-search-status" aria-controls="investment-savings-and-distributions-calculator-header-search-results" data-search-input="header">
+              <p id="investment-savings-and-distributions-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="investment-savings-and-distributions-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="investment-savings-and-distributions-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="investment-savings-and-distributions-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="investment-savings-and-distributions-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="investment-savings-and-distributions-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="investment-savings-and-distributions-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="investment-savings-and-distributions-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="investment-savings-and-distributions-calculator-mobile-search-status" aria-controls="investment-savings-and-distributions-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="investment-savings-and-distributions-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="investment-savings-and-distributions-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="investment-savings-and-distributions-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="investment-savings-and-distributions-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="investment-savings-and-distributions-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="investment-savings-and-distributions-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="investment-savings-and-distributions-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="investment-savings-and-distributions-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="investment-savings-and-distributions-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="investment-savings-and-distributions-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="investment-savings-and-distributions-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="investment-savings-and-distributions-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="investment-savings-and-distributions-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="investment-savings-and-distributions-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="investment-savings-and-distributions-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="investment-savings-and-distributions-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="investment-savings-and-distributions-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="investment-savings-and-distributions-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="investment-savings-and-distributions-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="investment-savings-and-distributions-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="investment-savings-and-distributions-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="investment-savings-and-distributions-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="investment-savings-and-distributions-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="investment-savings-and-distributions-calculator-sidebar-search-status" aria-controls="investment-savings-and-distributions-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="investment-savings-and-distributions-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="investment-savings-and-distributions-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="investment-savings-and-distributions-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="investment-savings-and-distributions-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="investment-savings-and-distributions-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="investment-savings-and-distributions-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="investment-savings-and-distributions-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="investment-savings-and-distributions-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="investment-savings-and-distributions-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="investment-savings-and-distributions-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="investment-savings-and-distributions-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="investment-savings-and-distributions-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="investment-savings-and-distributions-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="investment-savings-and-distributions-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="investment-savings-and-distributions-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="investment-savings-and-distributions-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="investment-savings-and-distributions-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="investment-savings-and-distributions-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="investment-savings-and-distributions-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators" aria-current="true">Investment Returns</a></li><li><a id="investment-savings-and-distributions-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="investment-savings-and-distributions-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="investment-savings-and-distributions-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="investment-savings-and-distributions-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="investment-savings-and-distributions-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="investment-savings-and-distributions-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="investment-savings-and-distributions-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="investment-savings-and-distributions-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="investment-savings-and-distributions-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="investment-savings-and-distributions-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="investment-savings-and-distributions-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="investment-savings-and-distributions-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="investment-savings-and-distributions-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="investment-savings-and-distributions-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="investment-savings-and-distributions-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="investment-savings-and-distributions-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="investment-savings-and-distributions-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="investment-savings-and-distributions-calculator" data-calculator-slug="investment-savings-and-distributions-calculator" data-sub-category-slug="investment-calculators">
+      <aside id="investment-savings-and-distributions-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="investment-savings-and-distributions-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="investment-savings-and-distributions-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="investment-savings-and-distributions-calculator-ad-top-leaderboard">
+            <ins id="investment-savings-and-distributions-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("investment-savings-and-distributions-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="investment-savings-and-distributions-calculator-intro-area" class="space-y-4">
+        <nav id="investment-savings-and-distributions-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="investment-savings-and-distributions-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="investment-savings-and-distributions-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="investment-savings-and-distributions-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="investment-savings-and-distributions-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#investment-calculators" itemprop="item"><span itemprop="name">Investment Returns &amp; Growth</span></a><meta itemprop="position" content="3"></li>
+            <li id="investment-savings-and-distributions-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Investment Savings and Distributions Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/investment-savings-and-distributions-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="investment-savings-and-distributions-calculator-hero-section" aria-labelledby="investment-savings-and-distributions-calculator-hero-heading" data-section="hero">
+          <h1 id="investment-savings-and-distributions-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Investment Savings and Distributions Calculator</h1>
+          <p id="investment-savings-and-distributions-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">You saved the money; now the harder question is how to spend it without running dry. The Investment Savings and Distributions Calculator turns your balance, your expected growth and your planned payouts into a clear answer: how much is left, or how long it will last. Think of it as a retirement distribution calculator that does the compounding arithmetic for you, so you can compare payout plans before you commit to one. <!-- SILO_START:slot_a -->If you want to see how the figures change, the <a class="silo-link" href="/investment-loan-calculator.html">free investment loan calculator</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="investment-savings-and-distributions-calculator-tool" class="space-y-6" data-page-slug="investment-savings-and-distributions-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="sdFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="sdForm" class="space-y-5" novalidate aria-labelledby="sdFormHeading">
+      <h2 id="sdFormHeading" class="panel-heading">Enter your plan</h2>
+      <div><label for="sdAge" class="form-label">Current age</label><div class="input-group"><input type="number" id="sdAge" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="1" value="35" inputmode="numeric"><span class="input-affix">yrs</span></div></div>
+      <h3 class="font-display text-base font-bold">While you save</h3>
+      <div><label for="sdStart" class="form-label">Starting balance</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="sdStart" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="10000" inputmode="decimal"></div></div>
+      <div class="form-row form-row-2">
+        <div><label for="sdContrib" class="form-label">Contribution</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="sdContrib" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="50" value="500" inputmode="decimal"></div></div>
+        <div><label for="sdContribFreq" class="form-label">How often</label><select id="sdContribFreq" class="form-select"><option value="12" selected>Monthly</option><option value="4">Quarterly</option><option value="1">Annually</option></select></div>
+      </div>
+      <div class="form-row form-row-2">
+        <div><label for="sdSaveYears" class="form-label">Years of saving</label><div class="input-group"><input type="number" id="sdSaveYears" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="70" step="1" value="25" inputmode="numeric"><span class="input-affix">yrs</span></div></div>
+        <div><label for="sdSaveRate" class="form-label">Annual return</label><div class="input-group"><input type="number" id="sdSaveRate" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="-50" max="50" step="0.1" value="6" inputmode="decimal"><span class="input-affix">%</span></div></div>
+      </div>
+      <h3 class="font-display text-base font-bold">While you withdraw</h3>
+      <div class="form-row form-row-2">
+        <div><label for="sdDrawYears" class="form-label">Years of withdrawals</label><div class="input-group"><input type="number" id="sdDrawYears" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1" max="70" step="1" value="25" inputmode="numeric"><span class="input-affix">yrs</span></div></div>
+        <div><label for="sdDrawRate" class="form-label">Annual return</label><div class="input-group"><input type="number" id="sdDrawRate" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="-50" max="50" step="0.1" value="4" inputmode="decimal"><span class="input-affix">%</span></div></div>
+      </div>
+      <div class="form-row form-row-2">
+        <div><label for="sdMode" class="form-label">Calculate</label><select id="sdMode" class="form-select"><option value="max" selected>Most I can withdraw</option><option value="fixed">Result of my withdrawal</option></select></div>
+        <div><label for="sdDrawFreq" class="form-label">Withdrawal frequency</label><select id="sdDrawFreq" class="form-select"><option value="12" selected>Monthly</option><option value="4">Quarterly</option><option value="1">Annually</option></select></div>
+      </div>
+      <div id="sdWrapAmount"><label for="sdAmount" class="form-label">Withdrawal amount (first year)</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="sdAmount" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="50" value="2000" inputmode="decimal"></div><p class="form-hint">Taken at the start of each withdrawal period.</p></div>
+      <details class="form-details"><summary class="form-details-summary">More options</summary>
+        <div><label for="sdInflation" class="form-label">Inflation rate</label><div class="input-group"><input type="number" id="sdInflation" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="-10" max="30" step="0.1" value="2.5" inputmode="decimal"><span class="input-affix">%</span></div></div>
+        <div><label for="sdRaiseContrib" class="form-label">Raise contributions with inflation each year</label><select id="sdRaiseContrib" class="form-select"><option value="no" selected>No</option><option value="yes">Yes</option></select></div>
+        <div><label for="sdRaiseDraw" class="form-label">Raise withdrawals with inflation each year</label><select id="sdRaiseDraw" class="form-select"><option value="yes" selected>Yes</option><option value="no">No</option></select><p class="form-hint">Yes keeps your spending power steady; the first-year amount is then lower.</p></div>
+      </details>
+      <p id="sdError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="sdResults" aria-live="polite" aria-labelledby="sdResultsHeading">
+      <h2 id="sdResultsHeading" class="panel-heading">Your results</h2>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p id="sdMainLabel" class="stat-label">You can withdraw each month</p><p id="sdMain" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Balance when withdrawals start</p><p id="sdPeak" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Total you put in</p><p id="sdIn" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Total withdrawn</p><p id="sdOut" class="stat-value">–</p></div>
+      </div>
+      <div class="mt-5">
+        <div class="result-row"><span class="result-term">First withdrawal in today&rsquo;s dollars</span><span id="sdToday" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Withdrawal years (ages)</span><span id="sdAges" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Investment growth earned</span><span id="sdGrowth" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Balance at the end</span><span id="sdEnd" class="result-value">–</span></div>
+      </div>
+      <p id="sdSummary" class="mt-4 text-sm text-ink-muted"></p>
+      <p class="mt-3 text-xs text-ink-muted">Before taxes. Returns are assumed steady every year; real markets vary.</p>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="sdScheduleHeading" data-section="schedule">
+  <h2 id="sdScheduleHeading" class="panel-heading">Year-by-year: saving, then withdrawing</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">Contributions are added at the end of each period and withdrawals are taken at the start of each period; the rest earns that phase&rsquo;s return.</p>
+  <div class="table-scroll mt-5 max-h-[520px]" tabindex="0" role="region" aria-labelledby="sdScheduleHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Year</th><th scope="col">Age</th><th scope="col">Phase</th><th scope="col">Added</th><th scope="col">Withdrawn</th><th scope="col">Growth</th><th scope="col">Balance</th></tr></thead>
+      <tbody id="sdSchedule"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="investment-savings-and-distributions-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="investment-savings-and-distributions-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">You saved the money; now the harder question is how to spend it without running dry. The Investment Savings and Distributions Calculator turns your balance, your expected growth and your planned payouts into a clear answer: how much is left, or how long it will last. Think of it as a retirement distribution calculator that does the compounding arithmetic for you, so you can compare payout plans before you commit to one. <!-- SILO_START:slot_a_m -->If you want to see how the figures change, the <a class="silo-link" href="/investment-loan-calculator.html">free investment loan calculator</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="investment-savings-and-distributions-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="investment-savings-and-distributions-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="investment-savings-and-distributions-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="investment-savings-and-distributions-calculator-ad-in-feed">
+            <ins id="investment-savings-and-distributions-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("investment-savings-and-distributions-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="investment-savings-and-distributions-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="investment-savings-and-distributions-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-savings-and-distributions-calculator-guide-heading-1">
+<h2 id="investment-savings-and-distributions-calculator-guide-heading-1">How the Investment Savings and Distributions Calculator Works</h2>
+<p>The calculator follows your account one period at a time, using the investment amount you enter as its starting point and each periodic distribution as one step. At the start of each period it removes your planned payout, then adds the interest or growth earned on whatever remains. Repeating that cycle across every month, quarter or year of your plan produces a year-by-year balance, a total of everything you withdrew, and the earnings that kept the account alive. Because the payout comes out <strong>at the beginning of each period</strong>, the money you take has less time to grow, which makes this a slightly cautious way to model a retirement income stream. <!-- SILO_START:slot_b -->Try the <a class="silo-link" href="/compare-investment-fees-calculator.html">free compare investment fees calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_b --></p>
+
+<h3>Starting Amount and Investment Savings</h3>
+<p>Your <strong>starting amount</strong> is the current balance of the investment savings you plan to draw from: a brokerage account, an IRA rollover, a certificate of deposit or a plain savings balance. Use the most recent statement value, not a target you hope to reach. If your money sits in several accounts with similar growth, add them together; if one account earns far more than another, run the calculator once for each.</p>
+
+<h3>Rate of Return and Compounding</h3>
+<p>The <strong>rate of return</strong> is the average yearly growth you assume, expressed as an annual rate of return. It is the most influential guess in the whole exercise, so treat it as a planning assumption rather than a promise. Savings accounts and CDs usually pay a rate you can look up. A diversified mix of stocks and bonds is less predictable, so many planners test a cautious figure and an optimistic one side by side. The compounding setting matters too: the more often interest is added, the sooner accumulated interest starts earning interest of its own, so a compounded rate of return beats a simple one over long spans.</p>
+
+<h3>Years of Withdrawals and Frequency of Withdrawals</h3>
+<p>Next, tell the calculator your <strong>years of withdrawals</strong>, the span you want the money to cover, and the <strong>frequency of withdrawals</strong>: weekly, bi-weekly, monthly, quarterly or annually. A monthly paycheck-style payout is the most common choice for retirement income, while an annual draw suits someone topping up a budget once a year. Finally, enter the amount of each periodic withdrawal and click the calculate button to see the schedule.</p>
+        </section>
+        <section id="investment-savings-and-distributions-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-savings-and-distributions-calculator-guide-heading-2">
+<h2 id="investment-savings-and-distributions-calculator-guide-heading-2">Savings Distribution Calculator Formula</h2>
+<p>Every result on the screen comes from one repeated step. If your balance is \(B\), the payout each period is \(W\), and the growth rate per period is \(i\) (the annual rate divided by the number of periods per year), then one period works like this: <!-- SILO_START:slot_c -->Try the <a class="silo-link" href="/investment-questionnaire-broad-portfolio.html">broad portfolio questionnaire online</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_c --></p>
+<p>$$B_{k} = (B_{k-1} - W) \times (1 + i)$$</p>
+<p>Applied \(n\) times, the repeated step collapses into a closed form for the ending balance, where \(B_0\) is your starting amount:</p>
+<p>$$B_{n} = B_{0}(1+i)^{n} - W(1+i)\,\frac{(1+i)^{n}-1}{i}$$</p>
+<p>To find <strong>how long</strong> a balance lasts, solve the same equation for \(n\) when the ending balance is zero:</p>
+<p>$$n = \frac{\ln\!\left(\dfrac{W(1+i)}{W(1+i) - B_{0}\,i}\right)}{\ln(1+i)}$$</p>
+<p>This only works when \(W(1+i)\) is larger than \(B_0 \times i\), meaning your payout exceeds the interest the account earns in a single period. If the payout is smaller than the interest, the balance never runs out, and the calculator simply shows it growing or holding steady.</p>
+        </section>
+        <section id="investment-savings-and-distributions-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-savings-and-distributions-calculator-guide-heading-3">
+<h2 id="investment-savings-and-distributions-calculator-guide-heading-3">Worked Example: Twenty Years of Systematic Withdrawals</h2>
+<p>Here is a full hypothetical run using values chosen for this guide. You hold <strong>$480,000</strong> in a diversified account that you assume will earn <strong>5.5% a year</strong>, compounded monthly. You plan <strong>systematic withdrawals</strong> of <strong>$3,150 a month</strong>, taken at the start of each month, for <strong>20 years</strong>.</p>
+<p>The monthly growth rate is \(i = 0.055 \div 12 = 0.004583\), and there are \(n = 240\) periods. After 20 years the account still holds <strong>$59,865</strong>. Across those two decades you withdrew <strong>$756,000</strong>, and the account earned <strong>$335,865</strong> in interest income, which is why you could take out far more than you started with.</p>
+<table>
+<thead>
+<tr><th>Year</th><th>Ending balance</th><th>Total withdrawn</th><th>Total earnings</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>$468,131</td><td>$37,800</td><td>$25,931</td></tr>
+<tr><td>5</td><td>$413,569</td><td>$189,000</td><td>$122,569</td></tr>
+<tr><td>10</td><td>$326,165</td><td>$378,000</td><td>$224,165</td></tr>
+<tr><td>15</td><td>$211,167</td><td>$567,000</td><td>$298,167</td></tr>
+<tr><td>20</td><td>$59,865</td><td>$756,000</td><td>$335,865</td></tr>
+</tbody>
+</table>
+<p>Notice the shape. The balance falls slowly at first because the account is large and its earnings cover most of each payout. In the final five years the earnings shrink with the balance, so the same payout eats into principal much faster. That accelerating decline is the main reason a plan that looks comfortable at year 10 can still be fragile at year 20.</p>
+        </section>
+        <section id="investment-savings-and-distributions-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-savings-and-distributions-calculator-guide-heading-4">
+<h2 id="investment-savings-and-distributions-calculator-guide-heading-4">How Withdrawal Frequency Changes Your Distribution Calculator Results</h2>
+<p>Holding the yearly total constant, a <strong>distribution calculator</strong> still gives different answers depending on how often you take money out. Taking cash earlier in the year leaves less invested for less time. Using the same $480,000, 5.5% return and 20-year span, with a yearly total of $37,800, the ending balance changes like this:</p>
+<table>
+<thead>
+<tr><th>Payout schedule</th><th>Each payout</th><th>Balance after 20 years</th></tr>
+</thead>
+<tbody>
+<tr><td>Monthly</td><td>$3,150</td><td>$59,865</td></tr>
+<tr><td>Quarterly</td><td>$9,450</td><td>$50,512</td></tr>
+<tr><td>Annually</td><td>$37,800</td><td>$10,010</td></tr>
+</tbody>
+</table>
+<p>Smaller, more frequent payouts leave the most behind, because money stays invested longer within each year. The gap between monthly and annual is almost $50,000 on this plan, which is worth knowing if you can choose between a lump sum each January and a steady monthly deposit. Weekly and bi-weekly options follow the same pattern: the closer your payouts sit to a regular paycheck, the longer the account holds out.</p>
+        </section>
+        <section id="investment-savings-and-distributions-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-savings-and-distributions-calculator-guide-heading-5">
+<h2 id="investment-savings-and-distributions-calculator-guide-heading-5">Finding How Long Regular Withdrawals Will Last</h2>
+<p>Sometimes the real question is not the ending balance but whether the money survives. Keep the same $480,000 and 5.5% return, but raise the payout to <strong>$3,600 a month</strong>. Solving for \(n\) gives about 205 payouts, so the account <strong>runs out</strong> a little over 17 years in, well short of the 20-year goal. A payout only $450 larger per month removes roughly three years of coverage.</p>
+<p>Run the calculator at several payouts before settling on one. A small cut in each periodic withdrawal often buys back more years than the same cut feels like it should, and a modest bump in the assumed return rarely closes the gap by itself.</p>
+<ul>
+<li>Lower the payout until the last year of your plan shows a positive balance.</li>
+<li>Shorten the plan if you expect other income, such as a pension, to take over.</li>
+<li>Test a return one or two points below your assumption to see how thin the margin is.</li>
+</ul>
+        </section>
+        <section id="investment-savings-and-distributions-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-savings-and-distributions-calculator-guide-heading-6">
+<h2 id="investment-savings-and-distributions-calculator-guide-heading-6">Testing a Retirement Distribution Calculator Scenario at $2,275 a Month</h2>
+<p>Dale, a recently retired machinist, has <strong>$312,450</strong> in a rollover IRA and wants it to cover the gap between Social Security and his bills. He needs the account to last at least until age 76, which is 15 years away. His budget says he is short <strong>$2,275 a month</strong>, so he enters a starting amount of $312,450, a 4.8% annual return, monthly withdrawals of $2,275 and a 15-year horizon.</p>
+<p>The result looks fine at first glance: <strong>$40,562</strong> remaining after 15 years. Then Dale reads the schedule instead of the headline and sees the balance hit zero around payout 198, about 16.5 years in. That leaves him with less than two years of cushion if markets underperform even slightly. He also checks the withdrawal against a named benchmark, the widely cited 4% first-year guideline: 4% of $312,450 is $12,498 a year, or about $1,041 a month, and his plan draws $27,300 a year, roughly 8.7% of the balance.</p>
+<p>So he reruns the calculation with one input changed. At <strong>$2,100 a month</strong> the balance after 15 years is <strong>$86,749</strong> and the money stretches to nearly 19 years. He decides to cover the remaining $175 a month with part-time income for the first three years.</p>
+        </section>
+        <section id="investment-savings-and-distributions-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-savings-and-distributions-calculator-guide-heading-7">
+<h2 id="investment-savings-and-distributions-calculator-guide-heading-7">Rate of Return Assumptions for Savings Accounts, CDs, Mutual Funds and Stocks</h2>
+<p>The same payout produces very different outcomes depending on where the money sits. A savings account or CD pays a known yield and carries little risk of losing principal, but the rate may be low and may not keep up with rising prices. Mutual funds and individual stock holdings have historically grown faster over long periods, yet their yearly results swing widely and a bad stretch early in your withdrawals can do lasting damage.</p>
+<p>A few practical habits keep the assumption honest:</p>
+<ul>
+<li>Check with your financial institution how often a savings account or CD compounds its interest.</li>
+<li>For funds that reinvest, use a long-run average that includes the reinvestment of dividends, then subtract the fees the fund charges.</li>
+<li>Remember that an index such as the S&P 500 cannot be bought directly, and its published figures ignore fund costs.</li>
+</ul>
+<aside><p><strong>Note:</strong> A calculator result is a hypothetical illustration, not a forecast. Past performance does not guarantee future results.</p></aside>
+        </section>
+        <section id="investment-savings-and-distributions-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-savings-and-distributions-calculator-guide-heading-8">
+<h2 id="investment-savings-and-distributions-calculator-guide-heading-8">Retirement Savings Planning: Taxes, Fees and Inflation</h2>
+<p>A distribution is not the same as spendable income. If your money sits in a traditional account, each withdrawal counts as taxable income, and your marginal tax bracket decides how much of it you keep. A gross payout of $3,150 might leave closer to $2,500 after tax, so build a budget from the after-tax figure, and enter that amount as the payout when you run the calculator. Roth accounts and taxable brokerage accounts follow different tax rules, which is one more reason to review your tax picture before choosing a payout; state tax and any tax on Social Security can matter as well, so ask how your tax situation will change before choosing a payout.</p>
+<p>Fees, like tax, take a bite out of every payout, and they work the same way as a lower return: a fund that charges one percentage point a year quietly reduces your growth rate by one point. Inflation matters because a fixed payout buys less every year. If your costs rise 3% annually, a $3,150 deposit today needs to be roughly $4,170 in ten years to buy the same things, so many people rerun the calculator with a larger payout each year, and with the fund fee subtracted from the rate of return, to watch how quickly the schedule tightens.</p>
+        </section>
+        <section id="investment-savings-and-distributions-calculator-guide-section-9" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-savings-and-distributions-calculator-guide-heading-9">
+<h2 id="investment-savings-and-distributions-calculator-guide-heading-9">Risks and Limits of Investment Distributions</h2>
+<p>Taking periodic distributions from a portfolio while it is falling is the central risk, and the loss of principal in a bad year is hard to win back. Sudden volatility early in retirement forces you to sell more shares to fund the same payout, and those shares are gone when markets recover. A steady assumed return hides that sequence problem, so treat the result as a hypothetical baseline and stress it with a lower return, a higher payout, or both.</p>
+<p>Diversification helps, but it does not remove the chance of losing principal. A diversified portfolio that blends stocks, bonds and cash usually swings less than stocks alone, and a second portfolio of short-term holdings can help; holding part of your balance in a savings account or short-term CDs can cover a few years of payouts without selling anything at a loss. Revisit your plan once a year, update the starting amount from your latest statement, and adjust the payout if reality has drifted from your assumptions.</p>
+        </section>
+        <section id="investment-savings-and-distributions-calculator-guide-section-10" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-savings-and-distributions-calculator-guide-heading-10">
+<h2 id="investment-savings-and-distributions-calculator-guide-heading-10">Step-by-Step: Entering Your Numbers</h2>
+<ol>
+<li>Gather your latest account balance and decide which accounts belong in this scenario.</li>
+<li>Choose a cautious rate of return and note how often interest or growth is credited.</li>
+<li>Pick the number of years you want the money to last and how often you will take it out.</li>
+<li>Enter your planned amount per period, then run the calculation and read the full year-by-year schedule.</li>
+<li>Adjust one input at a time, and compare the ending balances to see which change matters most.</li>
+</ol>
+<p>With the schedule in hand, you can see exactly when your plan is comfortable, when it gets tight, and how much room you have to change course.</p>
+        </section>
+      </div>
+
+      <section id="investment-savings-and-distributions-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="investment-savings-and-distributions-calculator-faq-heading" data-section="faq">
+        <h2 id="investment-savings-and-distributions-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Investment Savings and Distributions Calculator questions</h2>
+        <div id="investment-savings-and-distributions-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="investment-savings-and-distributions-calculator-faq-1" class="faq-item" open><summary id="investment-savings-and-distributions-calculator-faq-1-summary" class="faq-summary"><h3 id="investment-savings-and-distributions-calculator-faq-1-question" class="faq-question">What does the investment savings and distributions calculator tell me?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="investment-savings-and-distributions-calculator-faq-1-answer" class="faq-answer"><p>It shows how much of your savings remains after a series of regular withdrawals, how much you withdrew in total, how much the account earned, and whether the money lasts for the whole period you chose.</p></div></details>
+          <details id="investment-savings-and-distributions-calculator-faq-2" class="faq-item" open><summary id="investment-savings-and-distributions-calculator-faq-2-summary" class="faq-summary"><h3 id="investment-savings-and-distributions-calculator-faq-2-question" class="faq-question">When is each withdrawal taken?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="investment-savings-and-distributions-calculator-faq-2-answer" class="faq-answer"><p>At the beginning of each period. Taking money first means that payout does not earn growth for that period, which is a slightly cautious assumption.</p></div></details>
+          <details id="investment-savings-and-distributions-calculator-faq-3" class="faq-item" open><summary id="investment-savings-and-distributions-calculator-faq-3-summary" class="faq-summary"><h3 id="investment-savings-and-distributions-calculator-faq-3-question" class="faq-question">Which rate of return should I use?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="investment-savings-and-distributions-calculator-faq-3-answer" class="faq-answer"><p>Use a realistic long-run average for where the money is invested. Savings accounts and CDs pay a rate you can look up; stocks and funds vary widely, so test a cautious rate alongside an optimistic one.</p></div></details>
+          <details id="investment-savings-and-distributions-calculator-faq-4" class="faq-item" open><summary id="investment-savings-and-distributions-calculator-faq-4-summary" class="faq-summary"><h3 id="investment-savings-and-distributions-calculator-faq-4-question" class="faq-question">What does the compounding setting do?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="investment-savings-and-distributions-calculator-faq-4-answer" class="faq-answer"><p>It sets how often earned interest or income is added to the balance. The more often it is added, the sooner earnings begin to earn growth of their own. Ask your financial institution how often a savings account or CD compounds.</p></div></details>
+          <details id="investment-savings-and-distributions-calculator-faq-5" class="faq-item" open><summary id="investment-savings-and-distributions-calculator-faq-5-summary" class="faq-summary"><h3 id="investment-savings-and-distributions-calculator-faq-5-question" class="faq-question">How do I see how long my money will last?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="investment-savings-and-distributions-calculator-faq-5-answer" class="faq-answer"><p>Enter your balance and a planned withdrawal for a long period. If the balance reaches zero early, the results show roughly when it runs out, and you can lower the withdrawal or shorten the period until it lasts.</p></div></details>
+          <details id="investment-savings-and-distributions-calculator-faq-6" class="faq-item" open><summary id="investment-savings-and-distributions-calculator-faq-6-summary" class="faq-summary"><h3 id="investment-savings-and-distributions-calculator-faq-6-question" class="faq-question">Can I raise my withdrawals each year to keep up with inflation?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="investment-savings-and-distributions-calculator-faq-6-answer" class="faq-answer"><p>Yes. Enter an annual withdrawal increase and the calculator raises each year&#x27;s payout by that percentage, which usually shortens how long the savings last.</p></div></details>
+          <details id="investment-savings-and-distributions-calculator-faq-7" class="faq-item" open><summary id="investment-savings-and-distributions-calculator-faq-7-summary" class="faq-summary"><h3 id="investment-savings-and-distributions-calculator-faq-7-question" class="faq-question">Does the tax rate field change the result?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="investment-savings-and-distributions-calculator-faq-7-answer" class="faq-answer"><p>Yes. If you enter a marginal tax bracket, earnings are reduced by that rate before they are added back to the account. Leave it at 0 to ignore taxes.</p></div></details>
+          <details id="investment-savings-and-distributions-calculator-faq-8" class="faq-item" open><summary id="investment-savings-and-distributions-calculator-faq-8-summary" class="faq-summary"><h3 id="investment-savings-and-distributions-calculator-faq-8-question" class="faq-question">Is the result a guarantee?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="investment-savings-and-distributions-calculator-faq-8-answer" class="faq-answer"><p>No. It is a hypothetical illustration based on a steady return. Real returns vary, and past performance does not guarantee future results.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="investment-savings-and-distributions-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="investment-savings-and-distributions-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="investment-savings-and-distributions-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="investment-savings-and-distributions-calculator-ad-bottom-leaderboard">
+            <ins id="investment-savings-and-distributions-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("investment-savings-and-distributions-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="investment-savings-and-distributions-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="investment-savings-and-distributions-calculator-right-rail-top" class="mb-6">
+        <aside id="investment-savings-and-distributions-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="investment-savings-and-distributions-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="investment-savings-and-distributions-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="investment-savings-and-distributions-calculator-ad-right-rail-rectangle">
+            <ins id="investment-savings-and-distributions-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("investment-savings-and-distributions-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="investment-savings-and-distributions-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="investment-savings-and-distributions-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="investment-savings-and-distributions-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="investment-savings-and-distributions-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="investment-savings-and-distributions-calculator-ad-right-rail-skyscraper">
+            <ins id="investment-savings-and-distributions-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("investment-savings-and-distributions-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="investment-savings-and-distributions-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="investment-savings-and-distributions-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="investment-savings-and-distributions-calculator-footer-brand">
+        <a id="investment-savings-and-distributions-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="investment-savings-and-distributions-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="investment-savings-and-distributions-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="investment-savings-and-distributions-calculator-footer-categories" aria-labelledby="investment-savings-and-distributions-calculator-footer-categories-heading">
+        <h2 id="investment-savings-and-distributions-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="investment-savings-and-distributions-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="investment-savings-and-distributions-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="investment-savings-and-distributions-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="investment-savings-and-distributions-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="investment-savings-and-distributions-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="investment-savings-and-distributions-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="investment-savings-and-distributions-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="investment-savings-and-distributions-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="investment-savings-and-distributions-calculator-footer-company" aria-labelledby="investment-savings-and-distributions-calculator-footer-company-heading">
+        <h2 id="investment-savings-and-distributions-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="investment-savings-and-distributions-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="investment-savings-and-distributions-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="investment-savings-and-distributions-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="investment-savings-and-distributions-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="investment-savings-and-distributions-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="investment-savings-and-distributions-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="investment-savings-and-distributions-calculator-footer-bottom" class="border-t border-line">
+      <p id="investment-savings-and-distributions-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="investment-savings-and-distributions-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // One timeline: save for S years, then withdraw for W years.
+  // Saving: contributions at the END of each period (f per year), period rate
+  // qs = (1 + saving return)^(1/f) - 1; the amount can rise once a year with inflation.
+  // Withdrawing: withdrawals at the START of each period (fw per year), period rate
+  // qw = (1 + withdrawal return)^(1/fw) - 1; the amount can rise once a year with inflation i.
+  // Sustainable first-year withdrawal that leaves $0 after W years:
+  //   w = B / sum over years j < W of (1 + i)^j x sum over p < fw of (1 + qw)^-(j x fw + p)
+  // Chosen-amount mode runs the same schedule and stops when the balance runs out.
+  // CHECKS (Node, scratch tests/sd.test.js): $10,000 + $500/month for 20 years at 7%/yr effective
+  // equals the closed form 10,000 x 1.07^20 + 500 x ((1 + q)^240 - 1) / q, q = 1.07^(1/12) - 1
+  // = $38,696.84 + $253,768.19 = $292,465.03; $300,000 withdrawn monthly at
+  // the start of each month for 25 years at 0% with no raises = $1,000 a month; at 5% with no raises
+  // the payment equals the annuity-due formula B x q / ((1 - (1 + q)^-300) x (1 + q)) = $1,727.38; the
+  // period-by-period run with the solved withdrawal ends at $0.00 (with and without inflation
+  // raises); a withdrawal larger than the sustainable one runs out early and reports the age.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 });
+  var FREQ_WORD = { 12: 'month', 4: 'quarter', 1: 'year' };
+  var IDS = ['sdMain', 'sdPeak', 'sdIn', 'sdOut', 'sdToday', 'sdAges', 'sdGrowth', 'sdEnd'];
+
+  function num(id) {
+    var v = parseFloat(document.getElementById(id).value);
+    return isNaN(v) ? NaN : v;
+  }
+  function set(id, text) { document.getElementById(id).textContent = text; }
+  function periodRate(r, f) { return Math.pow(1 + r, 1 / f) - 1; }
+
+  function sustainable(B, rw, fw, W, i) {
+    var q = periodRate(rw, fw), s = 0;
+    for (var j = 0; j < W; j++) {
+      for (var p = 0; p < fw; p++) s += Math.pow(1 + i, j) * Math.pow(1 + q, -(j * fw + p));
+    }
+    return s > 0 ? B / s : 0;
+  }
+
+  // o: start, contrib, cf, S, rs, raiseC, W, rw, fw, raiseW, i, mode ('max' | 'fixed'), amount
+  function run(o) {
+    var rows = [], bal = o.start, qs = periodRate(o.rs, o.cf), qw = periodRate(o.rw, o.fw), totalIn = o.start, totalOut = 0;
+    for (var y = 0; y < o.S; y++) {
+      var c = o.contrib * (o.raiseC ? Math.pow(1 + o.i, y) : 1), open = bal, added = 0;
+      for (var p = 0; p < o.cf; p++) { bal = bal * (1 + qs) + c; added += c; }
+      totalIn += added;
+      rows.push({ year: y + 1, phase: 'Saving', added: added, out: 0, growth: bal - open - added, balance: bal });
+    }
+    var peak = bal;
+    var w = o.mode === 'max' ? sustainable(peak, o.rw, o.fw, o.W, o.raiseW ? o.i : 0) : o.amount, runsOut = null;
+    for (var j = 0; j < o.W; j++) {
+      var amt = w * (o.raiseW ? Math.pow(1 + o.i, j) : 1), open2 = bal, out = 0;
+      for (var k = 0; k < o.fw; k++) {
+        var take = Math.min(amt, bal);
+        if (runsOut === null && o.mode === 'fixed' && amt > 0 && bal - amt < -0.005) runsOut = o.S + j + k / o.fw;
+        bal = (bal - take) * (1 + qw);
+        out += take;
+      }
+      if (bal < 0.005) bal = 0;
+      totalOut += out;
+      rows.push({ year: o.S + j + 1, phase: 'Withdrawing', added: 0, out: out, growth: bal - open2 + out, balance: bal });
+    }
+    return { rows: rows, peak: peak, w: w, totalIn: totalIn, totalOut: totalOut, end: bal, runsOut: runsOut };
+  }
+
+  function update() {
+    var mode = document.getElementById('sdMode').value;
+    document.getElementById('sdWrapAmount').hidden = mode !== 'fixed';
+    var o = {
+      start: num('sdStart'), contrib: num('sdContrib'), cf: parseInt(document.getElementById('sdContribFreq').value, 10),
+      S: Math.round(num('sdSaveYears')), rs: num('sdSaveRate'), W: Math.round(num('sdDrawYears')), rw: num('sdDrawRate'),
+      fw: parseInt(document.getElementById('sdDrawFreq').value, 10), amount: num('sdAmount'), i: num('sdInflation'),
+      raiseC: document.getElementById('sdRaiseContrib').value === 'yes', raiseW: document.getElementById('sdRaiseDraw').value === 'yes', mode: mode
+    };
+    var age = Math.round(num('sdAge'));
+    var error = document.getElementById('sdError'), msg = '';
+    if ([o.start, o.contrib].some(isNaN) || o.start < 0 || o.contrib < 0) msg = 'Enter a starting balance and contribution of $0 or more.';
+    else if (isNaN(age) || age < 0 || age > 100) msg = 'Enter a current age from 0 to 100.';
+    else if (isNaN(o.S) || o.S < 0 || o.S > 70 || isNaN(o.W) || o.W < 1 || o.W > 70) msg = 'Enter 0 to 70 years of saving and 1 to 70 years of withdrawals.';
+    else if ([o.rs, o.rw].some(isNaN) || o.rs < -50 || o.rs > 50 || o.rw < -50 || o.rw > 50) msg = 'Enter annual returns from -50% to 50%.';
+    else if (isNaN(o.i) || o.i < -10 || o.i > 30) msg = 'Enter an inflation rate from -10% to 30%.';
+    else if (mode === 'fixed' && (isNaN(o.amount) || o.amount < 0)) msg = 'Enter a withdrawal amount of $0 or more.';
+    error.hidden = !msg;
+    if (msg) {
+      error.textContent = msg;
+      IDS.forEach(function (id) { set(id, '–'); });
+      set('sdSummary', '');
+      document.getElementById('sdSchedule').innerHTML = '';
+      return;
+    }
+    o.rs /= 100; o.rw /= 100; o.i /= 100;
+    var r = run(o), word = FREQ_WORD[o.fw] || 'period';
+    var drawAge = age + o.S, endAge = drawAge + o.W;
+    if (mode === 'max') {
+      set('sdMainLabel', 'You can withdraw each ' + word);
+      set('sdMain', money.format(r.w));
+      set('sdSummary', 'Saving for ' + o.S + (o.S === 1 ? ' year' : ' years') + ' builds ' + money.format(r.peak) +
+          ', which can pay ' + money.format(r.w) + ' at the start of each ' + word + (o.raiseW ? ' (rising with inflation each year)' : '') +
+          ' for ' + o.W + (o.W === 1 ? ' year' : ' years') + ', from age ' + drawAge + ' to ' + endAge + '.');
+    } else if (r.runsOut !== null) {
+      set('sdMainLabel', 'Money runs out at age');
+      set('sdMain', String(Math.floor(age + r.runsOut)));
+      set('sdSummary', 'At ' + money.format(o.amount) + ' each ' + word + ', the account runs dry about ' +
+          (r.runsOut - o.S).toFixed(1) + ' years into withdrawals, before the ' + o.W + '-year plan ends. The most it can pay for the full period is ' +
+          money.format(sustainable(r.peak, o.rw, o.fw, o.W, o.raiseW ? o.i : 0)) + ' each ' + word + '.');
+    } else {
+      set('sdMainLabel', 'Balance left at age ' + endAge);
+      set('sdMain', money.format(r.end));
+      set('sdSummary', 'At ' + money.format(o.amount) + ' each ' + word + ', the account lasts the full ' + o.W +
+          (o.W === 1 ? ' year' : ' years') + ' and still holds ' + money.format(r.end) + ' at age ' + endAge + '.');
+    }
+    set('sdPeak', money.format(r.peak));
+    set('sdIn', money.format(r.totalIn));
+    set('sdOut', money.format(r.totalOut));
+    set('sdToday', money.format(r.w / Math.pow(1 + o.i, o.S)));
+    set('sdAges', drawAge + ' to ' + endAge);
+    set('sdGrowth', (r.end + r.totalOut - r.totalIn < 0 ? '−' : '') + money.format(Math.abs(r.end + r.totalOut - r.totalIn)));
+    set('sdEnd', money.format(r.end));
+    document.getElementById('sdSchedule').innerHTML = r.rows.map(function (row) {
+      return '<tr><td>' + row.year + '</td><td>' + (age + row.year) + '</td><td>' + row.phase + '</td><td>' + money.format(row.added) +
+             '</td><td>' + money.format(row.out) + '</td><td>' + (row.growth < -0.005 ? '−' : '') + money.format(Math.abs(row.growth)) +
+             '</td><td>' + money.format(row.balance) + '</td></tr>';
+    }).join('');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('sdForm');
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

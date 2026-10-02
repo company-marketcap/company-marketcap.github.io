@@ -1,0 +1,661 @@
+<!doctype html>
+<html lang="en" id="asset-allocation-calculator-document" data-page-slug="asset-allocation-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Asset Allocation Calculator: Find Your Portfolio Mix</title>
+  <meta name="description" content="Use this free asset allocation calculator to split your portfolio between stocks, bonds and cash based on your age, risk tolerance and time horizon.">
+  <link rel="canonical" href="https://company-marketcap.github.io/asset-allocation-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Asset Allocation Calculator: Find Your Portfolio Mix">
+  <meta property="og:description" content="Use this free asset allocation calculator to split your portfolio between stocks, bonds and cash based on your age, risk tolerance and time horizon.">
+  <meta property="og:url" content="https://company-marketcap.github.io/asset-allocation-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Asset Allocation Calculator", "url": "https://company-marketcap.github.io/asset-allocation-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Use this free asset allocation calculator to split your portfolio between stocks, bonds and cash based on your age, risk tolerance and time horizon."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Investment Returns & Growth", "item": "https://company-marketcap.github.io/financial-calculators.html#investment-calculators"}, {"@type": "ListItem", "position": 4, "name": "Asset Allocation Calculator", "item": "https://company-marketcap.github.io/asset-allocation-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is asset allocation?", "acceptedAnswer": {"@type": "Answer", "text": "Asset allocation is the way you divide an investment portfolio among major asset classes, mainly stocks, bonds and cash. The percentages you choose set how much growth you aim for and how much short-term volatility you accept."}}, {"@type": "Question", "name": "How does the calculator choose my stock percentage?", "acceptedAnswer": {"@type": "Answer", "text": "It starts from 110 minus your age, then adds or subtracts points for your risk tolerance and your investment horizon. The result is kept between 20% and 90% stocks, with cash set by how soon you need the money and bonds taking the rest."}}, {"@type": "Question", "name": "Does my asset allocation change as I get older?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. As your time horizon shortens, you have less time to recover from losses, so the stock share usually falls and bonds and cash take a larger share. The calculator lowers stocks by one point for every year of age."}}, {"@type": "Question", "name": "What is the difference between risk tolerance and risk capacity?", "acceptedAnswer": {"@type": "Answer", "text": "Risk tolerance is how much swing you can accept emotionally. Risk capacity is how much loss your finances can absorb. If your capacity is lower than your tolerance, choose the more conservative setting."}}, {"@type": "Question", "name": "How often should I rebalance my portfolio?", "acceptedAnswer": {"@type": "Answer", "text": "Many investors rebalance once a year or whenever a bucket drifts about five percentage points from its target. Rebalancing means selling what has grown too large and buying what has shrunk."}}, {"@type": "Question", "name": "How do I choose the right allocation for my goals?", "acceptedAnswer": {"@type": "Answer", "text": "Match the mix to the date you need the money. A goal decades away can lean on stocks, while a goal within a few years calls for more bonds and cash. Use a separate allocation for goals with different dates."}}, {"@type": "Question", "name": "What does the company type setting do?", "acceptedAnswer": {"@type": "Answer", "text": "It only changes how your stock slice is divided between large-cap, mid-cap, small-cap, international and emerging-market holdings. Your overall stocks, bonds and cash percentages stay the same."}}, {"@type": "Question", "name": "Is the result investment advice?", "acceptedAnswer": {"@type": "Answer", "text": "No. The calculator gives a rule-based starting point. A financial advisor can weigh your taxes, income and full situation before you invest."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="asset-allocation-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="asset-allocation-calculator" data-page-type="calculator">
+  <a id="asset-allocation-calculator-skip-link" href="#asset-allocation-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="asset-allocation-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="asset-allocation-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="asset-allocation-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="asset-allocation-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="asset-allocation-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="asset-allocation-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="asset-allocation-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="asset-allocation-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="asset-allocation-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="asset-allocation-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="asset-allocation-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="asset-allocation-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="asset-allocation-calculator-header-search-status" aria-controls="asset-allocation-calculator-header-search-results" data-search-input="header">
+              <p id="asset-allocation-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="asset-allocation-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="asset-allocation-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="asset-allocation-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="asset-allocation-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="asset-allocation-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="asset-allocation-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="asset-allocation-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="asset-allocation-calculator-mobile-search-status" aria-controls="asset-allocation-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="asset-allocation-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="asset-allocation-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="asset-allocation-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="asset-allocation-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="asset-allocation-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="asset-allocation-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="asset-allocation-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="asset-allocation-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="asset-allocation-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="asset-allocation-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="asset-allocation-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="asset-allocation-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="asset-allocation-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="asset-allocation-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="asset-allocation-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="asset-allocation-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="asset-allocation-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="asset-allocation-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="asset-allocation-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="asset-allocation-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="asset-allocation-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="asset-allocation-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="asset-allocation-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="asset-allocation-calculator-sidebar-search-status" aria-controls="asset-allocation-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="asset-allocation-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="asset-allocation-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="asset-allocation-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="asset-allocation-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="asset-allocation-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="asset-allocation-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="asset-allocation-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="asset-allocation-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="asset-allocation-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="asset-allocation-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="asset-allocation-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="asset-allocation-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="asset-allocation-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="asset-allocation-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="asset-allocation-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="asset-allocation-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="asset-allocation-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="asset-allocation-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="asset-allocation-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators" aria-current="true">Investment Returns</a></li><li><a id="asset-allocation-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="asset-allocation-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="asset-allocation-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="asset-allocation-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="asset-allocation-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="asset-allocation-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="asset-allocation-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="asset-allocation-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="asset-allocation-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="asset-allocation-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="asset-allocation-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="asset-allocation-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="asset-allocation-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="asset-allocation-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="asset-allocation-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="asset-allocation-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="asset-allocation-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="asset-allocation-calculator" data-calculator-slug="asset-allocation-calculator" data-sub-category-slug="investment-calculators">
+      <aside id="asset-allocation-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="asset-allocation-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="asset-allocation-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="asset-allocation-calculator-ad-top-leaderboard">
+            <ins id="asset-allocation-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("asset-allocation-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="asset-allocation-calculator-intro-area" class="space-y-4">
+        <nav id="asset-allocation-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="asset-allocation-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="asset-allocation-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="asset-allocation-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="asset-allocation-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#investment-calculators" itemprop="item"><span itemprop="name">Investment Returns &amp; Growth</span></a><meta itemprop="position" content="3"></li>
+            <li id="asset-allocation-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Asset Allocation Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/asset-allocation-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="asset-allocation-calculator-hero-section" aria-labelledby="asset-allocation-calculator-hero-heading" data-section="hero">
+          <h1 id="asset-allocation-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Asset Allocation Calculator: Find Your Portfolio Mix</h1>
+          <p id="asset-allocation-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Your asset allocation calculator turns three simple facts about you, your age, your risk tolerance and your time horizon, into a suggested split of stocks, bonds and cash that you can use as a starting point for your investment portfolio. Instead of guessing how much of your money belongs in each bucket, you get a clear percentage for every one, plus the dollar amount that percentage means for your balance. <!-- SILO_START:slot_a -->If you want to see how the figures change, the <a class="silo-link" href="/investment-loan-calculator.html">investment loan calculator</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="asset-allocation-calculator-tool" class="space-y-6" data-page-slug="asset-allocation-calculator" data-calculator-key="tool">
+        <section class="panel p-4 sm:p-6" aria-labelledby="aaFormHeading" data-section="calculator">
+  <form id="aaForm" class="space-y-5" novalidate aria-labelledby="aaFormHeading">
+    <h2 id="aaFormHeading" class="panel-heading">Your portfolio and assumptions</h2>
+    <p class="mt-0.5 text-sm text-ink-muted">Enter what you hold now and the mix you want to test. The return and bad-year figures are <strong>hypothetical assumptions</strong> for illustration, not forecasts. Change them to whatever you want to test.</p>
+    <div class="table-scroll" tabindex="0" role="region" aria-labelledby="aaFormHeading">
+      <table class="data-table">
+        <thead><tr><th scope="col">Asset class</th><th scope="col">Current value ($)</th><th scope="col">Target mix (%)</th><th scope="col">Hypothetical return (%/yr)</th><th scope="col">Hypothetical bad year (%)</th></tr></thead>
+        <tbody>
+        <tr><th scope="row">Stocks</th><td><label for="aaCurS" class="sr-only">Stocks current value</label><input type="number" id="aaCurS" class="form-control form-control-small tabular-nums" min="0" step="100" value="70000" inputmode="decimal"></td><td><label for="aaTgtS" class="sr-only">Stocks target percent</label><input type="number" id="aaTgtS" class="form-control form-control-small tabular-nums" min="0" max="100" step="1" value="60" inputmode="decimal"></td><td><label for="aaRetS" class="sr-only">Stocks hypothetical yearly return percent</label><input type="number" id="aaRetS" class="form-control form-control-small tabular-nums" min="-50" max="50" step="0.1" value="7" inputmode="decimal"></td><td><label for="aaBadS" class="sr-only">Stocks hypothetical bad-year change percent</label><input type="number" id="aaBadS" class="form-control form-control-small tabular-nums" min="-100" max="100" step="1" value="-30" inputmode="decimal"></td></tr>
+        <tr><th scope="row">Bonds</th><td><label for="aaCurB" class="sr-only">Bonds current value</label><input type="number" id="aaCurB" class="form-control form-control-small tabular-nums" min="0" step="100" value="22000" inputmode="decimal"></td><td><label for="aaTgtB" class="sr-only">Bonds target percent</label><input type="number" id="aaTgtB" class="form-control form-control-small tabular-nums" min="0" max="100" step="1" value="30" inputmode="decimal"></td><td><label for="aaRetB" class="sr-only">Bonds hypothetical yearly return percent</label><input type="number" id="aaRetB" class="form-control form-control-small tabular-nums" min="-50" max="50" step="0.1" value="4" inputmode="decimal"></td><td><label for="aaBadB" class="sr-only">Bonds hypothetical bad-year change percent</label><input type="number" id="aaBadB" class="form-control form-control-small tabular-nums" min="-100" max="100" step="1" value="-5" inputmode="decimal"></td></tr>
+        <tr><th scope="row">Cash</th><td><label for="aaCurC" class="sr-only">Cash current value</label><input type="number" id="aaCurC" class="form-control form-control-small tabular-nums" min="0" step="100" value="8000" inputmode="decimal"></td><td><label for="aaTgtC" class="sr-only">Cash target percent</label><input type="number" id="aaTgtC" class="form-control form-control-small tabular-nums" min="0" max="100" step="1" value="10" inputmode="decimal"></td><td><label for="aaRetC" class="sr-only">Cash hypothetical yearly return percent</label><input type="number" id="aaRetC" class="form-control form-control-small tabular-nums" min="-50" max="50" step="0.1" value="2" inputmode="decimal"></td><td><label for="aaBadC" class="sr-only">Cash hypothetical bad-year change percent</label><input type="number" id="aaBadC" class="form-control form-control-small tabular-nums" min="-100" max="100" step="1" value="0" inputmode="decimal"></td></tr>
+        <tr><th scope="row">Other assets</th><td><label for="aaCurO" class="sr-only">Other assets current value</label><input type="number" id="aaCurO" class="form-control form-control-small tabular-nums" min="0" step="100" value="0" inputmode="decimal"></td><td><label for="aaTgtO" class="sr-only">Other assets target percent</label><input type="number" id="aaTgtO" class="form-control form-control-small tabular-nums" min="0" max="100" step="1" value="0" inputmode="decimal"></td><td><label for="aaRetO" class="sr-only">Other assets hypothetical yearly return percent</label><input type="number" id="aaRetO" class="form-control form-control-small tabular-nums" min="-50" max="50" step="0.1" value="5" inputmode="decimal"></td><td><label for="aaBadO" class="sr-only">Other assets hypothetical bad-year change percent</label><input type="number" id="aaBadO" class="form-control form-control-small tabular-nums" min="-100" max="100" step="1" value="-15" inputmode="decimal"></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p id="aaTargetSum" class="form-hint">Target mix total: 100%</p>
+    <div class="form-row form-row-2">
+      <div><label for="aaMonthly" class="form-label">Monthly addition</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="aaMonthly" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="50" value="500" inputmode="decimal"></div><p class="form-hint">Assumed to be split by the mix being projected.</p></div>
+      <div><label for="aaYears" class="form-label">Years to project</label><div class="input-group"><input type="number" id="aaYears" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1" max="60" step="1" value="20" inputmode="numeric"><span class="input-affix">yrs</span></div></div>
+    </div>
+    <p id="aaError" class="form-error" role="alert" hidden></p>
+  </form>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="aaResultsHeading" aria-live="polite" data-section="results">
+  <h2 id="aaResultsHeading" class="panel-heading">Your results</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">Every figure below follows from the hypothetical assumptions above. Actual returns and losses can be very different.</p>
+  <div class="stat-grid mt-4">
+    <div class="stat-card stat-card-highlight"><p class="stat-label">Projected value, target mix</p><p id="aaTgtFuture" class="stat-value">–</p></div>
+    <div class="stat-card"><p class="stat-label">Projected value, current mix</p><p id="aaCurFuture" class="stat-value">–</p></div>
+    <div class="stat-card"><p class="stat-label">Portfolio value today</p><p id="aaTotal" class="stat-value">–</p></div>
+  </div>
+  <div class="mt-5 grid gap-x-8 sm:grid-cols-2">
+    <div>
+      <div class="result-row"><span class="result-term">Blended return, target mix</span><span id="aaTgtReturn" class="result-value">–</span></div>
+      <div class="result-row"><span class="result-term">Blended return, current mix</span><span id="aaCurReturn" class="result-value">–</span></div>
+      <div class="result-row"><span class="result-term">Total added over the period</span><span id="aaAdded" class="result-value">–</span></div>
+    </div>
+    <div>
+      <div class="result-row"><span class="result-term">Bad year today, target mix</span><span id="aaTgtBad" class="result-value">–</span></div>
+      <div class="result-row"><span class="result-term">Bad year today, current mix</span><span id="aaCurBad" class="result-value">–</span></div>
+      <div class="result-row"><span class="result-term">Moved to rebalance</span><span id="aaMoved" class="result-value">–</span></div>
+    </div>
+  </div>
+  <p id="aaNote" class="callout callout-note mt-5" hidden></p>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="aaRebalanceHeading" data-section="rebalance">
+  <h2 id="aaRebalanceHeading" class="panel-heading">Current mix compared with target</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">The dollar change in each asset class that would bring today's portfolio to the target mix.</p>
+  <div class="table-scroll mt-5" tabindex="0" role="region" aria-labelledby="aaRebalanceHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Asset class</th><th scope="col">Current</th><th scope="col">Current %</th><th scope="col">Target %</th><th scope="col">Target amount</th><th scope="col">Change</th></tr></thead>
+      <tbody id="aaRebalance"></tbody>
+    </table>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="aaProjectionHeading" data-section="schedule">
+  <h2 id="aaProjectionHeading" class="panel-heading">Hypothetical growth by year</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">Both mixes grow at their steady blended return with the same monthly additions, rebalanced to their own mix. Real markets do not move in straight lines.</p>
+  <div class="table-scroll mt-5 max-h-[520px]" tabindex="0" role="region" aria-labelledby="aaProjectionHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Year</th><th scope="col">Total added</th><th scope="col">Current mix</th><th scope="col">Target mix</th><th scope="col">Target minus current</th></tr></thead>
+      <tbody id="aaProjection"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="asset-allocation-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="asset-allocation-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Your asset allocation calculator turns three simple facts about you, your age, your risk tolerance and your time horizon, into a suggested split of stocks, bonds and cash that you can use as a starting point for your investment portfolio. Instead of guessing how much of your money belongs in each bucket, you get a clear percentage for every one, plus the dollar amount that percentage means for your balance. <!-- SILO_START:slot_a_m -->If you want to see how the figures change, the <a class="silo-link" href="/investment-loan-calculator.html">investment loan calculator</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="asset-allocation-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="asset-allocation-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="asset-allocation-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="asset-allocation-calculator-ad-in-feed">
+            <ins id="asset-allocation-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("asset-allocation-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="asset-allocation-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="asset-allocation-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="asset-allocation-calculator-guide-heading-1">
+<h2 id="asset-allocation-calculator-guide-heading-1">Calculate Your Asset Allocation with This Free Calculator</h2>
+<p>Asset allocation is the strategic division of an <strong>investment portfolio</strong> among major asset classes, mainly equities, fixed income and cash. The percentages you choose shape both the long-term return you can reasonably expect and the short-term volatility you will have to sit through. Most of the difference in how portfolios behave comes from this one decision, not from which individual company you pick. <!-- SILO_START:slot_b -->The <a class="silo-link" href="/annual-stock-option-grants-calculator.html">annual stock option grants calculator online</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_b --></p>
+<p>To <strong>calculate your asset allocation</strong>, you only need a handful of inputs, and every one of them has a clear job:</p>
+<ul>
+<li><strong>Your age:</strong> older investors have fewer years to recover from losses, so the stock share falls as age rises.</li>
+<li><strong>Your risk tolerance:</strong> choose from very conservative, conservative, moderate, aggressive or very aggressive.</li>
+<li><strong>Your investment horizon:</strong> the number of years until you need the money.</li>
+<li><strong>Your portfolio value:</strong> the investment amount that gets converted into dollar figures.</li>
+</ul>
+<p>Press the calculate button and the tool returns your target percentages for stocks, bonds and cash, along with how much money each one represents. This is a free calculator for planning, and it works best as a first draft of your strategy, not a final instruction.</p>
+        </section>
+        <section id="asset-allocation-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="asset-allocation-calculator-guide-heading-2">
+<h2 id="asset-allocation-calculator-guide-heading-2">How the Asset Allocation Calculator Builds Your Target Asset Mix</h2>
+<p>The method behind this page is deliberately transparent so you can check every figure yourself. It starts from the classic age rule, then nudges the result up or down for your comfort with risk and for how long the money can stay invested. The leftover share is split between bonds and cash. The result is your <strong>target asset mix</strong>. <!-- SILO_START:slot_c -->Pair this with the <a class="silo-link" href="/asset-allocation-broad-portfolio-calculator.html">asset allocation broad portfolio calculator</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_c --></p>
+<p>$$S = 110 - \text{age} + R + H$$</p>
+<p>Here \(S\) is the percentage in stocks, \(R\) is the risk adjustment and \(H\) is the horizon adjustment. Bonds then take whatever is left after cash is set aside:</p>
+<p>$$B = 100 - S - C$$</p>
+<p>The stock share is kept between 20% and 90% so that no result ever looks like an all-or-nothing bet. The adjustments are below.</p>
+<table>
+<thead><tr><th>Input</th><th>Choice</th><th>Stock adjustment</th><th>Cash share</th></tr></thead>
+<tbody>
+<tr><td>Risk tolerance</td><td>Very conservative</td><td>-20 points</td><td>-</td></tr>
+<tr><td>Risk tolerance</td><td>Conservative</td><td>-10 points</td><td>-</td></tr>
+<tr><td>Risk tolerance</td><td>Moderate</td><td>0 points</td><td>-</td></tr>
+<tr><td>Risk tolerance</td><td>Aggressive</td><td>+10 points</td><td>-</td></tr>
+<tr><td>Risk tolerance</td><td>Very aggressive</td><td>+20 points</td><td>-</td></tr>
+<tr><td>Horizon</td><td>Under 5 years</td><td>-10 points</td><td>15%</td></tr>
+<tr><td>Horizon</td><td>5 to 9 years</td><td>-5 points</td><td>10%</td></tr>
+<tr><td>Horizon</td><td>10 to 19 years</td><td>0 points</td><td>5%</td></tr>
+<tr><td>Horizon</td><td>20 years or more</td><td>+5 points</td><td>5%</td></tr>
+</tbody>
+</table>
+        </section>
+        <section id="asset-allocation-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="asset-allocation-calculator-guide-heading-3">
+<h2 id="asset-allocation-calculator-guide-heading-3">The Asset Allocation Tool Formula: Stocks, Bonds and Cash</h2>
+<p>Every <strong>asset allocation tool</strong> reduces to the same three-way split of <strong>stocks, bonds and cash</strong>. What differs between tools is how they decide the percentages, so it helps to know what each bucket is expected to do for you.</p>
+<h3>Stocks and Equities</h3>
+<p>Investing in <strong>stocks</strong> means buying ownership shares in companies. You earn money when share prices rise or when companies pay dividends. Equities carry the highest expected growth and the sharpest swings, so they do the heavy lifting for capital appreciation in a long-term plan.</p>
+<h3>Bonds and Fixed Income</h3>
+<p><strong>Bonds</strong> are loans you make to governments or companies in exchange for interest. As a fixed-income holding, they usually move less than stocks, which adds portfolio stability. When stocks fall hard, bonds often cushion the blow, though not every year.</p>
+<h3>Cash and Cash Equivalents</h3>
+<p><strong>Cash</strong> covers savings accounts, money market funds and short-term Treasury bills. It earns little, but it supports preservation of capital and gives you money to spend without selling anything at a bad moment.</p>
+        </section>
+        <section id="asset-allocation-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="asset-allocation-calculator-guide-heading-4">
+<h2 id="asset-allocation-calculator-guide-heading-4">Worked Example: A 41-Year-Old's Asset Mix on $265,000</h2>
+<p>Suppose you are 41, describe yourself as a moderate investor, plan to keep the money invested for 24 years and hold $265,000. Running those inputs through the asset allocation calculator works like this:</p>
+<ol>
+<li>Start with the age rule: 110 - 41 = 69% in stocks.</li>
+<li>A moderate risk tolerance adds 0 points.</li>
+<li>A 24-year horizon falls in the 20-years-or-more band, which adds 5 points: 69 + 0 + 5 = <strong>74% stocks</strong>.</li>
+<li>That same horizon band sets aside <strong>5% cash</strong>.</li>
+<li>Bonds take the remainder: 100 - 74 - 5 = <strong>21% bonds</strong>.</li>
+</ol>
+<p>Applied to the $265,000 balance, the target mix becomes $196,100 in stocks, $55,650 in bonds and $13,250 in cash. The three amounts add back to the full $265,000, which is a quick sanity check worth doing with any result.</p>
+<figure><img src="/assets/images/tools/asset-allocation-calculator/asset-allocation-calculator-stocks-bonds-cash-donut.svg" alt="Donut chart splitting a $265,000 portfolio into 74% stocks, 21% bonds and 5% cash for a moderate 41-year-old investor"><figcaption>A moderate 41-year-old with a 24-year horizon lands on a 74/21/5 split.</figcaption></figure>
+<table>
+<thead><tr><th>Bucket</th><th>Share</th><th>Dollar amount</th></tr></thead>
+<tbody>
+<tr><td>Stocks</td><td>74%</td><td>$196,100</td></tr>
+<tr><td>Bonds</td><td>21%</td><td>$55,650</td></tr>
+<tr><td>Cash</td><td>5%</td><td>$13,250</td></tr>
+</tbody>
+</table>
+<p>Changing only the risk tolerance moves the same 41-year-old across the full spectrum of investor profiles:</p>
+<table>
+<thead><tr><th>Investor profile</th><th>Stocks</th><th>Bonds</th><th>Cash</th></tr></thead>
+<tbody>
+<tr><td>Very conservative</td><td>54%</td><td>41%</td><td>5%</td></tr>
+<tr><td>Conservative</td><td>64%</td><td>31%</td><td>5%</td></tr>
+<tr><td>Moderate</td><td>74%</td><td>21%</td><td>5%</td></tr>
+<tr><td>Aggressive</td><td>84%</td><td>11%</td><td>5%</td></tr>
+<tr><td>Very aggressive</td><td>90%</td><td>5%</td><td>5%</td></tr>
+</tbody>
+</table>
+        </section>
+        <section id="asset-allocation-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="asset-allocation-calculator-guide-heading-5">
+<h2 id="asset-allocation-calculator-guide-heading-5">Asset Classes Behind Your Target Mix</h2>
+<p>Each <strong>asset class</strong> behaves differently, and the three main buckets can be split further. Understanding the <strong>asset classes</strong> inside your stock and bond slices tells you what to buy once the calculator gives you a percentage.</p>
+<h3>Stock Categories and Market Capitalizations</h3>
+<p>Stocks are often grouped by company size. Large-cap companies are generally those worth $10 billion or more, which makes them well established and steadier. Mid-cap and small-cap companies are smaller, grow faster and swing more. Beyond size, you can add international markets and emerging markets to spread your equity exposure across different economies, and you can hold blue chip stocks for dependable dividends. Whatever stock percentage the calculator returns, you can split that slice across these categories.</p>
+<h3>Bond and Alternative Choices</h3>
+<p>Within the bond slice, government debt is the steadiest, while corporate bonds pay more interest for taking more credit risk. Some investors also add <strong>alternative investments</strong> such as gold or real estate, which can behave differently from both stocks and bonds. These are optional extras, not a requirement of the mix.</p>
+<h3>Funds as Building Blocks</h3>
+<p>You do not have to pick individual securities. Mutual funds, index funds and exchange-traded funds (ETFs) pool money from many investors and hold a basket of stocks or bonds, which gives you a diversified holding and instant <strong>diversification</strong> at low cost.</p>
+        </section>
+        <section id="asset-allocation-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="asset-allocation-calculator-guide-heading-6">
+<h2 id="asset-allocation-calculator-guide-heading-6">What Shapes Your Investor Profile and Asset Mix</h2>
+<p>Your <strong>investor profile</strong> combines your goals, how long you can wait and how you react to loss. Two investors of the same age can end up with very different <strong>investor profiles</strong> because they differ on one of the points below.</p>
+<h3>Risk Tolerance</h3>
+<p><strong>Risk tolerance</strong> is your emotional willingness to accept swings. Someone with high tolerance can watch a portfolio fall during market downturns without selling, while a low-tolerance investor prefers predictability even if it means giving up upside. Honest answers matter more than ambitious ones.</p>
+<h3>Risk Capacity</h3>
+<p><strong>Risk capacity</strong> is the objective side: how much loss your finances can absorb. Steady income, a large emergency fund and a long runway raise it. A big upcoming expense lowers it. Your risk profile, meaning your overall risk level, is the blend of both, and the cautious of the two should usually win: if your capacity is lower than your tolerance, pick the more conservative setting in the calculator.</p>
+<h3>Time Horizon</h3>
+<p>Your <strong>time horizon</strong> is how long until you need to spend the money. An <strong>investment horizon</strong> of several decades gives stocks time to recover from bad years, while a goal two or three years away calls for more bonds and cash to protect against principal loss.</p>
+<h3>Investment Goals</h3>
+<p>Your <strong>investment goals</strong> turn the abstract percentages into purposes. Saving for a home in two years, building a retirement fund or funding long-term goals such as a child's college education each imply a different balance between growth and safety. Writing down a specific financial goal with a date makes the horizon input far more reliable, and investing with a date in mind keeps you from drifting.</p>
+        </section>
+        <section id="asset-allocation-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="asset-allocation-calculator-guide-heading-7">
+<h2 id="asset-allocation-calculator-guide-heading-7">Setting a Conservative Asset Mix Seven Years Before Retirement</h2>
+<p>Marcus is 58 and plans to stop work at 65. His rollover IRA and brokerage account together hold $412,380, and after a long rally he suspects the portfolio has drifted from where he meant to keep it. Before he talks to anyone, he runs his own numbers through the calculator.</p>
+<p>He enters age 58, a conservative risk tolerance because he lost sleep in the last downturn, a 7-year horizon and a balance of $412,380. The formula does the rest: 110 - 58 = 52, a conservative setting subtracts 10, and a horizon under 10 years subtracts another 5, leaving <strong>37% stocks</strong>. A 5 to 9 year horizon also sets aside <strong>10% cash</strong>, so bonds take the remaining <strong>53%</strong>.</p>
+<p>Then he compares that with what he actually owns:</p>
+<table>
+<thead><tr><th>Holding</th><th>Current</th><th>Current share</th><th>Target share</th><th>Target amount</th></tr></thead>
+<tbody>
+<tr><td>Stocks</td><td>$268,947</td><td>65.2%</td><td>37%</td><td>$152,581</td></tr>
+<tr><td>Bonds</td><td>$103,215</td><td>25.0%</td><td>53%</td><td>$218,561</td></tr>
+<tr><td>Cash</td><td>$40,218</td><td>9.8%</td><td>10%</td><td>$41,238</td></tr>
+</tbody>
+</table>
+<p>The gap is 28 points on stocks, far beyond the common five-point drift trigger for a review, so this is not a rounding issue. Getting to the target means selling about $116,366 of stocks, buying about $115,346 of bonds and adding $1,020 to cash. Cash is already close, which tells him his emergency reserve is fine as it stands.</p>
+<p>Marcus decides to make the change in two steps. He moves $60,000 inside the rollover IRA this month, where a sale triggers no capital gains tax, and holds the rest until his brokerage statement shows which lots carry the smallest gains. He also reruns the calculator with a conservative setting swapped for moderate, which gives 47% stocks, and keeps that figure as the ceiling he will not exceed before he retires.</p>
+        </section>
+        <section id="asset-allocation-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="asset-allocation-calculator-guide-heading-8">
+<h2 id="asset-allocation-calculator-guide-heading-8">Asset Allocation by Age: Rule of 110 and Rule of 120</h2>
+<p>The simplest <strong>asset allocation by age</strong> shortcuts are two rules of thumb. They tie the stock share directly to your age so that risk falls gradually as retirement approaches.</p>
+<h3>Rule of 110</h3>
+<p>The <strong>rule of 110</strong> subtracts your age from 110 to get your stock percentage. At 40, that gives 70% in stocks and 30% in bonds and cash. It leans cautious and suits investors who value stability.</p>
+<h3>Rule of 120</h3>
+<p>The <strong>rule of 120</strong> subtracts your age from 120 instead, which gives 80% in stocks at age 40. It reflects longer life expectancy and the need for growth that outpaces inflation, so it suits investors who are comfortable with more volatility.</p>
+<figure><img src="/assets/images/tools/asset-allocation-calculator/asset-allocation-by-age-stock-share-line-chart.svg" alt="Line chart of suggested stock percentage falling from 90% at age 25 to 45% at age 70, with age 41 marked at 74%"><figcaption>The suggested stock share falls one point for every year of age.</figcaption></figure>
+<table>
+<thead><tr><th>Age</th><th>Rule of 110 stocks</th><th>Rule of 120 stocks</th><th>Moderate calculator stocks (20+ year horizon)</th></tr></thead>
+<tbody>
+<tr><td>30</td><td>80%</td><td>90%</td><td>85%</td></tr>
+<tr><td>40</td><td>70%</td><td>80%</td><td>75%</td></tr>
+<tr><td>50</td><td>60%</td><td>70%</td><td>65%</td></tr>
+<tr><td>60</td><td>50%</td><td>60%</td><td>55%</td></tr>
+<tr><td>70</td><td>40%</td><td>50%</td><td>45%</td></tr>
+</tbody>
+</table>
+<p>The calculator's moderate column sits halfway between the two rules, which is why it works as a sensible default for a balanced portfolio.</p>
+        </section>
+        <section id="asset-allocation-calculator-guide-section-9" class="panel article-content p-4 sm:p-6" aria-labelledby="asset-allocation-calculator-guide-heading-9">
+<h2 id="asset-allocation-calculator-guide-heading-9">Rebalancing Your Portfolio Back to the Target Mix</h2>
+<p>An allocation is not set once and forgotten. Markets move your percentages for you, and a portfolio that started at 74% stocks can quietly become much more aggressive. <strong>Rebalancing</strong> means selling what has grown too large and buying what has shrunk so that you <strong>rebalance</strong> back to your plan.</p>
+<p>Take the earlier $265,000 portfolio and imagine a strong year in which stocks rise 20%, bonds rise 3% and cash earns 1%. The holdings become $235,320 in stocks, $57,319.50 in bonds and $13,382.50 in cash, a total of $306,022. The weights drift to 76.9% stocks, 18.7% bonds and 4.4% cash.</p>
+<figure><img src="/assets/images/tools/asset-allocation-calculator/portfolio-rebalancing-drift-before-after-bars.svg" alt="Paired bars comparing target 74/21/5 weights with drifted 76.9/18.7/4.4 weights and the trades that restore them"><figcaption>After a strong stock year, selling about $8,864 of stocks restores the targets.</figcaption></figure>
+<p>To restore the 74/21/5 targets you would:</p>
+<ul>
+<li>Sell about $8,864 of stocks.</li>
+<li>Buy about $6,945 of bonds.</li>
+<li>Add about $1,919 to cash.</li>
+</ul>
+<p>Whatever your style of investing, many investors review once a year or when any bucket drifts by five percentage points. Rebalancing is also a quiet discipline: it forces you to trim winners and add to laggards instead of chasing returns.</p>
+        </section>
+        <section id="asset-allocation-calculator-guide-section-10" class="panel article-content p-4 sm:p-6" aria-labelledby="asset-allocation-calculator-guide-heading-10">
+<h2 id="asset-allocation-calculator-guide-heading-10">Asset Mix for Retirement Income, College Savings and Other Goals</h2>
+<p>The same calculator logic applies to very different goals, and the inputs change what comes out.</p>
+<ul>
+<li><strong>Retirement:</strong> a long horizon supports a higher stock share while you save, and the rule of thumb shifts toward bonds and cash as you approach the date you start drawing income.</li>
+<li><strong>College savings:</strong> a newborn's education fund can lean on growth for years, then step down toward bonds and cash as the first tuition bill approaches.</li>
+<li><strong>Income needs:</strong> retirees who rely on the portfolio for spending usually keep more in cash and bonds, plus dividend-paying stocks, so withdrawals do not force sales during a downturn.</li>
+<li><strong>Inflation protection:</strong> this is why the calculator never returns less than 20% stocks, even at advanced ages, because prices keep rising and wealth creation does not stop at retirement.</li>
+</ul>
+<p>Build a separate allocation for each goal if the dates differ, since each financial goal has its own time horizon.</p>
+        </section>
+        <section id="asset-allocation-calculator-guide-section-11" class="panel article-content p-4 sm:p-6" aria-labelledby="asset-allocation-calculator-guide-heading-11">
+<h2 id="asset-allocation-calculator-guide-heading-11">Why a Suggested Asset Mix Is Only a Starting Point</h2>
+<p>Every calculator rests on assumptions about markets and about you, and it cannot see your tax situation, your job security or the funds available in your retirement plan, so treat the <strong>suggested mix</strong> as a starting point for your analysis, not a recommendation.</p>
+<h3>What Simulations Add</h3>
+<p>This calculator uses a fixed, rule-based formula, but some tools run a <strong>Monte Carlo simulation</strong>, which tests thousands of possible market paths using <strong>historical returns</strong> and <strong>standard deviations</strong> for each asset class. They then show a range of outcomes, such as a <strong>median expected return</strong> and the confidence that your starting balance will land within a given band over the investment period. The range matters more than any single number, because expected returns are averages, not promises.</p>
+<h3>Risk and Returns Trade Off</h3>
+<p>Higher <strong>expected returns</strong> come with higher losses in bad years. The <strong>risk and returns</strong> relationship is the reason the five profiles exist, and the reason a very aggressive mix suits only investors who can ignore a sharp drop. A long-term return that you abandon in a panic is worth nothing.</p>
+<h3>Asking a Professional</h3>
+<p>Take your calculator percentages to a <strong>financial advisor</strong> or <strong>financial planner</strong>, who can weigh your complete situation and turn the percentages into specific funds. Some tools add a view report button for more detail, but a human advisor can test the numbers against your real life. Ask the advisor which funds fit each bucket and what each one costs. Different <strong>investment strategies</strong> also treat the buckets differently, so ask which one fits you.</p>
+        </section>
+        <section id="asset-allocation-calculator-guide-section-12" class="panel article-content p-4 sm:p-6" aria-labelledby="asset-allocation-calculator-guide-heading-12">
+<h2 id="asset-allocation-calculator-guide-heading-12">Common Mistakes When You Calculate Your Asset Allocation</h2>
+<p>A few errors show up again and again when people use an allocation tool:</p>
+<ul>
+<li>Overstating risk tolerance after a long rally, then selling in a panic when the market turns.</li>
+<li>Investing without a plan and putting all your eggs in one basket, such as employer stock, which defeats diversification.</li>
+<li>Ignoring the target percentage once it is set, so the mix drifts for years.</li>
+<li>Using one allocation for goals with very different horizons.</li>
+<li>Forgetting to count every account, including old retirement plans and cash at other banks, in the starting balance.</li>
+</ul>
+<p>Avoiding these keeps your plan consistent and your balanced portfolio balanced in practice, not only on paper.</p>
+        </section>
+      </div>
+
+      <section id="asset-allocation-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="asset-allocation-calculator-faq-heading" data-section="faq">
+        <h2 id="asset-allocation-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Asset Allocation Calculator questions</h2>
+        <div id="asset-allocation-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="asset-allocation-calculator-faq-1" class="faq-item" open><summary id="asset-allocation-calculator-faq-1-summary" class="faq-summary"><h3 id="asset-allocation-calculator-faq-1-question" class="faq-question">What is asset allocation?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="asset-allocation-calculator-faq-1-answer" class="faq-answer"><p>Asset allocation is the way you divide an investment portfolio among major asset classes, mainly stocks, bonds and cash. The percentages you choose set how much growth you aim for and how much short-term volatility you accept.</p></div></details>
+          <details id="asset-allocation-calculator-faq-2" class="faq-item" open><summary id="asset-allocation-calculator-faq-2-summary" class="faq-summary"><h3 id="asset-allocation-calculator-faq-2-question" class="faq-question">How does the calculator choose my stock percentage?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="asset-allocation-calculator-faq-2-answer" class="faq-answer"><p>It starts from 110 minus your age, then adds or subtracts points for your risk tolerance and your investment horizon. The result is kept between 20% and 90% stocks, with cash set by how soon you need the money and bonds taking the rest.</p></div></details>
+          <details id="asset-allocation-calculator-faq-3" class="faq-item" open><summary id="asset-allocation-calculator-faq-3-summary" class="faq-summary"><h3 id="asset-allocation-calculator-faq-3-question" class="faq-question">Does my asset allocation change as I get older?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="asset-allocation-calculator-faq-3-answer" class="faq-answer"><p>Yes. As your time horizon shortens, you have less time to recover from losses, so the stock share usually falls and bonds and cash take a larger share. The calculator lowers stocks by one point for every year of age.</p></div></details>
+          <details id="asset-allocation-calculator-faq-4" class="faq-item" open><summary id="asset-allocation-calculator-faq-4-summary" class="faq-summary"><h3 id="asset-allocation-calculator-faq-4-question" class="faq-question">What is the difference between risk tolerance and risk capacity?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="asset-allocation-calculator-faq-4-answer" class="faq-answer"><p>Risk tolerance is how much swing you can accept emotionally. Risk capacity is how much loss your finances can absorb. If your capacity is lower than your tolerance, choose the more conservative setting.</p></div></details>
+          <details id="asset-allocation-calculator-faq-5" class="faq-item" open><summary id="asset-allocation-calculator-faq-5-summary" class="faq-summary"><h3 id="asset-allocation-calculator-faq-5-question" class="faq-question">How often should I rebalance my portfolio?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="asset-allocation-calculator-faq-5-answer" class="faq-answer"><p>Many investors rebalance once a year or whenever a bucket drifts about five percentage points from its target. Rebalancing means selling what has grown too large and buying what has shrunk.</p></div></details>
+          <details id="asset-allocation-calculator-faq-6" class="faq-item" open><summary id="asset-allocation-calculator-faq-6-summary" class="faq-summary"><h3 id="asset-allocation-calculator-faq-6-question" class="faq-question">How do I choose the right allocation for my goals?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="asset-allocation-calculator-faq-6-answer" class="faq-answer"><p>Match the mix to the date you need the money. A goal decades away can lean on stocks, while a goal within a few years calls for more bonds and cash. Use a separate allocation for goals with different dates.</p></div></details>
+          <details id="asset-allocation-calculator-faq-7" class="faq-item" open><summary id="asset-allocation-calculator-faq-7-summary" class="faq-summary"><h3 id="asset-allocation-calculator-faq-7-question" class="faq-question">What does the company type setting do?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="asset-allocation-calculator-faq-7-answer" class="faq-answer"><p>It only changes how your stock slice is divided between large-cap, mid-cap, small-cap, international and emerging-market holdings. Your overall stocks, bonds and cash percentages stay the same.</p></div></details>
+          <details id="asset-allocation-calculator-faq-8" class="faq-item" open><summary id="asset-allocation-calculator-faq-8-summary" class="faq-summary"><h3 id="asset-allocation-calculator-faq-8-question" class="faq-question">Is the result investment advice?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="asset-allocation-calculator-faq-8-answer" class="faq-answer"><p>No. The calculator gives a rule-based starting point. A financial advisor can weigh your taxes, income and full situation before you invest.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="asset-allocation-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="asset-allocation-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="asset-allocation-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="asset-allocation-calculator-ad-bottom-leaderboard">
+            <ins id="asset-allocation-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("asset-allocation-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="asset-allocation-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="asset-allocation-calculator-right-rail-top" class="mb-6">
+        <aside id="asset-allocation-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="asset-allocation-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="asset-allocation-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="asset-allocation-calculator-ad-right-rail-rectangle">
+            <ins id="asset-allocation-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("asset-allocation-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="asset-allocation-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="asset-allocation-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="asset-allocation-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="asset-allocation-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="asset-allocation-calculator-ad-right-rail-skyscraper">
+            <ins id="asset-allocation-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("asset-allocation-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="asset-allocation-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="asset-allocation-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="asset-allocation-calculator-footer-brand">
+        <a id="asset-allocation-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="asset-allocation-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="asset-allocation-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="asset-allocation-calculator-footer-categories" aria-labelledby="asset-allocation-calculator-footer-categories-heading">
+        <h2 id="asset-allocation-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="asset-allocation-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="asset-allocation-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="asset-allocation-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="asset-allocation-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="asset-allocation-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="asset-allocation-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="asset-allocation-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="asset-allocation-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="asset-allocation-calculator-footer-company" aria-labelledby="asset-allocation-calculator-footer-company-heading">
+        <h2 id="asset-allocation-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="asset-allocation-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="asset-allocation-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="asset-allocation-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="asset-allocation-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="asset-allocation-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="asset-allocation-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="asset-allocation-calculator-footer-bottom" class="border-t border-line">
+      <p id="asset-allocation-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="asset-allocation-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Asset allocation illustrator. Nothing here is a recommendation: returns and bad-year changes are
+  // user-editable hypothetical assumptions.
+  //   weight of a class = its value / portfolio total (current mix) or the target %
+  //   blended return R = sum of weight x hypothetical return (a mix rebalanced back to its weights)
+  //   projection: monthly rate (1 + R)^(1/12) - 1, monthly additions at the end of each month
+  //   bad year = sum of weight x hypothetical bad-year change, applied to today's total
+  //   rebalance change = target % x total - current value (the changes always net to $0)
+  // Checked in Node (aa.test.js): 60/30/10 at 7/4/2% blends to 5.6%; default current mix
+  // 70k/22k/8k blends to 5.94%; $100,000 + $500/month at 5.6% for 20 years matches the closed form
+  // 100000 x 1.056^20 + 500 x ((1 + j)^240 - 1) / j with j = 1.056^(1/12) - 1; bad year of
+  // 60/30/10 at -30/-5/0% = -19.5%; rebalance changes sum to $0; 0% returns = plain sum.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+  var KEYS = ['S', 'B', 'C', 'O'];
+  var NAMES = { S: 'Stocks', B: 'Bonds', C: 'Cash', O: 'Other assets' };
+  var OUTPUTS = ['aaTgtFuture', 'aaCurFuture', 'aaTotal', 'aaTgtReturn', 'aaCurReturn', 'aaAdded', 'aaTgtBad', 'aaCurBad', 'aaMoved'];
+
+  // --- calc start
+  function blend(weights, values) {
+    var s = 0;
+    for (var k = 0; k < weights.length; k++) s += weights[k] * values[k];
+    return s;
+  }
+
+  function project(start, monthly, annualRate, years) {
+    var j = Math.pow(1 + annualRate, 1 / 12) - 1, bal = start, rows = [];
+    for (var m = 1; m <= years * 12; m++) {
+      bal = bal * (1 + j) + monthly;
+      if (m % 12 === 0) rows.push(bal);
+    }
+    return rows;
+  }
+
+  function rebalance(current, targetWeights) {
+    var total = current.reduce(function (a, b) { return a + b; }, 0);
+    return current.map(function (v, k) { return targetWeights[k] * total - v; });
+  }
+  // --- calc end
+
+  function num(id) {
+    var v = parseFloat(document.getElementById(id).value);
+    return isNaN(v) ? NaN : v;
+  }
+
+  function pct(x, d) { return (x * 100).toFixed(d === undefined ? 2 : d).replace(/\.?0+$/, '').replace('-', '−') + '%'; }
+
+  function signed(x) { return Math.abs(x) < 0.5 ? '$0' : (x > 0 ? '+' : '−') + money.format(Math.abs(x)); }
+
+  function fail(msg) {
+    var error = document.getElementById('aaError');
+    error.hidden = false;
+    error.textContent = msg;
+    OUTPUTS.forEach(function (id) { document.getElementById(id).textContent = '–'; });
+    document.getElementById('aaRebalance').innerHTML = '';
+    document.getElementById('aaProjection').innerHTML = '';
+    document.getElementById('aaNote').hidden = true;
+  }
+
+  function update() {
+    document.getElementById('aaError').hidden = true;
+    var cur = KEYS.map(function (k) { return num('aaCur' + k); }),
+        tgt = KEYS.map(function (k) { return num('aaTgt' + k); }),
+        ret = KEYS.map(function (k) { return num('aaRet' + k); }),
+        bad = KEYS.map(function (k) { return num('aaBad' + k); });
+    var monthly = num('aaMonthly'), years = num('aaYears');
+    var sumT = tgt.reduce(function (a, b) { return a + (isNaN(b) ? 0 : b); }, 0);
+    document.getElementById('aaTargetSum').textContent = 'Target mix total: ' + (Math.round(sumT * 100) / 100) + '%';
+    var all = cur.concat(tgt, ret, bad, [monthly, years]);
+    if (all.some(isNaN)) return fail('Fill in every box with a number (0 is fine).');
+    if (cur.some(function (v) { return v < 0; }) || monthly < 0) return fail('Values and additions cannot be negative.');
+    if (tgt.some(function (v) { return v < 0 || v > 100; })) return fail('Each target must be from 0 to 100%.');
+    if (Math.abs(sumT - 100) > 0.01) return fail('The target mix adds up to ' + (Math.round(sumT * 100) / 100) + '%. Adjust it to total 100%.');
+    if (ret.some(function (v) { return v < -50 || v > 50; })) return fail('Enter hypothetical returns from -50% to 50%.');
+    if (bad.some(function (v) { return v < -100 || v > 100; })) return fail('Enter bad-year changes from -100% to 100%.');
+    years = Math.round(years);
+    if (years < 1 || years > 60) return fail('Enter 1 to 60 years to project.');
+    var total = cur.reduce(function (a, b) { return a + b; }, 0);
+    if (total <= 0 && monthly <= 0) return fail('Enter a current value or a monthly addition.');
+
+    var tW = tgt.map(function (v) { return v / 100; });
+    var cW = total > 0 ? cur.map(function (v) { return v / total; }) : tW.slice();
+    var rD = ret.map(function (v) { return v / 100; }), bD = bad.map(function (v) { return v / 100; });
+    var tR = blend(tW, rD), cR = blend(cW, rD), tBad = blend(tW, bD), cBad = blend(cW, bD);
+    var tRows = project(total, monthly, tR, years), cRows = project(total, monthly, cR, years);
+    var moves = rebalance(cur, tW);
+    var moved = moves.reduce(function (a, m) { return a + (m > 0 ? m : 0); }, 0);
+
+    document.getElementById('aaTgtFuture').textContent = money.format(tRows[tRows.length - 1]);
+    document.getElementById('aaCurFuture').textContent = money.format(cRows[cRows.length - 1]);
+    document.getElementById('aaTotal').textContent = money.format(total);
+    document.getElementById('aaTgtReturn').textContent = pct(tR);
+    document.getElementById('aaCurReturn').textContent = pct(cR);
+    document.getElementById('aaAdded').textContent = money.format(monthly * 12 * years);
+    document.getElementById('aaTgtBad').textContent = signed(tBad * total) + ' (' + pct(tBad, 1) + ')';
+    document.getElementById('aaCurBad').textContent = signed(cBad * total) + ' (' + pct(cBad, 1) + ')';
+    document.getElementById('aaMoved').textContent = money.format(moved);
+    var note = document.getElementById('aaNote');
+    note.hidden = total > 0;
+    note.textContent = 'With no current holdings, the current mix is treated as the target mix.';
+
+    document.getElementById('aaRebalance').innerHTML = KEYS.map(function (k, idx) {
+      return '<tr><th scope="row">' + NAMES[k] + '</th><td>' + money.format(cur[idx]) + '</td><td>' +
+             (total > 0 ? pct(cW[idx], 1) : '–') + '</td><td>' + pct(tW[idx], 1) + '</td><td>' +
+             money.format(tW[idx] * total) + '</td><td>' + signed(moves[idx]) + '</td></tr>';
+    }).join('');
+    document.getElementById('aaProjection').innerHTML = tRows.map(function (t, idx) {
+      var c = cRows[idx];
+      return '<tr><td>' + (idx + 1) + '</td><td>' + money.format(monthly * 12 * (idx + 1)) + '</td><td>' +
+             money.format(c) + '</td><td>' + money.format(t) + '</td><td>' + signed(t - c) + '</td></tr>';
+    }).join('');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('aaForm');
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

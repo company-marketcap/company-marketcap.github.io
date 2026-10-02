@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="en" id="inflation-calculator-document" data-page-slug="inflation-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inflation Calculator: How Prices Change Over Time</title>
+  <meta name="description" content="Use this inflation calculator to see what a dollar from any past year is worth today. Enter an amount and two years to adjust for price changes using CPI data.">
+  <link rel="canonical" href="https://company-marketcap.github.io/inflation-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Inflation Calculator: How Prices Change Over Time">
+  <meta property="og:description" content="Use this inflation calculator to see what a dollar from any past year is worth today. Enter an amount and two years to adjust for price changes using CPI data.">
+  <meta property="og:url" content="https://company-marketcap.github.io/inflation-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Inflation Calculator", "url": "https://company-marketcap.github.io/inflation-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Use this inflation calculator to see what a dollar from any past year is worth today. Enter an amount and two years to adjust for price changes using CPI data."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Inflation, Currency & Economics", "item": "https://company-marketcap.github.io/financial-calculators.html#inflation-currency-calculators"}, {"@type": "ListItem", "position": 4, "name": "Inflation Calculator", "item": "https://company-marketcap.github.io/inflation-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How does an inflation calculator work?", "acceptedAnswer": {"@type": "Answer", "text": "It multiplies your amount by the ratio of the Consumer Price Index in the end year to the index in the start year. A higher ending index means each dollar buys less, so the adjusted amount is larger."}}, {"@type": "Question", "name": "Which CPI data does this calculator use?", "acceptedAnswer": {"@type": "Answer", "text": "The CPI-U series from the Bureau of Labor Statistics, which covers urban consumers and the all items index. Results here use annual averages from 1913 to 2024."}}, {"@type": "Question", "name": "What happens for years after the latest CPI data?", "acceptedAnswer": {"@type": "Answer", "text": "Years beyond 2024 are estimated by applying the future inflation rate you enter, which starts at 2.5%, to the last published CPI value."}}, {"@type": "Question", "name": "What is the difference between the forward and backward flat rate options?", "acceptedAnswer": {"@type": "Answer", "text": "Forward grows an amount by a steady yearly inflation rate to show what it will cost in the future. Backward divides by the same growth to show what a future amount is worth in today's money."}}, {"@type": "Question", "name": "What is a normal inflation rate?", "acceptedAnswer": {"@type": "Answer", "text": "Most developed economies aim for roughly 2% to 3% a year. The long-run U.S. average is a little higher, and individual years can swing well above or below it."}}, {"@type": "Question", "name": "Why can my own cost of living differ from the result?", "acceptedAnswer": {"@type": "Answer", "text": "The CPI tracks an average basket of goods and services. If you spend more on a fast-rising category such as housing or energy, your personal inflation can run higher than the national figure."}}, {"@type": "Question", "name": "How can I protect my savings from inflation?", "acceptedAnswer": {"@type": "Answer", "text": "Compare the return on your savings with the inflation rate. Investments such as inflation-protected bonds, stocks or I bonds are commonly used to try to keep pace, though they carry their own risks."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="inflation-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="inflation-calculator" data-page-type="calculator">
+  <a id="inflation-calculator-skip-link" href="#inflation-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="inflation-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="inflation-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="inflation-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="inflation-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="inflation-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="inflation-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="inflation-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="inflation-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="inflation-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="inflation-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="inflation-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="inflation-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="inflation-calculator-header-search-status" aria-controls="inflation-calculator-header-search-results" data-search-input="header">
+              <p id="inflation-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="inflation-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="inflation-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="inflation-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="inflation-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="inflation-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="inflation-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="inflation-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="inflation-calculator-mobile-search-status" aria-controls="inflation-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="inflation-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="inflation-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="inflation-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="inflation-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="inflation-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="inflation-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="inflation-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="inflation-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="inflation-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="inflation-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="inflation-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="inflation-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="inflation-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="inflation-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="inflation-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="inflation-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="inflation-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="inflation-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="inflation-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="inflation-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="inflation-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="inflation-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="inflation-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="inflation-calculator-sidebar-search-status" aria-controls="inflation-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="inflation-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="inflation-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="inflation-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="inflation-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="inflation-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="inflation-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="inflation-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="inflation-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="inflation-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="inflation-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="inflation-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="inflation-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="inflation-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="inflation-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="inflation-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="inflation-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="inflation-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="inflation-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="inflation-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="inflation-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="inflation-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="inflation-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="inflation-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="inflation-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="inflation-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="inflation-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="inflation-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="inflation-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="inflation-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators" aria-current="true">Inflation &amp; Currency</a></li><li><a id="inflation-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="inflation-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="inflation-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="inflation-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="inflation-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="inflation-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="inflation-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="inflation-calculator" data-calculator-slug="inflation-calculator" data-sub-category-slug="inflation-currency-calculators">
+      <aside id="inflation-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="inflation-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="inflation-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="inflation-calculator-ad-top-leaderboard">
+            <ins id="inflation-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("inflation-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="inflation-calculator-intro-area" class="space-y-4">
+        <nav id="inflation-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="inflation-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="inflation-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="inflation-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="inflation-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#inflation-currency-calculators" itemprop="item"><span itemprop="name">Inflation, Currency &amp; Economics</span></a><meta itemprop="position" content="3"></li>
+            <li id="inflation-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Inflation Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/inflation-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="inflation-calculator-hero-section" aria-labelledby="inflation-calculator-hero-heading" data-section="hero">
+          <h1 id="inflation-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Inflation Calculator: How Prices Change Over Time</h1>
+          <p id="inflation-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Wondering what your old paycheck, a past purchase or a savings goal is really worth today? An inflation calculator answers that in seconds: enter an amount and two years, and it returns the equivalent value using official Consumer Price Index data, so you can see how much the purchasing power of the dollar has shifted. <!-- SILO_START:slot_a -->If you want to see how the figures change, the <a class="silo-link" href="/currency-calculator.html">currency converter online</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="inflation-calculator-tool" class="space-y-6" data-page-slug="inflation-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="infFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="infForm" class="space-y-5" novalidate aria-labelledby="infFormHeading">
+      <h2 id="infFormHeading" class="panel-heading">Compare prices between years</h2>
+      <div><label for="infAmount" class="form-label">Amount</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="infAmount" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1" value="1000" inputmode="decimal"></div></div>
+      <div class="form-row form-row-2">
+        <div><label for="infFrom" class="form-label">In year</label>
+        <select id="infFrom" class="form-select"><option value="2025">2025</option><option value="2024">2024</option><option value="2023">2023</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000" selected>2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option><option value="1979">1979</option><option value="1978">1978</option><option value="1977">1977</option><option value="1976">1976</option><option value="1975">1975</option><option value="1974">1974</option><option value="1973">1973</option><option value="1972">1972</option><option value="1971">1971</option><option value="1970">1970</option><option value="1969">1969</option><option value="1968">1968</option><option value="1967">1967</option><option value="1966">1966</option><option value="1965">1965</option><option value="1964">1964</option><option value="1963">1963</option><option value="1962">1962</option><option value="1961">1961</option><option value="1960">1960</option><option value="1959">1959</option><option value="1958">1958</option><option value="1957">1957</option><option value="1956">1956</option><option value="1955">1955</option><option value="1954">1954</option><option value="1953">1953</option><option value="1952">1952</option><option value="1951">1951</option><option value="1950">1950</option><option value="1949">1949</option><option value="1948">1948</option><option value="1947">1947</option><option value="1946">1946</option><option value="1945">1945</option><option value="1944">1944</option><option value="1943">1943</option><option value="1942">1942</option><option value="1941">1941</option><option value="1940">1940</option><option value="1939">1939</option><option value="1938">1938</option><option value="1937">1937</option><option value="1936">1936</option><option value="1935">1935</option><option value="1934">1934</option><option value="1933">1933</option><option value="1932">1932</option><option value="1931">1931</option><option value="1930">1930</option><option value="1929">1929</option><option value="1928">1928</option><option value="1927">1927</option><option value="1926">1926</option><option value="1925">1925</option><option value="1924">1924</option><option value="1923">1923</option><option value="1922">1922</option><option value="1921">1921</option><option value="1920">1920</option><option value="1919">1919</option><option value="1918">1918</option><option value="1917">1917</option><option value="1916">1916</option><option value="1915">1915</option><option value="1914">1914</option><option value="1913">1913</option></select></div>
+        <div><label for="infTo" class="form-label">Is worth in year</label>
+        <select id="infTo" class="form-select"><option value="2025" selected>2025</option><option value="2024">2024</option><option value="2023">2023</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option><option value="1979">1979</option><option value="1978">1978</option><option value="1977">1977</option><option value="1976">1976</option><option value="1975">1975</option><option value="1974">1974</option><option value="1973">1973</option><option value="1972">1972</option><option value="1971">1971</option><option value="1970">1970</option><option value="1969">1969</option><option value="1968">1968</option><option value="1967">1967</option><option value="1966">1966</option><option value="1965">1965</option><option value="1964">1964</option><option value="1963">1963</option><option value="1962">1962</option><option value="1961">1961</option><option value="1960">1960</option><option value="1959">1959</option><option value="1958">1958</option><option value="1957">1957</option><option value="1956">1956</option><option value="1955">1955</option><option value="1954">1954</option><option value="1953">1953</option><option value="1952">1952</option><option value="1951">1951</option><option value="1950">1950</option><option value="1949">1949</option><option value="1948">1948</option><option value="1947">1947</option><option value="1946">1946</option><option value="1945">1945</option><option value="1944">1944</option><option value="1943">1943</option><option value="1942">1942</option><option value="1941">1941</option><option value="1940">1940</option><option value="1939">1939</option><option value="1938">1938</option><option value="1937">1937</option><option value="1936">1936</option><option value="1935">1935</option><option value="1934">1934</option><option value="1933">1933</option><option value="1932">1932</option><option value="1931">1931</option><option value="1930">1930</option><option value="1929">1929</option><option value="1928">1928</option><option value="1927">1927</option><option value="1926">1926</option><option value="1925">1925</option><option value="1924">1924</option><option value="1923">1923</option><option value="1922">1922</option><option value="1921">1921</option><option value="1920">1920</option><option value="1919">1919</option><option value="1918">1918</option><option value="1917">1917</option><option value="1916">1916</option><option value="1915">1915</option><option value="1914">1914</option><option value="1913">1913</option></select></div>
+      </div>
+      <p id="infDataNote" class="form-hint">Uses BLS CPI-U annual averages from 1913 to 2025.</p>
+      <p id="infError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="infResults" aria-live="polite" aria-labelledby="infResultsHeading">
+      <h2 id="infResultsHeading" class="panel-heading">Historical result</h2>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p id="infValueLabel" class="stat-label">Value in 2025</p><p id="infValue" class="stat-value">–</p><p id="infSummary" class="mt-1 text-xs text-ink-muted"></p></div>
+        <div class="stat-card"><p class="stat-label">Cumulative inflation</p><p id="infCumulative" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Average annual inflation</p><p id="infAverage" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">CPI (start → end)</p><p id="infCpi" class="stat-value">–</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="infScheduleHeading" data-section="history">
+  <h2 id="infScheduleHeading" class="panel-heading">Year-by-year prices</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">The consumer price index for each year, that year’s inflation rate and what your amount equals in that year’s dollars.</p>
+  <div class="table-scroll mt-5 max-h-[520px]" tabindex="0" role="region" aria-labelledby="infScheduleHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Year</th><th scope="col">CPI-U</th><th scope="col">Inflation</th><th scope="col">Equivalent amount</th></tr></thead>
+      <tbody id="infTable"></tbody>
+    </table>
+  </div>
+</section>
+<section class="panel @container p-4 sm:p-6" aria-labelledby="infFutFormHeading" data-section="future">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="infFutForm" class="space-y-5" novalidate aria-labelledby="infFutFormHeading">
+      <h2 id="infFutFormHeading" class="panel-heading">Project future inflation</h2>
+      <div><label for="infFutAmount" class="form-label">Amount today</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="infFutAmount" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1" value="500" inputmode="decimal"></div></div>
+      <div class="form-row form-row-2">
+        <div><label for="infFutRate" class="form-label">Assumed inflation rate</label><div class="input-group"><input type="number" id="infFutRate" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="-50" max="100" step="0.1" value="2.8" inputmode="decimal"><span class="input-affix">%</span></div></div>
+        <div><label for="infFutYears" class="form-label">Years</label><div class="input-group"><input type="number" id="infFutYears" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="1" value="15" inputmode="numeric"><span class="input-affix">yrs</span></div></div>
+      </div>
+      <p id="infFutError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div aria-live="polite" aria-labelledby="infFutResultsHeading">
+      <h2 id="infFutResultsHeading" class="panel-heading">Future result</h2>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p class="stat-label">Future cost of the same goods</p><p id="infFutCost" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Today’s value of that amount in the future</p><p id="infFutWorth" class="stat-value">–</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+        <p id="inflation-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="inflation-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Wondering what your old paycheck, a past purchase or a savings goal is really worth today? An inflation calculator answers that in seconds: enter an amount and two years, and it returns the equivalent value using official Consumer Price Index data, so you can see how much the purchasing power of the dollar has shifted. <!-- SILO_START:slot_a_m -->If you want to see how the figures change, the <a class="silo-link" href="/currency-calculator.html">currency converter online</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="inflation-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="inflation-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="inflation-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="inflation-calculator-ad-in-feed">
+            <ins id="inflation-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("inflation-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="inflation-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="inflation-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="inflation-calculator-guide-heading-1">
+<h2 id="inflation-calculator-guide-heading-1">Inflation Calculator with U.S. CPI Data: How It Works</h2>
+<p>Because the index tracks the prices of everyday goods and services, the tool compares the average CPI for the year you start with against the CPI for the year you finish with, then scales your amount by that ratio. Because the figures come from the <strong>Consumer Price Index</strong>, the answer reflects what households actually pay for everyday goods and services, not a guess about the economy. The same inflation logic powers any <strong>US inflation calculator</strong>, and it works equally well for a quick curiosity check or a serious plan. <!-- SILO_START:slot_b -->If you want to see how the figures change, the <a class="silo-link" href="/budget-calculator.html">budget calculator</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_b --></p>
+
+<h3>Step-by-step: what you enter and what you get back</h3>
+<ol>
+<li>Type the dollar amount you want to adjust, such as a salary, a rent payment or a purchase price.</li>
+<li>Pick the starting year, the year that amount was paid or earned.</li>
+<li>Pick the ending year, usually the current year.</li>
+<li>Click the calculate button to see the adjusted amount, the percent change and the average yearly rate.</li>
+</ol>
+<p>Each result tells you the <strong>price difference</strong> between the two years in plain dollars, so you can judge the gap without doing any arithmetic yourself.</p>
+
+<h3>How the consumer price index feeds the result</h3>
+<p>The Bureau of Labor Statistics collects prices every month for a fixed <strong>basket of goods</strong> and services and publishes the <strong>CPI</strong>. For most households the relevant series is <strong>CPI-U</strong>, which covers all <strong>urban consumers</strong> and the &ldquo;all items&rdquo; index. A rising index means the <strong>price level</strong> is climbing, so each dollar buys less. Comparing the index across two dates is exactly how an <strong>inflation rate calculator</strong> turns raw data into a single percentage you can use.</p>
+
+<h3>The inflation formula behind each result</h3>
+<p>Two short equations do all the work. The first scales your amount; the second converts the index change into an <strong>inflation rate</strong>:</p>
+$$\text{Adjusted amount} = \text{Original amount} \times \frac{\text{CPI}_{\text{end}}}{\text{CPI}_{\text{start}}}$$
+$$\text{Inflation rate} = \frac{\text{CPI}_{\text{end}} - \text{CPI}_{\text{start}}}{\text{CPI}_{\text{start}}} \times 100$$
+<p>Whenever the ending CPI is larger, the inflation result is positive and your money has lost <strong>purchasing power</strong>; a bigger gap between the two CPI values means higher inflation over the period. A negative result means prices fell over the period, which is how a falling price level appears in your result.</p>
+<figure><img src="/assets/images/tools/inflation-calculator/inflation-rate-formula-cpi-ratio-example.svg" alt="Two worked equations: the CPI ratio that adjusts $2,400 to $3,854.86 and the inflation rate formula giving 60.62%"><figcaption>The adjusted amount and the inflation rate both come from the ratio of two CPI values.</figcaption></figure>
+        </section>
+        <section id="inflation-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="inflation-calculator-guide-heading-2">
+<h2 id="inflation-calculator-guide-heading-2">Worked Example: Your Equivalent Value for $2,400 From 2005</h2>
+<p>Suppose you paid $2,400 for a used car in 2005 and want to know what that sum looks like in 2024 dollars. The annual average CPI-U was 195.3 in 2005 and 313.689 in 2024, so the ratio is 313.689 &divide; 195.3 = 1.6062. Multiply that by $2,400 and you get <strong>$3,854.86</strong>. The table below shows the same $2,400 at several checkpoints. <!-- SILO_START:slot_c -->The <a class="silo-link" href="/date-calculator.html">date calculator</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_c --></p>
+<table>
+<thead>
+<tr><th>Year</th><th>Annual average CPI-U</th><th>Equivalent of $2,400 from 2005</th><th>Cumulative change since 2005</th></tr>
+</thead>
+<tbody>
+<tr><td>2005</td><td>195.300</td><td>$2,400.00</td><td>0.00%</td></tr>
+<tr><td>2010</td><td>218.056</td><td>$2,679.64</td><td>11.65%</td></tr>
+<tr><td>2015</td><td>237.017</td><td>$2,912.65</td><td>21.36%</td></tr>
+<tr><td>2020</td><td>258.811</td><td>$3,180.47</td><td>32.52%</td></tr>
+<tr><td>2024</td><td>313.689</td><td>$3,854.86</td><td>60.62%</td></tr>
+</tbody>
+</table>
+<figure><img src="/assets/images/tools/inflation-calculator/inflation-calculator-2400-dollars-2005-to-2024-curve.svg" alt="Line chart showing $2,400 from 2005 growing to $3,854.86 in 2024 after CPI-U inflation adjustment"><figcaption>The same $2,400 purchase needs $3,854.86 in 2024 dollars, a 60.62% cumulative price change since 2005.</figcaption></figure>
+
+<h3>Reading the cumulative price change</h3>
+<p>The <strong>cumulative price change</strong> of 60.62% means the same basket cost about three fifths more in 2024 than in 2005. Put differently, a 2005 dollar now has only about 62 cents of buying power. Notice that the biggest jump came between 2020 and 2024, which is why a longer window does not always grow at an even pace.</p>
+
+<h3>Annual inflation versus cumulative inflation</h3>
+<p><strong>Annual inflation</strong> describes one twelve-month change, while <strong>cumulative inflation</strong> adds up the whole stretch. To translate a cumulative figure into a yearly one, take the 19th root of the ratio: 1.6062 raised to the power of 1/19 gives roughly 1.0253, an <strong>average inflation rate</strong> of 2.53% a year. That is a touch above the 2% target most central banks aim for, which is typical for a period that included a sharp price surge.</p>
+        </section>
+        <section id="inflation-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="inflation-calculator-guide-heading-3">
+<h2 id="inflation-calculator-guide-heading-3">Forward Flat Rate Inflation Calculator for Future Costs</h2>
+<p>History is not the only use for inflation data. This forward projection estimates a price in the future by assuming one steady rate every year. The equation is simple compounding: <!-- SILO_START:slot_d -->The <a class="silo-link" href="/personal-economic-recovery-calculator.html">personal economic recovery calculator online</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_d --></p>
+$$\text{Future cost} = \text{Amount today} \times (1 + r)^{n}$$
+<p>Say you expect a $5,000 home repair bill to grow at a flat rate of 3.2% for 10 years. Then $5,000 &times; 1.032<sup>10</sup> equals <strong>$6,851.21</strong>, an increase of $1,851.21. Run the same case at 2% and 4% and you land on $6,094.97 and $7,401.22, so a small change in the assumed rate shifts the outcome by more than a thousand dollars.</p>
+<figure><img src="/assets/images/tools/inflation-calculator/forward-flat-rate-inflation-10-year-cost-comparison.svg" alt="Bar chart of a $5,000 cost after 10 years at 2.0%, 3.2% and 4.0% flat-rate inflation"><figcaption>A $5,000 repair bill after 10 years at three flat inflation rates.</figcaption></figure>
+<ul>
+<li>Use the long-run average of roughly 2% to 3% when you have no better estimate.</li>
+<li>Test a higher rate to see how a tough decade would change your plan.</li>
+<li>Re-run the numbers every year, because the CPI keeps moving.</li>
+</ul>
+        </section>
+        <section id="inflation-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="inflation-calculator-guide-heading-4">
+<h2 id="inflation-calculator-guide-heading-4">Backward Flat Rate Inflation Calculator for Future Amounts</h2>
+<p>The backward mode takes a future amount, a rate and a number of years, and returns the matching amount in today&rsquo;s money. Instead of asking what something will cost, it asks what a later sum is worth now. If you are promised $18,000 in 15 years and you assume a 3.2% flat rate, divide by 1.032<sup>15</sup>: the offer is worth about <strong>$11,222.18</strong> in current dollars. That figure is the <strong>real value</strong> of the payment, and it is the number to compare against anything you could buy or earn right now.</p>
+<p>This reverse view is handy for pensions, structured settlements and long-term contracts that pay a fixed sum with no cost-of-living adjustment.</p>
+        </section>
+        <section id="inflation-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="inflation-calculator-guide-heading-5">
+<h2 id="inflation-calculator-guide-heading-5">Checking a Raise With the Inflation Rate Calculator</h2>
+<p>Dana, a billing coordinator, has a performance review on Thursday. Her pay went from $58,400 in 2018 to $66,250 now, and she wants to know whether that 13.44% bump kept up with prices before she names a number to her manager.</p>
+<p>She opens the calculator and enters <strong>$58,400</strong>, a start year of <strong>2018</strong> and an end year of <strong>2024</strong>. Behind the scenes it compares the annual average CPI-U of 251.107 for 2018 with 313.689 for 2024, a ratio of 1.2492. The result: <strong>$72,954.71</strong>, a cumulative increase of 24.92%, or about 3.78% a year.</p>
+<table>
+<thead><tr><th>Measure</th><th>Value</th></tr></thead>
+<tbody>
+<tr><td>2018 salary</td><td>$58,400.00</td></tr>
+<tr><td>Same pay in 2024 dollars</td><td>$72,954.71</td></tr>
+<tr><td>Current salary</td><td>$66,250.00</td></tr>
+<tr><td>Real shortfall</td><td>$6,704.71</td></tr>
+</tbody>
+</table>
+<p>Dana then reverses the question. Dividing her current $66,250 by 1.2492 gives $53,032.90 in 2018 dollars, so her real pay has fallen by roughly 9.2% even though the paycheck is bigger. The 3.78% average yearly rate is also well above the Federal Reserve&rsquo;s 2% target, which tells her the gap is not a rounding quirk.</p>
+<p>The decision follows directly: matching the 2018 buying power means $72,954.71, which is 10.12% above her current salary. She writes down $72,950 as her ask, and she plans to rerun the numbers with 2023 as the start year if her manager argues that the earlier period was unusual.</p>
+        </section>
+        <section id="inflation-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="inflation-calculator-guide-heading-6">
+<h2 id="inflation-calculator-guide-heading-6">Purchasing Power and the Real Value of Money</h2>
+<p>Inflation is simply the other side of a coin whose face reads <strong>purchasing power</strong>, and every inflation reading tells you how fast that value is slipping. When prices rise, the same paycheck covers fewer groceries, less rent and fewer tanks of fuel. Because inflation compounds quietly, many people underestimate how quickly their money can lose ground, and a steady 3% inflation rate halves the value of a dollar in about 24 years.</p>
+
+<h3>Cost of living and your salary</h3>
+<p>Your <strong>cost of living</strong> is what it takes to cover housing, food, transport and care. If your <strong>salary</strong> grows slower than the CPI, your real <strong>income</strong> is shrinking even though the number on the pay stub looks larger. To check, enter your old pay and its starting date, then compare the adjusted amount the calculator returns with your current pay: if the adjusted figure is higher, you did not keep up. The same check works for <strong>wages</strong> negotiated under a union contract.</p>
+
+<h3>Savings, investments and the real return</h3>
+<p>Cash sitting idle is the easiest place to lose value. Keep $12,000 in an account that pays 0.5% for five years and you end with $12,303.02, yet if inflation runs at 3.1% the same basket now costs $13,978.95, so your real balance is nearer $10,301. <strong>Savings</strong> therefore need a rate of return above the CPI to grow in real terms, and long-run <strong>investments</strong> such as stocks or inflation-linked <strong>I bonds</strong> exist partly for that reason. If a certificate pays 4.5% while prices rise 3.1%, the real gain is about 1.36% a year.</p>
+        </section>
+        <section id="inflation-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="inflation-calculator-guide-heading-7">
+<h2 id="inflation-calculator-guide-heading-7">Why the Price Index Rises: Causes of Inflation</h2>
+<p>Economists group the drivers into a few families, and understanding them helps you judge whether a spike is temporary or likely to stick around. <strong>Supply and demand</strong> imbalances sit behind most of them, an idea rooted in <strong>Keynesian economics</strong>.</p>
+
+<h3>Demand-pull, cost-push and built-in inflation</h3>
+<ul>
+<li><strong>Demand-pull inflation</strong> appears when shoppers want more than the <strong>economy</strong> can supply, so sellers charge more.</li>
+<li><strong>Cost-push inflation</strong> starts on the producer side, for example when oil, shipping costs or new <strong>tariffs</strong> rise and businesses pass the extra cost along to buyers.</li>
+<li><strong>Built-in inflation</strong> feeds on itself: workers ask for higher pay to keep up, and firms then lift prices to cover the new payroll.</li>
+</ul>
+
+<h3>Money supply, monetary policy and the Federal Reserve</h3>
+<p>When the <strong>money supply</strong> grows faster than output, each unit of currency is worth less. A <strong>central bank</strong> such as the <strong>Federal Reserve</strong> uses <strong>monetary policy</strong>, mainly the policy <strong>interest</strong> rate, to cool or warm the economy, and it generally aims for roughly 2% a year. When borrowing becomes more expensive, spending slows and the pace of price increases usually eases.</p>
+
+<h3>Hyperinflation, deflation and the Great Depression</h3>
+<p><strong>Hyperinflation</strong> is runaway price growth that wipes out a currency, as seen in Germany during the 1920s. <strong>Deflation</strong> is the opposite, and it can be just as damaging: during the <strong>Great Depression</strong>, falling prices cut profits, jobs and spending in a downward spiral. Moderate, predictable inflation is considered healthier than either extreme. The calculator works best in that mild range, because its CPI-based results show falling prices as a negative figure and are not designed for hyperinflation.</p>
+        </section>
+        <section id="inflation-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="inflation-calculator-guide-heading-8">
+<h2 id="inflation-calculator-guide-heading-8">Historical Inflation Rates and Your Dollar Value Over Time</h2>
+<p>Looking at <strong>historical inflation</strong> keeps single headlines in perspective. Over the past century, as published inflation rates show, the United States has seen periods of deflation in the 1930s, double-digit spikes in the late 1970s and early 1980s, and a long stretch of mild readings afterward. The long-term average sits near 3%, which is why many planners use that number as a default. Applying it to the <strong>dollar value</strong> of any past year shows how much a fixed income would have needed to grow just to stand still.</p>
+<p>Monthly releases matter too. <strong>Monthly inflation</strong> readings are noisy, so analysts often quote the <strong>trailing 12-month</strong> change, which smooths out one-off swings and is the figure most news stories refer to.</p>
+
+<h3>Core inflation versus the headline inflation rate</h3>
+<p><strong>Core inflation</strong> strips out food and energy, two categories that jump around with weather and geopolitics. The headline figure includes them, so the two numbers can diverge for months. The calculator uses the all-items headline series, not core. Policymakers watch the core series to gauge the underlying trend, while your own <strong>budget</strong> feels the headline number because you still have to eat and drive.</p>
+
+<h3>The basket of goods and each spending category</h3>
+<p>The government tracks a <strong>market basket</strong> sorted into eight major <strong>spending category</strong> groups: food, housing, apparel, transportation, medical care, recreation, education and other goods and services. Because your personal mix differs from the average household, your own experience can run above or below the national figure. Someone who rents in an expensive city, for instance, feels <strong>housing</strong> far more than the typical weight suggests.</p>
+
+<h3>Gas prices, energy prices and grocery prices</h3>
+<p>Three categories draw the most attention. <strong>Gas prices</strong> and <strong>energy prices</strong> swing quickly and ripple into transport costs for almost everything else. <strong>Grocery prices</strong> move more slowly but hit family budgets every week, and <strong>food</strong> is one of the first places people notice a squeeze. Fuel swings, <strong>gasoline</strong> included, feed straight into the all-items index behind your result.</p>
+        </section>
+        <section id="inflation-calculator-guide-section-9" class="panel article-content p-4 sm:p-6" aria-labelledby="inflation-calculator-guide-heading-9">
+<h2 id="inflation-calculator-guide-heading-9">Inflation-Adjusted Returns on Investment and Bonds</h2>
+<p>Inflation changes what every <strong>investment</strong> is really earning. A fund that gains 6% in a year where inflation runs at 3.5% delivers a real gain closer to 2.4%, and the gap widens whenever inflation accelerates. That is why investors compare returns against the inflation rate before judging whether a portfolio is working. Bond holders feel the effect most directly: a fixed coupon loses value as inflation rises, which is one reason inflation-linked <strong>bonds</strong> attract attention when inflation heats up.</p>
+<p>Lenders watch the same signal: when expected inflation climbs, they ask for a higher <strong>interest</strong> rate to protect their return, which is why you should compare inflation rates over several years before locking in a long-term loan.</p>
+<ul>
+<li>Subtract the current inflation rate from any quoted yield to estimate your real return.</li>
+<li>Compare inflation rates across several years, not a single month, before changing a long-term plan.</li>
+<li>Check whether your pension, rent or contract includes an automatic inflation adjustment.</li>
+</ul>
+<p>The broader <strong>economic</strong> picture matters as well. Inflation spreads unevenly across <strong>goods and services</strong>: televisions and phones often get cheaper while tuition, insurance and repairs climb. Because of that spread, the headline inflation figure is an average, and your own inflation experience depends on what you actually buy. Run the calculator for the years that match your own spending and keep a note of each amount adjusted for inflation, which gives a sharper answer than any single national figure. Anyone who wants to see how inflation has moved can run a U.S. inflation calculator for several different start years and compare the answers side by side.</p>
+        </section>
+        <section id="inflation-calculator-guide-section-10" class="panel article-content p-4 sm:p-6" aria-labelledby="inflation-calculator-guide-heading-10">
+<h2 id="inflation-calculator-guide-heading-10">Inflation-Adjusted Planning for Retirement and Budget Goals</h2>
+<p>Once you have the number, put it to work. For retirement, convert today&rsquo;s target spending into future dollars with the forward projection, then check your savings plan against it. For a household budget, convert last decade&rsquo;s expenses to current dollars to see which categories genuinely grew and which only look bigger on paper.</p>
+
+<h3>How to correct for inflation in everyday decisions</h3>
+<p>To <strong>correct for inflation</strong>, always compare amounts from different years in the same dollars. A scholarship, a ticket price or a minimum payment should be restated using the CPI before you decide whether it has become more or less generous. The same habit protects you in negotiations, because it shows whether an offer keeps pace with prices or quietly cuts your real pay.</p>
+
+<h3>Where the inflation numbers come from</h3>
+<p>The index is compiled by the <strong>Bureau of Labor Statistics</strong>, an agency inside the <strong>Department of Labor</strong>, and news outlets often credit the <strong>Labor Department</strong> when a new release lands. Every figure is reported as a <strong>percentage</strong> and a <strong>percent change</strong> against an earlier period. Since the data are revised and updated on a regular schedule, treat any result for the current year as an estimate until the full-year average is published. To make a fair comparison, express each amount <strong>adjusted for inflation</strong> to a single base year, and quote inflation figures from one consistent source. When a result is <strong>adjusted for inflation</strong> in this way, and keep a note of which year and which CPI series you used so your numbers can be checked later.</p>
+        </section>
+      </div>
+
+      <section id="inflation-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="inflation-calculator-faq-heading" data-section="faq">
+        <h2 id="inflation-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Inflation Calculator questions</h2>
+        <div id="inflation-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="inflation-calculator-faq-1" class="faq-item" open><summary id="inflation-calculator-faq-1-summary" class="faq-summary"><h3 id="inflation-calculator-faq-1-question" class="faq-question">How does an inflation calculator work?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="inflation-calculator-faq-1-answer" class="faq-answer"><p>It multiplies your amount by the ratio of the Consumer Price Index in the end year to the index in the start year. A higher ending index means each dollar buys less, so the adjusted amount is larger.</p></div></details>
+          <details id="inflation-calculator-faq-2" class="faq-item" open><summary id="inflation-calculator-faq-2-summary" class="faq-summary"><h3 id="inflation-calculator-faq-2-question" class="faq-question">Which CPI data does this calculator use?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="inflation-calculator-faq-2-answer" class="faq-answer"><p>The CPI-U series from the Bureau of Labor Statistics, which covers urban consumers and the all items index. Results here use annual averages from 1913 to 2024.</p></div></details>
+          <details id="inflation-calculator-faq-3" class="faq-item" open><summary id="inflation-calculator-faq-3-summary" class="faq-summary"><h3 id="inflation-calculator-faq-3-question" class="faq-question">What happens for years after the latest CPI data?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="inflation-calculator-faq-3-answer" class="faq-answer"><p>Years beyond 2024 are estimated by applying the future inflation rate you enter, which starts at 2.5%, to the last published CPI value.</p></div></details>
+          <details id="inflation-calculator-faq-4" class="faq-item" open><summary id="inflation-calculator-faq-4-summary" class="faq-summary"><h3 id="inflation-calculator-faq-4-question" class="faq-question">What is the difference between the forward and backward flat rate options?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="inflation-calculator-faq-4-answer" class="faq-answer"><p>Forward grows an amount by a steady yearly inflation rate to show what it will cost in the future. Backward divides by the same growth to show what a future amount is worth in today&#x27;s money.</p></div></details>
+          <details id="inflation-calculator-faq-5" class="faq-item" open><summary id="inflation-calculator-faq-5-summary" class="faq-summary"><h3 id="inflation-calculator-faq-5-question" class="faq-question">What is a normal inflation rate?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="inflation-calculator-faq-5-answer" class="faq-answer"><p>Most developed economies aim for roughly 2% to 3% a year. The long-run U.S. average is a little higher, and individual years can swing well above or below it.</p></div></details>
+          <details id="inflation-calculator-faq-6" class="faq-item" open><summary id="inflation-calculator-faq-6-summary" class="faq-summary"><h3 id="inflation-calculator-faq-6-question" class="faq-question">Why can my own cost of living differ from the result?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="inflation-calculator-faq-6-answer" class="faq-answer"><p>The CPI tracks an average basket of goods and services. If you spend more on a fast-rising category such as housing or energy, your personal inflation can run higher than the national figure.</p></div></details>
+          <details id="inflation-calculator-faq-7" class="faq-item" open><summary id="inflation-calculator-faq-7-summary" class="faq-summary"><h3 id="inflation-calculator-faq-7-question" class="faq-question">How can I protect my savings from inflation?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="inflation-calculator-faq-7-answer" class="faq-answer"><p>Compare the return on your savings with the inflation rate. Investments such as inflation-protected bonds, stocks or I bonds are commonly used to try to keep pace, though they carry their own risks.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="inflation-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="inflation-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="inflation-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="inflation-calculator-ad-bottom-leaderboard">
+            <ins id="inflation-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("inflation-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="inflation-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="inflation-calculator-right-rail-top" class="mb-6">
+        <aside id="inflation-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="inflation-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="inflation-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="inflation-calculator-ad-right-rail-rectangle">
+            <ins id="inflation-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("inflation-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="inflation-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="inflation-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="inflation-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="inflation-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="inflation-calculator-ad-right-rail-skyscraper">
+            <ins id="inflation-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("inflation-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="inflation-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="inflation-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="inflation-calculator-footer-brand">
+        <a id="inflation-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="inflation-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="inflation-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="inflation-calculator-footer-categories" aria-labelledby="inflation-calculator-footer-categories-heading">
+        <h2 id="inflation-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="inflation-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="inflation-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="inflation-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="inflation-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="inflation-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="inflation-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="inflation-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="inflation-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="inflation-calculator-footer-company" aria-labelledby="inflation-calculator-footer-company-heading">
+        <h2 id="inflation-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="inflation-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="inflation-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="inflation-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="inflation-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="inflation-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="inflation-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="inflation-calculator-footer-bottom" class="border-t border-line">
+      <p id="inflation-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="inflation-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // ---- Historical price data -------------------------------------------------------------
+  // CPI-U, U.S. city average, all items, not seasonally adjusted, 1982-84 = 100: annual averages
+  // as published by the U.S. Bureau of Labor Statistics (series CUUR0000SA0, period M13).
+  // Source: https://data.bls.gov/timeseries/CUUR0000SA0 (retrieved 1 October 2026).
+  // First year 1913, last year 2025. BLS publishes annual averages to one decimal before 2007
+  // and to three decimals from 2007; values are kept exactly as published. The 2025 average
+  // is the official BLS figure (October 2025 was not collected during the funding lapse).
+  // Update once a year when BLS publishes the next annual average (mid-January).
+  var CPI_FIRST_YEAR = 1913;
+  var CPI = [
+    9.9, 10.0, 10.1, 10.9, 12.8, 15.1, 17.3, 20.0, 17.9, 16.8,  // 1913-1922
+    17.1, 17.1, 17.5, 17.7, 17.4, 17.1, 17.1, 16.7, 15.2, 13.7,  // 1923-1932
+    13.0, 13.4, 13.7, 13.9, 14.4, 14.1, 13.9, 14.0, 14.7, 16.3,  // 1933-1942
+    17.3, 17.6, 18.0, 19.5, 22.3, 24.1, 23.8, 24.1, 26.0, 26.5,  // 1943-1952
+    26.7, 26.9, 26.8, 27.2, 28.1, 28.9, 29.1, 29.6, 29.9, 30.2,  // 1953-1962
+    30.6, 31.0, 31.5, 32.4, 33.4, 34.8, 36.7, 38.8, 40.5, 41.8,  // 1963-1972
+    44.4, 49.3, 53.8, 56.9, 60.6, 65.2, 72.6, 82.4, 90.9, 96.5,  // 1973-1982
+    99.6, 103.9, 107.6, 109.6, 113.6, 118.3, 124.0, 130.7, 136.2, 140.3,  // 1983-1992
+    144.5, 148.2, 152.4, 156.9, 160.5, 163.0, 166.6, 172.2, 177.1, 179.9,  // 1993-2002
+    184.0, 188.9, 195.3, 201.6, 207.342, 215.303, 214.537, 218.056, 224.939, 229.594,  // 2003-2012
+    232.957, 236.736, 237.017, 240.007, 245.120, 251.107, 255.657, 258.811, 270.970, 292.655,  // 2013-2022
+    304.702, 313.689, 321.943  // 2023-2025
+  ];
+  var CPI_LAST_YEAR = CPI_FIRST_YEAR + CPI.length - 1;
+  // ----------------------------------------------------------------------------------------
+  // Historical: value in target year = amount x CPI(target) / CPI(start); cumulative inflation =
+  // CPI(later) / CPI(earlier) - 1; average annual rate = (CPI(later) / CPI(earlier))^(1/years) - 1.
+  // Future: cost after n years = amount x (1 + i)^n; today's value of a future amount = amount / (1 + i)^n.
+  // Verified (scratchpad tests/inf.test.js): $100 in 1913 = $3,251.95 in 2025 (321.943 / 9.9);
+  // $100 in 2000 = $182.17 in 2024 (313.689 / 172.2); 2022 inflation 8.0% (292.655 / 270.970);
+  // 2009 deflation -0.4%; $100 at 3% for 10 years = $134.39 and $100 in 10 years = $74.41 today.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 });
+
+  function num(id) {
+    var v = parseFloat(document.getElementById(id).value);
+    return isNaN(v) ? NaN : v;
+  }
+
+  function cpi(year) { return CPI[year - CPI_FIRST_YEAR]; }
+  function cpiText(year) { return cpi(year).toFixed(year < 2007 ? 1 : 3); }
+  function pct(x, d) { return (x * 100).toFixed(d) + '%'; }
+  function set(id, text) { document.getElementById(id).textContent = text; }
+
+  function historical(amount, from, to) {
+    var lo = Math.min(from, to), hi = Math.max(from, to), rows = [];
+    for (var y = lo; y <= hi; y++) {
+      rows.push({ year: y, cpi: cpi(y), change: y > CPI_FIRST_YEAR ? cpi(y) / cpi(y - 1) - 1 : NaN,
+                  value: amount * cpi(y) / cpi(from) });
+    }
+    var cumulative = cpi(hi) / cpi(lo) - 1;
+    return { value: amount * cpi(to) / cpi(from), cumulative: cumulative,
+             average: hi > lo ? Math.pow(cpi(hi) / cpi(lo), 1 / (hi - lo)) - 1 : 0, rows: rows };
+  }
+
+  function updateHistory() {
+    var amount = num('infAmount'), from = parseInt(document.getElementById('infFrom').value, 10),
+        to = parseInt(document.getElementById('infTo').value, 10);
+    var error = document.getElementById('infError');
+    var bad = isNaN(amount) || amount < 0 || isNaN(from) || isNaN(to) ||
+              from < CPI_FIRST_YEAR || from > CPI_LAST_YEAR || to < CPI_FIRST_YEAR || to > CPI_LAST_YEAR;
+    error.hidden = !bad;
+    if (bad) {
+      error.textContent = 'Enter an amount of $0 or more and choose years from ' + CPI_FIRST_YEAR + ' to ' + CPI_LAST_YEAR + '.';
+      ['infValue', 'infCumulative', 'infAverage', 'infCpi'].forEach(function (id) { set(id, '–'); });
+      set('infSummary', '');
+      document.getElementById('infTable').innerHTML = '';
+      return;
+    }
+    var h = historical(amount, from, to);
+    set('infValueLabel', 'Value in ' + to);
+    set('infValue', money.format(h.value));
+    set('infSummary', money.format(amount) + ' in ' + from + ' had the same buying power as ' + money.format(h.value) + ' in ' + to + '.');
+    set('infCumulative', pct(h.cumulative, 1));
+    set('infAverage', pct(h.average, 2));
+    set('infCpi', cpiText(from) + ' → ' + cpiText(to));
+    document.getElementById('infTable').innerHTML = h.rows.map(function (row) {
+      return '<tr><td>' + row.year + '</td><td>' + cpiText(row.year) + '</td><td>' + (isNaN(row.change) ? '–' : pct(row.change, 1)) +
+             '</td><td>' + money.format(row.value) + '</td></tr>';
+    }).join('');
+  }
+
+  function updateFuture() {
+    var amount = num('infFutAmount'), rate = num('infFutRate'), years = num('infFutYears');
+    var error = document.getElementById('infFutError');
+    var bad = [amount, rate, years].some(isNaN) || amount < 0 || rate < -50 || rate > 100 || years < 0 || years > 100;
+    error.hidden = !bad;
+    if (bad) {
+      error.textContent = 'Enter an amount of $0 or more, a rate from -50 to 100% and 0 to 100 years.';
+      set('infFutCost', '–');
+      set('infFutWorth', '–');
+      return;
+    }
+    var factor = Math.pow(1 + rate / 100, years);
+    set('infFutCost', money.format(amount * factor));
+    set('infFutWorth', money.format(amount / factor));
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    set('infDataNote', 'Uses BLS CPI-U annual averages from ' + CPI_FIRST_YEAR + ' to ' + CPI_LAST_YEAR + '.');
+    [['infForm', updateHistory], ['infFutForm', updateFuture]].forEach(function (pair) {
+      var form = document.getElementById(pair[0]);
+      form.addEventListener('input', pair[1]);
+      form.addEventListener('change', pair[1]);
+      form.addEventListener('submit', function (e) { e.preventDefault(); });
+      pair[1]();
+    });
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

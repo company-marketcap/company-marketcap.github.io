@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="en" id="certificate-of-deposit-for-apy-calculator-document" data-page-slug="certificate-of-deposit-for-apy-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CD Calculator: Certificate of Deposit APY Earnings</title>
+  <meta name="description" content="Free CD calculator: enter your initial deposit, APY and term to see the interest earned, your ending balance and how compounding frequency changes the result.">
+  <link rel="canonical" href="https://company-marketcap.github.io/certificate-of-deposit-for-apy-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="CD Calculator: Certificate of Deposit APY Earnings">
+  <meta property="og:description" content="Free CD calculator: enter your initial deposit, APY and term to see the interest earned, your ending balance and how compounding frequency changes the result.">
+  <meta property="og:url" content="https://company-marketcap.github.io/certificate-of-deposit-for-apy-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Certificate of Deposit for APY Calculator", "url": "https://company-marketcap.github.io/certificate-of-deposit-for-apy-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Free CD calculator: enter your initial deposit, APY and term to see the interest earned, your ending balance and how compounding frequency changes the result."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Bonds, CDs & Fixed Income", "item": "https://company-marketcap.github.io/financial-calculators.html#bond-cd-calculators"}, {"@type": "ListItem", "position": 4, "name": "Certificate of Deposit for APY Calculator", "item": "https://company-marketcap.github.io/certificate-of-deposit-for-apy-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I calculate CD interest from an APY?", "acceptedAnswer": {"@type": "Answer", "text": "Multiply your deposit by (1 + APY) raised to the term in years, then subtract the deposit. A $23,750 deposit at 4.62% APY for 2.5 years grows to $26,588.90, so the interest earned is $2,838.90."}}, {"@type": "Question", "name": "What is the difference between APY and the interest rate on a CD?", "acceptedAnswer": {"@type": "Answer", "text": "The interest rate is the base rate paid before compounding, while the annual percentage yield (APY) includes the effect of compounding. Because you earn interest on your interest, the APY is almost always slightly higher than the stated rate."}}, {"@type": "Question", "name": "Should I enter the interest rate or the APY?", "acceptedAnswer": {"@type": "Answer", "text": "If your CD advertises an APY, choose annual compounding and enter the APY. If you only have the interest rate, enter it and pick how often the bank compounds it, and the calculator will show the effective APY."}}, {"@type": "Question", "name": "How does compounding frequency change my CD earnings?", "acceptedAnswer": {"@type": "Answer", "text": "The more often interest is added to your balance, the more it earns in turn. At the same 4.50% rate, annual compounding yields 4.500% APY while daily compounding yields about 4.602%, a small but real difference over a long term."}}, {"@type": "Question", "name": "What happens if I withdraw from a CD early?", "acceptedAnswer": {"@type": "Answer", "text": "You will usually pay an early withdrawal penalty, commonly a set number of days or months of interest. If the interest earned so far does not cover it, the penalty can reach into your principal, so check the account terms first."}}, {"@type": "Question", "name": "Are CDs FDIC insured?", "acceptedAnswer": {"@type": "Answer", "text": "CDs at FDIC-insured banks are covered up to $250,000 per depositor, per bank, per ownership category. Credit union certificates get similar coverage from the NCUA."}}, {"@type": "Question", "name": "Is CD interest taxable?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Interest on a CD is taxable as income in the year it is credited unless the certificate is held in a tax-advantaged account such as an IRA. Enter your income tax rate to see the tax and the after-tax balance."}}, {"@type": "Question", "name": "What is the difference between a CD and a share certificate?", "acceptedAnswer": {"@type": "Answer", "text": "They are the same kind of account. Banks call them CDs, while credit unions call them share certificates."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="certificate-of-deposit-for-apy-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="certificate-of-deposit-for-apy-calculator" data-page-type="calculator">
+  <a id="certificate-of-deposit-for-apy-calculator-skip-link" href="#certificate-of-deposit-for-apy-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="certificate-of-deposit-for-apy-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="certificate-of-deposit-for-apy-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="certificate-of-deposit-for-apy-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="certificate-of-deposit-for-apy-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="certificate-of-deposit-for-apy-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="certificate-of-deposit-for-apy-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="certificate-of-deposit-for-apy-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="certificate-of-deposit-for-apy-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="certificate-of-deposit-for-apy-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="certificate-of-deposit-for-apy-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="certificate-of-deposit-for-apy-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="certificate-of-deposit-for-apy-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="certificate-of-deposit-for-apy-calculator-header-search-status" aria-controls="certificate-of-deposit-for-apy-calculator-header-search-results" data-search-input="header">
+              <p id="certificate-of-deposit-for-apy-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="certificate-of-deposit-for-apy-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="certificate-of-deposit-for-apy-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="certificate-of-deposit-for-apy-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="certificate-of-deposit-for-apy-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="certificate-of-deposit-for-apy-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="certificate-of-deposit-for-apy-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="certificate-of-deposit-for-apy-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="certificate-of-deposit-for-apy-calculator-mobile-search-status" aria-controls="certificate-of-deposit-for-apy-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="certificate-of-deposit-for-apy-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="certificate-of-deposit-for-apy-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="certificate-of-deposit-for-apy-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="certificate-of-deposit-for-apy-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="certificate-of-deposit-for-apy-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="certificate-of-deposit-for-apy-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="certificate-of-deposit-for-apy-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="certificate-of-deposit-for-apy-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="certificate-of-deposit-for-apy-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="certificate-of-deposit-for-apy-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="certificate-of-deposit-for-apy-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="certificate-of-deposit-for-apy-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="certificate-of-deposit-for-apy-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="certificate-of-deposit-for-apy-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="certificate-of-deposit-for-apy-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="certificate-of-deposit-for-apy-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="certificate-of-deposit-for-apy-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="certificate-of-deposit-for-apy-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="certificate-of-deposit-for-apy-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="certificate-of-deposit-for-apy-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="certificate-of-deposit-for-apy-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="certificate-of-deposit-for-apy-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="certificate-of-deposit-for-apy-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="certificate-of-deposit-for-apy-calculator-sidebar-search-status" aria-controls="certificate-of-deposit-for-apy-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="certificate-of-deposit-for-apy-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="certificate-of-deposit-for-apy-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="certificate-of-deposit-for-apy-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="certificate-of-deposit-for-apy-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="certificate-of-deposit-for-apy-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="certificate-of-deposit-for-apy-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="certificate-of-deposit-for-apy-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="certificate-of-deposit-for-apy-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="certificate-of-deposit-for-apy-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="certificate-of-deposit-for-apy-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="certificate-of-deposit-for-apy-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="certificate-of-deposit-for-apy-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="certificate-of-deposit-for-apy-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="certificate-of-deposit-for-apy-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="certificate-of-deposit-for-apy-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="certificate-of-deposit-for-apy-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="certificate-of-deposit-for-apy-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="certificate-of-deposit-for-apy-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="certificate-of-deposit-for-apy-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="certificate-of-deposit-for-apy-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="certificate-of-deposit-for-apy-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators" aria-current="true">Bonds &amp; CDs</a></li><li><a id="certificate-of-deposit-for-apy-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="certificate-of-deposit-for-apy-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="certificate-of-deposit-for-apy-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="certificate-of-deposit-for-apy-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="certificate-of-deposit-for-apy-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="certificate-of-deposit-for-apy-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="certificate-of-deposit-for-apy-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="certificate-of-deposit-for-apy-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="certificate-of-deposit-for-apy-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="certificate-of-deposit-for-apy-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="certificate-of-deposit-for-apy-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="certificate-of-deposit-for-apy-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="certificate-of-deposit-for-apy-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="certificate-of-deposit-for-apy-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="certificate-of-deposit-for-apy-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="certificate-of-deposit-for-apy-calculator" data-calculator-slug="certificate-of-deposit-for-apy-calculator" data-sub-category-slug="bond-cd-calculators">
+      <aside id="certificate-of-deposit-for-apy-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="certificate-of-deposit-for-apy-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="certificate-of-deposit-for-apy-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="certificate-of-deposit-for-apy-calculator-ad-top-leaderboard">
+            <ins id="certificate-of-deposit-for-apy-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("certificate-of-deposit-for-apy-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="certificate-of-deposit-for-apy-calculator-intro-area" class="space-y-4">
+        <nav id="certificate-of-deposit-for-apy-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="certificate-of-deposit-for-apy-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="certificate-of-deposit-for-apy-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="certificate-of-deposit-for-apy-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="certificate-of-deposit-for-apy-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#bond-cd-calculators" itemprop="item"><span itemprop="name">Bonds, CDs &amp; Fixed Income</span></a><meta itemprop="position" content="3"></li>
+            <li id="certificate-of-deposit-for-apy-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Certificate of Deposit for APY Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/certificate-of-deposit-for-apy-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="certificate-of-deposit-for-apy-calculator-hero-section" aria-labelledby="certificate-of-deposit-for-apy-calculator-hero-heading" data-section="hero">
+          <h1 id="certificate-of-deposit-for-apy-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">CD Calculator: Certificate of Deposit APY Earnings</h1>
+          <p id="certificate-of-deposit-for-apy-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Wondering what your savings will really be worth when the term ends? This certificate of deposit for APY calculator takes your initial deposit, the advertised annual percentage yield and the length of the term, then shows the interest earned and your balance after maturity. Treat it as a quick CD calculator for comparing offers from any bank or credit union before you lock in a rate. <!-- SILO_START:slot_a -->Pair this with the <a class="silo-link" href="/cd-calculator.html">cd calculator</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="certificate-of-deposit-for-apy-calculator-tool" class="space-y-6" data-page-slug="certificate-of-deposit-for-apy-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="ayFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="ayForm" class="space-y-5" novalidate aria-labelledby="ayFormHeading">
+      <h2 id="ayFormHeading" class="panel-heading">Enter the CD terms</h2>
+      <div><label for="ayMode" class="form-label">Convert</label>
+        <select id="ayMode" class="form-select"><option value="rate" selected>Interest rate to APY</option><option value="apy">APY to interest rate</option></select></div>
+      <div><label for="ayDeposit" class="form-label">Deposit</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="ayDeposit" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="10000" inputmode="decimal"></div></div>
+      <div><label id="ayRateLabel" for="ayRate" class="form-label">Interest rate</label><div class="input-group"><input type="number" id="ayRate" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="0.01" value="4.5" inputmode="decimal"><span class="input-affix">%</span></div><p id="ayRateHint" class="form-hint">The stated (nominal) annual rate before compounding.</p></div>
+      <div class="form-row form-row-2">
+        <div><label for="ayTerm" class="form-label">Term</label><div class="input-group"><input type="number" id="ayTerm" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1" max="3650" step="1" value="12" inputmode="numeric"></div></div>
+        <div><label for="ayUnit" class="form-label">Term in</label>
+          <select id="ayUnit" class="form-select"><option value="months" selected>Months</option><option value="days">Days</option></select></div>
+      </div>
+      <div><label for="ayCompound" class="form-label">Compounding</label>
+        <select id="ayCompound" class="form-select"><option value="365" selected>Daily</option><option value="12">Monthly</option><option value="4">Quarterly</option><option value="2">Semiannually</option><option value="1">Annually</option><option value="0">None (simple interest)</option></select></div>
+      <details class="form-details">
+        <summary class="form-details-summary">More options</summary>
+        <div class="mt-4 space-y-5">
+        <div><label for="ayDays" class="form-label">Days in term (optional)</label><div class="input-group"><input type="number" id="ayDays" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1" max="3660" step="1" value="" placeholder="Worked out from the months" inputmode="numeric"><span class="input-affix">days</span></div><p class="form-hint">Banks use the actual days in the term, e.g. 182 or 184 for six months. Left blank, months are converted at 365 / 12 days each.</p></div>
+        </div>
+      </details>
+      <p id="ayError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="ayResults" aria-live="polite" aria-labelledby="ayResultsHeading">
+      <h2 id="ayResultsHeading" class="panel-heading">Your CD's yield</h2>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p id="ayOutLabel" class="stat-label">APY (Truth in Savings)</p><p id="ayOut" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Interest over the term</p><p id="ayInterest" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Balance at maturity</p><p id="ayBalance" class="stat-value">–</p></div>
+        <div class="stat-card"><p id="ayPeriodLabel" class="stat-label">Interest in the first compounding period</p><p id="ayPeriod" class="stat-value">–</p></div>
+      </div>
+      <dl class="mt-5">
+        <div class="result-row"><dt class="result-term">Days in term</dt><dd id="ayDaysOut" class="result-value">–</dd></div>
+        <div class="result-row"><dt class="result-term">Compounding periods in term</dt><dd id="ayPeriodsOut" class="result-value">–</dd></div>
+        <div class="result-row"><dt class="result-term">Rate per compounding period</dt><dd id="ayPerRate" class="result-value">–</dd></div>
+        <div class="result-row"><dt class="result-term">Yield over the whole term</dt><dd id="ayTermYield" class="result-value">–</dd></div>
+      </dl>
+      <div class="callout mt-5"><p class="text-sm">Truth in Savings formula (Regulation DD, Appendix A):</p><p id="ayFormula" class="mt-1 text-sm tabular-nums">–</p><p id="ayNote" class="mt-2 text-xs text-ink-muted"></p></div>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="ayTableHeading" data-section="schedule">
+  <h2 id="ayTableHeading" class="panel-heading">Same CD, different compounding</h2>
+  <p id="ayTableIntro" class="mt-0.5 text-sm text-ink-muted">How the APY and interest change if only the compounding frequency changes.</p>
+  <div class="table-scroll mt-5" tabindex="0" role="region" aria-labelledby="ayTableHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Compounding</th><th scope="col">Interest rate</th><th scope="col">APY</th><th scope="col">Interest over the term</th></tr></thead>
+      <tbody id="ayTable"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="certificate-of-deposit-for-apy-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="certificate-of-deposit-for-apy-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Wondering what your savings will really be worth when the term ends? This certificate of deposit for APY calculator takes your initial deposit, the advertised annual percentage yield and the length of the term, then shows the interest earned and your balance after maturity. Treat it as a quick CD calculator for comparing offers from any bank or credit union before you lock in a rate. <!-- SILO_START:slot_a_m -->Pair this with the <a class="silo-link" href="/cd-calculator.html">cd calculator</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="certificate-of-deposit-for-apy-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="certificate-of-deposit-for-apy-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="certificate-of-deposit-for-apy-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="certificate-of-deposit-for-apy-calculator-ad-in-feed">
+            <ins id="certificate-of-deposit-for-apy-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("certificate-of-deposit-for-apy-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="certificate-of-deposit-for-apy-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="certificate-of-deposit-for-apy-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="certificate-of-deposit-for-apy-calculator-guide-heading-1">
+<h2 id="certificate-of-deposit-for-apy-calculator-guide-heading-1">How a Certificate of Deposit for APY Calculator Works</h2>
+<p>A certificate of deposit is a fixed-term agreement: you leave money with a financial institution for a set period, and it pays you a guaranteed rate in return. Because the rate is locked at opening, a <strong>CD</strong> is one of the few places where you can calculate your future balance almost exactly. The calculator simply replays that agreement, month by month, using the APY printed on the offer. <!-- SILO_START:slot_b -->The <a class="silo-link" href="/credit-union-certificate-ladder-calculator.html">credit union certificate ladder calculator</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_b --></p>
+<p>Every <strong>cd interest calculator</strong> needs the same handful of inputs. Entering them takes under a minute:</p>
+<ol>
+<li><strong>Initial deposit:</strong> the deposit amount you plan to place in the CD, such as $23,750. Check the minimum deposit first, since many banks ask for $500 to $1,500 or more.</li>
+<li><strong>APY:</strong> the annual percentage yield quoted for the CD, which already includes compounding. Do not type the plain interest rate here.</li>
+<li><strong>CD term:</strong> the term length, entered in months or years, such as 30 months or 5 years.</li>
+</ol>
+<p>Press the calculate button and you receive the <strong>total interest</strong>, the <strong>end balance</strong> and, in many tools, an accumulation schedule showing how the balance builds. That is everything a certificate calculator needs, because the APY has already done the compounding work.</p>
+
+<h3>Why start from APY instead of the interest rate</h3>
+<p>Banks advertise the APY because it lets you compare certificates on equal footing. A CD paying interest daily and one paying it quarterly can carry the same published interest rate yet deliver different earnings. The annual percentage yield folds the compounding frequency into one number, so the higher APY wins no matter how often the interest is credited.</p>
+        </section>
+        <section id="certificate-of-deposit-for-apy-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="certificate-of-deposit-for-apy-calculator-guide-heading-2">
+<h2 id="certificate-of-deposit-for-apy-calculator-guide-heading-2">APY, APR and the Interest Rate on Your CD</h2>
+<p>Three labels show up on almost every offer, and mixing them up is the most common reason a result looks wrong. The <strong>interest rate</strong> (also called the nominal rate) is the base percentage the institution pays before compounding. The <strong>annual percentage rate</strong>, or <strong>APR</strong>, is usually the same number presented as a yearly cost or rate. The <strong>annual percentage yield</strong> adds the effect of compounding on top, which is why it is almost always a little higher. <!-- SILO_START:slot_c -->The <a class="silo-link" href="/compare-certificate-of-deposit-cd-rates-calculator.html">compare cd rates calculator online</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_c --></p>
+
+<h3>Compounding frequency and the number of periods</h3>
+<p>The more often interest is added to your balance, the more your balance earns in turn. Daily, monthly and quarterly crediting are all common, and a CD described as compounded quarterly adds interest four times a year. The <strong>compounding frequency</strong> is the <strong>number of compounding periods</strong> in a year, written as <em>n</em> in the formula below. The table shows how one 4.50% nominal rate turns into different yields.</p>
+<table>
+<thead><tr><th>Compounding</th><th>Periods per year</th><th>Resulting APY</th><th>Interest on $23,750 over 30 months</th></tr></thead>
+<tbody>
+<tr><td>Annual</td><td>1</td><td>4.500%</td><td>$2,762.72</td></tr>
+<tr><td>Quarterly</td><td>4</td><td>4.577%</td><td>$2,811.28</td></tr>
+<tr><td>Monthly</td><td>12</td><td>4.594%</td><td>$2,822.37</td></tr>
+<tr><td>Daily</td><td>365</td><td>4.602%</td><td>$2,827.78</td></tr>
+</tbody>
+</table>
+<p>The gap between annual and daily crediting is about $65 on this deposit, which is real money but smaller than the gap you get from shopping for a better published rate.</p>
+        </section>
+        <section id="certificate-of-deposit-for-apy-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="certificate-of-deposit-for-apy-calculator-guide-heading-3">
+<h2 id="certificate-of-deposit-for-apy-calculator-guide-heading-3">CD Calculator Formula: From APY to Ending Balance</h2>
+<p>Two short formulas sit behind the tool. The first converts a nominal rate into a yield, where <em>r</em> is the annual interest rate as a decimal and <em>n</em> is how many times per year the interest is compounded:</p>
+<p>$$APY = \left(1 + \frac{r}{n}\right)^{n} - 1$$</p>
+<p>When the offer already states an APY, you can skip that step and grow the principal directly. The deposit grows by the APY once per year, so for a term of <em>t</em> years the maturity value is:</p>
+<p>$$B = P \times (1 + APY)^{t}$$</p>
+<p>Here <em>P</em> is the principal (your initial deposit) and <em>B</em> is the balance at the maturity date. The <strong>interest earned</strong> is simply \(B - P\). For a term quoted in months, divide the months by 12 to get <em>t</em>, so 30 months becomes 2.5 years. Because it uses compound interest, a CD earns more than simple interest at the same figure: on this page's example, simple interest would give $2,743.13, while compounding gives $2,838.90.</p>
+
+<figure><img src="/assets/images/tools/certificate-of-deposit-for-apy-calculator/cd-apy-calculator-formula.svg" alt="Formula card showing balance equals deposit times one plus APY to the power of years, applied to a $23,750 CD at 4.62% APY for 2.5 years"><figcaption>The CD balance formula with the worked example's numbers plugged in.</figcaption></figure>
+<h3>Turning an interest rate into an APY by hand</h3>
+<p>If a bank gives you only a rate and a schedule, insert both into the first formula. A 4.525% rate compounded monthly gives \((1 + 0.04525/12)^{12} - 1\), which rounds to 4.62% APY. Work backwards and you can find the nominal rate behind any quoted yield, a useful check when two certificates advertise rates that look unrelated.</p>
+        </section>
+        <section id="certificate-of-deposit-for-apy-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="certificate-of-deposit-for-apy-calculator-guide-heading-4">
+<h2 id="certificate-of-deposit-for-apy-calculator-guide-heading-4">Worked Example: A $23,750 CD at 4.62% APY for 30 Months</h2>
+<p>Suppose you want to park $23,750 in a CD that pays <strong>4.62% APY</strong> for a <strong>30-month term</strong>. Converting the term gives <em>t</em> = 2.5 years, and the maturity value comes from the formula:</p>
+<p>$$B = 23{,}750 \times (1.0462)^{2.5} = 26{,}588.90$$</p>
+<p>Your <strong>total interest</strong> is therefore $2,838.90, and the <strong>balance after maturity</strong> is $26,588.90. The schedule below assumes the yield accrues evenly, so each six-month step multiplies the balance by the same factor.</p>
+<table>
+<thead><tr><th>Months elapsed</th><th>Interest for the period</th><th>Ending balance</th></tr></thead>
+<tbody>
+<tr><td>6</td><td>$542.43</td><td>$24,292.43</td></tr>
+<tr><td>12</td><td>$554.82</td><td>$24,847.25</td></tr>
+<tr><td>18</td><td>$567.49</td><td>$25,414.74</td></tr>
+<tr><td>24</td><td>$580.45</td><td>$25,995.19</td></tr>
+<tr><td>30</td><td>$593.71</td><td>$26,588.90</td></tr>
+</tbody>
+</table>
+<p>Notice that each period pays more than the last. That small climb is what compounding looks like in practice: your earlier interest starts earning interest of its own.</p>
+
+<figure><img src="/assets/images/tools/certificate-of-deposit-for-apy-calculator/cd-interest-earned-growth-over-30-months.svg" alt="Line chart of interest earned on a $23,750 CD at 4.62% APY rising to $2,838.90 over 30 months"><figcaption>Cumulative interest earned each six months over the 30-month term.</figcaption></figure>
+        </section>
+        <section id="certificate-of-deposit-for-apy-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="certificate-of-deposit-for-apy-calculator-guide-heading-5">
+<h2 id="certificate-of-deposit-for-apy-calculator-guide-heading-5">How to Read Your CD Calculator Results</h2>
+<p>The results panel usually shows three numbers, and each answers a different question.</p>
+<ul>
+<li><strong>Interest earned:</strong> the total interest over the whole term, which is your gain before any taxes.</li>
+<li><strong>Balance after maturity:</strong> the maturity value, meaning principal plus interest, that you can withdraw or roll over.</li>
+<li><strong>Effective rate of return:</strong> in this example 2,838.90 divided by 23,750 is about 11.95% over 30 months, or 4.62% per year.</li>
+</ul>
+<p>Keep in mind that every output is hypothetical. The figures are estimates built on the published APY, and they assume you leave the money untouched until the end of the term. Fees, an early withdrawal or a change to the rate on renewal will move the real figures.</p>
+
+<figure><img src="/assets/images/tools/certificate-of-deposit-for-apy-calculator/cd-deposit-vs-interest-earned-donut.svg" alt="Donut chart splitting a $26,588.90 CD balance into $23,750 initial deposit and $2,838.90 interest earned"><figcaption>Initial deposit versus interest earned in the $26,588.90 balance after maturity.</figcaption></figure>
+<h3>Three assumptions behind every result</h3>
+<p>First, the rate is fixed for the entire term, which is true of a standard fixed-rate certificate but not of variable products. Second, interest stays in the account rather than being paid out, since paying it out lowers the compounding effect. Third, the result ignores income tax. Interest on a CD is taxable as income in the year it is credited unless the certificate sits inside a tax-deferred account such as an IRA.</p>
+        </section>
+        <section id="certificate-of-deposit-for-apy-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="certificate-of-deposit-for-apy-calculator-guide-heading-6">
+<h2 id="certificate-of-deposit-for-apy-calculator-guide-heading-6">Sizing a Roof Deposit with a Certificate Calculator</h2>
+<p>A contractor quotes $15,300 to replace a roof, with the deposit due in 18 months, and $14,382 from a tax refund and a year-end bonus is sitting in checking. The question is whether parking it in a credit union certificate quoting <strong>4.37% APY</strong> for 18 months covers the gap without adding anything from the next paychecks.</p>
+<p>In the calculator, the initial deposit field takes 14382, the yield field 4.37 and the term 1.5 years. One press of the calculate button returns <strong>$15,335 after rounding</strong>, precisely $15,334.97, which is $952.97 of interest earned. The cushion over the quote is just $34.97, so this is a close call, and the figure tells you how close.</p>
+<p>Two checks follow before anything is signed. First, the shortfall test: working the formula backwards, a deposit of $14,349.21 would already reach $15,300, so the extra $32.79 is the margin. Second, the penalty test. The account agreement says breaking the certificate costs 90 days of interest, which at this rate is about $154.97 on $14,382. If the contractor moves the start date forward and you must withdraw early, the balance falls to roughly $15,179.99, which is $120.01 short of the quote.</p>
+<ul>
+<li><strong>Result:</strong> $15,334.97 at maturity against a $15,300 quote.</li>
+<li><strong>Reference point:</strong> the $250,000 NCUA limit is far above this balance, so insurance is not the constraint.</li>
+<li><strong>Decision:</strong> open the certificate, and keep $200 from the next paycheck in savings to cover the early-exit penalty scenario.</li>
+</ul>
+<p>The calculation gives a plan with a number attached: deposit the full $14,382, mark the maturity date, and confirm the contractor's schedule before committing the money.</p>
+        </section>
+        <section id="certificate-of-deposit-for-apy-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="certificate-of-deposit-for-apy-calculator-guide-heading-7">
+<h2 id="certificate-of-deposit-for-apy-calculator-guide-heading-7">Choosing the Right CD Term Length</h2>
+<p>A longer term usually pays a higher rate, but it also keeps your money out of reach for longer. Compare the maturity value of two terms with the calculator before deciding, and weigh the extra yield against how soon you might need the cash. A short CD term suits money you expect to spend within a year, while a long one suits savings you can safely forget about.</p>
+
+<h3>Interest rate risk and the federal funds rate</h3>
+<p>Locking in a rate carries <strong>interest rate risk</strong>: if market rates rise after you open the account, you keep earning the lower rate. Rates on new certificates follow the federal funds rate set by the Federal Reserve, so a rising-rate environment favors shorter terms and a falling one favors locking in for longer.</p>
+
+<h3>Building a CD ladder</h3>
+<p>A <strong>CD ladder</strong> splits your money across certificates with staggered maturities, for example one, two and three years. When the shortest one matures, you reinvest it at the longest term, so you always have a CD coming due while still capturing longer-term yields. Run each rung's deposit, APY and term through the calculator separately, and the rung results add up to the ladder's total interest earned. Laddering is a practical answer to not knowing where rates are heading, and you can test each rung separately in the calculator.</p>
+
+<h3>What happens at the maturity date</h3>
+<p>When the term ends you can cash out, or choose to roll over the balance into a new CD at the rate then on offer. Many banks renew automatically after a short grace window, so mark the date and compare current rates first instead of accepting the default.</p>
+        </section>
+        <section id="certificate-of-deposit-for-apy-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="certificate-of-deposit-for-apy-calculator-guide-heading-8">
+<h2 id="certificate-of-deposit-for-apy-calculator-guide-heading-8">CD vs Share Certificate, Savings Account and Money Market</h2>
+<p>A <strong>share certificate</strong> is the credit union name for a CD, and the two work the same way. Banks say CD and credit unions say <strong>certificates</strong>, but the mechanics of rate, term and penalty are identical. Compared with a regular savings account, a CD generally pays a higher, guaranteed rate in exchange for tying up your money, while a money market account keeps access to your funds but lets the rate move. The calculator helps because it turns each advertised percentage into the dollars you would end up holding.</p>
+
+<h3>Other kinds of CD to know about</h3>
+<p>A <strong>no-penalty CD</strong> lets you withdraw early without losing interest, usually at a somewhat lower rate. A <strong>brokered CD</strong> is bought through a brokerage rather than directly from the bank and can be sold before maturity, though its price may fall. Most online tools model only a standard fixed rate product.</p>
+        </section>
+        <section id="certificate-of-deposit-for-apy-calculator-guide-section-9" class="panel article-content p-4 sm:p-6" aria-labelledby="certificate-of-deposit-for-apy-calculator-guide-heading-9">
+<h2 id="certificate-of-deposit-for-apy-calculator-guide-heading-9">Early Withdrawal Penalty, FDIC Insurance and Risk</h2>
+<p>A CD is a <strong>low-risk</strong> investment for your savings, because the guaranteed returns do not depend on the stock market. The main cost of that safety is the <strong>early withdrawal penalty</strong>: take money out before maturity and the bank typically deducts a set number of days or months of interest. If you have not earned enough interest to cover it, the penalty can reach into principal.</p>
+
+<h3>FDIC and NCUA protection</h3>
+<p>Deposits at a bank are <strong>FDIC-insured</strong> up to $250,000 per depositor, per insured bank, per ownership category by the Federal Deposit Insurance Corporation. Credit union certificates get matching protection from the NCUA. Because both programs are backed by the government, balances inside the limit are considered safe even if the institution fails.</p>
+
+<h3>Does a CD keep up with inflation?</h3>
+<p>The honest limit of a fixed yield is that it does not adjust. If prices rise faster than your rate, the purchasing power of your maturity value shrinks even as the dollar amount grows, so compare the APY against the current inflation figure before committing a large share of your savings.</p>
+        </section>
+        <section id="certificate-of-deposit-for-apy-calculator-guide-section-10" class="panel article-content p-4 sm:p-6" aria-labelledby="certificate-of-deposit-for-apy-calculator-guide-heading-10">
+<h2 id="certificate-of-deposit-for-apy-calculator-guide-heading-10">Comparing Two CD Offers with the Calculator</h2>
+<p>The real power of an APY-based tool is side-by-side comparison. Run the same $23,750 through two offers and the difference in dollars becomes obvious. A 30-month certificate at 4.62% APY ends at $26,588.90, while the same deposit at 4.15% APY ends at $26,291.28. The higher yield is worth $297.62 over the term, which is the number to weigh against any other differences between the two accounts, such as a higher minimum deposit or a stricter penalty.</p>
+<p>You can also compare lengths. The same 4.62% APY for 12 months returns $1,097.25 in interest, so stretching to 30 months more than doubles your earnings, provided you will not need the money before maturity. If a one-year offer pays a better yield, such as 4.85%, that shorter CD returns $1,151.88 on the year and lets you reinvest sooner, which matters if you expect rates to rise.</p>
+
+<h3>Mistakes that skew your results</h3>
+<ul>
+<li>Typing the interest rate into the APY field, which understates your earnings slightly.</li>
+<li>Mixing up months and years, so a 30-month CD gets calculated as 30 years.</li>
+<li>Forgetting that a deposit below the bank's minimum deposit will not earn the advertised yield.</li>
+<li>Ignoring fees, which reduce what you actually keep.</li>
+</ul>
+
+<h3>How an early withdrawal changes the math</h3>
+<p>Suppose you break the 30-month CD in its first year and the penalty is 90 days of interest. At 4.62%, ninety days of interest on $23,750 is about $270.55, subtracted from whatever you have earned so far. Check the penalty terms in the account agreement before you open any certificate, because they differ widely between banks and, generally, grow with the length of the term.</p>
+        </section>
+        <section id="certificate-of-deposit-for-apy-calculator-guide-section-11" class="panel article-content p-4 sm:p-6" aria-labelledby="certificate-of-deposit-for-apy-calculator-guide-heading-11">
+<h2 id="certificate-of-deposit-for-apy-calculator-guide-heading-11">Using the Calculator to Get More from Your CD Earnings</h2>
+<p>A calculator tells you what a rate is worth, but a few habits decide how much you actually earn. Shop around and run each offer's annual percentage yield through the tool, because rates on certificates differ by a full percentage point between institutions that look similar on the surface. Online banks and credit unions often pay more than large branch-based banks since their costs are lower. Confirm the account is covered by FDIC or NCUA insurance, and check whether interest is credited to the CD itself or paid out to another account, since only the first option compounds.</p>
+<p>If you hold more than the insured limit, enter each institution's deposit, APY and term separately and add the results. And set a calendar reminder for the maturity date a week early, noting the calculator's projected balance, so you can compare current offers and decide whether to cash out or renew rather than letting the money roll into whatever rate is posted that day.</p>
+
+<h3>Putting compound interest to work for you</h3>
+<p>Because compound interest rewards patience, the biggest lever you control is time. Leaving every dollar of interest inside the account for the full term is what separates a strong outcome from an average one, so a single long CD often beats the same deposit split across short stops, a point that holds for any fixed-rate investment. Treat each run as a what-if: change only the annual percentage yield or the term, note how the interest earned moves, and you will quickly learn which input matters most for your situation.</p>
+
+<h3>Working backwards from a goal with the calculator</h3>
+<p>Run the calculator's inputs backwards by solving for the initial deposit, given an APY, a term and a target balance. If you want $30,000 in three years from a certificate yielding 4.62% APY, rearrange the formula to \(P = B / (1 + APY)^{t}\), which tells you the starting deposit you would need, about $26,199, which means the CD would supply $3,801 of the interest earned. That reverse calculation turns the tool from a curiosity into a savings plan, and it works for any goal date and yield you choose.</p>
+        </section>
+      </div>
+
+      <section id="certificate-of-deposit-for-apy-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="certificate-of-deposit-for-apy-calculator-faq-heading" data-section="faq">
+        <h2 id="certificate-of-deposit-for-apy-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Certificate of Deposit for APY Calculator questions</h2>
+        <div id="certificate-of-deposit-for-apy-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="certificate-of-deposit-for-apy-calculator-faq-1" class="faq-item" open><summary id="certificate-of-deposit-for-apy-calculator-faq-1-summary" class="faq-summary"><h3 id="certificate-of-deposit-for-apy-calculator-faq-1-question" class="faq-question">How do I calculate CD interest from an APY?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="certificate-of-deposit-for-apy-calculator-faq-1-answer" class="faq-answer"><p>Multiply your deposit by (1 + APY) raised to the term in years, then subtract the deposit. A $23,750 deposit at 4.62% APY for 2.5 years grows to $26,588.90, so the interest earned is $2,838.90.</p></div></details>
+          <details id="certificate-of-deposit-for-apy-calculator-faq-2" class="faq-item" open><summary id="certificate-of-deposit-for-apy-calculator-faq-2-summary" class="faq-summary"><h3 id="certificate-of-deposit-for-apy-calculator-faq-2-question" class="faq-question">What is the difference between APY and the interest rate on a CD?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="certificate-of-deposit-for-apy-calculator-faq-2-answer" class="faq-answer"><p>The interest rate is the base rate paid before compounding, while the annual percentage yield (APY) includes the effect of compounding. Because you earn interest on your interest, the APY is almost always slightly higher than the stated rate.</p></div></details>
+          <details id="certificate-of-deposit-for-apy-calculator-faq-3" class="faq-item" open><summary id="certificate-of-deposit-for-apy-calculator-faq-3-summary" class="faq-summary"><h3 id="certificate-of-deposit-for-apy-calculator-faq-3-question" class="faq-question">Should I enter the interest rate or the APY?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="certificate-of-deposit-for-apy-calculator-faq-3-answer" class="faq-answer"><p>If your CD advertises an APY, choose annual compounding and enter the APY. If you only have the interest rate, enter it and pick how often the bank compounds it, and the calculator will show the effective APY.</p></div></details>
+          <details id="certificate-of-deposit-for-apy-calculator-faq-4" class="faq-item" open><summary id="certificate-of-deposit-for-apy-calculator-faq-4-summary" class="faq-summary"><h3 id="certificate-of-deposit-for-apy-calculator-faq-4-question" class="faq-question">How does compounding frequency change my CD earnings?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="certificate-of-deposit-for-apy-calculator-faq-4-answer" class="faq-answer"><p>The more often interest is added to your balance, the more it earns in turn. At the same 4.50% rate, annual compounding yields 4.500% APY while daily compounding yields about 4.602%, a small but real difference over a long term.</p></div></details>
+          <details id="certificate-of-deposit-for-apy-calculator-faq-5" class="faq-item" open><summary id="certificate-of-deposit-for-apy-calculator-faq-5-summary" class="faq-summary"><h3 id="certificate-of-deposit-for-apy-calculator-faq-5-question" class="faq-question">What happens if I withdraw from a CD early?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="certificate-of-deposit-for-apy-calculator-faq-5-answer" class="faq-answer"><p>You will usually pay an early withdrawal penalty, commonly a set number of days or months of interest. If the interest earned so far does not cover it, the penalty can reach into your principal, so check the account terms first.</p></div></details>
+          <details id="certificate-of-deposit-for-apy-calculator-faq-6" class="faq-item" open><summary id="certificate-of-deposit-for-apy-calculator-faq-6-summary" class="faq-summary"><h3 id="certificate-of-deposit-for-apy-calculator-faq-6-question" class="faq-question">Are CDs FDIC insured?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="certificate-of-deposit-for-apy-calculator-faq-6-answer" class="faq-answer"><p>CDs at FDIC-insured banks are covered up to $250,000 per depositor, per bank, per ownership category. Credit union certificates get similar coverage from the NCUA.</p></div></details>
+          <details id="certificate-of-deposit-for-apy-calculator-faq-7" class="faq-item" open><summary id="certificate-of-deposit-for-apy-calculator-faq-7-summary" class="faq-summary"><h3 id="certificate-of-deposit-for-apy-calculator-faq-7-question" class="faq-question">Is CD interest taxable?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="certificate-of-deposit-for-apy-calculator-faq-7-answer" class="faq-answer"><p>Yes. Interest on a CD is taxable as income in the year it is credited unless the certificate is held in a tax-advantaged account such as an IRA. Enter your income tax rate to see the tax and the after-tax balance.</p></div></details>
+          <details id="certificate-of-deposit-for-apy-calculator-faq-8" class="faq-item" open><summary id="certificate-of-deposit-for-apy-calculator-faq-8-summary" class="faq-summary"><h3 id="certificate-of-deposit-for-apy-calculator-faq-8-question" class="faq-question">What is the difference between a CD and a share certificate?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="certificate-of-deposit-for-apy-calculator-faq-8-answer" class="faq-answer"><p>They are the same kind of account. Banks call them CDs, while credit unions call them share certificates.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="certificate-of-deposit-for-apy-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="certificate-of-deposit-for-apy-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="certificate-of-deposit-for-apy-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="certificate-of-deposit-for-apy-calculator-ad-bottom-leaderboard">
+            <ins id="certificate-of-deposit-for-apy-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("certificate-of-deposit-for-apy-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="certificate-of-deposit-for-apy-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="certificate-of-deposit-for-apy-calculator-right-rail-top" class="mb-6">
+        <aside id="certificate-of-deposit-for-apy-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="certificate-of-deposit-for-apy-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="certificate-of-deposit-for-apy-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="certificate-of-deposit-for-apy-calculator-ad-right-rail-rectangle">
+            <ins id="certificate-of-deposit-for-apy-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("certificate-of-deposit-for-apy-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="certificate-of-deposit-for-apy-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="certificate-of-deposit-for-apy-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="certificate-of-deposit-for-apy-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="certificate-of-deposit-for-apy-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="certificate-of-deposit-for-apy-calculator-ad-right-rail-skyscraper">
+            <ins id="certificate-of-deposit-for-apy-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("certificate-of-deposit-for-apy-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="certificate-of-deposit-for-apy-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="certificate-of-deposit-for-apy-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="certificate-of-deposit-for-apy-calculator-footer-brand">
+        <a id="certificate-of-deposit-for-apy-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="certificate-of-deposit-for-apy-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="certificate-of-deposit-for-apy-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="certificate-of-deposit-for-apy-calculator-footer-categories" aria-labelledby="certificate-of-deposit-for-apy-calculator-footer-categories-heading">
+        <h2 id="certificate-of-deposit-for-apy-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="certificate-of-deposit-for-apy-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="certificate-of-deposit-for-apy-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="certificate-of-deposit-for-apy-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="certificate-of-deposit-for-apy-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="certificate-of-deposit-for-apy-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="certificate-of-deposit-for-apy-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="certificate-of-deposit-for-apy-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="certificate-of-deposit-for-apy-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="certificate-of-deposit-for-apy-calculator-footer-company" aria-labelledby="certificate-of-deposit-for-apy-calculator-footer-company-heading">
+        <h2 id="certificate-of-deposit-for-apy-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="certificate-of-deposit-for-apy-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="certificate-of-deposit-for-apy-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="certificate-of-deposit-for-apy-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="certificate-of-deposit-for-apy-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="certificate-of-deposit-for-apy-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="certificate-of-deposit-for-apy-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="certificate-of-deposit-for-apy-calculator-footer-bottom" class="border-t border-line">
+      <p id="certificate-of-deposit-for-apy-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="certificate-of-deposit-for-apy-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // CD interest rate <-> APY using the Truth in Savings method (Regulation DD, 12 CFR 1030,
+  // Appendix A, Part I.A; rounding to 0.01% per 1030.3(f)(1); both read on eCFR in this session):
+  //   APY = 100 x [(1 + Interest / Principal)^(365 / Days in term) - 1]
+  // Interest for the term: compounding n times a year over p periods = P x ((1 + r/n)^p - 1),
+  //   where p = days for daily compounding, months x n / 12 for a term in months, days x n / 365
+  //   otherwise; simple interest = P x r x days / 365.
+  // APY to rate: growth G = (1 + APY)^(days/365); r = n x (G^(1/p) - 1), simple r = (G - 1) x 365 / days.
+  // Verified (scratchpad cu5/tests/ay.test.js): Reg DD example 2 ($30.37 on $1,000, 182 days) = 6.18%;
+  // example 1 ($61.68 on $1,000, 365 days) = 6.17%; 5% compounded daily over 365 days = APY 5.13%
+  // ($512.67 on $10,000); 4.5% monthly for 12 months = APY 4.59%; APY -> rate -> APY round trip;
+  // 0% rate gives 0 interest; simple 6% for 24 months gives APY 5.83% (Part I.E lets the bank show 6.00%).
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  var plain = new Intl.NumberFormat('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  var FREQS = [[365, 'Daily'], [12, 'Monthly'], [4, 'Quarterly'], [2, 'Semiannually'], [1, 'Annually'], [0, 'None (simple)']];
+
+  function num(id) {
+    var v = parseFloat(document.getElementById(id).value);
+    return isNaN(v) ? NaN : v;
+  }
+  function set(id, text) { document.getElementById(id).textContent = text; }
+  function pct(x, d) { return (x * 100).toFixed(d) + '%'; }
+
+  function periodsIn(n, unit, months, days) {
+    if (n === 0) return 0;
+    if (n === 365) return days;
+    return unit === 'months' ? months * n / 12 : days * n / 365;
+  }
+  // Growth factor of $1 over the term at nominal rate r.
+  function growth(r, n, p, days) {
+    return n === 0 ? 1 + r * days / 365 : Math.pow(1 + r / n, p);
+  }
+  function tisApy(g, days) { return Math.pow(g, 365 / days) - 1; }
+  function rateFromApy(apy, n, p, days) {
+    var g = Math.pow(1 + apy, days / 365);
+    return n === 0 ? (g - 1) * 365 / days : n * (Math.pow(g, 1 / p) - 1);
+  }
+
+  function clear() {
+    ['ayOut', 'ayInterest', 'ayBalance', 'ayPeriod', 'ayDaysOut', 'ayPeriodsOut', 'ayPerRate', 'ayTermYield', 'ayFormula'].forEach(function (id) { set(id, '–'); });
+    set('ayNote', '');
+    document.getElementById('ayTable').innerHTML = '';
+  }
+
+  function update() {
+    var mode = document.getElementById('ayMode').value, unit = document.getElementById('ayUnit').value,
+        n = parseInt(document.getElementById('ayCompound').value, 10),
+        deposit = num('ayDeposit'), rate = num('ayRate'), term = num('ayTerm'), daysIn = document.getElementById('ayDays').value.trim();
+    set('ayRateLabel', mode === 'apy' ? 'Annual percentage yield (APY)' : 'Interest rate');
+    set('ayRateHint', mode === 'apy' ? 'The APY the bank quotes; the calculator finds the interest rate behind it.' : 'The stated (nominal) annual rate before compounding.');
+    var error = document.getElementById('ayError');
+    var override = daysIn === '' ? NaN : Math.round(parseFloat(daysIn));
+    var bad = [deposit, rate, term].some(isNaN) || isNaN(n) || deposit < 0 || deposit > 1e12 || rate < 0 || rate > 100 ||
+              term < 1 || (unit === 'months' ? term > 120 : term > 3650) || (daysIn !== '' && (isNaN(override) || override < 1 || override > 3660));
+    error.hidden = !bad;
+    if (bad) {
+      error.textContent = 'Enter a deposit of $0 or more, a rate from 0 to 100%, a term of 1 to 120 months (or 1 to 3,650 days) and, if used, 1 to 3,660 days in the term.';
+      clear();
+      return;
+    }
+    var months = unit === 'months' ? Math.round(term) : term * 12 / 365;
+    var days = unit === 'days' ? Math.round(term) : (daysIn !== '' ? override : Math.round(months * 365 / 12));
+    if (unit === 'days') months = days * 12 / 365;
+    var p = periodsIn(n, unit, months, days);
+    var r, g, apy;
+    if (mode === 'apy') {
+      apy = rate / 100;
+      r = rateFromApy(apy, n, p, days);
+      g = Math.pow(1 + apy, days / 365);
+    } else {
+      r = rate / 100;
+      g = growth(r, n, p, days);
+      apy = tisApy(g, days);
+    }
+    var interest = deposit * (g - 1);
+    set('ayOutLabel', mode === 'apy' ? 'Interest rate (nominal)' : 'APY (Truth in Savings)');
+    set('ayOut', mode === 'apy' ? pct(r, 3) : pct(apy, 2));
+    set('ayInterest', money.format(interest));
+    set('ayBalance', money.format(deposit + interest));
+    if (n === 0) {
+      set('ayPeriodLabel', 'Interest per year (not compounded)');
+      set('ayPeriod', money.format(deposit * r));
+      set('ayPeriodsOut', 'None');
+      set('ayPerRate', '–');
+    } else {
+      set('ayPeriodLabel', 'Interest in the first compounding period');
+      set('ayPeriod', money.format(deposit * r / n));
+      set('ayPeriodsOut', Math.abs(p - Math.round(p)) < 1e-9 ? String(Math.round(p)) : p.toFixed(2));
+      set('ayPerRate', pct(r / n, 5));
+    }
+    set('ayDaysOut', String(days));
+    set('ayTermYield', pct(g - 1, 3));
+    var basis = deposit > 0 ? deposit : 1000;
+    set('ayFormula', 'APY = 100 × [(1 + ' + plain.format(basis * (g - 1)) + ' ÷ ' + plain.format(basis) + ')^(365 ÷ ' + days + ') − 1] = ' + pct(apy, 2));
+    var note = 'Banks round the disclosed APY to the nearest 0.01% (12 CFR 1030.3(f)). Credit unions follow the same formula under NCUA Part 707.';
+    if (n === 0 && days > 365) note = 'Simple interest over more than a year gives a lower APY than the rate. If the CD pays the interest out at least once a year, Regulation DD lets the bank disclose the APY as equal to the interest rate (' + pct(r, 2) + ').';
+    set('ayNote', note);
+    var rows = FREQS.map(function (f) {
+      var fn = f[0], fp = periodsIn(fn, unit, months, days), fr, fg;
+      if (mode === 'apy') { fr = rateFromApy(apy, fn, fp, days); fg = g; }
+      else { fr = r; fg = growth(r, fn, fp, days); }
+      var mark = fn === n ? ' (selected)' : '';
+      return '<tr><td>' + f[1] + mark + '</td><td>' + pct(fr, 3) + '</td><td>' + pct(tisApy(fg, days), 2) + '</td><td>' + money.format(deposit * (fg - 1)) + '</td></tr>';
+    });
+    set('ayTableIntro', mode === 'apy' ? 'The interest rate each compounding frequency needs to pay the same APY.' : 'How the APY and interest change if only the compounding frequency changes.');
+    document.getElementById('ayTable').innerHTML = rows.join('');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('ayForm');
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

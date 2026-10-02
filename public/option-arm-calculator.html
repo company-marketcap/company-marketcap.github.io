@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en" id="option-arm-calculator-document" data-page-slug="option-arm-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Option ARM Calculator: Negative Amortization and Recast</title>
+  <meta name="description" content="See how a payment-option ARM’s minimum payment adds deferred interest, when the negative-amortization cap forces a recast and the payment shock that follows.">
+  <link rel="canonical" href="https://company-marketcap.github.io/option-arm-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Option ARM Calculator: Negative Amortization and Recast">
+  <meta property="og:description" content="See how a payment-option ARM’s minimum payment adds deferred interest, when the negative-amortization cap forces a recast and the payment shock that follows.">
+  <meta property="og:url" content="https://company-marketcap.github.io/option-arm-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Option ARM Calculator", "url": "https://company-marketcap.github.io/option-arm-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "See how a payment-option ARM’s minimum payment adds deferred interest, when the negative-amortization cap forces a recast and the payment shock that follows."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Mortgage & Home Buying", "item": "https://company-marketcap.github.io/financial-calculators.html#mortgage-calculators"}, {"@type": "ListItem", "position": 4, "name": "Option ARM Calculator", "item": "https://company-marketcap.github.io/option-arm-calculator.html"}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="option-arm-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="option-arm-calculator" data-page-type="calculator">
+  <a id="option-arm-calculator-skip-link" href="#option-arm-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="option-arm-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="option-arm-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="option-arm-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="option-arm-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="option-arm-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="option-arm-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="option-arm-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="option-arm-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="option-arm-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="option-arm-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="option-arm-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="option-arm-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="option-arm-calculator-header-search-status" aria-controls="option-arm-calculator-header-search-results" data-search-input="header">
+              <p id="option-arm-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="option-arm-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="option-arm-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="option-arm-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="option-arm-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="option-arm-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="option-arm-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="option-arm-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="option-arm-calculator-mobile-search-status" aria-controls="option-arm-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="option-arm-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="option-arm-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="option-arm-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="option-arm-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="option-arm-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="option-arm-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="option-arm-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="option-arm-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="option-arm-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="option-arm-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="option-arm-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="option-arm-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="option-arm-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="option-arm-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="option-arm-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="option-arm-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="option-arm-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="option-arm-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="option-arm-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="option-arm-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="option-arm-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="option-arm-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="option-arm-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="option-arm-calculator-sidebar-search-status" aria-controls="option-arm-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="option-arm-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="option-arm-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="option-arm-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="option-arm-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="option-arm-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="option-arm-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="option-arm-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="option-arm-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="option-arm-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators" aria-current="true">Mortgage &amp; Home Buying</a></li><li><a id="option-arm-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="option-arm-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="option-arm-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="option-arm-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="option-arm-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="option-arm-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="option-arm-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="option-arm-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="option-arm-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="option-arm-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="option-arm-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="option-arm-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="option-arm-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="option-arm-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="option-arm-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="option-arm-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="option-arm-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="option-arm-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="option-arm-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="option-arm-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="option-arm-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="option-arm-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="option-arm-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="option-arm-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="option-arm-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="option-arm-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="option-arm-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="option-arm-calculator" data-calculator-slug="option-arm-calculator" data-sub-category-slug="mortgage-calculators">
+      <aside id="option-arm-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="option-arm-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="option-arm-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="option-arm-calculator-ad-top-leaderboard">
+            <ins id="option-arm-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("option-arm-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="option-arm-calculator-intro-area" class="space-y-4">
+        <nav id="option-arm-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="option-arm-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="option-arm-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="option-arm-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="option-arm-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#mortgage-calculators" itemprop="item"><span itemprop="name">Mortgage &amp; Home Buying</span></a><meta itemprop="position" content="3"></li>
+            <li id="option-arm-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Option ARM Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/option-arm-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="option-arm-calculator-hero-section" aria-labelledby="option-arm-calculator-hero-heading" data-section="hero">
+          <h1 id="option-arm-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Option ARM Calculator</h1>
+          <p id="option-arm-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Follow a payment-option ARM month by month: how a minimum payment below the interest grows the balance, when the negative-amortization cap or scheduled recast resets the payment, and how big the jump is. <!-- SILO_START:slot_a -->The <a class="silo-link" href="/amortization-calculator.html">free amortization calculator</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="option-arm-calculator-tool" class="space-y-6" data-page-slug="option-arm-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="oaFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="oaForm" class="space-y-5" novalidate aria-labelledby="oaFormHeading">
+      <h2 id="oaFormHeading" class="panel-heading">Enter your option ARM terms</h2>
+      <div class="form-row form-row-2"><div><label for="oaAmount" class="form-label">Loan amount</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="oaAmount" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1000" value="400000" inputmode="decimal"></div></div><div><label for="oaTerm" class="form-label">Loan term</label><select id="oaTerm" class="form-select"><option value="30" selected>30 years</option><option value="40">40 years</option></select></div></div>
+      <div class="form-row form-row-2"><div><label for="oaStart" class="form-label">Start rate</label><div class="input-group"><input type="number" id="oaStart" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="30" step="0.125" value="1.5" inputmode="decimal" aria-describedby="oaStartHint"><span class="input-affix">%</span></div><p id="oaStartHint" class="form-hint">Sets the first minimum payment.</p></div><div><label for="oaTeaser" class="form-label">Months interest is charged at the start rate</label><div class="input-group"><input type="number" id="oaTeaser" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="60" step="1" value="3" inputmode="numeric"><span class="input-affix">mo</span></div></div></div>
+      <div><label for="oaFir" class="form-label">Fully indexed rate (index + margin)</label><div class="input-group"><input type="number" id="oaFir" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="30" step="0.125" value="7" inputmode="decimal" aria-describedby="oaFirHint"><span class="input-affix">%</span></div><p id="oaFirHint" class="form-hint">The rate interest actually accrues at once the start rate ends.</p></div>
+      <div class="form-row form-row-2"><div><label for="oaPayCap" class="form-label">Payment cap</label><div class="input-group"><input type="number" id="oaPayCap" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="0.5" value="7.5" inputmode="decimal" aria-describedby="oaPayCapHint"><span class="input-affix">% a year</span></div><p id="oaPayCapHint" class="form-hint">Most the minimum payment can rise at each yearly reset.</p></div><div><label for="oaNegCap" class="form-label">Negative-amortization cap</label><select id="oaNegCap" class="form-select" aria-describedby="oaNegCapHint"><option value="1.1" selected>110% of the loan</option><option value="1.15">115% of the loan</option><option value="1.25">125% of the loan</option></select><p id="oaNegCapHint" class="form-hint">Reaching it forces an early recast.</p></div></div>
+      <div><label for="oaRecastYears" class="form-label">Scheduled recast</label><select id="oaRecastYears" class="form-select" aria-describedby="oaRecastYearsHint"><option value="5" selected>After 5 years</option><option value="10">After 10 years</option></select><p id="oaRecastYearsHint" class="form-hint">When the payment must become fully amortizing even if the cap is not reached.</p></div>
+      <details class="form-details"><summary class="form-details-summary">More options</summary><div><label for="oaChange" class="form-label">Expected change in the fully indexed rate each year</label><div class="input-group"><input type="number" id="oaChange" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="-10" max="10" step="0.25" value="0" inputmode="decimal" aria-describedby="oaChangeHint"><span class="input-affix">pts</span></div><p id="oaChangeHint" class="form-hint">For example 0.5 if you expect the index to rise half a point a year.</p></div><div><label for="oaLifeCap" class="form-label">Lifetime rate cap</label><div class="input-group"><input type="number" id="oaLifeCap" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="0.05" value="9.95" inputmode="decimal"><span class="input-affix">%</span></div></div></details>
+      <p id="oaError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="oaResults" aria-live="polite" aria-labelledby="oaResultsHeading">
+      <h2 id="oaResultsHeading" class="panel-heading">Paying the minimum</h2>
+      <div class="stat-grid mt-4"><div class="stat-card stat-card-highlight"><p class="stat-label">First minimum payment</p><p id="oaMinPay" class="stat-value">–</p><p id="oaMinPayNote" class="mt-1 text-xs text-ink-muted"></p></div><div class="stat-card"><p class="stat-label">Recast</p><p id="oaRecast" class="stat-value">–</p><p id="oaRecastNote" class="mt-1 text-xs text-ink-muted"></p></div><div class="stat-card"><p class="stat-label">Payment shock at recast</p><p id="oaShock" class="stat-value">–</p><p id="oaShockNote" class="mt-1 text-xs text-ink-muted"></p></div><div class="stat-card"><p class="stat-label">Highest loan balance</p><p id="oaPeak" class="stat-value">–</p><p id="oaPeakNote" class="mt-1 text-xs text-ink-muted"></p></div><div class="stat-card"><p class="stat-label">Deferred interest added</p><p id="oaDeferred" class="stat-value">–</p><p id="oaDeferredNote" class="mt-1 text-xs text-ink-muted"></p></div><div class="stat-card"><p class="stat-label">Total interest</p><p id="oaInterest" class="stat-value">–</p><p id="oaInterestNote" class="mt-1 text-xs text-ink-muted"></p></div></div>
+      <p class="mt-3 text-xs text-ink-muted">Figures assume you always make the minimum payment.</p>
+      <div class="callout callout-warning mt-5"><p class="callout-title">Option ARMs are now rare</p><p class="text-sm">Since January 10, 2014, the ability-to-repay rule in Regulation Z (12 CFR 1026.43) bars a loan whose payments can increase the principal from being a qualified mortgage, and requires lenders to judge whether you can afford the fully amortizing payment on the largest balance negative amortization could reach, at the fully indexed rate. Few lenders still offer these loans.</p></div>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="oaOptionsHeading" data-section="options">
+  <h2 id="oaOptionsHeading" class="panel-heading">Your payment choices each month</h2>
+  <p id="oaOptionsMonth" class="mt-0.5 text-sm text-ink-muted"></p>
+  <div class="table-scroll mt-5" tabindex="0" role="region" aria-labelledby="oaOptionsHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Payment option</th><th scope="col">Monthly payment</th><th scope="col">Effect on the balance</th></tr></thead>
+      <tbody id="oaOptions"></tbody>
+    </table>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="oaCompareHeading" data-section="compare">
+  <h2 id="oaCompareHeading" class="panel-heading">Minimum, interest-only and full payments compared</h2>
+  <p id="oaCompareNote" class="mt-0.5 text-sm text-ink-muted"></p>
+  <div class="table-scroll mt-5" tabindex="0" role="region" aria-labelledby="oaCompareHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">If you</th><th scope="col">First payment</th><th scope="col">Payment in year 2</th><th scope="col">Balance before recast</th><th scope="col">Highest payment</th><th scope="col">Total interest</th><th scope="col">Total paid</th></tr></thead>
+      <tbody id="oaCompare"></tbody>
+    </table>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="oaScheduleHeading" data-section="schedule">
+  <h2 id="oaScheduleHeading" class="panel-heading">Year-by-year schedule paying the minimum</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">The balance grows while the minimum payment is below the interest, until the recast resets the payment to fully amortizing.</p>
+  <div class="table-scroll mt-5 max-h-[520px]" tabindex="0" role="region" aria-labelledby="oaScheduleHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Year</th><th scope="col">Rate</th><th scope="col">Monthly payment</th><th scope="col">Paid in the year</th><th scope="col">Interest charged</th><th scope="col">Deferred interest</th><th scope="col">Ending balance</th><th scope="col">Balance vs loan</th></tr></thead>
+      <tbody id="oaSchedule"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="option-arm-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="option-arm-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Follow a payment-option ARM month by month: how a minimum payment below the interest grows the balance, when the negative-amortization cap or scheduled recast resets the payment, and how big the jump is. <!-- SILO_START:slot_a_m -->The <a class="silo-link" href="/amortization-calculator.html">free amortization calculator</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="option-arm-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="option-arm-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="option-arm-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="option-arm-calculator-ad-in-feed">
+            <ins id="option-arm-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("option-arm-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      
+
+      
+
+      <nav id="option-arm-calculator-related-section" class="border-t border-line pt-8" aria-labelledby="option-arm-calculator-related-heading" data-section="related-calculators">
+        <h2 id="option-arm-calculator-related-heading" class="guide-heading">Related calculators</h2>
+        <ul id="option-arm-calculator-related-list" class="mt-5 grid gap-3 @2xl:grid-cols-2 @5xl:grid-cols-3" role="list">
+          <li><a id="option-arm-calculator-related-link-adjustable-rate-calculator" class="related-link" href="/adjustable-rate-calculator.html" data-calculator-name="Adjustable Rate Mortgage Calculator" data-category-name="Mortgage &amp; Home Buying">Adjustable Rate Mortgage Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
+          <li><a id="option-arm-calculator-related-link-interest-only-arm-calculator" class="related-link" href="/interest-only-arm-calculator.html" data-calculator-name="Interest-Only ARM Calculator" data-category-name="Mortgage &amp; Home Buying">Interest-Only ARM Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
+          <li><a id="option-arm-calculator-related-link-arm-and-interest-only-arm-vs-fixed-rate-mortgage-calculator" class="related-link" href="/arm-and-interest-only-arm-vs-fixed-rate-mortgage-calculator.html" data-calculator-name="ARM and Interest-Only ARM vs Fixed-Rate Mortgage Calculator" data-category-name="Mortgage &amp; Home Buying">ARM and Interest-Only ARM vs Fixed-Rate Mortgage Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
+          <li><a id="option-arm-calculator-related-link-apr-calculator-for-adjustable-rate-mortgages" class="related-link" href="/apr-calculator-for-adjustable-rate-mortgages.html" data-calculator-name="APR Calculator for Adjustable Rate Mortgages" data-category-name="Mortgage &amp; Home Buying">APR Calculator for Adjustable Rate Mortgages<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
+          <li><a id="option-arm-calculator-related-link-amortization-calculator" class="related-link" href="/amortization-calculator.html" data-calculator-name="Amortization Calculator" data-category-name="Mortgage &amp; Home Buying">Amortization Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
+          <li><a id="option-arm-calculator-related-link-bi-weekly-payment-calculator" class="related-link" href="/bi-weekly-payment-calculator.html" data-calculator-name="Bi-weekly Payment Calculator" data-category-name="Mortgage &amp; Home Buying">Bi-weekly Payment Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
+        </ul>
+      </nav>
+
+      <aside id="option-arm-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="option-arm-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="option-arm-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="option-arm-calculator-ad-bottom-leaderboard">
+            <ins id="option-arm-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("option-arm-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="option-arm-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="option-arm-calculator-right-rail-top" class="mb-6">
+        <aside id="option-arm-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="option-arm-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="option-arm-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="option-arm-calculator-ad-right-rail-rectangle">
+            <ins id="option-arm-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("option-arm-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="option-arm-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="option-arm-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="option-arm-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="option-arm-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="option-arm-calculator-ad-right-rail-skyscraper">
+            <ins id="option-arm-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("option-arm-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="option-arm-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="option-arm-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="option-arm-calculator-footer-brand">
+        <a id="option-arm-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="option-arm-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="option-arm-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="option-arm-calculator-footer-categories" aria-labelledby="option-arm-calculator-footer-categories-heading">
+        <h2 id="option-arm-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="option-arm-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="option-arm-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="option-arm-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="option-arm-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="option-arm-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="option-arm-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="option-arm-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="option-arm-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="option-arm-calculator-footer-company" aria-labelledby="option-arm-calculator-footer-company-heading">
+        <h2 id="option-arm-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="option-arm-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="option-arm-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="option-arm-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="option-arm-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="option-arm-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="option-arm-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="option-arm-calculator-footer-bottom" class="border-t border-line">
+      <p id="option-arm-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="option-arm-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+
+<script>(function () {
+  'use strict';
+  // Payment-option ARM (option ARM) with negative amortization, month by month.
+  //   Accrual rate: the start rate for the first `teaser` months, then the fully indexed rate
+  //   (index + margin), changed by the expected change once a year and held between 0 and the
+  //   lifetime cap. Interest each month = balance x rate / 12 (rounded to the cent).
+  //   Minimum payment: fully amortizing at the start rate over the term; every 12 months it is
+  //   reset to the fully amortizing payment at the current rate on the current balance, but may
+  //   not rise by more than the payment cap (e.g. 7.5%) over the previous minimum.
+  //   Paying less than the interest adds the difference to the balance (deferred interest).
+  //   Recast: if the balance would pass the negative-amortization cap (e.g. 115% of the original
+  //   loan) or the scheduled recast date arrives (e.g. after 5 years), the payment becomes fully
+  //   amortizing over the remaining term with no payment cap, recalculated whenever the rate moves.
+  //   Interest-only option: interest each month until the scheduled recast, then fully amortizing.
+  //   Fully amortizing option: the level payment at the current rate over the remaining term.
+  //   Payment = rB / (1 - (1 + r)^-n) (B / n at 0%); the last payment clears the balance.
+  // Verified (scratchpad b7opt/tests/oa.test.js, oa_ref.py):
+  //   $200,000 at 6% for 30 years -> $1,199.10 (standard table value); $400,000 at 1.5% over 360
+  //   months -> $1,380.48 first minimum; by hand: balances $399,119.52, $398,237.94, $397,355.26
+  //   after months 1-3, month-4 interest at 7% = $2,317.91 so $937.43 is deferred; year-2 minimum
+  //   = $1,380.48 x 1.075 = $1,484.02 (payment cap binds); the recast payment equals the
+  //   closed-form amortizing payment on the balance and months left at recast; the balance never
+  //   passes the cap. Defaults (7%, 110% cap, 5-year recast): cap reached in month 53, payment
+  //   $1,843.59 -> $3,078.83, peak $439,805.50; 6.5% / 115% / 5 years -> scheduled recast in
+  //   month 61, $1,843.59 -> $2,930.54, total interest $575,381.05 (interest-only $535,247.95);
+  //   6.5% + 0.5 pt a year / 125% / 10 years -> cap in month 86, $2,290.29 -> $4,608.90. All match
+  //   a separate Decimal (half-up cents) Python implementation of the same rules to the cent;
+  //   0% rates give level principal-only payments with no NaN.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  var money0 = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+
+  function cents(x) { return Math.round(x * 100) / 100; }
+  function amortPay(balance, annualRate, months) {
+    if (months <= 0) return balance;
+    var r = annualRate / 12;
+    return cents(r === 0 ? balance / months : r * balance / (1 - Math.pow(1 + r, -months)));
+  }
+
+  function rateFor(m, o) {
+    if (m <= o.teaser) return o.start;
+    var yearsIn = Math.floor((m - 1) / 12);
+    return Math.min(o.lifeCap, Math.max(0, o.fir + o.change * yearsIn));
+  }
+
+  // mode: 'min' | 'io' | 'full'
+  function simulate(o, mode) {
+    var N = o.term * 12, bal = o.amount, capBal = o.amount * o.negCap, recastAt = o.recastYears * 12;
+    var minPay = amortPay(o.amount, o.start, N), firstPay = 0;
+    var recast = false, reason = '', recastMonth = 0, prePay = 0, postPay = 0;
+    var months = [], peak = bal, deferredTotal = 0, interestTotal = 0, paidTotal = 0, maxPay = 0;
+    var lastRate = -1, levelPay = 0;
+    for (var m = 1; m <= N; m++) {
+      var rate = rateFor(m, o), remaining = N - m + 1, pay;
+      var interest = cents(bal * rate / 12);
+      if (mode === 'full') {
+        if (rate !== lastRate || m === 1) levelPay = amortPay(bal, rate, remaining);
+        pay = levelPay;
+      } else {
+        if (!recast && m > 1 && (m - 1) % 12 === 0 && mode === 'min') {
+          var target = amortPay(bal, rate, remaining);
+          minPay = Math.min(target, cents(minPay * (1 + o.payCap)));
+          if (target < minPay) minPay = target;
+        }
+        if (!recast && m === recastAt + 1) { recast = true; reason = 'scheduled'; recastMonth = m; }
+        if (!recast && mode === 'min' && bal + interest - minPay > capBal + 0.005) { recast = true; reason = 'cap'; recastMonth = m; }
+        if (recast) {
+          if (m === recastMonth || rate !== lastRate) levelPay = amortPay(bal, rate, remaining);
+          if (m === recastMonth) { prePay = months.length ? months[months.length - 1].pay : 0; postPay = levelPay; }
+          pay = levelPay;
+        } else {
+          pay = mode === 'io' ? interest : minPay;
+        }
+      }
+      if (pay > maxPay && m < N) maxPay = pay;
+      if (m === N || pay > bal + interest) pay = cents(bal + interest);
+      lastRate = rate;
+      var deferred = Math.max(0, interest - pay);
+      bal = cents(bal + interest - pay);
+      if (bal > peak) peak = bal;
+      if (m === 1) firstPay = pay;
+      deferredTotal += deferred; interestTotal += interest; paidTotal += pay;
+      months.push({ m: m, rate: rate, pay: pay, interest: interest, deferred: deferred, bal: bal });
+      if (bal <= 0.005) break;
+    }
+    return { months: months, firstPay: firstPay, recast: recast, reason: reason, recastMonth: recastMonth, prePay: prePay, postPay: postPay,
+      peak: peak, deferredTotal: deferredTotal, interestTotal: interestTotal, paidTotal: paidTotal, maxPay: maxPay };
+  }
+
+  function raw(id) { return document.getElementById(id).value.trim(); }
+  function num(id) { var v = parseFloat(raw(id)); return isNaN(v) ? NaN : v; }
+  function set(id, text) { document.getElementById(id).textContent = text; }
+  function clearBody(id) {
+    var body = document.getElementById(id);
+    while (body.firstChild) body.removeChild(body.firstChild);
+    return body;
+  }
+  function addRow(body, cells) {
+    var tr = document.createElement('tr');
+    cells.forEach(function (text) { var td = document.createElement('td'); td.textContent = text; tr.appendChild(td); });
+    body.appendChild(tr);
+  }
+  function pct(x, d) { return (x * 100).toFixed(d === undefined ? 2 : d) + '%'; }
+  function when(m) {
+    var y = Math.floor((m - 1) / 12) + 1, mm = (m - 1) % 12 + 1;
+    return 'month ' + m + ' (year ' + y + ', month ' + mm + ')';
+  }
+  function balanceAt(sim, m) { return m <= 0 ? null : (sim.months[Math.min(m, sim.months.length) - 1] || {}).bal; }
+
+  var RESULT_IDS = ['oaMinPay', 'oaRecast', 'oaShock', 'oaPeak', 'oaDeferred', 'oaInterest'];
+  function clearResults() {
+    RESULT_IDS.forEach(function (id) { set(id, '–'); set(id + 'Note', ''); });
+    clearBody('oaOptions'); clearBody('oaCompare'); clearBody('oaSchedule');
+  }
+
+  function update() {
+    var error = document.getElementById('oaError');
+    var amount = num('oaAmount'), term = parseInt(document.getElementById('oaTerm').value, 10), start = num('oaStart'),
+        teaser = num('oaTeaser'), fir = num('oaFir'), payCap = num('oaPayCap'),
+        negCap = parseFloat(document.getElementById('oaNegCap').value), recastYears = parseInt(document.getElementById('oaRecastYears').value, 10),
+        change = raw('oaChange') === '' ? 0 : num('oaChange'), lifeCap = raw('oaLifeCap') === '' ? 100 : num('oaLifeCap');
+    var problem = '';
+    if (isNaN(amount) || amount <= 0 || amount > 1e8) problem = 'Enter a loan amount above $0.';
+    else if (isNaN(start) || start < 0 || start > 30) problem = 'Enter a start rate from 0 to 30%.';
+    else if (isNaN(teaser) || teaser < 0 || teaser > 60 || Math.round(teaser) !== teaser) problem = 'Enter 0 to 60 whole months at the start rate.';
+    else if (isNaN(fir) || fir < 0 || fir > 30) problem = 'Enter a fully indexed rate from 0 to 30%.';
+    else if (isNaN(payCap) || payCap < 0 || payCap > 100) problem = 'Enter a yearly payment cap from 0 to 100%.';
+    else if (isNaN(change) || change < -10 || change > 10) problem = 'Enter a yearly rate change from −10 to 10 percentage points.';
+    else if (isNaN(lifeCap) || lifeCap < 0 || lifeCap > 100) problem = 'Enter a lifetime rate cap from 0 to 100%.';
+    error.hidden = !problem;
+    error.textContent = problem;
+    if (problem) { clearResults(); return; }
+
+    var o = { amount: amount, term: term, start: start / 100, teaser: teaser, fir: Math.min(fir, lifeCap) / 100, change: change / 100,
+      lifeCap: lifeCap / 100, payCap: payCap / 100, negCap: negCap, recastYears: recastYears };
+    var sMin = simulate(o, 'min'), sIo = simulate(o, 'io'), sFull = simulate(o, 'full');
+
+    set('oaMinPay', money.format(sMin.firstPay));
+    var firstInterestAfter = cents(amount * rateFor(teaser + 1, o) / 12);
+    set('oaMinPayNote', 'Based on the ' + start.toFixed(2) + '% start rate. Interest alone is about ' + money.format(firstInterestAfter) + ' a month once the rate is ' + pct(rateFor(teaser + 1, o)) + '.');
+    if (sMin.recast) {
+      set('oaRecast', 'Year ' + (Math.floor((sMin.recastMonth - 1) / 12) + 1));
+      set('oaRecastNote', (sMin.reason === 'cap' ? 'The balance hits the ' + Math.round(negCap * 100) + '% negative-amortization cap in ' : 'Scheduled recast after ' + recastYears + ' years, in ') + when(sMin.recastMonth) + '.');
+      var shock = sMin.postPay / sMin.prePay - 1;
+      set('oaShock', (shock >= 0 ? '+' : '−') + pct(Math.abs(shock), 0));
+      set('oaShockNote', 'The payment changes from ' + money.format(sMin.prePay) + ' to ' + money.format(sMin.postPay) + ' — ' + pct(Math.abs(sMin.postPay / sMin.firstPay - 1), 0) + (sMin.postPay >= sMin.firstPay ? ' above' : ' below') + ' the first payment.');
+    } else {
+      set('oaRecast', 'None');
+      set('oaRecastNote', 'The minimum payment never forces a recast with these inputs.');
+      set('oaShock', '–');
+      set('oaShockNote', 'No recast.');
+    }
+    set('oaPeak', money0.format(sMin.peak));
+    set('oaPeakNote', pct(sMin.peak / amount, 1) + ' of the original ' + money0.format(amount) + ' loan.');
+    set('oaDeferred', money0.format(sMin.deferredTotal));
+    set('oaDeferredNote', 'Unpaid interest added to what you owe.');
+    set('oaInterest', money0.format(sMin.interestTotal));
+    set('oaInterestNote', money0.format(sMin.interestTotal - sFull.interestTotal) + ' more than paying the fully amortizing amount every month.');
+
+    // The four payment choices on the first statement after the start rate ends.
+    var mo = Math.min(teaser + 1, term * 12), balNow = mo > 1 ? balanceAt(sMin, mo - 1) : amount, rNow = rateFor(mo, o);
+    var minNow = sMin.months[mo - 1] ? sMin.months[mo - 1].pay : sMin.firstPay;
+    var intNow = cents(balNow * rNow / 12);
+    var ob = clearBody('oaOptions');
+    var rem = term * 12 - mo + 1;
+    var full30 = amortPay(balNow, rNow, rem), full15 = amortPay(balNow, rNow, Math.min(rem, 180));
+    [['Minimum payment', minNow], ['Interest only', intNow], ['Fully amortizing (rest of the ' + term + '-year term)', full30], ['Fully amortizing (15 years)', full15]].forEach(function (row) {
+      var effect = row[1] < intNow - 0.005 ? '+' + money.format(intNow - row[1]) + ' added to the balance' : (row[1] - intNow < 0.005 ? 'Balance stays the same' : money.format(row[1] - intNow) + ' off the balance');
+      addRow(ob, [row[0], money.format(row[1]), effect]);
+    });
+    set('oaOptionsMonth', 'Payment choices in month ' + mo + ', at a ' + pct(rNow) + ' rate on a ' + money.format(balNow) + ' balance.');
+
+    var cb = clearBody('oaCompare');
+    var yr2 = function (s) { return s.months[12] ? money.format(s.months[12].pay) : '–'; };
+    var at = recastYears * 12;
+    [['Always pay the minimum', sMin], ['Pay interest only', sIo], ['Pay the fully amortizing amount', sFull]].forEach(function (row) {
+      var s = row[1];
+      addRow(cb, [row[0], money.format(s.firstPay), yr2(s), money0.format(balanceAt(s, s === sMin && s.recast ? s.recastMonth - 1 : at)), money.format(s.maxPay), money0.format(s.interestTotal), money0.format(s.paidTotal)]);
+    });
+    set('oaCompareNote', 'Balance column: just before the recast for the minimum-payment path, and after ' + recastYears + ' years for the others.');
+
+    var sb = clearBody('oaSchedule');
+    for (var y = 1; y <= term; y++) {
+      var slice = sMin.months.slice((y - 1) * 12, y * 12);
+      if (!slice.length) break;
+      var last = slice[slice.length - 1];
+      var paid = 0, intr = 0, def = 0, flag = '';
+      slice.forEach(function (x) { paid += x.pay; intr += x.interest; def += x.deferred; if (sMin.recast && x.m === sMin.recastMonth) flag = ' (recast)'; });
+      addRow(sb, [y + flag, pct(last.rate), money.format(last.pay), money.format(paid), money.format(intr), money.format(def), money.format(last.bal), pct(last.bal / amount, 1)]);
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('oaForm');
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();
+</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

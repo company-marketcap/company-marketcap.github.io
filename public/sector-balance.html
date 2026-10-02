@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="en" id="sector-balance-document" data-page-slug="sector-balance">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio Sector Balance Calculator | Asset Allocation</title>
+  <meta name="description" content="Use this portfolio sector balance calculator to compare each sector&#x27;s current weight with your target allocation and see exactly what to buy or sell.">
+  <link rel="canonical" href="https://company-marketcap.github.io/sector-balance.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Portfolio Sector Balance Calculator | Asset Allocation">
+  <meta property="og:description" content="Use this portfolio sector balance calculator to compare each sector&#x27;s current weight with your target allocation and see exactly what to buy or sell.">
+  <meta property="og:url" content="https://company-marketcap.github.io/sector-balance.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Portfolio Sector Balance Calculator", "url": "https://company-marketcap.github.io/sector-balance.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Use this portfolio sector balance calculator to compare each sector's current weight with your target allocation and see exactly what to buy or sell."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Investment Returns & Growth", "item": "https://company-marketcap.github.io/financial-calculators.html#investment-calculators"}, {"@type": "ListItem", "position": 4, "name": "Portfolio Sector Balance Calculator", "item": "https://company-marketcap.github.io/sector-balance.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is portfolio rebalancing?", "acceptedAnswer": {"@type": "Answer", "text": "Portfolio rebalancing is the process of moving your holdings back to the target allocation you chose. Prices change over time, so some assets grow into a larger share than planned while others shrink. Rebalancing sells the overweight assets, buys the underweight ones, or directs new money to the underweight ones."}}, {"@type": "Question", "name": "How do I rebalance without selling anything?", "acceptedAnswer": {"@type": "Answer", "text": "Enter the amount you plan to invest in the additional contribution field. The calculator spreads that new money across the assets that sit below target. If the overweight asset is far above its target, a contribution alone may not be enough and a partial sale is needed."}}, {"@type": "Question", "name": "What do the absolute and relative deviation bands mean?", "acceptedAnswer": {"@type": "Answer", "text": "The absolute deviation flags an asset that is a set number of percentage points away from its target, for example 5 points. The relative deviation flags it when the gap is a set share of the target itself, for example 25% of a 20% target. An asset outside either band is marked Rebalance."}}, {"@type": "Question", "name": "Do my target allocations have to add up to 100%?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The target allocation column should total exactly 100%, otherwise the buy and sell amounts cannot balance. The results show the sum of your targets so you can spot a mistake quickly."}}, {"@type": "Question", "name": "How do I add an asset I do not own yet?", "acceptedAnswer": {"@type": "Answer", "text": "Type its name, enter a current value of 0 and give it a target allocation. The calculator then shows how much to buy to reach that target."}}, {"@type": "Question", "name": "How often should I rebalance my portfolio?", "acceptedAnswer": {"@type": "Answer", "text": "Many investors review once or twice a year, or whenever an asset moves outside a chosen band. Checking more often adds trading costs and taxes without necessarily improving the result."}}, {"@type": "Question", "name": "Does the right asset allocation change as I get older?", "acceptedAnswer": {"@type": "Answer", "text": "Often yes. A longer time horizon usually supports a larger share of stocks, while nearing a goal such as retirement usually moves a portfolio toward bonds and cash. Your goals and risk tolerance matter more than any single rule of thumb."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="sector-balance-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="sector-balance" data-page-type="calculator">
+  <a id="sector-balance-skip-link" href="#sector-balance-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="sector-balance-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="sector-balance-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="sector-balance-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="sector-balance-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="sector-balance-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="sector-balance-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="sector-balance-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="sector-balance-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="sector-balance-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="sector-balance-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="sector-balance-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="sector-balance-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="sector-balance-header-search-status" aria-controls="sector-balance-header-search-results" data-search-input="header">
+              <p id="sector-balance-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="sector-balance-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="sector-balance-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="sector-balance-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="sector-balance-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="sector-balance-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="sector-balance-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="sector-balance-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="sector-balance-mobile-search-status" aria-controls="sector-balance-mobile-search-results" data-search-input="mobile">
+            <p id="sector-balance-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="sector-balance-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="sector-balance-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="sector-balance-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="sector-balance-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="sector-balance-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="sector-balance-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="sector-balance-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="sector-balance-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="sector-balance-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="sector-balance-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="sector-balance-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="sector-balance-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="sector-balance-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="sector-balance-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="sector-balance-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="sector-balance-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="sector-balance-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="sector-balance-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="sector-balance-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="sector-balance-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="sector-balance-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="sector-balance-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="sector-balance-sidebar-search-status" aria-controls="sector-balance-sidebar-search-results" data-search-input="sidebar">
+              <p id="sector-balance-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="sector-balance-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="sector-balance-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="sector-balance-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="sector-balance-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="sector-balance-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="sector-balance-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="sector-balance-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="sector-balance-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="sector-balance-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="sector-balance-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="sector-balance-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="sector-balance-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="sector-balance-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="sector-balance-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="sector-balance-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="sector-balance-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="sector-balance-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="sector-balance-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators" aria-current="true">Investment Returns</a></li><li><a id="sector-balance-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="sector-balance-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="sector-balance-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="sector-balance-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="sector-balance-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="sector-balance-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="sector-balance-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="sector-balance-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="sector-balance-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="sector-balance-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="sector-balance-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="sector-balance-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="sector-balance-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="sector-balance-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="sector-balance-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="sector-balance-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="sector-balance-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="sector-balance" data-calculator-slug="sector-balance" data-sub-category-slug="investment-calculators">
+      <aside id="sector-balance-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="sector-balance-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="sector-balance-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="sector-balance-ad-top-leaderboard">
+            <ins id="sector-balance-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("sector-balance-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="sector-balance-intro-area" class="space-y-4">
+        <nav id="sector-balance-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="sector-balance-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="sector-balance-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="sector-balance-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="sector-balance-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#investment-calculators" itemprop="item"><span itemprop="name">Investment Returns &amp; Growth</span></a><meta itemprop="position" content="3"></li>
+            <li id="sector-balance-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Portfolio Sector Balance Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/sector-balance.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="sector-balance-hero-section" aria-labelledby="sector-balance-hero-heading" data-section="hero">
+          <h1 id="sector-balance-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Portfolio Sector Balance Calculator | Asset Allocation</h1>
+          <p id="sector-balance-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Your portfolio sector balance calculator shows how far each sector has drifted from your target allocation and exactly how many dollars to buy or sell to get back on plan. Enter what you hold in each sector, set the weight you want for it, and every investor gets current weights, drift and a trade size, so you can see where portfolio risk is quietly piling up before the next market swing. <!-- SILO_START:slot_a -->If you want to see how the figures change, the <a class="silo-link" href="/investment-loan-calculator.html">free investment loan calculator</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="sector-balance-tool" class="space-y-6" data-page-slug="sector-balance" data-calculator-key="tool">
+        <section class="panel p-4 sm:p-6" aria-labelledby="sbFormHeading" data-section="calculator">
+  <form id="sbForm" class="space-y-5" novalidate aria-labelledby="sbFormHeading">
+    <h2 id="sbFormHeading" class="panel-heading">Your holdings by sector</h2>
+    <p class="mt-0.5 text-sm text-ink-muted">Enter the dollar value you hold in each sector and the share of the portfolio you want there. Leave unused sectors at 0. Fund holdings can be split by the fund's own sector weights.</p>
+    <div class="table-scroll" tabindex="0" role="region" aria-labelledby="sbFormHeading">
+      <table class="data-table">
+        <thead><tr><th scope="col">Sector</th><th scope="col">Current value ($)</th><th scope="col">Target (%)</th></tr></thead>
+        <tbody>
+        <tr><th scope="row">Information technology</th><td><label for="sbV0" class="sr-only">Information technology current value</label><input type="number" id="sbV0" class="form-control form-control-small tabular-nums" min="0" step="100" value="32000" inputmode="decimal"></td><td><label for="sbT0" class="sr-only">Information technology target percent</label><input type="number" id="sbT0" class="form-control form-control-small tabular-nums" min="0" max="100" step="0.5" value="25" inputmode="decimal"></td></tr>
+        <tr><th scope="row">Health care</th><td><label for="sbV1" class="sr-only">Health care current value</label><input type="number" id="sbV1" class="form-control form-control-small tabular-nums" min="0" step="100" value="11000" inputmode="decimal"></td><td><label for="sbT1" class="sr-only">Health care target percent</label><input type="number" id="sbT1" class="form-control form-control-small tabular-nums" min="0" max="100" step="0.5" value="12" inputmode="decimal"></td></tr>
+        <tr><th scope="row">Financials</th><td><label for="sbV2" class="sr-only">Financials current value</label><input type="number" id="sbV2" class="form-control form-control-small tabular-nums" min="0" step="100" value="10000" inputmode="decimal"></td><td><label for="sbT2" class="sr-only">Financials target percent</label><input type="number" id="sbT2" class="form-control form-control-small tabular-nums" min="0" max="100" step="0.5" value="12" inputmode="decimal"></td></tr>
+        <tr><th scope="row">Consumer discretionary</th><td><label for="sbV3" class="sr-only">Consumer discretionary current value</label><input type="number" id="sbV3" class="form-control form-control-small tabular-nums" min="0" step="100" value="9000" inputmode="decimal"></td><td><label for="sbT3" class="sr-only">Consumer discretionary target percent</label><input type="number" id="sbT3" class="form-control form-control-small tabular-nums" min="0" max="100" step="0.5" value="10" inputmode="decimal"></td></tr>
+        <tr><th scope="row">Communication services</th><td><label for="sbV4" class="sr-only">Communication services current value</label><input type="number" id="sbV4" class="form-control form-control-small tabular-nums" min="0" step="100" value="7000" inputmode="decimal"></td><td><label for="sbT4" class="sr-only">Communication services target percent</label><input type="number" id="sbT4" class="form-control form-control-small tabular-nums" min="0" max="100" step="0.5" value="8" inputmode="decimal"></td></tr>
+        <tr><th scope="row">Industrials</th><td><label for="sbV5" class="sr-only">Industrials current value</label><input type="number" id="sbV5" class="form-control form-control-small tabular-nums" min="0" step="100" value="9000" inputmode="decimal"></td><td><label for="sbT5" class="sr-only">Industrials target percent</label><input type="number" id="sbT5" class="form-control form-control-small tabular-nums" min="0" max="100" step="0.5" value="10" inputmode="decimal"></td></tr>
+        <tr><th scope="row">Consumer staples</th><td><label for="sbV6" class="sr-only">Consumer staples current value</label><input type="number" id="sbV6" class="form-control form-control-small tabular-nums" min="0" step="100" value="6000" inputmode="decimal"></td><td><label for="sbT6" class="sr-only">Consumer staples target percent</label><input type="number" id="sbT6" class="form-control form-control-small tabular-nums" min="0" max="100" step="0.5" value="7" inputmode="decimal"></td></tr>
+        <tr><th scope="row">Energy</th><td><label for="sbV7" class="sr-only">Energy current value</label><input type="number" id="sbV7" class="form-control form-control-small tabular-nums" min="0" step="100" value="5000" inputmode="decimal"></td><td><label for="sbT7" class="sr-only">Energy target percent</label><input type="number" id="sbT7" class="form-control form-control-small tabular-nums" min="0" max="100" step="0.5" value="5" inputmode="decimal"></td></tr>
+        <tr><th scope="row">Utilities</th><td><label for="sbV8" class="sr-only">Utilities current value</label><input type="number" id="sbV8" class="form-control form-control-small tabular-nums" min="0" step="100" value="2000" inputmode="decimal"></td><td><label for="sbT8" class="sr-only">Utilities target percent</label><input type="number" id="sbT8" class="form-control form-control-small tabular-nums" min="0" max="100" step="0.5" value="3" inputmode="decimal"></td></tr>
+        <tr><th scope="row">Real estate</th><td><label for="sbV9" class="sr-only">Real estate current value</label><input type="number" id="sbV9" class="form-control form-control-small tabular-nums" min="0" step="100" value="3000" inputmode="decimal"></td><td><label for="sbT9" class="sr-only">Real estate target percent</label><input type="number" id="sbT9" class="form-control form-control-small tabular-nums" min="0" max="100" step="0.5" value="3" inputmode="decimal"></td></tr>
+        <tr><th scope="row">Materials</th><td><label for="sbV10" class="sr-only">Materials current value</label><input type="number" id="sbV10" class="form-control form-control-small tabular-nums" min="0" step="100" value="2000" inputmode="decimal"></td><td><label for="sbT10" class="sr-only">Materials target percent</label><input type="number" id="sbT10" class="form-control form-control-small tabular-nums" min="0" max="100" step="0.5" value="3" inputmode="decimal"></td></tr>
+        <tr><th scope="row">Other or unclassified</th><td><label for="sbV11" class="sr-only">Other or unclassified current value</label><input type="number" id="sbV11" class="form-control form-control-small tabular-nums" min="0" step="100" value="4000" inputmode="decimal"></td><td><label for="sbT11" class="sr-only">Other or unclassified target percent</label><input type="number" id="sbT11" class="form-control form-control-small tabular-nums" min="0" max="100" step="0.5" value="2" inputmode="decimal"></td></tr>
+        </tbody>
+        <tfoot><tr><th scope="row">Total</th><td id="sbTotalIn">–</td><td id="sbTargetSum">–</td></tr></tfoot>
+      </table>
+    </div>
+    <div class="flex flex-wrap gap-3">
+      <button type="button" id="sbEqual" class="button-secondary">Equal targets for sectors I hold</button>
+      <button type="button" id="sbCopy" class="button-secondary">Set targets to current weights</button>
+    </div>
+    <div class="form-row form-row-2">
+      <div><label for="sbMode" class="form-label">How to rebalance</label>
+        <select id="sbMode" class="form-select"><option value="full" selected>Buy and sell to hit targets</option><option value="buy">Only buy, using new cash</option></select></div>
+      <div><label for="sbCash" class="form-label">New cash to invest</label>
+        <div class="input-group"><span class="input-affix">$</span><input type="number" id="sbCash" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="0" inputmode="decimal"></div></div>
+    </div>
+    <div><label for="sbBand" class="form-label">Tolerance band</label><div class="input-group"><input type="number" id="sbBand" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="50" step="0.5" value="5" inputmode="decimal"><span class="input-affix">pts</span></div><p class="form-hint">A sector counts as on target while its weight is within this many percentage points of the target.</p></div>
+    <p id="sbError" class="form-error" role="alert" hidden></p>
+  </form>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="sbResultsHeading" aria-live="polite" data-section="results">
+  <h2 id="sbResultsHeading" class="panel-heading">Balance check and trades</h2>
+  <div class="stat-grid mt-4">
+    <div class="stat-card stat-card-highlight"><p class="stat-label">Portfolio off target</p><p id="sbDrift" class="stat-value">–</p></div>
+    <div class="stat-card"><p class="stat-label">Total to sell</p><p id="sbSell" class="stat-value">–</p></div>
+    <div class="stat-card"><p class="stat-label">Total to buy</p><p id="sbBuy" class="stat-value">–</p></div>
+    <div class="stat-card"><p class="stat-label">Sectors outside the band</p><p id="sbOut" class="stat-value">–</p></div>
+  </div>
+  <dl class="mt-5">
+    <div class="result-row"><dt class="result-term">Portfolio value after trades</dt><dd id="sbAfterTotal" class="result-value">–</dd></div>
+    <div class="result-row"><dt class="result-term">Most overweight</dt><dd id="sbOver" class="result-value">–</dd></div>
+    <div class="result-row"><dt class="result-term">Most underweight</dt><dd id="sbUnder" class="result-value">–</dd></div>
+  </dl>
+  <div class="table-scroll mt-5" tabindex="0" role="region" aria-label="Sector by sector results">
+    <table class="data-table">
+      <thead><tr><th scope="col">Sector</th><th scope="col">Current</th><th scope="col">Target</th><th scope="col">Difference</th><th scope="col">Status</th><th scope="col">Trade</th><th scope="col">Weight after</th></tr></thead>
+      <tbody id="sbTable"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="sector-balance-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="sector-balance-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Your portfolio sector balance calculator shows how far each sector has drifted from your target allocation and exactly how many dollars to buy or sell to get back on plan. Enter what you hold in each sector, set the weight you want for it, and every investor gets current weights, drift and a trade size, so you can see where portfolio risk is quietly piling up before the next market swing. <!-- SILO_START:slot_a_m -->If you want to see how the figures change, the <a class="silo-link" href="/investment-loan-calculator.html">free investment loan calculator</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="sector-balance-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="sector-balance-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="sector-balance-ad-in-feed-frame" class="ad-slot-live" data-ad-container="sector-balance-ad-in-feed">
+            <ins id="sector-balance-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("sector-balance-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="sector-balance-guide" class="space-y-6" data-section="guide">
+        <section id="sector-balance-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="sector-balance-guide-heading-1">
+<h2 id="sector-balance-guide-heading-1">What a Portfolio Sector Balance Calculator Measures in Your Portfolio Allocation</h2>
+<p>A sector is a slice of the stock market grouped by what companies do: technology, health care, financials, energy, consumer staples, utilities and so on. Most investors pick individual stocks, mutual funds or ETFs one at a time, and the sector mix that results is rarely a deliberate choice. A <strong>sector balance check</strong> turns that accident into a number. It divides the value of each sector by the total, compares the result with the weight you actually want, and reports the gap. <!-- SILO_START:slot_b -->The <a class="silo-link" href="/inflation-historic-impact-on-investments-calculator.html">inflation historic impact on investments calculator</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_b --></p>
+<p>Think of it as a focused cousin of an <strong>asset allocation calculator</strong>. The classic version of asset allocation splits a portfolio across stocks, bonds and cash. This version looks inside the stock sleeve, or across any list of positions you type in, and asks whether one corner has grown too large. Because gains compound unevenly, the best-performing sector quietly takes over: a portfolio that began as an even spread can end up resting on a single industry without you ever placing a trade.</p>
+
+<h3>Sectors Versus Asset Classes</h3>
+<p>An <strong>asset class</strong> is a broad category of investment, such as equities, fixed income or cash. A sector is a subdivision of one asset class. Both matter. Your asset mix between stocks and bonds sets most of your long-run risk, while your sector mix decides how that stock risk is spread across the economy. The calculator treats both the same way: any row you enter is a position with a value and a target weight.</p>
+
+<h3>Current Allocation and Target Allocation</h3>
+<p>Your <strong>current allocation</strong> is what the market has made of your money; your <strong>target allocation</strong> is what you decided it should be. The calculator exists to measure the distance between the two. When the gap on a row is small, you leave it alone. When it is large, you have a concrete dollar figure to act on.</p>
+        </section>
+        <section id="sector-balance-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="sector-balance-guide-heading-2">
+<h2 id="sector-balance-guide-heading-2">Inputs for the Portfolio Rebalancing Calculator</h2>
+<p>The form is deliberately short. Each row of the <strong>portfolio rebalancing calculator</strong> takes three entries, and the totals update as you type. <!-- SILO_START:slot_c -->The <a class="silo-link" href="/investment-distributions-calculator.html">investment distributions calculator</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_c --></p>
+<ol>
+<li><strong>Asset name</strong> – a sector, a fund, an individual holding or even a money-market balance. Use whatever label makes sense to you.</li>
+<li><strong>Current value</strong> – what that position is worth today in dollars, taken from your brokerage statement.</li>
+<li><strong>Target weight</strong> – the percentage of the whole you want it to be. All targets must sum to 100%.</li>
+</ol>
+
+<h3>Adding an Additional Contribution</h3>
+<p>If you plan to invest new money, enter it as a line called &ldquo;Cash&rdquo; with the amount as its current value. The calculator then spreads the new money across underweight rows, which is the gentlest way to rebalance because nothing has to be sold. An <strong>additional contribution</strong> works especially well when it arrives with every paycheck.</p>
+
+<h3>Positions You Do Not Own Yet</h3>
+<p>To add a sector you have never held, create a row with a current value of zero and give it a target. The calculator will show how much to buy. This is the quickest way to start broader diversification without disturbing anything else.</p>
+        </section>
+        <section id="sector-balance-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="sector-balance-guide-heading-3">
+<h2 id="sector-balance-guide-heading-3">Formulas Behind Rebalancing a Portfolio</h2>
+<p>Every number on the results screen comes from four short formulas. None needs more than a calculator, which is why you can check the tool by hand. Let \(V_i\) be the current value of sector \(i\), \(T\) the total portfolio value and \(w_i^*\) the target weight you chose.</p>
+
+<h3>Current Weight and Drift</h3>
+<p>The current weight is each position divided by the total, and drift is how far that weight sits from target:</p>
+<p>$$w_i = \frac{V_i}{T} \times 100 \qquad \text{Drift}_i = w_i - w_i^*$$</p>
+<p>A positive drift means the sector is <strong>overweight</strong>; a negative drift means it is <strong>underweight</strong>.</p>
+
+<h3>Trade Size to Reach the Target</h3>
+<p>The dollar trade is the target value minus what you hold:</p>
+<p>$$\text{Trade}_i = T \times w_i^* - V_i$$</p>
+<p>A negative result means sell; a positive one means buy. Because the targets add up to 100%, the buys and sells always cancel out exactly.</p>
+<figure><img src="/assets/images/tools/sector-balance/portfolio-rebalancing-trade-formula.svg" alt="Formula card showing trade equals total value times target percentage minus current value, with the technology row worked out"><figcaption>The trade formula applied to the technology row: sell $21,840.</figcaption></figure>
+
+<h3>New Money Needed Without Selling Anything</h3>
+<p>When you would rather not sell, only fresh money can dilute the overweight sector. The smallest deposit that brings every sector to target or below is:</p>
+<p>$$\text{Deposit} = \max_i\left(\frac{V_i}{w_i^*}\right) - T$$</p>
+<p>The sector with the largest ratio of value to target weight is the bottleneck, and the deposit is sized to it.</p>
+        </section>
+        <section id="sector-balance-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="sector-balance-guide-heading-4">
+<h2 id="sector-balance-guide-heading-4">Worked Example: A $248,600 Asset Allocation Review</h2>
+<p>Suppose you hold six sector positions worth <strong>$248,600</strong> in total, and you want weights of technology 30%, health care 20%, financials 18%, energy 10%, consumer staples 12% and utilities 10%. Here is what the calculator returns.</p>
+<figure><img src="/assets/images/tools/sector-balance/portfolio-sector-allocation-donut-chart.svg" alt="Donut chart splitting a $248,600 portfolio into six sectors, with technology the largest slice at 38.79%"><figcaption>Current sector weights in the worked example, with the target weight for each sector listed alongside.</figcaption></figure>
+<table>
+<thead><tr><th>Sector</th><th>Current value</th><th>Current weight</th><th>Target weight</th><th>Drift</th><th>Trade to reach target</th></tr></thead>
+<tbody>
+<tr><td>Technology</td><td>$96,420</td><td>38.79%</td><td>30%</td><td>+8.79</td><td>Sell $21,840</td></tr>
+<tr><td>Health care</td><td>$47,380</td><td>19.06%</td><td>20%</td><td>-0.94</td><td>Buy $2,340</td></tr>
+<tr><td>Financials</td><td>$41,250</td><td>16.59%</td><td>18%</td><td>-1.41</td><td>Buy $3,498</td></tr>
+<tr><td>Energy</td><td>$22,960</td><td>9.24%</td><td>10%</td><td>-0.76</td><td>Buy $1,900</td></tr>
+<tr><td>Consumer staples</td><td>$24,780</td><td>9.97%</td><td>12%</td><td>-2.03</td><td>Buy $5,052</td></tr>
+<tr><td>Utilities</td><td>$15,810</td><td>6.36%</td><td>10%</td><td>-3.64</td><td>Buy $9,050</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>$248,600</strong></td><td><strong>100%</strong></td><td><strong>100%</strong></td><td>&ndash;</td><td><strong>$21,840 sold, $21,840 bought</strong></td></tr>
+</tbody>
+</table>
+
+<h3>Reading the Drift Column</h3>
+<p>Technology is the only sector pulling hard: at 38.79% it carries 8.79 points more than planned, so the single largest trade is selling <strong>$21,840</strong> of it. Utilities are the most underweight at 6.36% against 10%, which translates to a purchase of $9,050. Health care, financials and energy sit within about 1.5 points of target, so many investors would leave those lines untouched and only trade the big movers.</p>
+<figure><img src="/assets/images/tools/sector-balance/portfolio-rebalancing-trade-size-by-sector.svg" alt="Ranked bar chart of the dollars to sell in technology and to buy in five underweight sectors to reach target weights"><figcaption>The sale of $21,840 in technology funds all five purchases in the worked example.</figcaption></figure>
+
+<h3>Rebalancing With New Money Instead of Selling</h3>
+<p>Now imagine you invest an extra <strong>$30,000</strong> without selling anything. Technology falls from 38.79% to 34.61% of a $278,600 portfolio, still 4.61 points over target. By the deposit formula you would need <strong>$72,800</strong> of new money (since $96,420 &divide; 0.30 = $321,400) before technology reached 30% through buying alone. That gap is useful information: it tells you whether waiting for savings to catch up is realistic or whether a partial sale makes more sense.</p>
+<figure><img src="/assets/images/tools/sector-balance/portfolio-weight-vs-new-contribution-line-chart.svg" alt="Line chart showing the technology weight falling from 38.79% to 30% as up to $80,000 of new money is added without selling"><figcaption>Technology reaches its 30% target only after $72,800 of new money, as the deposit formula predicts.</figcaption></figure>
+        </section>
+        <section id="sector-balance-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="sector-balance-guide-heading-5">
+<h2 id="sector-balance-guide-heading-5">Reading Overweight and Underweight Sectors</h2>
+<p>Drift is only a signal. What you do with it depends on size, cost and your own plans. A sector that is two points over target in a small portfolio is a rounding error, while two points in a seven-figure account can be a five-figure trade.</p>
+
+<h3>How Big a Gap Is Worth Acting On</h3>
+<p>Many investors use a band of around five percentage points, or a relative band of one quarter of the target weight, before they trade. A 30% target would tolerate drift between 22.5% and 37.5% under the relative rule; the example technology weight of 38.79% breaks that band, while every other row stays inside it.</p>
+
+<h3>Why Overweight Positions Raise Risk</h3>
+<p>A heavy sector means a single industry story, such as a regulation change or a sharp swing in interest rates, can move your whole account. Underweight sectors carry the opposite problem: they leave you with less exposure to the parts of the economy that may recover first. Neither is wrong in isolation, but the aim of a balance check is that you choose the exposure rather than inherit it. In the worked example, the +8.79 drift on technology is exactly the concentration this tool is built to surface.</p>
+        </section>
+        <section id="sector-balance-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="sector-balance-guide-heading-6">
+<h2 id="sector-balance-guide-heading-6">A Rollover IRA Check With an Asset Allocation Calculator</h2>
+<p>It is the first week of January and you are reading year-end statements for a rollover IRA worth <strong>$197,910</strong>. Your written investment policy sets five sector targets and a tolerance band of 5 percentage points around each. Energy has been the best performer all year, so you suspect it has outgrown its slot, but you want the figure before you touch anything.</p>
+<p>You type in the five balances: energy $58,430, health care $43,640, technology $39,905, financials $37,215 and real estate $18,720. The targets go in next: 15%, 25%, 30%, 20% and 10%. They sum to 100%, so the table fills in.</p>
+<table>
+<thead><tr><th>Sector</th><th>Weight now</th><th>Target</th><th>Drift</th><th>Trade</th></tr></thead>
+<tbody>
+<tr><td>Energy</td><td>29.52%</td><td>15%</td><td>+14.52</td><td>Sell $28,744</td></tr>
+<tr><td>Technology</td><td>20.16%</td><td>30%</td><td>-9.84</td><td>Buy $19,468</td></tr>
+<tr><td>Health care</td><td>22.05%</td><td>25%</td><td>-2.95</td><td>Buy $5,838</td></tr>
+<tr><td>Financials</td><td>18.80%</td><td>20%</td><td>-1.20</td><td>Buy $2,367</td></tr>
+<tr><td>Real estate</td><td>9.46%</td><td>10%</td><td>-0.54</td><td>Buy $1,071</td></tr>
+</tbody>
+</table>
+<p>Two rows break the 5-point band from your policy: energy at 14.52 points over and technology at 9.84 points under. The other three sit inside it, so you leave them alone for now. The sector drift this calculator reports makes the decision plain: energy is nearly double its target share.</p>
+<p>Because the money sits in an IRA, selling carries no immediate tax bill. You also check the alternative of fresh money only: it would take roughly $191,623 of new deposits to dilute energy to 15%, which is nearly as much as the whole account, so that route is off the table. Your next action is specific: sell $28,744 of energy, buy $19,468 of technology and the three small top-ups, then re-enter the new balances a week later to confirm every drift figure is under 1 point.</p>
+        </section>
+        <section id="sector-balance-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="sector-balance-guide-heading-7">
+<h2 id="sector-balance-guide-heading-7">Choosing Your Asset Mix by Investor Profile</h2>
+<p>The calculator measures drift; it does not decide your target. That choice belongs to your <strong>investor profile</strong>, which is shaped by your investment goals, your time horizon and your capacity and willingness to take risk.</p>
+
+<h3>Investment Goals</h3>
+<p>Saving for retirement, a home purchase or a child's education each produce a different plan. A goal with a hard deadline favours steady holdings, while a goal decades away can carry more growth. Write the goal down before you type any target weights, because every later decision traces back to it.</p>
+
+<h3>Time Horizon</h3>
+<p>Your <strong>time horizon</strong> is the number of years before you need the money. Money needed within a few years usually moves toward bonds and cash. Money you will not touch for fifteen years or more can sit mostly in equities, because there is time to recover from a downturn.</p>
+<p>Investing for retirement shows how horizon works. An investor in their thirties who is investing for retirement three decades away can ride out a bad year, while a retiree drawing income cannot afford a large loss early on. Long-term investing rewards patience, but only if the weights you hold match the years you have left, and a financial advisor can tailor the target weights to your own timeline.</p>
+
+<h3>Risk Tolerance Versus Risk Capacity</h3>
+<p>These sound alike but measure different things. <strong>Risk tolerance</strong> is how much loss you can stomach emotionally. <strong>Risk capacity</strong> is how much loss your finances can absorb, based on income, savings and obligations. Your risk profile should respect the lower of the two: a person with strong nerves but no emergency fund still has low capacity.</p>
+<ul>
+<li><strong>Very conservative</strong> – focused on preservation of capital, usually with mostly cash and bonds.</li>
+<li><strong>Conservative</strong> – accepts modest ups and downs for steady growth potential.</li>
+<li><strong>Moderate</strong> – balances stability and appreciation with a mix of bonds and equities.</li>
+<li><strong>Aggressive</strong> – pursues capital appreciation, tolerating volatility and market downturns.</li>
+<li><strong>Very aggressive</strong> – heavily invested in equities with a long horizon and high return expectations.</li>
+</ul>
+        </section>
+        <section id="sector-balance-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="sector-balance-guide-heading-8">
+<h2 id="sector-balance-guide-heading-8">Asset Allocation by Age</h2>
+<p>Age is a shortcut for horizon. Younger savers have decades of future income to replace losses, so they can hold more stocks; older savers often shift toward income and stability. Two classic rules of thumb translate this into numbers.</p>
+
+<h3>The Rule of 110</h3>
+<p>Subtract your age from 110 to estimate the percentage to hold in stocks. At 45, that suggests roughly 65% in equities and the remainder in bonds and cash.</p>
+
+<h3>The Rule of 120</h3>
+<p>The <em>rule of 120</em> uses the same arithmetic with a higher starting number, producing a more aggressive mix: at 45 it suggests about 75% in stocks. Neither rule is advice; both are only a starting point for the target column.</p>
+        </section>
+        <section id="sector-balance-guide-section-9" class="panel article-content p-4 sm:p-6" aria-labelledby="sector-balance-guide-heading-9">
+<h2 id="sector-balance-guide-heading-9">Understanding Each Asset Class in Your Asset Mix</h2>
+<p>Before you decide on a split, it helps to know what each building block does.</p>
+
+<h3>Stocks and Equities</h3>
+<p><strong>Stocks</strong>, also called equities, are ownership shares in companies. You earn money from price gains and from dividends. Many people hold them through mutual funds, index funds and exchange-traded funds, which pool money into a diversified basket. Inside the stock sleeve you can classify holdings several ways:</p>
+<ul>
+<li>Large-cap companies – established and typically steadier.</li>
+<li>Mid-cap companies – still growing but more settled than smaller peers.</li>
+<li>Small-cap companies – higher growth potential and higher risk.</li>
+<li>International stocks – companies outside your home country, which broaden diversification.</li>
+<li>Emerging markets – faster-growing economies with less predictable results.</li>
+</ul>
+<p>A single blue chip name is still one stock; a fund or ETF spreads that exposure across many.</p>
+
+<h3>Bonds and Fixed Income</h3>
+<p><strong>Bonds</strong> are loans you make to a government or company. In return you collect interest, set by the coupon rate, until maturity, when the issuer repays your principal. Treasury bonds carry the lowest default risk, corporate bonds pay more for more risk, and municipal bonds often pay interest free of federal tax. As fixed-income holdings, bonds usually move more gently than equities and cushion the ride.</p>
+
+<h3>Cash and Cash Equivalents</h3>
+<p><strong>Cash</strong> includes money market funds, certificates of deposit and a high-yield savings account. It provides flexibility and a buffer, but holding too much loses ground to inflation over the long term.</p>
+
+<h3>Alternative Investments</h3>
+<p>Real estate, commodities, hedge funds and private equity are alternative investments. They can diversify a portfolio further, though several are limited to accredited investors, and a basic sector calculator treats them like any other row.</p>
+        </section>
+        <section id="sector-balance-guide-section-10" class="panel article-content p-4 sm:p-6" aria-labelledby="sector-balance-guide-heading-10">
+<h2 id="sector-balance-guide-heading-10">Portfolio Diversification Across Industries</h2>
+<p>Disciplined investing starts with diversification, the practice of spreading money so one disappointment cannot sink the whole account. Owning twenty stocks in one industry is not diversified; owning a handful across different industries often is. The balance check makes this visible: if three sectors account for nine tenths of the value, the portfolio is concentrated no matter how many tickers appear on the statement.</p>
+<p>Diversify across more than sectors, too. Combine stocks with bonds and cash, mix domestic with international holdings, and add different company sizes. Think of it as a seesaw: when one holding sags, another is ideally rising to keep the whole thing level.</p>
+        </section>
+        <section id="sector-balance-guide-section-11" class="panel article-content p-4 sm:p-6" aria-labelledby="sector-balance-guide-heading-11">
+<h2 id="sector-balance-guide-heading-11">Rebalancing Methods: Selling Versus New Contributions</h2>
+<p>There are two ways to move back toward your target mix, and the calculator supports both.</p>
+
+<h3>Selling Overweight Positions and Buying Underweight Ones</h3>
+<p>You sell the overweight positions and reallocate the proceeds to the underweight ones. This is the fastest route and the one the trade column shows by default. It works best inside a retirement account, where trades usually carry no immediate tax.</p>
+
+<h3>Fresh Money Instead of Sales</h3>
+<p>You leave the large positions alone and direct every new deposit to the underweight rows. It costs less and avoids selling, but it can take months or years, as the deposit formula showed.</p>
+        </section>
+        <section id="sector-balance-guide-section-12" class="panel article-content p-4 sm:p-6" aria-labelledby="sector-balance-guide-heading-12">
+<h2 id="sector-balance-guide-heading-12">How Often to Review Your Portfolio Allocation</h2>
+<p>Two schedules are common. A <strong>calendar approach</strong> checks the weights once or twice a year and trades whatever has drifted. A <strong>threshold approach</strong> acts only when a position leaves its band, no matter the date. Many investors combine them, and some prefer to rebalance only when both signals agree: look at the portfolio every six months, and trade only if a sector has crossed the band. Over-trading adds costs without improving the plan, so more frequent is not better. At each review, re-enter your current balances into the calculator and read the drift column against your chosen band; a row that stays inside it needs no trade, however the last quarter felt.</p>
+        </section>
+        <section id="sector-balance-guide-section-13" class="panel article-content p-4 sm:p-6" aria-labelledby="sector-balance-guide-heading-13">
+<h2 id="sector-balance-guide-heading-13">Taxes, Costs and Retirement Accounts When You Trade Back to Target</h2>
+<p>In a taxable brokerage account, selling a winner can trigger a capital gains tax bill that eats into the benefit. Check each position's cost basis before you act, prefer lots held longer than a year, and consider using new contributions first. Tax-loss harvesting can offset some gains, and inside a tax-advantaged IRA or 401(k), you can usually trade freely, so these accounts are often the best place to do the heavy lifting. Remember also to count trading fees and fund expense ratios; a small drift is not worth a costly trade. Your retirement savings and your taxable income both shape which account to touch first, and a financial advisor or tax professional can help you sequence it.</p>
+        </section>
+        <section id="sector-balance-guide-section-14" class="panel article-content p-4 sm:p-6" aria-labelledby="sector-balance-guide-heading-14">
+<h2 id="sector-balance-guide-heading-14">Common Mistakes When Balancing Portfolio Weights</h2>
+<ul>
+<li><strong>Letting targets drift with the market.</strong> Revising targets to match whatever has been winning defeats the point; change them only when your goals or horizon change.</li>
+<li><strong>Counting funds as one holding.</strong> A broad technology fund and a growth fund can both be mostly the same companies, so look through to the sectors.</li>
+<li><strong>Forgetting cash.</strong> Idle cash is part of the portfolio and dilutes every other weight.</li>
+<li><strong>Targets that do not total 100%.</strong> The calculator needs a sum of exactly 100 to produce trades that cancel out.</li>
+<li><strong>Investing without a written plan.</strong> Judging each investment by recent returns, instead of by its job in your long-term investment plan, is how weights drift unnoticed.</li>
+<li><strong>Trading too often.</strong> Frequent small trades raise costs and taxes more than they lower risk.</li>
+</ul>
+        </section>
+        <section id="sector-balance-guide-section-15" class="panel article-content p-4 sm:p-6" aria-labelledby="sector-balance-guide-heading-15">
+<h2 id="sector-balance-guide-heading-15">Limits of This Investment Calculator</h2>
+<p>An <strong>investment calculator</strong> that checks balance is a snapshot, not a forecast. It does not know your expected return, your annual return or the expected returns of any single fund, the direction of the economy or what interest rates will do next. To look forward, pair it with an <strong>investment growth calculator</strong> that models compounding, or a <strong>portfolio tester</strong> that backtests historical returns against a benchmark and runs a Monte Carlo simulation, using standard deviation to simulate a range of outcomes. Each portfolio weight you see here is simply a percentage of today's total, so it says nothing about where prices go next. Historical returns never guarantee future ones, and a short-term fall in the market can change every weight on the screen overnight. Treat the results as education, and consult a qualified financial advisor about your financial situation and financial goals before you trade.</p>
+        </section>
+      </div>
+
+      <section id="sector-balance-faq-section" class="panel p-4 sm:p-6" aria-labelledby="sector-balance-faq-heading" data-section="faq">
+        <h2 id="sector-balance-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Portfolio Sector Balance Calculator questions</h2>
+        <div id="sector-balance-faq-list" class="mt-5 space-y-3">
+          <details id="sector-balance-faq-1" class="faq-item" open><summary id="sector-balance-faq-1-summary" class="faq-summary"><h3 id="sector-balance-faq-1-question" class="faq-question">What is portfolio rebalancing?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="sector-balance-faq-1-answer" class="faq-answer"><p>Portfolio rebalancing is the process of moving your holdings back to the target allocation you chose. Prices change over time, so some assets grow into a larger share than planned while others shrink. Rebalancing sells the overweight assets, buys the underweight ones, or directs new money to the underweight ones.</p></div></details>
+          <details id="sector-balance-faq-2" class="faq-item" open><summary id="sector-balance-faq-2-summary" class="faq-summary"><h3 id="sector-balance-faq-2-question" class="faq-question">How do I rebalance without selling anything?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="sector-balance-faq-2-answer" class="faq-answer"><p>Enter the amount you plan to invest in the additional contribution field. The calculator spreads that new money across the assets that sit below target. If the overweight asset is far above its target, a contribution alone may not be enough and a partial sale is needed.</p></div></details>
+          <details id="sector-balance-faq-3" class="faq-item" open><summary id="sector-balance-faq-3-summary" class="faq-summary"><h3 id="sector-balance-faq-3-question" class="faq-question">What do the absolute and relative deviation bands mean?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="sector-balance-faq-3-answer" class="faq-answer"><p>The absolute deviation flags an asset that is a set number of percentage points away from its target, for example 5 points. The relative deviation flags it when the gap is a set share of the target itself, for example 25% of a 20% target. An asset outside either band is marked Rebalance.</p></div></details>
+          <details id="sector-balance-faq-4" class="faq-item" open><summary id="sector-balance-faq-4-summary" class="faq-summary"><h3 id="sector-balance-faq-4-question" class="faq-question">Do my target allocations have to add up to 100%?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="sector-balance-faq-4-answer" class="faq-answer"><p>Yes. The target allocation column should total exactly 100%, otherwise the buy and sell amounts cannot balance. The results show the sum of your targets so you can spot a mistake quickly.</p></div></details>
+          <details id="sector-balance-faq-5" class="faq-item" open><summary id="sector-balance-faq-5-summary" class="faq-summary"><h3 id="sector-balance-faq-5-question" class="faq-question">How do I add an asset I do not own yet?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="sector-balance-faq-5-answer" class="faq-answer"><p>Type its name, enter a current value of 0 and give it a target allocation. The calculator then shows how much to buy to reach that target.</p></div></details>
+          <details id="sector-balance-faq-6" class="faq-item" open><summary id="sector-balance-faq-6-summary" class="faq-summary"><h3 id="sector-balance-faq-6-question" class="faq-question">How often should I rebalance my portfolio?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="sector-balance-faq-6-answer" class="faq-answer"><p>Many investors review once or twice a year, or whenever an asset moves outside a chosen band. Checking more often adds trading costs and taxes without necessarily improving the result.</p></div></details>
+          <details id="sector-balance-faq-7" class="faq-item" open><summary id="sector-balance-faq-7-summary" class="faq-summary"><h3 id="sector-balance-faq-7-question" class="faq-question">Does the right asset allocation change as I get older?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="sector-balance-faq-7-answer" class="faq-answer"><p>Often yes. A longer time horizon usually supports a larger share of stocks, while nearing a goal such as retirement usually moves a portfolio toward bonds and cash. Your goals and risk tolerance matter more than any single rule of thumb.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="sector-balance-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="sector-balance-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="sector-balance-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="sector-balance-ad-bottom-leaderboard">
+            <ins id="sector-balance-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("sector-balance-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="sector-balance-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="sector-balance-right-rail-top" class="mb-6">
+        <aside id="sector-balance-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="sector-balance-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="sector-balance-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="sector-balance-ad-right-rail-rectangle">
+            <ins id="sector-balance-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("sector-balance-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="sector-balance-right-rail-sticky" class="sticky top-21">
+        <aside id="sector-balance-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="sector-balance-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="sector-balance-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="sector-balance-ad-right-rail-skyscraper">
+            <ins id="sector-balance-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("sector-balance-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="sector-balance-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="sector-balance-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="sector-balance-footer-brand">
+        <a id="sector-balance-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="sector-balance-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="sector-balance-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="sector-balance-footer-categories" aria-labelledby="sector-balance-footer-categories-heading">
+        <h2 id="sector-balance-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="sector-balance-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="sector-balance-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="sector-balance-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="sector-balance-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="sector-balance-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="sector-balance-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="sector-balance-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="sector-balance-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="sector-balance-footer-company" aria-labelledby="sector-balance-footer-company-heading">
+        <h2 id="sector-balance-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="sector-balance-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="sector-balance-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="sector-balance-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="sector-balance-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="sector-balance-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="sector-balance-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="sector-balance-footer-bottom" class="border-t border-line">
+      <p id="sector-balance-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="sector-balance-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Sector rebalancing. With T = current total + new cash and target weight w for each sector:
+  //   current weight = value ÷ current total; difference = current weight − target (percentage points)
+  //   Buy and sell: trade = w × T − value (sells and buys net to the new cash).
+  //   Buy only: the new cash is split across underweight sectors in proportion to each one's
+  //   shortfall (w × T − value); nothing is sold.
+  //   Portfolio off target = half the sum of |difference|, i.e. the share of the portfolio that would
+  //   have to move to match the targets.
+  // Checks (scratchpad tests/sector-balance.test.js): default $100,000 portfolio, technology 32% vs
+  // 25% target = sell $7,000; total sells = total buys = $9,000; off target 9.0%. Two sectors $60k/$40k,
+  // 50/50 targets, $20k new cash buy-only = $20,000 into the $40k sector, ending exactly 50/50.
+  // Fixes vs the old site: tickers were written into the page as raw HTML; funds were filed under
+  // made-up "sectors" (S&P 500 Index, Total Market) that always looked out of balance; the benchmark
+  // weights were hard-coded and dated. Targets are now the user's own and the tool gives dollar trades.
+  var SECTORS = ['Information technology', 'Health care', 'Financials', 'Consumer discretionary', 'Communication services',
+    'Industrials', 'Consumer staples', 'Energy', 'Utilities', 'Real estate', 'Materials', 'Other or unclassified'];
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+
+  function num(id) {
+    var v = parseFloat(document.getElementById(id).value);
+    return isNaN(v) ? NaN : v;
+  }
+
+  function pts(v) {
+    if (Math.abs(v) < 0.005) v = 0;
+    return (v > 0 ? '+' : '') + v.toFixed(2) + ' pts';
+  }
+
+  function rebalance(values, targets, cash, buyOnly) {
+    var total = values.reduce(function (a, b) { return a + b; }, 0), after = total + cash;
+    var rows = values.map(function (v, i) {
+      var cur = total > 0 ? v / total * 100 : 0;
+      return { i: i, value: v, current: cur, target: targets[i], diff: cur - targets[i], trade: targets[i] / 100 * after - v };
+    });
+    if (buyOnly) {
+      var short = rows.reduce(function (a, r) { return a + Math.max(0, r.trade); }, 0);
+      rows.forEach(function (r) { r.trade = short > 0 ? cash * Math.max(0, r.trade) / short : 0; });
+    }
+    rows.forEach(function (r) { r.after = after > 0 ? (r.value + r.trade) / after * 100 : 0; });
+    var drift = rows.reduce(function (a, r) { return a + Math.abs(r.diff); }, 0) / 2;
+    var sell = rows.reduce(function (a, r) { return a + Math.max(0, -r.trade); }, 0);
+    var buy = rows.reduce(function (a, r) { return a + Math.max(0, r.trade); }, 0);
+    return { total: total, after: after, rows: rows, drift: drift, sell: sell, buy: buy };
+  }
+
+  function read() {
+    var values = [], targets = [];
+    for (var i = 0; i < SECTORS.length; i++) {
+      var v = num('sbV' + i), t = num('sbT' + i);
+      values.push(document.getElementById('sbV' + i).value.trim() === '' ? 0 : v);
+      targets.push(document.getElementById('sbT' + i).value.trim() === '' ? 0 : t);
+    }
+    return { values: values, targets: targets };
+  }
+
+  function sum(a) { return a.reduce(function (x, y) { return x + y; }, 0); }
+
+  function update() {
+    var d = read(), cash = num('sbCash'), band = num('sbBand'), buyOnly = document.getElementById('sbMode').value === 'buy';
+    var error = document.getElementById('sbError'), msg = '';
+    var bad = d.values.concat(d.targets).some(function (v) { return isNaN(v) || v < 0; });
+    var tSum = bad ? NaN : sum(d.targets), vSum = bad ? NaN : sum(d.values);
+    document.getElementById('sbTotalIn').textContent = isNaN(vSum) ? '–' : money.format(vSum);
+    document.getElementById('sbTargetSum').textContent = isNaN(tSum) ? '–' : (Math.round(tSum * 100) / 100) + '%';
+    if (bad) msg = 'Use numbers of 0 or more for every value and target.';
+    else if (d.targets.some(function (t) { return t > 100; })) msg = 'A target cannot be more than 100%.';
+    else if (Math.abs(tSum - 100) > 0.1) msg = 'Targets add up to ' + (Math.round(tSum * 100) / 100) + '%. Adjust them so they total 100%.';
+    else if (isNaN(cash) || cash < 0) msg = 'New cash must be 0 or more.';
+    else if (isNaN(band) || band < 0 || band > 50) msg = 'Enter a tolerance band from 0 to 50 points.';
+    else if (vSum <= 0) msg = 'Enter the current value of at least one sector.';
+    else if (buyOnly && cash <= 0) msg = 'Buy-only rebalancing needs some new cash to invest.';
+    error.hidden = !msg;
+    error.textContent = msg;
+    if (msg) return;
+
+    var r = rebalance(d.values, d.targets, cash, buyOnly);
+    var shown = r.rows.filter(function (row) { return row.value > 0 || row.target > 0; });
+    var outside = shown.filter(function (row) { return Math.abs(row.diff) > band + 1e-9; }).length;
+    var over = shown.slice().sort(function (a, b) { return b.diff - a.diff; })[0];
+    var under = shown.slice().sort(function (a, b) { return a.diff - b.diff; })[0];
+    document.getElementById('sbDrift').textContent = r.drift.toFixed(1) + '%';
+    document.getElementById('sbSell').textContent = money.format(r.sell);
+    document.getElementById('sbBuy').textContent = money.format(r.buy);
+    document.getElementById('sbOut').textContent = outside + ' of ' + shown.length;
+    document.getElementById('sbAfterTotal').textContent = money.format(r.after);
+    document.getElementById('sbOver').textContent = over && over.diff > 0.005 ? SECTORS[over.i] + ' (' + pts(over.diff) + ')' : 'None';
+    document.getElementById('sbUnder').textContent = under && under.diff < -0.005 ? SECTORS[under.i] + ' (' + pts(under.diff) + ')' : 'None';
+    document.getElementById('sbTable').innerHTML = shown.map(function (row) {
+      var status = Math.abs(row.diff) <= band + 1e-9 ? 'Within band' : (row.diff > 0 ? 'Overweight' : 'Underweight');
+      var trade = Math.abs(row.trade) < 0.5 ? '–' : (row.trade > 0 ? 'Buy ' : 'Sell ') + money.format(Math.abs(row.trade));
+      return '<tr><th scope="row">' + SECTORS[row.i] + '</th><td>' + money.format(row.value) + ' (' + row.current.toFixed(2) + '%)</td><td>' +
+             row.target.toFixed(2) + '%</td><td>' + pts(row.diff) + '</td><td>' + status + '</td><td>' + trade + '</td><td>' +
+             row.after.toFixed(2) + '%</td></tr>';
+    }).join('');
+  }
+
+  function setTargets(weights) {
+    // Round to 2 decimals and put any rounding remainder on the largest weight so targets total 100.
+    var rounded = weights.map(function (w) { return Math.round(w * 100) / 100; });
+    var big = 0;
+    rounded.forEach(function (w, i) { if (w > rounded[big]) big = i; });
+    rounded[big] = Math.round((rounded[big] + 100 - sum(rounded)) * 100) / 100;
+    rounded.forEach(function (w, i) { document.getElementById('sbT' + i).value = String(w); });
+    update();
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('sbForm');
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    document.getElementById('sbEqual').addEventListener('click', function () {
+      var d = read(), held = d.values.filter(function (v) { return v > 0; }).length;
+      if (!held) return;
+      setTargets(d.values.map(function (v) { return v > 0 ? 100 / held : 0; }));
+    });
+    document.getElementById('sbCopy').addEventListener('click', function () {
+      var d = read(), total = sum(d.values.map(function (v) { return v > 0 ? v : 0; }));
+      if (!(total > 0)) return;
+      setTargets(d.values.map(function (v) { return v > 0 ? v / total * 100 : 0; }));
+    });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

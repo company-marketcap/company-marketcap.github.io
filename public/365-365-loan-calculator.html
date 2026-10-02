@@ -1,0 +1,743 @@
+<!doctype html>
+<html lang="en" id="365-365-loan-calculator-document" data-page-slug="365-365-loan-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>365/365 Loan Calculator: Daily Simple Interest Loans</title>
+  <meta name="description" content="Work out a daily simple interest loan charged on an actual/365 basis and see what paying early, late, missed or extra payments does to your interest.">
+  <link rel="canonical" href="https://company-marketcap.github.io/365-365-loan-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="365/365 Loan Calculator: Daily Simple Interest Loans">
+  <meta property="og:description" content="Work out a daily simple interest loan charged on an actual/365 basis and see what paying early, late, missed or extra payments does to your interest.">
+  <meta property="og:url" content="https://company-marketcap.github.io/365-365-loan-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "365/365 Loan Calculator", "url": "https://company-marketcap.github.io/365-365-loan-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Work out a daily simple interest loan charged on an actual/365 basis and see what paying early, late, missed or extra payments does to your interest."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Personal & General Loans", "item": "https://company-marketcap.github.io/financial-calculators.html#loan-calculators"}, {"@type": "ListItem", "position": 4, "name": "365/365 Loan Calculator", "item": "https://company-marketcap.github.io/365-365-loan-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a 365/365 loan?", "acceptedAnswer": {"@type": "Answer", "text": "A 365/365 loan charges interest for the actual number of days in each payment period and divides the annual rate by a fixed 365-day year. Each day therefore costs one 365th of the annual rate on the balance you owe."}}, {"@type": "Question", "name": "How is 365/365 interest calculated?", "acceptedAnswer": {"@type": "Answer", "text": "Interest for a period equals the outstanding balance times the annual rate times the days in the period, divided by 365. A 31-day month therefore costs more interest than a 28-day month."}}, {"@type": "Question", "name": "How does 365/365 differ from 365/360?", "acceptedAnswer": {"@type": "Answer", "text": "Both count actual days elapsed, but 365/360 divides by 360 instead of 365, so each day costs slightly more. On the same loan, the 365/360 method produces a higher payment and more total interest."}}, {"@type": "Question", "name": "Why does the interest portion change if my payment stays the same?", "acceptedAnswer": {"@type": "Answer", "text": "Because the days in each period change and the balance falls after every payment. Short months move more of the payment to principal, long months move less."}}, {"@type": "Question", "name": "What happens if I pay quarterly, semi-annually or annually?", "acceptedAnswer": {"@type": "Answer", "text": "Interest still accrues month by month, so unpaid interest increases your principal balance until the next regular payment is received. This calculator applies that monthly accrual between payments."}}, {"@type": "Question", "name": "What is the difference between the loan term and the amortization term?", "acceptedAnswer": {"@type": "Answer", "text": "The loan term is the number of payments you actually make. The amortization term is the number of payments the payment is calculated over; when it is longer, a balloon payment is due with your final payment."}}, {"@type": "Question", "name": "What does an interest only term do?", "acceptedAnswer": {"@type": "Answer", "text": "During the interest only term your payments cover just the interest that accrued, so the balance does not fall. Later payments are higher because principal repayment starts afterward."}}, {"@type": "Question", "name": "Can I pay a loan off early to save interest?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, because interest is charged on the balance you carry each day, any principal you pay early reduces every later period's interest. Confirm any prepayment terms with your lender first."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="365-365-loan-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="365-365-loan-calculator" data-page-type="calculator">
+  <a id="365-365-loan-calculator-skip-link" href="#365-365-loan-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="365-365-loan-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="365-365-loan-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="365-365-loan-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="365-365-loan-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="365-365-loan-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="365-365-loan-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="365-365-loan-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="365-365-loan-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="365-365-loan-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="365-365-loan-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="365-365-loan-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="365-365-loan-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="365-365-loan-calculator-header-search-status" aria-controls="365-365-loan-calculator-header-search-results" data-search-input="header">
+              <p id="365-365-loan-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="365-365-loan-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="365-365-loan-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="365-365-loan-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="365-365-loan-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="365-365-loan-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="365-365-loan-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="365-365-loan-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="365-365-loan-calculator-mobile-search-status" aria-controls="365-365-loan-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="365-365-loan-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="365-365-loan-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="365-365-loan-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="365-365-loan-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="365-365-loan-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="365-365-loan-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="365-365-loan-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="365-365-loan-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="365-365-loan-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="365-365-loan-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="365-365-loan-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="365-365-loan-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="365-365-loan-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="365-365-loan-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="365-365-loan-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="365-365-loan-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="365-365-loan-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="365-365-loan-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="365-365-loan-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="365-365-loan-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="365-365-loan-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="365-365-loan-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="365-365-loan-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="365-365-loan-calculator-sidebar-search-status" aria-controls="365-365-loan-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="365-365-loan-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="365-365-loan-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="365-365-loan-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="365-365-loan-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="365-365-loan-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="365-365-loan-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="365-365-loan-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="365-365-loan-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="365-365-loan-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="365-365-loan-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="365-365-loan-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="365-365-loan-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators" aria-current="true">Personal Loans</a></li><li><a id="365-365-loan-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="365-365-loan-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="365-365-loan-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="365-365-loan-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="365-365-loan-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="365-365-loan-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="365-365-loan-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="365-365-loan-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="365-365-loan-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="365-365-loan-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="365-365-loan-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="365-365-loan-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="365-365-loan-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="365-365-loan-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="365-365-loan-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="365-365-loan-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="365-365-loan-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="365-365-loan-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="365-365-loan-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="365-365-loan-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="365-365-loan-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="365-365-loan-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="365-365-loan-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="365-365-loan-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="365-365-loan-calculator" data-calculator-slug="365-365-loan-calculator" data-sub-category-slug="loan-calculators">
+      <aside id="365-365-loan-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="365-365-loan-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="365-365-loan-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="365-365-loan-calculator-ad-top-leaderboard">
+            <ins id="365-365-loan-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("365-365-loan-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="365-365-loan-calculator-intro-area" class="space-y-4">
+        <nav id="365-365-loan-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="365-365-loan-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="365-365-loan-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="365-365-loan-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="365-365-loan-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#loan-calculators" itemprop="item"><span itemprop="name">Personal &amp; General Loans</span></a><meta itemprop="position" content="3"></li>
+            <li id="365-365-loan-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">365/365 Loan Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/365-365-loan-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="365-365-loan-calculator-hero-section" aria-labelledby="365-365-loan-calculator-hero-heading" data-section="hero">
+          <h1 id="365-365-loan-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">365/365 Loan Calculator</h1>
+          <p id="365-365-loan-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Wondering why your lender&#x27;s statement shows slightly different interest each month, even though the payment never changes? A 365/365 loan calculator explains it: it charges interest for the exact number of days in each billing period, divided by a fixed 365-day year, and turns that into a full amortization schedule that shows every payment, how much of it is interest, and what you still owe afterward. <!-- SILO_START:slot_a -->Try the <a class="silo-link" href="/payment-calculator.html">payment calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="365-365-loan-calculator-tool" class="space-y-6" data-page-slug="365-365-loan-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="d35FormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="d35Form" class="space-y-5" novalidate aria-labelledby="d35FormHeading">
+      <h2 id="d35FormHeading" class="panel-heading">Enter your loan details</h2>
+<div class="form-row form-row-2">
+<div><label for="d35Loan" class="form-label">Loan amount</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="d35Loan" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="25000" inputmode="decimal"></div></div>
+<div><label for="d35Rate" class="form-label">Interest rate</label><div class="input-group"><input type="number" id="d35Rate" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="50" step="0.125" value="8" inputmode="decimal"><span class="input-affix">%</span></div></div>
+</div>
+<div><label for="d35Term" class="form-label">Number of monthly payments</label><div class="input-group"><input type="number" id="d35Term" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1" max="480" step="1" value="60" inputmode="numeric" aria-describedby="d35TermHint"><span class="input-affix">payments</span></div><p id="d35TermHint" class="form-hint">60 payments is a 5-year loan.</p></div>
+<div class="form-row form-row-2">
+<div><label for="d35Start" class="form-label">Funding date</label><input type="date" id="d35Start" class="form-control" min="1990-01-01" max="2200-12-31" aria-describedby="d35StartHint"><p id="d35StartHint" class="form-hint">Interest starts on this day.</p></div>
+<div><label for="d35First" class="form-label">First payment due</label><input type="date" id="d35First" class="form-control" min="1990-01-01" max="2200-12-31" aria-describedby="d35FirstHint"><p id="d35FirstHint" class="form-hint">Later payments fall due on the same day each month.</p></div>
+</div>
+<fieldset class="form-fieldset">
+<legend class="form-legend">Payments made early, late or for a different amount</legend>
+<p class="form-hint">Pick a payment number and how many days before (negative) or after (positive) its due date it was paid. Leave the amount blank for the regular payment, or enter 0 for a missed payment.</p>
+<div id="d35Rows" class="space-y-4"></div>
+<button type="button" id="d35Add" class="button-secondary">Add a payment</button>
+</fieldset>
+<details class="form-details"><summary class="form-details-summary">More options</summary>
+<div><label for="d35Pay" class="form-label">Regular payment</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="d35Pay" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1" placeholder="Worked out for you" inputmode="decimal" aria-describedby="d35PayHint"></div><p id="d35PayHint" class="form-hint">Leave blank to use the payment that clears the loan exactly on schedule.</p></div>
+<div><label for="d35Basis" class="form-label">Days in a year</label><select id="d35Basis" class="form-select" aria-describedby="d35BasisHint"><option value="365" selected>Always 365 (365/365)</option><option value="actual">366 in leap years (actual/actual)</option></select><p id="d35BasisHint" class="form-hint">Most simple interest loans divide the annual rate by 365 every year.</p></div>
+</details>
+      <p id="d35Error" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="d35Results" aria-live="polite" aria-labelledby="d35ResultsHeading">
+      <h2 id="d35ResultsHeading" class="panel-heading">Your results</h2>
+<div class="stat-grid mt-4">
+<div class="stat-card stat-card-highlight"><p class="stat-label">Regular monthly payment</p><p id="d35Payment" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">Interest vs paying on schedule</p><p id="d35Diff" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">Final payment</p><p id="d35Final" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">Interest per day at the start</p><p id="d35PerDiem" class="stat-value">–</p></div>
+</div>
+<p id="d35Summary" class="form-hint mt-4">–</p>
+<div class="table-scroll mt-4" tabindex="0" role="region" aria-labelledby="d35CompareCaption">
+<table class="data-table">
+<caption id="d35CompareCaption" class="sr-only">Paying on schedule versus your payment dates</caption>
+<thead><tr><th scope="col"></th><th scope="col">On schedule</th><th scope="col">Your dates</th></tr></thead>
+<tbody id="d35Compare"></tbody>
+</table>
+</div>
+<div class="callout callout-note mt-5"><p>Interest is simple, charged on the principal only, for the actual number of days between payments. A payment covers the interest owed first; anything left reduces the principal. Interest a payment does not cover is carried forward but never earns interest itself.</p></div>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="d35ScheduleHeading" data-section="schedule">
+  <h2 id="d35ScheduleHeading" class="panel-heading">Payment schedule</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">Every payment with the days of interest it paid for. Payments you changed are marked early, late, missed or changed.</p>
+  <div class="mt-4 max-w-[240px]"><label for="d35View" class="form-label">Show</label><select id="d35View" class="form-select"><option value="yours" selected>Your payment dates</option><option value="base">On schedule</option></select></div>
+  <div class="table-scroll mt-5 max-h-[520px]" tabindex="0" role="region" aria-labelledby="d35ScheduleHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">#</th><th scope="col">Due</th><th scope="col">Paid</th><th scope="col">Days</th><th scope="col">Payment</th><th scope="col">Interest</th><th scope="col">Principal</th><th scope="col">Unpaid interest</th><th scope="col">Balance</th></tr></thead>
+      <tbody id="d35Schedule"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="365-365-loan-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="365-365-loan-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Wondering why your lender&#x27;s statement shows slightly different interest each month, even though the payment never changes? A 365/365 loan calculator explains it: it charges interest for the exact number of days in each billing period, divided by a fixed 365-day year, and turns that into a full amortization schedule that shows every payment, how much of it is interest, and what you still owe afterward. <!-- SILO_START:slot_a_m -->Try the <a class="silo-link" href="/payment-calculator.html">payment calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="365-365-loan-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="365-365-loan-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="365-365-loan-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="365-365-loan-calculator-ad-in-feed">
+            <ins id="365-365-loan-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("365-365-loan-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="365-365-loan-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="365-365-loan-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="365-365-loan-calculator-guide-heading-1">
+<h2 id="365-365-loan-calculator-guide-heading-1">How a 365/365 interest payment schedule works</h2>
+<p>Under a <strong>365/365 interest payment schedule</strong>, the lender takes your annual interest rate, converts it to a daily rate by dividing by 365, and multiplies that by the number of days that actually passed in the payment period, meaning since your last payment. Lenders typically describe this as <strong>1/365th</strong> of the annual rate times the <strong>number of days in the month</strong>, applied to the balance you owe at that moment. Both numbers in the name are 365: the numerator counts real calendar days, and the denominator is the year length. <!-- SILO_START:slot_b -->The <a class="silo-link" href="/loan-comparison-calculator.html">loan comparison calculator online</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_b --></p>
+
+<p>$$\text{Interest} = \text{Outstanding balance} \times \text{Annual rate} \times \frac{\text{Days in period}}{365}$$</p>
+
+<p>Because interest has to <em>accrue</em> day by day, a month with 31 days costs more than a month with 28, and every payment you make shrinks the <strong>outstanding balance</strong> that the next period's interest is figured on. The payment stays level, so whatever the interest takes in a long month, the principal portion gives back in a short one.</p>
+
+<h3>Daily interest on the loan balance</h3>
+<p>Divide the annual rate by 365 and you have the interest charged per day on each dollar owed. On a $44,859.95 <strong>loan balance</strong> at 7.35%, that is about $9.03 of <strong>accrued interest</strong> every day, so a 28-day month adds roughly $252.94 and a 31-day month adds roughly $280.04.</p>
+
+<h3>Why February payments cost less interest</h3>
+<p>The calendar is the reason the schedule is not a straight line. Short months move more of your payment toward principal, and long months move less. Over a full year the effect evens out, but it is why the interest column looks a little uneven row to row.</p>
+        </section>
+        <section id="365-365-loan-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="365-365-loan-calculator-guide-heading-2">
+<h2 id="365-365-loan-calculator-guide-heading-2">Amortization schedule example for a $48,500 loan</h2>
+<p>To see the <strong>365/365 loan calculator</strong> logic end to end, take a $48,500 installment loan at 7.35% over 36 monthly payments, with funds disbursed on November 17, 2026 and the first payment due on December 17, 2026. The payment that fully repays it comes out to <strong>$1,505.29</strong>, and the first rows of the schedule look like this: <!-- SILO_START:slot_c -->Next, open the <a class="silo-link" href="/repayment-calculator.html">repayment calculator online</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_c --></p>
+
+<table>
+<thead><tr><th>Payment</th><th>Due date</th><th>Days</th><th>Interest</th><th>Principal</th><th>Balance</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Dec 17, 2026</td><td>30</td><td>$292.99</td><td>$1,212.30</td><td>$47,287.70</td></tr>
+<tr><td>2</td><td>Jan 17, 2027</td><td>31</td><td>$295.19</td><td>$1,210.10</td><td>$46,077.61</td></tr>
+<tr><td>3</td><td>Feb 17, 2027</td><td>31</td><td>$287.64</td><td>$1,217.65</td><td>$44,859.95</td></tr>
+<tr><td>4</td><td>Mar 17, 2027</td><td>28</td><td>$252.94</td><td>$1,252.35</td><td>$43,607.60</td></tr>
+</tbody>
+</table>
+
+<p>Notice payment 4: only 28 days passed, so interest drops to $252.94 and the extra $34.70 compared with payment 3 goes to principal. Across all 36 payments the loan costs about <strong>$5,690</strong> in interest: $293 in 2026, $2,973 in 2027, $1,832 in 2028 and $592 in 2029. The last payment is adjusted by a few cents so the balance lands exactly on zero.</p>
+        </section>
+        <section id="365-365-loan-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="365-365-loan-calculator-guide-heading-3">
+<h2 id="365-365-loan-calculator-guide-heading-3">365/365 loan calculator inputs explained</h2>
+<p>Every field in a <strong>loan calculator</strong> of this kind maps to one piece of the schedule. Fill in the loan details below and the tool returns your payment, the interest and principal for each row, and the final payment date.</p>
+
+<h3>Loan type</h3>
+<p>Choose an installment loan when the debt is <strong>fully amortized</strong> over the term, so the term of the loan always equals the amortization period. A balloon loan runs a shorter term than the schedule it is calculated on, and an interest-only loan charges only interest until the end. A Principal + Interest loan repays a <strong>fixed principal</strong> amount each period plus the interest accrued on what remains.</p>
+
+<h3>Payment frequency</h3>
+<p>The default payment frequency is monthly. You can also choose quarterly, semi-annual or annual payments. With anything less frequent than monthly, interest still accrues month by month, so unpaid interest ends up increasing your principal balance until the next regular payment arrives.</p>
+
+<h3>Amount of loan</h3>
+<p>Enter the total borrowed, before any fees you plan to pay separately. This figure is the starting point for the first period's interest, so even a small entry error carries through every row.</p>
+
+<h3>Financing start date</h3>
+<p>This is the first day interest is charged, normally the same day funds are distributed to the borrower. The days between it and your first payment are counted exactly, which is why a start date late in the month changes the first payment's interest noticeably.</p>
+
+<h3>Annual interest rate</h3>
+<p>Use the stated <strong>interest rate</strong> on your note as a yearly percentage, not the APR, which also folds in fees. Under a 365/365 method that annual figure is spread over 365 days regardless of how long the year actually is.</p>
+
+<h3>Loan term</h3>
+<p>The <strong>loan term</strong> is the number of payments you will make. Together with the payment frequency, it sets how long the debt lasts and how many rows appear in the table.</p>
+
+<h3>Amortization term and interest only term</h3>
+<p>The <strong>amortization term</strong> is the number of payments used to calculate the regular payment, and it can be longer than the loan term when a balloon payment is due at the end. The <strong>interest only term</strong> is the number of early payments that cover interest alone, which delays principal repayment and raises later payments.</p>
+
+<h3>First payment date and final payment date</h3>
+<p>The first payment date is typically the same day of the month one full period after the financing start date, though it can be any later date. The tool then reports the final payment date, a quick check that the loan ends when your lender's paperwork says it should.</p>
+        </section>
+        <section id="365-365-loan-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="365-365-loan-calculator-guide-heading-4">
+<h2 id="365-365-loan-calculator-guide-heading-4">Interest payment schedule comparison: 365/365 and 365/360</h2>
+<p>Many commercial lenders use 365/360, which charges the actual days elapsed but divides by a 360-day year, so each day costs slightly more. On the same $48,500 at 7.35% over 36 months, that method requires a payment of $1,507.56 and totals about $5,772 in interest, roughly $82 more than the 365/365 result. The monthly difference is small, but the gap compounds as the schedule runs, and it is the reason to confirm which day-count basis your loan agreement names before you compare offers. Enter the same loan into the tool and compare the payment with your lender's quote to see which basis the lender used.</p>
+<ul>
+<li><strong>365/365:</strong> actual days elapsed divided by 365, so the daily rate is the annual rate divided by 365.</li>
+<li><strong>365/360:</strong> actual days elapsed divided by 360, which makes the effective yearly cost a little higher than the quoted rate.</li>
+</ul>
+        </section>
+        <section id="365-365-loan-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="365-365-loan-calculator-guide-heading-5">
+<h2 id="365-365-loan-calculator-guide-heading-5">Testing a skid steer note in the loan calculator</h2>
+<p>Marisol Quintero runs a 140-acre hay operation and has a used skid steer lined up for <strong>$27,640.00</strong>. Her credit union's note uses the actual-day, 365-day-year interest method, and its loan covenant caps her new equipment payments at $700 a month, so she opens the calculator before she signs anything.</p>
+<p>She enters an amount of loan of $27,640, an annual rate of 6.85%, monthly payments and a 48-payment term, with a financing start date of March 9, 2027 and a first payment date of April 9, 2027. The schedule comes back with a payment of <strong>$660.17</strong>. Row one carries 31 days of interest, $160.80, because $27,640 times 6.85% divided by 365 is about $5.19 a day. Over the full term the note costs $4,048.24 in interest, and the final payment date lands on March 9, 2031.</p>
+<p>The $660.17 payment sits $39.83 under her $700 covenant limit, so the 48-month note passes. She then tests whether a shorter note is possible. Changing only the term to 42 payments raises the payment to $742.24, which breaks the cap even though it would save $514.26 in interest, and 36 payments would require $851.82. Staying at 48 payments, she takes the $660.17 figure to the loan officer and asks them to confirm the day-count basis in writing, because the same note on a 360-day year would charge slightly more.</p>
+        </section>
+        <section id="365-365-loan-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="365-365-loan-calculator-guide-heading-6">
+<h2 id="365-365-loan-calculator-guide-heading-6">Reading the amortization schedule as a borrower</h2>
+<p>A schedule is the clearest view of your <strong>loan responsibility</strong> because it shows, one row at a time, where each dollar goes. Whether you use it to see monthly payments, interest and more, a few habits make it more useful:</p>
+<ul>
+<li>Scan the interest column first; it should shrink steadily as the balance falls, with small dips in short months.</li>
+<li>Check that your lender's payment matches the one on the schedule within a few cents.</li>
+<li>Compare the total interest at the bottom with the cost of a shorter term before you sign.</li>
+<li>Test an extra payment by lowering the balance in one row and watching how many days of interest disappear from every later row.</li>
+</ul>
+<p>Paying down principal early is the one lever that works on every future period at once, because each period's interest is a function of the balance you carry into it.</p>
+        </section>
+        <section id="365-365-loan-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="365-365-loan-calculator-guide-heading-7">
+<h2 id="365-365-loan-calculator-guide-heading-7">Using this loan calculator alongside other financial calculators</h2>
+<p>This tool fits fixed-rate notes that charge actual days over a 365-day year. If your lender quotes a monthly-interest rate instead, an auto loan or mortgage estimate gives a better baseline, and running the same figures through both shows how much the day count alone moves the payment and the total interest. When you are comparing the APR on several offers, run each one through the matching tool, then use a savings goal tool to plan the down payment or a retirement planner to see how the monthly obligation fits long-term saving. These <strong>financial calculators</strong> are self-help tools meant for your independent use, so treat the results as estimates and confirm the exact figures with your lender before you commit to any <strong>personal finance</strong> decision.</p>
+        </section>
+      </div>
+
+      <section id="365-365-loan-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="365-365-loan-calculator-faq-heading" data-section="faq">
+        <h2 id="365-365-loan-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">365/365 Loan Calculator questions</h2>
+        <div id="365-365-loan-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="365-365-loan-calculator-faq-1" class="faq-item" open><summary id="365-365-loan-calculator-faq-1-summary" class="faq-summary"><h3 id="365-365-loan-calculator-faq-1-question" class="faq-question">What is a 365/365 loan?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="365-365-loan-calculator-faq-1-answer" class="faq-answer"><p>A 365/365 loan charges interest for the actual number of days in each payment period and divides the annual rate by a fixed 365-day year. Each day therefore costs one 365th of the annual rate on the balance you owe.</p></div></details>
+          <details id="365-365-loan-calculator-faq-2" class="faq-item" open><summary id="365-365-loan-calculator-faq-2-summary" class="faq-summary"><h3 id="365-365-loan-calculator-faq-2-question" class="faq-question">How is 365/365 interest calculated?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="365-365-loan-calculator-faq-2-answer" class="faq-answer"><p>Interest for a period equals the outstanding balance times the annual rate times the days in the period, divided by 365. A 31-day month therefore costs more interest than a 28-day month.</p></div></details>
+          <details id="365-365-loan-calculator-faq-3" class="faq-item" open><summary id="365-365-loan-calculator-faq-3-summary" class="faq-summary"><h3 id="365-365-loan-calculator-faq-3-question" class="faq-question">How does 365/365 differ from 365/360?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="365-365-loan-calculator-faq-3-answer" class="faq-answer"><p>Both count actual days elapsed, but 365/360 divides by 360 instead of 365, so each day costs slightly more. On the same loan, the 365/360 method produces a higher payment and more total interest.</p></div></details>
+          <details id="365-365-loan-calculator-faq-4" class="faq-item" open><summary id="365-365-loan-calculator-faq-4-summary" class="faq-summary"><h3 id="365-365-loan-calculator-faq-4-question" class="faq-question">Why does the interest portion change if my payment stays the same?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="365-365-loan-calculator-faq-4-answer" class="faq-answer"><p>Because the days in each period change and the balance falls after every payment. Short months move more of the payment to principal, long months move less.</p></div></details>
+          <details id="365-365-loan-calculator-faq-5" class="faq-item" open><summary id="365-365-loan-calculator-faq-5-summary" class="faq-summary"><h3 id="365-365-loan-calculator-faq-5-question" class="faq-question">What happens if I pay quarterly, semi-annually or annually?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="365-365-loan-calculator-faq-5-answer" class="faq-answer"><p>Interest still accrues month by month, so unpaid interest increases your principal balance until the next regular payment is received. This calculator applies that monthly accrual between payments.</p></div></details>
+          <details id="365-365-loan-calculator-faq-6" class="faq-item" open><summary id="365-365-loan-calculator-faq-6-summary" class="faq-summary"><h3 id="365-365-loan-calculator-faq-6-question" class="faq-question">What is the difference between the loan term and the amortization term?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="365-365-loan-calculator-faq-6-answer" class="faq-answer"><p>The loan term is the number of payments you actually make. The amortization term is the number of payments the payment is calculated over; when it is longer, a balloon payment is due with your final payment.</p></div></details>
+          <details id="365-365-loan-calculator-faq-7" class="faq-item" open><summary id="365-365-loan-calculator-faq-7-summary" class="faq-summary"><h3 id="365-365-loan-calculator-faq-7-question" class="faq-question">What does an interest only term do?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="365-365-loan-calculator-faq-7-answer" class="faq-answer"><p>During the interest only term your payments cover just the interest that accrued, so the balance does not fall. Later payments are higher because principal repayment starts afterward.</p></div></details>
+          <details id="365-365-loan-calculator-faq-8" class="faq-item" open><summary id="365-365-loan-calculator-faq-8-summary" class="faq-summary"><h3 id="365-365-loan-calculator-faq-8-question" class="faq-question">Can I pay a loan off early to save interest?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="365-365-loan-calculator-faq-8-answer" class="faq-answer"><p>Yes, because interest is charged on the balance you carry each day, any principal you pay early reduces every later period&#x27;s interest. Confirm any prepayment terms with your lender first.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="365-365-loan-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="365-365-loan-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="365-365-loan-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="365-365-loan-calculator-ad-bottom-leaderboard">
+            <ins id="365-365-loan-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("365-365-loan-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="365-365-loan-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="365-365-loan-calculator-right-rail-top" class="mb-6">
+        <aside id="365-365-loan-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="365-365-loan-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="365-365-loan-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="365-365-loan-calculator-ad-right-rail-rectangle">
+            <ins id="365-365-loan-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("365-365-loan-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="365-365-loan-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="365-365-loan-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="365-365-loan-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="365-365-loan-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="365-365-loan-calculator-ad-right-rail-skyscraper">
+            <ins id="365-365-loan-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("365-365-loan-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="365-365-loan-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="365-365-loan-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="365-365-loan-calculator-footer-brand">
+        <a id="365-365-loan-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="365-365-loan-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="365-365-loan-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="365-365-loan-calculator-footer-categories" aria-labelledby="365-365-loan-calculator-footer-categories-heading">
+        <h2 id="365-365-loan-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="365-365-loan-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="365-365-loan-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="365-365-loan-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="365-365-loan-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="365-365-loan-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="365-365-loan-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="365-365-loan-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="365-365-loan-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="365-365-loan-calculator-footer-company" aria-labelledby="365-365-loan-calculator-footer-company-heading">
+        <h2 id="365-365-loan-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="365-365-loan-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="365-365-loan-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="365-365-loan-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="365-365-loan-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="365-365-loan-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="365-365-loan-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="365-365-loan-calculator-footer-bottom" class="border-t border-line">
+      <p id="365-365-loan-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="365-365-loan-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // 365/365 daily simple interest loan with payments made early, late, missed or for other amounts.
+  //   Interest for a period = principal x rate x days / 365 (365/365), or with "actual/actual" the days
+  //   falling in a leap year are divided by 366. Interest is charged on principal only (simple interest):
+  //   a payment pays the interest owed first, the rest reduces principal; interest it does not cover is
+  //   carried as unpaid interest that never earns interest itself.
+  //   Payment k is due on the first due date + (k - 1) months (day clamped to the month's end); a
+  //   changed payment is made on its due date + the days entered. The last payment (or any earlier
+  //   payment big enough) pays off principal plus all interest owed.
+  //   Regular payment: by default, the payment (rounded to the cent) that leaves a final payment equal
+  //   to it when every payment is on time, found by bisection on the on-schedule simulation.
+  // Dates are whole day numbers from YYYY-MM-DD (H. Hinnant's days_from_civil), so time zones can't shift a day.
+  // Checked in Node (scratchpad tests/w3b6_loans/d35.test.js): 31 days on $100,000 at 6% = $509.59;
+  //   with funding exactly one 365-day year apart the 365/365 interest equals rate x principal; a
+  //   $25,000, 8%, 60-payment loan funded Jan 15 2026 gives a regular payment within 1% of the
+  //   rate/12 formula ($506.88 vs $506.91) and a final payment of $506.93; an independent Python
+  //   day-by-day replica (tests/w3b6_loans/d35_replica.py) matches total interest $5,412.85 and the
+  //   final payment to the cent; paying payment 3 fifteen days late costs $2.01 net (that period
+  //   carries ~$80 more interest, the next one ~$78 less); 0% rate gives no interest and loan / n payments; a missed
+  //   payment carries unpaid interest without compounding; leap-year (actual/actual) totals are lower
+  //   than 365/365 over a span containing Feb 29.
+  var MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  var MAX_ROWS = 24, rowCounter = 0, last = null, firstTouched = false;
+  var DEFAULT_ROWS = [{ n: 3, shift: 15, amount: '' }, { n: 8, shift: -10, amount: '1500' }];
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  var INPUT_CLASS = 'min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none';
+
+  function el(id) { return document.getElementById(id); }
+  function setText(id, t) { el(id).textContent = t; }
+  function parse(raw) {
+    raw = String(raw === undefined || raw === null ? '' : raw).trim();
+    if (raw === '') return NaN;
+    var v = Number(raw);
+    return isFinite(v) ? v : NaN;
+  }
+  function read(id) { return parse(el(id).value); }
+
+  // ---- Dates ----
+  function daysFromCivil(y, m, d) {
+    y -= m <= 2 ? 1 : 0;
+    var era = Math.floor(y / 400), yoe = y - era * 400;
+    var doy = Math.floor((153 * ((m + 9) % 12) + 2) / 5) + d - 1;
+    var doe = yoe * 365 + Math.floor(yoe / 4) - Math.floor(yoe / 100) + doy;
+    return era * 146097 + doe - 719468;
+  }
+  function civilFromDays(z) {
+    z += 719468;
+    var era = Math.floor(z / 146097), doe = z - era * 146097;
+    var yoe = Math.floor((doe - Math.floor(doe / 1460) + Math.floor(doe / 36524) - Math.floor(doe / 146096)) / 365);
+    var doy = doe - (365 * yoe + Math.floor(yoe / 4) - Math.floor(yoe / 100));
+    var mp = Math.floor((5 * doy + 2) / 153);
+    var d = doy - Math.floor((153 * mp + 2) / 5) + 1, m = mp < 10 ? mp + 3 : mp - 9;
+    return { y: yoe + era * 400 + (m <= 2 ? 1 : 0), m: m, d: d };
+  }
+  function parseDate(s) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(s || '').trim());
+    if (!m) return NaN;
+    var y = +m[1], mo = +m[2], d = +m[3];
+    if (mo < 1 || mo > 12 || d < 1 || d > 31) return NaN;
+    var z = daysFromCivil(y, mo, d), c = civilFromDays(z);
+    return c.y === y && c.m === mo && c.d === d ? z : NaN;
+  }
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  function iso(z) { var c = civilFromDays(z); return c.y + '-' + pad(c.m) + '-' + pad(c.d); }
+  function fmt(z) { var c = civilFromDays(z); return MONTHS[c.m - 1] + ' ' + c.d + ', ' + c.y; }
+  function daysInMonth(y, m) { return daysFromCivil(m === 12 ? y + 1 : y, m === 12 ? 1 : m + 1, 1) - daysFromCivil(y, m, 1); }
+  function addMonths(z, k) {
+    var c = civilFromDays(z), t = (c.m - 1) + k, y = c.y + Math.floor(t / 12), m = ((t % 12) + 12) % 12 + 1;
+    return daysFromCivil(y, m, Math.min(c.d, daysInMonth(y, m)));
+  }
+
+  // ---- Maths ----
+  // Fraction of a year between day numbers a and b.
+  function yearFraction(a, b, basis) {
+    if (b <= a) return 0;
+    if (basis !== 'actual') return (b - a) / 365;
+    var total = 0, x = a;
+    while (x < b) {
+      var y = civilFromDays(x).y, startY = daysFromCivil(y, 1, 1), next = daysFromCivil(y + 1, 1, 1), end = Math.min(b, next);
+      total += (end - x) / (next - startY);
+      x = end;
+    }
+    return total;
+  }
+
+  // changes: { n: { shift: days, amount: number|NaN } }
+  function simulate(loan, rate, pay, n, start, first, basis, changes) {
+    var bal = loan, unpaid = 0, prev = start, rows = [], totalInterest = 0, totalPaid = 0;
+    for (var k = 1; k <= n; k++) {
+      var due = addMonths(first, k - 1), ch = changes && changes[k], date = due + (ch ? ch.shift : 0);
+      var interest = bal * rate * yearFraction(prev, date, basis);
+      var owed = unpaid + interest, amount = ch && !isNaN(ch.amount) ? ch.amount : pay, principal;
+      if (k === n || amount >= bal + owed - 0.005) {
+        amount = bal + owed; principal = bal; bal = 0; unpaid = 0;
+      } else {
+        var toInterest = Math.min(amount, owed);
+        unpaid = owed - toInterest; principal = amount - toInterest; bal -= principal;
+        if (unpaid < 1e-9) unpaid = 0;
+      }
+      totalInterest += interest; totalPaid += amount;
+      rows.push({ n: k, due: due, date: date, days: date - prev, payment: amount, interest: interest, principal: principal,
+        unpaid: unpaid, balance: bal, change: ch || null });
+      prev = date;
+      if (bal === 0) break;
+    }
+    var lastRow = rows[rows.length - 1];
+    return { rows: rows, interest: totalInterest, paid: totalPaid, finalPayment: lastRow.payment, finalDate: lastRow.date, count: rows.length };
+  }
+
+  // Payment (to the cent) that pays the loan off on schedule when every payment is on time.
+  function levelPayment(loan, rate, n, start, first, basis) {
+    if (n === 1) return Math.round(simulate(loan, rate, 0, 1, start, first, basis, null).finalPayment * 100) / 100;
+    var lo = 0, hi = loan * (1 + rate * yearFraction(start, addMonths(first, n - 1), basis)) + 1;
+    for (var it = 0; it < 100; it++) {
+      var mid = (lo + hi) / 2, s = simulate(loan, rate, mid, n, start, first, basis, null);
+      if (s.count === n && s.finalPayment > mid) lo = mid; else hi = mid;
+    }
+    return Math.round((lo + hi) / 2 * 100) / 100;
+  }
+
+  // ---- Payment change rows (DOM methods only) ----
+  function make(tag, className, text) {
+    var e = document.createElement(tag);
+    if (className) e.className = className;
+    if (text) e.textContent = text;
+    return e;
+  }
+  function numberField(id, label, value, affix, affixFirst, attrs) {
+    var wrap = make('div'), lab = make('label', 'form-label', label), group = make('div', 'input-group'), input = make('input', INPUT_CLASS);
+    lab.setAttribute('for', id);
+    input.type = 'number'; input.id = id;
+    Object.keys(attrs).forEach(function (k) { input.setAttribute(k, attrs[k]); });
+    input.value = value === undefined || value === null ? '' : String(value);
+    var a = make('span', 'input-affix', affix);
+    if (affixFirst) { group.appendChild(a); group.appendChild(input); } else { group.appendChild(input); group.appendChild(a); }
+    wrap.appendChild(lab); wrap.appendChild(group);
+    return wrap;
+  }
+  function addRow(d) {
+    var list = el('d35Rows');
+    if (list.querySelectorAll('[data-row]').length >= MAX_ROWS) return;
+    rowCounter++;
+    var id = rowCounter, row = make('div', 'space-y-3 rounded-xl border border-line p-4');
+    row.setAttribute('data-row', String(id));
+    var head = make('div', 'flex items-center justify-between gap-3');
+    var title = make('p', 'text-sm font-semibold text-ink', 'Changed payment');
+    title.setAttribute('data-row-title', '');
+    var remove = make('button', 'button-secondary h-9 px-3 text-sm', 'Remove');
+    remove.type = 'button';
+    remove.setAttribute('data-remove', '');
+    remove.addEventListener('click', function () { row.remove(); refreshRows(); update(); });
+    head.appendChild(title); head.appendChild(remove);
+    row.appendChild(head);
+    var grid = make('div', 'form-row form-row-3');
+    grid.appendChild(numberField('d35N' + id, 'Payment number', d.n, '#', true, { min: '1', step: '1', inputmode: 'numeric' }));
+    grid.appendChild(numberField('d35Shift' + id, 'Days early or late', d.shift, 'days', false, { step: '1', inputmode: 'numeric' }));
+    grid.appendChild(numberField('d35Amt' + id, 'Amount paid', d.amount, '$', true, { min: '0', step: '1', inputmode: 'decimal', placeholder: 'Regular' }));
+    row.appendChild(grid);
+    list.appendChild(row);
+    refreshRows();
+  }
+  function refreshRows() {
+    var rows = el('d35Rows').querySelectorAll('[data-row]');
+    for (var i = 0; i < rows.length; i++) {
+      rows[i].querySelector('[data-row-title]').textContent = 'Changed payment ' + (i + 1);
+      rows[i].querySelector('[data-remove]').setAttribute('aria-label', 'Remove changed payment ' + (i + 1));
+    }
+    el('d35Add').disabled = rows.length >= MAX_ROWS;
+  }
+  function readChanges(n) {
+    var rows = el('d35Rows').querySelectorAll('[data-row]'), changes = {}, err = '', count = 0;
+    for (var i = 0; i < rows.length && !err; i++) {
+      var id = rows[i].getAttribute('data-row'), label = 'Changed payment ' + (i + 1) + ': ';
+      var rawN = String(el('d35N' + id).value).trim(), rawS = String(el('d35Shift' + id).value).trim(), rawA = String(el('d35Amt' + id).value).trim();
+      if (rawN === '' && rawS === '' && rawA === '') continue;
+      var k = parse(rawN), shift = rawS === '' ? 0 : parse(rawS), amount = rawA === '' ? NaN : parse(rawA);
+      if (isNaN(k) || k < 1 || k > n || k % 1 !== 0) err = label + 'enter a payment number from 1 to ' + n + '.';
+      else if (changes[k]) err = label + 'payment ' + k + ' is already changed above.';
+      else if (isNaN(shift) || shift % 1 !== 0 || shift < -180 || shift > 365) err = label + 'enter whole days from -180 (early) to 365 (late).';
+      else if (rawA !== '' && (isNaN(amount) || amount < 0 || amount > 1e10)) err = label + 'the amount can\'t be negative.';
+      else { changes[k] = { shift: shift, amount: amount }; count++; }
+    }
+    return { changes: changes, error: err, count: count };
+  }
+
+  // ---- Output ----
+  function signed(x) {
+    if (Math.abs(x) < 0.005) return money.format(0);
+    return (x > 0 ? '+' : '−') + money.format(Math.abs(x));
+  }
+  function mark(r) {
+    var c = r.change;
+    if (!c) return '';
+    if (!isNaN(c.amount) && c.amount === 0) return ' (missed)';
+    var bits = [];
+    if (c.shift > 0) bits.push(c.shift + ' day' + (c.shift === 1 ? '' : 's') + ' late');
+    if (c.shift < 0) bits.push(-c.shift + ' day' + (c.shift === -1 ? '' : 's') + ' early');
+    if (!isNaN(c.amount)) bits.push('amount changed');
+    return bits.length ? ' (' + bits.join(', ') + ')' : '';
+  }
+  function renderSchedule() {
+    var body = el('d35Schedule');
+    if (!last) { body.innerHTML = ''; return; }
+    var s = el('d35View').value === 'base' ? last.base : last.yours;
+    body.innerHTML = s.rows.map(function (r) {
+      return '<tr><td>' + r.n + '</td><td>' + fmt(r.due) + '</td><td>' + fmt(r.date) + mark(r) + '</td><td>' + r.days + '</td><td>' +
+        money.format(r.payment) + '</td><td>' + money.format(r.interest) + '</td><td>' + money.format(r.principal) + '</td><td>' +
+        money.format(r.unpaid) + '</td><td>' + money.format(r.balance) + '</td></tr>';
+    }).join('');
+  }
+  function clear() {
+    ['d35Payment', 'd35Diff', 'd35Final', 'd35PerDiem', 'd35Summary'].forEach(function (id) { setText(id, '–'); });
+    el('d35Compare').innerHTML = '';
+    last = null;
+    renderSchedule();
+  }
+
+  function update(e) {
+    var target = e && e.target ? e.target.id : '';
+    if (target === 'd35First') firstTouched = true;
+    var start = parseDate(el('d35Start').value);
+    if (target === 'd35Start' && !firstTouched && !isNaN(start)) el('d35First').value = iso(addMonths(start, 1));
+    var first = parseDate(el('d35First').value);
+    var loan = read('d35Loan'), rate = read('d35Rate'), n = read('d35Term'), payRaw = String(el('d35Pay').value).trim();
+    var payIn = payRaw === '' ? NaN : parse(payRaw), basis = el('d35Basis').value;
+    var err = el('d35Error'), msg = '', ch = null;
+    if ([loan, rate, n].some(isNaN)) msg = 'Enter the loan amount, interest rate and number of payments.';
+    else if (loan <= 0 || loan > 1e10) msg = 'Enter a loan amount above $0.';
+    else if (rate < 0 || rate > 50) msg = 'Enter an interest rate from 0% to 50%.';
+    else if (n < 1 || n > 480 || n % 1 !== 0) msg = 'Enter 1 to 480 monthly payments.';
+    else if (isNaN(start) || isNaN(first)) msg = 'Enter the funding date and the first payment date.';
+    else if (first <= start) msg = 'The first payment must be due after the funding date.';
+    else if (first - start > 366) msg = 'The first payment must be due within a year of funding.';
+    else if (payRaw !== '' && (isNaN(payIn) || payIn <= 0 || payIn > 1e10)) msg = 'Enter a regular payment above $0, or leave it blank.';
+    if (!msg) {
+      ch = readChanges(n);
+      msg = ch.error;
+      if (!msg) {
+        // Payment dates must stay in order.
+        var prev = start;
+        for (var k = 1; k <= n && !msg; k++) {
+          var d = addMonths(first, k - 1) + (ch.changes[k] ? ch.changes[k].shift : 0);
+          if (d <= prev) msg = 'Payment ' + k + ' would be made ' + (k === 1 ? 'on or before the funding date' : 'on or before payment ' + (k - 1)) + '. Change its days early or late.';
+          prev = d;
+        }
+      }
+    }
+    err.hidden = !msg;
+    err.textContent = msg;
+    if (msg) { clear(); return; }
+
+    var r = rate / 100;
+    var pay = isNaN(payIn) ? levelPayment(loan, r, n, start, first, basis) : payIn;
+    var base = simulate(loan, r, pay, n, start, first, basis, null);
+    var yours = simulate(loan, r, pay, n, start, first, basis, ch.changes);
+    last = { base: base, yours: yours };
+    var diff = yours.interest - base.interest;
+    setText('d35Payment', money.format(pay));
+    setText('d35Diff', signed(diff));
+    setText('d35Final', money.format(yours.finalPayment));
+    setText('d35PerDiem', money.format(loan * r / 365));
+    var s;
+    if (ch.count === 0) s = 'No payments changed: paying every installment on its due date costs ' + money.format(base.interest) + ' in interest.';
+    else if (diff > 0.005) s = 'Your payment dates and amounts add ' + money.format(diff) + ' of interest compared with paying on schedule.';
+    else if (diff < -0.005) s = 'Your payment dates and amounts save ' + money.format(-diff) + ' of interest compared with paying on schedule.';
+    else s = 'Your changes leave the total interest the same as paying on schedule.';
+    s += ' The final payment of ' + money.format(yours.finalPayment) + ' is due ' + fmt(yours.finalDate) + ' and settles whatever is left';
+    s += yours.count < n ? ', ' + (n - yours.count) + ' payment' + (n - yours.count === 1 ? '' : 's') + ' early.' : '.';
+    if (!isNaN(payIn) && base.count === n && Math.abs(base.finalPayment - pay) > pay * 0.5)
+      s += ' With your regular payment the on-schedule final payment is ' + money.format(base.finalPayment) + '.';
+    setText('d35Summary', s);
+    var rowsHtml = [
+      ['Total interest', money.format(base.interest), money.format(yours.interest)],
+      ['Final payment', money.format(base.finalPayment), money.format(yours.finalPayment)],
+      ['Final payment date', fmt(base.finalDate), fmt(yours.finalDate)],
+      ['Number of payments', String(base.count), String(yours.count)],
+      ['Total paid', money.format(base.paid), money.format(yours.paid)]
+    ];
+    el('d35Compare').innerHTML = rowsHtml.map(function (x) {
+      return '<tr><th scope="row">' + x[0] + '</th><td>' + x[1] + '</td><td>' + x[2] + '</td></tr>';
+    }).join('');
+    renderSchedule();
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var startEl = el('d35Start'), firstEl = el('d35First');
+    if (!startEl.value) {
+      var t = new Date();
+      startEl.value = iso(daysFromCivil(t.getFullYear(), t.getMonth() + 1, t.getDate()));
+    }
+    if (!firstEl.value) { var s = parseDate(startEl.value); if (!isNaN(s)) firstEl.value = iso(addMonths(s, 1)); }
+    DEFAULT_ROWS.forEach(addRow);
+    var form = el('d35Form');
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    el('d35Add').addEventListener('click', function () {
+      addRow({ n: '', shift: '', amount: '' });
+      update();
+    });
+    el('d35View').addEventListener('change', renderSchedule);
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

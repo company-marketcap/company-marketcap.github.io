@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="en" id="breakeven-analysis-calculator-document" data-page-slug="breakeven-analysis-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Breakeven Analysis Calculator: Find Your Break-Even Point</title>
+  <meta name="description" content="Find how many units you must sell to cover costs and earn a profit. Enter fixed costs, variable costs and price to see your break-even point instantly.">
+  <link rel="canonical" href="https://company-marketcap.github.io/breakeven-analysis-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Breakeven Analysis Calculator: Find Your Break-Even Point">
+  <meta property="og:description" content="Find how many units you must sell to cover costs and earn a profit. Enter fixed costs, variable costs and price to see your break-even point instantly.">
+  <meta property="og:url" content="https://company-marketcap.github.io/breakeven-analysis-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Breakeven Analysis Calculator", "url": "https://company-marketcap.github.io/breakeven-analysis-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Find how many units you must sell to cover costs and earn a profit. Enter fixed costs, variable costs and price to see your break-even point instantly."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Business Finance & Valuation", "item": "https://company-marketcap.github.io/financial-calculators.html#business-calculators"}, {"@type": "ListItem", "position": 4, "name": "Breakeven Analysis Calculator", "item": "https://company-marketcap.github.io/breakeven-analysis-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a break-even point?", "acceptedAnswer": {"@type": "Answer", "text": "It is the sales level where total revenue equals total costs. Below it you lose money; above it every extra unit adds profit."}}, {"@type": "Question", "name": "How do I calculate the break-even point in units?", "acceptedAnswer": {"@type": "Answer", "text": "Divide your fixed costs by the contribution margin, which is the selling price per unit minus the variable cost per unit. Round the result up to a whole unit."}}, {"@type": "Question", "name": "What counts as a fixed cost and what counts as a variable cost?", "acceptedAnswer": {"@type": "Answer", "text": "Fixed costs such as rent, salaries and insurance stay the same whatever you sell. Variable costs such as materials, packaging, shipping and sales commissions change with every unit made or sold."}}, {"@type": "Question", "name": "What is contribution margin and why does it matter?", "acceptedAnswer": {"@type": "Answer", "text": "It is what each unit contributes toward fixed costs after its own variable cost is paid. A higher contribution margin means fewer units are needed to break even."}}, {"@type": "Question", "name": "How does raising my price change the break-even point?", "acceptedAnswer": {"@type": "Answer", "text": "A higher selling price widens the contribution margin, so the break-even point falls. Check that demand still holds at the new price before relying on it."}}, {"@type": "Question", "name": "Can I use this calculator for more than one product?", "acceptedAnswer": {"@type": "Answer", "text": "It is built for a single product. For several products, run each product line on its own or use a weighted-average contribution margin based on your sales mix."}}, {"@type": "Question", "name": "How often should I recalculate my break-even point?", "acceptedAnswer": {"@type": "Answer", "text": "Whenever your costs, pricing or business model change, and at least quarterly. Rerun it before launching a product or taking on new fixed expenses."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="breakeven-analysis-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="breakeven-analysis-calculator" data-page-type="calculator">
+  <a id="breakeven-analysis-calculator-skip-link" href="#breakeven-analysis-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="breakeven-analysis-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="breakeven-analysis-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="breakeven-analysis-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="breakeven-analysis-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="breakeven-analysis-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="breakeven-analysis-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="breakeven-analysis-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="breakeven-analysis-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="breakeven-analysis-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="breakeven-analysis-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="breakeven-analysis-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="breakeven-analysis-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="breakeven-analysis-calculator-header-search-status" aria-controls="breakeven-analysis-calculator-header-search-results" data-search-input="header">
+              <p id="breakeven-analysis-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="breakeven-analysis-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="breakeven-analysis-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="breakeven-analysis-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="breakeven-analysis-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="breakeven-analysis-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="breakeven-analysis-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="breakeven-analysis-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="breakeven-analysis-calculator-mobile-search-status" aria-controls="breakeven-analysis-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="breakeven-analysis-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="breakeven-analysis-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="breakeven-analysis-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="breakeven-analysis-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="breakeven-analysis-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="breakeven-analysis-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="breakeven-analysis-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="breakeven-analysis-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="breakeven-analysis-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="breakeven-analysis-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="breakeven-analysis-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="breakeven-analysis-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="breakeven-analysis-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="breakeven-analysis-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="breakeven-analysis-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="breakeven-analysis-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="breakeven-analysis-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="breakeven-analysis-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="breakeven-analysis-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="breakeven-analysis-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="breakeven-analysis-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="breakeven-analysis-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="breakeven-analysis-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="breakeven-analysis-calculator-sidebar-search-status" aria-controls="breakeven-analysis-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="breakeven-analysis-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="breakeven-analysis-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="breakeven-analysis-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="breakeven-analysis-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="breakeven-analysis-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="breakeven-analysis-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="breakeven-analysis-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="breakeven-analysis-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="breakeven-analysis-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="breakeven-analysis-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="breakeven-analysis-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="breakeven-analysis-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="breakeven-analysis-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="breakeven-analysis-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="breakeven-analysis-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="breakeven-analysis-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="breakeven-analysis-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="breakeven-analysis-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="breakeven-analysis-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="breakeven-analysis-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="breakeven-analysis-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="breakeven-analysis-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="breakeven-analysis-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="breakeven-analysis-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="breakeven-analysis-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="breakeven-analysis-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="breakeven-analysis-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="breakeven-analysis-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="breakeven-analysis-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="breakeven-analysis-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="breakeven-analysis-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators" aria-current="true">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="breakeven-analysis-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="breakeven-analysis-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="breakeven-analysis-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="breakeven-analysis-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="breakeven-analysis-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="breakeven-analysis-calculator" data-calculator-slug="breakeven-analysis-calculator" data-sub-category-slug="business-calculators">
+      <aside id="breakeven-analysis-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="breakeven-analysis-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="breakeven-analysis-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="breakeven-analysis-calculator-ad-top-leaderboard">
+            <ins id="breakeven-analysis-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("breakeven-analysis-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="breakeven-analysis-calculator-intro-area" class="space-y-4">
+        <nav id="breakeven-analysis-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="breakeven-analysis-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="breakeven-analysis-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="breakeven-analysis-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="breakeven-analysis-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#business-calculators" itemprop="item"><span itemprop="name">Business Finance &amp; Valuation</span></a><meta itemprop="position" content="3"></li>
+            <li id="breakeven-analysis-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Breakeven Analysis Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/breakeven-analysis-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="breakeven-analysis-calculator-hero-section" aria-labelledby="breakeven-analysis-calculator-hero-heading" data-section="hero">
+          <h1 id="breakeven-analysis-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Breakeven Analysis Calculator: Find Your Break-Even Point</h1>
+          <p id="breakeven-analysis-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Before you order stock, sign a lease or hire anyone, you need to know how much you must sell just to cover your costs. The breakeven analysis calculator turns your fixed costs, variable costs and price into the break-even point in units and in revenue, so you can see where the business stops losing money and the first real profit begins. Whether you are pricing a new product or checking a startup plan, one number tells you how much sales volume you are working toward. <!-- SILO_START:slot_a -->The <a class="silo-link" href="/margin-calculator.html">profit margin calculator</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="breakeven-analysis-calculator-tool" class="space-y-6" data-page-slug="breakeven-analysis-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="beFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="beForm" class="space-y-5" novalidate aria-labelledby="beFormHeading">
+      <h2 id="beFormHeading" class="panel-heading">Enter your costs and price</h2>
+<div><label for="beFixed" class="form-label">Fixed costs</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="beFixed" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1000" value="60000" inputmode="decimal" aria-describedby="beFixedHint"></div><p id="beFixedHint" class="form-hint">Costs that stay the same whatever you sell in the period, such as rent, salaries and insurance.</p></div>
+<div class="form-row form-row-2">
+<div><label for="bePrice" class="form-label">Selling price per unit</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="bePrice" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="0.5" value="25" inputmode="decimal"></div></div>
+<div><label for="beVariable" class="form-label">Variable cost per unit</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="beVariable" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="0.5" value="15" inputmode="decimal"></div></div>
+</div>
+<p class="form-hint">Variable costs rise with each unit sold: materials, direct labor, shipping, sales commissions, card fees.</p>
+<div class="form-row form-row-2">
+<div><label for="beExpected" class="form-label">Expected unit sales</label><div class="input-group"><input type="number" id="beExpected" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="8000" inputmode="decimal"><span class="input-affix">units</span></div></div>
+<div><label for="beTarget" class="form-label">Target profit</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="beTarget" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1000" value="20000" inputmode="decimal"></div></div>
+</div>
+<p class="form-hint">Use the same period (a month or a year) for fixed costs, expected sales and target profit.</p>
+      <p id="beError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="beResults" aria-live="polite" aria-labelledby="beResultsHeading">
+      <h2 id="beResultsHeading" class="panel-heading">Your results</h2>
+<div class="stat-grid mt-4">
+<div class="stat-card stat-card-highlight"><p class="stat-label">Breakeven units</p><p id="beUnits" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">Breakeven sales</p><p id="beSales" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">Contribution margin ratio</p><p id="beCmRatio" class="stat-value">–</p></div>
+</div>
+<div class="mt-5">
+<div class="result-row"><span class="result-term">Contribution margin per unit</span><span id="beCm" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Units needed for target profit</span><span id="beTargetUnits" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Sales needed for target profit</span><span id="beTargetSales" class="result-value">–</span></div>
+</div>
+<h3 class="panel-heading mt-6">At expected sales</h3>
+<div class="mt-3">
+<div class="result-row"><span class="result-term">Revenue</span><span id="beRevenue" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Total variable costs</span><span id="beVarTotal" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Total costs</span><span id="beTotalCost" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Profit (loss)</span><span id="beProfit" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Margin of safety (units)</span><span id="beMosUnits" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Margin of safety (sales)</span><span id="beMosSales" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Margin of safety (% of sales)</span><span id="beMosPct" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Degree of operating leverage</span><span id="beDol" class="result-value">–</span></div>
+</div>
+<div id="beWarning" class="callout callout-warning mt-5" hidden><p class="callout-title">Check your plan</p><p id="beWarningText"></p></div>
+<p class="form-hint">Breakeven units are rounded up to the next whole unit. Operating leverage shows how many percent profit changes for each 1% change in sales.</p>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="beTableHeading" data-section="schedule">
+  <h2 id="beTableHeading" class="panel-heading">Profit at different sales volumes</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">Volumes from zero to twice the breakeven point, plus your expected sales.</p>
+  <div class="table-scroll mt-5" tabindex="0" role="region" aria-labelledby="beTableHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Units sold</th><th scope="col">Revenue</th><th scope="col">Variable costs</th><th scope="col">Fixed costs</th><th scope="col">Total costs</th><th scope="col">Profit (loss)</th></tr></thead>
+      <tbody id="beTable"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="breakeven-analysis-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="breakeven-analysis-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Before you order stock, sign a lease or hire anyone, you need to know how much you must sell just to cover your costs. The breakeven analysis calculator turns your fixed costs, variable costs and price into the break-even point in units and in revenue, so you can see where the business stops losing money and the first real profit begins. Whether you are pricing a new product or checking a startup plan, one number tells you how much sales volume you are working toward. <!-- SILO_START:slot_a_m -->The <a class="silo-link" href="/margin-calculator.html">profit margin calculator</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="breakeven-analysis-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="breakeven-analysis-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="breakeven-analysis-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="breakeven-analysis-calculator-ad-in-feed">
+            <ins id="breakeven-analysis-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("breakeven-analysis-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="breakeven-analysis-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="breakeven-analysis-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="breakeven-analysis-calculator-guide-heading-1">
+<h2 id="breakeven-analysis-calculator-guide-heading-1">What Is Break-Even Analysis?</h2>
+<p><strong>Break-even analysis</strong> is the process of finding the sales level where total revenue equals total costs. Below that level you are operating at a loss; above it, every extra sale adds to profit. The idea comes from cost-volume-profit thinking: you compare what each sale brings in against what it costs, then ask how many sales it takes to pay off the costs that never change. <!-- SILO_START:slot_b -->Pair this with the <a class="silo-link" href="/weighted-average-cost-of-capital-calculator.html">weighted average cost of capital calculator</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_b --></p>
+<p>Three inputs drive the result, and a <strong>break-even calculator</strong> only needs these:</p>
+<ul>
+<li><strong>Fixed costs</strong> – business expenses that stay the same whatever you sell, such as rent, salaries, insurance and equipment leases.</li>
+<li><strong>Variable costs</strong> – expenses that rise with every unit, such as raw materials, packaging, shipping and sales commissions.</li>
+<li><strong>Selling price</strong> – what a customer pays for one unit of your product or service.</li>
+</ul>
+<h3>Fixed Costs and Variable Costs</h3>
+<p>A fixed cost is paid whether you sell one unit or one thousand. A variable cost is paid only when you make or deliver a unit, so it grows in step with your sales. Sorting your expenses into these two buckets is the hardest part of the exercise, because a few of them, like a delivery driver paid a base wage plus a bonus, are partly both. Put the base into fixed costs and the bonus into variable costs per unit.</p>
+        </section>
+        <section id="breakeven-analysis-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="breakeven-analysis-calculator-guide-heading-2">
+<h2 id="breakeven-analysis-calculator-guide-heading-2">Break-Even Point Formula and Contribution Margin</h2>
+<p>The <strong>break-even point formula</strong> divides your fixed costs by what each unit leaves over after its own costs are paid. That leftover amount is the <strong>contribution margin</strong>: <!-- SILO_START:slot_c -->The <a class="silo-link" href="/contribution-margin-approach-to-cost-volume-profit-analysis.html">cost-volume-profit calculator online</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_c --></p>
+<p>$$\text{Contribution margin} = \text{Selling price} - \text{Variable cost per unit}$$</p>
+<p>$$\text{Break-even point (units)} = \frac{\text{Fixed costs}}{\text{Selling price} - \text{Variable cost per unit}}$$</p>
+<p>$$\text{Break-even revenue} = \text{Break-even units} \times \text{Selling price}$$</p>
+<p>The same result can be reached from the margin side: divide fixed costs by the contribution margin ratio, \(\frac{\text{Contribution margin}}{\text{Selling price}}\), and you get the <strong>break-even revenue</strong> straight away without converting units first.</p>
+
+<h3>Contribution Margin per Unit</h3>
+<p>Think of the contribution margin as each unit's share toward paying down your fixed cost. A higher contribution margin means fewer sales are needed to break even, which is why a small price rise or a cheaper supplier moves the result so much. It is also different from your overall profit margin, since it ignores fixed costs entirely.</p>
+<figure><img src="/assets/images/tools/breakeven-analysis-calculator/break-even-contribution-margin-waterfall.svg" alt="Waterfall chart showing a $38.50 selling price less $14.85 variable cost leaving a $23.65 contribution margin per unit"><figcaption>Each $38.50 sale leaves $23.65 toward fixed costs once variable costs are paid.</figcaption></figure>
+        </section>
+        <section id="breakeven-analysis-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="breakeven-analysis-calculator-guide-heading-3">
+<h2 id="breakeven-analysis-calculator-guide-heading-3">Worked Example: Finding Your Break-Even Point in Units</h2>
+<p>Suppose you sell a ceramic pour-over coffee set online. Your fixed costs are <strong>$18,640 per month</strong> (studio rent, kiln lease, salaries and insurance). The <strong>selling price</strong> is <strong>$38.50 per unit</strong>, and the variable cost per unit is <strong>$14.85</strong> for clay, glaze, packaging and shipping.</p>
+<ol>
+<li>Contribution margin: \(38.50 - 14.85 = 23.65\) dollars per unit.</li>
+<li>Break-even point in units: \(\frac{18{,}640}{23.65} = 788.16\), which rounds up to <strong>789 units</strong>, because you cannot sell a fraction of a set.</li>
+<li>Break-even revenue: \(789 \times 38.50 = 30{,}376.50\) dollars of total revenue.</li>
+</ol>
+<p>At 789 units the total costs are $30,356.65, so you clear the line by about $19.85. The table below shows how profit moves with sales volume.</p>
+<table>
+<thead><tr><th>Units sold</th><th>Total revenue</th><th>Total costs</th><th>Profit or loss</th></tr></thead>
+<tbody>
+<tr><td>0</td><td>$0.00</td><td>$18,640.00</td><td>-$18,640.00</td></tr>
+<tr><td>400</td><td>$15,400.00</td><td>$24,580.00</td><td>-$9,180.00</td></tr>
+<tr><td>789</td><td>$30,376.50</td><td>$30,356.65</td><td>$19.85</td></tr>
+<tr><td>1,000</td><td>$38,500.00</td><td>$33,490.00</td><td>$5,010.00</td></tr>
+<tr><td>1,200</td><td>$46,200.00</td><td>$36,460.00</td><td>$9,740.00</td></tr>
+</tbody>
+</table>
+
+<figure><img src="/assets/images/tools/breakeven-analysis-calculator/break-even-point-profit-curve.svg" alt="Line chart of profit against units sold crossing zero at the 789-unit break-even point"><figcaption>Profit turns positive at 789 units in the worked example.</figcaption></figure>
+<h3>Setting a Target Profit</h3>
+<p>Breaking even is a floor, not a goal. To aim for $6,000 a month, add it to the fixed costs: \(\frac{18{,}640 + 6{,}000}{23.65} = 1{,}041.86\), so you need <strong>1,042 units</strong>. That is how <strong>sales targets</strong> are built from a profit goal rather than guessed.</p>
+        </section>
+        <section id="breakeven-analysis-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="breakeven-analysis-calculator-guide-heading-4">
+<h2 id="breakeven-analysis-calculator-guide-heading-4">Using the Breakeven Analysis Calculator for Your Business</h2>
+<p>Running your numbers through a calculator lets you test a decision in seconds before it costs you money, whether you run a studio or an eCommerce store. Three uses come up again and again:</p>
+<ul>
+<li><strong>Feasibility:</strong> check whether realistic sales projections can ever reach the break-even point in units before you commit startup costs.</li>
+<li><strong>Pricing:</strong> find the lowest price that still works and the volume where you start making a profit. Your break-even price sets a price floor for the product.</li>
+<li><strong>Cost control:</strong> see how much a lower variable cost or a smaller fixed cost drops the number of units you need.</li>
+</ul>
+
+<h3>Pricing Strategy and Price per Unit</h3>
+<p>Changing your <strong>price per unit</strong> is the fastest lever in any pricing strategy. In the coffee set example, raising the per-unit selling price by $2 to $40.50 cuts the break-even point to about 727 units, while dropping it by $2 to $36.50 pushes it to about 861. Always check that your expected demand still holds at the new price, because a higher markup that kills your units sold gains nothing.</p>
+
+<figure><img src="/assets/images/tools/breakeven-analysis-calculator/break-even-units-price-cost-sensitivity-grid.svg" alt="Grid of break-even units for three selling prices and three variable costs with the 789-unit example outlined"><figcaption>Break-even units shift with price and variable cost per unit; the outlined cell is the worked example.</figcaption></figure>
+<h3>Variable Costs and Fixed Costs Sensitivity</h3>
+<p>Variable cost changes work the opposite way. If a supplier raises your variable cost per unit by a dollar to $15.85, the break-even point climbs to about 823 units; a one-dollar saving drops it to about 756. On the fixed cost side, an extra $1,000 of monthly rent moves it from 789 to about 830 units, while a $1,000 saving brings it down to 746.</p>
+        </section>
+        <section id="breakeven-analysis-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="breakeven-analysis-calculator-guide-heading-5">
+<h2 id="breakeven-analysis-calculator-guide-heading-5">Break-Even Analysis for a Food Truck Lunch Menu</h2>
+<p>A food truck owner is about to add a $11.75 chicken rice bowl and wants to know whether weekday lunches alone can carry the month. The monthly fixed costs are on the invoices: permit $612, commissary kitchen $1,480, truck payment $1,544 and insurance $600, which adds up to <strong>$4,236</strong>. Ingredients, the compostable container and the card fee come to <strong>$4.62</strong> per bowl.</p>
+<p>The owner enters 4,236 for fixed costs, 4.62 for variable cost per unit and 11.75 for the selling price, then clicks calculate. The contribution margin comes back at <strong>$7.13</strong> per bowl, a 60.7% margin ratio, and the break-even point is <strong>594.11 bowls</strong>, which rounds up to 595. Break-even revenue is <strong>$6,991.25</strong> for the month.</p>
+<table>
+<thead><tr><th>Input or result</th><th>Value</th></tr></thead>
+<tbody>
+<tr><td>Fixed costs per month</td><td>$4,236.00</td></tr>
+<tr><td>Contribution margin per bowl</td><td>$7.13</td></tr>
+<tr><td>Bowls to break even</td><td>595</td></tr>
+<tr><td>Bowls per service day (22 days)</td><td>27.05, so 28</td></tr>
+</tbody>
+</table>
+<p>Spread over 22 service days, that is 28 bowls a day. The owner's credit union asks for a contribution margin ratio above 50% on any new menu line, and 60.7% clears it, so the item stays on the menu. The real question is the daily pace: a lunch rush at the owner's busiest stop moves about 45 bowls, so 28 is reachable, but a rainy stop is not.</p>
+<p>So the owner reruns the numbers with one input changed. A $11.25 price lowers the contribution margin to $6.63 and raises the break-even point to 639 bowls, or 30 a day, which is a harder target on slow days. The owner keeps $11.75 and sets a 28-bowl daily floor as the cue to move to the busier stop.</p>
+        </section>
+        <section id="breakeven-analysis-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="breakeven-analysis-calculator-guide-heading-6">
+<h2 id="breakeven-analysis-calculator-guide-heading-6">Break-Even Revenue vs. Break-Even Point in Units</h2>
+<p>Both numbers describe the same point, so which one you use depends on your product. Units suit a <strong>single-product</strong> business that sells a single item at a stable price. Your break even point in dollars, the break-even revenue, suits a business with several products, because dollars add up across lines where units do not.</p>
+<p>For a multi-product shop, use a <strong>weighted-average contribution margin</strong> based on your <strong>sales mix</strong>: multiply each product's margin by its share of sales, add the results, and divide fixed costs by that blended figure. Unlike a free break-even point calculator built for one item, this approach keeps the answer honest when your best sellers and slow movers have very different margins.</p>
+
+<h3>Cost of Goods Sold and Gross Profit</h3>
+<p>Your <strong>cost of goods sold</strong> is mostly the variable side: materials, direct labor and shipping for items you actually sold. Subtract it from revenue and you have <strong>gross profit</strong>. The per-unit slice of that figure is exactly what you type into the variable cost field, so it sets the contribution margin and, through it, the break-even point. Inventory still sitting on a shelf is not yet part of it, which is why inventory planning and break-even work together.</p>
+        </section>
+        <section id="breakeven-analysis-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="breakeven-analysis-calculator-guide-heading-7">
+<h2 id="breakeven-analysis-calculator-guide-heading-7">Limits of Break-Even Analysis</h2>
+<p>The model is simple on purpose, so treat the output as a planning guide and not a promise. It assumes the price, variable cost and fixed costs hold steady, which is rarely true over a long period. It ignores the time value of money, so for a multi-year investment you should compare it with a <strong>net present value</strong> analysis. It is also not the same as <strong>payback</strong>, which asks how long, not how many units, it takes to recover an investment.</p>
+<p>Fixed costs can also jump in steps: a second kiln or an extra employee adds equipment and salaries at a certain volume, so rerun the numbers whenever the business changes, at least quarterly. For budget decisions and financial forecasts, pair the result with <strong>profitability</strong> checks such as your profit margin, and with the supplier quotes behind your variable costs.</p>
+        </section>
+      </div>
+
+      <section id="breakeven-analysis-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="breakeven-analysis-calculator-faq-heading" data-section="faq">
+        <h2 id="breakeven-analysis-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Breakeven Analysis Calculator questions</h2>
+        <div id="breakeven-analysis-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="breakeven-analysis-calculator-faq-1" class="faq-item" open><summary id="breakeven-analysis-calculator-faq-1-summary" class="faq-summary"><h3 id="breakeven-analysis-calculator-faq-1-question" class="faq-question">What is a break-even point?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="breakeven-analysis-calculator-faq-1-answer" class="faq-answer"><p>It is the sales level where total revenue equals total costs. Below it you lose money; above it every extra unit adds profit.</p></div></details>
+          <details id="breakeven-analysis-calculator-faq-2" class="faq-item" open><summary id="breakeven-analysis-calculator-faq-2-summary" class="faq-summary"><h3 id="breakeven-analysis-calculator-faq-2-question" class="faq-question">How do I calculate the break-even point in units?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="breakeven-analysis-calculator-faq-2-answer" class="faq-answer"><p>Divide your fixed costs by the contribution margin, which is the selling price per unit minus the variable cost per unit. Round the result up to a whole unit.</p></div></details>
+          <details id="breakeven-analysis-calculator-faq-3" class="faq-item" open><summary id="breakeven-analysis-calculator-faq-3-summary" class="faq-summary"><h3 id="breakeven-analysis-calculator-faq-3-question" class="faq-question">What counts as a fixed cost and what counts as a variable cost?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="breakeven-analysis-calculator-faq-3-answer" class="faq-answer"><p>Fixed costs such as rent, salaries and insurance stay the same whatever you sell. Variable costs such as materials, packaging, shipping and sales commissions change with every unit made or sold.</p></div></details>
+          <details id="breakeven-analysis-calculator-faq-4" class="faq-item" open><summary id="breakeven-analysis-calculator-faq-4-summary" class="faq-summary"><h3 id="breakeven-analysis-calculator-faq-4-question" class="faq-question">What is contribution margin and why does it matter?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="breakeven-analysis-calculator-faq-4-answer" class="faq-answer"><p>It is what each unit contributes toward fixed costs after its own variable cost is paid. A higher contribution margin means fewer units are needed to break even.</p></div></details>
+          <details id="breakeven-analysis-calculator-faq-5" class="faq-item" open><summary id="breakeven-analysis-calculator-faq-5-summary" class="faq-summary"><h3 id="breakeven-analysis-calculator-faq-5-question" class="faq-question">How does raising my price change the break-even point?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="breakeven-analysis-calculator-faq-5-answer" class="faq-answer"><p>A higher selling price widens the contribution margin, so the break-even point falls. Check that demand still holds at the new price before relying on it.</p></div></details>
+          <details id="breakeven-analysis-calculator-faq-6" class="faq-item" open><summary id="breakeven-analysis-calculator-faq-6-summary" class="faq-summary"><h3 id="breakeven-analysis-calculator-faq-6-question" class="faq-question">Can I use this calculator for more than one product?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="breakeven-analysis-calculator-faq-6-answer" class="faq-answer"><p>It is built for a single product. For several products, run each product line on its own or use a weighted-average contribution margin based on your sales mix.</p></div></details>
+          <details id="breakeven-analysis-calculator-faq-7" class="faq-item" open><summary id="breakeven-analysis-calculator-faq-7-summary" class="faq-summary"><h3 id="breakeven-analysis-calculator-faq-7-question" class="faq-question">How often should I recalculate my break-even point?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="breakeven-analysis-calculator-faq-7-answer" class="faq-answer"><p>Whenever your costs, pricing or business model change, and at least quarterly. Rerun it before launching a product or taking on new fixed expenses.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="breakeven-analysis-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="breakeven-analysis-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="breakeven-analysis-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="breakeven-analysis-calculator-ad-bottom-leaderboard">
+            <ins id="breakeven-analysis-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("breakeven-analysis-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="breakeven-analysis-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="breakeven-analysis-calculator-right-rail-top" class="mb-6">
+        <aside id="breakeven-analysis-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="breakeven-analysis-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="breakeven-analysis-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="breakeven-analysis-calculator-ad-right-rail-rectangle">
+            <ins id="breakeven-analysis-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("breakeven-analysis-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="breakeven-analysis-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="breakeven-analysis-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="breakeven-analysis-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="breakeven-analysis-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="breakeven-analysis-calculator-ad-right-rail-skyscraper">
+            <ins id="breakeven-analysis-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("breakeven-analysis-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="breakeven-analysis-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="breakeven-analysis-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="breakeven-analysis-calculator-footer-brand">
+        <a id="breakeven-analysis-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="breakeven-analysis-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="breakeven-analysis-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="breakeven-analysis-calculator-footer-categories" aria-labelledby="breakeven-analysis-calculator-footer-categories-heading">
+        <h2 id="breakeven-analysis-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="breakeven-analysis-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="breakeven-analysis-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="breakeven-analysis-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="breakeven-analysis-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="breakeven-analysis-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="breakeven-analysis-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="breakeven-analysis-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="breakeven-analysis-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="breakeven-analysis-calculator-footer-company" aria-labelledby="breakeven-analysis-calculator-footer-company-heading">
+        <h2 id="breakeven-analysis-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="breakeven-analysis-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="breakeven-analysis-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="breakeven-analysis-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="breakeven-analysis-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="breakeven-analysis-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="breakeven-analysis-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="breakeven-analysis-calculator-footer-bottom" class="border-t border-line">
+      <p id="breakeven-analysis-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="breakeven-analysis-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Breakeven (cost-volume-profit) analysis for a single product.
+  //   Contribution margin per unit CM = price - variable cost; CM ratio = CM / price.
+  //   Breakeven units = fixed costs / CM; breakeven sales = fixed costs / CM ratio.
+  //   Units for a target profit = (fixed costs + target profit) / CM; sales = (fixed + target) / CM ratio.
+  //   At expected sales Q: profit = Q * CM - fixed; margin of safety = Q - breakeven units (also in
+  //   dollars and as % of expected sales); degree of operating leverage = Q * CM / profit (profit > 0).
+  // Verified in Node (scratchpad tests/b2biz): fixed $50,000, price $5, variable $2.50, 25,000 units ->
+  //   breakeven 20,000 units / $100,000, profit $12,500, margin of safety 5,000 units (20%) (matches a
+  //   published breakeven calculator's default result); fixed $60,000, price $25, variable $15, 8,000
+  //   units, target $20,000 -> CM ratio 40%, breakeven 6,000 units / $150,000, target 8,000 units /
+  //   $200,000, margin of safety 25%, operating leverage 4.00 (hand-checked). Price at or below variable
+  //   cost, blank, zero price and negative input show a message, never NaN/Infinity.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 });
+  var money0 = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+  var units = new Intl.NumberFormat('en-US', { maximumFractionDigits: 0 });
+  var dec = new Intl.NumberFormat('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  var one = new Intl.NumberFormat('en-US', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+
+  // --- calc ---
+  function breakeven(fixed, price, variable, expected, target) {
+    var cm = price - variable;
+    var r = { cm: cm, cmRatio: price > 0 ? cm / price : null, possible: cm > 0 };
+    if (!r.possible) return r;
+    r.beUnits = fixed / cm;
+    r.beSales = r.beUnits * price;
+    r.targetUnits = (fixed + target) / cm;
+    r.targetSales = r.targetUnits * price;
+    r.revenue = expected * price;
+    r.variableTotal = expected * variable;
+    r.totalCost = fixed + r.variableTotal;
+    r.profit = expected * cm - fixed;
+    r.mosUnits = expected - r.beUnits;
+    r.mosSales = r.mosUnits * price;
+    r.mosPct = expected > 0 ? r.mosUnits / expected : null;
+    r.dol = r.profit > 0 ? expected * cm / r.profit : null;
+    return r;
+  }
+
+  function volumes(beUnits, expected) {
+    var base = beUnits > 0 ? beUnits : (expected > 0 ? expected : 1000);
+    var list = [0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 2].map(function (f) { return Math.round(base * f); });
+    if (expected > 0) list.push(Math.round(expected));
+    list.sort(function (a, b) { return a - b; });
+    return list.filter(function (v, i) { return i === 0 || v !== list[i - 1]; });
+  }
+  // --- end calc ---
+
+  function el(id) { return document.getElementById(id); }
+  function setText(id, text) { el(id).textContent = text; }
+
+  function read(id, blankAsZero) {
+    var raw = String(el(id).value).trim();
+    if (raw === '') return blankAsZero ? 0 : NaN;
+    var v = Number(raw);
+    return isFinite(v) ? v : NaN;
+  }
+
+  var OUT = ['beUnits', 'beSales', 'beCm', 'beCmRatio', 'beTargetUnits', 'beTargetSales', 'beRevenue',
+             'beVarTotal', 'beTotalCost', 'beProfit', 'beMosUnits', 'beMosSales', 'beMosPct', 'beDol'];
+
+  function clearResults() {
+    OUT.forEach(function (id) { setText(id, '–'); });
+    el('beTable').textContent = '';
+  }
+
+  function wholeUnits(x) { return units.format(Math.max(0, Math.ceil(x - 1e-9))) + ' units'; }
+
+  function update() {
+    var fixed = read('beFixed'), price = read('bePrice'), variable = read('beVariable'),
+        expected = read('beExpected', true), target = read('beTarget', true);
+    var msg = '';
+    if (isNaN(fixed) || fixed < 0) msg = 'Enter fixed costs of $0 or more.';
+    else if (isNaN(price) || price <= 0) msg = 'Enter a selling price per unit greater than $0.';
+    else if (isNaN(variable) || variable < 0) msg = 'Enter a variable cost per unit of $0 or more.';
+    else if (isNaN(expected) || expected < 0) msg = 'Expected unit sales cannot be negative.';
+    else if (isNaN(target) || target < 0) msg = 'Target profit cannot be negative.';
+    var error = el('beError');
+    error.hidden = !msg;
+    error.textContent = msg;
+    var warn = el('beWarning');
+    warn.hidden = true;
+    if (msg) { clearResults(); return; }
+
+    var r = breakeven(fixed, price, variable, expected, target);
+    setText('beCm', money.format(r.cm));
+    setText('beCmRatio', one.format(r.cmRatio * 100) + '%');
+    if (!r.possible) {
+      OUT.forEach(function (id) { if (id !== 'beCm' && id !== 'beCmRatio') setText(id, 'n/a'); });
+      el('beTable').textContent = '';
+      warn.hidden = false;
+      setText('beWarningText', 'The selling price does not cover the variable cost of each unit, so every extra sale adds to the loss and there is no breakeven point. Raise the price or lower the variable cost.');
+      return;
+    }
+    setText('beUnits', wholeUnits(r.beUnits));
+    setText('beSales', money0.format(r.beSales));
+    setText('beTargetUnits', wholeUnits(r.targetUnits));
+    setText('beTargetSales', money0.format(r.targetSales));
+    setText('beRevenue', money0.format(r.revenue));
+    setText('beVarTotal', money0.format(r.variableTotal));
+    setText('beTotalCost', money0.format(r.totalCost));
+    setText('beProfit', money0.format(r.profit));
+    setText('beMosUnits', units.format(Math.round(r.mosUnits)) + ' units');
+    setText('beMosSales', money0.format(r.mosSales));
+    setText('beMosPct', r.mosPct === null ? 'n/a' : one.format(r.mosPct * 100) + '%');
+    setText('beDol', r.dol === null ? 'n/a' : dec.format(r.dol));
+    if (expected > 0 && r.mosUnits < 0) {
+      warn.hidden = false;
+      setText('beWarningText', 'Expected sales are below the breakeven point, so the plan shows a loss. The negative margin of safety is how many more units you would need to sell to break even.');
+    }
+
+    var body = el('beTable');
+    body.textContent = '';
+    volumes(r.beUnits, expected).forEach(function (q) {
+      var tr = document.createElement('tr');
+      var cells = [units.format(q), money0.format(q * price), money0.format(q * variable), money0.format(fixed),
+                   money0.format(fixed + q * variable), money0.format(q * r.cm - fixed)];
+      cells.forEach(function (text) {
+        var td = document.createElement('td');
+        td.textContent = text;
+        tr.appendChild(td);
+      });
+      body.appendChild(tr);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = el('beForm');
+    if (!form) return;
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

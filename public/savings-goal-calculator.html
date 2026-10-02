@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="en" id="savings-goal-calculator-document" data-page-slug="savings-goal-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Savings Goal Calculator: How Much to Save Each Month</title>
+  <meta name="description" content="Enter your target, deadline, starting balance and interest rate, and this savings goal calculator shows how much you need to save each month to get there.">
+  <link rel="canonical" href="https://company-marketcap.github.io/savings-goal-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Savings Goal Calculator: How Much to Save Each Month">
+  <meta property="og:description" content="Enter your target, deadline, starting balance and interest rate, and this savings goal calculator shows how much you need to save each month to get there.">
+  <meta property="og:url" content="https://company-marketcap.github.io/savings-goal-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Savings Goal Calculator", "url": "https://company-marketcap.github.io/savings-goal-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Enter your target, deadline, starting balance and interest rate, and this savings goal calculator shows how much you need to save each month to get there."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Savings & Emergency Funds", "item": "https://company-marketcap.github.io/financial-calculators.html#savings-calculators"}, {"@type": "ListItem", "position": 4, "name": "Savings Goal Calculator", "item": "https://company-marketcap.github.io/savings-goal-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How does a savings goal calculator work?", "acceptedAnswer": {"@type": "Answer", "text": "It takes your target amount, your starting balance, the time you have and the interest rate you expect, then solves for the regular deposit that grows to the target by your deadline. The balance you already hold keeps compounding, so the deposit is smaller than the target divided by the number of months."}}, {"@type": "Question", "name": "How much should I save each month?", "acceptedAnswer": {"@type": "Answer", "text": "A common guideline is the 50/30/20 budget: about 20% of your after-tax income goes to saving and extra debt payments. Compare the suggested contribution with that figure. If it is higher, lengthen the time frame or raise the starting balance and recalculate."}}, {"@type": "Question", "name": "How does the interest rate change the deposit I need?", "acceptedAnswer": {"@type": "Answer", "text": "A higher annual interest rate means your balance earns more on its own, so the deposit shrinks. The effect is modest on short goals and larger on long ones. Use a rate you can count on, and test a lower figure if the account's rate may change."}}, {"@type": "Question", "name": "What if my starting balance already covers the goal?", "acceptedAnswer": {"@type": "Answer", "text": "If your starting balance, grown at the interest rate, reaches the goal before the deadline, the suggested contribution shows $0.00. You can raise the goal or shorten the time frame to see what a tighter plan would require."}}, {"@type": "Question", "name": "How long will it take to save for my goal?", "acceptedAnswer": {"@type": "Answer", "text": "Change the time to grow until the suggested contribution matches what you can afford each month. A shorter time frame needs a larger deposit, and a longer one a smaller deposit, so you can see how the date moves with the amount."}}, {"@type": "Question", "name": "Does deposit or compound frequency matter?", "acceptedAnswer": {"@type": "Answer", "text": "Slightly. More frequent deposits and more frequent compounding put your money to work sooner, but the deposit size and the length of time have a much bigger effect on the result than the schedule does."}}, {"@type": "Question", "name": "Does the result include inflation, taxes or fees?", "acceptedAnswer": {"@type": "Answer", "text": "No. The estimate assumes a constant interest rate, reinvested interest, deposits at the end of each period and no tax, fees or inflation. If prices may rise before your deadline, set a higher goal, and treat the result as a model rather than a prediction."}}, {"@type": "Question", "name": "Where should I keep money I'm saving for a goal?", "acceptedAnswer": {"@type": "Answer", "text": "For goals due within a few years, a high-yield savings account or a certificate of deposit keeps your money stable while it earns interest. Investments may earn more over longer periods but carry risk, so test a lower expected return before relying on them."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="savings-goal-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="savings-goal-calculator" data-page-type="calculator">
+  <a id="savings-goal-calculator-skip-link" href="#savings-goal-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="savings-goal-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="savings-goal-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="savings-goal-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="savings-goal-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="savings-goal-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="savings-goal-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="savings-goal-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="savings-goal-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="savings-goal-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="savings-goal-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="savings-goal-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="savings-goal-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="savings-goal-calculator-header-search-status" aria-controls="savings-goal-calculator-header-search-results" data-search-input="header">
+              <p id="savings-goal-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="savings-goal-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="savings-goal-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="savings-goal-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="savings-goal-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="savings-goal-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="savings-goal-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="savings-goal-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="savings-goal-calculator-mobile-search-status" aria-controls="savings-goal-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="savings-goal-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="savings-goal-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="savings-goal-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="savings-goal-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="savings-goal-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="savings-goal-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="savings-goal-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="savings-goal-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="savings-goal-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="savings-goal-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="savings-goal-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="savings-goal-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="savings-goal-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="savings-goal-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="savings-goal-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="savings-goal-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="savings-goal-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="savings-goal-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="savings-goal-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="savings-goal-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="savings-goal-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="savings-goal-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="savings-goal-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="savings-goal-calculator-sidebar-search-status" aria-controls="savings-goal-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="savings-goal-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="savings-goal-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="savings-goal-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="savings-goal-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="savings-goal-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="savings-goal-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="savings-goal-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="savings-goal-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="savings-goal-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="savings-goal-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="savings-goal-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="savings-goal-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="savings-goal-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="savings-goal-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="savings-goal-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="savings-goal-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="savings-goal-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="savings-goal-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="savings-goal-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="savings-goal-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="savings-goal-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="savings-goal-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="savings-goal-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="savings-goal-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="savings-goal-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="savings-goal-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="savings-goal-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators" aria-current="true">Savings &amp; Emergency Funds</a></li><li><a id="savings-goal-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="savings-goal-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="savings-goal-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="savings-goal-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="savings-goal-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="savings-goal-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="savings-goal-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="savings-goal-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="savings-goal-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="savings-goal-calculator" data-calculator-slug="savings-goal-calculator" data-sub-category-slug="savings-calculators">
+      <aside id="savings-goal-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="savings-goal-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="savings-goal-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="savings-goal-calculator-ad-top-leaderboard">
+            <ins id="savings-goal-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("savings-goal-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="savings-goal-calculator-intro-area" class="space-y-4">
+        <nav id="savings-goal-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="savings-goal-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="savings-goal-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="savings-goal-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="savings-goal-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#savings-calculators" itemprop="item"><span itemprop="name">Savings &amp; Emergency Funds</span></a><meta itemprop="position" content="3"></li>
+            <li id="savings-goal-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Savings Goal Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/savings-goal-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="savings-goal-calculator-hero-section" aria-labelledby="savings-goal-calculator-hero-heading" data-section="hero">
+          <h1 id="savings-goal-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Savings Goal Calculator: How Much to Save Each Month</h1>
+          <p id="savings-goal-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Whether you&#x27;re gathering a down payment with closing costs or protecting yourself with an emergency fund, every financial plan starts by turning one big number into a small, repeatable one. The savings goal calculator takes your target amount, your deadline and the cash you already hold, then reveals how much to save each month to arrive on time. It&#x27;s the fastest way to learn whether a goal fits your budget today or needs more time. <!-- SILO_START:slot_a -->Try the <a class="silo-link" href="/savings-calculator.html">free savings calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="savings-goal-calculator-tool" class="space-y-6" data-page-slug="savings-goal-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="sgFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="sgForm" class="space-y-5" novalidate aria-labelledby="sgFormHeading">
+      <h2 id="sgFormHeading" class="panel-heading">Enter your savings goal</h2>
+<div><label for="sgMode" class="form-label">What do you want to find?</label><select id="sgMode" class="form-select"><option value="payment" selected>How much to save each month</option><option value="time">How long it will take</option></select></div>
+<div><label for="sgGoal" class="form-label">Savings goal</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="sgGoal" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="20000" inputmode="decimal"></div></div>
+<div><label for="sgSaved" class="form-label">Amount already saved</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="sgSaved" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="2000" inputmode="decimal"></div></div>
+<div><label for="sgRate" class="form-label">Annual interest rate or return</label><div class="input-group"><input type="number" id="sgRate" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="50" step="0.1" value="4" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">A savings account's APY or an assumed average investment return.</p></div>
+<div id="sgYearsWrap"><div><label for="sgYears" class="form-label">Time to reach the goal</label><div class="input-group"><input type="number" id="sgYears" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0.1" max="100" step="0.5" value="5" inputmode="decimal"><span class="input-affix">yrs</span></div><p class="form-hint">Decimals work: 2.5 years is 30 months.</p></div></div>
+<div id="sgMonthlyWrap" hidden><div><label for="sgMonthly" class="form-label">Monthly deposit</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="sgMonthly" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="25" value="300" inputmode="decimal"></div></div></div>
+<details class="form-details"><summary class="form-details-summary">More options</summary>
+<div><label for="sgTiming" class="form-label">Deposit timing</label><select id="sgTiming" class="form-select"><option value="end" selected>End of each month</option><option value="start">Start of each month</option></select></div>
+<div><label for="sgInflation" class="form-label">Inflation rate</label><div class="input-group"><input type="number" id="sgInflation" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="20" step="0.1" value="0" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">Leave at 0 for a fixed dollar goal. Above 0, the goal is in today's dollars and rises with inflation.</p></div>
+</details>
+      <p id="sgError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="sgResults" aria-live="polite" aria-labelledby="sgResultsHeading">
+      <h2 id="sgResultsHeading" class="panel-heading">Your results</h2>
+<div class="stat-grid mt-4">
+<div class="stat-card stat-card-highlight"><p class="stat-label" id="sgMainLabel">Monthly savings needed</p><p id="sgMain" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">Total deposits</p><p id="sgContributed" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">Interest earned</p><p id="sgInterest" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">Balance at the end</p><p id="sgFinal" class="stat-value">–</p></div>
+</div>
+<p id="sgNote" class="form-hint"></p>
+<div class="mt-5">
+<div class="result-row" id="sgTargetRow"><span class="result-term">Goal in future dollars</span><span id="sgTarget" class="result-value">–</span></div>
+</div>
+<p class="form-hint">Total deposits include the amount already saved. Interest compounds monthly.</p>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="sgScheduleHeading" data-section="schedule">
+  <h2 id="sgScheduleHeading" class="panel-heading">Year-by-year progress</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">How your balance grows toward the goal, split between your deposits and interest.</p>
+  <div class="table-scroll mt-5 max-h-[520px]" tabindex="0" role="region" aria-labelledby="sgScheduleHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Year</th><th scope="col">Deposits</th><th scope="col">Interest</th><th scope="col">Balance</th></tr></thead>
+      <tbody id="sgSchedule"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="savings-goal-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="savings-goal-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Whether you&#x27;re gathering a down payment with closing costs or protecting yourself with an emergency fund, every financial plan starts by turning one big number into a small, repeatable one. The savings goal calculator takes your target amount, your deadline and the cash you already hold, then reveals how much to save each month to arrive on time. It&#x27;s the fastest way to learn whether a goal fits your budget today or needs more time. <!-- SILO_START:slot_a_m -->Try the <a class="silo-link" href="/savings-calculator.html">free savings calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="savings-goal-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="savings-goal-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="savings-goal-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="savings-goal-calculator-ad-in-feed">
+            <ins id="savings-goal-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("savings-goal-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="savings-goal-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="savings-goal-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="savings-goal-calculator-guide-heading-1">
+<h2 id="savings-goal-calculator-guide-heading-1">How a Savings Goal Calculator Works: Inputs and Formula</h2>
+<p>Every <strong>savings calculator</strong> of this kind answers one question: what regular deposit, growing at a given rate, reaches your <strong>financial target</strong> by a set date? Four inputs drive the answer, and each deserves a moment of thought before you press the button. <!-- SILO_START:slot_b -->Pair this with the <a class="silo-link" href="/compare-savings-rates-calculator.html">compare savings rates calculator online</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_b --></p>
+
+<h3>Starting Balance and Current Savings</h3>
+<p>Your <strong>starting balance</strong> is the money you have already set aside for this purpose. Enter 0 if you're beginning from scratch. Some tools label the same field <strong>current savings</strong>. Either way, it gets a head start because it earns growth for the entire term, which lowers the amount you need to add each month.</p>
+
+<h3>Annual Interest Rate and Expected Rate of Return</h3>
+<p>The <strong>annual interest rate</strong> is what your account pays on the balance. When the money sits in investments instead of cash, the same field becomes an <strong>expected rate of return</strong>, which is a forecast rather than a promise. A higher interest rate shrinks the deposit you need, but a rate you can't count on makes the plan fragile, so test a lower figure too.</p>
+
+<h3>Time to Grow and Your Time Frame</h3>
+<p><strong>Time to grow</strong> is the stretch between today and your <strong>deadline</strong>, entered in months or years. A realistic <strong>time frame</strong> matters more than most people expect, because a longer runway means more deposits and more compounding working for you.</p>
+
+<p>Behind the screen, the tool solves the future-value equation for the payment:</p>
+<p>$$PMT = \frac{\left(G - S \times (1 + r)^{n}\right) \times r}{(1 + r)^{n} - 1}$$</p>
+<p>Here \(G\) is your goal, \(S\) is the starting balance, \(r\) is the monthly rate (the annual rate divided by 12) and \(n\) is the number of months. Deposits are assumed to land at the end of each month.</p>
+        </section>
+        <section id="savings-goal-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="savings-goal-calculator-guide-heading-2">
+<h2 id="savings-goal-calculator-guide-heading-2">How Much to Save Each Month for Your Savings Target</h2>
+<p>A worked example with numbers you can check by hand makes the formula concrete. Suppose your <strong>savings target</strong> is <strong>$23,750</strong> for a used car you plan to buy in 30 months. You already hold <strong>$2,860</strong>, and the account pays a 4.35% annual rate, compounded monthly. <!-- SILO_START:slot_c -->The <a class="silo-link" href="/vice-savings-calculator.html">free vice savings calculator</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_c --></p>
+
+<h3>Worked Example for a Monthly Savings Goal</h3>
+<ol>
+<li>Convert the rate: 4.35% ÷ 12 = <strong>0.3625%</strong> per month.</li>
+<li>Grow the starting balance: $2,860 × 1.003625<sup>30</sup> = <strong>$3,187.94</strong>.</li>
+<li>Find the gap the deposits must fill: $23,750 − $3,187.94 = <strong>$20,562.06</strong>.</li>
+<li>Divide by the deposit growth factor (31.63 for 30 months): $20,562.06 ÷ 31.63 = <strong>$650.05</strong>.</li>
+</ol>
+<p>Your <strong>monthly savings</strong> requirement is therefore <strong>$650.05</strong>. The table shows how the balance climbs when you pay it every month.</p>
+
+<table>
+<thead><tr><th>Month</th><th>Total deposited</th><th>Balance</th><th>Interest earned</th></tr></thead>
+<tbody>
+<tr><td>6</td><td>$6,760.30</td><td>$6,858.59</td><td>$98.29</td></tr>
+<tr><td>12</td><td>$10,660.60</td><td>$10,944.94</td><td>$284.34</td></tr>
+<tr><td>18</td><td>$14,560.90</td><td>$15,120.98</td><td>$560.08</td></tr>
+<tr><td>24</td><td>$18,461.20</td><td>$19,388.67</td><td>$927.47</td></tr>
+<tr><td>30</td><td>$22,361.50</td><td>$23,750.03</td><td>$1,388.53</td></tr>
+</tbody>
+</table>
+
+<p>Across the 30 months you contribute $19,501.50 of your own cash on top of the $2,860 you began with. The remaining <b>$1,388.53</b> is <strong>interest earned</strong>, and it arrives faster each period because earlier growth earns growth of its own.</p>
+
+<h3>Why Savings Goal Calculators Beat Simple Division</h3>
+<p>The quick shortcut divides the gap by the months: $20,890 ÷ 30 = $696.33. That figure ignores growth and overstates the deposit by $46.28 every month. Good <strong>savings goal calculators</strong> include the rate, so they show the smaller number the math actually supports.</p>
+        </section>
+        <section id="savings-goal-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="savings-goal-calculator-guide-heading-3">
+<h2 id="savings-goal-calculator-guide-heading-3">How Long Will It Take to Save? Adjusting the Time Frame</h2>
+<p>Deadlines are rarely fixed in stone, so it helps to see what stretching or shrinking the plan does to the monthly deposit. Using the same $23,750 target, $2,860 starting balance and 4.35% rate:</p>
+<ul>
+<li><strong>24 months:</strong> $824.31 a month</li>
+<li><strong>30 months:</strong> $650.05 a month</li>
+<li><strong>36 months:</strong> $533.92 a month</li>
+<li><strong>42 months:</strong> $451.01 a month</li>
+</ul>
+<p>Each extra six months cuts the deposit by roughly $100 to $175. You can also flip the question and ask <i>how long to reach goal</i> when your budget caps the deposit. At $400 a month, the balance crosses $23,750 in month 47 and finishes at $23,846.39. Whenever you wonder <strong>how long will it take to save</strong> for something, change the deposit and watch the date move.</p>
+        </section>
+        <section id="savings-goal-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="savings-goal-calculator-guide-heading-4">
+<h2 id="savings-goal-calculator-guide-heading-4">A Freelance Photographer's Savings Plan for an 18-Month Gear Target</h2>
+<p>A freelance photographer wants a full-frame camera body and a lighting kit before wedding season. The quotes add up to <strong>$9,180</strong>, and the purchase is 18 months away. A separate gear account already holds <strong>$1,425.60</strong>, and its posted rate is <strong>4.10%</strong> a year.</p>
+<p>Those three figures go into the calculator along with 18 months, and the savings goal calculation returns <strong>$413.55</strong>, rounded up to $413.56 so the last deposit doesn't fall short. Compound growth does part of the work: the starting balance alone grows to about $1,516 by month 18, so the deposits only need to cover the remaining gap of roughly $7,664.</p>
+<p>Next comes a check against a named benchmark. Take-home pay is $3,640 a month, and the 50/30/20 rule reserves 20%, or $728, for saving. The $413.56 deposit uses 11.4% of take-home, which sits comfortably inside that guideline.</p>
+<p>A second pass changes only one input. A camera retailer is offering a bundle discount that ends in 15 months, so the time frame drops from 18 to 15. The result jumps to <strong>$499.84</strong> a month, or 13.7% of take-home pay. That still fits under the 20% guideline, but it leaves less room for the quarterly insurance bill, so the photographer keeps 18 months.</p>
+<p>The decision is concrete: schedule a $413.56 transfer for the 1st of every month, and recheck the rate each quarter. If the account rate falls below 3%, the same calculation would ask for about $418 a month, so the schedule adjusts by only a few dollars.</p>
+        </section>
+        <section id="savings-goal-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="savings-goal-calculator-guide-heading-5">
+<h2 id="savings-goal-calculator-guide-heading-5">Savings Frequency and the Assumptions Behind Your Savings Plan</h2>
+<p>Many tools also ask for your <strong>savings frequency</strong>: weekly, fortnightly, monthly or annual deposits. Paying more often puts cash to work sooner, though the difference is small next to the size of the deposit itself. Because <strong>compound interest</strong> adds growth on top of earlier growth, regular savings made on schedule matter more than precision, and that kind of planning takes discipline. It's also why the tool asks how often you deposit.</p>
+<p>Treat any result as an estimate, since it rests on simplifications that rarely hold perfectly in real life:</p>
+<ul>
+<li>The rate stays constant for the whole term.</li>
+<li>You reinvest all growth instead of withdrawing it.</li>
+<li>There is no adjustment for inflation, so a target that must buy tomorrow's prices should be set higher.</li>
+<li>No income tax is taken from the growth.</li>
+<li>No fees or penalties reduce the balance.</li>
+</ul>
+<p>This is a model, not a prediction, and each disclaimer above is a reason to build a small cushion into your numbers. If a large decision depends on the outcome, a licensed financial adviser can tailor the plan to your situation.</p>
+        </section>
+        <section id="savings-goal-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="savings-goal-calculator-guide-heading-6">
+<h2 id="savings-goal-calculator-guide-heading-6">Choosing a Savings Strategy: Where to Keep Your Money</h2>
+<p>The home you pick for your cash sets the rate you plug in, so the account choice is part of the plan.</p>
+
+<h3>High-Yield Savings Account and Credit Union Choices</h3>
+<p>A <strong>high-yield savings account</strong> pays noticeably more than a standard <strong>savings account</strong>, and many are run by online banks. A credit union or local bank can be just as competitive on rates. Compare monthly fees and minimum balances across several accounts, because a fee quietly eats into the growth you're counting on.</p>
+
+<h3>Certificates of Deposit and Investment Accounts</h3>
+<p>Certificates of deposit lock your money for a fixed term in return for a higher rate, and withdrawals before maturity usually cost a penalty. For goals more than five years away, investing through investment accounts holding stocks, bonds or mutual funds may earn more, yet they carry risk and their value can fall just when you need it. Money earmarked for retirement or college often belongs here, while a goal due in two or three years usually does not. For a certificate, enter its fixed rate in the tool; for investments, test a lower expected return than the one you hope for.</p>
+        </section>
+        <section id="savings-goal-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="savings-goal-calculator-guide-heading-7">
+<h2 id="savings-goal-calculator-guide-heading-7">Ways to Save More Money Toward Your Financial Goal</h2>
+<p>If the result looks out of reach, shrinking the target isn't your only lever. Boosting the deposit is often easier than it looks.</p>
+
+<h3>Automatic Transfers and Sinking Funds</h3>
+<p>Set up <strong>automatic transfers</strong> from checking on payday so you <strong>automate your savings</strong> before anything else claims the cash. For predictable costs such as vacations, car repairs or holiday gifts, <strong>sinking funds</strong> keep small amounts ready, so a surprise bill doesn't land on a credit card.</p>
+
+<h3>Fit It Into a 50/30/20 Budget</h3>
+<p>The <strong>50/30/20 budget</strong> sends 50% of after-tax income to needs, 30% to wants and 20% to saving and extra debt payments. So <strong>how much should I save</strong> if you take home $4,200 a month? Twenty percent is $840, which would cover the $650.05 deposit from the example with room left over. Track the plan in a monthly budget, using budgeting apps if you prefer, and pay down high-interest debt first when a card charges more than your savings earn.</p>
+
+<h3>Raise, Bonuses and Side Gigs</h3>
+<p>Each extra dollar either lowers the required deposit or shortens the wait, so rerun the tool after every change below.</p>
+<ul>
+<li>When you get a raise, send half of it straight to the deposit.</li>
+<li>Route bonuses and cash gifts into your starting balance as a lump sum.</li>
+<li>Take on side gigs or sell unused items for a short burst of extra cash.</li>
+<li>Cut unnecessary expenses and impulse buying, and buy second-hand when quality allows.</li>
+<li>Review the numbers every few months to track your progress and adjust.</li>
+</ul>
+<aside><p><strong>Tip:</strong> Run one goal at a time. If you have several, such as an emergency fund and a car, work out the deposit for each, then decide whether to fund them in order or all at once. Anything you take out early, whether for withdrawals or a surprise bill, pushes your finish date back.</p></aside>
+<p>Keep your accounts organized and every deposit moves you along your <strong>savings journey</strong>. The same method works to grow your savings for a few thousand dollars or tens of thousands: if you're working out how much to save monthly for a different goal, a <em>save toward a goal calculator</em> or any other <strong>savings goals calculator</strong> follows the same logic. Change the target, the weekly or monthly deposit and the rate, and read the new answer.</p>
+        </section>
+      </div>
+
+      <section id="savings-goal-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="savings-goal-calculator-faq-heading" data-section="faq">
+        <h2 id="savings-goal-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Savings Goal Calculator questions</h2>
+        <div id="savings-goal-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="savings-goal-calculator-faq-1" class="faq-item" open><summary id="savings-goal-calculator-faq-1-summary" class="faq-summary"><h3 id="savings-goal-calculator-faq-1-question" class="faq-question">How does a savings goal calculator work?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="savings-goal-calculator-faq-1-answer" class="faq-answer"><p>It takes your target amount, your starting balance, the time you have and the interest rate you expect, then solves for the regular deposit that grows to the target by your deadline. The balance you already hold keeps compounding, so the deposit is smaller than the target divided by the number of months.</p></div></details>
+          <details id="savings-goal-calculator-faq-2" class="faq-item" open><summary id="savings-goal-calculator-faq-2-summary" class="faq-summary"><h3 id="savings-goal-calculator-faq-2-question" class="faq-question">How much should I save each month?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="savings-goal-calculator-faq-2-answer" class="faq-answer"><p>A common guideline is the 50/30/20 budget: about 20% of your after-tax income goes to saving and extra debt payments. Compare the suggested contribution with that figure. If it is higher, lengthen the time frame or raise the starting balance and recalculate.</p></div></details>
+          <details id="savings-goal-calculator-faq-3" class="faq-item" open><summary id="savings-goal-calculator-faq-3-summary" class="faq-summary"><h3 id="savings-goal-calculator-faq-3-question" class="faq-question">How does the interest rate change the deposit I need?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="savings-goal-calculator-faq-3-answer" class="faq-answer"><p>A higher annual interest rate means your balance earns more on its own, so the deposit shrinks. The effect is modest on short goals and larger on long ones. Use a rate you can count on, and test a lower figure if the account&#x27;s rate may change.</p></div></details>
+          <details id="savings-goal-calculator-faq-4" class="faq-item" open><summary id="savings-goal-calculator-faq-4-summary" class="faq-summary"><h3 id="savings-goal-calculator-faq-4-question" class="faq-question">What if my starting balance already covers the goal?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="savings-goal-calculator-faq-4-answer" class="faq-answer"><p>If your starting balance, grown at the interest rate, reaches the goal before the deadline, the suggested contribution shows $0.00. You can raise the goal or shorten the time frame to see what a tighter plan would require.</p></div></details>
+          <details id="savings-goal-calculator-faq-5" class="faq-item" open><summary id="savings-goal-calculator-faq-5-summary" class="faq-summary"><h3 id="savings-goal-calculator-faq-5-question" class="faq-question">How long will it take to save for my goal?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="savings-goal-calculator-faq-5-answer" class="faq-answer"><p>Change the time to grow until the suggested contribution matches what you can afford each month. A shorter time frame needs a larger deposit, and a longer one a smaller deposit, so you can see how the date moves with the amount.</p></div></details>
+          <details id="savings-goal-calculator-faq-6" class="faq-item" open><summary id="savings-goal-calculator-faq-6-summary" class="faq-summary"><h3 id="savings-goal-calculator-faq-6-question" class="faq-question">Does deposit or compound frequency matter?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="savings-goal-calculator-faq-6-answer" class="faq-answer"><p>Slightly. More frequent deposits and more frequent compounding put your money to work sooner, but the deposit size and the length of time have a much bigger effect on the result than the schedule does.</p></div></details>
+          <details id="savings-goal-calculator-faq-7" class="faq-item" open><summary id="savings-goal-calculator-faq-7-summary" class="faq-summary"><h3 id="savings-goal-calculator-faq-7-question" class="faq-question">Does the result include inflation, taxes or fees?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="savings-goal-calculator-faq-7-answer" class="faq-answer"><p>No. The estimate assumes a constant interest rate, reinvested interest, deposits at the end of each period and no tax, fees or inflation. If prices may rise before your deadline, set a higher goal, and treat the result as a model rather than a prediction.</p></div></details>
+          <details id="savings-goal-calculator-faq-8" class="faq-item" open><summary id="savings-goal-calculator-faq-8-summary" class="faq-summary"><h3 id="savings-goal-calculator-faq-8-question" class="faq-question">Where should I keep money I&#x27;m saving for a goal?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="savings-goal-calculator-faq-8-answer" class="faq-answer"><p>For goals due within a few years, a high-yield savings account or a certificate of deposit keeps your money stable while it earns interest. Investments may earn more over longer periods but carry risk, so test a lower expected return before relying on them.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="savings-goal-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="savings-goal-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="savings-goal-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="savings-goal-calculator-ad-bottom-leaderboard">
+            <ins id="savings-goal-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("savings-goal-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="savings-goal-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="savings-goal-calculator-right-rail-top" class="mb-6">
+        <aside id="savings-goal-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="savings-goal-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="savings-goal-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="savings-goal-calculator-ad-right-rail-rectangle">
+            <ins id="savings-goal-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("savings-goal-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="savings-goal-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="savings-goal-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="savings-goal-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="savings-goal-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="savings-goal-calculator-ad-right-rail-skyscraper">
+            <ins id="savings-goal-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("savings-goal-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="savings-goal-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="savings-goal-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="savings-goal-calculator-footer-brand">
+        <a id="savings-goal-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="savings-goal-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="savings-goal-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="savings-goal-calculator-footer-categories" aria-labelledby="savings-goal-calculator-footer-categories-heading">
+        <h2 id="savings-goal-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="savings-goal-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="savings-goal-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="savings-goal-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="savings-goal-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="savings-goal-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="savings-goal-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="savings-goal-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="savings-goal-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="savings-goal-calculator-footer-company" aria-labelledby="savings-goal-calculator-footer-company-heading">
+        <h2 id="savings-goal-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="savings-goal-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="savings-goal-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="savings-goal-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="savings-goal-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="savings-goal-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="savings-goal-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="savings-goal-calculator-footer-bottom" class="border-t border-line">
+      <p id="savings-goal-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="savings-goal-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Savings goal: monthly compounding at (annual return / 12), deposits at the end of each month
+  // (or the start, under More options).
+  //   Monthly deposit needed = (goal - saved x (1+i)^n) / (((1+i)^n - 1) / i x (1+i if start of month))
+  //   With 0% return: (goal - saved) / n.  Inflation option: goal is in today's dollars and grows
+  //   by (1 + inflation)^(years) - for the time mode the target grows month by month.
+  //   Time to goal: month-by-month simulation (capped at 100 years).
+  // Verified (Node scratch test): $20,000 goal, $2,000 saved, 4%, 5 years -> $264.83/month at month
+  // end, $263.95 at month start (closed-form annuity, checked in Python). Textbook: $100/month at
+  // 6% for 10 years grows to $16,387.93, and the calculator returns exactly $100.00 for that goal.
+  // Time mode: $300/month -> 54 months (NPER formula gives 53.7, rounded up to a whole month).
+  // 0% return: ($20,000 - $2,000) / 60 = $300.00. 3% inflation: goal becomes $23,185 in 5 years.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 });
+  var money0 = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+  var MAX_MONTHS = 1200;
+
+  function num(id) {
+    var v = parseFloat(document.getElementById(id).value);
+    return isNaN(v) ? NaN : v;
+  }
+
+  function monthlyNeeded(goal, saved, i, n, begin) {
+    var grow = Math.pow(1 + i, n);
+    var need = goal - saved * grow;
+    if (need <= 0) return 0;
+    var factor = i === 0 ? n : (grow - 1) / i * (begin ? 1 + i : 1);
+    return need / factor;
+  }
+
+  function step(bal, i, pmt, begin) {
+    return begin ? (bal + pmt) * (1 + i) : bal * (1 + i) + pmt;
+  }
+
+  // Months until the balance reaches the (possibly inflating) goal; -1 if not within MAX_MONTHS.
+  function monthsToGoal(goal, saved, i, pmt, begin, infl) {
+    if (saved >= goal) return 0;
+    var bal = saved;
+    for (var m = 1; m <= MAX_MONTHS; m++) {
+      bal = step(bal, i, pmt, begin);
+      if (bal >= goal * Math.pow(1 + infl, m / 12) - 1e-9) return m;
+    }
+    return -1;
+  }
+
+  function schedule(saved, i, pmt, begin, months) {
+    var rows = [], bal = saved, contributed = saved;
+    for (var m = 1; m <= months; m++) {
+      bal = step(bal, i, pmt, begin);
+      contributed += pmt;
+      if (m % 12 === 0 || m === months) {
+        rows.push({ label: m % 12 === 0 ? String(m / 12) : (Math.floor(m / 12) + ' yr ' + (m % 12) + ' mo'),
+                    contributed: contributed, balance: bal });
+      }
+    }
+    return { rows: rows, balance: bal, contributed: contributed };
+  }
+
+  function duration(months) {
+    var y = Math.floor(months / 12), m = months % 12, parts = [];
+    if (y) parts.push(y + (y === 1 ? ' year' : ' years'));
+    if (m || !y) parts.push(m + (m === 1 ? ' month' : ' months'));
+    return parts.join(' ');
+  }
+
+  function set(id, text) { document.getElementById(id).textContent = text; }
+
+  function cell(tr, text) {
+    var td = document.createElement('td');
+    td.textContent = text;
+    tr.appendChild(td);
+  }
+
+  function update() {
+    var mode = document.getElementById('sgMode').value;
+    var begin = document.getElementById('sgTiming').value === 'start';
+    var goal = num('sgGoal'), saved = num('sgSaved'), rate = num('sgRate'), years = num('sgYears'),
+        pmt = num('sgMonthly'), infl = num('sgInflation');
+    document.getElementById('sgYearsWrap').hidden = mode !== 'payment';
+    document.getElementById('sgMonthlyWrap').hidden = mode !== 'time';
+    var error = document.getElementById('sgError');
+    var bad = [goal, saved, rate, infl].some(isNaN) || goal <= 0 || saved < 0 || rate < 0 || rate > 50 ||
+      infl < 0 || infl > 20 ||
+      (mode === 'payment' && (isNaN(years) || years <= 0 || years > 100)) ||
+      (mode === 'time' && (isNaN(pmt) || pmt < 0));
+    error.hidden = !bad;
+    if (bad) {
+      error.textContent = mode === 'payment'
+        ? 'Enter a goal above $0, non-negative savings, a return from 0 to 50%, inflation up to 20% and 1 month to 100 years.'
+        : 'Enter a goal above $0, non-negative savings and monthly deposit, a return from 0 to 50% and inflation up to 20%.';
+      return;
+    }
+    var i = rate / 1200, inflation = infl / 100, months, deposit, target;
+    var note = document.getElementById('sgNote');
+    if (mode === 'payment') {
+      months = Math.max(1, Math.round(years * 12));
+      target = goal * Math.pow(1 + inflation, months / 12);
+      deposit = monthlyNeeded(target, saved, i, months, begin);
+      set('sgMainLabel', 'Monthly savings needed');
+      set('sgMain', money.format(deposit));
+      note.textContent = deposit === 0
+        ? 'Your current savings reach the goal on their own at this return.'
+        : 'Saving ' + money.format(deposit) + ' a month for ' + duration(months) + ' reaches the goal.';
+    } else {
+      deposit = pmt;
+      months = monthsToGoal(goal, saved, i, pmt, begin, inflation);
+      set('sgMainLabel', 'Time to reach your goal');
+      if (months < 0) {
+        set('sgMain', 'Over 100 years');
+        note.textContent = 'At this deposit and return the goal is not reached within 100 years. Try a larger deposit.';
+        months = MAX_MONTHS;
+      } else {
+        set('sgMain', months === 0 ? 'Reached now' : duration(months));
+        note.textContent = months === 0 ? 'Your current savings already cover the goal.'
+          : 'Based on ' + money.format(pmt) + ' a month.';
+      }
+      target = goal * Math.pow(1 + inflation, months / 12);
+    }
+    var s = schedule(saved, i, deposit, begin, months);
+    set('sgContributed', money0.format(s.contributed));
+    set('sgInterest', money0.format(Math.max(0, s.balance - s.contributed)));
+    set('sgFinal', money0.format(s.balance));
+    set('sgTarget', money0.format(target));
+    document.getElementById('sgTargetRow').hidden = inflation === 0;
+
+    var body = document.getElementById('sgSchedule');
+    while (body.firstChild) body.removeChild(body.firstChild);
+    s.rows.forEach(function (row) {
+      var tr = document.createElement('tr');
+      cell(tr, row.label);
+      cell(tr, money0.format(row.contributed));
+      cell(tr, money0.format(row.balance - row.contributed));
+      cell(tr, money0.format(row.balance));
+      body.appendChild(tr);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('sgForm');
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

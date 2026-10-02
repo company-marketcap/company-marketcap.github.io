@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="en" id="roi-calculator-document" data-page-slug="roi-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ROI Calculator: Return on Investment (ROI) Calculator</title>
+  <meta name="description" content="Free tool that turns what you put in and got back into your return on investment, net profit and annualized ROI, so you can compare options fairly.">
+  <link rel="canonical" href="https://company-marketcap.github.io/roi-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="ROI Calculator: Return on Investment (ROI) Calculator">
+  <meta property="og:description" content="Free tool that turns what you put in and got back into your return on investment, net profit and annualized ROI, so you can compare options fairly.">
+  <meta property="og:url" content="https://company-marketcap.github.io/roi-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "ROI Calculator", "url": "https://company-marketcap.github.io/roi-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Free tool that turns what you put in and got back into your return on investment, net profit and annualized ROI, so you can compare options fairly."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Investment Returns & Growth", "item": "https://company-marketcap.github.io/financial-calculators.html#investment-calculators"}, {"@type": "ListItem", "position": 4, "name": "ROI Calculator", "item": "https://company-marketcap.github.io/roi-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is ROI?", "acceptedAnswer": {"@type": "Answer", "text": "ROI stands for return on investment. It is a ratio that compares the profit or loss on an investment with what it cost you, and it is shown as a percentage so very different investments can be lined up on one scale."}}, {"@type": "Question", "name": "How do you calculate ROI?", "acceptedAnswer": {"@type": "Answer", "text": "Subtract the amount you invested from the amount you got back, divide that difference by the amount you invested, then multiply by 100. For example, turning $18,750 into $26,310 gives (26,310 - 18,750) / 18,750 x 100 = 40.32%."}}, {"@type": "Question", "name": "What is annualized ROI and why does it matter?", "acceptedAnswer": {"@type": "Answer", "text": "Annualized ROI converts the total return into a yearly pace using compounding. It matters because plain ROI has no time frame: 40% over one year is a very different result from 40% over ten, so the annualized figure is the fairer way to compare investments held for different lengths of time."}}, {"@type": "Question", "name": "What is a good ROI?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on risk and the alternatives available to you. A common floor is long-run inflation, around 2.9% a year in the U.S., and many investors compare stock holdings with the S&P 500's inflation-adjusted average, often cited between roughly 7% and 10.5% a year."}}, {"@type": "Question", "name": "What should I count as cost and gain?", "acceptedAnswer": {"@type": "Answer", "text": "Include every expense that tied up your money (purchase price, fees, repairs, taxes you paid) in the amount invested, and include everything you received (sale proceeds, dividends, rent) in the returned amount. Leaving costs out makes ROI look better than it really was."}}, {"@type": "Question", "name": "How do periodic contributions change the result?", "acceptedAnswer": {"@type": "Answer", "text": "If you add money on a schedule, the calculator adds the contributions made over the investment length to your initial investment to get the total invested, then measures your gain against that larger base."}}, {"@type": "Question", "name": "What are the limitations of ROI?", "acceptedAnswer": {"@type": "Answer", "text": "ROI ignores timing unless you annualize it, does not reflect risk, and depends on how cost and gain are defined. Pair it with measures such as net present value or internal rate of return for larger decisions."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="roi-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="roi-calculator" data-page-type="calculator">
+  <a id="roi-calculator-skip-link" href="#roi-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="roi-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="roi-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="roi-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="roi-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="roi-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="roi-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="roi-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="roi-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="roi-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="roi-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="roi-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="roi-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="roi-calculator-header-search-status" aria-controls="roi-calculator-header-search-results" data-search-input="header">
+              <p id="roi-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="roi-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="roi-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="roi-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="roi-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="roi-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="roi-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="roi-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="roi-calculator-mobile-search-status" aria-controls="roi-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="roi-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="roi-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="roi-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="roi-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="roi-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="roi-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="roi-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="roi-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="roi-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="roi-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="roi-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="roi-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="roi-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="roi-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="roi-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="roi-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="roi-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="roi-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="roi-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="roi-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="roi-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="roi-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="roi-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="roi-calculator-sidebar-search-status" aria-controls="roi-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="roi-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="roi-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="roi-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="roi-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="roi-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="roi-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="roi-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="roi-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="roi-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="roi-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="roi-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="roi-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="roi-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="roi-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="roi-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="roi-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="roi-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="roi-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="roi-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators" aria-current="true">Investment Returns</a></li><li><a id="roi-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="roi-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="roi-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="roi-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="roi-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="roi-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="roi-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="roi-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="roi-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="roi-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="roi-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="roi-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="roi-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="roi-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="roi-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="roi-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="roi-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="roi-calculator" data-calculator-slug="roi-calculator" data-sub-category-slug="investment-calculators">
+      <aside id="roi-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="roi-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="roi-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="roi-calculator-ad-top-leaderboard">
+            <ins id="roi-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("roi-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="roi-calculator-intro-area" class="space-y-4">
+        <nav id="roi-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="roi-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="roi-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="roi-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="roi-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#investment-calculators" itemprop="item"><span itemprop="name">Investment Returns &amp; Growth</span></a><meta itemprop="position" content="3"></li>
+            <li id="roi-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">ROI Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/roi-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="roi-calculator-hero-section" aria-labelledby="roi-calculator-hero-heading" data-section="hero">
+          <h1 id="roi-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">ROI Calculator: Return on Investment (ROI) Calculator</h1>
+          <p id="roi-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Wondering whether the money you put to work actually paid off? This ROI calculator compares what you invested with what came back and shows your return on investment as a clean figure, plus the annualized return that makes two very different deals comparable. It takes a few seconds, and the answer tells you whether a purchase, campaign or investing move was worth it, whether you are a first-time investor or a company owner weighing a new project. <!-- SILO_START:slot_a -->Try the <a class="silo-link" href="/investment-calculator.html">free investment calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="roi-calculator-tool" class="space-y-6" data-page-slug="roi-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="roiFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="roiForm" class="space-y-5" novalidate aria-labelledby="roiFormHeading">
+      <h2 id="roiFormHeading" class="panel-heading">Enter your investment</h2>
+      <div class="form-row form-row-2">
+        <div><label for="roiInvested" class="form-label">Amount invested</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="roiInvested" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="10000" inputmode="decimal"></div></div>
+        <div><label for="roiReturned" class="form-label">Amount returned</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="roiReturned" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="14500" inputmode="decimal"></div><p class="form-hint">Sale price or current value.</p></div>
+      </div>
+      <div><label for="roiTimeMode" class="form-label">Measure the holding period by</label>
+        <select id="roiTimeMode" class="form-select"><option value="length" selected>Length of time</option><option value="dates">Start and end dates</option></select></div>
+      <div id="roiLengthFields" class="form-row form-row-2">
+        <div><label for="roiYears" class="form-label">Years</label><div class="input-group"><input type="number" id="roiYears" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="1" value="3" inputmode="numeric"><span class="input-affix">yrs</span></div></div>
+        <div><label for="roiMonths" class="form-label">Months</label><div class="input-group"><input type="number" id="roiMonths" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="11" step="1" value="0" inputmode="numeric"><span class="input-affix">mos</span></div></div>
+      </div>
+      <div id="roiDateFields" class="form-row form-row-2" hidden>
+        <div><label for="roiFrom" class="form-label">Bought on</label><input type="date" id="roiFrom" class="form-input"></div>
+        <div><label for="roiTo" class="form-label">Sold or valued on</label><input type="date" id="roiTo" class="form-input"></div>
+      </div>
+      <details class="form-details"><summary class="form-details-summary">More options</summary>
+        <div><label for="roiIncome" class="form-label">Income received while holding</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="roiIncome" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="50" value="0" inputmode="decimal"></div><p class="form-hint">Dividends, interest or rent you kept rather than reinvested.</p></div>
+        <div><label for="roiCosts" class="form-label">Fees and other costs</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="roiCosts" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="0" inputmode="decimal"></div><p class="form-hint">Commissions, closing costs or repairs. Added to the amount invested.</p></div>
+      </details>
+      <p id="roiError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="roiResults" aria-live="polite" aria-labelledby="roiResultsHeading">
+      <h2 id="roiResultsHeading" class="panel-heading">Your results</h2>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p class="stat-label">Return on investment</p><p id="roiTotal" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Annualized ROI</p><p id="roiAnnual" class="stat-value">–</p></div>
+        <div class="stat-card"><p id="roiGainLabel" class="stat-label">Net gain</p><p id="roiGain" class="stat-value">–</p></div>
+      </div>
+      <div class="mt-5">
+        <div class="result-row"><span class="result-term">Total cost</span><span id="roiCost" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Total received</span><span id="roiReceived" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Holding period</span><span id="roiPeriod" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Growth multiple</span><span id="roiMultiple" class="result-value">–</span></div>
+      </div>
+      <p id="roiNote" class="callout callout-note mt-5" hidden></p>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="roiPathHeading" data-section="schedule">
+  <h2 id="roiPathHeading" class="panel-heading">The same result as a steady yearly return</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">How your cost would grow each year at the annualized ROI to end at the same total.</p>
+  <div class="table-scroll mt-5 max-h-[520px]" tabindex="0" role="region" aria-labelledby="roiPathHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Year</th><th scope="col">Gain that year</th><th scope="col">Value</th><th scope="col">ROI so far</th></tr></thead>
+      <tbody id="roiPath"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="roi-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="roi-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Wondering whether the money you put to work actually paid off? This ROI calculator compares what you invested with what came back and shows your return on investment as a clean figure, plus the annualized return that makes two very different deals comparable. It takes a few seconds, and the answer tells you whether a purchase, campaign or investing move was worth it, whether you are a first-time investor or a company owner weighing a new project. <!-- SILO_START:slot_a_m -->Try the <a class="silo-link" href="/investment-calculator.html">free investment calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="roi-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="roi-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="roi-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="roi-calculator-ad-in-feed">
+            <ins id="roi-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("roi-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="roi-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="roi-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="roi-calculator-guide-heading-1">
+<h2 id="roi-calculator-guide-heading-1">What Is a Return on Investment Calculator?</h2>
+<p>A <strong>return on investment calculator</strong> measures the profit or loss on an investment relative to what it cost you. Return on investment (ROI) is a financial ratio expressed in percent, which makes it one of the most widely used key performance indicators in finance. The same measure works for <em>stocks</em>, a rental property, a marketing program or a piece of machinery: anything with a cost and a payoff can be scored. <!-- SILO_START:slot_b -->Try the <a class="silo-link" href="/mutual-fund-calculator.html">free mutual fund calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_b --></p>
+<p>Because the result is a percentage, it lets an investor line up very different opportunities on one scale. A positive number means the payoff exceeded what you spent, and a negative number signals a shortfall. Treat that number as a quick check on profitability, not a full picture of risk, which is why the sections below also cover the time period and the situations where it can mislead you.</p>
+
+<h3>The inputs the calculator needs</h3>
+<p>You only need two money figures to get started. The <strong>initial invested amount</strong> is everything you paid in, and the <strong>returned amount</strong> is what you received when the holding ended or what it is worth today. Add a start date and end date, or simply type the number of years, and the tool also reports your annualized figure.</p>
+        </section>
+        <section id="roi-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="roi-calculator-guide-heading-2">
+<h2 id="roi-calculator-guide-heading-2">The ROI Formula: Calculating Your Rate of Return</h2>
+<p>The <strong>ROI formula</strong> divides the difference between payoff and outlay by what you paid and multiplies by 100: <!-- SILO_START:slot_c -->Next, open the <a class="silo-link" href="/apr-advanced-calculator.html">apr advanced calculator</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_c --></p>
+<p>$$\text{ROI} = \frac{G - C}{C} \times 100$$</p>
+<p>Here \(G\) is the amount you received back and \(C\) is what you paid. If you work in a spreadsheet, the same <strong>ROI calculation</strong> is a one-liner such as <code>=(B2-A2)/A2</code>, formatted as a percent.</p>
+<ul>
+<li><strong>Net gain</strong> is the amount returned minus the amount you put in.</li>
+<li>The <strong>cost of investment</strong> should include every expense that tied up your money, fees included.</li>
+<li>The <strong>gain from investment</strong> is the final value you collect, whether through a sale, a payout or dividends.</li>
+<li>Your <strong>return on investment</strong> is the difference expressed as a share of that outlay.</li>
+</ul>
+
+<h3>Net income and total assets in a business setting</h3>
+<p>Companies often score results with a business version of the return on investment formula: net income divided by total assets. If a firm earns $84,000 of net income on $600,000 of total assets, the result is 14%. The calculator on this page uses the simpler gain-over-cost version, so reach for the balance-sheet version when you want a yearly figure for a whole company, and make sure both numbers cover the same year and the same total assets.</p>
+        </section>
+        <section id="roi-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="roi-calculator-guide-heading-3">
+<h2 id="roi-calculator-guide-heading-3">How to Use This ROI Calculator Step by Step</h2>
+<ol>
+<li>Enter the invested amount: the full price of the purchase, fees included.</li>
+<li>Enter the returned amount: the sale price, payout or current value.</li>
+<li>Choose whether to supply a number of years or a start and end date for the investment period.</li>
+<li>Click the Calculate button to see your investment gain, your ROI and your annualized figure.</li>
+</ol>
+<p>The results panel lists four numbers, shown in the table below with a plain-language meaning for each.</p>
+<table>
+<thead><tr><th>Result</th><th>What it tells you</th></tr></thead>
+<tbody>
+<tr><td>Investment gain</td><td>Dollars earned or lost once the outlay is subtracted</td></tr>
+<tr><td>ROI</td><td>The dollar result as a share of your original outlay</td></tr>
+<tr><td>Annualized return</td><td>The yearly pace that would produce the same ending value</td></tr>
+<tr><td>Investment length</td><td>How long your money was tied up</td></tr>
+</tbody>
+</table>
+
+<h3>Why a free ROI calculator beats doing it by hand</h3>
+<p>Doing the arithmetic yourself is easy for round figures, but mistakes creep in once dates, fees and decimals appear. A <strong>free ROI calculator</strong> removes that friction, so you can try three or four scenarios in the time it takes to find a pencil. If you only want a quick ROI percentage calculator for a single purchase, fill in the two money fields and leave the dates blank.</p>
+        </section>
+        <section id="roi-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="roi-calculator-guide-heading-4">
+<h2 id="roi-calculator-guide-heading-4">Annualized Return: How Time Changes Your ROI</h2>
+<p>Plain ROI has no clock built in. A 40% result earned in one year is a very different deal from 40% earned over a decade, and the basic <strong>simple rate of return</strong> hides that gap. The fix is to convert the result to a yearly pace, the <strong>annual rate of return</strong> that would compound to the same ending value:</p>
+<p>$$r_{a} = (1 + r)^{1/n} - 1$$</p>
+<p>In this expression \(r\) is the total ROI written as a decimal and \(n\) is the number of years. Use the ROI percentage for a single deal and the yearly version whenever you compare options held for different lengths of time.</p>
+
+<h3>Annualized return versus simple division</h3>
+<p>Dividing the total by the years gives a rough guide, yet it ignores the way gains build on each other. The compounded method is the one the calculator applies, and it matches how a savings balance actually grows. When your <strong>annualized ROI</strong> differs a lot from the simple average, the gap is the effect of compound interest; with simple interest, profit would be counted only on the original amount you put in.</p>
+        </section>
+        <section id="roi-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="roi-calculator-guide-heading-5">
+<h2 id="roi-calculator-guide-heading-5">Worked Example: Comparing Two Investment Options</h2>
+<p>Suppose you are choosing between two investment options. Option A is an index fund purchase: you put in $18,750 and receive $26,310 after 3.5 years. Option B is a short renovation flip: you put in $12,400 and receive $16,180 after 1.5 years.</p>
+<p>For Option A, the net gain is $26,310 − $18,750 = $7,560, so the ROI is 7,560 ÷ 18,750 × 100 = <strong>40.32%</strong>. Annualizing over 3.5 years gives <strong>10.16%</strong> per year. For Option B, the difference is $3,780, the ROI is <strong>30.48%</strong>, and the annualized figure is <strong>19.41%</strong>.</p>
+<figure><img src="/assets/images/tools/roi-calculator/roi-calculator-formula-worked-example.svg" alt="ROI formula applied to an $18,750 investment that returned $26,310, giving a 40.32% return on investment, with bars comparing cost and amount returned"><figcaption>Option A's return on investment: ($26,310 − $18,750) ÷ $18,750 × 100 = 40.32%.</figcaption></figure>
+<table>
+<thead><tr><th>Measure</th><th>Option A</th><th>Option B</th></tr></thead>
+<tbody>
+<tr><td>Cost of investment</td><td>$18,750</td><td>$12,400</td></tr>
+<tr><td>Amount returned</td><td>$26,310</td><td>$16,180</td></tr>
+<tr><td>Dollar difference</td><td>$7,560</td><td>$3,780</td></tr>
+<tr><td>Holding time</td><td>3.5 years</td><td>1.5 years</td></tr>
+<tr><td>ROI</td><td>40.32%</td><td>30.48%</td></tr>
+<tr><td>Annualized ROI</td><td>10.16%</td><td>19.41%</td></tr>
+</tbody>
+</table>
+<p>Option A wins on the headline number, yet Option B delivers nearly double the yearly pace. That reversal is the whole reason to check the annualized column before you commit.</p>
+
+<h3>Reading the reversal</h3>
+<figure><img src="/assets/images/tools/roi-calculator/annualized-roi-comparison-two-investments.svg" alt="Paired bar charts showing Option A with the higher total ROI of 40.32% but Option B with the higher annualized return of 19.41%"><figcaption>Total ROI favors Option A, but annualized return favors Option B.</figcaption></figure>
+<p>The faster deal frees up $16,180 after 1.5 years, which you can reinvest elsewhere. A strong <strong>investment return</strong> that arrives sooner often beats a larger one that ties up your cash. Neither figure reflects uncertainty, so a flip that depends on a hot housing market is not equivalent to a diversified fund.</p>
+        </section>
+        <section id="roi-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="roi-calculator-guide-heading-6">
+<h2 id="roi-calculator-guide-heading-6">What Is a Good ROI? Benchmarks for an Annual Return</h2>
+<p>There is no single <strong>good ROI</strong>; it depends on the risk you carry and the alternatives you have. A sensible benchmark starts with inflation: long-run U.S. consumer prices have risen close to 2.9% a year, so any <strong>annual return</strong> below that quietly loses purchasing power. For stocks, many investors compare themselves with the S&P 500, whose inflation-adjusted average has often landed between roughly 7% and 10.5% over multi-year stretches.</p>
+<ul>
+<li>Below zero: your money shrank, and the first question is why.</li>
+<li>Zero to about 3%: you are not beating inflation once costs are counted.</li>
+<li>About 3% to 7%: modest gains, typical of conservative holdings.</li>
+<li>Above 10.5%: ahead of the usual stock market yardstick, often with more volatility.</li>
+</ul>
+<p>Adjust for your own tax rate as well. After-tax capital gain can be noticeably lower than the pre-tax figure, and a long time horizon usually earns a lower tax rate on gains than short-term trades.</p>
+
+<h3>Stripping out rising prices from the example</h3>
+<p>Take Option A's 10.16% yearly pace and divide (1 + 0.1016) by (1 + 0.029). The result is about 1.0706, so your real, inflation-adjusted yearly growth is close to 7.06%. That still clears the 2.9% hurdle comfortably, and it sits inside the usual stock-market band, which makes the index fund a reasonable result rather than an exceptional one.</p>
+        </section>
+        <section id="roi-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="roi-calculator-guide-heading-7">
+<h2 id="roi-calculator-guide-heading-7">Checking a Two-Year Holding with the Return on Investment Calculator</h2>
+<p>Dana bought into a dividend fund on 14 March 2024 and wants to know, on 14 March 2026, whether it deserves another year. Her brokerage statement shows $6,380.00 paid in and $7,125.50 in sale value plus dividends received, so she opens the calculator and types exactly those two figures.</p>
+<p>She chooses the date option instead of typing years, entering 14 March 2024 as the start and 14 March 2026 as the end, so the investment length reads 2.0 years. After she clicks Calculate, the panel shows a dollar result of $745.50, an ROI of <strong>11.68%</strong> and an annualized figure of <strong>5.68%</strong>.</p>
+<p>The 11.68% looks decent on its own, but Dana's real question is about pace. She lines the annualized figure up against two reference points she already knows:</p>
+<ul>
+<li>Long-run U.S. inflation of about 2.9% a year, which leaves a real yearly result of roughly 2.70% (1.0568 ÷ 1.029 − 1).</li>
+<li>The 7% floor of the inflation-adjusted S&amp;P 500 range, which her fund misses by 1.32 percentage points a year.</li>
+</ul>
+<p>So the fund beat inflation but trailed the broad market she could have bought instead. She does not sell on the spot. First she reruns the calculator with 3.0 years and a hypothetical $7,400.00 payoff, and the yearly figure slips to 5.07%, which tells her another year at that pace would not rescue the result.</p>
+<p>Her decision follows from the numbers: she sells the position, moves the $7,125.50 into a broad index fund, and sets a reminder to repeat the calculation in March 2027 so the new holding gets judged against the same two benchmarks.</p>
+        </section>
+        <section id="roi-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="roi-calculator-guide-heading-8">
+<h2 id="roi-calculator-guide-heading-8">Return on Investment for Real Estate, Equities and Business</h2>
+<h3>Real estate</h3>
+<p>For real estate, count the purchase price, closing costs, repairs and carrying costs in your base, then compare against the sale proceeds plus any rent collected. Leaving out taxes and insurance makes a rental look better than it was. Add up everything that left your pocket before you decide the property earned its place.</p>
+<h3>Equities and portfolios</h3>
+<p>Enter the purchase price times the number of shares as what you paid in, and the sale value plus dividends as what came back. Your brokerage account statements list both figures. Run each holding through the calculator separately before blending, so one winner does not hide a weak position in the portfolio, and treat every periodic contribution as new money rather than a payoff; the contribution fields handle that for you.</p>
+<h3>Business projects and marketing campaigns</h3>
+<p>Owners use the ratio to rank projects when cash flow is limited. A new product that adds $50,000 of earnings on a $250,000 cost of investment returns 20%. The same arithmetic scores a marketing campaign: spend $4,200 on ads that bring in $9,870 of revenue, and the return is 135%, because each dollar spent produced $2.35 back. Count idle money such as inventory or working capital in the base too, since it ties up funds even though it never leaves the company.</p>
+        </section>
+        <section id="roi-calculator-guide-section-9" class="panel article-content p-4 sm:p-6" aria-labelledby="roi-calculator-guide-heading-9">
+<h2 id="roi-calculator-guide-heading-9">Common Mistakes When Measuring Return on Investment</h2>
+<p>Most bad ROI numbers come from the inputs, not the arithmetic. Watch for these traps before you trust a result:</p>
+<ul>
+<li>Leaving fees, commissions or maintenance out of the <strong>initial investment</strong>, which understates what you paid and inflates the answer.</li>
+<li>Comparing a one-year result with a five-year result without annualizing either.</li>
+<li>Counting a reinvested dividend twice, once as income and once as new money.</li>
+<li>Mixing pre-tax and after-tax numbers within the same comparison.</li>
+</ul>
+<p>List what you paid and what came back before you compute the return on investment; if you cannot name both numbers, the calculation is not ready yet.</p>
+        </section>
+        <section id="roi-calculator-guide-section-10" class="panel article-content p-4 sm:p-6" aria-labelledby="roi-calculator-guide-heading-10">
+<h2 id="roi-calculator-guide-heading-10">What Moves Your Return on Investment</h2>
+<p>Every lever works through the same formula. Lower fees shrink the cost in the denominator, so the same payoff produces a higher return on investment. Holding good investments longer lets gains compound, which lifts the annualized return even when the total barely moves, while reinvesting income enlarges the base that later gains build on. Run the calculator again after each change so you can see which input actually moved the number.</p>
+        </section>
+        <section id="roi-calculator-guide-section-11" class="panel article-content p-4 sm:p-6" aria-labelledby="roi-calculator-guide-heading-11">
+<h2 id="roi-calculator-guide-heading-11">Tracking Your Return on Investment Over Time</h2>
+<p>One result tells you how a single investment went; a record of results tells you how good you are at making those choices. Keep a simple log with the date you bought, the amount you put in, the date you sold and what you received. Once a quarter, enter each line into a <strong>return on investment (ROI) calculator</strong> and note the annualized figure beside it. Within a year or two, patterns show up: maybe your longer holdings consistently beat your quick trades, or one category of investment keeps landing below your target.</p>
+<p>Setting a target makes the log useful. Decide the yearly pace you need, such as 8% to keep up with a retirement plan, and treat anything below it as a flag to investigate rather than a failure. Every investment carries an <strong>investment cost</strong> in fees, taxes and time, so the log should record those too; an entry without them paints a rosier picture than your account balance will.</p>
+<h3>Using ROI as a key performance indicator</h3>
+<p>Households and teams alike can treat the ratio as a <strong>key performance indicator</strong>, a single number reviewed on a schedule. Define the net profit and the outlay you will count before the project starts, so the annualized return stays comparable from one review to the next. Consistent definitions matter more than precision: a rough number measured the same way every time beats a precise one measured differently each quarter.</p>
+        </section>
+        <section id="roi-calculator-guide-section-12" class="panel article-content p-4 sm:p-6" aria-labelledby="roi-calculator-guide-heading-12">
+<h2 id="roi-calculator-guide-heading-12">Limitations of ROI and Related Finance Measures</h2>
+<p>The limitations of ROI are worth knowing before it drives a decision. It ignores timing unless you annualize it, it says nothing about risk, and it depends on how you define cost and payoff. Two analysts can reach different answers from the same facts.</p>
+<ul>
+<li>Net present value discounts future cash to today's dollars.</li>
+<li>Internal rate of return finds the discount rate that makes the cash flows break even.</li>
+<li>Return on equity measures earnings against shareholders' equity rather than the total outlay.</li>
+<li>Payback period shows how long it takes to recover what you put in.</li>
+</ul>
+<p>Pair ROI with these tools when the stakes are high: compute the annualized return first, then check a discounted measure if money moves in several instalments. Use a realistic inflation rate in your assumptions, and treat the result as one input to your broader financial decisions, not the verdict. Because wealth is built by repeating good decisions, judge each result against your own past performance as well as against a simple return benchmark.</p>
+        </section>
+      </div>
+
+      <section id="roi-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="roi-calculator-faq-heading" data-section="faq">
+        <h2 id="roi-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">ROI Calculator questions</h2>
+        <div id="roi-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="roi-calculator-faq-1" class="faq-item" open><summary id="roi-calculator-faq-1-summary" class="faq-summary"><h3 id="roi-calculator-faq-1-question" class="faq-question">What is ROI?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="roi-calculator-faq-1-answer" class="faq-answer"><p>ROI stands for return on investment. It is a ratio that compares the profit or loss on an investment with what it cost you, and it is shown as a percentage so very different investments can be lined up on one scale.</p></div></details>
+          <details id="roi-calculator-faq-2" class="faq-item" open><summary id="roi-calculator-faq-2-summary" class="faq-summary"><h3 id="roi-calculator-faq-2-question" class="faq-question">How do you calculate ROI?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="roi-calculator-faq-2-answer" class="faq-answer"><p>Subtract the amount you invested from the amount you got back, divide that difference by the amount you invested, then multiply by 100. For example, turning $18,750 into $26,310 gives (26,310 - 18,750) / 18,750 x 100 = 40.32%.</p></div></details>
+          <details id="roi-calculator-faq-3" class="faq-item" open><summary id="roi-calculator-faq-3-summary" class="faq-summary"><h3 id="roi-calculator-faq-3-question" class="faq-question">What is annualized ROI and why does it matter?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="roi-calculator-faq-3-answer" class="faq-answer"><p>Annualized ROI converts the total return into a yearly pace using compounding. It matters because plain ROI has no time frame: 40% over one year is a very different result from 40% over ten, so the annualized figure is the fairer way to compare investments held for different lengths of time.</p></div></details>
+          <details id="roi-calculator-faq-4" class="faq-item" open><summary id="roi-calculator-faq-4-summary" class="faq-summary"><h3 id="roi-calculator-faq-4-question" class="faq-question">What is a good ROI?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="roi-calculator-faq-4-answer" class="faq-answer"><p>It depends on risk and the alternatives available to you. A common floor is long-run inflation, around 2.9% a year in the U.S., and many investors compare stock holdings with the S&amp;P 500&#x27;s inflation-adjusted average, often cited between roughly 7% and 10.5% a year.</p></div></details>
+          <details id="roi-calculator-faq-5" class="faq-item" open><summary id="roi-calculator-faq-5-summary" class="faq-summary"><h3 id="roi-calculator-faq-5-question" class="faq-question">What should I count as cost and gain?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="roi-calculator-faq-5-answer" class="faq-answer"><p>Include every expense that tied up your money (purchase price, fees, repairs, taxes you paid) in the amount invested, and include everything you received (sale proceeds, dividends, rent) in the returned amount. Leaving costs out makes ROI look better than it really was.</p></div></details>
+          <details id="roi-calculator-faq-6" class="faq-item" open><summary id="roi-calculator-faq-6-summary" class="faq-summary"><h3 id="roi-calculator-faq-6-question" class="faq-question">How do periodic contributions change the result?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="roi-calculator-faq-6-answer" class="faq-answer"><p>If you add money on a schedule, the calculator adds the contributions made over the investment length to your initial investment to get the total invested, then measures your gain against that larger base.</p></div></details>
+          <details id="roi-calculator-faq-7" class="faq-item" open><summary id="roi-calculator-faq-7-summary" class="faq-summary"><h3 id="roi-calculator-faq-7-question" class="faq-question">What are the limitations of ROI?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="roi-calculator-faq-7-answer" class="faq-answer"><p>ROI ignores timing unless you annualize it, does not reflect risk, and depends on how cost and gain are defined. Pair it with measures such as net present value or internal rate of return for larger decisions.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="roi-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="roi-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="roi-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="roi-calculator-ad-bottom-leaderboard">
+            <ins id="roi-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("roi-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="roi-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="roi-calculator-right-rail-top" class="mb-6">
+        <aside id="roi-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="roi-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="roi-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="roi-calculator-ad-right-rail-rectangle">
+            <ins id="roi-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("roi-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="roi-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="roi-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="roi-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="roi-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="roi-calculator-ad-right-rail-skyscraper">
+            <ins id="roi-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("roi-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="roi-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="roi-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="roi-calculator-footer-brand">
+        <a id="roi-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="roi-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="roi-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="roi-calculator-footer-categories" aria-labelledby="roi-calculator-footer-categories-heading">
+        <h2 id="roi-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="roi-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="roi-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="roi-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="roi-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="roi-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="roi-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="roi-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="roi-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="roi-calculator-footer-company" aria-labelledby="roi-calculator-footer-company-heading">
+        <h2 id="roi-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="roi-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="roi-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="roi-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="roi-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="roi-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="roi-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="roi-calculator-footer-bottom" class="border-t border-line">
+      <p id="roi-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="roi-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Return on investment.
+  //   cost = amount invested + fees;  received = amount returned + income kept
+  //   ROI = (received - cost) / cost
+  //   annualized ROI = (received / cost)^(1 / years) - 1   (compound annual growth rate)
+  // With dates, years = days between the dates / 365.25.
+  // Checked in Node (roi.test.js): $10,000 -> $14,500 over 3 years = 45% total and 13.19% a year
+  // (1.45^(1/3) = 1.13185); $1,000 -> $2,000 over 2.5 years = 100% and 31.95% (2^(1/2.5) = 1.31951);
+  // doubling in 10 years = 7.177% a year (rule-of-72 cross-check); a loss to $0 = -100%; 2020-01-01
+  // to 2025-01-01 = 1,827 days = 5.002 years; the steady-return table ends exactly at the received total.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 });
+  var OUTPUTS = ['roiTotal', 'roiAnnual', 'roiGain', 'roiCost', 'roiReceived', 'roiPeriod', 'roiMultiple'];
+
+  // --- calc start
+  function roi(p) {
+    var cost = p.invested + p.costs, received = p.returned + p.income;
+    var total = (received - cost) / cost;
+    var annual = received <= 0 ? -1 : Math.pow(received / cost, 1 / p.years) - 1;
+    return { cost: cost, received: received, gain: received - cost, total: total, annual: annual, multiple: received / cost };
+  }
+
+  // Whole days between two yyyy-mm-dd strings, ignoring time zones; null if either is invalid.
+  function daysBetween(from, to) {
+    var a = /^(\d{4})-(\d{2})-(\d{2})$/.exec(from || ''), b = /^(\d{4})-(\d{2})-(\d{2})$/.exec(to || '');
+    if (!a || !b) return null;
+    return Math.round((Date.UTC(+b[1], +b[2] - 1, +b[3]) - Date.UTC(+a[1], +a[2] - 1, +a[3])) / 86400000);
+  }
+
+  function steadyPath(cost, annual, years) {
+    var rows = [], prev = cost, full = Math.floor(years + 1e-9);
+    for (var y = 1; y <= full; y++) {
+      var v = cost * Math.pow(1 + annual, y);
+      rows.push({ year: String(y), gain: v - prev, value: v, roi: v / cost - 1 });
+      prev = v;
+    }
+    if (years - full > 1e-6) {
+      var last = cost * Math.pow(1 + annual, years);
+      rows.push({ year: (Math.round(years * 100) / 100) + ' (end)', gain: last - prev, value: last, roi: last / cost - 1 });
+    }
+    return rows;
+  }
+  // --- calc end
+
+  function num(id) {
+    var v = parseFloat(document.getElementById(id).value);
+    return isNaN(v) ? NaN : v;
+  }
+
+  function pct(x) { return (x * 100).toLocaleString('en-US', { maximumFractionDigits: 2 }) + '%'; }
+
+  function iso(d) { return d.toISOString().slice(0, 10); }
+
+  function fail(msg) {
+    var error = document.getElementById('roiError');
+    error.hidden = false;
+    error.textContent = msg;
+    OUTPUTS.forEach(function (id) { document.getElementById(id).textContent = '–'; });
+    document.getElementById('roiPath').innerHTML = '';
+    document.getElementById('roiNote').hidden = true;
+  }
+
+  function update() {
+    var byDates = document.getElementById('roiTimeMode').value === 'dates';
+    document.getElementById('roiLengthFields').hidden = byDates;
+    document.getElementById('roiDateFields').hidden = !byDates;
+    document.getElementById('roiError').hidden = true;
+    var invested = num('roiInvested'), returned = num('roiReturned'), income = num('roiIncome'), costs = num('roiCosts');
+    if ([invested, returned, income, costs].some(isNaN)) return fail('Enter a number in each amount box (0 is fine for the optional ones).');
+    if (invested < 0 || returned < 0 || income < 0 || costs < 0) return fail('Amounts cannot be negative.');
+    if (invested + costs <= 0) return fail('Enter an amount invested above $0.');
+    var years, period;
+    if (byDates) {
+      var days = daysBetween(document.getElementById('roiFrom').value, document.getElementById('roiTo').value);
+      if (days === null) return fail('Choose both dates.');
+      if (days <= 0) return fail('The end date must be after the start date.');
+      years = days / 365.25;
+      period = days.toLocaleString('en-US') + (days === 1 ? ' day' : ' days') + ' (' + years.toFixed(2) + ' years)';
+    } else {
+      var y = num('roiYears'), m = num('roiMonths');
+      if (isNaN(y) || isNaN(m) || y < 0 || m < 0 || y > 100 || m > 11 || y + m / 12 <= 0) return fail('Enter 0 to 100 years and 0 to 11 months, with a total above zero.');
+      years = y + m / 12;
+      period = years.toFixed(2).replace(/\.00$/, '') + (years === 1 ? ' year' : ' years');
+    }
+    var r = roi({ invested: invested, returned: returned, income: income, costs: costs, years: years });
+    if (!isFinite(r.annual) || r.annual > 1e6) return fail('The annualized figure is too large to show. Check the amounts and the holding period.');
+    document.getElementById('roiTotal').textContent = pct(r.total);
+    document.getElementById('roiAnnual').textContent = pct(r.annual);
+    document.getElementById('roiGainLabel').textContent = r.gain < 0 ? 'Net loss' : 'Net gain';
+    document.getElementById('roiGain').textContent = money.format(Math.abs(r.gain));
+    document.getElementById('roiCost').textContent = money.format(r.cost);
+    document.getElementById('roiReceived').textContent = money.format(r.received);
+    document.getElementById('roiPeriod').textContent = period;
+    document.getElementById('roiMultiple').textContent = r.multiple.toFixed(3).replace(/\.?0+$/, '') + '×';
+    var note = document.getElementById('roiNote');
+    note.hidden = years >= 1;
+    note.textContent = 'The holding period is under a year, so the annualized ROI assumes the same pace would continue for a full year. Treat it with care.';
+    document.getElementById('roiPath').innerHTML = years > 100 ? '' : steadyPath(r.cost, r.annual, years).map(function (row) {
+      return '<tr><td>' + row.year + '</td><td>' + money.format(row.gain) + '</td><td>' +
+             money.format(row.value) + '</td><td>' + pct(row.roi) + '</td></tr>';
+    }).join('');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('roiForm');
+    var to = new Date(), from = new Date(to.getTime());
+    from.setFullYear(to.getFullYear() - 3);
+    if (!document.getElementById('roiFrom').value) document.getElementById('roiFrom').value = iso(from);
+    if (!document.getElementById('roiTo').value) document.getElementById('roiTo').value = iso(to);
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="en" id="inflation-adjusted-calculator-document" data-page-slug="inflation-adjusted-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inflation Calculator: Find Your Inflation-Adjusted Return</title>
+  <meta name="description" content="Estimate your real returns after inflation. Enter your investment, expected return, years and yearly deposits to see the nominal balance and its value in today&#x27;s dollars.">
+  <link rel="canonical" href="https://company-marketcap.github.io/inflation-adjusted-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Inflation Calculator: Find Your Inflation-Adjusted Return">
+  <meta property="og:description" content="Estimate your real returns after inflation. Enter your investment, expected return, years and yearly deposits to see the nominal balance and its value in today&#x27;s dollars.">
+  <meta property="og:url" content="https://company-marketcap.github.io/inflation-adjusted-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Inflation-Adjusted Return Calculator", "url": "https://company-marketcap.github.io/inflation-adjusted-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Estimate your real returns after inflation. Enter your investment, expected return, years and yearly deposits to see the nominal balance and its value in today's dollars."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Investment Returns & Growth", "item": "https://company-marketcap.github.io/financial-calculators.html#investment-calculators"}, {"@type": "ListItem", "position": 4, "name": "Inflation-Adjusted Return Calculator", "item": "https://company-marketcap.github.io/inflation-adjusted-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is an inflation-adjusted return?", "acceptedAnswer": {"@type": "Answer", "text": "It is the growth of an investment after the loss of purchasing power from rising prices is removed. A 7% gain in a year with 3% inflation is only about 3.9% in real terms."}}, {"@type": "Question", "name": "How do I calculate real return after inflation?", "acceptedAnswer": {"@type": "Answer", "text": "Divide one plus your nominal return by one plus the inflation rate, then subtract one. For example, (1.064 / 1.031) - 1 gives about 3.20% a year. The calculator does this for you and also compounds regular contributions."}}, {"@type": "Question", "name": "Why is the real value lower than my account balance?", "acceptedAnswer": {"@type": "Answer", "text": "Your balance is stated in future dollars. Prices rise each year, so the same amount buys less. The Value in Today's Dollars divides your balance by the cumulative price increase to show what it could buy at current prices."}}, {"@type": "Question", "name": "Which inflation rate should I use?", "acceptedAnswer": {"@type": "Answer", "text": "Use a long-run average rather than one year's reading. Many planners start with 2% to 3%, then test a higher case such as 4% to see how sensitive the result is."}}, {"@type": "Question", "name": "Does the calculator include taxes and fees?", "acceptedAnswer": {"@type": "Answer", "text": "No. Enter a return that is already net of fund fees, and remember taxes will lower the real result further depending on your account type."}}, {"@type": "Question", "name": "Can I model withdrawals in retirement?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Switch Regular Contributions to Withdrawals and set an amount and frequency. The calculator subtracts each withdrawal as the balance compounds."}}, {"@type": "Question", "name": "How can I protect my returns from inflation?", "acceptedAnswer": {"@type": "Answer", "text": "Common approaches include inflation-linked bonds such as TIPS, diversifying into real assets, holding equities for long-term growth and reinvesting returns so they compound."}}, {"@type": "Question", "name": "What real return should I aim for?", "acceptedAnswer": {"@type": "Answer", "text": "A common rule of thumb is a real return above about 3% a year for meaningful long-term wealth building, though your own goals and risk tolerance matter more than any single threshold."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="inflation-adjusted-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="inflation-adjusted-calculator" data-page-type="calculator">
+  <a id="inflation-adjusted-calculator-skip-link" href="#inflation-adjusted-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="inflation-adjusted-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="inflation-adjusted-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="inflation-adjusted-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="inflation-adjusted-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="inflation-adjusted-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="inflation-adjusted-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="inflation-adjusted-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="inflation-adjusted-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="inflation-adjusted-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="inflation-adjusted-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="inflation-adjusted-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="inflation-adjusted-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="inflation-adjusted-calculator-header-search-status" aria-controls="inflation-adjusted-calculator-header-search-results" data-search-input="header">
+              <p id="inflation-adjusted-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="inflation-adjusted-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="inflation-adjusted-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="inflation-adjusted-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="inflation-adjusted-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="inflation-adjusted-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="inflation-adjusted-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="inflation-adjusted-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="inflation-adjusted-calculator-mobile-search-status" aria-controls="inflation-adjusted-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="inflation-adjusted-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="inflation-adjusted-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="inflation-adjusted-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="inflation-adjusted-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="inflation-adjusted-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="inflation-adjusted-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="inflation-adjusted-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="inflation-adjusted-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="inflation-adjusted-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="inflation-adjusted-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="inflation-adjusted-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="inflation-adjusted-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="inflation-adjusted-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="inflation-adjusted-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="inflation-adjusted-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="inflation-adjusted-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="inflation-adjusted-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="inflation-adjusted-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="inflation-adjusted-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="inflation-adjusted-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="inflation-adjusted-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="inflation-adjusted-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="inflation-adjusted-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="inflation-adjusted-calculator-sidebar-search-status" aria-controls="inflation-adjusted-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="inflation-adjusted-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="inflation-adjusted-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="inflation-adjusted-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="inflation-adjusted-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="inflation-adjusted-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="inflation-adjusted-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="inflation-adjusted-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="inflation-adjusted-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="inflation-adjusted-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="inflation-adjusted-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="inflation-adjusted-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="inflation-adjusted-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="inflation-adjusted-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="inflation-adjusted-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="inflation-adjusted-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="inflation-adjusted-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="inflation-adjusted-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="inflation-adjusted-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="inflation-adjusted-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators" aria-current="true">Investment Returns</a></li><li><a id="inflation-adjusted-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="inflation-adjusted-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="inflation-adjusted-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="inflation-adjusted-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="inflation-adjusted-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="inflation-adjusted-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="inflation-adjusted-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="inflation-adjusted-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="inflation-adjusted-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="inflation-adjusted-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="inflation-adjusted-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="inflation-adjusted-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="inflation-adjusted-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="inflation-adjusted-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="inflation-adjusted-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="inflation-adjusted-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="inflation-adjusted-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="inflation-adjusted-calculator" data-calculator-slug="inflation-adjusted-calculator" data-sub-category-slug="investment-calculators">
+      <aside id="inflation-adjusted-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="inflation-adjusted-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="inflation-adjusted-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="inflation-adjusted-calculator-ad-top-leaderboard">
+            <ins id="inflation-adjusted-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("inflation-adjusted-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="inflation-adjusted-calculator-intro-area" class="space-y-4">
+        <nav id="inflation-adjusted-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="inflation-adjusted-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="inflation-adjusted-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="inflation-adjusted-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="inflation-adjusted-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#investment-calculators" itemprop="item"><span itemprop="name">Investment Returns &amp; Growth</span></a><meta itemprop="position" content="3"></li>
+            <li id="inflation-adjusted-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Inflation-Adjusted Return Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/inflation-adjusted-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="inflation-adjusted-calculator-hero-section" aria-labelledby="inflation-adjusted-calculator-hero-heading" data-section="hero">
+          <h1 id="inflation-adjusted-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Inflation Calculator: Find Your Inflation-Adjusted Return</h1>
+          <p id="inflation-adjusted-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Your account statement shows a bigger number every year, but prices climb too, so the balance alone never tells you what you can actually buy. The inflation-adjusted return calculator strips out rising prices and shows your real returns in today&#x27;s dollars, so you know how much your savings truly grew. <!-- SILO_START:slot_a -->The <a class="silo-link" href="/investment-loan-calculator.html">investment loan calculator</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="inflation-adjusted-calculator-tool" class="space-y-6" data-page-slug="inflation-adjusted-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="iaFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="iaForm" class="space-y-5" novalidate aria-labelledby="iaFormHeading">
+      <h2 id="iaFormHeading" class="panel-heading">Enter your investment</h2>
+      <div class="form-row form-row-2">
+        <div><label for="iaInitial" class="form-label">Starting amount</label>
+          <div class="input-group"><span class="input-affix">$</span><input type="number" id="iaInitial" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="10000" inputmode="decimal"></div></div>
+        <div><label for="iaAnnual" class="form-label">Yearly contribution</label>
+          <div class="input-group"><span class="input-affix">$</span><input type="number" id="iaAnnual" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="1200" inputmode="decimal"></div></div>
+      </div>
+      <div class="form-row form-row-2">
+        <div><label for="iaReturn" class="form-label">Annual return (nominal)</label>
+          <div class="input-group"><input type="number" id="iaReturn" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="-50" max="100" step="0.1" value="7" inputmode="decimal"><span class="input-affix">%</span></div></div>
+        <div><label for="iaInflation" class="form-label">Annual inflation rate</label>
+          <div class="input-group"><input type="number" id="iaInflation" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="-10" max="50" step="0.1" value="3" inputmode="decimal"><span class="input-affix">%</span></div></div>
+      </div>
+      <div class="form-row form-row-2">
+        <div><label for="iaYears" class="form-label">Years</label>
+          <div class="input-group"><input type="number" id="iaYears" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1" max="100" step="1" value="20" inputmode="numeric"><span class="input-affix">yrs</span></div></div>
+        <div><label for="iaCompound" class="form-label">Compounding</label>
+          <select id="iaCompound" class="form-select"><option value="365">Daily</option><option value="12" selected>Monthly</option><option value="4">Quarterly</option><option value="2">Semiannually</option><option value="1">Annually</option></select></div>
+      </div>
+      <details class="form-details">
+        <summary class="form-details-summary">More options: contributions</summary>
+        <div class="form-row form-row-2 mt-3">
+          <div><label for="iaTiming" class="form-label">Contribution timing</label>
+            <select id="iaTiming" class="form-select"><option value="start" selected>Start of each year</option><option value="end">End of each year</option></select></div>
+          <div><label for="iaIndexed" class="form-label">Contribution amount</label>
+            <select id="iaIndexed" class="form-select"><option value="no" selected>Stays the same</option><option value="yes">Rises with inflation</option></select></div>
+        </div>
+      </details>
+      <p id="iaError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="iaResults" aria-live="polite" aria-labelledby="iaResultsHeading">
+      <h2 id="iaResultsHeading" class="panel-heading">Your results</h2>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p class="stat-label">Value in today's dollars</p><p id="iaReal" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Ending balance (nominal)</p><p id="iaNominal" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Real annual return</p><p id="iaRealRate" class="stat-value">–</p></div>
+      </div>
+      <dl class="mt-5">
+        <div class="result-row"><dt class="result-term">Total contributed</dt><dd id="iaContributed" class="result-value">–</dd></div>
+        <div class="result-row"><dt class="result-term">Nominal growth</dt><dd id="iaGrowth" class="result-value">–</dd></div>
+        <div class="result-row"><dt class="result-term">Effective annual return (nominal)</dt><dd id="iaNomRate" class="result-value">–</dd></div>
+        <div class="result-row"><dt class="result-term">Inflation cost (nominal − real)</dt><dd id="iaLost" class="result-value">–</dd></div>
+        <div class="result-row"><dt class="result-term">What $1 buys at the end, in today's money</dt><dd id="iaDollar" class="result-value">–</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="iaScheduleHeading" data-section="schedule">
+  <h2 id="iaScheduleHeading" class="panel-heading">Year-by-year: nominal vs real</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">The real balance is the nominal balance divided by the price level after that many years of inflation.</p>
+  <div class="table-scroll mt-5 max-h-[520px]" tabindex="0" role="region" aria-labelledby="iaScheduleHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Year</th><th scope="col">Contribution</th><th scope="col">Nominal balance</th><th scope="col">Real balance</th><th scope="col">Cumulative inflation</th></tr></thead>
+      <tbody id="iaSchedule"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="inflation-adjusted-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="inflation-adjusted-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Your account statement shows a bigger number every year, but prices climb too, so the balance alone never tells you what you can actually buy. The inflation-adjusted return calculator strips out rising prices and shows your real returns in today&#x27;s dollars, so you know how much your savings truly grew. <!-- SILO_START:slot_a_m -->The <a class="silo-link" href="/investment-loan-calculator.html">investment loan calculator</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="inflation-adjusted-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="inflation-adjusted-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="inflation-adjusted-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="inflation-adjusted-calculator-ad-in-feed">
+            <ins id="inflation-adjusted-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("inflation-adjusted-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="inflation-adjusted-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="inflation-adjusted-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="inflation-adjusted-calculator-guide-heading-1">
+<h2 id="inflation-adjusted-calculator-guide-heading-1">What an Inflation-Adjusted Return Calculator Measures</h2>
+<p>A nominal figure is the number printed on your statement. A real figure is that same number after you remove the effect of rising prices. Everything this tool does comes down to converting one into the other, using the <strong>annual inflation rate</strong> you expect over the life of the investment. Feed it an <strong>initial investment</strong>, an <strong>expected annual return</strong>, an <strong>investment duration</strong>, and an optional <strong>annual contribution</strong>, and it returns two balances: what the account will say, and what that balance will be worth in <strong>today's dollars</strong>. <!-- SILO_START:slot_b -->Try the <a class="silo-link" href="/investment-questionnaire-broad-portfolio.html">free broad portfolio questionnaire</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_b --></p>
+<p>Think of it as an <strong>investment inflation calculator</strong> that answers one practical question: after prices rise, did the money you put to work actually gain <strong>purchasing power</strong>? Plain growth rates cannot answer that. A fund that earns 6% in a year when prices rise 6% leaves you exactly where you started, whatever the statement says.</p>
+
+<h3>Who gets the most from it</h3>
+<ul>
+<li>Long-term savers comparing an account's growth against the cost of living</li>
+<li>People in <strong>retirement planning</strong> who need a target balance expressed in money they understand today</li>
+<li>Any investor judging whether a fund's promised yield really <strong>beats the inflation rate</strong></li>
+<li>Anyone comparing several investments on an equal, price-adjusted footing</li>
+<li>Anyone who wants to see how much a few extra points of inflation change the picture</li>
+</ul>
+        </section>
+        <section id="inflation-adjusted-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="inflation-adjusted-calculator-guide-heading-2">
+<h2 id="inflation-adjusted-calculator-guide-heading-2">Real Returns vs Nominal Return: Why the Gap Matters</h2>
+<p>A <strong>nominal return</strong> is the headline percentage a fund, bond or savings product reports. The <strong>real return</strong> is what remains once the price level has risen. The difference between them is not a rounding detail: over a decade or two, it can erase a third or more of the apparent <strong>nominal gain</strong>.</p>
+<p>Inflation works quietly. Because a basket of everyday goods costs a little more each year, each dollar you hold buys slightly less. That erosion of <strong>buying power</strong> compounds just as growth does, which is why the real <strong>rate of return</strong> on a long holding period looks so different from the number advertised on the brochure. Measuring <strong>real growth</strong> rather than headline growth is the entire point of running this calculation.</p>
+
+<h3>The simple subtraction shortcut and where it falls short</h3>
+<p>Many people subtract inflation from the nominal return and call the answer the real rate. With a 6.4% return and 3.1% inflation that gives 3.3%. The exact result is 3.20%. The gap looks small in one year, but it widens as the rates and the horizon grow. The calculator uses the exact method, shown in the next section, so you do not have to rely on the shortcut.</p>
+        </section>
+        <section id="inflation-adjusted-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="inflation-adjusted-calculator-guide-heading-3">
+<h2 id="inflation-adjusted-calculator-guide-heading-3">Inflation Calculator Formula for Real Value</h2>
+<p>Three short formulas drive the whole tool. Learn them once and you can check any result by hand.</p>
+
+<h3>The real return formula</h3>
+<p>The exact <strong>real return</strong> divides the growth factor by the price factor, where <em>r</em> is the nominal annual return and <em>i</em> is the annual inflation rate, both as decimals:</p>
+$$\text{Real return} = \frac{1 + r}{1 + i} - 1$$
+
+<h3>Future value with an annual contribution</h3>
+<p>Your account's <strong>future value</strong> combines the lump sum compounding for <em>n</em> years with the stream of deposits. Here <em>PV</em> is the starting balance and <em>C</em> is the yearly deposit made at each year end:</p>
+$$FV = PV \times (1 + r)^{n} + C \times \frac{(1 + r)^{n} - 1}{r}$$
+<p>Deflating that balance by the cumulative price increase gives the figure in <strong>today's dollars</strong>:</p>
+$$\text{Real value} = \frac{FV}{(1 + i)^{n}}$$
+
+<h3>Inflation rate formula and CPI</h3>
+<p>Where does the annual inflation rate come from? In the United States, the <strong>consumer price index</strong> (CPI) tracks the cost of a fixed <strong>basket of goods</strong> and services each month. The <strong>inflation rate formula</strong> compares two readings of that <strong>price index</strong>:</p>
+$$\text{Inflation rate} = \frac{\text{CPI}_{2} - \text{CPI}_{1}}{\text{CPI}_{1}} \times 100$$
+<p>A <strong>consumer price index</strong> reading for one month means little alone, so analysts compare it with the reading a year earlier. Whenever you do not have a forecast of your own, a long-run CPI average is the most defensible starting assumption.</p>
+        </section>
+        <section id="inflation-adjusted-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="inflation-adjusted-calculator-guide-heading-4">
+<h2 id="inflation-adjusted-calculator-guide-heading-4">Worked Example: Inflation-Adjusted ROI on a 15-Year Investment Account</h2>
+<p>Suppose you open an <strong>investment account</strong> with $42,500 and add $3,000 at the end of every year for 15 years. You assume a 6.4% annual return and 3.1% average inflation, with deposits made once per year. Plugging those inputs into the formulas above:</p>
+<ol>
+<li>The lump sum grows to $42,500 × 1.064<sup>15</sup> = <strong>$107,774</strong>.</li>
+<li>The fifteen deposits grow to $3,000 × ((1.064<sup>15</sup> − 1) ÷ 0.064) = <strong>$71,993</strong>.</li>
+<li>The nominal <strong>future value</strong> is therefore <strong>$179,767</strong>, against $87,500 actually paid in.</li>
+<li>Prices rise by 1.031<sup>15</sup> = 1.5808 over the period, so the same balance is worth $179,767 ÷ 1.5808 = <strong>$113,718</strong> in today's dollars.</li>
+</ol>
+<p>The exact real return is (1.064 ÷ 1.031) − 1 = <strong>3.20%</strong> a year. Your <strong>inflation-adjusted roi</strong> is the real gain over the money you paid in: $113,718 − $87,500 = $26,218, while the nominal gain looks like $92,267. In other words, inflation consumed roughly $66,000 of the apparent profit, leaving real profits of $26,218 and an inflation adjusted balance of $113,718.</p>
+
+<table>
+<thead>
+<tr><th>Year</th><th>Amount paid in</th><th>Nominal balance</th><th>Value in today's dollars</th></tr>
+</thead>
+<tbody>
+<tr><td>5</td><td>$57,500</td><td>$75,003</td><td>$64,385</td></tr>
+<tr><td>10</td><td>$72,500</td><td>$119,326</td><td>$87,932</td></tr>
+<tr><td>15</td><td>$87,500</td><td>$179,767</td><td>$113,718</td></tr>
+</tbody>
+</table>
+<p>Notice how the third column trails the second more and more each year. That widening spread is the cost of inflation made visible, and it is what a <strong>real investment return calculator</strong> exists to show.</p>
+
+<h3>How the inflation assumption changes the result</h3>
+<p>Run the same inputs with a lower or higher <strong>average inflation</strong> figure and the outcome moves sharply. At 2.1% inflation the final balance is worth $131,621 in today's dollars, a real return of 4.21%. At 4.6% it falls to $91,566, a real return of only 1.72%. The nominal balance is identical in all three runs; only the purchasing power differs. Testing a low, middle and high case is a better habit than trusting a single guess.</p>
+        </section>
+        <section id="inflation-adjusted-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="inflation-adjusted-calculator-guide-heading-5">
+<h2 id="inflation-adjusted-calculator-guide-heading-5">How the Investment Inflation Calculator Inputs Work</h2>
+<p>Each field maps to a symbol in the formulas. Knowing what to type removes most input mistakes.</p>
+<dl>
+<dt>Initial investment (PV)</dt>
+<dd>The <strong>principal</strong> you start with. Use zero if you are only making regular deposits.</dd>
+<dt>Expected annual return</dt>
+<dd>The <strong>annual interest rate</strong> or growth rate you assume, sometimes called the <strong>stated rate</strong> because it is quoted before inflation. Use a conservative figure rather than last year's best fund result.</dd>
+<dt>Annual inflation rate</dt>
+<dd>The yearly rise in prices you expect across the holding period. This is the single most influential assumption you make.</dd>
+<dt>Investment duration</dt>
+<dd>How many years the money stays invested. Decimals work, so 7.5 years means seven years and six months.</dd>
+<dt>Annual contribution</dt>
+<dd>The optional yearly top-up. These <strong>periodic deposits</strong> are what turn a modest account into a large one over time.</dd>
+</dl>
+<aside><p><strong>Tip:</strong> keep the return and the inflation assumption on the same basis. If you pair a pre-tax return with after-inflation spending needs, your real result will look better than it should, because <strong>taxes</strong> take their share before you see the gain.</p></aside>
+        </section>
+        <section id="inflation-adjusted-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="inflation-adjusted-calculator-guide-heading-6">
+<h2 id="inflation-adjusted-calculator-guide-heading-6">Checking a Kitchen Fund with the Real Investment Return Calculator</h2>
+<p>A homeowner wants $24,000 of buying power eight years from now for a kitchen renovation. Today, $18,750 sits in a balanced fund that has averaged 5.2% a year, and the statement says it will reach about $28,000. That sounds comfortable, but the contractor's quote is in today's money, so the comparison has to be in today's money too.</p>
+<p>The homeowner opens the calculator and enters an initial investment of <strong>$18,750</strong>, an expected return of <strong>5.2%</strong>, an investment duration of <strong>8 years</strong>, no annual contribution, and an inflation assumption of <strong>2.7%</strong>, taken from the recent average on the consumer price index chart for the household's own spending categories.</p>
+<p>The tool returns two balances. The nominal balance is <strong>$28,127</strong>. The same balance expressed in today's dollars is <strong>$22,728</strong>, which works out to a real return of <strong>2.43%</strong> a year. That is below the 3% planners often use as a minimum, and it leaves the goal <strong>$1,272</strong> short of $24,000.</p>
+<p>The homeowner changes one input at a time. Raising inflation to 3.4% cuts the real balance to $21,526, so the plan has little room for a hot stretch of price increases. Next, working backwards, the homeowner finds that hitting $24,000 at 2.7% requires a nominal balance of $29,701, which means starting with <strong>$19,799</strong> rather than $18,750.</p>
+<p>The decision is specific: move <strong>$1,050</strong> from the checking account into the fund this month, then rerun the same inputs with 3.4% inflation next January to see whether the margin holds. The statement figure of $28,127 never changed, but the real figure now points to a clear action.</p>
+        </section>
+        <section id="inflation-adjusted-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="inflation-adjusted-calculator-guide-heading-7">
+<h2 id="inflation-adjusted-calculator-guide-heading-7">Choosing an Annual Inflation Rate: Historical Context</h2>
+<p>You rarely know future inflation, so you pick an estimate. The <strong>historical context</strong> helps. Over the long term, United States inflation has averaged roughly 3% a year, with deflation during the early 1930s and sharp spikes in the 1970s and again in 2022. The <strong>Federal Reserve</strong> aims to keep inflation near 2%, which is why many planners use 2% to 3% as a base case and test 4% or higher as a stress case.</p>
+
+<h3>Why prices rise</h3>
+<p>The cause of a price surge decides how long it lasts, and therefore which figure belongs in the calculator's inflation field. A short spike justifies a higher rate over a few years; a structural cause justifies a higher rate for the whole horizon. Economists usually separate four types:</p>
+<ul>
+<li><strong>Demand-pull inflation</strong> appears when buyers want more goods than the <strong>economy</strong> can supply.</li>
+<li><strong>Cost-push inflation</strong> follows when production and shipping costs rise and sellers pass them on.</li>
+<li>Built-in inflation arises when wages and prices chase each other upward.</li>
+<li><strong>Monetary inflation</strong> reflects more money circulating than there are <strong>goods and services</strong> to buy.</li>
+</ul>
+
+<h3>Averages hide the path</h3>
+<p>A fifteen-year average of 3.1% can hide several years at 1% and several at 7%. Because the calculator applies one steady rate, treat the output as a planning estimate. If you are close to withdrawing the money, run shorter periods with the specific years you expect.</p>
+        </section>
+        <section id="inflation-adjusted-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="inflation-adjusted-calculator-guide-heading-8">
+<h2 id="inflation-adjusted-calculator-guide-heading-8">Protecting Purchasing Power in Your Investment Portfolio</h2>
+<p>To beat inflation over many years, you have to widen the real number you just measured. Four approaches come up repeatedly with long-held investments:</p>
+<ul>
+<li>Hold <strong>inflation-linked bonds</strong>, such as TIPS, whose principal adjusts with the CPI.</li>
+<li><strong>Diversify</strong> into <strong>real assets</strong> like property or commodities, which tend to follow prices.</li>
+<li>Own <strong>stocks</strong> and other investments, including a broad <strong>mutual fund</strong> for growth that has historically outpaced price increases over decades.</li>
+<li>Reinvest gains so that the <strong>power of compounding</strong> works on a larger base.</li>
+</ul>
+<p>A <strong>rule of thumb</strong> many advisors give is to aim for a real return above 3% if you want meaningful <strong>wealth</strong> over a <strong>long term</strong> horizon. Our example sits at 3.20%, just above that line.</p>
+
+<h3>Weighing compound interest against rising prices</h3>
+<p><strong>Compound interest</strong> and rising prices are the same mathematics pulling in opposite directions, and the two balances the calculator returns are that contest made visible. In the 15-year example, <strong>compounding</strong> lifts the account to $179,767, while the price level cuts what it can buy to $113,718. Starting earlier and depositing steadily widens the gap between those two numbers in your favour.</p>
+        </section>
+        <section id="inflation-adjusted-calculator-guide-section-9" class="panel article-content p-4 sm:p-6" aria-labelledby="inflation-adjusted-calculator-guide-heading-9">
+<h2 id="inflation-adjusted-calculator-guide-heading-9">Common Mistakes When Reading Real Returns</h2>
+<ul>
+<li>Comparing a fund's nominal yield with a savings goal stated in today's money, or quoting inflation-adjusted returns for one fund and headline yields for another.</li>
+<li>Using last year's inflation figure for a twenty-year projection.</li>
+<li>Ignoring fees and tax drag, which lower the real figure further.</li>
+<li>Forgetting that withdrawals during <strong>retirement</strong> also need to rise with prices.</li>
+</ul>
+<p>If a bond's maturity payout is promised in fixed money, compare its <strong>redemption value</strong> against the price-adjusted <strong>principal</strong> rather than against the amount you originally invested. A fund beating its original principal can still lose against the <strong>future cost</strong> of what that money would have bought.</p>
+<p>When you need a clear plan, a <strong>financial advisor</strong> can turn these estimates into a workable <strong>financial plan</strong>, since the calculation here does not account for individual tax rules, fees or market swings. Use it to compare scenarios and frame your savings goals, then test your assumptions against more than one possible outcome.</p>
+        </section>
+      </div>
+
+      <section id="inflation-adjusted-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="inflation-adjusted-calculator-faq-heading" data-section="faq">
+        <h2 id="inflation-adjusted-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Inflation-Adjusted Return Calculator questions</h2>
+        <div id="inflation-adjusted-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="inflation-adjusted-calculator-faq-1" class="faq-item" open><summary id="inflation-adjusted-calculator-faq-1-summary" class="faq-summary"><h3 id="inflation-adjusted-calculator-faq-1-question" class="faq-question">What is an inflation-adjusted return?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="inflation-adjusted-calculator-faq-1-answer" class="faq-answer"><p>It is the growth of an investment after the loss of purchasing power from rising prices is removed. A 7% gain in a year with 3% inflation is only about 3.9% in real terms.</p></div></details>
+          <details id="inflation-adjusted-calculator-faq-2" class="faq-item" open><summary id="inflation-adjusted-calculator-faq-2-summary" class="faq-summary"><h3 id="inflation-adjusted-calculator-faq-2-question" class="faq-question">How do I calculate real return after inflation?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="inflation-adjusted-calculator-faq-2-answer" class="faq-answer"><p>Divide one plus your nominal return by one plus the inflation rate, then subtract one. For example, (1.064 / 1.031) - 1 gives about 3.20% a year. The calculator does this for you and also compounds regular contributions.</p></div></details>
+          <details id="inflation-adjusted-calculator-faq-3" class="faq-item" open><summary id="inflation-adjusted-calculator-faq-3-summary" class="faq-summary"><h3 id="inflation-adjusted-calculator-faq-3-question" class="faq-question">Why is the real value lower than my account balance?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="inflation-adjusted-calculator-faq-3-answer" class="faq-answer"><p>Your balance is stated in future dollars. Prices rise each year, so the same amount buys less. The Value in Today&#x27;s Dollars divides your balance by the cumulative price increase to show what it could buy at current prices.</p></div></details>
+          <details id="inflation-adjusted-calculator-faq-4" class="faq-item" open><summary id="inflation-adjusted-calculator-faq-4-summary" class="faq-summary"><h3 id="inflation-adjusted-calculator-faq-4-question" class="faq-question">Which inflation rate should I use?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="inflation-adjusted-calculator-faq-4-answer" class="faq-answer"><p>Use a long-run average rather than one year&#x27;s reading. Many planners start with 2% to 3%, then test a higher case such as 4% to see how sensitive the result is.</p></div></details>
+          <details id="inflation-adjusted-calculator-faq-5" class="faq-item" open><summary id="inflation-adjusted-calculator-faq-5-summary" class="faq-summary"><h3 id="inflation-adjusted-calculator-faq-5-question" class="faq-question">Does the calculator include taxes and fees?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="inflation-adjusted-calculator-faq-5-answer" class="faq-answer"><p>No. Enter a return that is already net of fund fees, and remember taxes will lower the real result further depending on your account type.</p></div></details>
+          <details id="inflation-adjusted-calculator-faq-6" class="faq-item" open><summary id="inflation-adjusted-calculator-faq-6-summary" class="faq-summary"><h3 id="inflation-adjusted-calculator-faq-6-question" class="faq-question">Can I model withdrawals in retirement?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="inflation-adjusted-calculator-faq-6-answer" class="faq-answer"><p>Yes. Switch Regular Contributions to Withdrawals and set an amount and frequency. The calculator subtracts each withdrawal as the balance compounds.</p></div></details>
+          <details id="inflation-adjusted-calculator-faq-7" class="faq-item" open><summary id="inflation-adjusted-calculator-faq-7-summary" class="faq-summary"><h3 id="inflation-adjusted-calculator-faq-7-question" class="faq-question">How can I protect my returns from inflation?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="inflation-adjusted-calculator-faq-7-answer" class="faq-answer"><p>Common approaches include inflation-linked bonds such as TIPS, diversifying into real assets, holding equities for long-term growth and reinvesting returns so they compound.</p></div></details>
+          <details id="inflation-adjusted-calculator-faq-8" class="faq-item" open><summary id="inflation-adjusted-calculator-faq-8-summary" class="faq-summary"><h3 id="inflation-adjusted-calculator-faq-8-question" class="faq-question">What real return should I aim for?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="inflation-adjusted-calculator-faq-8-answer" class="faq-answer"><p>A common rule of thumb is a real return above about 3% a year for meaningful long-term wealth building, though your own goals and risk tolerance matter more than any single threshold.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="inflation-adjusted-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="inflation-adjusted-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="inflation-adjusted-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="inflation-adjusted-calculator-ad-bottom-leaderboard">
+            <ins id="inflation-adjusted-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("inflation-adjusted-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="inflation-adjusted-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="inflation-adjusted-calculator-right-rail-top" class="mb-6">
+        <aside id="inflation-adjusted-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="inflation-adjusted-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="inflation-adjusted-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="inflation-adjusted-calculator-ad-right-rail-rectangle">
+            <ins id="inflation-adjusted-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("inflation-adjusted-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="inflation-adjusted-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="inflation-adjusted-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="inflation-adjusted-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="inflation-adjusted-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="inflation-adjusted-calculator-ad-right-rail-skyscraper">
+            <ins id="inflation-adjusted-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("inflation-adjusted-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="inflation-adjusted-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="inflation-adjusted-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="inflation-adjusted-calculator-footer-brand">
+        <a id="inflation-adjusted-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="inflation-adjusted-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="inflation-adjusted-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="inflation-adjusted-calculator-footer-categories" aria-labelledby="inflation-adjusted-calculator-footer-categories-heading">
+        <h2 id="inflation-adjusted-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="inflation-adjusted-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="inflation-adjusted-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="inflation-adjusted-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="inflation-adjusted-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="inflation-adjusted-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="inflation-adjusted-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="inflation-adjusted-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="inflation-adjusted-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="inflation-adjusted-calculator-footer-company" aria-labelledby="inflation-adjusted-calculator-footer-company-heading">
+        <h2 id="inflation-adjusted-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="inflation-adjusted-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="inflation-adjusted-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="inflation-adjusted-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="inflation-adjusted-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="inflation-adjusted-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="inflation-adjusted-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="inflation-adjusted-calculator-footer-bottom" class="border-t border-line">
+      <p id="inflation-adjusted-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="inflation-adjusted-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Inflation-adjusted (real) investment growth.
+  //   Each year: balance grows by (1 + r/n)^n; the yearly contribution is added at the start or end.
+  //   Real balance after t years = nominal balance ÷ (1 + inflation)^t
+  //   Real annual return (Fisher) = (1 + effective nominal rate) ÷ (1 + inflation) − 1
+  // Checks (scratchpad tests/inflation-adjusted.test.js): $10,000 at 8% compounded monthly for 20 yrs
+  // = $49,268.03 = 10,000 × (1 + 0.08/12)^240, worth $30,066.85 at 2.5% inflation; 7% annual with
+  // $1,200 at year end for 20 yrs = $10,000 × 1.07^20 + 1,200 × (1.07^20 − 1)/0.07 = $87,891.44;
+  // real rate for 7% annual and 3% inflation = 3.88%; 0% return and 0% inflation = total contributed.
+  // Fix vs the old site: inflation is an annual rate and is no longer compounded by the return's
+  // compounding frequency in the real-return figure, so the summary rate now matches the table.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 });
+
+  function num(id) {
+    var v = parseFloat(document.getElementById(id).value);
+    return isNaN(v) ? NaN : v;
+  }
+
+  function pct(v) {
+    if (Math.abs(v) < 0.00005) v = 0;
+    return (v * 100).toFixed(2) + '%';
+  }
+
+  function project(o) {
+    var yearFactor = Math.pow(1 + o.rate / o.n, o.n);
+    var balance = o.initial, contributed = o.initial, rows = [];
+    for (var y = 1; y <= o.years; y++) {
+      var c = o.indexed ? o.annual * Math.pow(1 + o.inflation, y - 1) : o.annual;
+      if (o.atStart) balance += c;
+      balance *= yearFactor;
+      if (!o.atStart) balance += c;
+      contributed += c;
+      var priceLevel = Math.pow(1 + o.inflation, y);
+      rows.push({ year: y, contribution: c, nominal: balance, real: balance / priceLevel, cumInflation: priceLevel - 1 });
+    }
+    var last = rows[rows.length - 1];
+    return { nominal: last.nominal, real: last.real, contributed: contributed, effRate: yearFactor - 1,
+             realRate: yearFactor / (1 + o.inflation) - 1, dollar: 1 / (1 + last.cumInflation), rows: rows };
+  }
+
+  function update() {
+    var o = {
+      initial: num('iaInitial'), annual: num('iaAnnual'), rate: num('iaReturn') / 100, inflation: num('iaInflation') / 100,
+      years: Math.round(num('iaYears')), n: parseInt(document.getElementById('iaCompound').value, 10),
+      atStart: document.getElementById('iaTiming').value === 'start', indexed: document.getElementById('iaIndexed').value === 'yes'
+    };
+    var error = document.getElementById('iaError');
+    var msg = '';
+    if ([o.initial, o.annual, o.rate, o.inflation, o.years].some(isNaN)) msg = 'Fill in every field with a number.';
+    else if (o.initial < 0 || o.annual < 0) msg = 'Amounts cannot be negative.';
+    else if (o.rate < -0.5 || o.rate > 1) msg = 'Enter an annual return from -50% to 100%.';
+    else if (o.inflation < -0.1 || o.inflation > 0.5) msg = 'Enter an inflation rate from -10% to 50%.';
+    else if (o.years < 1 || o.years > 100) msg = 'Enter 1 to 100 years.';
+    else if (o.initial === 0 && o.annual === 0) msg = 'Enter a starting amount or a yearly contribution.';
+    error.hidden = !msg;
+    error.textContent = msg;
+    if (msg) return;
+
+    var r = project(o);
+    document.getElementById('iaReal').textContent = money.format(r.real);
+    document.getElementById('iaNominal').textContent = money.format(r.nominal);
+    document.getElementById('iaRealRate').textContent = pct(r.realRate);
+    document.getElementById('iaContributed').textContent = money.format(r.contributed);
+    document.getElementById('iaGrowth').textContent = money.format(r.nominal - r.contributed);
+    document.getElementById('iaNomRate').textContent = pct(r.effRate);
+    document.getElementById('iaLost').textContent = money.format(r.nominal - r.real);
+    document.getElementById('iaDollar').textContent = money.format(r.dollar);
+    document.getElementById('iaSchedule').innerHTML = r.rows.map(function (row) {
+      return '<tr><td>' + row.year + '</td><td>' + money.format(row.contribution) + '</td><td>' + money.format(row.nominal) +
+             '</td><td>' + money.format(row.real) + '</td><td>' + pct(row.cumInflation) + '</td></tr>';
+    }).join('');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('iaForm');
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="en" id="stock-split-impact-document" data-page-slug="stock-split-impact">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stock Split Calculator: Forward and Reverse Splits</title>
+  <meta name="description" content="Use this free stock split calculator to find your new share count and adjusted price after any forward or reverse split. Enter your holdings and split ratio for instant results.">
+  <link rel="canonical" href="https://company-marketcap.github.io/stock-split-impact.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Stock Split Calculator: Forward and Reverse Splits">
+  <meta property="og:description" content="Use this free stock split calculator to find your new share count and adjusted price after any forward or reverse split. Enter your holdings and split ratio for instant results.">
+  <meta property="og:url" content="https://company-marketcap.github.io/stock-split-impact.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Stock Split Calculator", "url": "https://company-marketcap.github.io/stock-split-impact.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Use this free stock split calculator to find your new share count and adjusted price after any forward or reverse split. Enter your holdings and split ratio for instant results."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Stocks, Dividends & Trading", "item": "https://company-marketcap.github.io/financial-calculators.html#stock-calculators"}, {"@type": "ListItem", "position": 4, "name": "Stock Split Calculator", "item": "https://company-marketcap.github.io/stock-split-impact.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a stock split?", "acceptedAnswer": {"@type": "Answer", "text": "A stock split is a corporate action in which a company divides each existing share into several new ones. The share price falls by the same factor, so the total value of your holding is unchanged immediately afterwards."}}, {"@type": "Question", "name": "How do I calculate the share price after a stock split?", "acceptedAnswer": {"@type": "Answer", "text": "Divide the pre-split share price by the split multiplier, which is the new shares in the ratio divided by the old shares. For a 6-for-1 split the multiplier is 6, so a $412.80 share becomes $68.80."}}, {"@type": "Question", "name": "How do I calculate a reverse stock split?", "acceptedAnswer": {"@type": "Answer", "text": "Select Reverse Split and enter the ratio, for example 1 new share for every 10 old shares. Your share count is multiplied by 0.1 and the price by 10, so the total value stays the same."}}, {"@type": "Question", "name": "Does a stock split change the value of my investment?", "acceptedAnswer": {"@type": "Answer", "text": "No. Your total value is the same immediately before and after a split, because you hold more or fewer shares at a proportionally lower or higher price. Later moves in the price come from the market, not from the split."}}, {"@type": "Question", "name": "What happens to my cost basis after a stock split?", "acceptedAnswer": {"@type": "Answer", "text": "Your total cost basis does not change, but the cost per share does. Divide your original cost per share by the split multiplier for a forward split, or multiply it for a reverse split, and update your records for tax reporting."}}, {"@type": "Question", "name": "How do stock splits affect dividends?", "acceptedAnswer": {"@type": "Answer", "text": "The dividend per share is adjusted in proportion to the split, so the total dividend you receive stays about the same. After a 2-for-1 split, for example, the per-share payment halves while you hold twice as many shares."}}, {"@type": "Question", "name": "Why do companies split their stock?", "acceptedAnswer": {"@type": "Answer", "text": "Forward splits lower the price per share, which makes shares more affordable for retail investors and can improve liquidity. Reverse splits raise a low price, often to meet a stock exchange's minimum listing price."}}, {"@type": "Question", "name": "Can a reverse stock split be a bad sign?", "acceptedAnswer": {"@type": "Answer", "text": "Sometimes. Reverse splits are more common among struggling companies, but they can also be a routine way to regain exchange compliance, so check the company's filing and wider financial situation before drawing a conclusion."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="stock-split-impact-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="stock-split-impact" data-page-type="calculator">
+  <a id="stock-split-impact-skip-link" href="#stock-split-impact-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="stock-split-impact-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="stock-split-impact-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="stock-split-impact-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="stock-split-impact-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="stock-split-impact-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="stock-split-impact-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="stock-split-impact-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="stock-split-impact-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="stock-split-impact-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="stock-split-impact-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="stock-split-impact-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="stock-split-impact-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="stock-split-impact-header-search-status" aria-controls="stock-split-impact-header-search-results" data-search-input="header">
+              <p id="stock-split-impact-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="stock-split-impact-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="stock-split-impact-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="stock-split-impact-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="stock-split-impact-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="stock-split-impact-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="stock-split-impact-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="stock-split-impact-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="stock-split-impact-mobile-search-status" aria-controls="stock-split-impact-mobile-search-results" data-search-input="mobile">
+            <p id="stock-split-impact-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="stock-split-impact-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="stock-split-impact-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="stock-split-impact-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="stock-split-impact-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="stock-split-impact-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="stock-split-impact-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="stock-split-impact-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="stock-split-impact-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="stock-split-impact-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="stock-split-impact-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="stock-split-impact-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="stock-split-impact-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="stock-split-impact-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="stock-split-impact-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="stock-split-impact-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="stock-split-impact-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="stock-split-impact-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="stock-split-impact-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="stock-split-impact-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="stock-split-impact-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="stock-split-impact-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="stock-split-impact-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="stock-split-impact-sidebar-search-status" aria-controls="stock-split-impact-sidebar-search-results" data-search-input="sidebar">
+              <p id="stock-split-impact-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="stock-split-impact-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="stock-split-impact-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="stock-split-impact-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="stock-split-impact-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="stock-split-impact-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="stock-split-impact-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="stock-split-impact-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="stock-split-impact-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="stock-split-impact-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="stock-split-impact-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="stock-split-impact-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="stock-split-impact-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="stock-split-impact-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="stock-split-impact-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="stock-split-impact-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="stock-split-impact-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="stock-split-impact-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="stock-split-impact-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="stock-split-impact-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators" aria-current="true">Stocks &amp; Trading</a></li><li><a id="stock-split-impact-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="stock-split-impact-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="stock-split-impact-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="stock-split-impact-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="stock-split-impact-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="stock-split-impact-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="stock-split-impact-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="stock-split-impact-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="stock-split-impact-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="stock-split-impact-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="stock-split-impact-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="stock-split-impact-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="stock-split-impact-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="stock-split-impact-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="stock-split-impact-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="stock-split-impact-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="stock-split-impact" data-calculator-slug="stock-split-impact" data-sub-category-slug="stock-calculators">
+      <aside id="stock-split-impact-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="stock-split-impact-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="stock-split-impact-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="stock-split-impact-ad-top-leaderboard">
+            <ins id="stock-split-impact-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("stock-split-impact-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="stock-split-impact-intro-area" class="space-y-4">
+        <nav id="stock-split-impact-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="stock-split-impact-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="stock-split-impact-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="stock-split-impact-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="stock-split-impact-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#stock-calculators" itemprop="item"><span itemprop="name">Stocks, Dividends &amp; Trading</span></a><meta itemprop="position" content="3"></li>
+            <li id="stock-split-impact-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Stock Split Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/stock-split-impact.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="stock-split-impact-hero-section" aria-labelledby="stock-split-impact-hero-heading" data-section="hero">
+          <h1 id="stock-split-impact-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Stock Split Calculator: Forward and Reverse Splits</h1>
+          <p id="stock-split-impact-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Wondering what happens to your account when a company announces a split? This stock split calculator turns the number of shares you own, what each one costs and the split ratio into your new share count and price per share, so you can confirm in seconds that your total investment value has not moved. Enter a forward ratio such as 3-for-1 or a reverse ratio, and the result shows what your brokerage should report once the corporate action settles. <!-- SILO_START:slot_a -->Try the <a class="silo-link" href="/pivot-point-calculator.html">pivot point calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="stock-split-impact-tool" class="space-y-6" data-page-slug="stock-split-impact" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="ssFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="ssForm" class="space-y-5" novalidate aria-labelledby="ssFormHeading">
+      <h2 id="ssFormHeading" class="panel-heading">Enter your holding and the split</h2>
+      <div class="form-row form-row-2">
+        <div><label for="ssShares" class="form-label">Shares you own</label><div class="input-group"><input type="number" id="ssShares" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1" value="100" inputmode="decimal"></div></div>
+        <div><label for="ssPrice" class="form-label">Share price before the split</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="ssPrice" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="0.01" value="150" inputmode="decimal"></div></div>
+      </div>
+      <fieldset>
+        <legend class="form-label">Split ratio</legend>
+        <div class="form-row form-row-2">
+          <div><div class="input-group"><input type="number" id="ssNew" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1" step="1" value="2" inputmode="numeric" aria-label="New shares"><span class="input-affix">new</span></div></div>
+          <div><div class="input-group"><input type="number" id="ssOld" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1" step="1" value="1" inputmode="numeric" aria-label="For every old shares"><span class="input-affix">old</span></div></div>
+        </div>
+        <p class="form-hint">A 2-for-1 split is 2 new for 1 old. A 1-for-10 reverse split is 1 new for 10 old.</p>
+      </fieldset>
+      <div><label for="ssBasis" class="form-label form-label-optional">Total cost basis</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="ssBasis" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="12000" inputmode="decimal"></div><p class="form-hint">What you paid for all these shares, including fees. Used for your new per-share basis.</p></div>
+      <details class="form-details">
+        <summary class="form-details-summary">Option contracts on this stock</summary>
+        <div class="mt-4 space-y-5">
+          <label class="form-choice"><input type="checkbox" id="ssHasOptions" class="form-choice-input"><span class="form-choice-text">I hold listed call or put options on this stock</span></label>
+          <div id="ssOptionFields" class="form-row form-row-2" hidden>
+            <div><label for="ssContracts" class="form-label">Contracts</label><div class="input-group"><input type="number" id="ssContracts" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1" step="1" value="1" inputmode="numeric"></div></div>
+            <div><label for="ssStrike" class="form-label">Strike price</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="ssStrike" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="0.5" value="160" inputmode="decimal"></div></div>
+          </div>
+        </div>
+      </details>
+      <p id="ssError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="ssResults" aria-live="polite" aria-labelledby="ssResultsHeading">
+      <h2 id="ssResultsHeading" class="panel-heading">After the split</h2>
+      <p id="ssRatioLabel" class="mt-1 text-sm text-ink-muted">–</p>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p class="stat-label">Shares after the split</p><p id="ssNewShares" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Adjusted share price</p><p id="ssNewPrice" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Position value</p><p id="ssValue" class="stat-value">–</p></div>
+      </div>
+      <dl class="mt-5">
+        <div class="result-row"><dt class="result-term">Cash in lieu of a fractional share</dt><dd id="ssCash" class="result-value">–</dd></div>
+        <div class="result-row"><dt class="result-term">New cost basis per share</dt><dd id="ssBasisAfter" class="result-value">–</dd></div>
+      </dl>
+      <p class="mt-4 text-sm text-ink-muted">The split changes the number of shares and the price, not what your holding is worth. The price shown is the theoretical opening price; the market sets the real one.</p>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="ssTableHeading" data-section="schedule">
+  <h2 id="ssTableHeading" class="panel-heading">Before and after</h2>
+  <div class="table-scroll mt-5" tabindex="0" role="region" aria-labelledby="ssTableHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Item</th><th scope="col">Before</th><th scope="col">After</th></tr></thead>
+      <tbody id="ssTable"></tbody>
+    </table>
+  </div>
+  <p id="ssOptionNote" class="mt-3 text-sm text-ink-muted"></p>
+</section>
+        <p id="stock-split-impact-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="stock-split-impact-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Wondering what happens to your account when a company announces a split? This stock split calculator turns the number of shares you own, what each one costs and the split ratio into your new share count and price per share, so you can confirm in seconds that your total investment value has not moved. Enter a forward ratio such as 3-for-1 or a reverse ratio, and the result shows what your brokerage should report once the corporate action settles. <!-- SILO_START:slot_a_m -->Try the <a class="silo-link" href="/pivot-point-calculator.html">pivot point calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="stock-split-impact-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="stock-split-impact-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="stock-split-impact-ad-in-feed-frame" class="ad-slot-live" data-ad-container="stock-split-impact-ad-in-feed">
+            <ins id="stock-split-impact-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("stock-split-impact-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="stock-split-impact-guide" class="space-y-6" data-section="guide">
+        <section id="stock-split-impact-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="stock-split-impact-guide-heading-1">
+<h2 id="stock-split-impact-guide-heading-1">How to Use the Stock Split Calculator</h2>
+<p>Three entries drive every result, and each one is printed on your latest brokerage statement or in the company's announcement. Nothing needs to be looked up beyond that, which is why a split calculator is one of the quickest checks an investor can run. <!-- SILO_START:slot_b -->The <a class="silo-link" href="/commodities-and-futures-calculator.html">futures and commodities profit calculator</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_b --></p>
+
+<h3>Enter the number of shares, share price and split ratio</h3>
+<ul>
+<li><strong>Number of shares:</strong> the whole and fractional shares you hold before the split.</li>
+<li><strong>Share price:</strong> the last closing price before the split takes effect, in dollars.</li>
+<li><strong>Split ratio:</strong> written as new shares for old, such as 4-for-1 for a forward split or 1-for-10 for a reverse split.</li>
+</ul>
+
+<h3>Read your new share count and total value</h3>
+<p>The result panel returns the adjusted price and the total value, with your original figures alongside. If the two totals differ, an entry is wrong, because a split only changes how your position is sliced, not what they are worth on the day. Keep the figure the broker shows next to the calculator's answer and compare them line by line.</p>
+        </section>
+        <section id="stock-split-impact-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="stock-split-impact-guide-heading-2">
+<h2 id="stock-split-impact-guide-heading-2">Calculate a Stock Split With the Split Ratio Formula</h2>
+<p>A ratio written N-for-M means every M shares you hold become N shares. Divide N by M to get the split multiplier, then apply it in opposite directions to the share total and to the price. The same rule covers an uneven split such as 5-for-2 and a reverse split such as 1-for-10, because the multiplier is simply below 1 for these. <!-- SILO_START:slot_c -->Try the <a class="silo-link" href="/stock-return-and-capital-gain-calculator.html">stock return and capital gain calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_c --></p>
+<p>$$S_1 = S_0 \times \frac{N}{M}$$</p>
+<p>$$P_1 = P_0 \div \frac{N}{M}$$</p>
+<p>Here \(S_0\) and \(P_0\) are your shares and price before the split, and \(S_1\) and \(P_1\) are the same two figures after it. Multiply them back together and you land on the same total, since \(S_1 \times P_1 = S_0 \times P_0\). That identity is the whole idea behind <strong>calculating a stock split</strong> by hand and checking it against a calculator.</p>
+
+<figure><img src="/assets/images/tools/stock-split-impact/stock-split-calculator-formula.svg" alt="Two formula cards showing new shares as old shares times N divided by M and the new price as old price divided by N divided by M, applied to 135 shares at $412.80"><figcaption>The stock split formula applied to a 6-for-1 split: 135 shares become 810 and the price falls from $412.80 to $68.80.</figcaption></figure>
+
+<h3>Find the split-adjusted share price</h3>
+<p>It is the old quote divided by the multiplier. Charting platforms use it to rewrite historical quotes so a drop caused only by the split does not look like a crash. When you compare a chart before and after a split, always read the split-adjusted share price rather than the raw print from that day.</p>
+
+<h3>2-for-1 and other forward ratios</h3>
+<p>A two-for-one split doubles your shares and halves the price, a 3-for-1 triples and thirds them, and a 5-for-2 grows them by two and a half times. Large technology names have used 20-for-1 ratios when quotes climbed far beyond what retail investors wanted to pay for a single share. The table below applies each common ratio to the example used throughout this page.</p>
+<table>
+<thead><tr><th>Split ratio</th><th>Pre-split shares owned</th><th>Post-split shares</th><th>Share price after</th></tr></thead>
+<tbody>
+<tr><td>2-for-1</td><td>135</td><td>270</td><td>$206.40</td></tr>
+<tr><td>3-for-2</td><td>135</td><td>202.5</td><td>$275.20</td></tr>
+<tr><td>4-for-1</td><td>135</td><td>540</td><td>$103.20</td></tr>
+<tr><td>6-for-1</td><td>135</td><td>810</td><td>$68.80</td></tr>
+<tr><td>10-for-1</td><td>135</td><td>1,350</td><td>$41.28</td></tr>
+</tbody>
+</table>
+<figure><img src="/assets/images/tools/stock-split-impact/stock-split-ratio-comparison-chart.svg" alt="Bar chart of post-split share counts for 135 shares under 10-for-1, 6-for-1, 4-for-1, 2-for-1 and 3-for-2 split ratios with the new share price on each row"><figcaption>The same 135 shares under five split ratios, with the adjusted price on each row.</figcaption></figure>
+        </section>
+        <section id="stock-split-impact-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="stock-split-impact-guide-heading-3">
+<h2 id="stock-split-impact-guide-heading-3">Stock Split Calculation Example: Shares Owned and Share Price Before and After</h2>
+<p>Say you own <strong>135 shares</strong> of a company quoted at <strong>$412.80</strong>, and the board announces a 6-for-1 split. Your position is worth 135 × $412.80 = <strong>$55,728.00</strong> before anything happens.</p>
+<ol>
+<li>Work out the multiplier: 6 ÷ 1 = 6.</li>
+<li>Multiply your shares: 135 × 6 = <strong>810 shares</strong>.</li>
+<li>Divide the price: $412.80 ÷ 6 = <strong>$68.80</strong> per share.</li>
+<li>Check the total: 810 × $68.80 = $55,728.00, exactly where you started.</li>
+</ol>
+<h3>Pre-split and post-split holdings side by side</h3>
+<p>Nothing was created or destroyed. You hold six times as many pieces, each worth a sixth as much, so a stock split calculation always ends with matching totals. What changes is the lot size you can trade: selling one share before the split meant raising $412.80, afterwards it means $68.80.</p>
+
+<figure><img src="/assets/images/tools/stock-split-impact/stock-split-total-value-unchanged.svg" alt="Equal-area rectangles comparing 135 shares at $412.80 before a 6-for-1 stock split with 810 shares at $68.80 after it, both worth $55,728.00"><figcaption>Width is how many shares you hold and height is the price, so both rectangles have the same area: your total value.</figcaption></figure>
+        </section>
+        <section id="stock-split-impact-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="stock-split-impact-guide-heading-4">
+<h2 id="stock-split-impact-guide-heading-4">Reverse Stock Split Calculator: Fewer Shares at a Higher Price</h2>
+<p>A <strong>reverse stock split calculator</strong> runs the same formula with a multiplier below one. In a 1-for-8 reverse stock split every eight shares merge into one, and the share price is multiplied by eight.</p>
+<p>Take 2,405 shares priced at $0.85, worth $2,044.25. Divide the shares by eight and you get 300.625, so you receive <strong>300 whole shares</strong> at <strong>$6.80</strong> each, which is $2,040.00. The leftover 0.625 share is usually paid out in cash, worth 0.625 × $6.80 = $4.25. The two figures add up to $2,044.25, so a calculator that reports both pieces matches your statement to the cent.</p>
+
+<h3>Why reverse stock splits happen</h3>
+<p>Companies use <strong>reverse stock splits</strong> to lift a low quote back above the minimum price that a stock exchange's listing requirements demand. A listing on the NASDAQ or NYSE can be at risk when shares trade under $1 for too long, and a reverse stock split is the fastest way to fix that. Some institutional investors also avoid low-priced names, so a higher quote widens who can buy. It can still signal trouble, so read the filing before drawing a conclusion. A forward split is the mirror image, and a forward stock split is nearly always announced after a period of growth.</p>
+
+<h3>Fractional shares and the new share price</h3>
+<p>Brokerages differ on leftovers: some pay cash for the fraction, some round up or down, and a few hold fractional positions. Ask which rule applies before the effective date. The new share price is unaffected either way; only the cash in lieu changes.</p>
+        </section>
+        <section id="stock-split-impact-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="stock-split-impact-guide-heading-5">
+<h2 id="stock-split-impact-guide-heading-5">Checking a 15-for-1 Stock Split Before the Effective Date</h2>
+<p>A press release lands on a Tuesday: the company will split 15-for-1, effective after the close on the 19th. Priya holds 62 lots of it, bought over several years, and the last close is $1,290.60. Before the date arrives she wants to know what her account should show and what to do with an open order.</p>
+<p>She types 62 into the first field, $1,290.60 into the price field and 15 for 1 into the ratio, then clicks the calculator's button. The answer comes back as <strong>930 shares at $86.04</strong>, and the before-and-after totals both read $80,017.20. That matches her statement, which shows 62 &times; $1,290.60, so the entries are right.</p>
+<p>Next she checks the figure against something outside the calculator: the company's Form 8-K, which states one share for every share held plus 14 more. Fifteen in all for each one held fits the 15-for-1 ratio, so her 930 is what she should see on the payable date.</p>
+<table>
+<thead><tr><th>Item</th><th>Before</th><th>After</th></tr></thead>
+<tbody>
+<tr><td>Position</td><td>62 shares</td><td>930 shares</td></tr>
+<tr><td>Quote</td><td>$1,290.60</td><td>$86.04</td></tr>
+<tr><td>Open sell order</td><td>$1,375.00</td><td>$91.67</td></tr>
+</tbody>
+</table>
+<p>The last row is the decision. Her standing limit order to sell at $1,375.00 is still tied to the old quote, and a stale limit that high would never fill once the quote drops to the $86 range. Dividing by 15 gives $91.67, so she cancels the order and re-enters it at that figure on the morning of the 20th, after confirming her broker shows 930 shares. The multiplication is trivial; having the new numbers in hand before the open is what lets her act before the price print on the 20th rather than reacting to it.</p>
+        </section>
+        <section id="stock-split-impact-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="stock-split-impact-guide-heading-6">
+<h2 id="stock-split-impact-guide-heading-6">Why Companies Announce Stock Splits</h2>
+<p>A stock split is a corporate action approved by the board of directors, and it is mostly about perception and access. When a quote reaches four figures, a single share can swallow a small account, which blocks <strong>retail investors</strong> from diversifying. Cutting the price makes each share more affordable and more accessible, widening the investor base without touching the business itself.</p>
+
+<h3>Liquidity and trading</h3>
+<p>Lower quotes tend to bring tighter trading and more buyers and sellers, which means more <strong>liquidity</strong>. That helps existing shareholders sell without moving the quote. It does not change fundamentals, and splits are not dilutive: no new money enters the company and your ownership percentage stays put.</p>
+
+<h3>Does market capitalization change?</h3>
+<p>No. <strong>Market capitalization remains unchanged</strong> because outstanding shares rise by the same factor that the quote falls. Equity value and the intrinsic value of the business are the same either side of the split, so a split is neither a bonus nor a loss. Any move you see in the following weeks comes from investor sentiment, not arithmetic.</p>
+        </section>
+        <section id="stock-split-impact-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="stock-split-impact-guide-heading-7">
+<h2 id="stock-split-impact-guide-heading-7">Stock Split Effects on Cost Basis, Dividends and Taxes</h2>
+<p>Your <strong>per-share cost basis</strong> is divided by the multiplier when your shares multiply and multiplied on a reverse split, while the total you paid stays fixed. If you bought at $318.60 and the company declares a 6-for-1 stock split, each share is carried at $53.10 afterwards, and 810 shares still add up to $43,011.00. Most brokerages adjust this automatically, though you should compare their figure with yours before tax reporting season, since the IRS taxes gains per share.</p>
+<p>Dividends are rescaled the same way. A <strong>dividend</strong> of a given amount per share before the split becomes a smaller figure afterwards, so your total payout stays level. Check the declared <strong>dividends per share</strong> on the next payment date and expect it to match the split ratio.</p>
+
+<h3>What to do before the split date</h3>
+<ul>
+<li>Run your holdings through the calculator and save the result for your records.</li>
+<li>Check how your broker handles fractional shares and rounding.</li>
+<li>Update any limit orders and price alerts, which may be cancelled or left at the old price.</li>
+<li>Record your new cost per share for later gains and losses.</li>
+</ul>
+<p>Keep in mind that this calculator shows the mechanics only. It does not predict where the market will take the quote afterwards, and it is not investment advice. A split changes the shape of your position, not your risk, so make the real decision on the company's growth and valuation rather than on the headline ratio.</p>
+        </section>
+        <section id="stock-split-impact-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="stock-split-impact-guide-heading-8">
+<h2 id="stock-split-impact-guide-heading-8">Stock Split Planning for Your Portfolio</h2>
+<p>A stock split changes the number of pieces, not the weight of a position, so your <strong>portfolio</strong> allocation is identical the moment the market reopens. If a name was 6% of the account at the close, it is still 6% at the open. The calculator shows this directly: its two totals match to the cent, so the position's weight in your account cannot move. What does shift is the lot size, because the lower quote it returns lets you trim or add in smaller steps.</p>
+
+<h3>Why the price change on split day is not a loss</h3>
+<p>On the effective date a 6-for-1 stock split shows a <strong>price change</strong> of about -83.3% on an unadjusted chart, because $68.80 sits 83.3% below $412.80. Nothing was lost; the quote simply reflects the multiplier. A <strong>shareholder</strong> who sees red on that day should compare the move with the ratio before reacting, and look at the adjusted history rather than the raw print.</p>
+
+<h3>Stock splits are not a signal on their own</h3>
+<p>Plenty of financial writers treat a forward stock split as good news and a reverse split as bad news, but the ratio itself carries no cash. Treat it as context for your <strong>investment strategy</strong>, not a trigger. If several of your stocks announce a stock split in the same quarter, run each one through the calculator separately, because every forward ratio and every reverse split ratio needs its own entries. Your <strong>existing shares</strong> convert automatically, and the capital you had in the position stays invested at the same <strong>market value</strong>, so the only real task is updating your records and, where relevant, your plan for investing new money.</p>
+        </section>
+      </div>
+
+      <section id="stock-split-impact-faq-section" class="panel p-4 sm:p-6" aria-labelledby="stock-split-impact-faq-heading" data-section="faq">
+        <h2 id="stock-split-impact-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Stock Split Calculator questions</h2>
+        <div id="stock-split-impact-faq-list" class="mt-5 space-y-3">
+          <details id="stock-split-impact-faq-1" class="faq-item" open><summary id="stock-split-impact-faq-1-summary" class="faq-summary"><h3 id="stock-split-impact-faq-1-question" class="faq-question">What is a stock split?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="stock-split-impact-faq-1-answer" class="faq-answer"><p>A stock split is a corporate action in which a company divides each existing share into several new ones. The share price falls by the same factor, so the total value of your holding is unchanged immediately afterwards.</p></div></details>
+          <details id="stock-split-impact-faq-2" class="faq-item" open><summary id="stock-split-impact-faq-2-summary" class="faq-summary"><h3 id="stock-split-impact-faq-2-question" class="faq-question">How do I calculate the share price after a stock split?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="stock-split-impact-faq-2-answer" class="faq-answer"><p>Divide the pre-split share price by the split multiplier, which is the new shares in the ratio divided by the old shares. For a 6-for-1 split the multiplier is 6, so a $412.80 share becomes $68.80.</p></div></details>
+          <details id="stock-split-impact-faq-3" class="faq-item" open><summary id="stock-split-impact-faq-3-summary" class="faq-summary"><h3 id="stock-split-impact-faq-3-question" class="faq-question">How do I calculate a reverse stock split?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="stock-split-impact-faq-3-answer" class="faq-answer"><p>Select Reverse Split and enter the ratio, for example 1 new share for every 10 old shares. Your share count is multiplied by 0.1 and the price by 10, so the total value stays the same.</p></div></details>
+          <details id="stock-split-impact-faq-4" class="faq-item" open><summary id="stock-split-impact-faq-4-summary" class="faq-summary"><h3 id="stock-split-impact-faq-4-question" class="faq-question">Does a stock split change the value of my investment?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="stock-split-impact-faq-4-answer" class="faq-answer"><p>No. Your total value is the same immediately before and after a split, because you hold more or fewer shares at a proportionally lower or higher price. Later moves in the price come from the market, not from the split.</p></div></details>
+          <details id="stock-split-impact-faq-5" class="faq-item" open><summary id="stock-split-impact-faq-5-summary" class="faq-summary"><h3 id="stock-split-impact-faq-5-question" class="faq-question">What happens to my cost basis after a stock split?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="stock-split-impact-faq-5-answer" class="faq-answer"><p>Your total cost basis does not change, but the cost per share does. Divide your original cost per share by the split multiplier for a forward split, or multiply it for a reverse split, and update your records for tax reporting.</p></div></details>
+          <details id="stock-split-impact-faq-6" class="faq-item" open><summary id="stock-split-impact-faq-6-summary" class="faq-summary"><h3 id="stock-split-impact-faq-6-question" class="faq-question">How do stock splits affect dividends?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="stock-split-impact-faq-6-answer" class="faq-answer"><p>The dividend per share is adjusted in proportion to the split, so the total dividend you receive stays about the same. After a 2-for-1 split, for example, the per-share payment halves while you hold twice as many shares.</p></div></details>
+          <details id="stock-split-impact-faq-7" class="faq-item" open><summary id="stock-split-impact-faq-7-summary" class="faq-summary"><h3 id="stock-split-impact-faq-7-question" class="faq-question">Why do companies split their stock?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="stock-split-impact-faq-7-answer" class="faq-answer"><p>Forward splits lower the price per share, which makes shares more affordable for retail investors and can improve liquidity. Reverse splits raise a low price, often to meet a stock exchange&#x27;s minimum listing price.</p></div></details>
+          <details id="stock-split-impact-faq-8" class="faq-item" open><summary id="stock-split-impact-faq-8-summary" class="faq-summary"><h3 id="stock-split-impact-faq-8-question" class="faq-question">Can a reverse stock split be a bad sign?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="stock-split-impact-faq-8-answer" class="faq-answer"><p>Sometimes. Reverse splits are more common among struggling companies, but they can also be a routine way to regain exchange compliance, so check the company&#x27;s filing and wider financial situation before drawing a conclusion.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="stock-split-impact-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="stock-split-impact-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="stock-split-impact-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="stock-split-impact-ad-bottom-leaderboard">
+            <ins id="stock-split-impact-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("stock-split-impact-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="stock-split-impact-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="stock-split-impact-right-rail-top" class="mb-6">
+        <aside id="stock-split-impact-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="stock-split-impact-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="stock-split-impact-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="stock-split-impact-ad-right-rail-rectangle">
+            <ins id="stock-split-impact-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("stock-split-impact-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="stock-split-impact-right-rail-sticky" class="sticky top-21">
+        <aside id="stock-split-impact-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="stock-split-impact-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="stock-split-impact-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="stock-split-impact-ad-right-rail-skyscraper">
+            <ins id="stock-split-impact-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("stock-split-impact-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="stock-split-impact-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="stock-split-impact-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="stock-split-impact-footer-brand">
+        <a id="stock-split-impact-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="stock-split-impact-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="stock-split-impact-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="stock-split-impact-footer-categories" aria-labelledby="stock-split-impact-footer-categories-heading">
+        <h2 id="stock-split-impact-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="stock-split-impact-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="stock-split-impact-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="stock-split-impact-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="stock-split-impact-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="stock-split-impact-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="stock-split-impact-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="stock-split-impact-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="stock-split-impact-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="stock-split-impact-footer-company" aria-labelledby="stock-split-impact-footer-company-heading">
+        <h2 id="stock-split-impact-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="stock-split-impact-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="stock-split-impact-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="stock-split-impact-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="stock-split-impact-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="stock-split-impact-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="stock-split-impact-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="stock-split-impact-footer-bottom" class="border-t border-line">
+      <p id="stock-split-impact-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="stock-split-impact-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Stock split adjustment. For a split of N new shares for every M old shares, factor = N / M:
+  //   shares after = shares x factor (whole shares; any fraction is usually paid out as cash in lieu)
+  //   price after  = price / factor; market value and total cost basis are unchanged
+  //   cost basis per share after = total basis / (shares x factor)
+  // Listed options (OCC convention, economically equivalent terms):
+  //   whole-number forward split (2:1, 3:1, 10:1 ...): contracts x factor, strike / factor, 100 shares each
+  //   any other ratio (3:2, reverse splits): contracts and strike unchanged, deliverable = 100 x factor shares
+  // Verified: 100 shares at $150, 2-for-1 -> 200 shares at $75, $15,000 before and after; $12,000 basis
+  // -> $120 then $60 per share; 1 call at $160 -> 2 calls at $80. 101 shares, 3-for-2 at $150 -> 151 shares
+  // at $100 + $50 cash for 0.5 share. 1,000 shares at $2, 1-for-10 -> 100 shares at $20; 1 contract
+  // -> 10 shares per contract, strike unchanged.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  var price4 = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2, maximumFractionDigits: 4 });
+  var count = new Intl.NumberFormat('en-US', { maximumFractionDigits: 4 });
+
+  function num(id) {
+    var el = document.getElementById(id);
+    var v = el ? parseFloat(el.value) : NaN;
+    return isNaN(v) ? NaN : v;
+  }
+  function gcd(a, b) { while (b) { var t = b; b = a % b; a = t; } return a; }
+  function set(id, text) { var el = document.getElementById(id); if (el) el.textContent = text; }
+  function row(body, cells) {
+    var tr = document.createElement('tr');
+    cells.forEach(function (t, i) {
+      var td = document.createElement(i === 0 ? 'th' : 'td');
+      if (i === 0) td.setAttribute('scope', 'row');
+      td.textContent = t;
+      tr.appendChild(td);
+    });
+    body.appendChild(tr);
+  }
+
+  function split(shares, price, newN, oldN, basis) {
+    var factor = newN / oldN;
+    var exact = shares * factor;
+    var wholeShares = Math.floor(exact + 1e-9);
+    var fraction = Math.max(0, exact - wholeShares);
+    if (fraction < 1e-9) fraction = 0;
+    var newPrice = price / factor;
+    return {
+      factor: factor, exact: exact, whole: wholeShares, fraction: fraction, newPrice: newPrice,
+      value: shares * price, cash: fraction * newPrice,
+      basisBefore: basis / shares, basisAfter: basis / exact,
+      basisFraction: basis * fraction / exact
+    };
+  }
+
+  function adjustOption(contracts, strike, factor, wholeRatio) {
+    if (wholeRatio && factor > 1) return { contracts: contracts * factor, strike: strike / factor, deliverable: 100 };
+    return { contracts: contracts, strike: strike, deliverable: 100 * factor };
+  }
+
+  function update() {
+    var shares = num('ssShares'), price = num('ssPrice'), newN = num('ssNew'), oldN = num('ssOld'),
+        basis = num('ssBasis'), contracts = num('ssContracts'), strike = num('ssStrike');
+    var useOptions = document.getElementById('ssHasOptions').checked;
+    document.getElementById('ssOptionFields').hidden = !useOptions;
+    var hasBasis = !isNaN(basis) && basis > 0;
+    var error = document.getElementById('ssError');
+    var msg = '';
+    if ([shares, price, newN, oldN].some(isNaN)) msg = 'Enter the shares you own, the share price and both parts of the split ratio.';
+    else if (shares <= 0 || price <= 0) msg = 'Shares and share price must be greater than zero.';
+    else if (newN < 1 || oldN < 1 || newN % 1 !== 0 || oldN % 1 !== 0 || newN > 1000 || oldN > 1000) msg = 'Use whole numbers from 1 to 1,000 for the split ratio, such as 2 for 1 or 1 for 10.';
+    else if (newN === oldN) msg = 'The two sides of the split ratio are equal, so nothing changes.';
+    else if (!isNaN(basis) && basis < 0) msg = 'Cost basis cannot be negative.';
+    else if (useOptions && (isNaN(contracts) || isNaN(strike) || contracts < 1 || contracts % 1 !== 0 || strike <= 0)) msg = 'Enter a whole number of option contracts and a strike price above zero.';
+    error.hidden = !msg;
+    error.textContent = msg;
+    if (msg) return;
+
+    var g = gcd(newN, oldN), n = newN / g, m = oldN / g;
+    var r = split(shares, price, n, m, hasBasis ? basis : 0);
+    var kind = n > m ? 'Forward split' : 'Reverse split';
+    set('ssRatioLabel', kind + ': ' + n + ' new for every ' + m + ' old');
+    set('ssNewShares', count.format(r.whole));
+    set('ssNewPrice', price4.format(r.newPrice));
+    set('ssValue', money.format(r.value));
+    set('ssCash', r.fraction > 0 ? money.format(r.cash) + ' for ' + count.format(r.fraction) + ' share' : 'None');
+    set('ssBasisAfter', hasBasis ? price4.format(r.basisAfter) : 'Enter cost basis');
+
+    var body = document.getElementById('ssTable');
+    while (body.firstChild) body.removeChild(body.firstChild);
+    row(body, ['Shares', count.format(shares), count.format(r.exact) + (r.fraction > 0 ? ' (' + count.format(r.whole) + ' whole)' : '')]);
+    row(body, ['Share price', price4.format(price), price4.format(r.newPrice)]);
+    row(body, ['Market value', money.format(r.value), money.format(r.value)]);
+    if (hasBasis) {
+      row(body, ['Total cost basis', money.format(basis), money.format(basis)]);
+      row(body, ['Cost basis per share', price4.format(r.basisBefore), price4.format(r.basisAfter)]);
+      if (r.fraction > 0) row(body, ['Basis of the fractional share', '–', money.format(r.basisFraction)]);
+    }
+    if (useOptions) {
+      var o = adjustOption(contracts, strike, n / m, m === 1);
+      row(body, ['Option contracts', count.format(contracts), count.format(o.contracts)]);
+      row(body, ['Strike price', price4.format(strike), price4.format(o.strike)]);
+      row(body, ['Shares per contract', '100', count.format(o.deliverable)]);
+      row(body, ['Shares controlled by options', count.format(contracts * 100), count.format(o.contracts * o.deliverable)]);
+      set('ssOptionNote', m === 1
+        ? 'Whole-number split: you get more contracts at a lower strike, each still covering 100 shares.'
+        : (n > m ? 'Uneven split ratio' : 'Reverse split') + ': contracts and strike stay the same and each contract covers ' +
+          count.format(o.deliverable) + ' shares. Check the exchange notice for exact terms and any cash.');
+    } else {
+      set('ssOptionNote', '');
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('ssForm');
+    if (!form) return;
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

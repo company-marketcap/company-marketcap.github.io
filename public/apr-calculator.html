@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en" id="apr-calculator-document" data-page-slug="apr-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>APR Calculator: Find the Real APR of Any Loan</title>
+  <meta name="description" content="Use our free APR calculator to see a loan&#x27;s true cost: enter the amount, interest rate, term and fees, then compare loan offers by annual percentage rate.">
+  <link rel="canonical" href="https://company-marketcap.github.io/apr-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="APR Calculator: Find the Real APR of Any Loan">
+  <meta property="og:description" content="Use our free APR calculator to see a loan&#x27;s true cost: enter the amount, interest rate, term and fees, then compare loan offers by annual percentage rate.">
+  <meta property="og:url" content="https://company-marketcap.github.io/apr-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "APR Calculator", "url": "https://company-marketcap.github.io/apr-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Use our free APR calculator to see a loan's true cost: enter the amount, interest rate, term and fees, then compare loan offers by annual percentage rate."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Interest, APR & Time Value of Money", "item": "https://company-marketcap.github.io/financial-calculators.html#interest-calculators"}, {"@type": "ListItem", "position": 4, "name": "APR Calculator", "item": "https://company-marketcap.github.io/apr-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the difference between APR and interest rate?", "acceptedAnswer": {"@type": "Answer", "text": "The interest rate is the yearly price of the principal alone. The APR adds required fees and finance charges, so on a loan with fees it comes out higher than the rate."}}, {"@type": "Question", "name": "How does an APR calculator work?", "acceptedAnswer": {"@type": "Answer", "text": "It computes the payment from your loan amount, rate and term, then finds the rate at which those payments equal the money you actually receive after upfront fees. That rate, annualized, is the APR."}}, {"@type": "Question", "name": "Which fees are included in the APR?", "acceptedAnswer": {"@type": "Answer", "text": "Required lender charges such as origination fees, processing and underwriting fees, mortgage broker fees, points and mortgage insurance usually count. Late payment fees and optional extras do not."}}, {"@type": "Question", "name": "What is a good APR?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the loan type, your credit and current market rates. Compare your APR with the national average for that loan type and with other offers made to your credit profile."}}, {"@type": "Question", "name": "Why does a shorter loan term raise the APR?", "acceptedAnswer": {"@type": "Answer", "text": "A fixed upfront fee is spread over fewer payments, so each year of the loan carries a larger share of it. A longer term dilutes the fee, though it usually costs more interest overall."}}, {"@type": "Question", "name": "Is APR the same as APY?", "acceptedAnswer": {"@type": "Answer", "text": "No. APR is the stated yearly rate, while APY includes compounding within the year, so APY is slightly higher than APR at the same rate. Lenders quote APR on loans and banks quote APY on savings."}}, {"@type": "Question", "name": "Can my APR change after I take out the loan?", "acceptedAnswer": {"@type": "Answer", "text": "On a variable or adjustable-rate loan, yes, because the rate follows an index. Paying off or refinancing early can also raise the effective APR, since the upfront fees are spread over fewer months."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="apr-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="apr-calculator" data-page-type="calculator">
+  <a id="apr-calculator-skip-link" href="#apr-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="apr-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="apr-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="apr-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="apr-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="apr-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="apr-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="apr-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="apr-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="apr-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="apr-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="apr-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="apr-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="apr-calculator-header-search-status" aria-controls="apr-calculator-header-search-results" data-search-input="header">
+              <p id="apr-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="apr-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="apr-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="apr-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="apr-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="apr-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="apr-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="apr-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="apr-calculator-mobile-search-status" aria-controls="apr-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="apr-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="apr-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="apr-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="apr-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="apr-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="apr-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="apr-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="apr-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="apr-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="apr-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="apr-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="apr-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="apr-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="apr-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="apr-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="apr-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="apr-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="apr-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="apr-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="apr-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="apr-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="apr-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="apr-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="apr-calculator-sidebar-search-status" aria-controls="apr-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="apr-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="apr-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="apr-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="apr-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="apr-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="apr-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="apr-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="apr-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="apr-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="apr-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="apr-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="apr-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="apr-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="apr-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="apr-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="apr-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="apr-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="apr-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="apr-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="apr-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="apr-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="apr-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators" aria-current="true">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="apr-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="apr-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="apr-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="apr-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="apr-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="apr-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="apr-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="apr-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="apr-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="apr-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="apr-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="apr-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="apr-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="apr-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="apr-calculator" data-calculator-slug="apr-calculator" data-sub-category-slug="interest-calculators">
+      <aside id="apr-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="apr-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="apr-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="apr-calculator-ad-top-leaderboard">
+            <ins id="apr-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("apr-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="apr-calculator-intro-area" class="space-y-4">
+        <nav id="apr-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="apr-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="apr-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="apr-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="apr-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#interest-calculators" itemprop="item"><span itemprop="name">Interest, APR &amp; Time Value of Money</span></a><meta itemprop="position" content="3"></li>
+            <li id="apr-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">APR Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/apr-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="apr-calculator-hero-section" aria-labelledby="apr-calculator-hero-heading" data-section="hero">
+          <h1 id="apr-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">APR Calculator: Find the Real APR of Any Loan</h1>
+          <p id="apr-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Your APR calculator turns a loan&#x27;s interest rate, fees and term into one number: the real APR, or annual percentage rate, which shows the true cost of borrowing. Enter the loan amount, the rate and every upfront finance charge, and you can see how fees push the price of a loan above the rate a lender quotes. Run it before you sign, so you can compare loan offers on the same footing. <!-- SILO_START:slot_a -->If you want to see how the figures change, the <a class="silo-link" href="/interest-calculator.html">interest calculator online</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="apr-calculator-tool" class="space-y-6" data-page-slug="apr-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="apFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="apForm" class="space-y-5" novalidate aria-labelledby="apFormHeading">
+      <h2 id="apFormHeading" class="panel-heading">Enter the loan and its fees</h2>
+<div><label for="apAmount" class="form-label">Loan amount</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="apAmount" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1000" value="250000" inputmode="decimal"></div></div>
+<div><label for="apRate" class="form-label">Interest rate (note rate)</label><div class="input-group"><input type="number" id="apRate" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="50" step="0.125" value="6.5" inputmode="decimal"><span class="input-affix">%</span></div></div>
+<div class="form-row form-row-2">
+<div><label for="apYears" class="form-label">Loan term</label><div class="input-group"><input type="number" id="apYears" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="50" step="1" value="15" inputmode="numeric"><span class="input-affix">years</span></div></div>
+<div><label for="apMonths" class="form-label">Plus months</label><div class="input-group"><input type="number" id="apMonths" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="11" step="1" value="0" inputmode="numeric"><span class="input-affix">months</span></div></div>
+</div>
+<div><label for="apFees" class="form-label">Fees paid upfront</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="apFees" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="4000" inputmode="decimal" aria-describedby="apFeesHint"></div><p id="apFeesHint" class="form-hint">Finance charges such as origination, underwriting and processing fees, paid at closing or deducted from the loan proceeds.</p></div>
+<details class="form-details"><summary class="form-details-summary">More options</summary>
+<div><label for="apPoints" class="form-label">Discount points</label><div class="input-group"><input type="number" id="apPoints" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="10" step="0.125" value="0" inputmode="decimal" aria-describedby="apPointsHint"><span class="input-affix">points</span></div><p id="apPointsHint" class="form-hint">One point is 1% of the loan amount, paid upfront to lower the rate.</p></div>
+<div><label for="apFinanced" class="form-label">Fees added to the loan balance</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="apFinanced" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="0" inputmode="decimal" aria-describedby="apFinancedHint"></div><p id="apFinancedHint" class="form-hint">Fees rolled into the loan, so you pay interest on them as well.</p></div>
+</details>
+      <p id="apError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="apResults" aria-live="polite" aria-labelledby="apResultsHeading">
+      <h2 id="apResultsHeading" class="panel-heading">Your results</h2>
+<div class="stat-grid mt-4">
+<div class="stat-card stat-card-highlight"><p class="stat-label">APR</p><p id="apApr" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">Monthly payment</p><p id="apPayment" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">Finance charge</p><p id="apCharge" class="stat-value">–</p></div>
+</div>
+<div class="mt-5">
+<div class="result-row"><span class="result-term">Interest rate</span><span id="apRateOut" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">APR above the interest rate</span><span id="apSpread" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Amount financed (cash you receive)</span><span id="apNet" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Loan balance at the start</span><span id="apBalance" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Total fees and points</span><span id="apFeesOut" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Total interest</span><span id="apInterest" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Total of payments</span><span id="apTotal" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Effective annual rate of the APR</span><span id="apEar" class="result-value">–</span></div>
+</div>
+<p class="form-hint">Finance charge is total interest plus all fees and points. The APR is the yearly rate at which your monthly payments repay exactly the cash you receive.</p>
+    </div>
+  </div>
+</section>
+        <p id="apr-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="apr-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Your APR calculator turns a loan&#x27;s interest rate, fees and term into one number: the real APR, or annual percentage rate, which shows the true cost of borrowing. Enter the loan amount, the rate and every upfront finance charge, and you can see how fees push the price of a loan above the rate a lender quotes. Run it before you sign, so you can compare loan offers on the same footing. <!-- SILO_START:slot_a_m -->If you want to see how the figures change, the <a class="silo-link" href="/interest-calculator.html">interest calculator online</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="apr-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="apr-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="apr-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="apr-calculator-ad-in-feed">
+            <ins id="apr-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("apr-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="apr-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="apr-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="apr-calculator-guide-heading-1">
+<h2 id="apr-calculator-guide-heading-1">Finding the Real APR of a Loan: Inputs and Formula</h2>
+<p>The math behind a loan APR solves for the monthly rate that makes the present value of every payment equal to the money you actually receive. That money is the <strong>loan amount</strong> minus the <strong>finance charges</strong> you pay up front, such as an <strong>origination fee</strong>. Written out, the <strong>annual percentage rate</strong> satisfies: <!-- SILO_START:slot_b -->Pair this with the <a class="silo-link" href="/simple-interest-calculator.html">simple interest calculator online</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_b --></p>
+$$L - F = M \times \frac{1 - (1 + i)^{-n}}{i}, \qquad \text{APR} = 12 \times i$$
+<p>Here \(L\) is the loan amount, \(F\) is the upfront fees, \(M\) is the monthly payment, \(n\) is the number of months and \(i\) is the monthly rate. No closed-form answer exists for \(i\), so a calculator searches for it by repeated guessing until the payments line up, the same way a spreadsheet's rate function does.</p>
+
+<h3>Loan Amount, Loan Term and Monthly Payment</h3>
+<p>Four entries drive the result, and you can find each one in your loan paperwork or a lender's quote:</p>
+<ul>
+<li><strong>Loan amount:</strong> the principal you borrow, before any fees are taken out.</li>
+<li><strong>Interest rate:</strong> the annual rate the lender charges on the balance, before fees.</li>
+<li><strong>Loan term:</strong> the number of months or years you have to repay, which sets the monthly payment.</li>
+<li><strong>Finance charges:</strong> required lender fees that you pay once, at closing or taken from the proceeds.</li>
+</ul>
+<p>The calculator uses the first three to compute the monthly payment, then adds the fourth to find what that payment stream really costs you each year.</p>
+
+<h3>Finance Charges and the Origination Fee</h3>
+<p>An origination fee, application fees and processing fees all belong in the finance charge box because you cannot avoid them if you take the loan. A <em>late payment fee</em> does not, since you only pay it if you slip, so leave it out. Every dollar you add here widens the gap between the interest rate and the APR, because the borrower receives less cash while still repaying the full principal.</p>
+
+<h3>Total Interest and the Amortization Schedule</h3>
+<p>Alongside the APR, a good calculator reports total interest and the total payments over the life of the loan. An amortization schedule goes one step further and splits each month's payment between interest and principal, so you can see the balance fall and the payoff date arrive.</p>
+        </section>
+        <section id="apr-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="apr-calculator-guide-heading-2">
+<h2 id="apr-calculator-guide-heading-2">General APR Calculator Walkthrough: A Worked Example</h2>
+<p>Suppose you are offered an <strong>$18,400</strong> loan at a <strong>7.35%</strong> interest rate over <strong>60 months</strong>, with a <strong>$690</strong> origination fee deducted from the proceeds. Because of that fee, the amount financed is only $17,710, yet you repay on the full $18,400. Here is what the calculator reports: <!-- SILO_START:slot_c -->Try the <a class="silo-link" href="/rule-of-72-calculator.html">rule of 72 calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_c --></p>
+<table>
+<thead><tr><th>Item</th><th>Value</th></tr></thead>
+<tbody>
+<tr><td>Loan amount</td><td>$18,400.00</td></tr>
+<tr><td>Interest rate</td><td>7.35%</td></tr>
+<tr><td>Loan term</td><td>60 months</td></tr>
+<tr><td>Upfront fees</td><td>$690.00</td></tr>
+<tr><td>Monthly payment</td><td>$367.39</td></tr>
+<tr><td>Total payments (60 months)</td><td>$22,043.29</td></tr>
+<tr><td>Total interest</td><td>$3,643.29</td></tr>
+<tr><td>All payments and fees</td><td>$22,733.29</td></tr>
+<tr><td><strong>APR</strong></td><td><strong>8.97%</strong></td></tr>
+</tbody>
+</table>
+<p>The quoted rate is 7.35%, but the APR is <strong>8.97%</strong>, a gap of 1.62 percentage points that comes entirely from the $690 fee. The monthly payment of $367.39 is the same with or without that fee; what changes is how much cash you walk away with for that payment. If your payoff date arrives early, because you refinance or pay extra, the fee is spread over fewer months and the effective cost climbs even higher.</p>
+
+<p>You can test how sensitive the result is by changing only the fee. At $400 the APR drops to 8.28%, and at $1,000 it rises to 9.73%, while the interest rate never moves from 7.35%. Each extra $100 of fees adds roughly a tenth of a percentage point at this size and length, which is a quick rule of thumb for judging whether a lender's extra charge is worth negotiating.</p>
+        </section>
+        <section id="apr-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="apr-calculator-guide-heading-3">
+<h2 id="apr-calculator-guide-heading-3">Mortgage APR Calculator: Closing Costs, Points and Fees</h2>
+<p>A mortgage works the same way, with two extra inputs: a down payment, which reduces the loan amount, and the closing costs a lender charges to originate the loan. An APR mortgage calculator matters more than a general one because mortgage fees are large and stretch across up to 360 payments. In the United States, the <strong>Truth in Lending Act</strong> requires lenders to disclose the APR, and on the <strong>loan estimate</strong> form you will find the interest rate on the first page and the APR further in.</p>
+<p>These charges usually count toward a mortgage's APR:</p>
+<ul>
+<li>Administration fees and application fees</li>
+<li>Underwriting fees and processing fees</li>
+<li>Mortgage broker fees</li>
+<li>Origination points and discount points</li>
+<li>Mortgage insurance</li>
+<li>Escrow fees and certain closing fees</li>
+</ul>
+<p>Appraisal, survey and title charges, along with prepaid taxes and insurance placed in escrow, are generally left out of the APR, so ask your lender for a line-by-line list of what its figure includes. Because the APR assumes you keep the mortgage for the full term, it understates fee impact if you sell or refinance in a few years. Between two mortgages with the same APR, the one with lower upfront fees is the better pick for a short stay.</p>
+
+<h3>Mortgage Points, Rates and the Break-Even Point</h3>
+<p>Paying discount points lowers the mortgage rate but raises the upfront cost, so the APR may not fall as much as the rate does. Shop several lenders on the same day, because mortgage rates shift daily, and compare the APR of each quote against how long you realistically expect to hold the home. A buyer who stays seven years benefits from points far more than one who moves in three, and the break-even point, the month when the monthly savings have repaid the extra mortgage cost, tells you which camp you fall into. Enter the points as an upfront fee in the calculator and the APR rises with every point you buy, so set that APR beside the break-even month before you decide.</p>
+        </section>
+        <section id="apr-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="apr-calculator-guide-heading-4">
+<h2 id="apr-calculator-guide-heading-4">Checking a Dealer's Auto Loan Quote Against Its Loan APR</h2>
+<p>Marcus is financing a used crossover, and the dealer's finance office slides over a quote that proudly lists a 6.15% rate. His credit union has pre-approved him at 6.85% with no fees, so on the headline number the dealer wins. Before signing, he reads the fine print and finds a $1,085 documentation and processing fee folded into the paperwork.</p>
+<p>He opens the calculator and enters the dealer's terms: a <strong>$26,750</strong> loan amount, <strong>6.15%</strong> interest, <strong>72 months</strong> and <strong>$1,085</strong> in fees. The monthly payment comes back at $445.22, and the loan APR shows <strong>7.62%</strong>, which is 1.47 points above the quoted rate. That is the figure the Truth in Lending disclosure box on the dealer's contract has to show, and it is the one he can hold against the credit union's offer.</p>
+<p>Then he enters the credit union's terms with the fee box at zero. With no finance charges, the APR equals the rate: <strong>6.85%</strong>, with a payment of $454.14. The payment is $8.92 higher each month, which makes the dealer look better until he adds it up:</p>
+<ul>
+<li>Dealer: 72 payments of $445.22 come to $32,055.93, plus the $1,085 fee, for $33,140.93.</li>
+<li>Credit union: 72 payments of $454.14 come to $32,697.84, with nothing added.</li>
+</ul>
+<p>The credit union loan is cheaper by $443.09 over six years, and its APR is 0.77 points lower. Marcus's next move is specific: he asks the dealer to drop the $1,085 charge and reruns the calculator at 6.15% with the fee box at zero, where the APR falls back to 6.15%. The dealer declines, so he takes the credit union's loan and uses the $8.92 monthly difference to set a 72-month payoff he can plan around.</p>
+        </section>
+        <section id="apr-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="apr-calculator-guide-heading-5">
+<h2 id="apr-calculator-guide-heading-5">Annual Percentage Rate vs Interest Rate: Why the Cost of Borrowing Differs</h2>
+<p>The <strong>interest rate</strong> is the price of the principal alone. The APR folds in fees as well, which makes it the better measure of the <strong>cost of borrowing</strong>. On an installment loan such as a personal loan or an auto loan, the two figures match only when there are no finance charges. Add a fee and the APR rises above the rate; shorten the repayment period and the gap widens, since you repay the whole charge faster.</p>
+<p>A credit card behaves differently. Its APR equals its interest rate and ignores annual fees, a balance transfer fee or a foreign transaction fee, so weigh those separately before you pick a card. The calculator on this page is built for installment loans with upfront fees, so do not run a card's APR through it.</p>
+        </section>
+        <section id="apr-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="apr-calculator-guide-heading-6">
+<h2 id="apr-calculator-guide-heading-6">Why the Loan APR Climbs as the Loan Term Gets Shorter</h2>
+<p>A fixed fee is cheaper per year when it is spread over more years. Keeping the same $18,400 loan, 7.35% rate and $690 fee, only the term changes in this comparison:</p>
+<table>
+<thead><tr><th>Loan term</th><th>Monthly payment</th><th>Total interest</th><th>APR</th></tr></thead>
+<tbody>
+<tr><td>36 months</td><td>$571.09</td><td>$2,159.16</td><td>9.96%</td></tr>
+<tr><td>48 months</td><td>$443.60</td><td>$2,893.03</td><td>9.34%</td></tr>
+<tr><td>60 months</td><td>$367.39</td><td>$3,643.29</td><td>8.97%</td></tr>
+<tr><td>84 months</td><td>$280.86</td><td>$5,192.58</td><td>8.55%</td></tr>
+</tbody>
+</table>
+<p>The 36-month loan has the highest APR and the lowest total interest, while the 84-month loan has the lowest APR and costs the most in interest. That is why a lower APR alone does not make a loan cheaper: pair it with total interest and a monthly payment you can afford.</p>
+<figure><img src="/assets/images/tools/apr-calculator/loan-apr-by-loan-term-chart.svg" alt="Line chart showing the APR gap above a 7.35% interest rate shrinking from 2.61 points at a 36-month loan term to 1.20 points at 84 months"><figcaption>The same $690 fee adds less to the loan APR as the loan term gets longer.</figcaption></figure>
+        </section>
+        <section id="apr-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="apr-calculator-guide-heading-7">
+<h2 id="apr-calculator-guide-heading-7">APR vs APY: Annual Percentage Yield and the Effective Annual Rate</h2>
+<p>You will see <strong>APY</strong>, or <strong>annual percentage yield</strong>, advertised on a savings account, and it is also called the <strong>effective annual rate</strong>. Unlike APR, it includes compounding, so at the same stated rate it looks larger. The conversion depends on the compounding frequency:</p>
+$$\text{APY} = \left(1 + \frac{\text{APR}}{12}\right)^{12} - 1$$
+<p>An 8.40% APR compounded monthly equals an APY of 8.73%. Lenders quote APR on loans because it looks smaller, while banks quote APY on deposit accounts because it looks bigger. Use the same measure on both sides of a comparison, otherwise you are not measuring the same thing.</p>
+        </section>
+        <section id="apr-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="apr-calculator-guide-heading-8">
+<h2 id="apr-calculator-guide-heading-8">Fixed APR and Variable APR: What Can Change After Closing</h2>
+<p>A fixed APR stays the same for the whole term, which is useful when rates are low and likely to rise. A <strong>variable APR</strong> moves with an index, often tied to the federal funds rate, and a lender may add a margin based on your creditworthiness. An adjustable rate loan can start cheaper than a fixed one, and it can also cost more if the index climbs, so the APR you calculate today is only a snapshot. Longer terms are exposed to rate swings for more years.</p>
+        </section>
+        <section id="apr-calculator-guide-section-9" class="panel article-content p-4 sm:p-6" aria-labelledby="apr-calculator-guide-heading-9">
+<h2 id="apr-calculator-guide-heading-9">How Your Credit Score Changes the APR You Are Offered</h2>
+<p>Lenders price risk, and your <strong>credit score</strong> is the first thing they check. A higher FICO score and a lower debt-to-income ratio generally earn a lower rate and smaller fees. Income, the loan's term and whether it is secured also matter. To improve your standing, pay every bill on time and bring down credit utilization by paying down card balances. Getting prequalified lets you see likely rates through a soft inquiry, so you can enter the rate and fees you are really offered, and see the APR they produce, before you formally apply.</p>
+
+<h3>Credit Card Balances and Your Borrowing Power</h3>
+<p>A high credit card balance can pull your credit down, and a lower tier means higher rates and fees entered into the calculator, which raises the APR it returns. Keep each credit card below roughly a third of its limit, and check your credit report for errors a month before you apply.</p>
+        </section>
+        <section id="apr-calculator-guide-section-10" class="panel article-content p-4 sm:p-6" aria-labelledby="apr-calculator-guide-heading-10">
+<h2 id="apr-calculator-guide-heading-10">Comparing Loan Offers by True Cost: An Apples-to-Apples Check</h2>
+<p>APR is designed to be an apples-to-apples yardstick, and it proves its worth when two lenders quote different rates and fees. To compare offers fairly, request each quote in writing for the same loan amount and the same repayment period, then compare the APR first, the monthly payment second and the total of all payments third. Ask each lender what its fee list covers, and whether a prepayment penalty would change the cost if you pay early. Rates move often, so collect the quotes within a day or two of each other. Take two offers on the same $18,400 for 60 months:</p>
+<table>
+<thead><tr><th>Offer</th><th>Interest rate</th><th>Upfront fee</th><th>Monthly payment</th><th>APR</th></tr></thead>
+<tbody>
+<tr><td>Lender A</td><td>7.35%</td><td>$690</td><td>$367.39</td><td>8.97%</td></tr>
+<tr><td>Lender B</td><td>6.90%</td><td>$1,450</td><td>$363.47</td><td>10.40%</td></tr>
+</tbody>
+</table>
+<p>Lender B advertises the lower rate and a slightly smaller payment, yet its APR is 1.43 points higher once the $1,450 fee is counted. Choose Lender A unless you plan to refinance or repay early in a way that changes the math. Always check the monthly payment as well, since a loan you cannot afford is no bargain at any APR.</p>
+<figure><img src="/assets/images/tools/apr-calculator/apr-vs-interest-rate-lender-comparison.svg" alt="Paired bar chart comparing the interest rate and APR of two lenders: Lender A 7.35% rate and 8.97% APR, Lender B 6.90% rate and 10.40% APR"><figcaption>Lender B quotes the lower interest rate but the higher APR once its $1,450 fee is counted.</figcaption></figure>
+<blockquote>The lowest rate is not always the lowest cost; the APR is where fees show up.</blockquote>
+        </section>
+      </div>
+
+      <section id="apr-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="apr-calculator-faq-heading" data-section="faq">
+        <h2 id="apr-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">APR Calculator questions</h2>
+        <div id="apr-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="apr-calculator-faq-1" class="faq-item" open><summary id="apr-calculator-faq-1-summary" class="faq-summary"><h3 id="apr-calculator-faq-1-question" class="faq-question">What is the difference between APR and interest rate?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="apr-calculator-faq-1-answer" class="faq-answer"><p>The interest rate is the yearly price of the principal alone. The APR adds required fees and finance charges, so on a loan with fees it comes out higher than the rate.</p></div></details>
+          <details id="apr-calculator-faq-2" class="faq-item" open><summary id="apr-calculator-faq-2-summary" class="faq-summary"><h3 id="apr-calculator-faq-2-question" class="faq-question">How does an APR calculator work?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="apr-calculator-faq-2-answer" class="faq-answer"><p>It computes the payment from your loan amount, rate and term, then finds the rate at which those payments equal the money you actually receive after upfront fees. That rate, annualized, is the APR.</p></div></details>
+          <details id="apr-calculator-faq-3" class="faq-item" open><summary id="apr-calculator-faq-3-summary" class="faq-summary"><h3 id="apr-calculator-faq-3-question" class="faq-question">Which fees are included in the APR?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="apr-calculator-faq-3-answer" class="faq-answer"><p>Required lender charges such as origination fees, processing and underwriting fees, mortgage broker fees, points and mortgage insurance usually count. Late payment fees and optional extras do not.</p></div></details>
+          <details id="apr-calculator-faq-4" class="faq-item" open><summary id="apr-calculator-faq-4-summary" class="faq-summary"><h3 id="apr-calculator-faq-4-question" class="faq-question">What is a good APR?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="apr-calculator-faq-4-answer" class="faq-answer"><p>It depends on the loan type, your credit and current market rates. Compare your APR with the national average for that loan type and with other offers made to your credit profile.</p></div></details>
+          <details id="apr-calculator-faq-5" class="faq-item" open><summary id="apr-calculator-faq-5-summary" class="faq-summary"><h3 id="apr-calculator-faq-5-question" class="faq-question">Why does a shorter loan term raise the APR?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="apr-calculator-faq-5-answer" class="faq-answer"><p>A fixed upfront fee is spread over fewer payments, so each year of the loan carries a larger share of it. A longer term dilutes the fee, though it usually costs more interest overall.</p></div></details>
+          <details id="apr-calculator-faq-6" class="faq-item" open><summary id="apr-calculator-faq-6-summary" class="faq-summary"><h3 id="apr-calculator-faq-6-question" class="faq-question">Is APR the same as APY?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="apr-calculator-faq-6-answer" class="faq-answer"><p>No. APR is the stated yearly rate, while APY includes compounding within the year, so APY is slightly higher than APR at the same rate. Lenders quote APR on loans and banks quote APY on savings.</p></div></details>
+          <details id="apr-calculator-faq-7" class="faq-item" open><summary id="apr-calculator-faq-7-summary" class="faq-summary"><h3 id="apr-calculator-faq-7-question" class="faq-question">Can my APR change after I take out the loan?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="apr-calculator-faq-7-answer" class="faq-answer"><p>On a variable or adjustable-rate loan, yes, because the rate follows an index. Paying off or refinancing early can also raise the effective APR, since the upfront fees are spread over fewer months.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="apr-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="apr-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="apr-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="apr-calculator-ad-bottom-leaderboard">
+            <ins id="apr-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("apr-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="apr-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="apr-calculator-right-rail-top" class="mb-6">
+        <aside id="apr-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="apr-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="apr-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="apr-calculator-ad-right-rail-rectangle">
+            <ins id="apr-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("apr-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="apr-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="apr-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="apr-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="apr-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="apr-calculator-ad-right-rail-skyscraper">
+            <ins id="apr-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("apr-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="apr-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="apr-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="apr-calculator-footer-brand">
+        <a id="apr-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="apr-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="apr-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="apr-calculator-footer-categories" aria-labelledby="apr-calculator-footer-categories-heading">
+        <h2 id="apr-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="apr-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="apr-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="apr-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="apr-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="apr-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="apr-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="apr-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="apr-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="apr-calculator-footer-company" aria-labelledby="apr-calculator-footer-company-heading">
+        <h2 id="apr-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="apr-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="apr-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="apr-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="apr-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="apr-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="apr-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="apr-calculator-footer-bottom" class="border-t border-line">
+      <p id="apr-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="apr-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // True APR including fees (US Truth in Lending, actuarial method, monthly payments).
+  //   Balance B = loan amount + fees added to the loan.  Payment M = B * i / (1 - (1 + i)^-n),
+  //   i = note rate / 12 (M = B / n at 0%).  Amount financed A = loan amount - upfront fees - points.
+  //   APR = 12 * j, where j solves A = M * (1 - (1 + j)^-n) / j  (bisection, 200 halvings).
+  //   Finance charge = M * n - A.  Effective annual rate of the APR = (1 + j)^12 - 1.
+  // Verified in Node (scratchpad tests/w2loans): $100,000 at 6% for 10 years with $2,500 upfront
+  //   fees -> payment $1,110.21, APR 6.563%; $280,000 at 6.2% for 30 years with $3,500 fees and
+  //   0.5 points -> payment $1,714.91, APR 6.367% (both match a published APR calculator's
+  //   defaults); no fees -> APR equals the note rate; 0% with fees gives a positive APR; blank,
+  //   negative and fees >= loan show an error, never NaN.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 });
+
+  function el(id) { return document.getElementById(id); }
+
+  function read(id, blankAsZero) {
+    var raw = String(el(id).value).trim();
+    if (raw === '') return blankAsZero ? 0 : NaN;
+    var v = Number(raw);
+    return isFinite(v) ? v : NaN;
+  }
+
+  function payment(principal, i, n) {
+    if (n <= 0 || principal <= 0) return 0;
+    if (i === 0) return principal / n;
+    return principal * i / (1 - Math.pow(1 + i, -n));
+  }
+
+  function pv(pmt, j, n) { return j === 0 ? pmt * n : pmt * (1 - Math.pow(1 + j, -n)) / j; }
+
+  // Monthly rate j at which n payments of pmt are worth exactly the amount financed.
+  function solveMonthly(net, pmt, n) {
+    if (net <= 0 || pmt <= 0) return NaN;
+    if (net >= pmt * n - 1e-9) return 0;
+    var lo = 0, hi = 1;
+    while (pv(pmt, hi, n) > net && hi < 1e6) hi *= 2;
+    for (var k = 0; k < 200; k++) {
+      var mid = (lo + hi) / 2;
+      if (pv(pmt, mid, n) > net) lo = mid; else hi = mid;
+    }
+    return (lo + hi) / 2;
+  }
+
+  function setText(id, text) { el(id).textContent = text; }
+
+  function clearResults() {
+    ['apApr', 'apPayment', 'apCharge', 'apRateOut', 'apSpread', 'apNet', 'apBalance', 'apFeesOut', 'apInterest', 'apTotal', 'apEar']
+      .forEach(function (id) { setText(id, '–'); });
+  }
+
+  function update() {
+    var amount = read('apAmount'), rate = read('apRate'), years = read('apYears', true), months = read('apMonths', true),
+        fees = read('apFees', true), points = read('apPoints', true), financed = read('apFinanced', true);
+    var error = el('apError'), msg = '';
+    var n = years * 12 + months;
+    if (isNaN(amount) || amount <= 0) msg = 'Enter a loan amount greater than $0.';
+    else if (isNaN(rate) || rate < 0 || rate > 50) msg = 'Enter an interest rate from 0% to 50%.';
+    else if (isNaN(years) || isNaN(months) || years < 0 || months < 0 || years % 1 !== 0 || months % 1 !== 0 || years > 50 || months > 11)
+      msg = 'Enter the term as whole years (0 to 50) and months (0 to 11).';
+    else if (n < 1) msg = 'Enter a loan term of at least one month.';
+    else if ([fees, points, financed].some(function (v) { return isNaN(v) || v < 0; })) msg = 'Fees and points cannot be negative.';
+    else if (points > 10) msg = 'Enter 10 points or fewer.';
+    var pointsCost = amount * points / 100;
+    var net = amount - fees - pointsCost;
+    if (!msg && net <= 0) msg = 'Upfront fees and points must be less than the loan amount.';
+    error.hidden = !msg;
+    error.textContent = msg;
+    if (msg) { clearResults(); return; }
+
+    var balance = amount + financed;
+    var pmt = payment(balance, rate / 100 / 12, n);
+    var total = pmt * n;
+    var j = solveMonthly(net, pmt, n);
+    if (isNaN(j)) { clearResults(); return; }
+    var apr = 12 * j;
+    setText('apApr', (apr * 100).toFixed(3) + '%');
+    setText('apPayment', money.format(pmt));
+    setText('apCharge', money.format(total - net));
+    setText('apRateOut', rate.toFixed(3) + '%');
+    setText('apSpread', ((apr * 100 - rate) >= 0 ? '+' : '') + (apr * 100 - rate).toFixed(3) + ' percentage points');
+    setText('apNet', money.format(net));
+    setText('apBalance', money.format(balance));
+    setText('apFeesOut', money.format(fees + pointsCost + financed));
+    setText('apInterest', money.format(total - balance));
+    setText('apTotal', money.format(total));
+    setText('apEar', (Math.pow(1 + j, 12) * 100 - 100).toFixed(3) + '%');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = el('apForm');
+    if (!form) return;
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

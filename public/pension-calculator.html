@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="en" id="pension-calculator-document" data-page-slug="pension-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pension Calculator: Estimate Your Monthly Retirement Income</title>
+  <meta name="description" content="Estimate your monthly pension from service years, final average salary and multiplier, then read how lump sum and survivor options shape your retirement income.">
+  <link rel="canonical" href="https://company-marketcap.github.io/pension-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Pension Calculator: Estimate Your Monthly Retirement Income">
+  <meta property="og:description" content="Estimate your monthly pension from service years, final average salary and multiplier, then read how lump sum and survivor options shape your retirement income.">
+  <meta property="og:url" content="https://company-marketcap.github.io/pension-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Pension Calculator", "url": "https://company-marketcap.github.io/pension-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Estimate your monthly pension from service years, final average salary and multiplier, then read how lump sum and survivor options shape your retirement income."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Retirement Accounts (401k, 403b, 457, IRA, Roth)", "item": "https://company-marketcap.github.io/financial-calculators.html#retirement-account-calculators"}, {"@type": "ListItem", "position": 4, "name": "Pension Calculator", "item": "https://company-marketcap.github.io/pension-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I calculate my pension?", "acceptedAnswer": {"@type": "Answer", "text": "Multiply your years of service by your plan's multiplier, then multiply that percentage by your final average salary. The result is your annual pension; divide by 12 for the monthly amount."}}, {"@type": "Question", "name": "Should I take a lump sum or monthly pension income?", "acceptedAnswer": {"@type": "Answer", "text": "Compare the lump sum with the age at which it would run out if you withdrew the same payments from it. If you expect to live past that age, or you value guaranteed income, the monthly pension is usually stronger."}}, {"@type": "Question", "name": "What is the difference between a single-life and a joint-and-survivor pension?", "acceptedAnswer": {"@type": "Answer", "text": "A single-life pension pays a higher monthly amount but stops when you die. A joint-and-survivor pension pays less each month and keeps paying your spouse after you are gone."}}, {"@type": "Question", "name": "Is it worth working longer to get a better pension?", "acceptedAnswer": {"@type": "Answer", "text": "Often yes. Extra years add to your years of service and your final average salary, and they shorten the period the pension must be paid. The calculator shows the age at which the larger check catches up."}}, {"@type": "Question", "name": "What does the cost-of-living adjustment do?", "acceptedAnswer": {"@type": "Answer", "text": "It raises your pension each year, usually by a fixed percentage or a share of inflation, so your check keeps more of its buying power in later years."}}, {"@type": "Question", "name": "Does the money I contribute change my pension amount?", "acceptedAnswer": {"@type": "Answer", "text": "In a typical defined-benefit plan it does not. The benefit comes from the plan formula, while your contributions only help fund the plan."}}, {"@type": "Question", "name": "What is the difference between a defined-benefit and a defined-contribution plan?", "acceptedAnswer": {"@type": "Answer", "text": "A defined-benefit plan promises a formula-based payment, while a defined-contribution plan such as a 401(k) pays whatever your contributions and investments have grown to."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="pension-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="pension-calculator" data-page-type="calculator">
+  <a id="pension-calculator-skip-link" href="#pension-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="pension-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="pension-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="pension-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="pension-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="pension-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="pension-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="pension-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="pension-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="pension-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="pension-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="pension-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="pension-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="pension-calculator-header-search-status" aria-controls="pension-calculator-header-search-results" data-search-input="header">
+              <p id="pension-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="pension-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="pension-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="pension-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="pension-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="pension-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="pension-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="pension-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="pension-calculator-mobile-search-status" aria-controls="pension-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="pension-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="pension-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="pension-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="pension-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="pension-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="pension-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="pension-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="pension-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="pension-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="pension-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="pension-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="pension-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="pension-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="pension-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="pension-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="pension-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="pension-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="pension-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="pension-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="pension-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="pension-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="pension-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="pension-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="pension-calculator-sidebar-search-status" aria-controls="pension-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="pension-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="pension-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="pension-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="pension-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="pension-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="pension-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="pension-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="pension-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="pension-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="pension-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="pension-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="pension-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="pension-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="pension-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="pension-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="pension-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="pension-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators" aria-current="true">401(k), IRA &amp; Roth</a></li><li><a id="pension-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="pension-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="pension-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="pension-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="pension-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="pension-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="pension-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="pension-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="pension-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="pension-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="pension-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="pension-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="pension-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="pension-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="pension-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="pension-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="pension-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="pension-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="pension-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="pension-calculator" data-calculator-slug="pension-calculator" data-sub-category-slug="retirement-account-calculators">
+      <aside id="pension-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="pension-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="pension-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="pension-calculator-ad-top-leaderboard">
+            <ins id="pension-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("pension-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="pension-calculator-intro-area" class="space-y-4">
+        <nav id="pension-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="pension-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="pension-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="pension-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="pension-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#retirement-account-calculators" itemprop="item"><span itemprop="name">Retirement Accounts (401k, 403b, 457, IRA, Roth)</span></a><meta itemprop="position" content="3"></li>
+            <li id="pension-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Pension Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/pension-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="pension-calculator-hero-section" aria-labelledby="pension-calculator-hero-heading" data-section="hero">
+          <h1 id="pension-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Pension Calculator: Estimate Your Monthly Retirement Income</h1>
+          <p id="pension-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Wondering what your career will pay once you stop working? Our pension calculator turns your service record, salary history and plan rules into a monthly check you can plan around, so you can compare a guaranteed check for life against a lump sum offer before the decision is due. <!-- SILO_START:slot_a -->Pair this with the <a class="silo-link" href="/rmd-calculator.html">rmd calculator online</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="pension-calculator-tool" class="space-y-6" data-page-slug="pension-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="pnFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="pnForm" class="space-y-5" novalidate aria-labelledby="pnFormHeading">
+      <h2 id="pnFormHeading" class="panel-heading">Compare your pension options</h2>
+      <div><label for="pnMode" class="form-label">Decision to compare</label>
+        <select id="pnMode" class="form-select"><option value="lump" selected>Lump sum or monthly pension</option><option value="survivor">Single-life or joint-and-survivor pension</option><option value="later">Retire now or work longer for a bigger pension</option></select></div>
+      <div id="pnGroupLump" class="space-y-5">
+        <div><label for="pnRetAge" class="form-label">Age when payments start</label><div class="input-group"><input type="number" id="pnRetAge" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="40" max="90" step="1" value="62" inputmode="numeric"><span class="input-affix">yrs</span></div></div>
+        <div class="form-row form-row-2">
+          <div><label for="pnLump" class="form-label">Lump sum offered</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="pnLump" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1000" value="500000" inputmode="decimal"></div></div>
+          <div><label for="pnMonthly" class="form-label">Monthly pension instead</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="pnMonthly" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="50" value="2200" inputmode="decimal"><span class="input-affix">/mo</span></div></div>
+        </div>
+      </div>
+      <div id="pnGroupSurv" class="space-y-5" hidden>
+        <div class="form-row form-row-2">
+          <div><label for="pnSvAge" class="form-label">Your age when payments start</label><div class="input-group"><input type="number" id="pnSvAge" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="40" max="90" step="1" value="62" inputmode="numeric"><span class="input-affix">yrs</span></div></div>
+          <div><label for="pnSpAge" class="form-label">Spouse's age then</label><div class="input-group"><input type="number" id="pnSpAge" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="18" max="100" step="1" value="60" inputmode="numeric"><span class="input-affix">yrs</span></div></div>
+        </div>
+        <div><label for="pnSpLife" class="form-label">Spouse's life expectancy</label><div class="input-group"><input type="number" id="pnSpLife" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="19" max="120" step="1" value="88" inputmode="numeric"><span class="input-affix">yrs</span></div></div>
+        <div class="form-row form-row-2">
+          <div><label for="pnSingle" class="form-label">Single-life pension</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="pnSingle" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="50" value="2200" inputmode="decimal"><span class="input-affix">/mo</span></div></div>
+          <div><label for="pnJoint" class="form-label">Joint-and-survivor pension</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="pnJoint" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="50" value="2700" inputmode="decimal"><span class="input-affix">/mo</span></div></div>
+        </div>
+        <div><label for="pnSurvPct" class="form-label">Survivor continues at</label><div class="input-group"><input type="number" id="pnSurvPct" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="5" value="50" inputmode="decimal"><span class="input-affix">% of joint pension</span></div><p class="form-hint">Plans usually offer 50%, 75% or 100% survivor options.</p></div>
+      </div>
+      <div id="pnGroupLater" class="space-y-5" hidden>
+        <div class="form-row form-row-2">
+          <div><label for="pnAge1" class="form-label">Option 1: retire at</label><div class="input-group"><input type="number" id="pnAge1" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="40" max="90" step="1" value="60" inputmode="numeric"><span class="input-affix">yrs</span></div></div>
+          <div><label for="pnPay1" class="form-label">Monthly pension</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="pnPay1" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="50" value="2400" inputmode="decimal"><span class="input-affix">/mo</span></div></div>
+        </div>
+        <div class="form-row form-row-2">
+          <div><label for="pnAge2" class="form-label">Option 2: retire at</label><div class="input-group"><input type="number" id="pnAge2" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="41" max="95" step="1" value="66" inputmode="numeric"><span class="input-affix">yrs</span></div></div>
+          <div><label for="pnPay2" class="form-label">Monthly pension</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="pnPay2" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="50" value="2900" inputmode="decimal"><span class="input-affix">/mo</span></div></div>
+        </div>
+      </div>
+      <div><label for="pnLife" class="form-label">Your life expectancy</label><div class="input-group"><input type="number" id="pnLife" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="41" max="120" step="1" value="85" inputmode="numeric"><span class="input-affix">yrs</span></div><p class="form-hint">Payments are counted up to this age.</p></div>
+      <div class="form-row form-row-2">
+        <div><label for="pnReturn" class="form-label">Investment return</label><div class="input-group"><input type="number" id="pnReturn" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="20" step="0.1" value="4" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">What you could earn investing the money yourself.</p></div>
+        <div><label for="pnCola" class="form-label">Yearly pension increase</label><div class="input-group"><input type="number" id="pnCola" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="10" step="0.1" value="2" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">Cost-of-living adjustment. Use 0 if there is none.</p></div>
+      </div>
+      <p id="pnError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="pnResults" aria-live="polite" aria-labelledby="pnResultsHeading">
+      <h2 id="pnResultsHeading" class="panel-heading">Your results</h2>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p class="stat-label">Better value</p><p id="pnWinner" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label" id="pnL2">Value of the pension</p><p id="pnV2" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label" id="pnL3">Lump sum</p><p id="pnV3" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label" id="pnL4">Difference</p><p id="pnV4" class="stat-value">–</p></div>
+      </div>
+      <p id="pnSummary" class="mt-4 text-sm text-ink-muted"></p>
+      <p id="pnNote" class="mt-2 text-sm text-ink-muted"></p>
+      <p class="callout mt-4">Values are in dollars at the age payments start, discounted at your investment return. A higher return favors taking money sooner; a longer life favors the larger monthly payment.</p>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="pnScheduleHeading" data-section="schedule">
+  <h2 id="pnScheduleHeading" class="panel-heading">Year-by-year payments</h2>
+  <p id="pnScheduleNote" class="mt-0.5 text-sm text-ink-muted">Payments received each year under each option.</p>
+  <div class="table-scroll mt-5 max-h-[520px]" tabindex="0" role="region" aria-labelledby="pnScheduleHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Age</th><th scope="col" id="pnH2">Pension</th><th scope="col" id="pnH3">Total received</th><th scope="col" id="pnH4">Lump sum balance</th></tr></thead>
+      <tbody id="pnSchedule"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="pension-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="pension-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Wondering what your career will pay once you stop working? Our pension calculator turns your service record, salary history and plan rules into a monthly check you can plan around, so you can compare a guaranteed check for life against a lump sum offer before the decision is due. <!-- SILO_START:slot_a_m -->Pair this with the <a class="silo-link" href="/rmd-calculator.html">rmd calculator online</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="pension-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="pension-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="pension-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="pension-calculator-ad-in-feed">
+            <ins id="pension-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("pension-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="pension-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="pension-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="pension-calculator-guide-heading-1">
+<h2 id="pension-calculator-guide-heading-1">How to calculate your pension benefit</h2>
+<p>Most public and union pensions follow one <strong>pension formula</strong>, and once you see its three inputs you can estimate the result on the back of an envelope. Every plan you will meet is built from the same parts, so learning how to calculate your pension in one system teaches you most of what you need in another. The amount you receive depends on how long you worked, how generously the plan credits each of those years, and what you earned near the end of your career. <!-- SILO_START:slot_b -->If you want to see how the figures change, the <a class="silo-link" href="/beneficiary-required-minimum-distributions-rmd-advanced-options-calculator.html">beneficiary rmd payout options calculator</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_b --></p>
+
+<h3>Years of service, multiplier and final average salary</h3>
+<p>The benefit formula multiplies three numbers together. Your <strong>years of service</strong> are the qualifying years the plan credits to you, which can differ from your calendar years on the job when unpaid leave or part-time schedules are involved. The <strong>multiplier</strong> is the percentage the plan awards for each year; some plans call it the accrual rate or the crediting rate, but all three names describe one number set in your plan rules. Your <strong>final average salary</strong> is the pay figure the benefit is built on, usually the mean of your highest three, four or five consecutive years of pay.</p>
+<ul>
+<li><strong>Service:</strong> credited time, counted to the month in most plans.</li>
+<li><strong>Percentage per year:</strong> often between 1.5% and 2.5% of pay per year of credit.</li>
+<li><strong>Pay base:</strong> also published as final average compensation, final average pay or highest average salary, depending on the plan.</li>
+<li><strong>Retirement:</strong> the date the first check is issued, which can reduce or raise the result.</li>
+</ul>
+
+<h3>The replacement rate behind your annual pension</h3>
+<p>Multiply your service by the percentage and you get your <strong>replacement rate</strong>, the share of your pay that carries into retirement. Multiply that share by your average pay and you have the annual figure; divide by twelve for the monthly cheque.</p>
+<p>$$\text{Annual pension} = \text{YOS} \times m \times \text{FAS}$$</p>
+<p>Here \(\text{YOS}\) is service credit, \(m\) is the percentage per year and \(\text{FAS}\) is your average pay. A higher replacement rate means a larger share of your working pay arrives each month, and it climbs with every extra year you stay. Contributions you paid in as an employee usually do not enter the formula, because the benefit is defined by the plan rather than by your balance.</p>
+
+<h3>Gather your inputs before you start</h3>
+<p>Before you enter any values in the calculator, gather three documents: your latest benefit statement, the plan summary that lists the crediting percentage, and your last several pay stubs. Compare the service total on the statement with your own employment history and report gaps in writing, because missing months are far easier to fix while you are still working. Ask whether sick leave or purchased service counts toward your credit, and whether your plan averages the highest consecutive years or the final years only, since that single rule can move the result by several thousand dollars.</p>
+        </section>
+        <section id="pension-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="pension-calculator-guide-heading-2">
+<h2 id="pension-calculator-guide-heading-2">Worked example with a retirement pension calculator</h2>
+<p>Take a transit supervisor who has worked 27 years under a plan that credits 1.85% per year. Her last four salaries were $80,200, $82,500, $84,600 and $86,300, so her final average salary is $83,400. Entering those three values gives a replacement rate of 27 × 1.85% = 49.95%, an annual pension of $41,658.30 and a <strong>monthly pension income</strong> of $3,471.53. The same result appears in the calculator's output as soon as you click the Calculate button. <!-- SILO_START:slot_c -->If you want to see how the figures change, the <a class="silo-link" href="/beneficiary-required-minimum-distributions-rmd-calculator.html">beneficiary rmd calculator online</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_c --></p>
+<figure><img src="/assets/images/tools/pension-calculator/pension-calculator-formula-replacement-rate.svg" alt="Pension formula card multiplying 27 years of service by a 1.85% multiplier and an $83,400 final average salary, with a bar showing the 49.95% replacement rate"><figcaption>Worked example: the pension formula produces $41,658.30 a year, which replaces 49.95% of final pay.</figcaption></figure>
+<p>The table shows how that result moves when her career length changes, with the pay and percentage held constant. Each additional year adds $1,543.05 to the annual figure, and the second column shows when each service total would be reached if she started at 35.</p>
+<table>
+<thead><tr><th>Career length</th><th>Retirement age</th><th>Replacement rate</th><th>Annual pension</th><th>Monthly check</th></tr></thead>
+<tbody>
+<tr><td>24 years</td><td>59</td><td>44.40%</td><td>$37,030</td><td>$3,085.83</td></tr>
+<tr><td>27 years</td><td>62</td><td>49.95%</td><td>$41,658</td><td>$3,471.53</td></tr>
+<tr><td>30 years</td><td>65</td><td>55.50%</td><td>$46,287</td><td>$3,857.25</td></tr>
+<tr><td>33 years</td><td>68</td><td>61.05%</td><td>$50,916</td><td>$4,242.97</td></tr>
+</tbody>
+</table>
+<p>Three more years of work lift the check by $385.72 a month, which is why many people run the numbers before they hand in notice. The plan's own pay and credit rules control the exact result, so treat any estimate as a planning aid and confirm it with your benefits office.</p>
+        </section>
+        <section id="pension-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="pension-calculator-guide-heading-3">
+<h2 id="pension-calculator-guide-heading-3">Checking a dispatcher's estimated pension and retirement income against a $2,640 budget</h2>
+<p>Dana Okafor, a school-district bus dispatcher born in 1966, wants to know whether she can stop at 60. Her plan statement shows 22.25 credited years and a 2.0% credit per year. Her three highest consecutive salaries average $67,912.40. Her fixed costs are a $1,725 mortgage, $410 in insurance and $505 for utilities and groceries, a total of <strong>$2,640 a month</strong>.</p>
+<p>She enters 22.25, 2.0 and $67,912.40 and clicks the Calculate button. The tool returns a 44.5% credit, an estimated pension of $30,221.02 a year and <strong>$2,518.42 a month</strong>. Her statement says the single-life check is the default, so she keeps that setting for now.</p>
+<p>Against the budget, the estimated pension leaves a gap of $121.58 a month. Social Security cannot fill the gap yet, since the full benefit age is 67 for anyone born in 1960 or later.</p>
+<p>Dana changes one input and reruns the tool. At 24.25 credited years the credit percentage rises to 48.5% and the estimated pension becomes $2,744.79 a month, which clears the $2,640 budget by $104.79. Two more years of work, not a bigger savings balance, closes the gap. She marks the date her service reaches 24.25 years on her calendar and books a meeting with the plan administrator to confirm that her credited time matches her own records before she submits her notice.</p>
+        </section>
+        <section id="pension-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="pension-calculator-guide-heading-4">
+<h2 id="pension-calculator-guide-heading-4">Lump sum payout or monthly pension income</h2>
+<p>Many plans let you take the lump sum once instead of drawing a stream of <strong>periodic payments</strong> for the rest of your life. The choice is hard to reverse, so it deserves a real comparison rather than a gut feeling. A pension vs lump sum payout calculator frames it as a single question: what return would you need to earn on the lump sum to match the check you are giving up?</p>
+
+<h3>The annual rate of return hidden in your payout</h3>
+<p>Suppose the transit supervisor is offered $548,000 now instead of $3,471.53 a month. If she expects to collect for 25 years, from age 62 to 87, the lump sum must earn about 5.82% a year, after the draws, to match the monthly figure. That break-even <strong>annual rate of return</strong> is the number to judge. If a diversified portfolio of stocks and bonds could realistically beat it with acceptable risk, the lump sum looks attractive; if it could not, the guaranteed monthly payment is the stronger deal.</p>
+<p>Things the arithmetic cannot capture matter too. The lump sum can be left to heirs, while the monthly check is <strong>guaranteed lifetime income</strong> that cannot be outlived and carries no market risk. Rolling the money into an IRA moves it into the <strong>tax-advantaged</strong> world but also hands you the portfolio decisions. Because your <strong>life expectancy</strong> sets how many checks you collect, a longer family history of long lives pushes the decision toward the monthly option.</p>
+        </section>
+        <section id="pension-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="pension-calculator-guide-heading-5">
+<h2 id="pension-calculator-guide-heading-5">Single-life pension or joint-and-survivor payout</h2>
+<p>A <strong>single-life pension</strong> pays the highest monthly amount but stops at your death, while a <strong>joint-and-survivor</strong> option pays less each month so that your <strong>surviving spouse</strong> keeps receiving checks. The reduction depends on both ages and on the survivor percentage you choose, so ask the plan for its factor before comparing.</p>
+<p>If the plan applies a 90% factor for a 100% survivor option, the transit supervisor's check falls from $3,471.53 to $3,124.37 a month, a difference of $347.15. That is the price of insurance for her spouse, and the table below shows how the two choices compare.</p>
+<figure><img src="/assets/images/tools/pension-calculator/single-life-vs-joint-and-survivor-pension-payment.svg" alt="Bar chart comparing a $3,471.53 single-life monthly pension payment with a $3,124.37 joint-and-survivor payment"><figcaption>Survivor cover reduces the monthly check by $347.15 in the worked example.</figcaption></figure>
+<table>
+<thead><tr><th>Payout option</th><th>Monthly check</th><th>After the retiree dies</th><th>Best fit</th></tr></thead>
+<tbody>
+<tr><td>Single life</td><td>$3,471.53</td><td>Payments stop</td><td>Partner has other assets</td></tr>
+<tr><td>Survivor option, 100%</td><td>$3,124.37</td><td>Partner continues at $3,124.37</td><td>Partner relies on the pension</td></tr>
+<tr><td>Lump sum</td><td>Single transfer of $548,000</td><td>Balance passes to heirs</td><td>You can manage the investment risk yourself</td></tr>
+</tbody>
+</table>
+<p>Compare the monthly reduction in your estimated pension with the cost of equivalent cover before you choose, and speak to a financial advisor if the numbers are close. Survivor benefits are far harder to add later than at the start.</p>
+        </section>
+        <section id="pension-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="pension-calculator-guide-heading-6">
+<h2 id="pension-calculator-guide-heading-6">Pension plan types: defined-benefit plan and defined-contribution plan</h2>
+<p>The word pension covers two very different arrangements. In a <strong>defined-benefit plan</strong> the employer promises a formula and carries the investment risk, which is why the calculation above works at all. In a <strong>defined-contribution plan</strong> such as a 401(k), your company matches your contributions and your retirement savings depend on market performance and investment gains, so no calculation can promise a fixed payout.</p>
+<p>A defined-benefit pension plan rewards loyalty, because the longer you stay and the higher your pay, the higher your benefits, and it is the only type the estimate above can price. Defined-contribution accounts travel with you, though not every sponsor allows 401(k) rollovers into a new arrangement. A pension pot built over a career often sits alongside a Roth IRA or a 401(k) funded by your own earnings, so enter only the formula-based check in the tool and treat account balances separately. Employees keep <strong>legal rights</strong> to benefits already earned if the company is sold, which is why the estimate stays valid across a merger, although a distressed sponsor can still reduce what is actually paid.</p>
+
+<h3>Tax treatment, the interest rate and inflation</h3>
+<p>Every employee who earns a pension also earns a tax position. Contributions and growth inside a qualified plan enjoy <strong>tax advantages</strong>, which means nothing is taxed until money is paid out, and each check then arrives as ordinary taxable pay. Ask the plan about withholding early, because a check that looks like $3,471.53 before deductions will land smaller in your account.</p>
+<p>The <strong>interest rate</strong> assumed by the plan matters most when you compare a lump sum with the monthly option. Plans convert a lifetime stream into a one-time figure using a published rate, and a higher rate shrinks the lump sum offered for the same monthly check. If rates were low on the day you applied, the lump sum will look generous next to the same check, so run both scenarios. Inflation works against you from the opposite direction, because every year of retirement your fixed check buys a little less; an employee who retires at 62 could spend more than two decades watching prices climb, and the next section shows how a COLA offsets that.</p>
+        </section>
+        <section id="pension-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="pension-calculator-guide-heading-7">
+<h2 id="pension-calculator-guide-heading-7">Retirement income if you work longer: retirement age and COLA</h2>
+<p>Staying on the job even a few more years improves almost every input at once. You add qualifying years, your average pay usually rises, and you shorten the period over which the pension must be paid. The table above already shows the effect; the extra benefit you earn from three more years rivals what many people expect from several years of savings.</p>
+<p>A <strong>cost-of-living adjustment</strong> works on the other side of time. If your plan raises payments by 2% a year, the supervisor's $41,658 annual figure grows to about $50,781 after ten years and $61,902 after twenty. That is real <strong>inflation protection</strong>, and it matters more than most people assume. Without it, rising prices erode the buying power of a fixed check, so your first-year amount may overstate how comfortable the later years will be. Early retirement can cut the benefit percentage or apply a penalty, so check when you qualify for an unreduced benefit and whether you will have a gap to cover before other income arrives.</p>
+<figure><img src="/assets/images/tools/pension-calculator/pension-cost-of-living-adjustment-growth.svg" alt="Line chart of an annual pension of $41,658 growing with a 2% cost-of-living adjustment to $61,902 after twenty years"><figcaption>A 2% cost-of-living adjustment grows the example pension from $41,658 to $61,902 a year over twenty years.</figcaption></figure>
+        </section>
+        <section id="pension-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="pension-calculator-guide-heading-8">
+<h2 id="pension-calculator-guide-heading-8">Federal retirement plan estimates and Social Security</h2>
+<p>Federal civil servants fall under the Civil Service Retirement System or the Federal Employees Retirement System, and the federal government publishes a <strong>ballpark estimate</strong> tool that projects both the annuity and the Thrift Savings Plan balance. Those results suit long-range planning, not final figures, and anyone within three years of leaving should ask the human resources office for an official number. The federal formula uses your service computation date, so confirm that date if you switched systems or paid a military deposit.</p>
+<p>State and local workers deal with their own pension rules, each with separate rules for the credit percentage and for how final average pay is calculated. Federal and state employees often have no choice about participating, which is why understanding the plan formula matters so much.</p>
+<p>Your pension is also only one layer of income in retirement. <strong>Social Security</strong> replaces roughly 40% of pay for the average worker, and it is itself a defined-benefit design. Add the pension to your Social Security statement, then to any savings, and compare the sum with your expected spending. Remember that Social Security and pension payments may both be taxable, and that every estimate here is before taxes unless a plan states otherwise. Contribution limits on outside accounts do not cap a defined-benefit pension, so any extra savings stay separate from the estimate.</p>
+        </section>
+        <section id="pension-calculator-guide-section-9" class="panel article-content p-4 sm:p-6" aria-labelledby="pension-calculator-guide-heading-9">
+<h2 id="pension-calculator-guide-heading-9">Pairing the result with a retirement calculator and annuity calculator</h2>
+<p>Once you know the monthly figure, put it next to the rest of your plan. A retirement calculator takes the pension as one stream of income and shows whether savings fill the remaining gap; an annuity calculator prices what the lump sum would purchase from an insurance company as a <strong>life annuity</strong>. Because the pension alone rarely covers every expense, the two tools work best together, and a single-page comparison keeps the decision honest.</p>
+<p>When your choices are laid out, the question reduces to a few clear points. Check that your years of credit are complete and correct. Choose the survivor option that matches your household. Compare the lump sum with the guaranteed monthly check using the break-even return above. Review your <strong>payout options</strong> again each time your pay or job changes, and rerun this retirement pension calculator so the estimate never goes stale.</p>
+        </section>
+      </div>
+
+      <section id="pension-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="pension-calculator-faq-heading" data-section="faq">
+        <h2 id="pension-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Pension Calculator questions</h2>
+        <div id="pension-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="pension-calculator-faq-1" class="faq-item" open><summary id="pension-calculator-faq-1-summary" class="faq-summary"><h3 id="pension-calculator-faq-1-question" class="faq-question">How do I calculate my pension?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="pension-calculator-faq-1-answer" class="faq-answer"><p>Multiply your years of service by your plan&#x27;s multiplier, then multiply that percentage by your final average salary. The result is your annual pension; divide by 12 for the monthly amount.</p></div></details>
+          <details id="pension-calculator-faq-2" class="faq-item" open><summary id="pension-calculator-faq-2-summary" class="faq-summary"><h3 id="pension-calculator-faq-2-question" class="faq-question">Should I take a lump sum or monthly pension income?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="pension-calculator-faq-2-answer" class="faq-answer"><p>Compare the lump sum with the age at which it would run out if you withdrew the same payments from it. If you expect to live past that age, or you value guaranteed income, the monthly pension is usually stronger.</p></div></details>
+          <details id="pension-calculator-faq-3" class="faq-item" open><summary id="pension-calculator-faq-3-summary" class="faq-summary"><h3 id="pension-calculator-faq-3-question" class="faq-question">What is the difference between a single-life and a joint-and-survivor pension?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="pension-calculator-faq-3-answer" class="faq-answer"><p>A single-life pension pays a higher monthly amount but stops when you die. A joint-and-survivor pension pays less each month and keeps paying your spouse after you are gone.</p></div></details>
+          <details id="pension-calculator-faq-4" class="faq-item" open><summary id="pension-calculator-faq-4-summary" class="faq-summary"><h3 id="pension-calculator-faq-4-question" class="faq-question">Is it worth working longer to get a better pension?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="pension-calculator-faq-4-answer" class="faq-answer"><p>Often yes. Extra years add to your years of service and your final average salary, and they shorten the period the pension must be paid. The calculator shows the age at which the larger check catches up.</p></div></details>
+          <details id="pension-calculator-faq-5" class="faq-item" open><summary id="pension-calculator-faq-5-summary" class="faq-summary"><h3 id="pension-calculator-faq-5-question" class="faq-question">What does the cost-of-living adjustment do?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="pension-calculator-faq-5-answer" class="faq-answer"><p>It raises your pension each year, usually by a fixed percentage or a share of inflation, so your check keeps more of its buying power in later years.</p></div></details>
+          <details id="pension-calculator-faq-6" class="faq-item" open><summary id="pension-calculator-faq-6-summary" class="faq-summary"><h3 id="pension-calculator-faq-6-question" class="faq-question">Does the money I contribute change my pension amount?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="pension-calculator-faq-6-answer" class="faq-answer"><p>In a typical defined-benefit plan it does not. The benefit comes from the plan formula, while your contributions only help fund the plan.</p></div></details>
+          <details id="pension-calculator-faq-7" class="faq-item" open><summary id="pension-calculator-faq-7-summary" class="faq-summary"><h3 id="pension-calculator-faq-7-question" class="faq-question">What is the difference between a defined-benefit and a defined-contribution plan?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="pension-calculator-faq-7-answer" class="faq-answer"><p>A defined-benefit plan promises a formula-based payment, while a defined-contribution plan such as a 401(k) pays whatever your contributions and investments have grown to.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="pension-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="pension-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="pension-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="pension-calculator-ad-bottom-leaderboard">
+            <ins id="pension-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("pension-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="pension-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="pension-calculator-right-rail-top" class="mb-6">
+        <aside id="pension-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="pension-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="pension-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="pension-calculator-ad-right-rail-rectangle">
+            <ins id="pension-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("pension-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="pension-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="pension-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="pension-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="pension-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="pension-calculator-ad-right-rail-skyscraper">
+            <ins id="pension-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("pension-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="pension-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="pension-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="pension-calculator-footer-brand">
+        <a id="pension-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="pension-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="pension-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="pension-calculator-footer-categories" aria-labelledby="pension-calculator-footer-categories-heading">
+        <h2 id="pension-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="pension-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="pension-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="pension-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="pension-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="pension-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="pension-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="pension-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="pension-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="pension-calculator-footer-company" aria-labelledby="pension-calculator-footer-company-heading">
+        <h2 id="pension-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="pension-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="pension-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="pension-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="pension-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="pension-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="pension-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="pension-calculator-footer-bottom" class="border-t border-line">
+      <p id="pension-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="pension-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Pension decisions, valued in dollars at the age the first payment starts. Payments are made
+  // at the start of each month and rise by the cost-of-living adjustment (COLA) once a year.
+  // The present value discounts month k at (1 + i)^-k with i = (1 + annual return)^(1/12) - 1:
+  //   PV = sum over k of P x (1 + cola)^floor(k/12) / (1 + i)^k
+  // Lump sum: compares PV with the lump sum, finds the return at which they are equal (bisection),
+  // and runs the lump sum down with the same monthly payments to see when it would run out.
+  // Survivor: single-life pays until your life expectancy; joint pays the joint amount until then,
+  // then the survivor share until the spouse's life expectancy. Work longer: both pensions valued
+  // at the earlier age; break-even age = when total dollars received under option 2 catch up.
+  // CHECKS (Node, scratch tests): with no COLA, PV = P x (1 - v^n) / (1 - v): $3,000 a month for
+  // 20 years at 5% = $460,699.66 (closed form); 0% return and 0% COLA -> PV = $3,000 x 240 =
+  // $720,000; lump sum equal to PV gives an implied return equal to the input; a $500,000 lump
+  // sum paying $3,000 a month at 0% lasts 166.7 months; work longer at 0% COLA: $2,400 from 62
+  // vs $3,000 from 65 -> totals equal when 2,400 x m = 3,000 x (m - 36), m = 180 -> age 77.
+  function monthlyRate(r) { return Math.pow(1 + r, 1 / 12) - 1; }
+
+  // PV at month 0 of payments P (rising by cola yearly) for months [from, to), discounted at i.
+  // The COLA year count starts at month `colaStart`.
+  function pv(P, cola, i, from, to, colaStart) {
+    var total = 0;
+    for (var k = from; k < to; k++) {
+      total += P * Math.pow(1 + cola, Math.floor((k - colaStart) / 12)) / Math.pow(1 + i, k);
+    }
+    return total;
+  }
+
+  // Annual return at which the pension is worth exactly the lump sum (null if outside -50%..100%).
+  function impliedReturn(L, P, cola, months) {
+    var lo = -0.5, hi = 1;
+    var f = function (r) { return pv(P, cola, monthlyRate(r), 0, months, 0) - L; };
+    if (L <= 0 || P <= 0 || months <= 0 || f(lo) < 0 || f(hi) > 0) return null;
+    for (var n = 0; n < 100; n++) {
+      var mid = (lo + hi) / 2;
+      if (f(mid) > 0) lo = mid; else hi = mid;
+    }
+    return (lo + hi) / 2;
+  }
+
+  var moneyFmt = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+  var money = { format: function (x) { return moneyFmt.format(Math.abs(x) < 0.005 ? 0 : x); } };
+  var pct = new Intl.NumberFormat('en-US', { style: 'percent', minimumFractionDigits: 1, maximumFractionDigits: 1 });
+
+  function num(id) {
+    var v = parseFloat(document.getElementById(id).value);
+    return isNaN(v) ? NaN : v;
+  }
+  function set(id, text) { document.getElementById(id).textContent = text; }
+  function fmtAge(a) { var y = Math.floor(a), m = Math.round((a - y) * 12); if (m === 12) { y += 1; m = 0; } return y + (m ? ' and ' + m + ' month' + (m > 1 ? 's' : '') : ''); }
+
+  function lumpMode(o) {
+    var months = (o.life - o.age) * 12, i = monthlyRate(o.ret);
+    var value = pv(o.P, o.cola, i, 0, months, 0);
+    // Run the lump sum down with the same payments.
+    var bal = o.L, lastsMonths = null, rows = [], received = 0, yearPay = 0;
+    for (var k = 0; k < (120 - o.age) * 12; k++) {
+      var pay = o.P * Math.pow(1 + o.cola, Math.floor(k / 12));
+      if (lastsMonths === null) {
+        if (pay > bal + 1e-9) { lastsMonths = k + (pay > 0 ? bal / pay : 0); bal = 0; }
+        else bal = (bal - pay) * (1 + i);
+      }
+      if (k < months) { yearPay += pay; received += pay; }
+      if (k % 12 === 11 && k < months) {
+        rows.push([o.age + (k + 1) / 12 - 1, yearPay, received, bal]);
+        yearPay = 0;
+      }
+      if (k >= months && lastsMonths !== null) break;
+    }
+    return { value: value, rows: rows, lastsMonths: lastsMonths, implied: impliedReturn(o.L, o.P, o.cola, months), months: months };
+  }
+
+  function survivorMode(o) {
+    var i = monthlyRate(o.ret), yours = (o.life - o.age) * 12, spouse = (o.spLife - o.spAge) * 12;
+    var surv = o.joint * o.survPct;
+    var single = pv(o.single, o.cola, i, 0, yours, 0);
+    var joint = pv(o.joint, o.cola, i, 0, yours, 0) + (spouse > yours ? pv(surv, o.cola, i, yours, spouse, 0) : 0);
+    var end = Math.max(yours, spouse), rows = [], cs = 0, cj = 0, ys = 0, yj = 0, totS = 0, totJ = 0;
+    for (var k = 0; k < end; k++) {
+      var f = Math.pow(1 + o.cola, Math.floor(k / 12));
+      var s = k < yours ? o.single * f : 0;
+      var j = k < yours ? o.joint * f : (k < spouse ? surv * f : 0);
+      ys += s; yj += j; totS += s; totJ += j;
+      if (k % 12 === 11 || k === end - 1) { rows.push([o.age + Math.floor(k / 12), ys, yj, totJ - totS]); ys = 0; yj = 0; }
+    }
+    return { single: single, joint: joint, rows: rows, totS: totS, totJ: totJ, surv: surv, survYears: Math.max(0, spouse - yours) / 12 };
+  }
+
+  function laterMode(o) {
+    var i = monthlyRate(o.ret), gap = (o.age2 - o.age1) * 12;
+    var m1 = (o.life - o.age1) * 12, m2 = (o.life - o.age2) * 12;
+    var v1 = pv(o.pay1, o.cola, i, 0, m1, 0);
+    var v2 = m2 > 0 ? pv(o.pay2, o.cola, i, gap, gap + m2, gap) : 0;
+    var c1 = 0, c2 = 0, y1 = 0, y2 = 0, rows = [], breakEven = null;
+    for (var k = 0; k < (120 - o.age1) * 12; k++) {
+      var p1 = o.pay1 * Math.pow(1 + o.cola, Math.floor(k / 12));
+      var p2 = k >= gap ? o.pay2 * Math.pow(1 + o.cola, Math.floor((k - gap) / 12)) : 0;
+      c1 += p1; c2 += p2;
+      if (breakEven === null && k >= gap && c2 >= c1 - 1e-9) breakEven = o.age1 + (k + 1) / 12;
+      if (k < m1) { y1 += p1; y2 += p2; if (k % 12 === 11) { rows.push([o.age1 + Math.floor(k / 12), y1, y2, c2 - c1]); y1 = 0; y2 = 0; } }
+      if (k >= m1 && breakEven !== null) break;
+    }
+    return { v1: v1, v2: v2, rows: rows, breakEven: breakEven };
+  }
+
+  function showGroups(mode) {
+    document.getElementById('pnGroupLump').hidden = mode !== 'lump';
+    document.getElementById('pnGroupSurv').hidden = mode !== 'survivor';
+    document.getElementById('pnGroupLater').hidden = mode !== 'later';
+  }
+
+  function fill(rows) {
+    var body = document.getElementById('pnSchedule');
+    body.textContent = '';
+    rows.forEach(function (row) {
+      var tr = document.createElement('tr');
+      [row[0], money.format(row[1]), money.format(row[2]), (row[3] < -0.5 ? '-' : '') + money.format(Math.abs(row[3]))]
+        .forEach(function (v) { var td = document.createElement('td'); td.textContent = v; tr.appendChild(td); });
+      body.appendChild(tr);
+    });
+  }
+
+  function winner(a, b, nameA, nameB) {
+    if (Math.abs(a - b) < 0.5) return 'About equal';
+    return a > b ? nameA : nameB;
+  }
+
+  function update() {
+    var mode = document.getElementById('pnMode').value;
+    showGroups(mode);
+    var life = Math.round(num('pnLife')), ret = num('pnReturn'), cola = num('pnCola');
+    var error = document.getElementById('pnError');
+    var bad = [life, ret, cola].some(isNaN) || life > 120 || ret < 0 || ret > 20 || cola < 0 || cola > 10, msg = '';
+    var o = { life: life, ret: ret / 100, cola: cola / 100 };
+    if (mode === 'lump') {
+      o.age = Math.round(num('pnRetAge')); o.L = num('pnLump'); o.P = num('pnMonthly');
+      bad = bad || [o.age, o.L, o.P].some(isNaN) || o.age < 40 || o.age > 90 || life <= o.age || o.L < 0 || o.P < 0;
+      msg = 'Enter a starting age from 40 to 90, a life expectancy above it (up to 120), non-negative amounts, a return up to 20% and an increase up to 10%.';
+    } else if (mode === 'survivor') {
+      o.age = Math.round(num('pnSvAge')); o.spAge = Math.round(num('pnSpAge')); o.spLife = Math.round(num('pnSpLife'));
+      o.single = num('pnSingle'); o.joint = num('pnJoint'); o.survPct = num('pnSurvPct') / 100;
+      bad = bad || [o.age, o.spAge, o.spLife, o.single, o.joint, o.survPct].some(isNaN) || o.age < 40 || o.age > 90 ||
+            life <= o.age || o.spAge < 18 || o.spAge > 100 || o.spLife <= o.spAge || o.spLife > 120 || o.single < 0 ||
+            o.joint < 0 || o.survPct < 0 || o.survPct > 1;
+      msg = 'Check the ages (each life expectancy must be above the current age, up to 120), use non-negative amounts and a survivor share from 0 to 100%.';
+    } else {
+      o.age1 = Math.round(num('pnAge1')); o.age2 = Math.round(num('pnAge2')); o.pay1 = num('pnPay1'); o.pay2 = num('pnPay2');
+      bad = bad || [o.age1, o.age2, o.pay1, o.pay2].some(isNaN) || o.age1 < 40 || o.age1 > 90 || o.age2 <= o.age1 ||
+            o.age2 > 95 || life <= o.age1 || o.pay1 < 0 || o.pay2 < 0;
+      msg = 'Option 2 must start later than option 1, both from age 40, with a life expectancy above the first age (up to 120) and non-negative amounts.';
+    }
+    error.hidden = !bad;
+    if (bad) { error.textContent = msg; return; }
+
+    if (mode === 'lump') {
+      var r = lumpMode(o);
+      set('pnWinner', winner(r.value, o.L, 'Monthly pension', 'Lump sum'));
+      set('pnL2', 'Value of the pension'); set('pnV2', money.format(r.value));
+      set('pnL3', 'Lump sum'); set('pnV3', money.format(o.L));
+      set('pnL4', 'Difference'); set('pnV4', money.format(Math.abs(r.value - o.L)));
+      set('pnSummary', r.implied === null ? 'The pension\'s implied return can\'t be worked out from these amounts.' :
+          'The pension is worth the same as the lump sum at an investment return of ' + pct.format(r.implied) +
+          ' a year. If you expect to earn more than that, the lump sum is worth more.');
+      set('pnNote', r.lastsMonths === null ? 'Paying yourself the same income from the lump sum, it would last beyond age 120.' :
+          'Paying yourself the same income from the lump sum, it would run out at about age ' + fmtAge(o.age + r.lastsMonths / 12) +
+          (o.age + r.lastsMonths / 12 < life ? ', before your life expectancy.' : ', after your life expectancy.'));
+      set('pnH2', 'Pension paid'); set('pnH3', 'Total received'); set('pnH4', 'Lump sum balance');
+      set('pnScheduleNote', 'Pension received each year, and what is left of the lump sum if you withdraw the same amounts.');
+      fill(r.rows);
+    } else if (mode === 'survivor') {
+      var s = survivorMode(o);
+      set('pnWinner', winner(s.joint, s.single, 'Joint and survivor', 'Single life'));
+      set('pnL2', 'Single-life value'); set('pnV2', money.format(s.single));
+      set('pnL3', 'Joint-and-survivor value'); set('pnV3', money.format(s.joint));
+      set('pnL4', 'Difference'); set('pnV4', money.format(Math.abs(s.joint - s.single)));
+      set('pnSummary', 'Total paid: ' + money.format(s.totS) + ' as a single-life pension and ' + money.format(s.totJ) +
+          ' as a joint-and-survivor pension.');
+      set('pnNote', s.survYears > 0 ? 'Your spouse would receive ' + money.format(s.surv) + ' a month (before increases) for about ' +
+          s.survYears + ' years after your life expectancy.' : 'Your spouse\'s life expectancy ends before yours, so no survivor payments are counted.');
+      set('pnH2', 'Single life'); set('pnH3', 'Joint and survivor'); set('pnH4', 'Joint minus single, total');
+      set('pnScheduleNote', 'Payments each year by your age, including survivor payments after your life expectancy.');
+      fill(s.rows);
+    } else {
+      var w = laterMode(o);
+      set('pnWinner', winner(w.v2, w.v1, 'Retire at ' + o.age2, 'Retire at ' + o.age1));
+      set('pnL2', 'Value retiring at ' + o.age1); set('pnV2', money.format(w.v1));
+      set('pnL3', 'Value retiring at ' + o.age2); set('pnV3', money.format(w.v2));
+      set('pnL4', 'Difference'); set('pnV4', money.format(Math.abs(w.v2 - w.v1)));
+      set('pnSummary', 'Both values are measured at age ' + o.age1 + ', so the later pension is discounted for the wait.');
+      set('pnNote', w.breakEven === null ? 'The later pension never catches up in total dollars received before age 120.' :
+          'Break-even: by about age ' + fmtAge(w.breakEven) + ' the later pension has paid out as much in total as the earlier one' +
+          (w.breakEven <= life ? ', which is before your life expectancy.' : ', which is after your life expectancy.'));
+      set('pnH2', 'Retire at ' + o.age1); set('pnH3', 'Retire at ' + o.age2); set('pnH4', 'Later minus earlier, total');
+      set('pnScheduleNote', 'Pension received each year under each option, up to your life expectancy.');
+      fill(w.rows);
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('pnForm');
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

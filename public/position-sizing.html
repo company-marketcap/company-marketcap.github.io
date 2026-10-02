@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="en" id="position-sizing-document" data-page-slug="position-sizing">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Position Size Calculator: How Many Shares to Buy</title>
+  <meta name="description" content="Use this free position size calculator to find how many shares to buy from your account risk and stop. Calculate your size and cap risk on every trade.">
+  <link rel="canonical" href="https://company-marketcap.github.io/position-sizing.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Position Size Calculator: How Many Shares to Buy">
+  <meta property="og:description" content="Use this free position size calculator to find how many shares to buy from your account risk and stop. Calculate your size and cap risk on every trade.">
+  <meta property="og:url" content="https://company-marketcap.github.io/position-sizing.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Position Sizing Calculator", "url": "https://company-marketcap.github.io/position-sizing.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Use this free position size calculator to find how many shares to buy from your account risk and stop. Calculate your size and cap risk on every trade."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Stocks, Dividends & Trading", "item": "https://company-marketcap.github.io/financial-calculators.html#stock-calculators"}, {"@type": "ListItem", "position": 4, "name": "Position Sizing Calculator", "item": "https://company-marketcap.github.io/position-sizing.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a position sizing calculator?", "acceptedAnswer": {"@type": "Answer", "text": "It converts the amount you are willing to lose into a quantity to trade. You enter your account balance, risk per trade, entry price and stop loss, and it returns the number of shares, units, lots or contracts that keeps a stop-out inside that amount."}}, {"@type": "Question", "name": "What percentage of my account should I risk per trade?", "acceptedAnswer": {"@type": "Answer", "text": "Many traders risk 1% or less per trade, and more experienced traders sometimes go to 2-3%. A lower percentage survives a longer losing streak, so beginners usually start small and only raise it after consistent results."}}, {"@type": "Question", "name": "How do I calculate position size by hand?", "acceptedAnswer": {"@type": "Answer", "text": "Multiply your account balance by your risk percentage to get the dollar risk, subtract your stop from your entry to get the risk per share, then divide dollar risk by risk per share and round down to a whole share."}}, {"@type": "Question", "name": "Why does the calculator round down?", "acceptedAnswer": {"@type": "Answer", "text": "Rounding down guarantees your real loss at the stop never exceeds your risk budget. Rounding up would add a little extra risk on every trade, and most platforms do not allow fractional shares or contracts anyway."}}, {"@type": "Question", "name": "How are forex lots and futures contracts sized?", "acceptedAnswer": {"@type": "Answer", "text": "Forex size comes from your stop in pips multiplied by the pip value, shown here as standard, mini and micro lots. Futures size comes from your stop in points multiplied by the contract's point value, so a micro contract fits a small account better than a full-size one."}}, {"@type": "Question", "name": "Does leverage change how many shares or contracts I should trade?", "acceptedAnswer": {"@type": "Answer", "text": "No. Leverage only changes how much margin you need to open the position. Your stop distance and risk budget decide the size; leverage and buying power only cap how large it can be."}}, {"@type": "Question", "name": "Are fees and slippage included in the result?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, when you enter them. Fees on entry and exit and slippage at the stop are added to the risk per unit, so the effective risk shown stays inside your budget instead of quietly exceeding it."}}, {"@type": "Question", "name": "What happens when my stop is very wide?", "acceptedAnswer": {"@type": "Answer", "text": "The same dollar risk buys fewer units as the stop widens, and the calculator can return zero if one unit already risks more than your budget. That is a signal to tighten the stop, accept a smaller position, or skip the setup."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="position-sizing-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="position-sizing" data-page-type="calculator">
+  <a id="position-sizing-skip-link" href="#position-sizing-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="position-sizing-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="position-sizing-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="position-sizing-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="position-sizing-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="position-sizing-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="position-sizing-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="position-sizing-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="position-sizing-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="position-sizing-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="position-sizing-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="position-sizing-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="position-sizing-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="position-sizing-header-search-status" aria-controls="position-sizing-header-search-results" data-search-input="header">
+              <p id="position-sizing-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="position-sizing-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="position-sizing-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="position-sizing-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="position-sizing-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="position-sizing-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="position-sizing-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="position-sizing-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="position-sizing-mobile-search-status" aria-controls="position-sizing-mobile-search-results" data-search-input="mobile">
+            <p id="position-sizing-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="position-sizing-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="position-sizing-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="position-sizing-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="position-sizing-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="position-sizing-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="position-sizing-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="position-sizing-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="position-sizing-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="position-sizing-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="position-sizing-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="position-sizing-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="position-sizing-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="position-sizing-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="position-sizing-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="position-sizing-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="position-sizing-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="position-sizing-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="position-sizing-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="position-sizing-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="position-sizing-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="position-sizing-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="position-sizing-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="position-sizing-sidebar-search-status" aria-controls="position-sizing-sidebar-search-results" data-search-input="sidebar">
+              <p id="position-sizing-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="position-sizing-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="position-sizing-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="position-sizing-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="position-sizing-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="position-sizing-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="position-sizing-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="position-sizing-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="position-sizing-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="position-sizing-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="position-sizing-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="position-sizing-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="position-sizing-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="position-sizing-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="position-sizing-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="position-sizing-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="position-sizing-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="position-sizing-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="position-sizing-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="position-sizing-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators" aria-current="true">Stocks &amp; Trading</a></li><li><a id="position-sizing-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="position-sizing-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="position-sizing-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="position-sizing-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="position-sizing-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="position-sizing-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="position-sizing-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="position-sizing-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="position-sizing-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="position-sizing-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="position-sizing-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="position-sizing-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="position-sizing-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="position-sizing-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="position-sizing-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="position-sizing-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="position-sizing" data-calculator-slug="position-sizing" data-sub-category-slug="stock-calculators">
+      <aside id="position-sizing-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="position-sizing-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="position-sizing-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="position-sizing-ad-top-leaderboard">
+            <ins id="position-sizing-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("position-sizing-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="position-sizing-intro-area" class="space-y-4">
+        <nav id="position-sizing-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="position-sizing-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="position-sizing-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="position-sizing-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="position-sizing-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#stock-calculators" itemprop="item"><span itemprop="name">Stocks, Dividends &amp; Trading</span></a><meta itemprop="position" content="3"></li>
+            <li id="position-sizing-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Position Sizing Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/position-sizing.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="position-sizing-hero-section" aria-labelledby="position-sizing-hero-heading" data-section="hero">
+          <h1 id="position-sizing-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Position Size Calculator: How Many Shares to Buy</h1>
+          <p id="position-sizing-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Every trade you place answers one question before it answers any other: how much can you afford to lose if you are wrong? A position sizing calculator turns that answer into a number of shares or contracts, using your account size, your risk percentage and the distance to your stop. Instead of guessing a quantity and hoping the loss stays small, you let the math fix the size so that every trade risks about the same slice of your capital. <!-- SILO_START:slot_a -->Pair this with the <a class="silo-link" href="/pivot-point-calculator.html">pivot point calculator online</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="position-sizing-tool" class="space-y-6" data-page-slug="position-sizing" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="psFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="psForm" class="space-y-5" novalidate aria-labelledby="psFormHeading">
+      <h2 id="psFormHeading" class="panel-heading">Enter your trade</h2>
+      <div class="form-row form-row-2">
+        <div><label for="psAccount" class="form-label">Account size</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="psAccount" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1000" value="100000" inputmode="decimal"></div></div>
+        <div><label for="psRisk" class="form-label">Risk per trade</label><div class="input-group"><input type="number" id="psRisk" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="0.1" value="1" inputmode="decimal"><span class="input-affix">%</span></div></div>
+      </div>
+      <div><label for="psSide" class="form-label">Trade direction</label>
+        <select id="psSide" class="form-select"><option value="long" selected>Long (buy, stop below entry)</option><option value="short">Short (sell short, stop above entry)</option></select></div>
+      <div class="form-row form-row-2">
+        <div><label for="psEntry" class="form-label">Entry price</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="psEntry" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="0.01" value="50" inputmode="decimal"></div></div>
+        <div><label for="psStop" class="form-label">Stop-loss price</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="psStop" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="0.01" value="45" inputmode="decimal"></div></div>
+      </div>
+      <div><label for="psTarget" class="form-label form-label-optional">Profit target price</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="psTarget" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="0.01" value="60" inputmode="decimal"></div><p class="form-hint">Used only for the reward-to-risk ratio. Leave blank to skip it.</p></div>
+      <details class="form-details">
+        <summary class="form-details-summary">More options</summary>
+        <div class="mt-4 space-y-5">
+          <div><label for="psMaxPos" class="form-label">Maximum position size</label><div class="input-group"><input type="number" id="psMaxPos" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="1" value="15" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">The most of your account you will put into one stock, whatever the risk math allows.</p></div>
+          <div><label for="psCosts" class="form-label">Trading costs (round trip)</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="psCosts" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="0.5" value="5" inputmode="decimal"></div><p class="form-hint">Commissions and fees to enter and exit. Use 0 for commission-free trades.</p></div>
+        </div>
+      </details>
+      <p id="psError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="psResults" aria-live="polite" aria-labelledby="psResultsHeading">
+      <h2 id="psResultsHeading" class="panel-heading">Your position size</h2>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p class="stat-label">Shares to trade</p><p id="psShares" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Position value</p><p id="psValue" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Loss if stopped out</p><p id="psLoss" class="stat-value">–</p></div>
+      </div>
+      <dl class="mt-5">
+        <div class="result-row"><dt class="result-term">Risk budget for this trade</dt><dd id="psBudget" class="result-value">–</dd></div>
+        <div class="result-row"><dt class="result-term">Risk per share</dt><dd id="psPerShare" class="result-value">–</dd></div>
+        <div class="result-row"><dt class="result-term">Stop distance from entry</dt><dd id="psStopPct" class="result-value">–</dd></div>
+        <div class="result-row"><dt class="result-term">Position as % of account</dt><dd id="psValuePct" class="result-value">–</dd></div>
+        <div class="result-row"><dt class="result-term">Actual risk as % of account</dt><dd id="psLossPct" class="result-value">–</dd></div>
+        <div class="result-row"><dt class="result-term">Reward-to-risk ratio</dt><dd id="psRatio" class="result-value">–</dd></div>
+        <div class="result-row"><dt class="result-term">Gain at target, after costs</dt><dd id="psGain" class="result-value">–</dd></div>
+        <div class="result-row"><dt class="result-term">Size limited by</dt><dd id="psLimit" class="result-value">–</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="psTableHeading" data-section="schedule">
+  <h2 id="psTableHeading" class="panel-heading">Position size at other risk levels</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">Same entry, stop and limits, with a different share of the account at risk.</p>
+  <div class="table-scroll mt-5" tabindex="0" role="region" aria-labelledby="psTableHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Risk per trade</th><th scope="col">Shares</th><th scope="col">Position value</th><th scope="col">% of account</th><th scope="col">Loss at stop</th></tr></thead>
+      <tbody id="psTable"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="position-sizing-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="position-sizing-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Every trade you place answers one question before it answers any other: how much can you afford to lose if you are wrong? A position sizing calculator turns that answer into a number of shares or contracts, using your account size, your risk percentage and the distance to your stop. Instead of guessing a quantity and hoping the loss stays small, you let the math fix the size so that every trade risks about the same slice of your capital. <!-- SILO_START:slot_a_m -->Pair this with the <a class="silo-link" href="/pivot-point-calculator.html">pivot point calculator online</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="position-sizing-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="position-sizing-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="position-sizing-ad-in-feed-frame" class="ad-slot-live" data-ad-container="position-sizing-ad-in-feed">
+            <ins id="position-sizing-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("position-sizing-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="position-sizing-guide" class="space-y-6" data-section="guide">
+        <section id="position-sizing-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="position-sizing-guide-heading-1">
+<h2 id="position-sizing-guide-heading-1">How a Position Sizing Calculator Works</h2>
+<p>The idea behind a position size calculator is simple: <strong>your stop decides the size, not your conviction</strong>. You pick the dollar amount you are willing to lose, measure how far price must travel against you to prove the idea wrong, and divide. The result is the largest position that keeps your loss inside your limit. Traders in stocks, forex, crypto, futures and commodities all run the same logic; only the unit changes. <!-- SILO_START:slot_b -->The <a class="silo-link" href="/holding-period-return-calculator.html">free holding period return calculator</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_b --></p>
+
+<h3>The Fixed-Fractional Method</h3>
+<p>Most calculators use the <strong>fixed-fractional</strong> approach, where you risk the same percentage of your account on every trade. Because the percentage is fixed, a larger account risks more dollars and a drawdown shrinks them automatically. That built-in feedback is why professional desks lean on it for <strong>risk management</strong> and <strong>capital preservation</strong>: your losing trades get smaller exactly when you are performing worst.</p>
+
+<h3>Risk Per Trade and Account Balance</h3>
+<p>Start with your <strong>account balance</strong>, meaning the money you actually trade with, not your net worth. Multiply it by your <strong>risk per trade</strong> and you have the dollar risk, sometimes called the risk budget. Some traders prefer a <strong>fixed dollar amount</strong> instead of a percentage, which works the same way once the amount is entered.</p>
+
+<h3>Entry Price, Stop Loss and Risk Per Share</h3>
+<p>Next, enter your <strong>entry price</strong> and your <strong>stop loss</strong>. The gap between them is the <strong>risk per share</strong>: what a single share, unit or contract loses if the stop is hit. Place the <strong>stop-loss price</strong> where the trade idea is invalidated, such as beyond support and resistance, rather than at a percentage chosen to make the size look attractive.</p>
+        </section>
+        <section id="position-sizing-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="position-sizing-guide-heading-2">
+<h2 id="position-sizing-guide-heading-2">The Position Sizing Formula Explained</h2>
+<p>The <strong>position sizing formula</strong> has three moving parts and one rounding rule: <!-- SILO_START:slot_c -->Pair this with the <a class="silo-link" href="/dividend-reinvestment.html">dividend reinvestment breakeven calculator</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_c --></p>
+<p>$$\text{Shares} = \frac{\text{Account Balance} \times \text{Risk \%}}{\text{Entry Price} - \text{Stop Price}}$$</p>
+<p>In words, the <strong>dollar risk</strong> divided by the risk per share gives the quantity. Then <strong>round down</strong> to a <strong>whole share</strong> (or whole contract) so your <strong>actual risk</strong> never exceeds the <strong>risk amount</strong> you set. The <strong>position value</strong> is simply the quantity multiplied by the entry price.</p>
+
+<h3>Worked Example: Sizing a Stock Trade</h3>
+<p>Suppose your <strong>account size</strong> is $37,400 and you risk 0.75% per trade. You want to buy a stock at $62.80 with a stop at $59.35, and your <strong>position size</strong> comes out of the math below.</p>
+<ul>
+<li>Dollar risk: \(37{,}400 \times 0.0075 = \$280.50\)</li>
+<li>Risk per share: \(62.80 - 59.35 = \$3.45\)</li>
+<li>Raw size: \(280.50 \div 3.45 = 81.30\), which rounds down to a position size of <strong>81 shares</strong></li>
+<li>Position value: \(81 \times 62.80 = \$5{,}086.80\), or 13.6% of the account</li>
+<li>Effective risk: \(81 \times 3.45 = \$279.45\), or 0.75% of the account</li>
+</ul>
+<p>Notice that the position is worth 13.6% of your account while only 0.75% is at risk. That gap is the whole point: <strong>capital exposure</strong> and risk are different measures. If you set a take profit at twice the risk, price at $69.70, the <strong>target profit</strong> on 81 shares is $558.90.</p>
+<figure><img src="/assets/images/tools/position-sizing/position-size-calculator-formula-worked-example.svg" alt="Position sizing formula worked example: a $280.50 dollar risk divided by a $3.45 risk per share gives 81 shares"><figcaption>Dollar risk divided by risk per share gives the number of shares to buy; 81.30 rounds down to 81.</figcaption></figure>
+
+<h3>What Happens When the Stop Distance Changes</h3>
+<p>The same $280.50 budget buys very different quantities depending on your <strong>stop distance</strong>. A tighter stop lets you hold more shares; a wider one forces you smaller. The table shows the same trade at five stop widths, all entered at $62.80.</p>
+<table>
+<thead><tr><th>Stop distance per share</th><th>Shares to buy</th><th>Position value</th><th>% of account</th></tr></thead>
+<tbody>
+<tr><td>$1.50</td><td>187</td><td>$11,743.60</td><td>31.4%</td></tr>
+<tr><td>$2.50</td><td>112</td><td>$7,033.60</td><td>18.8%</td></tr>
+<tr><td>$3.45</td><td>81</td><td>$5,086.80</td><td>13.6%</td></tr>
+<tr><td>$5.00</td><td>56</td><td>$3,516.80</td><td>9.4%</td></tr>
+<tr><td>$7.50</td><td>37</td><td>$2,323.60</td><td>6.2%</td></tr>
+</tbody>
+</table>
+<p>The tightest row also shows why a huge quantity is not automatically safe: 187 shares use almost a third of the account, which is where a <strong>max exposure</strong> cap and your <strong>buying power</strong> start to matter.</p>
+<figure><img src="/assets/images/tools/position-sizing/stop-distance-vs-position-size-chart.svg" alt="Line chart showing the number of shares falling from 187 to 37 as the stop distance widens from $1.50 to $7.50"><figcaption>On a fixed $280.50 risk budget, a wider stop distance shrinks the position size.</figcaption></figure>
+        </section>
+        <section id="position-sizing-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="position-sizing-guide-heading-3">
+<h2 id="position-sizing-guide-heading-3">Position Sizing Across Stocks, Forex, Crypto and Futures</h2>
+<p>The logic never changes, but the <strong>risk per unit</strong> is measured differently in each market. Use the table as a quick reference for what to put in the denominator.</p>
+<table>
+<thead><tr><th>Market</th><th>Unit sized</th><th>Risk per unit</th></tr></thead>
+<tbody>
+<tr><td>Stocks</td><td>Shares</td><td>Entry minus stop, in dollars</td></tr>
+<tr><td>Forex</td><td>Lots</td><td>Stop in pips times pip value</td></tr>
+<tr><td>Crypto</td><td>Coins or units</td><td>Entry minus stop, in dollars</td></tr>
+<tr><td>Futures</td><td>Contracts</td><td>Stop in points times point value</td></tr>
+</tbody>
+</table>
+
+<h3>Futures Position Size Calculator Math</h3>
+<p>A <strong>futures position size calculator</strong> replaces risk per share with stop points multiplied by the <strong>point value</strong>, which comes from the <strong>contract multiplier</strong> the exchange sets. A micro Nasdaq-100 contract (MNQ) pays $2 per point. With an $18,500 account, $185 of risk (1%) and a 22-point stop, one contract risks \(22 \times \$2 = \$44\). Then \(185 \div 44 = 4.20\), so the <strong>number of contracts</strong> is 4 (that stop spans 88 ticks, since one <strong>tick</strong> on this contract is 0.25 points) and your real loss at the stop is $176. A <strong>micro contract</strong> makes this granular; the full-size contract would often round down to zero for the same account.</p>
+
+<h3>Forex and Crypto: Lot Size and Units</h3>
+<p>In forex your <strong>lot size</strong> comes from the <strong>pip value</strong>. <strong>Standard lots</strong>, <strong>mini lots</strong> and <strong>micro lots</strong> are just multiples of the same unit, so a calculator converts the position size into whichever your broker offers. With $200 of risk and a 25-pip stop worth $10 per pip on one lot, the size is \(200 \div 250 = 0.8\) lots. Coins follow the same formula with a fractional quantity. In crypto, quantity is often fractional, so the <strong>number of shares</strong> becomes a decimal amount of the coin, and rounding matters far less.</p>
+        </section>
+        <section id="position-sizing-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="position-sizing-guide-heading-4">
+<h2 id="position-sizing-guide-heading-4">Choosing a Risk Percentage for Position Sizing</h2>
+<p>Your <strong>risk percentage</strong> is the single biggest lever on your results. A <strong>beginner</strong> usually starts at or below 1%, while a <strong>professional</strong> with a tested edge may go higher in a controlled way. Whatever you choose, write it down before the trading session so the number is not decided by a bad mood in the middle of a trade.</p>
+<figure><img src="/assets/images/tools/position-sizing/risk-per-trade-percentage-zones.svg" alt="Zone bar of risk per trade ranges from beginner up to 1% to aggressive over 3%, with a 0.75% example marked"><figcaption>A 0.75% risk per trade falls inside the beginner band of commonly cited risk percentages.</figcaption></figure>
+
+<h3>Risk of Ruin and Losing Streaks</h3>
+<p>The <strong>risk of ruin</strong> is the probability that a run of <strong>losing trades</strong> empties your account. Even a 55% <strong>win rate</strong> produces a <strong>losing streak</strong> of six or seven in a long enough sample, and <strong>consecutive losses</strong> at 5% risk compound into a serious <strong>drawdown</strong>. Run a <strong>Monte Carlo</strong> simulation on your own results to see the spread of outcomes before raising your risk.</p>
+
+<h3>Leverage, Margin and Buying Power</h3>
+<p><strong>Leverage</strong> lets a small deposit control a large position, but it does not change your risk budget. The <strong>margin</strong> a broker requires only caps the largest size you may open; your stop-loss distance decides the size you should open. Check <strong>buying power</strong> after the calculation, never before.</p>
+
+<h3>Correlation and Portfolio Exposure</h3>
+<p>Five positions each risking 1% are not 5% risk if they all move together. Correlation inside one sector means your <strong>portfolio</strong> can behave like a single large trade, so cap the total exposure across related names. Doing this keeps your <strong>effective risk</strong> honest.</p>
+        </section>
+        <section id="position-sizing-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="position-sizing-guide-heading-5">
+<h2 id="position-sizing-guide-heading-5">Sizing a $142.65 Entry with a Risk Calculator</h2>
+<p>A swing trader has a $64,250 account and a standing rule of risking 0.5% per trade, well under the 1% ceiling many risk frameworks cite. A stock has pulled back to $142.65, and the nearest swing low sits at $136.90, so that is where the stop goes. Before touching the order ticket, the trader opens the calculator and enters the account balance, 0.5% risk, the $142.65 entry and the $136.90 stop.</p>
+<p>The calculator reports a dollar risk of $321.25 and a risk per share of $5.75. Dividing gives 55.87, which it rounds down to <strong>55 shares</strong>. That is a $7,845.75 position, 12.2% of the account, and the real loss at the stop is $316.25, or 0.49%. The position size is the answer to a specific question: how many shares keep a stop at $136.90 inside a $321.25 budget?</p>
+<p>The trader then reruns it once with one input changed. A more cautious stop at $134.40, under a round-number level, widens the gap to $8.25 per share and the result falls to 38 shares, a $5,420.70 position. Comparing the two runs shows what the extra room costs: 17 fewer shares for the same dollar risk.</p>
+<ol>
+<li>The $136.90 stop stays, because the $134.40 level sits below where the setup is actually invalidated.</li>
+<li>The order goes in as 55 shares with a stop order resting at $136.90.</li>
+<li>A target at $154.15, twice the $5.75 risk above entry, would pay $632.50 on 55 shares against the $316.25 at risk.</li>
+</ol>
+<p>The decision is mechanical because the number came first. If the stock gaps through $136.90 and fills lower, the loss exceeds $316.25, which is why the trader keeps the quantity at 55 rather than rounding up to 56.</p>
+        </section>
+        <section id="position-sizing-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="position-sizing-guide-heading-6">
+<h2 id="position-sizing-guide-heading-6">Costs That Change Your Position Size</h2>
+<p>A calculator shows the ideal trading <strong>trade size</strong> on paper. Real fills add friction, and each item below pushes your true loss above the planned figure.</p>
+
+<h3>Slippage, Commissions and Trading Fees</h3>
+<p><strong>Slippage</strong> happens when a stop fills past its price, and <strong>commissions</strong> plus <strong>trading fees</strong> are charged on both entry and exit. A small allowance, such as trimming size by a few percent, keeps the real loss inside your limit. Fast markets and thin stocks need the largest cushion.</p>
+
+<h3>Volatility and Average True Range</h3>
+<p>When <strong>volatility</strong> rises, a tight stop is hit by noise instead of by a real change in direction. Many traders set the stop as a multiple of the <strong>average true range</strong>, then let the formula shrink the size to fit: a 2× range of $1.80 sets a $3.60 stop, so \(280.50 \div 3.60\) gives 77 shares instead of 81. The <strong>optimal size</strong> in a calm market is therefore not the optimal size in a volatile one.</p>
+
+<h3>Break-Even and Risk Reward Ratio</h3>
+<p>Pair the size with a <strong>risk reward ratio</strong>. A trade targeting twice its risk reaches <strong>break-even</strong> on the whole system with a win rate near one in three, before fees. Add a <strong>risk assessment</strong> to each setup: if the reward does not justify the stop distance, skip it.</p>
+        </section>
+        <section id="position-sizing-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="position-sizing-guide-heading-7">
+<h2 id="position-sizing-guide-heading-7">How to Use a Position Size Calculator Before Every Trade</h2>
+<p>Treat the <strong>risk calculator</strong> as a routine trading step: update the stop for today's setup, rerun the numbers, and note the share count and dollar risk in your journal. A disciplined <strong>trader</strong> does this before every order, because a size that fit yesterday may be wrong today. Recording each result also turns <strong>journaling</strong> into a clean record you can review, which reduces <strong>emotional</strong> decisions.</p>
+
+<h3>Kelly Criterion and Position Sizing Strategy</h3>
+<p>The <strong>Kelly criterion</strong> estimates the percentage that maximizes long-run growth from your win rate and payoff ratio. It is aggressive and sensitive to estimation error, so use a fraction of it as the risk input you enter, not as the size itself: a Kelly estimate of 4%, capped at 1% in the calculator, still lets your stop set the share count. A sensible <strong>strategy</strong> sets a flat risk first and treats Kelly as an upper bound.</p>
+
+<h3>Common Mistakes That Distort Your Result</h3>
+<ul>
+<li>Moving the stop further away after entry to keep the same quantity, which breaks the math the size was built on</li>
+<li>Sizing from account equity that includes unrealized gains you may give back</li>
+<li>Skipping the round-down step, so the result lands above your budget</li>
+<li>Ignoring the <strong>exchange</strong> or broker minimum increments, which shift the final quantity</li>
+</ul>
+<p>Keep the process boring and repeatable. Using the same steps on every <strong>long</strong> or <strong>short</strong> idea, in stocks, <strong>options</strong> or futures, is what allows a modest edge to survive a bad month. Treat every output as an <strong>educational</strong> estimate, not trading advice.</p>
+        </section>
+      </div>
+
+      <section id="position-sizing-faq-section" class="panel p-4 sm:p-6" aria-labelledby="position-sizing-faq-heading" data-section="faq">
+        <h2 id="position-sizing-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Position Sizing Calculator questions</h2>
+        <div id="position-sizing-faq-list" class="mt-5 space-y-3">
+          <details id="position-sizing-faq-1" class="faq-item" open><summary id="position-sizing-faq-1-summary" class="faq-summary"><h3 id="position-sizing-faq-1-question" class="faq-question">What is a position sizing calculator?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="position-sizing-faq-1-answer" class="faq-answer"><p>It converts the amount you are willing to lose into a quantity to trade. You enter your account balance, risk per trade, entry price and stop loss, and it returns the number of shares, units, lots or contracts that keeps a stop-out inside that amount.</p></div></details>
+          <details id="position-sizing-faq-2" class="faq-item" open><summary id="position-sizing-faq-2-summary" class="faq-summary"><h3 id="position-sizing-faq-2-question" class="faq-question">What percentage of my account should I risk per trade?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="position-sizing-faq-2-answer" class="faq-answer"><p>Many traders risk 1% or less per trade, and more experienced traders sometimes go to 2-3%. A lower percentage survives a longer losing streak, so beginners usually start small and only raise it after consistent results.</p></div></details>
+          <details id="position-sizing-faq-3" class="faq-item" open><summary id="position-sizing-faq-3-summary" class="faq-summary"><h3 id="position-sizing-faq-3-question" class="faq-question">How do I calculate position size by hand?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="position-sizing-faq-3-answer" class="faq-answer"><p>Multiply your account balance by your risk percentage to get the dollar risk, subtract your stop from your entry to get the risk per share, then divide dollar risk by risk per share and round down to a whole share.</p></div></details>
+          <details id="position-sizing-faq-4" class="faq-item" open><summary id="position-sizing-faq-4-summary" class="faq-summary"><h3 id="position-sizing-faq-4-question" class="faq-question">Why does the calculator round down?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="position-sizing-faq-4-answer" class="faq-answer"><p>Rounding down guarantees your real loss at the stop never exceeds your risk budget. Rounding up would add a little extra risk on every trade, and most platforms do not allow fractional shares or contracts anyway.</p></div></details>
+          <details id="position-sizing-faq-5" class="faq-item" open><summary id="position-sizing-faq-5-summary" class="faq-summary"><h3 id="position-sizing-faq-5-question" class="faq-question">How are forex lots and futures contracts sized?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="position-sizing-faq-5-answer" class="faq-answer"><p>Forex size comes from your stop in pips multiplied by the pip value, shown here as standard, mini and micro lots. Futures size comes from your stop in points multiplied by the contract&#x27;s point value, so a micro contract fits a small account better than a full-size one.</p></div></details>
+          <details id="position-sizing-faq-6" class="faq-item" open><summary id="position-sizing-faq-6-summary" class="faq-summary"><h3 id="position-sizing-faq-6-question" class="faq-question">Does leverage change how many shares or contracts I should trade?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="position-sizing-faq-6-answer" class="faq-answer"><p>No. Leverage only changes how much margin you need to open the position. Your stop distance and risk budget decide the size; leverage and buying power only cap how large it can be.</p></div></details>
+          <details id="position-sizing-faq-7" class="faq-item" open><summary id="position-sizing-faq-7-summary" class="faq-summary"><h3 id="position-sizing-faq-7-question" class="faq-question">Are fees and slippage included in the result?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="position-sizing-faq-7-answer" class="faq-answer"><p>Yes, when you enter them. Fees on entry and exit and slippage at the stop are added to the risk per unit, so the effective risk shown stays inside your budget instead of quietly exceeding it.</p></div></details>
+          <details id="position-sizing-faq-8" class="faq-item" open><summary id="position-sizing-faq-8-summary" class="faq-summary"><h3 id="position-sizing-faq-8-question" class="faq-question">What happens when my stop is very wide?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="position-sizing-faq-8-answer" class="faq-answer"><p>The same dollar risk buys fewer units as the stop widens, and the calculator can return zero if one unit already risks more than your budget. That is a signal to tighten the stop, accept a smaller position, or skip the setup.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="position-sizing-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="position-sizing-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="position-sizing-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="position-sizing-ad-bottom-leaderboard">
+            <ins id="position-sizing-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("position-sizing-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="position-sizing-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="position-sizing-right-rail-top" class="mb-6">
+        <aside id="position-sizing-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="position-sizing-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="position-sizing-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="position-sizing-ad-right-rail-rectangle">
+            <ins id="position-sizing-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("position-sizing-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="position-sizing-right-rail-sticky" class="sticky top-21">
+        <aside id="position-sizing-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="position-sizing-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="position-sizing-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="position-sizing-ad-right-rail-skyscraper">
+            <ins id="position-sizing-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("position-sizing-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="position-sizing-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="position-sizing-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="position-sizing-footer-brand">
+        <a id="position-sizing-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="position-sizing-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="position-sizing-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="position-sizing-footer-categories" aria-labelledby="position-sizing-footer-categories-heading">
+        <h2 id="position-sizing-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="position-sizing-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="position-sizing-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="position-sizing-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="position-sizing-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="position-sizing-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="position-sizing-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="position-sizing-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="position-sizing-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="position-sizing-footer-company" aria-labelledby="position-sizing-footer-company-heading">
+        <h2 id="position-sizing-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="position-sizing-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="position-sizing-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="position-sizing-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="position-sizing-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="position-sizing-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="position-sizing-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="position-sizing-footer-bottom" class="border-t border-line">
+      <p id="position-sizing-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="position-sizing-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Fixed-fractional position sizing (long or short).
+  //   risk budget      = account x risk%
+  //   risk per share   = |entry - stop|
+  //   shares by risk   = floor((risk budget - round-trip costs) / risk per share)
+  //   shares by cap    = floor(account x max position% / entry)
+  //   shares           = min(shares by risk, shares by cap), never below 0
+  //   loss at stop     = shares x risk per share + costs
+  // Verified: $100,000 account, 1% risk, entry $50, stop $45, $5 costs, 15% cap -> 199 shares,
+  // $9,950 position (9.95%), $1,000 loss at stop; target $60 -> 2.00 reward-to-risk, $1,985 net gain.
+  // Cap binding: entry $50, stop $49.50, same account -> risk allows 1,990 shares, cap allows 300.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  var whole = new Intl.NumberFormat('en-US', { maximumFractionDigits: 0 });
+  var SCENARIOS = [0.5, 1, 1.5, 2, 3];
+
+  function num(id) {
+    var el = document.getElementById(id);
+    var v = el ? parseFloat(el.value) : NaN;
+    return isNaN(v) ? NaN : v;
+  }
+  function pct(v) { return (isFinite(v) ? v : 0).toFixed(2) + '%'; }
+
+  function size(account, riskPct, maxPct, entry, stop, costs) {
+    var budget = account * riskPct / 100;
+    var perShare = Math.abs(entry - stop);
+    var byRisk = budget > costs ? Math.floor((budget - costs) / perShare + 1e-9) : 0;
+    var byCap = Math.floor(account * maxPct / 100 / entry + 1e-9);
+    var shares = Math.max(0, Math.min(byRisk, byCap));
+    var value = shares * entry;
+    var loss = shares > 0 ? shares * perShare + costs : 0;
+    return {
+      budget: budget, perShare: perShare, byRisk: byRisk, byCap: byCap, shares: shares,
+      value: value, valuePct: value / account * 100, loss: loss, lossPct: loss / account * 100,
+      stopPct: perShare / entry * 100, capped: byCap < byRisk
+    };
+  }
+
+  function set(id, text) { var el = document.getElementById(id); if (el) el.textContent = text; }
+
+  function update() {
+    var account = num('psAccount'), riskPct = num('psRisk'), entry = num('psEntry'), stop = num('psStop'),
+        maxPct = num('psMaxPos'), costs = num('psCosts'), target = num('psTarget');
+    var side = document.getElementById('psSide').value;
+    var error = document.getElementById('psError');
+    var msg = '';
+    if ([account, riskPct, entry, stop, maxPct, costs].some(isNaN)) msg = 'Fill in every field with a number.';
+    else if (account <= 0 || entry <= 0 || stop <= 0) msg = 'Account size, entry price and stop-loss must be greater than zero.';
+    else if (riskPct <= 0 || riskPct > 100) msg = 'Risk per trade must be more than 0% and at most 100%.';
+    else if (maxPct <= 0 || maxPct > 100) msg = 'Maximum position size must be more than 0% and at most 100%.';
+    else if (costs < 0) msg = 'Trading costs cannot be negative.';
+    else if (side === 'long' && stop >= entry) msg = 'For a long trade the stop-loss must be below the entry price.';
+    else if (side === 'short' && stop <= entry) msg = 'For a short trade the stop-loss must be above the entry price.';
+    error.hidden = !msg;
+    error.textContent = msg;
+    if (msg) return;
+
+    var r = size(account, riskPct, maxPct, entry, stop, costs);
+    set('psShares', whole.format(r.shares));
+    set('psValue', money.format(r.value));
+    set('psValuePct', pct(r.valuePct));
+    set('psLoss', money.format(r.loss));
+    set('psBudget', money.format(r.budget));
+    set('psPerShare', money.format(r.perShare));
+    set('psStopPct', pct(r.stopPct));
+    set('psLossPct', pct(r.lossPct));
+    var limit;
+    if (r.shares === 0 && r.budget <= costs) limit = 'Trading costs use up the whole risk budget';
+    else if (r.shares === 0) limit = 'Risk budget is smaller than the risk on one share';
+    else if (r.capped) limit = 'Maximum position size (' + maxPct + '% of account)';
+    else limit = 'Risk per trade (' + riskPct + '% of account)';
+    set('psLimit', limit);
+
+    var validTarget = !isNaN(target) && target > 0 &&
+      ((side === 'long' && target > entry) || (side === 'short' && target < entry));
+    if (validTarget) {
+      var move = Math.abs(target - entry);
+      set('psRatio', (move / r.perShare).toFixed(2) + ' : 1');
+      set('psGain', money.format(Math.max(0, r.shares * move - (r.shares > 0 ? costs : 0))));
+    } else {
+      set('psRatio', '–');
+      set('psGain', '–');
+    }
+
+    var body = document.getElementById('psTable');
+    while (body.firstChild) body.removeChild(body.firstChild);
+    SCENARIOS.forEach(function (p) {
+      var s = size(account, p, maxPct, entry, stop, costs);
+      var tr = document.createElement('tr');
+      [p + '%' + (p === riskPct ? ' (yours)' : ''), whole.format(s.shares), money.format(s.value),
+       pct(s.valuePct), money.format(s.loss)].forEach(function (t) {
+        var td = document.createElement('td');
+        td.textContent = t;
+        tr.appendChild(td);
+      });
+      body.appendChild(tr);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('psForm');
+    if (!form) return;
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="en" id="rent-vs-buy-calculator-document" data-page-slug="rent-vs-buy-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rent vs. Buy Calculator: Compare Renting and Buying Costs</title>
+  <meta name="description" content="Find out whether renting or buying a home costs less. Enter your price, rent and rates to see the breakeven year and compare your total wealth under both options.">
+  <link rel="canonical" href="https://company-marketcap.github.io/rent-vs-buy-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Rent vs. Buy Calculator: Compare Renting and Buying Costs">
+  <meta property="og:description" content="Find out whether renting or buying a home costs less. Enter your price, rent and rates to see the breakeven year and compare your total wealth under both options.">
+  <meta property="og:url" content="https://company-marketcap.github.io/rent-vs-buy-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Rent vs. Buy Calculator", "url": "https://company-marketcap.github.io/rent-vs-buy-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Find out whether renting or buying a home costs less. Enter your price, rent and rates to see the breakeven year and compare your total wealth under both options."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Real Estate & Rental Property", "item": "https://company-marketcap.github.io/financial-calculators.html#real-estate-calculators"}, {"@type": "ListItem", "position": 4, "name": "Rent vs. Buy Calculator", "item": "https://company-marketcap.github.io/rent-vs-buy-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is it better to rent or buy a home?", "acceptedAnswer": {"@type": "Answer", "text": "It depends mostly on how long you will stay. Buying carries large upfront and selling costs, so it usually only wins once you stay past the breakeven point, while renting tends to win on short stays or when home prices are high relative to rents. Enter your own numbers to find your breakeven."}}, {"@type": "Question", "name": "What is the 5% rule for renting vs. buying?", "acceptedAnswer": {"@type": "Answer", "text": "It is a quick screen: the unrecoverable yearly cost of owning (about 1% property tax, 1% maintenance and 3% cost of capital) is roughly 5% of the home's value. If 5% of the price divided by 12 is more than your monthly rent, renting is likely cheaper. It ignores your tax situation and growth rates, so use the calculator for a fuller answer."}}, {"@type": "Question", "name": "What costs does the calculator include when buying?", "acceptedAnswer": {"@type": "Answer", "text": "It counts the down payment and closing costs, mortgage payments, property taxes, homeowner's insurance, PMI, HOA fees, extra utilities, repairs and maintenance, selling costs and any capital gains tax, then subtracts the equity you get back when you sell."}}, {"@type": "Question", "name": "What is opportunity cost in a rent vs. buy comparison?", "acceptedAnswer": {"@type": "Answer", "text": "It is the return you give up on cash you spend instead of investing. Money used for a down payment or monthly housing costs could have earned your investment return, and the calculator tracks that growth for both renting and buying."}}, {"@type": "Question", "name": "How do taxes change the result?", "acceptedAnswer": {"@type": "Answer", "text": "Mortgage interest and property taxes only reduce your tax bill when your itemized deductions beat the standard deduction, and the saving is worth more at a higher marginal tax rate. Selling a primary residence may also trigger capital gains tax above the exclusion."}}, {"@type": "Question", "name": "How accurate are the growth-rate assumptions?", "acceptedAnswer": {"@type": "Answer", "text": "Home appreciation, rent increases, investment returns and inflation are estimates, and small changes compound over many years. Try a cautious and an optimistic set of values to see how much your breakeven point moves."}}, {"@type": "Question", "name": "Should I include HOA fees and PMI?", "acceptedAnswer": {"@type": "Answer", "text": "Yes if they apply to you. HOA fees add a recurring cost for buyers, and PMI is usually charged when you put less than 20% down until your equity reaches 20%."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="rent-vs-buy-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="rent-vs-buy-calculator" data-page-type="calculator">
+  <a id="rent-vs-buy-calculator-skip-link" href="#rent-vs-buy-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="rent-vs-buy-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="rent-vs-buy-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="rent-vs-buy-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="rent-vs-buy-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="rent-vs-buy-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="rent-vs-buy-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="rent-vs-buy-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="rent-vs-buy-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="rent-vs-buy-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="rent-vs-buy-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="rent-vs-buy-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="rent-vs-buy-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="rent-vs-buy-calculator-header-search-status" aria-controls="rent-vs-buy-calculator-header-search-results" data-search-input="header">
+              <p id="rent-vs-buy-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="rent-vs-buy-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="rent-vs-buy-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="rent-vs-buy-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="rent-vs-buy-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="rent-vs-buy-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="rent-vs-buy-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="rent-vs-buy-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="rent-vs-buy-calculator-mobile-search-status" aria-controls="rent-vs-buy-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="rent-vs-buy-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="rent-vs-buy-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="rent-vs-buy-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="rent-vs-buy-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="rent-vs-buy-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="rent-vs-buy-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="rent-vs-buy-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="rent-vs-buy-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="rent-vs-buy-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="rent-vs-buy-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="rent-vs-buy-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="rent-vs-buy-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="rent-vs-buy-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="rent-vs-buy-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="rent-vs-buy-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="rent-vs-buy-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="rent-vs-buy-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="rent-vs-buy-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="rent-vs-buy-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="rent-vs-buy-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="rent-vs-buy-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="rent-vs-buy-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="rent-vs-buy-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="rent-vs-buy-calculator-sidebar-search-status" aria-controls="rent-vs-buy-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="rent-vs-buy-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="rent-vs-buy-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="rent-vs-buy-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="rent-vs-buy-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="rent-vs-buy-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="rent-vs-buy-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="rent-vs-buy-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="rent-vs-buy-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="rent-vs-buy-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="rent-vs-buy-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="rent-vs-buy-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators" aria-current="true">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="rent-vs-buy-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="rent-vs-buy-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="rent-vs-buy-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="rent-vs-buy-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="rent-vs-buy-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="rent-vs-buy-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="rent-vs-buy-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="rent-vs-buy-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="rent-vs-buy-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="rent-vs-buy-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="rent-vs-buy-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="rent-vs-buy-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="rent-vs-buy-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="rent-vs-buy-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="rent-vs-buy-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="rent-vs-buy-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="rent-vs-buy-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="rent-vs-buy-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="rent-vs-buy-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="rent-vs-buy-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="rent-vs-buy-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="rent-vs-buy-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="rent-vs-buy-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="rent-vs-buy-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="rent-vs-buy-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="rent-vs-buy-calculator" data-calculator-slug="rent-vs-buy-calculator" data-sub-category-slug="real-estate-calculators">
+      <aside id="rent-vs-buy-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="rent-vs-buy-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="rent-vs-buy-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="rent-vs-buy-calculator-ad-top-leaderboard">
+            <ins id="rent-vs-buy-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("rent-vs-buy-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="rent-vs-buy-calculator-intro-area" class="space-y-4">
+        <nav id="rent-vs-buy-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="rent-vs-buy-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="rent-vs-buy-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="rent-vs-buy-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="rent-vs-buy-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#real-estate-calculators" itemprop="item"><span itemprop="name">Real Estate &amp; Rental Property</span></a><meta itemprop="position" content="3"></li>
+            <li id="rent-vs-buy-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Rent vs. Buy Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/rent-vs-buy-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="rent-vs-buy-calculator-hero-section" aria-labelledby="rent-vs-buy-calculator-hero-heading" data-section="hero">
+          <h1 id="rent-vs-buy-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Rent vs. Buy Calculator: Compare Renting and Buying Costs</h1>
+          <p id="rent-vs-buy-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Deciding between buying a home and staying put in a rental is one of the biggest financial choices you will make, and the rent vs. buy calculator turns that choice into numbers you can compare. Enter your monthly rent, the home price, your down payment and a few growth assumptions, and the tool shows the breakeven point, the year when buying a home starts to leave you with more long-term wealth than renting does. Whether you are weighing buying or renting for a primary residence you plan to keep or a place you will leave in a few years, how long you stay usually decides the answer. <!-- SILO_START:slot_a -->Next, open the <a class="silo-link" href="/rent-calculator.html">free rent calculator</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="rent-vs-buy-calculator-tool" class="space-y-6" data-page-slug="rent-vs-buy-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="rbFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="rbForm" class="space-y-5" novalidate aria-labelledby="rbFormHeading">
+      <h2 id="rbFormHeading" class="panel-heading">Compare buying and renting</h2>
+      <fieldset class="space-y-5">
+        <legend class="form-label">Buying</legend>
+        <div><label for="rbPrice" class="form-label">Home price</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="rbPrice" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1000" value="400000" inputmode="decimal"></div></div>
+        <div class="form-row form-row-2">
+          <div><label for="rbDown" class="form-label">Down payment</label><div class="input-group"><input type="number" id="rbDown" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="1" value="20" inputmode="decimal"><span class="input-affix">%</span></div></div>
+          <div><label for="rbTerm" class="form-label">Loan term</label><select id="rbTerm" class="form-select"><option value="30" selected>30 years</option><option value="20">20 years</option><option value="15">15 years</option><option value="10">10 years</option></select></div>
+        </div>
+        <div class="form-row form-row-2">
+          <div><label for="rbRate" class="form-label">Mortgage rate</label><div class="input-group"><input type="number" id="rbRate" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="30" step="0.125" value="6.5" inputmode="decimal"><span class="input-affix">%</span></div></div>
+          <div><label for="rbBuyClose" class="form-label">Closing costs</label><div class="input-group"><input type="number" id="rbBuyClose" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="20" step="0.5" value="3" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">Share of the price paid when you buy.</p></div>
+        </div>
+        <div class="form-row form-row-2">
+          <div><label for="rbPropTax" class="form-label">Property tax</label><div class="input-group"><input type="number" id="rbPropTax" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="10" step="0.1" value="1.1" inputmode="decimal"><span class="input-affix">% / yr</span></div></div>
+          <div><label for="rbIns" class="form-label">Home insurance</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="rbIns" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="1800" inputmode="decimal"><span class="input-affix">/ yr</span></div></div>
+        </div>
+        <div class="form-row form-row-2">
+          <div><label for="rbMaint" class="form-label">Maintenance</label><div class="input-group"><input type="number" id="rbMaint" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="10" step="0.1" value="1" inputmode="decimal"><span class="input-affix">% / yr</span></div><p class="form-hint">Repairs and upkeep as a share of home value.</p></div>
+          <div><label for="rbHoa" class="form-label">HOA fee</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="rbHoa" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="0" inputmode="decimal"><span class="input-affix">/ mo</span></div></div>
+        </div>
+      </fieldset>
+      <fieldset class="space-y-5">
+        <legend class="form-label">Renting</legend>
+        <div class="form-row form-row-2">
+          <div><label for="rbRent" class="form-label">Monthly rent</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="rbRent" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="50" value="2200" inputmode="decimal"></div></div>
+          <div><label for="rbRentIns" class="form-label">Renter's insurance</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="rbRentIns" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="5" value="20" inputmode="decimal"><span class="input-affix">/ mo</span></div></div>
+        </div>
+      </fieldset>
+      <fieldset class="space-y-5">
+        <legend class="form-label">Assumptions</legend>
+        <div class="form-row form-row-2">
+          <div><label for="rbYears" class="form-label">Years to compare</label><div class="input-group"><input type="number" id="rbYears" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1" max="40" step="1" value="10" inputmode="numeric"><span class="input-affix">yrs</span></div><p class="form-hint">How long you expect to stay.</p></div>
+          <div><label for="rbReturn" class="form-label">Investment return</label><div class="input-group"><input type="number" id="rbReturn" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="-20" max="30" step="0.5" value="5" inputmode="decimal"><span class="input-affix">% / yr</span></div><p class="form-hint">What money not tied up in a home could earn.</p></div>
+        </div>
+        <div class="form-row form-row-2">
+          <div><label for="rbApprec" class="form-label">Home price growth</label><div class="input-group"><input type="number" id="rbApprec" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="-20" max="20" step="0.5" value="3" inputmode="decimal"><span class="input-affix">% / yr</span></div></div>
+          <div><label for="rbRentInc" class="form-label">Rent increase</label><div class="input-group"><input type="number" id="rbRentInc" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="-20" max="20" step="0.5" value="3" inputmode="decimal"><span class="input-affix">% / yr</span></div></div>
+        </div>
+      </fieldset>
+      <details class="form-details">
+        <summary class="form-details-summary">More options</summary>
+        <div class="mt-4 space-y-5">
+          <div><label for="rbSellCost" class="form-label">Selling costs</label><div class="input-group"><input type="number" id="rbSellCost" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="20" step="0.5" value="6" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">Agent commissions and closing costs when you sell, as a share of the sale price.</p></div>
+          <div><label for="rbInfl" class="form-label">Cost inflation</label><div class="input-group"><input type="number" id="rbInfl" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="-10" max="20" step="0.5" value="3" inputmode="decimal"><span class="input-affix">% / yr</span></div><p class="form-hint">Yearly growth of insurance and HOA fees.</p></div>
+          <div><label for="rbPmi" class="form-label">Mortgage insurance (PMI)</label><div class="input-group"><input type="number" id="rbPmi" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="5" step="0.1" value="0.5" inputmode="decimal"><span class="input-affix">% / yr</span></div><p class="form-hint">Charged on the loan amount while you owe more than 80% of the price. Applies only with less than 20% down.</p></div>
+        </div>
+      </details>
+      <p id="rbError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="rbResults" aria-live="polite" aria-labelledby="rbResultsHeading">
+      <h2 id="rbResultsHeading" class="panel-heading">Your results</h2>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p class="stat-label">Better choice</p><p id="rbVerdict" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Ahead by</p><p id="rbVerdictBy" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Buying breaks even</p><p id="rbBreakEven" class="stat-value">–</p></div>
+      </div>
+      <p id="rbSummary" class="mt-4 text-sm text-ink-muted"></p>
+      <div class="mt-4">
+        <div class="result-row"><span class="result-term">Mortgage payment (principal and interest)</span><span id="rbPmt" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Total monthly cost of owning, year 1</span><span id="rbOwnMonthly" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Total monthly cost of renting, year 1</span><span id="rbRentMonthly" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Cash needed to buy (down payment + closing)</span><span id="rbUpfront" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Net worth at the end if you buy</span><span id="rbBuyNW" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Net worth at the end if you rent</span><span id="rbRentNW" class="result-value">–</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="rbTableHeading" data-section="schedule">
+  <h2 id="rbTableHeading" class="panel-heading">Year-by-year comparison</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">Net worth if you sold the home at the end of each year, after selling costs, compared with renting and investing the difference.</p>
+  <div class="table-scroll mt-5 max-h-[520px]" tabindex="0" role="region" aria-labelledby="rbTableHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Year</th><th scope="col">Spent buying</th><th scope="col">Spent renting</th><th scope="col">Home equity</th><th scope="col">Net worth buying</th><th scope="col">Net worth renting</th><th scope="col">Buying minus renting</th></tr></thead>
+      <tbody id="rbTable"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="rent-vs-buy-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="rent-vs-buy-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Deciding between buying a home and staying put in a rental is one of the biggest financial choices you will make, and the rent vs. buy calculator turns that choice into numbers you can compare. Enter your monthly rent, the home price, your down payment and a few growth assumptions, and the tool shows the breakeven point, the year when buying a home starts to leave you with more long-term wealth than renting does. Whether you are weighing buying or renting for a primary residence you plan to keep or a place you will leave in a few years, how long you stay usually decides the answer. <!-- SILO_START:slot_a_m -->Next, open the <a class="silo-link" href="/rent-calculator.html">free rent calculator</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="rent-vs-buy-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="rent-vs-buy-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="rent-vs-buy-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="rent-vs-buy-calculator-ad-in-feed">
+            <ins id="rent-vs-buy-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("rent-vs-buy-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="rent-vs-buy-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="rent-vs-buy-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="rent-vs-buy-calculator-guide-heading-1">
+<h2 id="rent-vs-buy-calculator-guide-heading-1">How a Rent vs Buy Calculator Compares Renting and Buying</h2>
+<p>A <strong>rent or buy calculator</strong> tracks two parallel versions of your life over the same number of years. In one, you keep renting and invest whatever you would have spent on a down payment and closing costs. In the other, you buy the house, pay the mortgage and carry every ownership expense, then sell at the end of your stay. The tool compares what you are worth in each case once the dust settles, which is why the result is framed as <strong>total wealth</strong> rather than a single monthly payment. <!-- SILO_START:slot_b -->Try the <a class="silo-link" href="/rental-property-calculator.html">rental property calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_b --></p>
+<p>The core comparison looks like this:</p>
+<p>$$\text{Wealth}_{\text{buy}} = \text{Sale price} - \text{Selling costs} - \text{Loan balance} + \text{Invested monthly savings}$$</p>
+<p>$$\text{Wealth}_{\text{rent}} = \text{Invested down payment} + \text{Invested closing costs} + \text{Invested monthly savings}$$</p>
+<p>Whichever line is larger at the end of your chosen stay wins. The tool also splits the spending into <strong>upfront costs</strong>, <strong>recurring costs</strong>, opportunity costs and net proceeds, so you can see which bucket is driving the gap instead of trusting one headline number.</p>
+
+<h3>Why the monthly payment alone misleads you</h3>
+<p>Comparing a mortgage payment to a rent check ignores most of the story. Part of each payment builds equity, while maintenance, insurance and property taxes sit on top of it. On the renting side, the rent check is everything, and the cash you did not spend on a house keeps working for you. A good <strong>buy vs. rent calculator</strong> prices both sides honestly so neither one gets a free pass.</p>
+        </section>
+        <section id="rent-vs-buy-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="rent-vs-buy-calculator-guide-heading-2">
+<h2 id="rent-vs-buy-calculator-guide-heading-2">Inputs a Rent vs. Buy Calculator Needs From You</h2>
+<p>Every field in the form maps to a specific line of the comparison. Use real quotes where you have them and the default assumptions where you do not. <!-- SILO_START:slot_c -->Next, open the <a class="silo-link" href="/repossession-of-real-property-calculator.html">repossession of real property calculator online</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_c --></p>
+<ul>
+<li><strong>Home price:</strong> the purchase price of the house you would buy.</li>
+<li><strong>Monthly rent:</strong> what you pay today, or what a similar place costs in the neighborhood you are eyeing.</li>
+<li><strong>Down payment:</strong> the share of the price you pay upfront, which sets your loan size and whether you owe PMI.</li>
+<li><strong>Length of stay:</strong> how many years you expect to live there before selling.</li>
+<li><strong>Mortgage rate and term:</strong> the interest rate on your loan and its length in years.</li>
+<li><strong>Growth rates:</strong> yearly home appreciation, rent increase, investment return and inflation.</li>
+</ul>
+
+<h3>Down payment and closing costs</h3>
+<p>Your down payment is the largest piece of cash you tie up in the house. Put less than 20% down on a conventional loan and you will usually owe <strong>private mortgage insurance</strong> (PMI) until your equity reaches 20%. Closing costs are separate: buyers commonly budget around 2% to 5% of the price for lender fees, title work and prepaid items. Because the renter's version of you invests that same cash instead, both amounts feed straight into the opportunity cost.</p>
+
+<h3>Mortgage rate and mortgage term</h3>
+<p>The <strong>mortgage rate</strong> controls how much of each payment goes to interest and how much reduces principal. Most buyers choose a fixed-rate mortgage with a 30-year term because it keeps the payment steady, though a shorter term builds equity faster at the price of a bigger monthly bill. If you are still comparing lenders, run the tool at two or three rates to see how sensitive your result is.</p>
+
+<h3>Rent increase, home appreciation and investment return</h3>
+<p>These three growth assumptions do the heavy lifting over a long stay. A higher <strong>rent increase</strong> makes staying a renter more expensive each year. Faster <strong>home appreciation</strong> pushes up your sale price and equity. A higher <strong>investment return</strong> makes the renter's invested savings grow quicker. Nobody knows the future values, so test a pessimistic and an optimistic set instead of trusting one guess.</p>
+        </section>
+        <section id="rent-vs-buy-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="rent-vs-buy-calculator-guide-heading-3">
+<h2 id="rent-vs-buy-calculator-guide-heading-3">Costs of Buying vs. Costs of Renting</h2>
+<p>The table below lists what each path charges you. Ownership has far more line items, which is why a house that looks cheap on a monthly basis can still lose to renting over a short stay.</p>
+<table>
+<thead>
+<tr><th>Cost category</th><th>If you buy</th><th>If you rent</th></tr>
+</thead>
+<tbody>
+<tr><td>Upfront cash</td><td>Down payment and closing costs</td><td>Security deposit, sometimes a broker fee</td></tr>
+<tr><td>Housing payment</td><td>Mortgage payment (principal and interest)</td><td>Monthly rent</td></tr>
+<tr><td>Taxes and insurance</td><td>Property taxes, homeowners insurance, PMI</td><td>Renter's insurance</td></tr>
+<tr><td>Upkeep</td><td>Maintenance, repairs, HOA fees, extra utilities</td><td>Usually covered by the landlord</td></tr>
+<tr><td>Growth effect</td><td>Home value appreciation builds equity</td><td>Invested savings earn an investment return</td></tr>
+<tr><td>Exit</td><td>Selling costs, capital gains, net proceeds</td><td>Deposit returned</td></tr>
+</tbody>
+</table>
+
+<h3>PITI and the true cost of ownership</h3>
+<p>Lenders summarize the biggest monthly bills with the acronym <strong>PITI</strong>: principal, interest, taxes and insurance. PITI leaves out upkeep, so your real monthly costs run higher than the figure on a mortgage quote. Stack the <strong>initial costs</strong> of closing, the repair bills and the ongoing payments together and you get the <strong>total cost</strong> of owning, which is the cost you should hold up against the rent check. Skipping any layer understates the cost of buying and tilts the answer.</p>
+
+<h3>Property taxes, homeowners insurance and maintenance</h3>
+<p>Annual <strong>property taxes</strong> commonly run between 1% and 3% of the home's value depending on where you live, and they rise as the assessed value does. <strong>Homeowners insurance</strong> protects the structure and your belongings, and a common rule of thumb sets aside 1% to 2% of the home value each year for <strong>maintenance</strong>. Add HOA fees if the property has them, and extra utilities for the larger space. None of these exist on the rent side, so leaving them out flatters buying every time.</p>
+
+<h3>Renter's insurance and security deposit</h3>
+<p>Renting has its own small expenses. <strong>Renter's insurance</strong> typically costs a few hundred dollars a year, and a <strong>security deposit</strong> is a one-time cash outlay you get back when you leave, minus any damage. Both are modest, but a thorough rent or buy comparison still counts them.</p>
+        </section>
+        <section id="rent-vs-buy-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="rent-vs-buy-calculator-guide-heading-4">
+<h2 id="rent-vs-buy-calculator-guide-heading-4">Worked Example: Rent vs. Buy Calculator on a $412,500 Home</h2>
+<p>Suppose you are comparing a $412,500 house against a rental that costs $2,340 a month. You put 20% down ($82,500), pay 3% in buying closing costs ($12,375) and borrow $330,000 on a 30-year fixed-rate mortgage at 6.35%. The standard payment formula gives the principal and interest portion:</p>
+<p>$$M = P \times \frac{r(1+r)^{n}}{(1+r)^{n}-1}$$</p>
+<p>With $P = 330{,}000$, a monthly rate of $r = 0.0635 \div 12$ and $n = 360$ payments, the mortgage payment is <strong>$2,053.38</strong> a month. Layer on the other recurring costs of ownership in year one:</p>
+<table>
+<thead>
+<tr><th>Monthly item (year one)</th><th>Buying</th><th>Renting</th></tr>
+</thead>
+<tbody>
+<tr><td>Mortgage principal and interest</td><td>$2,053.38</td><td>n/a</td></tr>
+<tr><td>Property taxes at 1.15% of the home price</td><td>$395.31</td><td>n/a</td></tr>
+<tr><td>Homeowners insurance ($1,780 a year)</td><td>$148.33</td><td>n/a</td></tr>
+<tr><td>Maintenance at 1.2% of the home price</td><td>$412.50</td><td>n/a</td></tr>
+<tr><td>Rent and renter's insurance ($216 a year)</td><td>n/a</td><td>$2,358.00</td></tr>
+<tr><td><strong>Total per month</strong></td><td><strong>$3,009.52</strong></td><td><strong>$2,358.00</strong></td></tr>
+</tbody>
+</table>
+<figure><img src="/assets/images/tools/rent-vs-buy-calculator/monthly-cost-of-buying-breakdown.svg" alt="Donut chart splitting a $3,009.52 monthly homeownership cost into mortgage payment, maintenance, property taxes and insurance"><figcaption>Year-one monthly cost of owning the $412,500 home, split by expense.</figcaption></figure>
+<p>Owning costs $651.52 more per month at the start, so in the renting scenario that gap, plus your $94,875 of upfront cash, goes into investments earning 5.5% a year. Rent rises 3.5% yearly, the home appreciates 3.2% yearly and ongoing insurance costs follow 2.5% inflation. After selling costs of 6%, here is where each side stands:</p>
+<table>
+<thead>
+<tr><th>Years you stay</th><th>Home value</th><th>Loan balance</th><th>Buyer's wealth</th><th>Renter's wealth</th><th>Better choice</th></tr>
+</thead>
+<tbody>
+<tr><td>3</td><td>$453,381</td><td>$317,855</td><td>$108,323</td><td>$134,785</td><td>Renting</td></tr>
+<tr><td>5</td><td>$482,861</td><td>$308,378</td><td>$145,512</td><td>$161,610</td><td>Renting</td></tr>
+<tr><td>7</td><td>$514,259</td><td>$297,621</td><td>$185,783</td><td>$188,379</td><td>Renting</td></tr>
+<tr><td>8</td><td>$530,715</td><td>$291,709</td><td>$207,164</td><td>$201,671</td><td>Buying</td></tr>
+<tr><td>10</td><td>$565,224</td><td>$278,701</td><td>$252,610</td><td>$227,897</td><td>Buying</td></tr>
+<tr><td>15</td><td>$661,636</td><td>$237,967</td><td>$392,795</td><td>$298,253</td><td>Buying</td></tr>
+</tbody>
+</table>
+<p>The lines cross about <strong>7.3 years</strong> in. Leave after five years and renting leaves you $16,098 ahead; stay ten years and buying wins by $24,714; stay fifteen and the gap widens to $94,542.</p>
+        </section>
+        <section id="rent-vs-buy-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="rent-vs-buy-calculator-guide-heading-5">
+<h2 id="rent-vs-buy-calculator-guide-heading-5">How to Read the Breakeven Result</h2>
+<p>The <strong>breakeven horizon</strong> is the single most useful output. It answers one question: how long must you stay before the transaction costs of buying are paid back by equity growth? In the example above, the answer is just over seven years. If you expect to move sooner, the upfront fees and selling costs, not the monthly payment, are what tip the scale toward renting.</p>
+
+<figure><img src="/assets/images/tools/rent-vs-buy-calculator/rent-vs-buy-breakeven-wealth-chart.svg" alt="Line chart of buyer wealth minus renter wealth by years stayed, crossing zero at about 7.3 years for a $412,500 home"><figcaption>Renting leads for the first seven years; buying pulls ahead after the 7.3-year breakeven.</figcaption></figure>
+<h3>Short term versus long term</h3>
+<p>Over a <strong>short term</strong> stay, buying is penalized because roughly 9% of the home's value disappears into closing and selling fees before appreciation has time to offset it. Over a <strong>long term</strong> stay, those fees are spread across many years while your mortgage balance shrinks and your <strong>home equity</strong> keeps growing. That is why the same house can be a poor choice for a three-year posting and a strong choice for a family settling in for decades.</p>
+
+<h3>The price-to-rent ratio shortcut</h3>
+<p>For a quick cross-check on the tool's answer, divide the home price by a year of rent. Here $412,500 divided by $28,080 gives a <strong>price-to-rent ratio</strong> of about 14.7, which sits near the low end of the middle zone and lines up with the roughly seven-year crossover the tool reports. A higher ratio should push that date later, and a lower one should pull it earlier. Roughly 15 to 20 is often cited as the middle zone, so treat the ratio as a quick screen on the result, not a replacement for it.</p>
+        </section>
+        <section id="rent-vs-buy-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="rent-vs-buy-calculator-guide-heading-6">
+<h2 id="rent-vs-buy-calculator-guide-heading-6">Testing a Raleigh Townhouse With a Buy vs. Rent Calculator</h2>
+<p>Priya, a physician assistant, has a hospital contract that runs six years and a lender-approved offer on a $368,900 townhouse. Her apartment costs $1,945 a month. Before signing anything, she opens the calculator to see whether owning beats renting over that six-year window.</p>
+<p>She enters the price and a 20% down payment of $73,780, which also keeps her clear of mortgage insurance. The loan is $295,120 at 6.72% over 30 years, so the payment comes to $1,908.26 before taxes, insurance and upkeep. She sets rent growth to 4%, home appreciation to 2.8%, property tax to 0.98% of the price, insurance to $1,640 a year, maintenance to 1% and the investment return to 5%.</p>
+<p>The price-to-rent ratio, $368,900 divided by $23,340 of annual rent, is 15.8, inside the 15 to 20 band where the choice is genuinely close. The result confirms it: with a six-year stay the buyer finishes with $136,725 in wealth and the renter with $159,305, so renting leaves her $22,580 ahead. The breakeven sits at roughly 9.8 years, at which point owning pulls level and then edges past by $1,688 at year ten.</p>
+<p>That number settles the question. She changes only the length of stay to ten years, reruns it, and sees buying win by that thin margin, which is not enough to justify tying up $73,780 and paying about 6% in selling costs. She signs a 12-month lease renewal, leaves the down payment invested, and sets a reminder to repeat the comparison if her contract is extended past year eight.</p>
+        </section>
+        <section id="rent-vs-buy-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="rent-vs-buy-calculator-guide-heading-7">
+<h2 id="rent-vs-buy-calculator-guide-heading-7">Taxes in a Buy or Rent Comparison</h2>
+<p>Taxes can swing the result more than people expect. Buyers may claim a <strong>mortgage interest deduction</strong> and deduct property taxes, but only when the total of those deductions beats the <strong>standard deduction</strong>, so many households get no extra benefit from <strong>itemizing</strong>. Your <strong>marginal tax rate</strong> and your <strong>tax filing status</strong> determine how much each deducted dollar is worth, which is why the tool asks for your annual income. When you sell a primary residence, capital gains up to a federal exclusion are typically tax-free, and anything above it may be taxed; a gain on the renter's investments is taxed too. A <strong>tax deduction</strong> that looks large on paper often shrinks once you compare it against the standard deduction, so check before counting on tax savings.</p>
+        </section>
+        <section id="rent-vs-buy-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="rent-vs-buy-calculator-guide-heading-8">
+<h2 id="rent-vs-buy-calculator-guide-heading-8">Assumptions That Change Your Rent vs. Buy Result</h2>
+<p>Every figure above rests on assumptions, and they are worth stress-testing because small changes compound across a decade.</p>
+<ul>
+<li><strong>Home price growth:</strong> if the house appreciates 1% instead of 3.2%, the breakeven moves out by years.</li>
+<li><strong>Rent growth:</strong> faster rent increases favor buying, since a fixed-rate payment stays flat while rent climbs.</li>
+<li><strong>Investment return:</strong> a stronger market makes the renter's portfolio more powerful and favors staying flexible.</li>
+<li><strong>Inflation rate:</strong> it raises maintenance, insurance and rent over time and lets you view results in today's dollars.</li>
+<li><strong>Mortgage interest rate:</strong> a one-point change can alter the payment by hundreds of dollars a month.</li>
+</ul>
+
+<h3>When the market is unusual</h3>
+<p>In very high-priced real estate markets, the price-to-rent ratio can stay stubbornly high, so enter local rent and local sale prices plus a more cautious growth rate, then check how far the crossover year moves. In a cheaper market the opposite can hold. National averages are a starting point; the local figures you type into the form are what make the result yours.</p>
+        </section>
+        <section id="rent-vs-buy-calculator-guide-section-9" class="panel article-content p-4 sm:p-6" aria-labelledby="rent-vs-buy-calculator-guide-heading-9">
+<h2 id="rent-vs-buy-calculator-guide-heading-9">Rent Versus Buy: A Reality Check on Affordability</h2>
+<p>A rent versus buy analysis only helps if you can afford either path, so start with <strong>home affordability</strong>. Lenders weigh your income, existing debts and credit score, and a simple mortgage calculator or down payment calculator can show the loan size and the cash you need before you run this comparison. Treat whatever comes out as an estimate: it rests on assumed growth rates, and your actual numbers will drift from them. A realistic estimate beats a precise-looking one.</p>
+
+<h3>Expenses the homeowner tends to forget</h3>
+<p>A <strong>homeowner</strong> who sells pays the real estate agent a commission, usually a share of the sale price, and the calculator folds that commission into its selling-cost percentage, the biggest slice of the 6% in our example. Meanwhile, the renter's cash usually sits in a stock index fund, so its value can fall in a bad year and make any single-year estimate shaky. That is why you should test renting or buying at several market-return values; a buy versus rent decision that only works in a boom is fragile.</p>
+
+<h3>Ways to reach breakeven sooner</h3>
+<p>If you want to break even sooner, you have a few levers. A larger down payment shrinks the loan and the interest you pay, a lower purchase price trims every recurring item, and negotiating the seller's closing costs cuts the upfront cash you tie up. Each lever lowers the monthly costs of owning or the hurdle you have to clear, so rerun the tool after each change to see which one moves the date most for you.</p>
+        </section>
+        <section id="rent-vs-buy-calculator-guide-section-10" class="panel article-content p-4 sm:p-6" aria-labelledby="rent-vs-buy-calculator-guide-heading-10">
+<h2 id="rent-vs-buy-calculator-guide-heading-10">Beyond the Numbers: Lifestyle and Flexibility</h2>
+<p>A spreadsheet cannot price every factor. Renting keeps you flexible: you can relocate for a job without the pain of selling, and a <strong>landlord</strong> handles repairs. Owning offers <strong>stability</strong>, control over renovations and the pride of homeownership. Think about the <strong>location</strong>, the school district, commute times, the neighborhood and your <strong>lifestyle</strong> plans for the next several years. Cost of living matters too, and some city comparisons show that moving to a cheaper metro changes the equation entirely. If the financial result is close, personal preferences should break the tie.</p>
+
+<h3>Questions to ask before you decide</h3>
+<ul>
+<li>If the calculator shows the crossover at year 7, do you plan to stay past it?</li>
+<li>Could you cover an unexpected repair before that year without touching your emergency savings?</li>
+<li>Does the monthly cost the tool shows for owning fit comfortably in your budget?</li>
+<li>Is your income stable enough for the long commitment the result assumes?</li>
+</ul>
+        </section>
+      </div>
+
+      <section id="rent-vs-buy-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="rent-vs-buy-calculator-faq-heading" data-section="faq">
+        <h2 id="rent-vs-buy-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Rent vs. Buy Calculator questions</h2>
+        <div id="rent-vs-buy-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="rent-vs-buy-calculator-faq-1" class="faq-item" open><summary id="rent-vs-buy-calculator-faq-1-summary" class="faq-summary"><h3 id="rent-vs-buy-calculator-faq-1-question" class="faq-question">Is it better to rent or buy a home?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="rent-vs-buy-calculator-faq-1-answer" class="faq-answer"><p>It depends mostly on how long you will stay. Buying carries large upfront and selling costs, so it usually only wins once you stay past the breakeven point, while renting tends to win on short stays or when home prices are high relative to rents. Enter your own numbers to find your breakeven.</p></div></details>
+          <details id="rent-vs-buy-calculator-faq-2" class="faq-item" open><summary id="rent-vs-buy-calculator-faq-2-summary" class="faq-summary"><h3 id="rent-vs-buy-calculator-faq-2-question" class="faq-question">What is the 5% rule for renting vs. buying?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="rent-vs-buy-calculator-faq-2-answer" class="faq-answer"><p>It is a quick screen: the unrecoverable yearly cost of owning (about 1% property tax, 1% maintenance and 3% cost of capital) is roughly 5% of the home&#x27;s value. If 5% of the price divided by 12 is more than your monthly rent, renting is likely cheaper. It ignores your tax situation and growth rates, so use the calculator for a fuller answer.</p></div></details>
+          <details id="rent-vs-buy-calculator-faq-3" class="faq-item" open><summary id="rent-vs-buy-calculator-faq-3-summary" class="faq-summary"><h3 id="rent-vs-buy-calculator-faq-3-question" class="faq-question">What costs does the calculator include when buying?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="rent-vs-buy-calculator-faq-3-answer" class="faq-answer"><p>It counts the down payment and closing costs, mortgage payments, property taxes, homeowner&#x27;s insurance, PMI, HOA fees, extra utilities, repairs and maintenance, selling costs and any capital gains tax, then subtracts the equity you get back when you sell.</p></div></details>
+          <details id="rent-vs-buy-calculator-faq-4" class="faq-item" open><summary id="rent-vs-buy-calculator-faq-4-summary" class="faq-summary"><h3 id="rent-vs-buy-calculator-faq-4-question" class="faq-question">What is opportunity cost in a rent vs. buy comparison?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="rent-vs-buy-calculator-faq-4-answer" class="faq-answer"><p>It is the return you give up on cash you spend instead of investing. Money used for a down payment or monthly housing costs could have earned your investment return, and the calculator tracks that growth for both renting and buying.</p></div></details>
+          <details id="rent-vs-buy-calculator-faq-5" class="faq-item" open><summary id="rent-vs-buy-calculator-faq-5-summary" class="faq-summary"><h3 id="rent-vs-buy-calculator-faq-5-question" class="faq-question">How do taxes change the result?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="rent-vs-buy-calculator-faq-5-answer" class="faq-answer"><p>Mortgage interest and property taxes only reduce your tax bill when your itemized deductions beat the standard deduction, and the saving is worth more at a higher marginal tax rate. Selling a primary residence may also trigger capital gains tax above the exclusion.</p></div></details>
+          <details id="rent-vs-buy-calculator-faq-6" class="faq-item" open><summary id="rent-vs-buy-calculator-faq-6-summary" class="faq-summary"><h3 id="rent-vs-buy-calculator-faq-6-question" class="faq-question">How accurate are the growth-rate assumptions?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="rent-vs-buy-calculator-faq-6-answer" class="faq-answer"><p>Home appreciation, rent increases, investment returns and inflation are estimates, and small changes compound over many years. Try a cautious and an optimistic set of values to see how much your breakeven point moves.</p></div></details>
+          <details id="rent-vs-buy-calculator-faq-7" class="faq-item" open><summary id="rent-vs-buy-calculator-faq-7-summary" class="faq-summary"><h3 id="rent-vs-buy-calculator-faq-7-question" class="faq-question">Should I include HOA fees and PMI?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="rent-vs-buy-calculator-faq-7-answer" class="faq-answer"><p>Yes if they apply to you. HOA fees add a recurring cost for buyers, and PMI is usually charged when you put less than 20% down until your equity reaches 20%.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="rent-vs-buy-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="rent-vs-buy-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="rent-vs-buy-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="rent-vs-buy-calculator-ad-bottom-leaderboard">
+            <ins id="rent-vs-buy-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("rent-vs-buy-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="rent-vs-buy-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="rent-vs-buy-calculator-right-rail-top" class="mb-6">
+        <aside id="rent-vs-buy-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="rent-vs-buy-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="rent-vs-buy-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="rent-vs-buy-calculator-ad-right-rail-rectangle">
+            <ins id="rent-vs-buy-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("rent-vs-buy-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="rent-vs-buy-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="rent-vs-buy-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="rent-vs-buy-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="rent-vs-buy-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="rent-vs-buy-calculator-ad-right-rail-skyscraper">
+            <ins id="rent-vs-buy-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("rent-vs-buy-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="rent-vs-buy-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="rent-vs-buy-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="rent-vs-buy-calculator-footer-brand">
+        <a id="rent-vs-buy-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="rent-vs-buy-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="rent-vs-buy-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="rent-vs-buy-calculator-footer-categories" aria-labelledby="rent-vs-buy-calculator-footer-categories-heading">
+        <h2 id="rent-vs-buy-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="rent-vs-buy-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="rent-vs-buy-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="rent-vs-buy-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="rent-vs-buy-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="rent-vs-buy-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="rent-vs-buy-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="rent-vs-buy-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="rent-vs-buy-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="rent-vs-buy-calculator-footer-company" aria-labelledby="rent-vs-buy-calculator-footer-company-heading">
+        <h2 id="rent-vs-buy-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="rent-vs-buy-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="rent-vs-buy-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="rent-vs-buy-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="rent-vs-buy-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="rent-vs-buy-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="rent-vs-buy-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="rent-vs-buy-calculator-footer-bottom" class="border-t border-line">
+      <p id="rent-vs-buy-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="rent-vs-buy-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Rent vs. buy: month-by-month comparison of net worth over the chosen horizon.
+  //   Mortgage payment M = L x i / (1 - (1 + i)^-n), i = rate / 12 (M = L / n at 0%).
+  //   Owning each month: principal & interest + property tax and maintenance (% of the home's value
+  //   that year) + insurance and HOA (growing with inflation) + PMI while the balance is above 80%
+  //   of the price. Renting: rent (growing yearly) + renter's insurance.
+  //   The renter invests the down payment and buying closing costs up front; each month whoever has
+  //   the lower housing cost invests the difference at the assumed return (monthly (1 + r)^(1/12) - 1).
+  //   Buyer net worth = home value x (1 - selling costs) - loan balance + buyer's investments.
+  //   Renter net worth = renter's investments. Taxes on investment gains and any mortgage-interest
+  //   deduction are ignored.
+  // Verified (Node, scratch tests): $320,000 at 6.5% for 30 years -> $2,022.62/month;
+  //   $100,000 at 0% for 10 years -> $833.33. With 0% return, 0% growth, 0% rate and no other costs,
+  //   buyer and renter net worth reconcile by hand (equity + cash difference). Defaults: $400,000
+  //   home, 20% down, 6.5%, 30 years vs $2,200 rent -> see the worked example in the page copy.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+  var cents = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 2, minimumFractionDigits: 2 });
+
+  function num(id) {
+    var el = document.getElementById(id);
+    if (!el) return NaN;
+    var v = parseFloat(el.value);
+    return isNaN(v) ? NaN : v;
+  }
+
+  function payment(loan, annualRate, years) {
+    var n = years * 12, i = annualRate / 12;
+    if (loan <= 0 || n <= 0) return 0;
+    if (i === 0) return loan / n;
+    return loan * i / (1 - Math.pow(1 + i, -n));
+  }
+
+  function simulate(o) {
+    var loan = o.price * (1 - o.downPct / 100);
+    var pmt = payment(loan, o.rate / 100, o.term);
+    var i = o.rate / 100 / 12, n = o.term * 12;
+    var g = Math.pow(1 + o.ret / 100, 1 / 12) - 1;
+    var upfront = o.price * o.downPct / 100 + o.price * o.buyClose / 100;
+    var balance = loan, buyInv = 0, rentInv = upfront, buyPaid = upfront, rentPaid = 0;
+    var rows = [], firstOwn = 0, firstRent = 0;
+    for (var m = 1; m <= o.years * 12; m++) {
+      var y = Math.floor((m - 1) / 12);
+      var value = o.price * Math.pow(1 + o.apprec / 100, y);
+      var infl = Math.pow(1 + o.infl / 100, y);
+      var pi = 0;
+      if (m <= n && balance > 0) {
+        var interest = balance * i;
+        pi = Math.min(pmt, balance + interest);
+        balance = Math.max(0, balance - (pi - interest));
+      }
+      var pmi = (o.downPct < 20 && balance > 0.8 * o.price) ? loan * o.pmi / 100 / 12 : 0;
+      var own = pi + value * o.propTax / 100 / 12 + value * o.maint / 100 / 12 + o.ins * infl / 12 + o.hoa * infl + pmi;
+      var rent = o.rent * Math.pow(1 + o.rentInc / 100, y) + o.rentIns * infl;
+      if (m === 1) { firstOwn = own; firstRent = rent; }
+      buyInv *= 1 + g; rentInv *= 1 + g;
+      if (own > rent) rentInv += own - rent; else buyInv += rent - own;
+      buyPaid += own; rentPaid += rent;
+      if (m % 12 === 0) {
+        var endValue = o.price * Math.pow(1 + o.apprec / 100, m / 12);
+        var buyNW = endValue * (1 - o.sellCost / 100) - balance + buyInv;
+        rows.push({ year: m / 12, buyPaid: buyPaid, rentPaid: rentPaid, equity: endValue - balance,
+                    buyNW: buyNW, rentNW: rentInv });
+      }
+    }
+    return { loan: loan, pmt: pmt, upfront: upfront, firstOwn: firstOwn, firstRent: firstRent, rows: rows };
+  }
+
+  function setText(id, text) { var el = document.getElementById(id); if (el) el.textContent = text; }
+
+  function update() {
+    var o = {
+      price: num('rbPrice'), downPct: num('rbDown'), rate: num('rbRate'), term: parseInt(document.getElementById('rbTerm').value, 10),
+      buyClose: num('rbBuyClose'), propTax: num('rbPropTax'), ins: num('rbIns'), hoa: num('rbHoa'), maint: num('rbMaint'),
+      apprec: num('rbApprec'), sellCost: num('rbSellCost'), rent: num('rbRent'), rentInc: num('rbRentInc'),
+      rentIns: num('rbRentIns'), years: Math.round(num('rbYears')), ret: num('rbReturn'), infl: num('rbInfl'), pmi: num('rbPmi')
+    };
+    if (!(o.term > 0)) o.term = 30;
+    var error = document.getElementById('rbError');
+    var vals = Object.keys(o).map(function (k) { return o[k]; });
+    var bad = vals.some(function (v) { return !isFinite(v); }) ||
+              o.price <= 0 || o.price > 1e9 || o.downPct < 0 || o.downPct > 100 || o.rate < 0 || o.rate > 30 ||
+              o.buyClose < 0 || o.buyClose > 20 || o.propTax < 0 || o.propTax > 10 || o.ins < 0 || o.hoa < 0 ||
+              o.maint < 0 || o.maint > 10 || o.apprec < -20 || o.apprec > 20 || o.sellCost < 0 || o.sellCost > 20 ||
+              o.rent < 0 || o.rentInc < -20 || o.rentInc > 20 || o.rentIns < 0 || o.years < 1 || o.years > 40 ||
+              o.ret < -20 || o.ret > 30 || o.infl < -10 || o.infl > 20 || o.pmi < 0 || o.pmi > 5;
+    error.hidden = !bad;
+    if (bad) {
+      error.textContent = 'Enter a home price above $0, a down payment from 0 to 100%, non-negative costs, ' +
+                          'growth rates from -20% to 20% and a comparison period of 1 to 40 years.';
+      return;
+    }
+    var r = simulate(o), last = r.rows[r.rows.length - 1];
+    var diff = last.buyNW - last.rentNW;
+    var breakEven = null;
+    for (var k = 0; k < r.rows.length; k++) { if (r.rows[k].buyNW >= r.rows[k].rentNW - 0.5) { breakEven = r.rows[k].year; break; } }
+
+    var even = Math.abs(diff) < 1;
+    var signed = function (v) { return Math.round(v) < 0 ? '\u2212' + money.format(-v) : money.format(Math.abs(v) < 0.5 ? 0 : v); };
+    setText('rbVerdict', even ? 'About even' : diff > 0 ? 'Buying' : 'Renting');
+    setText('rbVerdictBy', money.format(Math.abs(diff)));
+    setText('rbBreakEven', breakEven === null ? 'Not within ' + o.years + (o.years === 1 ? ' year' : ' years') :
+            'Year ' + breakEven);
+    setText('rbPmt', cents.format(r.pmt));
+    setText('rbOwnMonthly', cents.format(r.firstOwn));
+    setText('rbRentMonthly', cents.format(r.firstRent));
+    setText('rbUpfront', money.format(r.upfront));
+    setText('rbBuyNW', signed(last.buyNW));
+    setText('rbRentNW', signed(last.rentNW));
+    var span = o.years + (o.years === 1 ? ' year' : ' years');
+    setText('rbSummary', even ? 'Buying and renting leave you with about the same net worth after ' + span + '.' :
+            (diff > 0 ? 'Buying' : 'Renting') + ' leaves you about ' + money.format(Math.abs(diff)) +
+            ' better off after ' + span + ', assuming you sell the home at the end.');
+
+    document.getElementById('rbTable').innerHTML = r.rows.map(function (row) {
+      return '<tr><td>' + row.year + '</td><td>' + money.format(row.buyPaid) + '</td><td>' + money.format(row.rentPaid) +
+             '</td><td>' + money.format(row.equity) + '</td><td>' + signed(row.buyNW) + '</td><td>' + signed(row.rentNW) +
+             '</td><td>' + signed(row.buyNW - row.rentNW) + '</td></tr>';
+    }).join('');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('rbForm');
+    if (!form) return;
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

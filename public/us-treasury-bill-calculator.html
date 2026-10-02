@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="en" id="us-treasury-bill-calculator-document" data-page-slug="us-treasury-bill-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>US Treasury Bill Calculator: T-Bill Yield &amp; Price</title>
+  <meta name="description" content="Calculate the price, dollar discount, and annualized return on a Treasury bill from its face value and days to maturity, then compare four yield measures side by side.">
+  <link rel="canonical" href="https://company-marketcap.github.io/us-treasury-bill-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="US Treasury Bill Calculator: T-Bill Yield &amp; Price">
+  <meta property="og:description" content="Calculate the price, dollar discount, and annualized return on a Treasury bill from its face value and days to maturity, then compare four yield measures side by side.">
+  <meta property="og:url" content="https://company-marketcap.github.io/us-treasury-bill-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "US Treasury Bill Calculator", "url": "https://company-marketcap.github.io/us-treasury-bill-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Calculate the price, dollar discount, and annualized return on a Treasury bill from its face value and days to maturity, then compare four yield measures side by side."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Bonds, CDs & Fixed Income", "item": "https://company-marketcap.github.io/financial-calculators.html#bond-cd-calculators"}, {"@type": "ListItem", "position": 4, "name": "US Treasury Bill Calculator", "item": "https://company-marketcap.github.io/us-treasury-bill-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does a Treasury bill calculator do?", "acceptedAnswer": {"@type": "Answer", "text": "It converts a bill's face value, purchase price (or discount rate) and days to maturity into the price you pay, the dollar profit at maturity and several annualized yields, so you can compare a T-bill with other short-term options."}}, {"@type": "Question", "name": "What is the difference between bank discount yield and bond equivalent yield?", "acceptedAnswer": {"@type": "Answer", "text": "Bank discount yield divides the discount by face value and uses a 360-day year, which is how bills are quoted. Bond equivalent yield divides by the price you actually paid and uses a 365-day year, so it is higher and easier to compare with coupon bonds."}}, {"@type": "Question", "name": "Why is the bond equivalent yield higher than the discount rate?", "acceptedAnswer": {"@type": "Answer", "text": "Two things lift it: the denominator shrinks from face value to the lower purchase price, and the year used for annualizing shortens from 360 to 365 days for bills of 182 days or less."}}, {"@type": "Question", "name": "What is the money market yield?", "acceptedAnswer": {"@type": "Answer", "text": "Also called the CD-equivalent yield, it divides the profit by the purchase price and keeps the 360-day year, which makes a bill comparable with certificates of deposit and commercial paper."}}, {"@type": "Question", "name": "What maturities do Treasury bills come in?", "acceptedAnswer": {"@type": "Answer", "text": "Standard bills mature in 4, 8, 13, 17, 26 and 52 weeks (28, 56, 91, 119, 182 and 364 days). Treasury also issues cash management bills with irregular terms."}}, {"@type": "Question", "name": "How is the purchase price of a T-bill calculated?", "acceptedAnswer": {"@type": "Answer", "text": "Price equals face value times one minus the discount rate times days to maturity divided by 360. At a 4.38% discount rate, a $25,000 bill with 91 days left costs about $24,723.21."}}, {"@type": "Question", "name": "Is interest on Treasury bills taxable?", "acceptedAnswer": {"@type": "Answer", "text": "The interest is exempt from state and local income tax but is subject to federal income tax. Check your own situation with a tax professional."}}, {"@type": "Question", "name": "Does this calculator show live auction rates?", "acceptedAnswer": {"@type": "Answer", "text": "No. It does clean discount-price math with no fees or accrued interest, so confirm the actual award price with TreasuryDirect or your broker."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="us-treasury-bill-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="us-treasury-bill-calculator" data-page-type="calculator">
+  <a id="us-treasury-bill-calculator-skip-link" href="#us-treasury-bill-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="us-treasury-bill-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="us-treasury-bill-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="us-treasury-bill-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="us-treasury-bill-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="us-treasury-bill-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="us-treasury-bill-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="us-treasury-bill-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="us-treasury-bill-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="us-treasury-bill-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="us-treasury-bill-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="us-treasury-bill-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="us-treasury-bill-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="us-treasury-bill-calculator-header-search-status" aria-controls="us-treasury-bill-calculator-header-search-results" data-search-input="header">
+              <p id="us-treasury-bill-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="us-treasury-bill-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="us-treasury-bill-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="us-treasury-bill-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="us-treasury-bill-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="us-treasury-bill-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="us-treasury-bill-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="us-treasury-bill-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="us-treasury-bill-calculator-mobile-search-status" aria-controls="us-treasury-bill-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="us-treasury-bill-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="us-treasury-bill-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="us-treasury-bill-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="us-treasury-bill-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="us-treasury-bill-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="us-treasury-bill-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="us-treasury-bill-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="us-treasury-bill-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="us-treasury-bill-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="us-treasury-bill-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="us-treasury-bill-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="us-treasury-bill-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="us-treasury-bill-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="us-treasury-bill-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="us-treasury-bill-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="us-treasury-bill-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="us-treasury-bill-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="us-treasury-bill-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="us-treasury-bill-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="us-treasury-bill-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="us-treasury-bill-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="us-treasury-bill-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="us-treasury-bill-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="us-treasury-bill-calculator-sidebar-search-status" aria-controls="us-treasury-bill-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="us-treasury-bill-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="us-treasury-bill-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="us-treasury-bill-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="us-treasury-bill-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="us-treasury-bill-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="us-treasury-bill-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="us-treasury-bill-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="us-treasury-bill-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="us-treasury-bill-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="us-treasury-bill-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="us-treasury-bill-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="us-treasury-bill-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="us-treasury-bill-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="us-treasury-bill-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="us-treasury-bill-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="us-treasury-bill-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="us-treasury-bill-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="us-treasury-bill-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="us-treasury-bill-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="us-treasury-bill-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="us-treasury-bill-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators" aria-current="true">Bonds &amp; CDs</a></li><li><a id="us-treasury-bill-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="us-treasury-bill-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="us-treasury-bill-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="us-treasury-bill-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="us-treasury-bill-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="us-treasury-bill-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="us-treasury-bill-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="us-treasury-bill-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="us-treasury-bill-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="us-treasury-bill-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="us-treasury-bill-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="us-treasury-bill-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="us-treasury-bill-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="us-treasury-bill-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="us-treasury-bill-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="us-treasury-bill-calculator" data-calculator-slug="us-treasury-bill-calculator" data-sub-category-slug="bond-cd-calculators">
+      <aside id="us-treasury-bill-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="us-treasury-bill-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="us-treasury-bill-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="us-treasury-bill-calculator-ad-top-leaderboard">
+            <ins id="us-treasury-bill-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("us-treasury-bill-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="us-treasury-bill-calculator-intro-area" class="space-y-4">
+        <nav id="us-treasury-bill-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="us-treasury-bill-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="us-treasury-bill-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="us-treasury-bill-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="us-treasury-bill-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#bond-cd-calculators" itemprop="item"><span itemprop="name">Bonds, CDs &amp; Fixed Income</span></a><meta itemprop="position" content="3"></li>
+            <li id="us-treasury-bill-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">US Treasury Bill Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/us-treasury-bill-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="us-treasury-bill-calculator-hero-section" aria-labelledby="us-treasury-bill-calculator-hero-heading" data-section="hero">
+          <h1 id="us-treasury-bill-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">US Treasury Bill Calculator: T-Bill Yield &amp; Price</h1>
+          <p id="us-treasury-bill-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Parking cash for a few months and wondering what it will actually earn? This free US Treasury bill calculator turns a face value, purchase price, and days to maturity into your exact dollar discount, bank discount yield, and annualized return, so you can judge a risk-free government security against a money market fund or a savings rate before you place a bid. <!-- SILO_START:slot_a -->Next, open the <a class="silo-link" href="/cd-calculator.html">cd calculator online</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="us-treasury-bill-calculator-tool" class="space-y-6" data-page-slug="us-treasury-bill-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="tbFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="tbForm" class="space-y-5" novalidate aria-labelledby="tbFormHeading">
+      <h2 id="tbFormHeading" class="panel-heading">Enter your Treasury bill</h2>
+      <div><label for="tbMode" class="form-label">What do you know?</label><select id="tbMode" class="form-select"><option value="rate" selected>The discount rate (find the price)</option><option value="price">The price per $100 (find the rates)</option></select></div>
+      <div><label for="tbFace" class="form-label">Face value</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="tbFace" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="100" step="100" value="10000" inputmode="decimal"></div><p class="form-hint">The amount paid back at maturity. Bills are sold in multiples of $100.</p></div>
+      <div><label for="tbTerm" class="form-label">Term</label><select id="tbTerm" class="form-select"><option value="28">4 weeks (28 days)</option><option value="42">6 weeks (42 days)</option><option value="56">8 weeks (56 days)</option><option value="91">13 weeks (91 days)</option><option value="119">17 weeks (119 days)</option><option value="182" selected>26 weeks (182 days)</option><option value="364">52 weeks (364 days)</option><option value="custom">Other number of days</option></select></div>
+      <div id="tbDaysWrap" hidden><label for="tbDays" class="form-label">Days to maturity</label><div class="input-group"><input type="number" id="tbDays" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1" max="366" step="1" value="150" inputmode="numeric"><span class="input-affix">days</span></div><p class="form-hint">Useful for a bill bought on the secondary market or a cash management bill.</p></div>
+      <div id="tbRateWrap"><label for="tbRate" class="form-label">Discount rate</label><div class="input-group"><input type="number" id="tbRate" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="0.005" value="4" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">The rate quoted in auction results, based on face value and a 360-day year.</p></div>
+      <div id="tbPriceWrap" hidden><label for="tbPrice" class="form-label">Price per $100 of face value</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="tbPrice" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="0.000001" value="98" inputmode="decimal"></div><p class="form-hint">For example 98.0 means you pay $980 for a $1,000 bill.</p></div>
+      <details class="form-details"><summary class="form-details-summary">More options</summary>
+        <div><label for="tbYear" class="form-label">Days in the year after the issue date</label><select id="tbYear" class="form-select"><option value="365" selected>365 days</option><option value="366">366 days (it includes February 29)</option></select><p class="form-hint">Used only for the investment rate, which counts the actual days in the year.</p></div>
+      </details>
+      <p id="tbError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="tbResults" aria-live="polite" aria-labelledby="tbResultsHeading">
+      <h2 id="tbResultsHeading" class="panel-heading">Your results</h2>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p class="stat-label">Purchase price</p><p id="tbCost" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Interest earned at maturity</p><p id="tbInterest" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Investment rate (bond-equivalent yield)</p><p id="tbInvest" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Annual effective yield</p><p id="tbApy" class="stat-value">–</p></div>
+      </div>
+      <dl class="mt-5">
+        <div class="result-row"><dt class="result-term">Price per $100</dt><dd id="tbPer100" class="result-value">–</dd></div>
+        <div class="result-row"><dt class="result-term">Discount rate</dt><dd id="tbDisc" class="result-value">–</dd></div>
+        <div class="result-row"><dt class="result-term">Days to maturity</dt><dd id="tbDaysOut" class="result-value">–</dd></div>
+        <div class="result-row"><dt class="result-term">You receive at maturity</dt><dd id="tbFaceOut" class="result-value">–</dd></div>
+      </dl>
+      <p class="callout callout-note mt-5 text-sm">The discount rate understates your return because it is figured on face value over a 360-day year. The investment rate uses the price you pay and the actual days in the year, so it is the figure to compare with CDs and notes.</p>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="tbTermsHeading" data-section="terms">
+  <h2 id="tbTermsHeading" class="panel-heading">The same discount rate across bill terms</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">What your face value would cost and earn at <span id="tbTermsRate">–</span> for each standard term.</p>
+  <div class="table-scroll mt-5" tabindex="0" role="region" aria-labelledby="tbTermsHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Term</th><th scope="col">Days</th><th scope="col">Price per $100</th><th scope="col">Purchase price</th><th scope="col">Interest</th><th scope="col">Investment rate</th></tr></thead>
+      <tbody id="tbTerms"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="us-treasury-bill-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="us-treasury-bill-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Parking cash for a few months and wondering what it will actually earn? This free US Treasury bill calculator turns a face value, purchase price, and days to maturity into your exact dollar discount, bank discount yield, and annualized return, so you can judge a risk-free government security against a money market fund or a savings rate before you place a bid. <!-- SILO_START:slot_a_m -->Next, open the <a class="silo-link" href="/cd-calculator.html">cd calculator online</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="us-treasury-bill-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="us-treasury-bill-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="us-treasury-bill-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="us-treasury-bill-calculator-ad-in-feed">
+            <ins id="us-treasury-bill-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("us-treasury-bill-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="us-treasury-bill-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="us-treasury-bill-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="us-treasury-bill-calculator-guide-heading-1">
+<h2 id="us-treasury-bill-calculator-guide-heading-1">How the US Treasury Bill Calculator Works</h2>
+<p>A Treasury bill is a short-term <strong>debt security</strong> sold by the <strong>U.S. Department of the Treasury</strong>. It pays no <b>coupon</b>. Instead, you buy it below its <strong>par value</strong> and the government repays the full amount on the maturity date. The gap between the two is the <strong>interest earned</strong>, and every number this tool produces comes from that gap. <!-- SILO_START:slot_b -->Pair this with the <a class="silo-link" href="/reit-tax-equivalent-distribution-calculator.html">free reit tax equivalent distribution calculator</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_b --></p>
+<p>You supply three things: the <strong>face value</strong> you will be repaid, the <strong>purchase price</strong> you pay (or the <strong>discount rate</strong> quoted at auction), and the <strong>days to maturity</strong>. The tool returns the dollar discount, the price per $100 of face value, the profit at maturity, and the yields described below. Because each yield uses a different base and a different year length, the same bill can honestly show four different percentages.</p>
+<h3>Why the Yield Looks Different Each Time</h3>
+<p>Two choices drive the spread between measures. The first is the denominator: face value or the cash you actually invested. The second is the day count: a <strong>360-day year</strong> (the money market habit) or a <strong>365-day year</strong>. Mix those choices and you get the four measures in the next section, always ordered the same way for a discount bill.</p>
+        </section>
+        <section id="us-treasury-bill-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="us-treasury-bill-calculator-guide-heading-2">
+<h2 id="us-treasury-bill-calculator-guide-heading-2">T-Bill Yield Calculator: Four Yield Measures Explained</h2>
+<p>A bill's return can be expressed in several ways, and each one answers a different question. Keep the four in mind whenever you compare a <b>T-bill</b> with a savings account, a certificate, or a note. <!-- SILO_START:slot_c -->Next, open the <a class="silo-link" href="/cd-ladder-calculator.html">free cd ladder calculator</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_c --></p>
+<h3>Bank Discount Yield (the Dealer Quote)</h3>
+<p>The <strong>bank discount yield</strong> is the rate quoted at the <strong>auction</strong> and by dealers. It measures the dollar discount against face value, using a 360-day year:</p>
+<p>$$BDY = \frac{F - P}{F} \times \frac{360}{d}$$</p>
+<p>Here \(F\) is face value, \(P\) is price, and \(d\) is days to maturity. It is a <strong>dealer quote</strong> convention rather than a true measure of what your money earns, because it divides by money you never put up. That is why the <strong>discount yield</strong> always looks a little lower than your real return.</p>
+<h3>Money Market Yield</h3>
+<p>The <strong>money market yield</strong> keeps the 360-day year but divides by the <strong>purchase price</strong>, so it reflects cash actually invested. Banks call it the <strong>CD-equivalent yield</strong> because it lines up with <b>certificates of deposit</b> and <b>commercial paper</b>, which follow the same money market convention.</p>
+<p>$$MMY = \frac{F - P}{P} \times \frac{360}{d}$$</p>
+<h3>Bond Equivalent Yield</h3>
+<p>The <strong>bond equivalent yield</strong> (BEY) swaps in a 365-day year, making the bill comparable with a <strong>semiannual</strong> <strong>coupon-equivalent</strong> return on notes and bonds. For bills of 182 days or fewer the simple form applies; beyond that the Treasury uses a <strong>quadratic formula</strong> that adjusts for semiannual <b>compounding</b>. This is the <strong>investment yield</strong> most investors should use when comparing a bill against other <b>fixed-income</b> choices.</p>
+<p>$$BEY = \frac{F - P}{P} \times \frac{365}{d}$$</p>
+<h3>Effective Annual Yield</h3>
+<p>The <strong>effective annual yield</strong> assumes your proceeds are <strong>reinvested</strong> at the same rate for a full year. It is the most generous measure, and it is hypothetical, since the rate you can get next quarter may differ.</p>
+<p>$$EAY = (1 + HPR)^{365/d} - 1$$</p>
+<p>The <strong>holding period return</strong> (HPR) inside that formula is simply the profit divided by price over the life of the bill, with no annualization at all.</p>
+        </section>
+        <section id="us-treasury-bill-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="us-treasury-bill-calculator-guide-heading-3">
+<h2 id="us-treasury-bill-calculator-guide-heading-3">T-Bill Price Calculator: From Discount Rate to Purchase Price</h2>
+<p>At auction you rarely see a price. You see a discount rate, and the price follows from it:</p>
+<p>$$P = F \times \left(1 - \frac{DR \times d}{360}\right)$$</p>
+<p>where \(DR\) is the discount rate. Enter it with the face value and the days to maturity, and the calculator reports the <strong>dollar discount</strong> you save, the <strong>maturity value</strong> you receive, and the <strong>price per $100 face</strong>, the quote style brokers use. A price of 98.89 per $100 means you pay $98.89 for every $100 repaid.</p>
+<h3>Investment Yield vs Discount Yield</h3>
+<p>If you already know the price you paid on the secondary market, work in reverse: enter it and read off the rate. The <strong>investment yield</strong> will always come out higher than the discount rate on the same bill, because the denominator shrinks from face value to price and the year shortens from 360 to 365 days.</p>
+        </section>
+        <section id="us-treasury-bill-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="us-treasury-bill-calculator-guide-heading-4">
+<h2 id="us-treasury-bill-calculator-guide-heading-4">Treasury Bills Calculator Inputs and Standard Maturities</h2>
+<p>Treasury issues bills on a fixed menu of terms, and the <strong>presets</strong> in the calculator match them. Each is sold at a <strong>weekly auction</strong> except two that come around every four weeks:</p>
+<ul>
+<li><strong>4-week</strong> (28 days): the shortest term, auctioned weekly and handy for <b>cash management</b>.</li>
+<li><strong>8-week</strong> (56 days): auctioned weekly, usually a hair above the 4-week rate.</li>
+<li><strong>13-week</strong> (<strong>91 days</strong>): the three-month bill and a widely quoted <strong>benchmark</strong>.</li>
+<li><strong>17-week</strong> (119 days): auctioned every four weeks.</li>
+<li><strong>26-week</strong> (<strong>182 days</strong>): the six-month bill, the longest term where the simple BEY formula still applies.</li>
+<li><strong>52-week</strong> (<strong>364 days</strong>): the longest bill, also auctioned every four weeks.</li>
+</ul>
+<p>Treasury also issues <b>cash management bills</b> with irregular terms when it needs funds quickly. For those, skip the preset and type the exact days. Count from the <b>settlement</b> date, not the auction date, and keep the <strong>day count</strong> consistent across any bills you compare.</p>
+<h3>4-Week to 52-Week Maturity Presets</h3>
+<p>The table below holds the discount rate fixed at 4.38% on a $25,000 face value and varies only the term. Notice how the return climbs slowly with maturity even though the quoted discount never moves.</p>
+<table>
+<thead><tr><th>Maturity</th><th>Days</th><th>Purchase price</th><th>Dollar discount</th><th>Annual return (BEY)</th></tr></thead>
+<tbody>
+<tr><td>4-week</td><td>28</td><td>$24,914.83</td><td>$85.17</td><td>4.456%</td></tr>
+<tr><td>8-week</td><td>56</td><td>$24,829.67</td><td>$170.33</td><td>4.471%</td></tr>
+<tr><td>13-week</td><td>91</td><td>$24,723.21</td><td>$276.79</td><td>4.491%</td></tr>
+<tr><td>17-week</td><td>119</td><td>$24,638.04</td><td>$361.96</td><td>4.506%</td></tr>
+<tr><td>26-week</td><td>182</td><td>$24,446.42</td><td>$553.58</td><td>4.541%</td></tr>
+<tr><td>52-week</td><td>364</td><td>$23,892.83</td><td>$1,107.17</td><td>4.647%</td></tr>
+</tbody>
+</table>
+<figure><img src="/assets/images/tools/us-treasury-bill-calculator/t-bill-discount-rate-vs-bond-equivalent-yield-by-maturity.svg" alt="Dumbbell chart comparing a 4.38% quoted discount rate with the bond equivalent yield of 4-week to 52-week Treasury bills, rising from 4.456% to 4.647%"><figcaption>The same 4.38% discount rate produces a higher bond equivalent yield as the T-bill term gets longer.</figcaption></figure>
+        </section>
+        <section id="us-treasury-bill-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="us-treasury-bill-calculator-guide-heading-5">
+<h2 id="us-treasury-bill-calculator-guide-heading-5">T-Bill Calculator Worked Example: $25,000 for 91 Days</h2>
+<p>Say you are buying a 13-week bill with a <strong>face value</strong> of $25,000 at a <strong>discount rate</strong> of 4.38%, held for <strong>91 days</strong>. First the price: $25,000 × (1 − 0.0438 × 91 ÷ 360) = <strong>$24,723.21</strong>. The <strong>dollar discount</strong> is therefore $276.79, which is your <strong>dollar profit</strong> when the bill matures, and the price per $100 face works out to 98.89.</p>
+<figure><img src="/assets/images/tools/us-treasury-bill-calculator/treasury-bill-price-formula-91-day-cash-flow.svg" alt="Treasury bill price formula with a $25,000 face value, 4.38% discount rate and 91 days, showing a $24,723.21 purchase price and $25,000 repaid at maturity"><figcaption>Price formula and cash flow for the 91-day worked example.</figcaption></figure>
+<table>
+<thead><tr><th>Measure</th><th>Base and year</th><th>Result</th></tr></thead>
+<tbody>
+<tr><td>Bank discount yield</td><td>Face value, 360 days</td><td>4.380%</td></tr>
+<tr><td>Money market yield</td><td>Purchase price, 360 days</td><td>4.429%</td></tr>
+<tr><td>Bond equivalent yield</td><td>Purchase price, 365 days</td><td>4.491%</td></tr>
+<tr><td>Holding period return</td><td>Purchase price, no annualization</td><td>1.120%</td></tr>
+<tr><td>Effective annual yield</td><td>Compounded, 365 days</td><td>4.567%</td></tr>
+</tbody>
+</table>
+<p>The ordering is exactly what theory predicts: discount yield, then money market yield, then BEY, then the compounded figure. If your alternative is a one-year certificate quoting 4.40% APY, the right comparison is the 4.567% effective annual yield, provided you can roll the money into a new bill at a similar rate.</p>
+        </section>
+        <section id="us-treasury-bill-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="us-treasury-bill-calculator-guide-heading-6">
+<h2 id="us-treasury-bill-calculator-guide-heading-6">Pricing a 26-Week Bill with the Treasury Bills Calculator</h2>
+<p>Dana owes a property tax installment of $18,400 in 182 days, and the money currently sits in a savings account paying about 4.05%. A 6-month certificate at her credit union offers 4.15% APY, so the question is whether a 26-week bill beats it after the arithmetic is done properly.</p>
+<p>The latest auction result is a 4.29% discount rate. Dana enters a face value of $18,400, a discount rate of 4.29%, and 182 days to maturity, then presses Calculate. The tool returns a price of <strong>$18,000.93</strong>, a dollar discount of $399.07, and a price of 97.83 per $100 face. The 4.29% she was quoted is only the bank discount yield. The same bill works out to a 4.385% money market yield, a 4.446% bond equivalent yield, and a 4.496% effective annual yield.</p>
+<table>
+<thead><tr><th>Option</th><th>Rate that counts</th><th>Interest over 182 days on $18,000.93</th></tr></thead>
+<tbody>
+<tr><td>26-week T-bill</td><td>4.496% effective annual yield</td><td>$399.07</td></tr>
+<tr><td>6-month certificate</td><td>4.15% APY</td><td>$368.70</td></tr>
+</tbody>
+</table>
+<p>The honest comparison is the 4.496% effective annual yield against the certificate's 4.15% APY, since both are annual compounded figures. That is a $30.37 edge on the same cash, and it lands as a single payment exactly when the tax bill arrives. A 182-day bill is also the longest term where the simple BEY formula applies, so no quadratic adjustment muddies the number.</p>
+<p>The next step is concrete: Dana submits a bid for $18,400 of face value through her broker and sets aside $18,000.93 to fund it, instead of opening the certificate.</p>
+        </section>
+        <section id="us-treasury-bill-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="us-treasury-bill-calculator-guide-heading-7">
+<h2 id="us-treasury-bill-calculator-guide-heading-7">Treasury Bill vs Treasury Notes and Bonds</h2>
+<p>A <strong>Treasury bill</strong> matures in a year or less and has no coupon. <strong>Notes</strong> run two to ten years and <strong>bonds</strong> twenty to thirty, and both pay a semiannual <strong>interest rate</strong> you collect along the way. All three are <strong>securities</strong> backed by the <strong>full faith and credit</strong> of the <strong>government</strong>, which is why they anchor the risk-free benchmark. Interest is <strong>state and local tax-free</strong>, but you still owe <strong>federal income taxes</strong> on it.</p>
+<h3>Who Buys T-Bills</h3>
+<p>Individual <strong>investors</strong> use T-bills for emergency funds and tuition money, and <strong>institutions</strong> and <strong>central banks</strong> hold them as liquid reserves. If you buy through <b>brokers</b> or directly from <b>TreasuryDirect</b>, the workflow is the same: take the auction discount rate, enter it with your face value and days to maturity, and let the calculator return the price and yield for each rung of a ladder that rolls one maturity into the next. Together with notes and bonds, these instruments are often just called Treasurys, and the bill is the one with the least price movement.</p>
+<p>The yield result also tells you where T-bills fit in a <strong>portfolio</strong>. Compare the bond equivalent figure with the payout on a <strong>dividend</strong> stock or an <b>ETF</b>: if the bill's guaranteed <strong>return</strong> covers your <strong>cash</strong> needs for the next year, a dividend cut matters less to your <strong>income</strong>, and the sleeve of T-bills lets you size the rest of the <strong>investment</strong> plan around it. Compared with equities, <strong>risk</strong> is minimal; compared with <strong>bonds</strong>, price swings are small because the maturity is short. The <strong>tax</strong> treatment is the one detail worth checking against your own bracket before you pick a rung.</p>
+<h3>Limits of a T-Bill Calculator</h3>
+<p>This tool shows <b>short-term</b> <b>government debt</b> arithmetic on a clean discount price, with no brokerage fees, no accrued interest, and no live auction results. Real T-bills settle on specific dates, and a bill bought on the secondary market may trade a few hundredths away from the figure you enter, so use TreasuryDirect or your broker for the final confirmation on any of the treasury bills you plan to buy. Treat the output as a planning estimate that tells you which maturity and which yield measure deserve a closer look, then verify the actual award price before you commit funds.</p>
+        </section>
+      </div>
+
+      <section id="us-treasury-bill-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="us-treasury-bill-calculator-faq-heading" data-section="faq">
+        <h2 id="us-treasury-bill-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">US Treasury Bill Calculator questions</h2>
+        <div id="us-treasury-bill-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="us-treasury-bill-calculator-faq-1" class="faq-item" open><summary id="us-treasury-bill-calculator-faq-1-summary" class="faq-summary"><h3 id="us-treasury-bill-calculator-faq-1-question" class="faq-question">What does a Treasury bill calculator do?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="us-treasury-bill-calculator-faq-1-answer" class="faq-answer"><p>It converts a bill&#x27;s face value, purchase price (or discount rate) and days to maturity into the price you pay, the dollar profit at maturity and several annualized yields, so you can compare a T-bill with other short-term options.</p></div></details>
+          <details id="us-treasury-bill-calculator-faq-2" class="faq-item" open><summary id="us-treasury-bill-calculator-faq-2-summary" class="faq-summary"><h3 id="us-treasury-bill-calculator-faq-2-question" class="faq-question">What is the difference between bank discount yield and bond equivalent yield?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="us-treasury-bill-calculator-faq-2-answer" class="faq-answer"><p>Bank discount yield divides the discount by face value and uses a 360-day year, which is how bills are quoted. Bond equivalent yield divides by the price you actually paid and uses a 365-day year, so it is higher and easier to compare with coupon bonds.</p></div></details>
+          <details id="us-treasury-bill-calculator-faq-3" class="faq-item" open><summary id="us-treasury-bill-calculator-faq-3-summary" class="faq-summary"><h3 id="us-treasury-bill-calculator-faq-3-question" class="faq-question">Why is the bond equivalent yield higher than the discount rate?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="us-treasury-bill-calculator-faq-3-answer" class="faq-answer"><p>Two things lift it: the denominator shrinks from face value to the lower purchase price, and the year used for annualizing shortens from 360 to 365 days for bills of 182 days or less.</p></div></details>
+          <details id="us-treasury-bill-calculator-faq-4" class="faq-item" open><summary id="us-treasury-bill-calculator-faq-4-summary" class="faq-summary"><h3 id="us-treasury-bill-calculator-faq-4-question" class="faq-question">What is the money market yield?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="us-treasury-bill-calculator-faq-4-answer" class="faq-answer"><p>Also called the CD-equivalent yield, it divides the profit by the purchase price and keeps the 360-day year, which makes a bill comparable with certificates of deposit and commercial paper.</p></div></details>
+          <details id="us-treasury-bill-calculator-faq-5" class="faq-item" open><summary id="us-treasury-bill-calculator-faq-5-summary" class="faq-summary"><h3 id="us-treasury-bill-calculator-faq-5-question" class="faq-question">What maturities do Treasury bills come in?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="us-treasury-bill-calculator-faq-5-answer" class="faq-answer"><p>Standard bills mature in 4, 8, 13, 17, 26 and 52 weeks (28, 56, 91, 119, 182 and 364 days). Treasury also issues cash management bills with irregular terms.</p></div></details>
+          <details id="us-treasury-bill-calculator-faq-6" class="faq-item" open><summary id="us-treasury-bill-calculator-faq-6-summary" class="faq-summary"><h3 id="us-treasury-bill-calculator-faq-6-question" class="faq-question">How is the purchase price of a T-bill calculated?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="us-treasury-bill-calculator-faq-6-answer" class="faq-answer"><p>Price equals face value times one minus the discount rate times days to maturity divided by 360. At a 4.38% discount rate, a $25,000 bill with 91 days left costs about $24,723.21.</p></div></details>
+          <details id="us-treasury-bill-calculator-faq-7" class="faq-item" open><summary id="us-treasury-bill-calculator-faq-7-summary" class="faq-summary"><h3 id="us-treasury-bill-calculator-faq-7-question" class="faq-question">Is interest on Treasury bills taxable?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="us-treasury-bill-calculator-faq-7-answer" class="faq-answer"><p>The interest is exempt from state and local income tax but is subject to federal income tax. Check your own situation with a tax professional.</p></div></details>
+          <details id="us-treasury-bill-calculator-faq-8" class="faq-item" open><summary id="us-treasury-bill-calculator-faq-8-summary" class="faq-summary"><h3 id="us-treasury-bill-calculator-faq-8-question" class="faq-question">Does this calculator show live auction rates?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="us-treasury-bill-calculator-faq-8-answer" class="faq-answer"><p>No. It does clean discount-price math with no fees or accrued interest, so confirm the actual award price with TreasuryDirect or your broker.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="us-treasury-bill-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="us-treasury-bill-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="us-treasury-bill-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="us-treasury-bill-calculator-ad-bottom-leaderboard">
+            <ins id="us-treasury-bill-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("us-treasury-bill-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="us-treasury-bill-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="us-treasury-bill-calculator-right-rail-top" class="mb-6">
+        <aside id="us-treasury-bill-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="us-treasury-bill-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="us-treasury-bill-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="us-treasury-bill-calculator-ad-right-rail-rectangle">
+            <ins id="us-treasury-bill-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("us-treasury-bill-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="us-treasury-bill-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="us-treasury-bill-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="us-treasury-bill-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="us-treasury-bill-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="us-treasury-bill-calculator-ad-right-rail-skyscraper">
+            <ins id="us-treasury-bill-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("us-treasury-bill-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="us-treasury-bill-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="us-treasury-bill-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="us-treasury-bill-calculator-footer-brand">
+        <a id="us-treasury-bill-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="us-treasury-bill-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="us-treasury-bill-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="us-treasury-bill-calculator-footer-categories" aria-labelledby="us-treasury-bill-calculator-footer-categories-heading">
+        <h2 id="us-treasury-bill-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="us-treasury-bill-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="us-treasury-bill-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="us-treasury-bill-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="us-treasury-bill-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="us-treasury-bill-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="us-treasury-bill-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="us-treasury-bill-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="us-treasury-bill-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="us-treasury-bill-calculator-footer-company" aria-labelledby="us-treasury-bill-calculator-footer-company-heading">
+        <h2 id="us-treasury-bill-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="us-treasury-bill-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="us-treasury-bill-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="us-treasury-bill-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="us-treasury-bill-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="us-treasury-bill-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="us-treasury-bill-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="us-treasury-bill-calculator-footer-bottom" class="border-t border-line">
+      <p id="us-treasury-bill-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="us-treasury-bill-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // US Treasury bill pricing (TreasuryDirect formulas).
+  //   Price per $100:  P = 100 x (1 - d x t / 360)            d = discount rate, t = days to maturity
+  //   Discount rate:   d = (100 - P) / 100 x 360 / t
+  //   Investment rate (bond-equivalent yield), y = days in the year after issue (365 or 366):
+  //     t <= y/2 (half a year or less):  i = (100 - P) / P x y / t
+  //     t >  y/2: the positive root of (t/2y - 0.25) i^2 + (t/y) i + (P - 100)/P = 0, i.e.
+  //       i = (-2t/y + 2 sqrt((t/y)^2 - (2t/y - 1)(1 - 100/P))) / (2t/y - 1)
+  //   Price per $100 is rounded to 6 decimals, as Treasury publishes it.
+  // Checked against TreasuryDirect's own example ($1,000 26-week bill at 0.145% = $999.27) and
+  // against Treasury auction results (FiscalData auctions_query, Sept/Oct 2026), e.g.
+  //   52-week 364 days 4.400% -> 95.551111, investment rate 4.616%
+  //   26-week 182 days 4.285% -> 97.833694, investment rate 4.441%
+  //   13-week  91 days 4.110% -> 98.961083, investment rate 4.211%
+  //   4-week   28 days 3.850% -> 99.700556, investment rate 3.915%
+  //   17-week 119 days 4.115% -> 98.639764, investment rate 4.230%
+  // and the reverse (price -> discount rate) round-trips to the published rates.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  var TERMS = [[28, '4 weeks'], [42, '6 weeks'], [56, '8 weeks'], [91, '13 weeks'], [119, '17 weeks'], [182, '26 weeks'], [364, '52 weeks']];
+
+  function num(id) {
+    var v = parseFloat(document.getElementById(id).value);
+    return isNaN(v) ? NaN : v;
+  }
+
+  function round6(x) { return Math.round(x * 1e6) / 1e6; }
+
+  function priceFromRate(d, t) { return round6(100 * (1 - d * t / 360)); }
+
+  function rateFromPrice(p, t) { return (100 - p) / 100 * 360 / t; }
+
+  function investmentRate(p, t, y) {
+    if (!(p > 0) || !(t > 0)) return NaN;
+    if (t <= y / 2) return (100 - p) / p * y / t;
+    var a = t / y, b = 2 * a - 1;
+    var disc = a * a - b * (1 - 100 / p);
+    if (disc < 0) return NaN;
+    return (-2 * a + 2 * Math.sqrt(disc)) / b;
+  }
+
+  function effectiveYield(p, t) { return Math.pow(100 / p, 365 / t) - 1; }
+
+  function pct(x, digits) { return isFinite(x) ? (x * 100).toFixed(digits) + '%' : '–'; }
+
+  function set(id, text) { document.getElementById(id).textContent = text; }
+
+  function clear(id) {
+    var el = document.getElementById(id);
+    while (el.firstChild) el.removeChild(el.firstChild);
+    return el;
+  }
+
+  function addRow(body, cells) {
+    var tr = document.createElement('tr');
+    cells.forEach(function (text) {
+      var td = document.createElement('td');
+      td.textContent = text;
+      tr.appendChild(td);
+    });
+    body.appendChild(tr);
+  }
+
+  function blank() {
+    ['tbCost', 'tbInterest', 'tbInvest', 'tbApy', 'tbPer100', 'tbDisc', 'tbDaysOut', 'tbFaceOut', 'tbTermsRate'].forEach(function (id) { set(id, '–'); });
+    clear('tbTerms');
+  }
+
+  function update() {
+    var mode = document.getElementById('tbMode').value;
+    var term = document.getElementById('tbTerm').value;
+    document.getElementById('tbDaysWrap').hidden = term !== 'custom';
+    document.getElementById('tbRateWrap').hidden = mode !== 'rate';
+    document.getElementById('tbPriceWrap').hidden = mode !== 'price';
+
+    var face = num('tbFace');
+    var days = term === 'custom' ? num('tbDays') : parseInt(term, 10);
+    var y = parseInt(document.getElementById('tbYear').value, 10) === 366 ? 366 : 365;
+    var error = document.getElementById('tbError');
+    var msg = '';
+    if (isNaN(face) || face <= 0) msg = 'Enter a face value above $0.';
+    else if (isNaN(days) || days < 1 || days > 366 || Math.round(days) !== days) msg = 'Enter whole days to maturity from 1 to 366.';
+
+    var d, p;
+    if (!msg && mode === 'rate') {
+      d = num('tbRate') / 100;
+      if (isNaN(d) || d < 0 || d > 1) msg = 'Enter a discount rate from 0 to 100%.';
+      else {
+        p = priceFromRate(d, days);
+        if (!(p > 0)) msg = 'That discount rate is too high for this term: the price would be $0 or less.';
+      }
+    } else if (!msg) {
+      p = num('tbPrice');
+      if (isNaN(p) || p <= 0 || p > 100) msg = 'Enter a price above $0 and no more than $100 per $100 of face value.';
+      else d = rateFromPrice(p, days);
+    }
+
+    error.hidden = !msg;
+    if (msg) { error.textContent = msg; blank(); return; }
+
+    var cost = Math.round(face * p) / 100;
+    var inv = investmentRate(p, days, y);
+    set('tbCost', money.format(cost));
+    set('tbInterest', money.format(face - cost));
+    set('tbInvest', pct(inv, 3));
+    set('tbApy', pct(effectiveYield(p, days), 3));
+    set('tbPer100', '$' + p.toFixed(6));
+    set('tbDisc', pct(d, 3));
+    set('tbDaysOut', days + (days === 1 ? ' day' : ' days'));
+    set('tbFaceOut', money.format(face));
+
+    set('tbTermsRate', 'a ' + pct(d, 3) + ' discount rate');
+    var body = clear('tbTerms');
+    TERMS.forEach(function (t) {
+      var tp = priceFromRate(d, t[0]);
+      if (!(tp > 0)) { addRow(body, [t[1], String(t[0]), '–', '–', '–', '–']); return; }
+      var tc = Math.round(face * tp) / 100;
+      addRow(body, [t[1], String(t[0]), '$' + tp.toFixed(6), money.format(tc), money.format(face - tc), pct(investmentRate(tp, t[0], y), 3)]);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('tbForm');
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

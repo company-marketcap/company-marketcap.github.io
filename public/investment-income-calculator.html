@@ -1,0 +1,622 @@
+<!doctype html>
+<html lang="en" id="investment-income-calculator-document" data-page-slug="investment-income-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Investment Income Calculator: Yield and Withdrawals</title>
+  <meta name="description" content="See the monthly and yearly income a portfolio can pay from its dividend and interest yield or a withdrawal rate, and how the balance holds up over time.">
+  <link rel="canonical" href="https://company-marketcap.github.io/investment-income-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Investment Income Calculator: Yield and Withdrawals">
+  <meta property="og:description" content="See the monthly and yearly income a portfolio can pay from its dividend and interest yield or a withdrawal rate, and how the balance holds up over time.">
+  <meta property="og:url" content="https://company-marketcap.github.io/investment-income-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Investment Income Calculator", "url": "https://company-marketcap.github.io/investment-income-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "See the monthly and yearly income a portfolio can pay from its dividend and interest yield or a withdrawal rate, and how the balance holds up over time."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Investment Returns & Growth", "item": "https://company-marketcap.github.io/financial-calculators.html#investment-calculators"}, {"@type": "ListItem", "position": 4, "name": "Investment Income Calculator", "item": "https://company-marketcap.github.io/investment-income-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How does an investment income calculator work?", "acceptedAnswer": {"@type": "Answer", "text": "It starts with your initial investment, adds your regular deposits, and applies your expected annual return at the compound frequency you pick. The result is a final balance, the total you invested, and the interest earned along the way."}}, {"@type": "Question", "name": "What rate of return should I enter?", "acceptedAnswer": {"@type": "Answer", "text": "Use a realistic long-run figure for what you actually hold. Broad stock market indexes have averaged roughly 10% a year before inflation over long periods, while bonds, CDs and high-yield savings accounts typically pay less. Many people run a conservative, a middle and an optimistic rate."}}, {"@type": "Question", "name": "What is the difference between compound and simple interest?", "acceptedAnswer": {"@type": "Answer", "text": "Simple interest is earned only on the amount you originally invested. Compound interest is also earned on interest already added to the balance, so it grows faster the longer you stay invested. The calculator shows both so you can see the gap."}}, {"@type": "Question", "name": "Does compounding frequency matter?", "acceptedAnswer": {"@type": "Answer", "text": "Slightly. More frequent compounding, such as monthly or daily instead of annually, produces a somewhat higher balance, but the difference is much smaller than the effect of your rate of return or how many years you stay invested."}}, {"@type": "Question", "name": "How do inflation and taxes change the result?", "acceptedAnswer": {"@type": "Answer", "text": "Inflation reduces what your future balance can buy, so the calculator can show the final value in today's dollars. A tax rate on gains reduces the interest you keep each year. Both lower the headline number and make it more realistic."}}, {"@type": "Question", "name": "Do contributions at the beginning or end of the period matter?", "acceptedAnswer": {"@type": "Answer", "text": "Deposits made at the beginning of each period start earning interest sooner, so they produce a slightly higher final balance than the same deposits made at the end."}}, {"@type": "Question", "name": "How do I estimate income from my investment balance?", "acceptedAnswer": {"@type": "Answer", "text": "Enter the yield you expect the final balance to pay. The calculator multiplies the balance by that yield to show estimated income per year and per month, assuming the balance itself is left untouched."}}, {"@type": "Question", "name": "Is the projection guaranteed?", "acceptedAnswer": {"@type": "Answer", "text": "No. The calculator assumes a steady annual return, but real markets move up and down and investments can lose value. Treat the output as a hypothetical estimate for comparing plans."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="investment-income-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="investment-income-calculator" data-page-type="calculator">
+  <a id="investment-income-calculator-skip-link" href="#investment-income-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="investment-income-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="investment-income-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="investment-income-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="investment-income-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="investment-income-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="investment-income-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="investment-income-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="investment-income-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="investment-income-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="investment-income-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="investment-income-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="investment-income-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="investment-income-calculator-header-search-status" aria-controls="investment-income-calculator-header-search-results" data-search-input="header">
+              <p id="investment-income-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="investment-income-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="investment-income-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="investment-income-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="investment-income-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="investment-income-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="investment-income-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="investment-income-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="investment-income-calculator-mobile-search-status" aria-controls="investment-income-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="investment-income-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="investment-income-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="investment-income-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="investment-income-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="investment-income-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="investment-income-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="investment-income-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="investment-income-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="investment-income-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="investment-income-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="investment-income-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="investment-income-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="investment-income-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="investment-income-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="investment-income-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="investment-income-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="investment-income-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="investment-income-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="investment-income-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="investment-income-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="investment-income-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="investment-income-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="investment-income-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="investment-income-calculator-sidebar-search-status" aria-controls="investment-income-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="investment-income-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="investment-income-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="investment-income-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="investment-income-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="investment-income-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="investment-income-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="investment-income-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="investment-income-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="investment-income-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="investment-income-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="investment-income-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="investment-income-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="investment-income-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="investment-income-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="investment-income-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="investment-income-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="investment-income-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="investment-income-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="investment-income-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators" aria-current="true">Investment Returns</a></li><li><a id="investment-income-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="investment-income-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="investment-income-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="investment-income-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="investment-income-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="investment-income-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="investment-income-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="investment-income-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="investment-income-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="investment-income-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="investment-income-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="investment-income-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="investment-income-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="investment-income-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="investment-income-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="investment-income-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="investment-income-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="investment-income-calculator" data-calculator-slug="investment-income-calculator" data-sub-category-slug="investment-calculators">
+      <aside id="investment-income-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="investment-income-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="investment-income-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="investment-income-calculator-ad-top-leaderboard">
+            <ins id="investment-income-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("investment-income-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="investment-income-calculator-intro-area" class="space-y-4">
+        <nav id="investment-income-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="investment-income-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="investment-income-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="investment-income-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="investment-income-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#investment-calculators" itemprop="item"><span itemprop="name">Investment Returns &amp; Growth</span></a><meta itemprop="position" content="3"></li>
+            <li id="investment-income-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Investment Income Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/investment-income-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="investment-income-calculator-hero-section" aria-labelledby="investment-income-calculator-hero-heading" data-section="hero">
+          <h1 id="investment-income-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Investment Income Calculator</h1>
+          <p id="investment-income-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Planning for the future starts with a number you can trust, and an investment income calculator gives you one in seconds. Enter your starting amount, a realistic return rate, and a regular deposit, and you see your final balance, total contributions, and interest earned for the investment goal you have in mind. <!-- SILO_START:slot_a -->If you want to see how the figures change, the <a class="silo-link" href="/investment-loan-calculator.html">investment loan calculator online</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="investment-income-calculator-tool" class="space-y-6" data-page-slug="investment-income-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="iiFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="iiForm" class="space-y-5" novalidate aria-labelledby="iiFormHeading">
+      <h2 id="iiFormHeading" class="panel-heading">Enter your portfolio</h2>
+      <div><label for="iiValue" class="form-label">Portfolio value</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="iiValue" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1000" value="500000" inputmode="decimal"></div></div>
+      <div class="form-row form-row-2">
+        <div><label for="iiYield" class="form-label">Portfolio yield</label><div class="input-group"><input type="number" id="iiYield" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="50" step="0.1" value="3" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">Dividends and interest paid out each year.</p></div>
+        <div><label for="iiRate" class="form-label">Withdrawal rate</label><div class="input-group"><input type="number" id="iiRate" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="50" step="0.1" value="4" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">The share of the portfolio you plan to spend each year.</p></div>
+      </div>
+      <details class="form-details"><summary class="form-details-summary">More options</summary>
+        <div class="form-row form-row-2">
+          <div><label for="iiReturn" class="form-label">Total return</label><div class="input-group"><input type="number" id="iiReturn" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="-50" max="50" step="0.1" value="6" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">Yield plus price growth, per year.</p></div>
+          <div><label for="iiFee" class="form-label">Annual fees</label><div class="input-group"><input type="number" id="iiFee" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="10" step="0.05" value="0.5" inputmode="decimal"><span class="input-affix">%</span></div></div>
+        </div>
+        <div class="form-row form-row-2">
+          <div><label for="iiInflation" class="form-label">Inflation</label><div class="input-group"><input type="number" id="iiInflation" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="20" step="0.1" value="2.5" inputmode="decimal"><span class="input-affix">%</span></div></div>
+          <div><label for="iiTax" class="form-label">Tax rate on income</label><div class="input-group"><input type="number" id="iiTax" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="60" step="1" value="15" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">A flat blended rate. Use 0 for a Roth or to see pre-tax figures.</p></div>
+        </div>
+        <div><label for="iiMethod" class="form-label">How withdrawals change each year</label><select id="iiMethod" class="form-select"><option value="fixed" selected>Starting amount, raised with inflation</option><option value="percent">Same percentage of each year's balance</option></select></div>
+        <div><label for="iiYears" class="form-label">Years to project</label><div class="input-group"><input type="number" id="iiYears" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1" max="60" step="1" value="30" inputmode="numeric"><span class="input-affix">yrs</span></div></div>
+      </details>
+      <p id="iiError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="iiResults" aria-live="polite" aria-labelledby="iiResultsHeading">
+      <h2 id="iiResultsHeading" class="panel-heading">Your results</h2>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p class="stat-label">Monthly income from yield</p><p id="iiYieldMonthly" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Monthly income at your withdrawal rate</p><p id="iiDrawMonthly" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Shares sold in year one</p><p id="iiPrincipal" class="stat-value">–</p><p id="iiPrincipalNote" class="mt-1 text-xs text-ink-muted"></p></div>
+        <div class="stat-card"><p class="stat-label">Portfolio at the end</p><p id="iiEnd" class="stat-value">–</p><p id="iiEndNote" class="mt-1 text-xs text-ink-muted"></p></div>
+      </div>
+      <div class="table-scroll mt-5" tabindex="0" role="region" aria-label="Income by period">
+        <table class="data-table">
+          <thead><tr><th scope="col">Income</th><th scope="col">Yearly</th><th scope="col">Quarterly</th><th scope="col">Monthly</th><th scope="col">Monthly after tax</th></tr></thead>
+          <tbody id="iiPeriods"></tbody>
+        </table>
+      </div>
+      <p id="iiWarn" class="callout callout-warning mt-5 text-sm" hidden></p>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="iiScheduleHeading" data-section="schedule">
+  <h2 id="iiScheduleHeading" class="panel-heading">Year-by-year withdrawals</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">Each year's withdrawal is taken at the start of the year; the rest grows at your total return minus fees. Yield covers part of each withdrawal and selling shares covers the rest.</p>
+  <div class="table-scroll mt-5 max-h-[520px]" tabindex="0" role="region" aria-labelledby="iiScheduleHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Year</th><th scope="col">Starting balance</th><th scope="col">Withdrawal</th><th scope="col">From yield</th><th scope="col">From selling shares</th><th scope="col">Ending balance</th></tr></thead>
+      <tbody id="iiSchedule"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="investment-income-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="investment-income-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Planning for the future starts with a number you can trust, and an investment income calculator gives you one in seconds. Enter your starting amount, a realistic return rate, and a regular deposit, and you see your final balance, total contributions, and interest earned for the investment goal you have in mind. <!-- SILO_START:slot_a_m -->If you want to see how the figures change, the <a class="silo-link" href="/investment-loan-calculator.html">investment loan calculator online</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="investment-income-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="investment-income-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="investment-income-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="investment-income-calculator-ad-in-feed">
+            <ins id="investment-income-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("investment-income-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="investment-income-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="investment-income-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-income-calculator-guide-heading-1">
+<h2 id="investment-income-calculator-guide-heading-1">What an Investment Income Calculator Tells You</h2>
+<p>Think of the tool as a fast way to test an <strong>investment plan</strong> before you commit real money to it. You describe the plan, and the math shows what the plan could be worth when the clock runs out. Some people use the answer to size up their earning potential. Others use it to decide whether a monthly deposit of $300 or $500 gets them closer to a target. Whether you are just investing for the first time or topping up an existing account, the process is the same. <!-- SILO_START:slot_b -->Try the <a class="silo-link" href="/investment-distributions-calculator.html">investment distributions calculator online</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_b --></p>
+<p>The result is always an estimate. Markets move, rates change, and a calculator can only assume a steady annual return. Treat the output as a hypothetical projection that helps you compare choices, not a promise about what will happen.</p>
+
+<h3>The formula behind the estimate</h3>
+<p>Every projection here rests on <strong>compound interest</strong> applied to a starting balance plus a stream of regular deposits. With a starting amount \(P\), a deposit \(D\) made each period, an annual rate \(r\), \(n\) compounding periods per year, and \(t\) years, the balance is:</p>
+<p>$$FV = P \times \left(1 + \frac{r}{n}\right)^{nt} + D \times \frac{\left(1 + \frac{r}{n}\right)^{nt} - 1}{r / n}$$</p>
+<p>The first term grows your lump sum. The second term grows the deposits, each of which earns interest only for the time it stays invested. <strong>Interest earned</strong> is simply the final balance minus everything you put in.</p>
+        </section>
+        <section id="investment-income-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-income-calculator-guide-heading-2">
+<h2 id="investment-income-calculator-guide-heading-2">How the Investment Calculator Works</h2>
+<p>Every field in the form maps to one piece of that formula. Understanding what each box does helps you pick sensible values instead of guessing. <!-- SILO_START:slot_c -->Try the <a class="silo-link" href="/compare-investment-fees-calculator.html">free compare investment fees calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_c --></p>
+
+<h3>Initial investment and starting amount</h3>
+<p>Your <strong>initial investment</strong> is the money already in the account on day one: a rollover, an inheritance, savings you moved over, or the price of the first purchase. The calculator treats this <strong>starting amount</strong> as the base that compounds for the entire period, so it carries more weight than any single later deposit.</p>
+
+<h3>Rate of return and return rate</h3>
+<p>The <strong>rate of return</strong> is the yearly percentage your money earns. It is the most influential number in the form, and the easiest to get wrong. A cautious <strong>return rate</strong> keeps your projection honest. Many investors run three versions of the same plan: a conservative one, a middle one, and an optimistic one.</p>
+
+<h3>Compound frequency and compounding</h3>
+<p><strong>Compounding</strong> is how often earnings are added back to the balance so they can earn their own earnings. The <strong>compound frequency</strong> options usually run from annually to daily. More frequent compounding nudges the result higher, though the gap between monthly and daily is small. For comparison, a plan that is compounded annually will land a little below the same plan compounded monthly.</p>
+
+<h3>Additional investments and recurring investments</h3>
+<p>Regular deposits are what turn a modest start into a large balance. The calculator accepts <strong>additional investments</strong> weekly, monthly, quarterly, or yearly, and it assumes <strong>recurring investments</strong> arrive on schedule without gaps. Some versions let you choose whether each deposit lands at the beginning or the end of a period; deposits at the beginning earn a little more.</p>
+
+<h3>Investment length and time horizon</h3>
+<p>Your <strong>investment length</strong> is the number of years the money stays put. Time is the quiet engine of compounding returns: each extra year builds on every previous year's gains. Longer periods also carry more uncertainty, since nobody knows what the market will do over twenty years.</p>
+
+<h3>Compound interest versus simple interest</h3>
+<p>With <strong>simple interest</strong>, you earn only on the original amount. With compound interest, you also earn on the earnings already added. Over a few months the difference is tiny; over a decade it is dramatic, which is why this tool reports compounded results rather than a flat yearly payout.</p>
+
+<h3>Inflation rate and tax rate</h3>
+<p>Advanced versions add two more inputs. An <strong>inflation rate</strong> converts your future balance into today's purchasing power, and a <strong>tax rate</strong> shows what remains after-tax if gains are taxed each year. Both reduce the headline number, and both make the projection more realistic.</p>
+        </section>
+        <section id="investment-income-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-income-calculator-guide-heading-3">
+<h2 id="investment-income-calculator-guide-heading-3">Worked Example: Investment Returns Over 12 Years</h2>
+<p>Suppose you open an account with $18,400 and add $425 at the end of every month. You assume a 6.8% annual return, compounded monthly, for 12 years. Here are the inputs in one place:</p>
+<table>
+<thead><tr><th>Input</th><th>Value</th></tr></thead>
+<tbody>
+<tr><td>Starting amount</td><td>$18,400</td></tr>
+<tr><td>Monthly deposit</td><td>$425</td></tr>
+<tr><td>Rate of return</td><td>6.8% per year</td></tr>
+<tr><td>Compounding</td><td>Monthly</td></tr>
+<tr><td>Investment length</td><td>12 years</td></tr>
+</tbody>
+</table>
+<p>The monthly rate is 6.8% ÷ 12, or about 0.5667%. Applying the formula over 144 months gives a <strong>final balance of $135,732.18</strong>. You deposit $18,400 plus 144 payments of $425, which is $79,600 in total, so <strong>$56,132.18 of the balance is interest earned</strong>. If you left the $18,400 alone with no deposits, it would reach only $41,514.69 over the same 12 years.</p>
+<figure><img src="/assets/images/tools/investment-income-calculator/investment-calculator-final-balance-breakdown.svg" alt="Waterfall chart showing an $18,400 starting amount plus $61,200 of deposits and $56,132 of interest earned adding up to a $135,732 final balance"><figcaption>How the starting amount, deposits and interest earned add up to the final balance in the 12-year example.</figcaption></figure>
+
+<h3>Year-by-year accumulation schedule</h3>
+<p>The <strong>accumulation schedule</strong> below shows how the balance builds. Notice how the interest column starts small and then accelerates.</p>
+<figure><img src="/assets/images/tools/investment-income-calculator/investment-income-calculator-balance-over-time.svg" alt="Stacked area chart of an investment balance over 12 years split into total contributions and interest earned, with interest widening each year"><figcaption>Interest earned widens each year while deposits rise in a straight line.</figcaption></figure>
+<table>
+<thead><tr><th>Year</th><th>Total contributions</th><th>Interest earned</th><th>Ending balance</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>$23,500</td><td>$1,452.93</td><td>$24,952.93</td></tr>
+<tr><td>3</td><td>$33,700</td><td>$5,770.31</td><td>$39,470.31</td></tr>
+<tr><td>6</td><td>$49,000</td><td>$16,293.93</td><td>$65,293.93</td></tr>
+<tr><td>9</td><td>$64,300</td><td>$32,643.14</td><td>$96,943.14</td></tr>
+<tr><td>12</td><td>$79,600</td><td>$56,132.18</td><td>$135,732.18</td></tr>
+</tbody>
+</table>
+
+<p>Read the table from left to right. In year 1 the account earns $1,452.93 on a balance that is mostly your own money. By year 8, the earnings for that single year reach $5,433.59, which tops the $5,100 you deposit during the year. That crossover is the moment compounding starts doing more of the work than you do, and it is the best argument for staying the course through the quiet early years.</p>
+        </section>
+        <section id="investment-income-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-income-calculator-guide-heading-4">
+<h2 id="investment-income-calculator-guide-heading-4">Who Uses an Investment Calculator, and Why</h2>
+<p>Anyone <strong>investing</strong> toward a goal can use this tool. A new <strong>investor</strong> checks whether a small monthly habit is worth the effort. A mid-career worker tests how much more <strong>retirement savings</strong> a raise would create if part of it were deposited. A homeowner compares a brokerage account against paying down a mortgage and building home <strong>equity</strong>.</p>
+<p>The calculator also helps you judge your whole <strong>portfolio</strong>. Add up your <strong>invested capital</strong>, enter the amount you expect to add as an <strong>annual investment</strong>, and compare the projected balance with the figure you need. Consistent investing over many years, even in small amounts, usually beats occasional large bets, and the projection makes that visible. Investing earlier also gives compounding more time to work.</p>
+        </section>
+        <section id="investment-income-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-income-calculator-guide-heading-5">
+<h2 id="investment-income-calculator-guide-heading-5">Investment Growth Calculator Scenarios: Rate and Time</h2>
+<p>The value of an <strong>investment growth calculator</strong> is that you can change one input and watch the answer move. Two inputs matter most.</p>
+
+<h3>What a one-point change in rate does</h3>
+<p>Keep the same deposits and 12-year length, and change only the annual return. At 5.8% the plan ends at $124,981.32. At 6.8% it ends at $135,732.18. At 7.8% it ends at $147,600.12. One percentage point, up or down, moves the final balance by roughly $11,000 to $12,000.</p>
+
+<h3>What extra years do</h3>
+<p>Time changes the picture more than rate does. At 6.8%, the same plan reaches $85,670.52 after 8 years, $135,732.18 after 12 years, and $201,392.04 after 16 years. Adding four years to the 12-year plan is worth more than a full point of extra return, which is why starting early beats chasing a higher rate.</p>
+<figure><img src="/assets/images/tools/investment-income-calculator/investment-growth-calculator-rate-and-years-grid.svg" alt="Heatmap of projected final balance for 5.8%, 6.8% and 7.8% rates of return over 8, 12 and 16 years with the 6.8% and 12-year cell outlined"><figcaption>Final balance for three rates of return and three lengths, with the worked example outlined.</figcaption></figure>
+        </section>
+        <section id="investment-income-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-income-calculator-guide-heading-6">
+<h2 id="investment-income-calculator-guide-heading-6">Checking a 16-Year Plan with the Investment Calculator</h2>
+<p>Marisol is 49 and wants to retire at 65. A $27,350 rollover from an old employer plan sits in an index fund, and she can add $610 each month. Her target is $345,000, because the 4% withdrawal guideline would turn that into $13,800 a year, close to the $1,150 a month she wants to supplement her pension.</p>
+<p>She opens the investment calculator and enters $27,350 as the starting amount, $610 as the monthly deposit, 16 years, monthly compounding, and a 7.1% annual return, a figure slightly under the fund's long-run record on purpose. Then she clicks Calculate.</p>
+<p>The result reads <strong>$301,798.02</strong>. Her own deposits and rollover total $144,470, so $157,328.02 comes from compounding. At the 4% guideline, $301,798.02 supports $12,071.92 a year, about $1,005.99 a month, which is $144.01 short of the $1,150 she wants.</p>
+<p>Instead of lowering her goal, she changes one input and reruns the projection. At $750 a month, the final balance becomes <strong>$351,579.94</strong>, which clears $345,000 and supports $14,063.20 a year. That extra $140 a month is the number she takes to her payroll portal this week. She also reruns it at 6.1% to test a weaker market, and the answer drops to $315,442.11, so she keeps the higher deposit as a cushion against a weaker market.</p>
+        </section>
+        <section id="investment-income-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-income-calculator-guide-heading-7">
+<h2 id="investment-income-calculator-guide-heading-7">Estimating Income with an Investment Calculator</h2>
+<p>Some people want a yearly payout, not just a balance. Once you know the ending value, a simple multiplication turns it into an income estimate:</p>
+<p>$$\text{Annual income} = \text{Balance} \times \text{Yield}$$</p>
+<p>Take the $135,732.18 balance. If it were held in funds paying a 3.5% yield through dividends and interest, it would generate about <strong>$4,750.63 a year</strong>, or $395.89 a month, while leaving the balance untouched. A higher yield means more income today but usually more risk, and a lower yield means the reverse. This is where an investment calculator pairs well with a withdrawal plan for retirement.</p>
+<p>If you reinvest every payout instead, you rely on <strong>reinvestment</strong> to speed up the balance. That is the default assumption in the schedule above.</p>
+        </section>
+        <section id="investment-income-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-income-calculator-guide-heading-8">
+<h2 id="investment-income-calculator-guide-heading-8">Investment Returns by Asset Class</h2>
+<p>Your return rate should reflect what you actually own. Each asset class has a different typical range, and a different level of volatility along the way.</p>
+
+<h3>Stocks</h3>
+<p><strong>Stocks</strong> represent ownership in a company. Over long periods, a broad market index such as the S&P 500 has produced an average annual return near 10% before inflation, though individual years swing widely. Single stocks are riskier than a diversified fund, so stocks usually deserve the most conservative rate in your projection if you hold only a few of them.</p>
+
+<h3>Bonds</h3>
+<p><strong>Bonds</strong> are loans to governments or companies that pay interest. Government bonds tend to pay less than stocks but fluctuate less, and corporate bonds offer more yield for more risk. Because bonds smooth out the ride, many investors blend bonds with stocks.</p>
+
+<h3>CDs and high-yield savings</h3>
+<p>A certificate of deposit (<strong>CDs</strong>) locks your money for a fixed term at a fixed rate, and a savings account or high-yield savings account keeps it accessible. Both are insured up to limits and low in risk, and both usually trail stocks over decades.</p>
+
+<h3>Real estate</h3>
+<p><strong>Real estate</strong> can produce rent plus appreciation. It also brings fees, vacancies, and maintenance, so real estate returns are harder to pin to one clean percentage. To model a rental property in the calculator, add the net rent yield to expected appreciation and enter that blended figure in the return field.</p>
+
+<h3>Commodities</h3>
+<p><strong>Commodities</strong> such as gold, oil, and grain respond to supply and demand rather than company earnings. They rarely pay regular income, which makes them hard to model as a steady annual figure. If you hold commodities, enter a conservative blended percentage in the return field rather than a single hot year.</p>
+
+<h3>Mutual funds and ETFs</h3>
+<p><strong>Mutual funds</strong> and <strong>ETFs</strong> pool many holdings into one purchase. An index fund tracks a market index, and that low-cost, diversified approach is a common choice for long-term investing in a brokerage account, a Roth IRA, or a 401(k).</p>
+<ul>
+<li>Stocks: higher historical average, higher volatility</li>
+<li>Bonds: lower return rate, steadier interest rate income</li>
+<li>CDs and high-yield savings: lowest risk, lowest long-run growth</li>
+<li>Real estate and commodities: income and price changes depend on the market</li>
+</ul>
+        </section>
+        <section id="investment-income-calculator-guide-section-9" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-income-calculator-guide-heading-9">
+<h2 id="investment-income-calculator-guide-heading-9">Inflation, Taxes, and Risk in Your Investment Returns</h2>
+
+<h3>Inflation rate and purchasing power</h3>
+<p>A dollar buys less every year. The <strong>expected inflation rate</strong> is the average yearly price rise you assume, and the consumer price index is the usual measure of it. At 2.8% inflation, the $135,732.18 balance from the example has the <strong>purchasing power</strong> of about $97,446.32 in today's dollars. Picking an inflation adjustment for your deposits keeps them in step with rising prices.</p>
+
+<h3>Tax rate and after-tax results</h3>
+<p>Taxes on dividends and gains reduce what you keep. Tax-advantaged accounts such as a Roth IRA shelter growth, while a regular brokerage account does not. Run the calculator both ways when investing in a taxable account to see the gap in your final balance.</p>
+
+<h3>Risk, volatility, and loss of principal</h3>
+<p>Higher expected returns come with <strong>risk</strong>. Prices can fall for months or years, and a bad stretch near the end of your plan can cut the balance sharply. Even low-risk choices face a loss of principal in some cases, such as a fund held through a downturn. Your risk tolerance, meaning how much decline you can sit through without selling, should shape the rate you enter.</p>
+
+<h3>Diversification and asset allocation</h3>
+<p><strong>Diversification</strong> spreads your money across many holdings so one failure matters less. A sensible asset allocation, the split between stocks, bonds, and cash, reflects your age, goals, and comfort with swings. Enter a blended percentage that matches your allocation in the return field, and subtract fees so the projection reflects what you keep. A financial advisor can help you set the split.</p>
+        </section>
+        <section id="investment-income-calculator-guide-section-10" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-income-calculator-guide-heading-10">
+<h2 id="investment-income-calculator-guide-heading-10">Tips for Using the Return Calculator Well</h2>
+<ul>
+<li>Run three scenarios: a pessimistic, a middle, and an optimistic return rate.</li>
+<li>Use a realistic rate of return based on what you actually hold, not a best-year figure.</li>
+<li>Test your end amount: work backward from the nest egg you want to see how much you need to deposit.</li>
+<li>Revisit the numbers each year, because your deposits, goals, and market conditions change.</li>
+</ul>
+<p>Using a rate of return calculator regularly turns a vague hope into a plan you can adjust. Keep expectations modest, keep depositing, and let compounding work in the background while you focus on earning more.</p>
+        </section>
+      </div>
+
+      <section id="investment-income-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="investment-income-calculator-faq-heading" data-section="faq">
+        <h2 id="investment-income-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Investment Income Calculator questions</h2>
+        <div id="investment-income-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="investment-income-calculator-faq-1" class="faq-item" open><summary id="investment-income-calculator-faq-1-summary" class="faq-summary"><h3 id="investment-income-calculator-faq-1-question" class="faq-question">How does an investment income calculator work?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="investment-income-calculator-faq-1-answer" class="faq-answer"><p>It starts with your initial investment, adds your regular deposits, and applies your expected annual return at the compound frequency you pick. The result is a final balance, the total you invested, and the interest earned along the way.</p></div></details>
+          <details id="investment-income-calculator-faq-2" class="faq-item" open><summary id="investment-income-calculator-faq-2-summary" class="faq-summary"><h3 id="investment-income-calculator-faq-2-question" class="faq-question">What rate of return should I enter?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="investment-income-calculator-faq-2-answer" class="faq-answer"><p>Use a realistic long-run figure for what you actually hold. Broad stock market indexes have averaged roughly 10% a year before inflation over long periods, while bonds, CDs and high-yield savings accounts typically pay less. Many people run a conservative, a middle and an optimistic rate.</p></div></details>
+          <details id="investment-income-calculator-faq-3" class="faq-item" open><summary id="investment-income-calculator-faq-3-summary" class="faq-summary"><h3 id="investment-income-calculator-faq-3-question" class="faq-question">What is the difference between compound and simple interest?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="investment-income-calculator-faq-3-answer" class="faq-answer"><p>Simple interest is earned only on the amount you originally invested. Compound interest is also earned on interest already added to the balance, so it grows faster the longer you stay invested. The calculator shows both so you can see the gap.</p></div></details>
+          <details id="investment-income-calculator-faq-4" class="faq-item" open><summary id="investment-income-calculator-faq-4-summary" class="faq-summary"><h3 id="investment-income-calculator-faq-4-question" class="faq-question">Does compounding frequency matter?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="investment-income-calculator-faq-4-answer" class="faq-answer"><p>Slightly. More frequent compounding, such as monthly or daily instead of annually, produces a somewhat higher balance, but the difference is much smaller than the effect of your rate of return or how many years you stay invested.</p></div></details>
+          <details id="investment-income-calculator-faq-5" class="faq-item" open><summary id="investment-income-calculator-faq-5-summary" class="faq-summary"><h3 id="investment-income-calculator-faq-5-question" class="faq-question">How do inflation and taxes change the result?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="investment-income-calculator-faq-5-answer" class="faq-answer"><p>Inflation reduces what your future balance can buy, so the calculator can show the final value in today&#x27;s dollars. A tax rate on gains reduces the interest you keep each year. Both lower the headline number and make it more realistic.</p></div></details>
+          <details id="investment-income-calculator-faq-6" class="faq-item" open><summary id="investment-income-calculator-faq-6-summary" class="faq-summary"><h3 id="investment-income-calculator-faq-6-question" class="faq-question">Do contributions at the beginning or end of the period matter?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="investment-income-calculator-faq-6-answer" class="faq-answer"><p>Deposits made at the beginning of each period start earning interest sooner, so they produce a slightly higher final balance than the same deposits made at the end.</p></div></details>
+          <details id="investment-income-calculator-faq-7" class="faq-item" open><summary id="investment-income-calculator-faq-7-summary" class="faq-summary"><h3 id="investment-income-calculator-faq-7-question" class="faq-question">How do I estimate income from my investment balance?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="investment-income-calculator-faq-7-answer" class="faq-answer"><p>Enter the yield you expect the final balance to pay. The calculator multiplies the balance by that yield to show estimated income per year and per month, assuming the balance itself is left untouched.</p></div></details>
+          <details id="investment-income-calculator-faq-8" class="faq-item" open><summary id="investment-income-calculator-faq-8-summary" class="faq-summary"><h3 id="investment-income-calculator-faq-8-question" class="faq-question">Is the projection guaranteed?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="investment-income-calculator-faq-8-answer" class="faq-answer"><p>No. The calculator assumes a steady annual return, but real markets move up and down and investments can lose value. Treat the output as a hypothetical estimate for comparing plans.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="investment-income-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="investment-income-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="investment-income-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="investment-income-calculator-ad-bottom-leaderboard">
+            <ins id="investment-income-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("investment-income-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="investment-income-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="investment-income-calculator-right-rail-top" class="mb-6">
+        <aside id="investment-income-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="investment-income-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="investment-income-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="investment-income-calculator-ad-right-rail-rectangle">
+            <ins id="investment-income-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("investment-income-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="investment-income-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="investment-income-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="investment-income-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="investment-income-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="investment-income-calculator-ad-right-rail-skyscraper">
+            <ins id="investment-income-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("investment-income-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="investment-income-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="investment-income-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="investment-income-calculator-footer-brand">
+        <a id="investment-income-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="investment-income-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="investment-income-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="investment-income-calculator-footer-categories" aria-labelledby="investment-income-calculator-footer-categories-heading">
+        <h2 id="investment-income-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="investment-income-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="investment-income-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="investment-income-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="investment-income-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="investment-income-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="investment-income-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="investment-income-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="investment-income-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="investment-income-calculator-footer-company" aria-labelledby="investment-income-calculator-footer-company-heading">
+        <h2 id="investment-income-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="investment-income-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="investment-income-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="investment-income-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="investment-income-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="investment-income-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="investment-income-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="investment-income-calculator-footer-bottom" class="border-t border-line">
+      <p id="investment-income-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="investment-income-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Investment income from a portfolio, two ways:
+  //   Yield income      = value x yield            (dividends + interest paid out)
+  //   Withdrawal income = value x withdrawal rate  (spending that may include selling shares)
+  // Monthly = yearly / 12, quarterly = yearly / 4; after tax = x (1 - tax rate).
+  // Projection, one row per year: the withdrawal comes out at the start of the year, then
+  //   end = (start - withdrawal) x (1 + total return) x (1 - fee).
+  // "fixed": year-1 withdrawal = rate x starting value, raised by inflation each year after.
+  // "percent": withdrawal = rate x that year's starting balance.
+  // Checks: $500,000 at 3% yield = $15,000/yr = $1,250/mo; 4% = $20,000/yr = $1,666.67/mo;
+  // year 1 end at 6% return, 0.5% fee = (500,000 - 20,000) x 1.06 x 0.995 = $506,256.00;
+  // year 2 withdrawal with 2.5% inflation = $20,500. With 0% return/fee/inflation a 4%
+  // withdrawal empties the portfolio in exactly 25 years.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  var money0 = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+
+  function num(id) {
+    var v = parseFloat(document.getElementById(id).value);
+    return isNaN(v) ? NaN : v;
+  }
+
+  function project(value, yieldRate, rate, ret, fee, inflation, method, years) {
+    var rows = [], balance = value, depletedYear = 0, first = rate * value;
+    var growth = (1 + ret) * (1 - fee);
+    for (var y = 1; y <= years; y++) {
+      var start = balance;
+      var want = method === 'percent' ? rate * start : first * Math.pow(1 + inflation, y - 1);
+      var draw = Math.min(want, start);
+      var fromYield = Math.min(draw, yieldRate * start);
+      balance = Math.max(0, (start - draw) * growth);
+      if (balance < 0.005) balance = 0;
+      rows.push({ year: y, start: start, draw: draw, fromYield: fromYield, sold: draw - fromYield, end: balance });
+      if (!depletedYear && draw < want - 0.005) depletedYear = y;
+      if (balance === 0) { if (!depletedYear && want > 0) depletedYear = y; break; }
+    }
+    return { rows: rows, end: balance, depletedYear: depletedYear };
+  }
+
+  function set(id, text) { document.getElementById(id).textContent = text; }
+
+  function clear(id) {
+    var el = document.getElementById(id);
+    while (el.firstChild) el.removeChild(el.firstChild);
+    return el;
+  }
+
+  function addRow(body, cells) {
+    var tr = document.createElement('tr');
+    cells.forEach(function (text, i) {
+      var cell = document.createElement(i === 0 ? 'th' : 'td');
+      if (i === 0) cell.scope = 'row';
+      cell.textContent = text;
+      tr.appendChild(cell);
+    });
+    body.appendChild(tr);
+  }
+
+  function blank() {
+    ['iiYieldMonthly', 'iiDrawMonthly', 'iiPrincipal', 'iiEnd'].forEach(function (id) { set(id, '–'); });
+    set('iiPrincipalNote', ''); set('iiEndNote', '');
+    document.getElementById('iiWarn').hidden = true;
+    clear('iiPeriods'); clear('iiSchedule');
+  }
+
+  function update() {
+    var value = num('iiValue'), yieldRate = num('iiYield'), rate = num('iiRate'), ret = num('iiReturn'),
+        fee = num('iiFee'), inflation = num('iiInflation'), tax = num('iiTax'), years = num('iiYears');
+    var method = document.getElementById('iiMethod').value;
+    var msg = '';
+    if (isNaN(value) || value < 0 || value > 1e11) msg = 'Enter a portfolio value of $0 or more.';
+    else if (isNaN(yieldRate) || yieldRate < 0 || yieldRate > 50) msg = 'Enter a portfolio yield from 0 to 50%.';
+    else if (isNaN(rate) || rate < 0 || rate > 50) msg = 'Enter a withdrawal rate from 0 to 50%.';
+    else if (isNaN(ret) || ret < -50 || ret > 50) msg = 'Enter a total return from -50% to 50%.';
+    else if (isNaN(fee) || fee < 0 || fee > 10) msg = 'Enter annual fees from 0 to 10%.';
+    else if (isNaN(inflation) || inflation < 0 || inflation > 20) msg = 'Enter inflation from 0 to 20%.';
+    else if (isNaN(tax) || tax < 0 || tax > 60) msg = 'Enter a tax rate from 0 to 60%.';
+    else if (isNaN(years) || years < 1 || years > 60 || Math.round(years) !== years) msg = 'Enter 1 to 60 whole years to project.';
+    var error = document.getElementById('iiError');
+    error.hidden = !msg;
+    if (msg) { error.textContent = msg; blank(); return; }
+
+    var y = yieldRate / 100, w = rate / 100, t = tax / 100;
+    var yieldYear = value * y, drawYear = value * w;
+    set('iiYieldMonthly', money.format(yieldYear / 12));
+    set('iiDrawMonthly', money.format(drawYear / 12));
+    var gap = drawYear - yieldYear;
+    if (gap > 0.005) {
+      set('iiPrincipal', money.format(gap));
+      set('iiPrincipalNote', 'Withdrawal minus yield income');
+    } else {
+      set('iiPrincipal', money.format(0));
+      set('iiPrincipalNote', gap < -0.005 ? 'Yield covers it, with ' + money.format(-gap) + ' a year to spare' : 'Yield covers it exactly');
+    }
+
+    var periods = clear('iiPeriods');
+    [['From yield', yieldYear], ['At ' + rate + '% withdrawal', drawYear]].forEach(function (r) {
+      addRow(periods, [r[0], money.format(r[1]), money.format(r[1] / 4), money.format(r[1] / 12), money.format(r[1] / 12 * (1 - t))]);
+    });
+
+    var p = project(value, y, w, ret / 100, fee / 100, inflation / 100, method, years);
+    var warn = document.getElementById('iiWarn');
+    if (p.depletedYear) {
+      set('iiEnd', money0.format(0));
+      set('iiEndNote', 'Runs out in year ' + p.depletedYear);
+      warn.textContent = 'At these settings the portfolio cannot keep paying the full withdrawal past year ' + p.depletedYear + '. A lower withdrawal rate or a higher return would make it last longer.';
+      warn.hidden = false;
+    } else {
+      set('iiEnd', money0.format(p.end));
+      set('iiEndNote', 'After ' + years + (years === 1 ? ' year' : ' years') + (p.end > value ? ', above where you started' : p.end < value ? ', below where you started' : ', the same as today'));
+      warn.hidden = true;
+    }
+    var body = clear('iiSchedule');
+    p.rows.forEach(function (r) {
+      addRow(body, [String(r.year), money0.format(r.start), money0.format(r.draw), money0.format(r.fromYield), money0.format(r.sold), money0.format(r.end)]);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('iiForm');
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

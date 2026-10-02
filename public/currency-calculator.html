@@ -1,0 +1,716 @@
+<!doctype html>
+<html lang="en" id="currency-calculator-document" data-page-slug="currency-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Currency Converter: Live Currency Exchange Rates</title>
+  <meta name="description" content="Free currency converter using live exchange rates to switch between major world currencies. Enter an amount, choose two currencies and see your total at once.">
+  <link rel="canonical" href="https://company-marketcap.github.io/currency-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Currency Converter: Live Currency Exchange Rates">
+  <meta property="og:description" content="Free currency converter using live exchange rates to switch between major world currencies. Enter an amount, choose two currencies and see your total at once.">
+  <meta property="og:url" content="https://company-marketcap.github.io/currency-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Currency Converter", "url": "https://company-marketcap.github.io/currency-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Free currency converter using live exchange rates to switch between major world currencies. Enter an amount, choose two currencies and see your total at once."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Inflation, Currency & Economics", "item": "https://company-marketcap.github.io/financial-calculators.html#inflation-currency-calculators"}, {"@type": "ListItem", "position": 4, "name": "Currency Converter", "item": "https://company-marketcap.github.io/currency-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I convert one currency to another?", "acceptedAnswer": {"@type": "Answer", "text": "Enter the amount, pick the currency you hold and the currency you want, and multiply the amount by the exchange rate. To go the opposite way, divide by the rate or use its reverse rate."}}, {"@type": "Question", "name": "What is the mid-market exchange rate?", "acceptedAnswer": {"@type": "Answer", "text": "It is the midpoint between the price buyers will pay and the price sellers will accept in the foreign exchange market. It is a benchmark rather than an offer, so the rate a bank or kiosk gives you is normally slightly worse."}}, {"@type": "Question", "name": "Why do currency exchange rates differ between providers?", "acceptedAnswer": {"@type": "Answer", "text": "Each provider adds its own markup to the interbank rate, or widens the bid-ask spread, to earn a profit. Larger volumes usually get a rate closer to the interbank rate, and small transfers or cash exchanges get a wider gap."}}, {"@type": "Question", "name": "What is the difference between the bid price and the ask price?", "acceptedAnswer": {"@type": "Answer", "text": "The bid is what a buyer is willing to pay for a currency and the ask is what a seller will accept. A provider buys from you at the lower bid and sells to you at the higher ask, and the gap between them is the spread."}}, {"@type": "Question", "name": "What is the best time to exchange money?", "acceptedAnswer": {"@type": "Answer", "text": "Most trading happens when the London and New York sessions overlap, roughly 8am GMT to 5pm Eastern time. During those hours the market is most liquid and the gap between bid and ask is usually smallest."}}, {"@type": "Question", "name": "What can I use a custom exchange rate for?", "acceptedAnswer": {"@type": "Answer", "text": "If a bank or broker has quoted you a specific rate, type it into the exchange rate field to see exactly how much you will receive. Compare the result with the mid-market rate to see the real cost of the quote."}}, {"@type": "Question", "name": "What do the three-letter currency codes mean?", "acceptedAnswer": {"@type": "Answer", "text": "They are ISO currency codes, such as USD for the US dollar, EUR for the euro, JPY for the Japanese yen and GBP for the British pound. The first two letters usually identify the country and the third the currency."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="currency-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="currency-calculator" data-page-type="calculator">
+  <a id="currency-calculator-skip-link" href="#currency-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="currency-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="currency-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="currency-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="currency-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="currency-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="currency-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="currency-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="currency-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="currency-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="currency-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="currency-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="currency-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="currency-calculator-header-search-status" aria-controls="currency-calculator-header-search-results" data-search-input="header">
+              <p id="currency-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="currency-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="currency-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="currency-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="currency-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="currency-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="currency-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="currency-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="currency-calculator-mobile-search-status" aria-controls="currency-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="currency-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="currency-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="currency-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="currency-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="currency-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="currency-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="currency-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="currency-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="currency-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="currency-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="currency-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="currency-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="currency-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="currency-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="currency-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="currency-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="currency-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="currency-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="currency-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="currency-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="currency-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="currency-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="currency-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="currency-calculator-sidebar-search-status" aria-controls="currency-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="currency-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="currency-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="currency-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="currency-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="currency-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="currency-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="currency-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="currency-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="currency-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="currency-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="currency-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="currency-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="currency-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="currency-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="currency-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="currency-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="currency-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="currency-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="currency-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="currency-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="currency-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="currency-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="currency-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="currency-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="currency-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="currency-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="currency-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="currency-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="currency-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators" aria-current="true">Inflation &amp; Currency</a></li><li><a id="currency-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="currency-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="currency-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="currency-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="currency-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="currency-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="currency-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="currency-calculator" data-calculator-slug="currency-calculator" data-sub-category-slug="inflation-currency-calculators">
+      <aside id="currency-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="currency-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="currency-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="currency-calculator-ad-top-leaderboard">
+            <ins id="currency-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("currency-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="currency-calculator-intro-area" class="space-y-4">
+        <nav id="currency-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="currency-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="currency-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="currency-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="currency-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#inflation-currency-calculators" itemprop="item"><span itemprop="name">Inflation, Currency &amp; Economics</span></a><meta itemprop="position" content="3"></li>
+            <li id="currency-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Currency Converter</span><meta itemprop="item" content="https://company-marketcap.github.io/currency-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="currency-calculator-hero-section" aria-labelledby="currency-calculator-hero-heading" data-section="hero">
+          <h1 id="currency-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Currency Converter: Live Currency Exchange Rates</h1>
+          <p id="currency-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Planning a trip, paying an overseas supplier or checking a foreign price tag all start with the same question: what is this worth in my own money? A currency converter answers it in seconds. You enter an amount, choose two currencies, and the tool applies today&#x27;s exchange rates to show your converted total. This guide explains the math behind that result, why the rate on screen is rarely the rate a bank gives you, and how to keep more of your money when you exchange it. <!-- SILO_START:slot_a -->Try the <a class="silo-link" href="/budget-calculator.html">budget calculator online</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="currency-calculator-tool" class="space-y-6" data-page-slug="currency-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="cxFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="cxForm" class="space-y-5" novalidate aria-labelledby="cxFormHeading">
+      <h2 id="cxFormHeading" class="panel-heading">Enter an amount to convert</h2>
+<div><label for="cxAmount" class="form-label">Amount</label><div class="input-group"><input type="number" id="cxAmount" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="any" value="250" inputmode="decimal"></div></div>
+<div class="form-row form-row-2">
+<div><label for="cxFrom" class="form-label">From</label><select id="cxFrom" class="form-select"><optgroup label="Most used"><option value="USD" selected>US dollar (USD)</option><option value="EUR">Euro (EUR)</option><option value="GBP">British pound (GBP)</option><option value="JPY">Japanese yen (JPY)</option><option value="CAD">Canadian dollar (CAD)</option><option value="MXN">Mexican peso (MXN)</option><option value="AUD">Australian dollar (AUD)</option><option value="CHF">Swiss franc (CHF)</option><option value="CNY">Chinese yuan (CNY)</option><option value="INR">Indian rupee (INR)</option></optgroup><optgroup label="More currencies"><option value="BRL">Brazilian real (BRL)</option><option value="CZK">Czech koruna (CZK)</option><option value="DKK">Danish krone (DKK)</option><option value="HKD">Hong Kong dollar (HKD)</option><option value="HUF">Hungarian forint (HUF)</option><option value="ISK">Icelandic króna (ISK)</option><option value="IDR">Indonesian rupiah (IDR)</option><option value="ILS">Israeli new shekel (ILS)</option><option value="MYR">Malaysian ringgit (MYR)</option><option value="NZD">New Zealand dollar (NZD)</option><option value="NOK">Norwegian krone (NOK)</option><option value="PHP">Philippine peso (PHP)</option><option value="PLN">Polish złoty (PLN)</option><option value="RON">Romanian leu (RON)</option><option value="SGD">Singapore dollar (SGD)</option><option value="ZAR">South African rand (ZAR)</option><option value="KRW">South Korean won (KRW)</option><option value="SEK">Swedish krona (SEK)</option><option value="THB">Thai baht (THB)</option><option value="TRY">Turkish lira (TRY)</option></optgroup></select></div>
+<div><label for="cxTo" class="form-label">To</label><select id="cxTo" class="form-select"><optgroup label="Most used"><option value="USD">US dollar (USD)</option><option value="EUR" selected>Euro (EUR)</option><option value="GBP">British pound (GBP)</option><option value="JPY">Japanese yen (JPY)</option><option value="CAD">Canadian dollar (CAD)</option><option value="MXN">Mexican peso (MXN)</option><option value="AUD">Australian dollar (AUD)</option><option value="CHF">Swiss franc (CHF)</option><option value="CNY">Chinese yuan (CNY)</option><option value="INR">Indian rupee (INR)</option></optgroup><optgroup label="More currencies"><option value="BRL">Brazilian real (BRL)</option><option value="CZK">Czech koruna (CZK)</option><option value="DKK">Danish krone (DKK)</option><option value="HKD">Hong Kong dollar (HKD)</option><option value="HUF">Hungarian forint (HUF)</option><option value="ISK">Icelandic króna (ISK)</option><option value="IDR">Indonesian rupiah (IDR)</option><option value="ILS">Israeli new shekel (ILS)</option><option value="MYR">Malaysian ringgit (MYR)</option><option value="NZD">New Zealand dollar (NZD)</option><option value="NOK">Norwegian krone (NOK)</option><option value="PHP">Philippine peso (PHP)</option><option value="PLN">Polish złoty (PLN)</option><option value="RON">Romanian leu (RON)</option><option value="SGD">Singapore dollar (SGD)</option><option value="ZAR">South African rand (ZAR)</option><option value="KRW">South Korean won (KRW)</option><option value="SEK">Swedish krona (SEK)</option><option value="THB">Thai baht (THB)</option><option value="TRY">Turkish lira (TRY)</option></optgroup></select></div>
+</div>
+<div><button type="button" id="cxSwap" class="button-secondary">Swap currencies</button></div>
+<div><label for="cxManual" class="form-label">Your exchange rate (optional)</label><div class="input-group"><span class="input-affix" id="cxManualFrom">1 USD =</span><input type="number" id="cxManual" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="any" value="" inputmode="decimal" placeholder="Use reference rate" aria-describedby="cxManualHint"><span class="input-affix" id="cxManualTo">EUR</span></div><p id="cxManualHint" class="form-hint">Leave blank to use the reference rate. Type the rate your bank, card or exchange desk quotes to use it instead &ndash; this works offline too.</p></div>
+<p class="form-hint">Reference rate now: <span id="cxRefRate">Not available</span></p>
+      <p id="cxError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="cxResults" aria-live="polite" aria-labelledby="cxResultsHeading">
+      <h2 id="cxResultsHeading" class="panel-heading">Your results</h2>
+<div class="stat-grid mt-4">
+<div class="stat-card stat-card-highlight"><p id="cxResultFrom" class="stat-label">Converted amount</p><p id="cxResult" class="stat-value">–</p></div>
+</div>
+<div class="mt-5">
+<div class="result-row"><span class="result-term">Rate used</span><span id="cxRateUsed" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Inverse rate</span><span id="cxInverse" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Rate source</span><span id="cxRateSource" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Your rate vs. reference</span><span id="cxCompare" class="result-value">–</span></div>
+</div>
+<div class="callout callout-note mt-5"><p class="callout-title">About these rates</p><p id="cxStatus" data-state="idle">Reference rates load when the page opens.</p><p>Daily euro foreign exchange reference rates from the <a class="underline underline-offset-2" href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" target="_blank" rel="noopener">European Central Bank</a>, delivered by the free <a class="underline underline-offset-2" href="https://frankfurter.dev/" target="_blank" rel="noopener">Frankfurter</a> API. They are mid-market reference figures published once each working day, not the rate a bank or card will give you.</p></div>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="cxAmountsHeading" data-section="amounts">
+  <h2 id="cxAmountsHeading" class="panel-heading">Quick conversion table</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">Common amounts at the rate used above.</p>
+  <div class="table-scroll mt-5" tabindex="0" role="region" aria-labelledby="cxAmountsHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Amount</th><th scope="col">Converts to</th></tr></thead>
+      <tbody id="cxAmounts"></tbody>
+    </table>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="cxMajorsHeading" data-section="majors">
+  <h2 id="cxMajorsHeading" class="panel-heading">Reference rates for major currencies</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">One unit of <span id="cxMajorsFrom">USD</span> in other major currencies, and one unit of each in <span id="cxMajorsFrom2">USD</span>, at the ECB reference rate.</p>
+  <div class="table-scroll mt-5" tabindex="0" role="region" aria-labelledby="cxMajorsHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Currency</th><th scope="col">Per 1 unit</th><th scope="col">Inverse</th></tr></thead>
+      <tbody id="cxMajors"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="currency-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="currency-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Planning a trip, paying an overseas supplier or checking a foreign price tag all start with the same question: what is this worth in my own money? A currency converter answers it in seconds. You enter an amount, choose two currencies, and the tool applies today&#x27;s exchange rates to show your converted total. This guide explains the math behind that result, why the rate on screen is rarely the rate a bank gives you, and how to keep more of your money when you exchange it. <!-- SILO_START:slot_a_m -->Try the <a class="silo-link" href="/budget-calculator.html">budget calculator online</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="currency-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="currency-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="currency-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="currency-calculator-ad-in-feed">
+            <ins id="currency-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("currency-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="currency-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="currency-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="currency-calculator-guide-heading-1">
+<h2 id="currency-calculator-guide-heading-1">How a Currency Converter Turns Exchange Rates into Your Result</h2>
+<p>Every conversion rests on one number, the <strong>exchange rate</strong>: the value of one unit of a currency expressed in another. Whether you use a currency calculator on a phone or a spreadsheet at your desk, the tool multiplies your amount by that rate and rounds the answer to the smaller unit of the target currency, such as cents or pence.</p>
+
+<h3>The currency conversion formula</h3>
+<p>Currency conversion needs only one multiplication, and you can run it in either direction:</p>
+<p>$$\text{Converted amount} = \text{Amount} \times \text{Exchange rate}$$</p>
+<p>$$\text{Reverse rate} = \frac{1}{\text{Exchange rate}}$$</p>
+<p>To go back the other way, divide by the rate or multiply by its reciprocal. The math is simple; the hard part is choosing which rate to trust, which is what the sections below cover.</p>
+
+<h3>Base currency and quote currency in a currency pair</h3>
+<p>Rates are always quoted as a <strong>currency pair</strong> such as GBP/NZD. The first code is the <strong>base currency</strong>, which always equals exactly one unit. The second is the <strong>quote currency</strong>, the number of units you pay or receive for that one base unit. Read GBP/NZD 2.1346 as "one British pound buys 2.1346 New Zealand dollars". Flip the pair and the same market is expressed the opposite way, so always check which currency sits first before you type a number into any converter.</p>
+
+<h3>Worked example: converting 1,850 British pounds to New Zealand dollars</h3>
+<p>Imagine you are paying a deposit of £1,850.00 for a campervan in Auckland. Using a sample mid-market rate of 2.1346 New Zealand dollars per British pound, the steps look like this:</p>
+<table>
+<thead><tr><th>Step</th><th>Value</th></tr></thead>
+<tbody>
+<tr><td>Amount to convert</td><td>1,850.00 GBP</td></tr>
+<tr><td>Exchange rate (GBP to NZD)</td><td>2.1346</td></tr>
+<tr><td>Calculation</td><td>1,850.00 × 2.1346</td></tr>
+<tr><td><strong>Converted total</strong></td><td><strong>3,949.01 NZD</strong></td></tr>
+<tr><td>Reverse rate (1 ÷ 2.1346)</td><td>0.4685 GBP per NZD</td></tr>
+</tbody>
+</table>
+<p>Dividing 3,949.01 by 2.1346 returns exactly 1,850.00, which confirms the result. Keep these numbers in mind: the rest of this guide uses the same £1,850.00 to show how much the rate you actually receive can change the outcome.</p>
+<figure><img src="/assets/images/tools/currency-calculator/currency-converter-formula-gbp-to-nzd.svg" alt="Currency conversion formula card showing £1,850.00 multiplied by a 2.1346 exchange rate to give 3,949.01 New Zealand dollars" /><figcaption>The conversion formula applied to £1,850.00 at a sample 2.1346 mid-market rate.</figcaption></figure>
+        </section>
+        <section id="currency-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="currency-calculator-guide-heading-2">
+<h2 id="currency-calculator-guide-heading-2">Mid-Market Exchange Rate vs the Rate You Actually Get</h2>
+<p>The figure shown by a search engine or an app is normally the <strong>mid-market exchange rate</strong>, the midpoint between the price the market will pay and the price it will charge. It is a benchmark, not a price anyone promises to give you, and the gap between it and your real quote is where most of the cost of exchanging money hides.</p>
+
+<h3>Interbank rate, spot rate and the real exchange rate</h3>
+<p>Banks trading with each other use the <strong>interbank rate</strong>, also called the spot rate or the real exchange rate. It is wholesale pricing built for large institutions moving big volume, so smaller transfers usually attract a higher mark-up. Most trading happens when the London and New York sessions overlap, roughly 8am GMT to 5pm Eastern time. During those hours the market is most liquid and the difference between buying and selling prices is at its smallest.</p>
+
+<h3>Bid price, ask price and the bid-ask spread</h3>
+<p>Every market has two prices. The <strong>bid price</strong> is what a buyer is willing to pay, and the <strong>ask price</strong> is what a seller will accept. Together, bid and ask create the <strong>bid-ask spread</strong>, which is how brokers, banks and exchange desks earn a commission for doing business. The buying rate is the price at which a provider purchases your currency, and the selling rate is the price at which it sells you the other one. The smallest step in that spread is a pip, usually the fourth decimal place.</p>
+<p>Suppose GBP/NZD is quoted at 2.1239 / 2.1453, a spread of 214 pips. Selling your £1,850.00 at the bid gives 3,929.22 NZD. Buying pounds back immediately at the ask returns only £1,831.55, so a round trip with no market movement at all costs you £18.45.</p>
+<figure><img src="/assets/images/tools/currency-calculator/currency-conversion-round-trip-bid-ask-spread.svg" alt="Round trip showing £1,850.00 becoming 3,929.22 New Zealand dollars at the bid and only £1,831.55 after converting back at the ask" /><figcaption>Converting £1,850.00 to New Zealand dollars and straight back loses £18.45 to the bid-ask spread.</figcaption></figure>
+
+<h3>Exchange rate markup and hidden fees</h3>
+<p>Providers rarely advertise a fee; they quietly shave the rate instead. That exchange rate markup is a hidden fee, and it is usually larger than any visible transaction fees. The table below applies assumed markups to the same £1,850.00, measured against the 2.1346 mid-market rate:</p>
+<table>
+<thead><tr><th>Provider (assumed markup)</th><th>Rate applied</th><th>NZD received</th><th>Lost vs mid-market</th></tr></thead>
+<tbody>
+<tr><td>Mid-market benchmark (0%)</td><td>2.1346</td><td>3,949.01</td><td>0.00</td></tr>
+<tr><td>Travel card (1%)</td><td>2.1133</td><td>3,909.52</td><td>39.49</td></tr>
+<tr><td>High street bank (2.5%)</td><td>2.0812</td><td>3,850.28</td><td>98.73</td></tr>
+<tr><td>Airport kiosk (7%)</td><td>1.9852</td><td>3,672.58</td><td>276.43</td></tr>
+</tbody>
+</table>
+<p>The same amount of pounds produces three different outcomes depending only on where you convert. A <strong>7% markup</strong> at a kiosk costs you 276.43 New Zealand dollars, roughly 130 pounds, compared with the benchmark.</p>
+<figure><img src="/assets/images/tools/currency-calculator/gbp-to-nzd-exchange-rate-markup-comparison.svg" alt="Bar chart comparing New Zealand dollars received for £1,850.00 at the mid-market rate, a travel card, a bank and an airport kiosk" /><figcaption>The same £1,850.00 returns between 3,949.01 and 3,672.58 New Zealand dollars depending on the markup.</figcaption></figure>
+        </section>
+        <section id="currency-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="currency-calculator-guide-heading-3">
+<h2 id="currency-calculator-guide-heading-3">Using Live Exchange Rates, Custom Rates and Historical Data</h2>
+<p>A good tool lets you work with more than a single fixed number. Three ideas matter: how fresh the rate is, whether you can supply your own, and whether you can see how the rate behaved over time.</p>
+
+<h3>Live exchange rates and market rates</h3>
+<p>A <strong>live exchange rate</strong> refreshes as the market moves, so the result you see is built on current market rates rather than yesterday's close. Real-time exchange rates matter most for large amounts, because a small daily swing becomes a real sum. Many apps let you save favourite pairs so you can track live exchange rates without retyping them, and some publish daily averages that blend the bid and ask from many data sources.</p>
+
+<h3>Custom exchange rate for your own quote</h3>
+<p>Sometimes the rate that counts is the one a bank or broker has already offered you. A <strong>custom exchange rate</strong> option lets you type that quote in and convert with it. Compare the result with the live figure and the difference is the true price of the quote in your own currency, before any extra fee is added.</p>
+
+<h3>Historical data, the exchange rate chart and the 30 day average</h3>
+<p>An exchange rate chart plots <strong>historical data</strong> so you can see whether today's rate is high or low for the period. Summary stats such as the 30 day average, high, low and percentage change give the same context in numbers. If the current rate sits well below the average, waiting a few days may help, though no chart can predict where the market goes next. Looking at the longer history also shows how a pair behaves through different economic cycles.</p>
+        </section>
+        <section id="currency-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="currency-calculator-guide-heading-4">
+<h2 id="currency-calculator-guide-heading-4">Checking a CAD Invoice with a Currency Calculator</h2>
+<p>Camille, a freelance illustrator in Lisbon, has just finished a project for a Toronto studio that pays <strong>CAD 6,480.00</strong>. Her quarterly tax advance of <strong>€4,100.00</strong> is due on 31 October, and she wants to know whether this single invoice covers it.</p>
+<p>She opens the tool, picks CAD to EUR and types 6,480.00. The mid-market rate on screen reads 0.6418, so the result is <strong>€4,158.86</strong>, comfortably above the €4,100.00 she needs. Then she switches to the rate her bank quoted that morning, 0.6265 euros per CAD, using the custom rate field. The same invoice now converts to <strong>€4,059.72</strong>.</p>
+<table>
+<thead><tr><th>Rate source</th><th>Rate (EUR per CAD)</th><th>Euros received</th></tr></thead>
+<tbody>
+<tr><td>Mid-market</td><td>0.6418</td><td>4,158.86</td></tr>
+<tr><td>Bank quote</td><td>0.6265</td><td>4,059.72</td></tr>
+<tr><td>Difference</td><td>2.38% lower</td><td>99.14 less</td></tr>
+</tbody>
+</table>
+<p>The bank's version leaves her €40.28 short of the tax advance, so the invoice no longer covers it on its own. The calculation shows her where the gap comes from: a markup of about 2.38% on the rate, not a visible charge. Her next step is specific. She divides €4,100.00 by 0.6265 and finds she would need to invoice <strong>CAD 6,545.00</strong> to land exactly on target through the bank, or ask the studio to pay through a transfer service that quotes the mid-market rate. She chooses the second option, reruns the numbers with the transfer provider's quote of 0.6409, and sees €4,153.03. That clears the tax payment with €53.03 to spare.</p>
+        </section>
+        <section id="currency-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="currency-calculator-guide-heading-5">
+<h2 id="currency-calculator-guide-heading-5">What Moves Currency Exchange Rates</h2>
+<p>Currency exchange rates are set by supply and demand across the global market, and thousands of influences feed into that demand. Five of the most important are:</p>
+<ul>
+<li><strong>Inflation:</strong> an economy with low inflation tends to gain purchasing power, so its currency usually rises against one with higher inflation.</li>
+<li><strong>Interest rates:</strong> a central bank that raises rates attracts foreign investments, which increases demand for the currency.</li>
+<li><strong>Trade deficits:</strong> a country that spends more on imports than it earns from exports must supply more of its own currency, which pushes the exchange rate down.</li>
+<li><strong>Politics:</strong> stable governments inspire confidence, while unrest sends money towards safer economies.</li>
+<li><strong>Economic performance:</strong> strong growth draws in global capital and lifts the buying power of the currency.</li>
+</ul>
+
+<h3>Why exchange rates change every second</h3>
+<p>Trillions of dollars are traded each day, so FX rates move constantly. News on inflation, a surprise decision by a central bank or a political shock can move a pair within moments, which is why a quote from a bank is only valid for a short time. Treat any figure as a snapshot, and refresh before you commit to a large payment.</p>
+        </section>
+        <section id="currency-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="currency-calculator-guide-heading-6">
+<h2 id="currency-calculator-guide-heading-6">Currency Conversion Tips for Travel and Payments</h2>
+<p>Knowing the benchmark is only half the job. The rest is choosing where and how you convert, because the same money can end up as very different amounts.</p>
+
+<h3>Free currency converter app for travel</h3>
+<p>Before you leave, install a free app on your phone and save the pairs you will need. Check it against the price on a menu or a receipt so you can judge a deal on the spot, and keep it handy when you are traveling in a country that quotes prices in a currency you rarely use. Work offline where the app allows it, since cached rates are still useful for a rough estimate.</p>
+
+<h3>Airports, kiosks, ATMs and cards</h3>
+<ul>
+<li>Exchanging domestically before you travel is usually cheaper than exchanging on arrival, and it removes the stress of finding a counter in an unfamiliar place.</li>
+<li>Airport kiosks and hotel desks are convenient but normally post the worst rates and the highest fees.</li>
+<li>An ATM at an overseas branch of your bank or a fee-friendly local bank often gives a rate close to the wholesale market.</li>
+<li>A credit card or debit card is safer than carrying cash, but check the card's terms first, because many have a foreign transaction fee.</li>
+</ul>
+
+<h3>Foreign transaction fees and international money transfer</h3>
+<p>A card charging a 3% foreign transaction fee takes £55.50 from a £1,850.00 purchase before the rate markup is even applied. For larger payments, an international money transfer service that quotes the mid-market rate plus one clear fee is usually cheaper than a bank wire. Always ask for the total amount that will arrive, not just the headline rate, and compare two or three providers, since money conversion is priced very differently from one to the next. International payments for business should be priced the same way.</p>
+        </section>
+        <section id="currency-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="currency-calculator-guide-heading-7">
+<h2 id="currency-calculator-guide-heading-7">Major Currencies and the Forex Market</h2>
+<p>The foreign exchange market, or <strong>forex</strong>, is a global, decentralized market for trading currencies, and it is the largest financial market in the world. Understanding its vocabulary makes any conversion easier to read.</p>
+
+<h3>US dollar, euro and yen: the most popular conversions</h3>
+<p>The major currencies are the US dollar, the euro, the Japanese yen, the British pound, the Swiss franc, the Australian dollar and the Canadian dollar. The most common popular conversions run between the dollar and the euro, the dollar and the yen, and the dollar and the pound. Pairs that include the dollar and one of the others are known as major pairs and normally have the tightest spreads.</p>
+
+<h3>ISO currency codes and currency symbols</h3>
+<p>Every currency has a three-letter ISO currency code, which avoids confusion between symbols that look alike (the $ sign is used by many countries). Type a code, a country or a currency name into most tools to select it.</p>
+<h4>Currency codes you will see most often</h4>
+<ul>
+<li>USD: United States dollar, the base of most world currencies quotes.</li>
+<li>EUR: euro; JPY: Japanese yen; GBP: British pound.</li>
+<li>CHF: Swiss franc; AUD: Australian dollar; CAD: Canadian dollar.</li>
+</ul>
+
+<h3>Fiat money, precious metals and cryptocurrency as selectable currencies</h3>
+<p>Most converters list national fiat money, meaning currency backed by a government rather than a commodity, but some also let you pick precious metals such as gold and silver or a cryptocurrency such as Bitcoin. Crypto runs on blockchain technology, outside any central bank, and its price fluctuates all day, so the rate behind your result goes stale quickly: refresh it before you rely on the converted figure.</p>
+        </section>
+      </div>
+
+      <section id="currency-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="currency-calculator-faq-heading" data-section="faq">
+        <h2 id="currency-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Currency Converter questions</h2>
+        <div id="currency-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="currency-calculator-faq-1" class="faq-item" open><summary id="currency-calculator-faq-1-summary" class="faq-summary"><h3 id="currency-calculator-faq-1-question" class="faq-question">How do I convert one currency to another?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="currency-calculator-faq-1-answer" class="faq-answer"><p>Enter the amount, pick the currency you hold and the currency you want, and multiply the amount by the exchange rate. To go the opposite way, divide by the rate or use its reverse rate.</p></div></details>
+          <details id="currency-calculator-faq-2" class="faq-item" open><summary id="currency-calculator-faq-2-summary" class="faq-summary"><h3 id="currency-calculator-faq-2-question" class="faq-question">What is the mid-market exchange rate?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="currency-calculator-faq-2-answer" class="faq-answer"><p>It is the midpoint between the price buyers will pay and the price sellers will accept in the foreign exchange market. It is a benchmark rather than an offer, so the rate a bank or kiosk gives you is normally slightly worse.</p></div></details>
+          <details id="currency-calculator-faq-3" class="faq-item" open><summary id="currency-calculator-faq-3-summary" class="faq-summary"><h3 id="currency-calculator-faq-3-question" class="faq-question">Why do currency exchange rates differ between providers?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="currency-calculator-faq-3-answer" class="faq-answer"><p>Each provider adds its own markup to the interbank rate, or widens the bid-ask spread, to earn a profit. Larger volumes usually get a rate closer to the interbank rate, and small transfers or cash exchanges get a wider gap.</p></div></details>
+          <details id="currency-calculator-faq-4" class="faq-item" open><summary id="currency-calculator-faq-4-summary" class="faq-summary"><h3 id="currency-calculator-faq-4-question" class="faq-question">What is the difference between the bid price and the ask price?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="currency-calculator-faq-4-answer" class="faq-answer"><p>The bid is what a buyer is willing to pay for a currency and the ask is what a seller will accept. A provider buys from you at the lower bid and sells to you at the higher ask, and the gap between them is the spread.</p></div></details>
+          <details id="currency-calculator-faq-5" class="faq-item" open><summary id="currency-calculator-faq-5-summary" class="faq-summary"><h3 id="currency-calculator-faq-5-question" class="faq-question">What is the best time to exchange money?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="currency-calculator-faq-5-answer" class="faq-answer"><p>Most trading happens when the London and New York sessions overlap, roughly 8am GMT to 5pm Eastern time. During those hours the market is most liquid and the gap between bid and ask is usually smallest.</p></div></details>
+          <details id="currency-calculator-faq-6" class="faq-item" open><summary id="currency-calculator-faq-6-summary" class="faq-summary"><h3 id="currency-calculator-faq-6-question" class="faq-question">What can I use a custom exchange rate for?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="currency-calculator-faq-6-answer" class="faq-answer"><p>If a bank or broker has quoted you a specific rate, type it into the exchange rate field to see exactly how much you will receive. Compare the result with the mid-market rate to see the real cost of the quote.</p></div></details>
+          <details id="currency-calculator-faq-7" class="faq-item" open><summary id="currency-calculator-faq-7-summary" class="faq-summary"><h3 id="currency-calculator-faq-7-question" class="faq-question">What do the three-letter currency codes mean?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="currency-calculator-faq-7-answer" class="faq-answer"><p>They are ISO currency codes, such as USD for the US dollar, EUR for the euro, JPY for the Japanese yen and GBP for the British pound. The first two letters usually identify the country and the third the currency.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="currency-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="currency-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="currency-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="currency-calculator-ad-bottom-leaderboard">
+            <ins id="currency-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("currency-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="currency-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="currency-calculator-right-rail-top" class="mb-6">
+        <aside id="currency-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="currency-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="currency-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="currency-calculator-ad-right-rail-rectangle">
+            <ins id="currency-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("currency-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="currency-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="currency-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="currency-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="currency-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="currency-calculator-ad-right-rail-skyscraper">
+            <ins id="currency-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("currency-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="currency-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="currency-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="currency-calculator-footer-brand">
+        <a id="currency-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="currency-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="currency-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="currency-calculator-footer-categories" aria-labelledby="currency-calculator-footer-categories-heading">
+        <h2 id="currency-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="currency-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="currency-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="currency-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="currency-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="currency-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="currency-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="currency-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="currency-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="currency-calculator-footer-company" aria-labelledby="currency-calculator-footer-company-heading">
+        <h2 id="currency-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="currency-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="currency-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="currency-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="currency-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="currency-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="currency-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="currency-calculator-footer-bottom" class="border-t border-line">
+      <p id="currency-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="currency-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Currency conversion. Reference rates are the European Central Bank's daily euro reference
+  // rates, fetched from the free, keyless Frankfurter API (api.frankfurter.dev, CORS-enabled).
+  // ECB quotes every currency per 1 EUR, so a cross rate is
+  //   1 FROM = rate[TO] / rate[FROM] TO      (rate[EUR] = 1)
+  // and converted amount = amount x rate. A rate typed by the user always overrides the reference
+  // rate, so the calculator works offline. The last good download is kept in localStorage and
+  // used (with its date) if a later request fails.
+  // This is the only tool on the site that makes a network request.
+  // Endpoint checked October 1, 2026: v2 /rates (ECB provider) and the deprecated v1 /latest
+  // fallback both return Access-Control-Allow-Origin: *. Verified (Node scratch test with the
+  // live September 30, 2026 ECB response): USD->EUR 0.880669 and USD->GBP 0.752646 match the
+  // API's own base=USD values (0.88067, 0.75265); GBP->JPY 208.593. Tested: v2 failure falls back
+  // to v1, both failing uses the saved copy, no saved copy + no manual rate shows a prompt (no
+  // NaN), manual rate overrides and is compared with the reference rate, swap inverts it.
+  var SOURCES = [
+    { url: 'https://api.frankfurter.dev/v2/rates?base=EUR&providers=ECB', parse: parseV2 },
+    { url: 'https://api.frankfurter.dev/v1/latest', parse: parseV1 }
+  ];
+  var STORE_KEY = 'cmc-currency-ecb-rates';
+  var MAJORS = ['USD', 'EUR', 'GBP', 'JPY', 'CAD', 'AUD', 'CHF', 'CNY', 'MXN', 'INR'];
+  var AMOUNTS = [1, 5, 10, 20, 50, 100, 500, 1000, 5000];
+  var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September',
+                'October', 'November', 'December'];
+  var rateFmt = new Intl.NumberFormat('en-US', { maximumSignificantDigits: 6 });
+  var pctFmt = new Intl.NumberFormat('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+  var loading = false;
+  var ref = null; // { rates: {CODE: per-EUR rate}, date: 'YYYY-MM-DD', saved: bool }
+
+  function parseV2(data) {
+    if (!Array.isArray(data)) return null;
+    var rates = { EUR: 1 }, date = '', count = 0;
+    data.forEach(function (row) {
+      if (row && typeof row.quote === 'string' && typeof row.rate === 'number' && isFinite(row.rate) && row.rate > 0) {
+        rates[row.quote.toUpperCase()] = row.rate;
+        count++;
+        if (typeof row.date === 'string' && row.date > date) date = row.date;
+      }
+    });
+    return count ? { rates: rates, date: date } : null;
+  }
+
+  function parseV1(data) {
+    if (!data || typeof data.rates !== 'object' || data.rates === null) return null;
+    var rates = { EUR: 1 }, count = 0;
+    Object.keys(data.rates).forEach(function (code) {
+      var r = data.rates[code];
+      if (typeof r === 'number' && isFinite(r) && r > 0) { rates[code.toUpperCase()] = r; count++; }
+    });
+    return count ? { rates: rates, date: typeof data.date === 'string' ? data.date : '' } : null;
+  }
+
+  function crossRate(rates, from, to) {
+    if (from === to) return 1;
+    if (!rates || !(rates[from] > 0) || !(rates[to] > 0)) return null;
+    return rates[to] / rates[from];
+  }
+
+  function longDate(iso) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso || '');
+    if (!m) return 'an unknown date';
+    return MONTHS[parseInt(m[2], 10) - 1] + ' ' + parseInt(m[3], 10) + ', ' + m[1];
+  }
+
+  function formatMoney(value, code) {
+    try {
+      return new Intl.NumberFormat('en-US', { style: 'currency', currency: code }).format(value);
+    } catch (e) {
+      return rateFmt.format(value) + ' ' + code;
+    }
+  }
+
+  function num(id) {
+    var raw = document.getElementById(id).value;
+    if (raw === '') return null;
+    var v = parseFloat(raw);
+    return isNaN(v) ? NaN : v;
+  }
+
+  function set(id, text) { document.getElementById(id).textContent = text; }
+
+  function readStore() {
+    try {
+      var d = JSON.parse(window.localStorage.getItem(STORE_KEY) || 'null');
+      if (d && d.rates && typeof d.rates === 'object' && typeof d.date === 'string') return d;
+    } catch (e) { /* storage blocked or bad data */ }
+    return null;
+  }
+
+  function writeStore(d) {
+    try { window.localStorage.setItem(STORE_KEY, JSON.stringify({ rates: d.rates, date: d.date })); } catch (e) { /* ignore */ }
+  }
+
+  function fetchJSON(url) {
+    var ctrl = typeof AbortController === 'function' ? new AbortController() : null;
+    var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, 8000) : null;
+    return fetch(url, ctrl ? { signal: ctrl.signal } : {}).then(function (res) {
+      if (timer) clearTimeout(timer);
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      return res.json();
+    }, function (err) {
+      if (timer) clearTimeout(timer);
+      throw err;
+    });
+  }
+
+  function tryFrom(index) {
+    if (index >= SOURCES.length) return Promise.reject(new Error('no source'));
+    var src = SOURCES[index];
+    return fetchJSON(src.url).then(function (data) {
+      var d = src.parse(data);
+      if (!d) throw new Error('bad data');
+      return d;
+    }).catch(function () { return tryFrom(index + 1); });
+  }
+
+  function setStatus(text, state) {
+    var el = document.getElementById('cxStatus');
+    el.textContent = text;
+    el.setAttribute('data-state', state);
+  }
+
+  function loadRates() {
+    if (typeof fetch !== 'function' || typeof Promise !== 'function') {
+      useSaved('Your browser can\'t download reference rates.');
+      return;
+    }
+    setStatus('Loading the latest ECB reference rates…', 'loading');
+    loading = true;
+    tryFrom(0).then(function (d) {
+      loading = false;
+      ref = { rates: d.rates, date: d.date, saved: false };
+      writeStore(d);
+      setStatus('ECB reference rates for ' + longDate(d.date) + '.', 'live');
+      update();
+    }).catch(function () {
+      loading = false;
+      useSaved('Couldn\'t load the latest reference rates.');
+    });
+  }
+
+  function useSaved(prefix) {
+    var d = readStore();
+    if (d) {
+      ref = { rates: d.rates, date: d.date, saved: true };
+      setStatus(prefix + ' Showing the last rates saved in this browser, from ' + longDate(d.date) + '.', 'saved');
+    } else {
+      setStatus(prefix + ' Type your own exchange rate below to convert.', 'error');
+    }
+    update();
+  }
+
+  function clear(body) { while (body.firstChild) body.removeChild(body.firstChild); }
+
+  function row(body, cells) {
+    var tr = document.createElement('tr');
+    cells.forEach(function (text) {
+      var td = document.createElement('td');
+      td.textContent = text;
+      tr.appendChild(td);
+    });
+    body.appendChild(tr);
+  }
+
+  function update() {
+    var from = document.getElementById('cxFrom').value, to = document.getElementById('cxTo').value;
+    var amount = num('cxAmount'), manual = num('cxManual');
+    set('cxManualFrom', '1 ' + from + ' =');
+    set('cxManualTo', to);
+    var refRate = ref ? crossRate(ref.rates, from, to) : null;
+    var error = document.getElementById('cxError');
+    var msg = '';
+    if (amount === null || isNaN(amount) || amount < 0) msg = 'Enter an amount of 0 or more.';
+    else if (manual !== null && (isNaN(manual) || manual <= 0)) msg = 'Your exchange rate must be a number above 0, or leave it blank.';
+    else if (manual === null && refRate === null && !loading) {
+      msg = ref ? 'No reference rate is available for this pair. Type your own exchange rate to convert.'
+                : 'Reference rates couldn\'t be loaded. Type your own exchange rate to convert.';
+    }
+    error.hidden = !msg;
+    error.textContent = msg;
+
+    var refText = refRate === null ? 'Not available' : '1 ' + from + ' = ' + rateFmt.format(refRate) + ' ' + to;
+    set('cxRefRate', refText);
+    var majors = document.getElementById('cxMajors');
+    clear(majors);
+    MAJORS.forEach(function (code) {
+      if (code === from) return;
+      var r = ref ? crossRate(ref.rates, from, code) : null;
+      row(majors, [code, r === null ? 'n/a' : rateFmt.format(r), r === null ? 'n/a' : rateFmt.format(1 / r)]);
+    });
+    set('cxMajorsFrom', from);
+    set('cxMajorsFrom2', from);
+
+    var amounts = document.getElementById('cxAmounts');
+    var waiting = !msg && manual === null && refRate === null;
+    if (msg || waiting) {
+      set('cxResultFrom', waiting ? 'Waiting for reference rates…' : 'Converted amount');
+      ['cxResult', 'cxRateUsed', 'cxInverse', 'cxRateSource', 'cxCompare'].forEach(function (id) { set(id, '–'); });
+      clear(amounts);
+      return;
+    }
+    var rate = manual !== null ? manual : refRate;
+    set('cxResult', formatMoney(amount * rate, to));
+    set('cxResultFrom', formatMoney(amount, from) + ' =');
+    set('cxRateUsed', '1 ' + from + ' = ' + rateFmt.format(rate) + ' ' + to);
+    set('cxInverse', '1 ' + to + ' = ' + rateFmt.format(1 / rate) + ' ' + from);
+    set('cxRateSource', manual !== null ? 'Your own rate' :
+      (from === to ? 'Same currency' : 'ECB reference rate, ' + longDate(ref.date) + (ref.saved ? ' (saved copy)' : '')));
+    if (manual !== null && refRate !== null && from !== to) {
+      var diff = (manual / refRate - 1) * 100;
+      var gap = amount * (refRate - manual);
+      set('cxCompare', Math.abs(diff) < 0.005 ? 'Same as the reference rate' :
+        pctFmt.format(Math.abs(diff)) + '% ' + (diff < 0 ? 'worse' : 'better') + ' (' +
+        formatMoney(Math.abs(gap), to) + (diff < 0 ? ' less' : ' more') + ')');
+    } else {
+      set('cxCompare', manual !== null ? 'No reference rate to compare' : 'No rate entered');
+    }
+    clear(amounts);
+    AMOUNTS.forEach(function (a) { row(amounts, [formatMoney(a, from), formatMoney(a * rate, to)]); });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('cxForm');
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    document.getElementById('cxSwap').addEventListener('click', function () {
+      var f = document.getElementById('cxFrom'), t = document.getElementById('cxTo'), tmp = f.value;
+      f.value = t.value;
+      t.value = tmp;
+      var m = document.getElementById('cxManual');
+      var mv = parseFloat(m.value);
+      if (m.value !== '' && mv > 0) m.value = String(parseFloat((1 / mv).toPrecision(6)));
+      update();
+    });
+    loadRates();
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

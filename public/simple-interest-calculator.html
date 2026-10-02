@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="en" id="simple-interest-calculator-document" data-page-slug="simple-interest-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simple Interest Calculator: Solve for Interest, Rate or Time</title>
+  <meta name="description" content="Calculate simple interest and the end balance, or solve for the principal, rate or term. Rates per year or month, terms in years, months or days.">
+  <link rel="canonical" href="https://company-marketcap.github.io/simple-interest-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Simple Interest Calculator: Solve for Interest, Rate or Time">
+  <meta property="og:description" content="Calculate simple interest and the end balance, or solve for the principal, rate or term. Rates per year or month, terms in years, months or days.">
+  <meta property="og:url" content="https://company-marketcap.github.io/simple-interest-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Simple Interest Calculator", "url": "https://company-marketcap.github.io/simple-interest-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Calculate simple interest and the end balance, or solve for the principal, rate or term. Rates per year or month, terms in years, months or days."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Interest, APR & Time Value of Money", "item": "https://company-marketcap.github.io/financial-calculators.html#interest-calculators"}, {"@type": "ListItem", "position": 4, "name": "Simple Interest Calculator", "item": "https://company-marketcap.github.io/simple-interest-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is simple interest?", "acceptedAnswer": {"@type": "Answer", "text": "Simple interest is interest calculated only on the original principal. Interest that has already been earned or charged is never added to the base, so the same amount accrues in every period."}}, {"@type": "Question", "name": "What is the simple interest formula?", "acceptedAnswer": {"@type": "Answer", "text": "Interest = Principal × Rate × Time, written I = Prt, where the rate is a decimal and the time is in years. The end balance is A = P(1 + rt)."}}, {"@type": "Question", "name": "How do I calculate simple interest for months or days?", "acceptedAnswer": {"@type": "Answer", "text": "Convert the period to years first: divide months by 12, weeks by 52, or days by 365 (or 360 for some loans and invoices). You can also pick the term unit in the calculator and it converts for you."}}, {"@type": "Question", "name": "What is the difference between simple and compound interest?", "acceptedAnswer": {"@type": "Answer", "text": "Simple interest only ever applies to the original principal, while compound interest also applies to interest already added to the balance. Over the same term and rate, compound interest produces a higher total."}}, {"@type": "Question", "name": "Which loans and investments use simple interest?", "acceptedAnswer": {"@type": "Answer", "text": "Many short-term and auto loans, some personal loans, bond coupons and certain short certificates of deposit use simple interest. Most savings accounts and credit cards compound instead."}}, {"@type": "Question", "name": "Does the interest rate change over time with simple interest?", "acceptedAnswer": {"@type": "Answer", "text": "No. The rate stays fixed for the whole term and is applied to the same principal, so the interest earned or owed is identical every year."}}, {"@type": "Question", "name": "How do I find the interest rate or time if I know the interest?", "acceptedAnswer": {"@type": "Answer", "text": "Rearrange the formula: r = I ÷ (P × t) for the rate and t = I ÷ (P × r) for the time. Keep the rate and the time in matching units."}}, {"@type": "Question", "name": "How is an interest-only loan payment worked out?", "acceptedAnswer": {"@type": "Answer", "text": "For an interest-only loan the payment is the yearly interest divided by the number of payments per year, so on a monthly schedule it is Principal × annual rate ÷ 12. The principal balance does not change."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="simple-interest-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="simple-interest-calculator" data-page-type="calculator">
+  <a id="simple-interest-calculator-skip-link" href="#simple-interest-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="simple-interest-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="simple-interest-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="simple-interest-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="simple-interest-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="simple-interest-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="simple-interest-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="simple-interest-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="simple-interest-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="simple-interest-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="simple-interest-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="simple-interest-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="simple-interest-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="simple-interest-calculator-header-search-status" aria-controls="simple-interest-calculator-header-search-results" data-search-input="header">
+              <p id="simple-interest-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="simple-interest-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="simple-interest-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="simple-interest-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="simple-interest-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="simple-interest-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="simple-interest-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="simple-interest-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="simple-interest-calculator-mobile-search-status" aria-controls="simple-interest-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="simple-interest-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="simple-interest-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="simple-interest-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="simple-interest-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="simple-interest-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="simple-interest-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="simple-interest-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="simple-interest-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="simple-interest-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="simple-interest-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="simple-interest-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="simple-interest-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="simple-interest-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="simple-interest-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="simple-interest-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="simple-interest-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="simple-interest-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="simple-interest-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="simple-interest-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="simple-interest-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="simple-interest-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="simple-interest-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="simple-interest-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="simple-interest-calculator-sidebar-search-status" aria-controls="simple-interest-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="simple-interest-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="simple-interest-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="simple-interest-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="simple-interest-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="simple-interest-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="simple-interest-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="simple-interest-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="simple-interest-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="simple-interest-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="simple-interest-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="simple-interest-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="simple-interest-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="simple-interest-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="simple-interest-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="simple-interest-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="simple-interest-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="simple-interest-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="simple-interest-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="simple-interest-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="simple-interest-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="simple-interest-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="simple-interest-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators" aria-current="true">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="simple-interest-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="simple-interest-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="simple-interest-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="simple-interest-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="simple-interest-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="simple-interest-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="simple-interest-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="simple-interest-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="simple-interest-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="simple-interest-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="simple-interest-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="simple-interest-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="simple-interest-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="simple-interest-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="simple-interest-calculator" data-calculator-slug="simple-interest-calculator" data-sub-category-slug="interest-calculators">
+      <aside id="simple-interest-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="simple-interest-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="simple-interest-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="simple-interest-calculator-ad-top-leaderboard">
+            <ins id="simple-interest-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("simple-interest-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="simple-interest-calculator-intro-area" class="space-y-4">
+        <nav id="simple-interest-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="simple-interest-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="simple-interest-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="simple-interest-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="simple-interest-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#interest-calculators" itemprop="item"><span itemprop="name">Interest, APR &amp; Time Value of Money</span></a><meta itemprop="position" content="3"></li>
+            <li id="simple-interest-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Simple Interest Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/simple-interest-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="simple-interest-calculator-hero-section" aria-labelledby="simple-interest-calculator-hero-heading" data-section="hero">
+          <h1 id="simple-interest-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Simple Interest Calculator</h1>
+          <p id="simple-interest-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Want to know what a loan or an account will really cost or earn over a fixed term? This simple interest calculator turns a principal, an annual rate and a time period into your total interest and final balance in one step, so you can check an offer before you sign. Because interest is charged on the original amount only, the answer never changes unless one of your inputs does. <!-- SILO_START:slot_a -->The <a class="silo-link" href="/interest-calculator.html">interest calculator online</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="simple-interest-calculator-tool" class="space-y-6" data-page-slug="simple-interest-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="siFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="siForm" class="space-y-5" novalidate aria-labelledby="siFormHeading">
+      <h2 id="siFormHeading" class="panel-heading">Enter what you know</h2>
+      <fieldset class="form-fieldset">
+        <legend class="form-legend">Solve for</legend>
+        <div class="form-choice-group-inline">
+          <label class="form-choice"><input type="radio" name="siSolve" id="siSolveEnd" class="form-choice-input" value="end" checked><span class="form-choice-text">Interest and end balance</span></label>
+          <label class="form-choice"><input type="radio" name="siSolve" id="siSolvePrincipal" class="form-choice-input" value="principal"><span class="form-choice-text">Principal</span></label>
+          <label class="form-choice"><input type="radio" name="siSolve" id="siSolveRate" class="form-choice-input" value="rate"><span class="form-choice-text">Interest rate</span></label>
+          <label class="form-choice"><input type="radio" name="siSolve" id="siSolveTerm" class="form-choice-input" value="term"><span class="form-choice-text">Term</span></label>
+        </div>
+      </fieldset>
+      <div id="siBalanceField" hidden><label for="siBalance" class="form-label">End balance (principal + interest)</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="siBalance" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="13000" inputmode="decimal"></div></div>
+      <div id="siPrincipalField"><label for="siPrincipal" class="form-label">Principal</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="siPrincipal" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="10000" inputmode="decimal"></div><p class="form-hint">The amount borrowed, lent or deposited.</p></div>
+      <div id="siRateField" class="form-row form-row-2">
+        <div><label for="siRate" class="form-label">Interest rate</label><div class="input-group"><input type="number" id="siRate" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="1000" step="0.1" value="6" inputmode="decimal"><span class="input-affix">%</span></div></div>
+        <div><label for="siRateUnit" class="form-label">Rate is</label>
+          <select id="siRateUnit" class="form-select"><option value="year" selected>Per year</option><option value="month">Per month</option></select></div>
+      </div>
+      <div id="siTermField" class="form-row form-row-2">
+        <div><label for="siTerm" class="form-label">Term</label><div class="input-group"><input type="number" id="siTerm" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1" value="5" inputmode="decimal"></div></div>
+        <div><label for="siTermUnit" class="form-label">Term is in</label>
+          <select id="siTermUnit" class="form-select"><option value="years" selected>Years</option><option value="months">Months</option><option value="days">Days</option></select></div>
+      </div>
+      <p class="form-hint">Simple interest is charged on the original principal only: interest = principal × rate × time. Days are counted as 1/365 of a year.</p>
+      <p id="siError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="siResults" aria-live="polite" aria-labelledby="siResultsHeading">
+      <h2 id="siResultsHeading" class="panel-heading">Your results</h2>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p id="siAnswerLabel" class="stat-label">Total interest</p><p id="siAnswer" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">End balance</p><p id="siEnd" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Principal</p><p id="siPrincipalOut" class="stat-value">–</p></div>
+      </div>
+      <div class="mt-5">
+        <div class="result-row"><span class="result-term">Total interest</span><span id="siInterest" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Interest rate</span><span id="siRateOut" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Term</span><span id="siTermOut" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Interest per year</span><span id="siPerYear" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Interest per day</span><span id="siPerDay" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Same rate compounded yearly</span><span id="siCompound" class="result-value">–</span></div>
+      </div>
+      <p class="form-hint mt-3">The last line shows the end balance if interest also earned interest once a year, for comparison.</p>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="siScheduleHeading" data-section="schedule">
+  <h2 id="siScheduleHeading" class="panel-heading">Interest schedule</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">Simple interest grows by the same amount every period, so the balance rises in a straight line.</p>
+  <div class="table-scroll mt-5 max-h-[520px]" tabindex="0" role="region" aria-labelledby="siScheduleHeading">
+    <table class="data-table">
+      <thead><tr><th id="siPeriodHead" scope="col">Year</th><th scope="col">Interest</th><th scope="col">Total interest</th><th scope="col">Balance</th></tr></thead>
+      <tbody id="siSchedule"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="simple-interest-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="simple-interest-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Want to know what a loan or an account will really cost or earn over a fixed term? This simple interest calculator turns a principal, an annual rate and a time period into your total interest and final balance in one step, so you can check an offer before you sign. Because interest is charged on the original amount only, the answer never changes unless one of your inputs does. <!-- SILO_START:slot_a_m -->The <a class="silo-link" href="/interest-calculator.html">interest calculator online</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="simple-interest-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="simple-interest-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="simple-interest-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="simple-interest-calculator-ad-in-feed">
+            <ins id="simple-interest-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("simple-interest-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="simple-interest-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="simple-interest-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="simple-interest-calculator-guide-heading-1">
+<h2 id="simple-interest-calculator-guide-heading-1">How the Simple Interest Calculator Works</h2>
+<p>The tool needs three inputs and gives back two results. You enter the <strong>principal amount</strong> (what you borrow or put away), the <strong>annual interest rate</strong> as a percentage, and the length of the term in whichever unit suits you. It then returns the <strong>total interest</strong> and the <strong>end balance</strong>, which is the principal plus that interest. Every figure comes from the same <strong>simple interest formula</strong>, so you can always repeat the arithmetic by hand. <!-- SILO_START:slot_b -->Next, open the <a class="silo-link" href="/interest-rate-calculator.html">interest rate calculator online</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_b --></p>
+<ul>
+<li><strong>Principal amount:</strong> the starting sum, such as $14,750 borrowed on a loan or placed in a savings account.</li>
+<li><strong>Interest rate:</strong> the yearly figure, typed as 4.35 rather than 0.0435.</li>
+<li><strong>Time period:</strong> the loan term or investment tenure, with its unit.</li>
+<li><strong>Result:</strong> the money earned or owed, then the total accrued amount you repay or collect at maturity.</li>
+</ul>
+<p>Simple interest applies a fixed percentage to the original sum, so the interest you accrue is the same in every period. Unlike an amortization schedule, nothing is carried forward from one period to the next, so each year's interest is a flat number that repeats. That is why many people reach for a basic interest calculator like this one when they only need a quick, fixed answer, whether they plan to borrow or invest.</p>
+        </section>
+        <section id="simple-interest-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="simple-interest-calculator-guide-heading-2">
+<h2 id="simple-interest-calculator-guide-heading-2">Simple Interest Formula and What Each Variable Means</h2>
+<p>The <strong>simple interest formula</strong> multiplies three things together: how much money, how high the rate, and how long it stays in place. <!-- SILO_START:slot_c -->Next, open the <a class="silo-link" href="/apr-calculator.html">free apr calculator</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_c --></p>
+$$I = P \times r \times t$$
+<p>Here <em>I</em> is the interest, <em>P</em> is the principal, <em>r</em> is the annual interest rate in decimal form, and <em>t</em> is the time in years. Divide a percentage by 100 to get <em>r</em>, so 4.35% becomes 0.0435. The rate and the time must use matching units. If you prefer a rate per period, the same idea works as \(I = P \times r \times n\), where <em>n</em> is the number of periods.</p>
+
+<h3>Interest only versus the total amount</h3>
+<p>Add the interest back to the principal to get the <strong>total accrued amount</strong>. The <strong>simple interest plus principal</strong> version lets you compute it in a single step:</p>
+$$A = P(1 + rt)$$
+<p>It gives the same answer as adding the pieces separately, because \(A = P + I\). Financial textbooks also call this the future value of a deposit that earns no interest on interest.</p>
+
+<h3>Solving for the missing variable</h3>
+<p>Any one of the four values can be found when you know the others. Rearranging gives you the <strong>missing variable</strong> directly:</p>
+<ul>
+<li>Interest: \(I = Prt\)</li>
+<li>Principal: \(P = \frac{I}{rt}\)</li>
+<li>Rate: \(r = \frac{1}{t}\left(\frac{A}{P} - 1\right)\)</li>
+<li>Time: \(t = \frac{I}{Pr}\)</li>
+</ul>
+<p>Suppose you want a balance of $10,500 to reach $12,630 after 2.5 years. The needed <strong>simple interest rate</strong> is \(r = \frac{1}{2.5}\left(\frac{12{,}630}{10{,}500} - 1\right) = 0.0811\), or about <strong>8.11%</strong> a year.</p>
+        </section>
+        <section id="simple-interest-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="simple-interest-calculator-guide-heading-3">
+<h2 id="simple-interest-calculator-guide-heading-3">How to Calculate Simple Interest Step by Step</h2>
+<p>To <strong>calculate simple interest</strong> by hand, follow the same order the simple interest calculator uses. Here is a worked example with a $14,750 personal loan at a 4.35% rate for 3 years and 9 months, which is 3.75 in decimal form.</p>
+<ol>
+<li>Convert the rate to a decimal: 4.35 ÷ 100 = 0.0435.</li>
+<li>Convert the term to a single number of years: 3 + 9 ÷ 12 = 3.75.</li>
+<li>Multiply the principal by the rate: $14,750 × 0.0435 = $641.625 of interest per year.</li>
+<li>Multiply by the time: $641.625 × 3.75 = <strong>$2,406.09</strong> of total interest.</li>
+<li>Add the principal back: $14,750 + $2,406.09 = <strong>$17,156.09</strong>.</li>
+</ol>
+$$I = 14{,}750 \times 0.0435 \times 3.75 = 2{,}406.09$$
+<p>Because the same $641.63 is added each year, the balance accumulation is a straight line. The schedule below shows the position at each stage of the term.</p>
+<table>
+<thead>
+<tr><th>Period</th><th>Interest earned</th><th>Total interest</th><th>Balance</th></tr>
+</thead>
+<tbody>
+<tr><td>Year 1</td><td>$641.63</td><td>$641.63</td><td>$15,391.63</td></tr>
+<tr><td>Year 2</td><td>$641.63</td><td>$1,283.25</td><td>$16,033.25</td></tr>
+<tr><td>Year 3</td><td>$641.63</td><td>$1,924.88</td><td>$16,674.88</td></tr>
+<tr><td>Last 0.75 year</td><td>$481.22</td><td>$2,406.09</td><td>$17,156.09</td></tr>
+</tbody>
+</table>
+<p>Notice that the interest column never grows. That is the defining feature of a <strong>simple interest calculation</strong> and the reason it is so easy to verify. The same loan can also be written as a plain sum of monthly interest payments: $53.47 charged across 45 payments comes to the same total.</p>
+<figure><img src="/assets/images/tools/simple-interest-calculator/simple-interest-calculator-loan-balance-waterfall.svg" alt="Waterfall chart of a $14,750 simple interest loan growing by yearly interest to a final balance of $17,156.09"><figcaption>Each year adds the same $641.63 of simple interest to the $14,750 principal until the balance reaches $17,156.09.</figcaption></figure>
+        </section>
+        <section id="simple-interest-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="simple-interest-calculator-guide-heading-4">
+<h2 id="simple-interest-calculator-guide-heading-4">Calculate Simple Interest for Months and Days</h2>
+<p>Most real deals are not exact whole years, so you convert the period before using the formula. The same <strong>time conversion</strong> rule applies to every unit, as the table shows.</p>
+
+<h3>Time conversion factors</h3>
+<table>
+<thead>
+<tr><th>If your time is in</th><th>Divide by</th><th>Example</th></tr>
+</thead>
+<tbody>
+<tr><td>Months</td><td>12</td><td>8 becomes 0.6667</td></tr>
+<tr><td>Weeks</td><td>52</td><td>26 becomes 0.5</td></tr>
+<tr><td>Days</td><td>365</td><td>120 becomes 0.3288</td></tr>
+</tbody>
+</table>
+
+<h3>Simple interest for months</h3>
+<p>Take $14,750 at 4.35% for 8 months. Convert 8 ÷ 12 = 0.6667, then \(I = 14{,}750 \times 0.0435 \times 0.6667 = \$427.75\). Over a full year the same loan costs $641.63, so shorter terms cost proportionally less.</p>
+
+<h3>Simple interest for days</h3>
+<p>Day-based accounts use a 365-day basis. A $6,200 balance at 5.2% held for 120 days earns \(6{,}200 \times 0.052 \times \frac{120}{365} = \$105.99\). Short deposits and some bank products are quoted this way, so counting precisely matters.</p>
+        </section>
+        <section id="simple-interest-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="simple-interest-calculator-guide-heading-5">
+<h2 id="simple-interest-calculator-guide-heading-5">Simple Interest vs Compound Interest</h2>
+<p>The key difference between <strong>simple vs compound</strong> interest is what the rate is applied to. With simple interest, only the original principal earns or costs interest. With <strong>compound interest</strong>, accrued interest is added to the balance and earns more interest of its own, which is why the effect snowballs. The effect is small over a short term and large over a long one.</p>
+<table>
+<thead>
+<tr><th>Feature</th><th>Simple interest</th><th>Compound interest</th></tr>
+</thead>
+<tbody>
+<tr><td>Interest is charged on</td><td>Original principal only</td><td>Principal plus accumulated interest</td></tr>
+<tr><td>Growth pattern</td><td>Straight line</td><td>Curve that steepens</td></tr>
+<tr><td>Interest on $14,750 at 4.35%, 3.75-year term</td><td>$2,406.09</td><td>$2,608.34 (monthly)</td></tr>
+<tr><td>Final balance</td><td>$17,156.09</td><td>$17,358.34</td></tr>
+<tr><td>Easier to verify by hand</td><td>Yes</td><td>No</td></tr>
+</tbody>
+</table>
+<p>The gap is $202.25 after under four years, and it widens every year after that. Under compound interest, the interest rate you quote is not what you actually earn: the effective annual rate is a little higher, since each month's interest joins the principal amount that earns the next month's interest. If you want that version, a compound interest calculator is the right tool; for a fixed, non-compounded figure, use the formula above.</p>
+<figure><img src="/assets/images/tools/simple-interest-calculator/simple-interest-vs-compound-interest-comparison.svg" alt="Dot chart comparing total simple interest and monthly compound interest on $14,750 at 4.35% over 2, 3.75 and 5 years"><figcaption>The gap between simple and compound interest widens from $55 at 2 years to $368 at 5 years.</figcaption></figure>
+        </section>
+        <section id="simple-interest-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="simple-interest-calculator-guide-heading-6">
+<h2 id="simple-interest-calculator-guide-heading-6">What Financial Instruments Use Simple Interest?</h2>
+<p>Simple interest suits products where payments are fixed and nobody should pay interest on interest. Typical examples include:</p>
+<ul>
+<li><strong>Short-term loans:</strong> some auto loan products and personal loans use it, so repaying early cuts the interest paid.</li>
+<li><strong>Bonds:</strong> a bond pays a fixed coupon each period without reinvesting it, which behaves like simple interest for the holder.</li>
+<li><strong>Certificates of deposit:</strong> some short CDs pay non-compounded interest at maturity.</li>
+<li><strong>Dividend income:</strong> a cash dividend is a fixed return that only compounds if you reinvest it.</li>
+</ul>
+<p>Most checking and savings account products and every credit card rely on compound interest instead, so do not assume a balance is simple just because a rate is quoted. Check how the bank describes it, and ask what the lender means by the quoted rate.</p>
+<h3>Who benefits from simple interest?</h3>
+<p>The total interest the calculator returns means two things depending on your side of the deal. For a borrower it is the <strong>cost of borrowing</strong>, and it stays predictable because the charge never grows on itself. For an investor it is the whole <strong>rate of return</strong>, which stays flat for the term because the product does not compound.</p>
+        </section>
+        <section id="simple-interest-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="simple-interest-calculator-guide-heading-7">
+<h2 id="simple-interest-calculator-guide-heading-7">Simple Interest Loan Calculator: Interest-Only Loans and Instalments</h2>
+<p>A <strong>simple interest loan calculator</strong> is also useful for planning repayments. For an <strong>interest-only loan</strong>, the monthly payments are just the yearly interest divided by 12, and the principal stays untouched. On $14,750 at 4.35%, that is $641.63 ÷ 12 = $53.47 each month. A loan that only ever charges interest and never repays principal behaves like a perpetuity, since the same payment repeats forever.</p>
+<p>For equal repayments that clear the whole balance, add the interest to the principal and divide by the number of payments. Using our example, $17,156.09 ÷ 45 gives about $381.25 a month. This is how a <strong>simple interest EMI calculator</strong> estimates <strong>instalments</strong>, though real lenders may follow a different schedule, such as reducing-balance interest. Keep every run of the <strong>simple interest calculators</strong> you try on identical terms so that the comparison between offers is fair.</p>
+        </section>
+        <section id="simple-interest-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="simple-interest-calculator-guide-heading-8">
+<h2 id="simple-interest-calculator-guide-heading-8">Simple Daily Interest on Late Payments</h2>
+<p>Businesses and agencies often apply <strong>simple daily interest</strong> to a <strong>late payment</strong>. The formula divides the annual rate by a day-count basis, usually 360 or 365:</p>
+$$I = P \times \frac{r}{360} \times d$$
+<p>A $4,200 <strong>invoice</strong> paid 18 days late at 5.5% accrues \(4{,}200 \times \frac{0.055}{360} \times 18 = \$11.55\). Because the base is a single invoice amount, the charge stays proportional to the delay. To reproduce it in the calculator, enter the amount owed as the principal, the rate as the interest rate, and the delay on the 360-day basis, or the 365-day basis if your tool offers only that. When a bill is overdue by more than a month, some agencies switch to monthly compounding.</p>
+        </section>
+        <section id="simple-interest-calculator-guide-section-9" class="panel article-content p-4 sm:p-6" aria-labelledby="simple-interest-calculator-guide-heading-9">
+<h2 id="simple-interest-calculator-guide-heading-9">Testing a Seller's Financing Offer with the Simple Interest Formula</h2>
+<p>Marguerite Okafor is buying a used horizontal bandsaw for her cabinet shop. The seller lists it at $11,260 and offers to finance the full price himself at 7.2% simple interest over 18 months. Her credit union is quoting 8.9% on 18-month personal loans, so she wants to know whether the seller's offer is actually cheaper once the whole cost is on the table.</p>
+<p>She enters the numbers into the calculator: principal $11,260, rate 7.2%, term 1.5 years. The screen returns <strong>$1,216.08 in total interest</strong> and an end balance of <strong>$12,476.08</strong>. Dividing that by 18 gives about $693.12 a month. Then she changes only the rate to 8.9% to mirror the credit union, and the interest jumps to $1,503.21, which is $287.13 more.</p>
+<table>
+<thead>
+<tr><th>Option</th><th>Rate</th><th>Total interest</th><th>Monthly payment</th></tr>
+</thead>
+<tbody>
+<tr><td>Seller financing, 18 months</td><td>7.2%</td><td>$1,216.08</td><td>$693.12</td></tr>
+<tr><td>Credit union, 18 months</td><td>8.9%</td><td>$1,503.21</td><td>$709.07</td></tr>
+<tr><td>Seller financing, 12 months</td><td>7.2%</td><td>$810.72</td><td>$1,005.89</td></tr>
+</tbody>
+</table>
+<p>The seller's offer beats the credit union's posted rate, so she keeps it. But the third row catches her attention: shortening the term to 12 months cuts the interest by $405.36, because simple interest scales directly with time. Her shop's cash flow can carry $1,005.89 a month through the slow winter season, so she asks the seller to put the 12-month term in writing and confirms in the contract that no interest is charged on unpaid interest, which is what makes the simple interest formula valid for this deal in the first place.</p>
+        </section>
+        <section id="simple-interest-calculator-guide-section-10" class="panel article-content p-4 sm:p-6" aria-labelledby="simple-interest-calculator-guide-heading-10">
+<h2 id="simple-interest-calculator-guide-heading-10">Reading the Results from the Simple Interest Calculator</h2>
+<p>Once you have a figure, use it to decide something rather than just record it. A few checks help you interpret the numbers from the simple interest calculator:</p>
+<ul>
+<li>Compare the interest with the principal. In our example it is 16.3% of the loan, which shows the real cost of the debt.</li>
+<li>Test a shorter term. Cutting 3.75 down to 3 lowers the interest to $1,924.88, a saving of $481.22.</li>
+<li>Test a different interest rate. At 3.5% the same loan costs $1,935.94, and at 5.5% it costs $3,042.19.</li>
+<li>Ask how interest is applied. If a lender does not say the interest is simple, ask, because the repayment could be higher.</li>
+</ul>
+<p>Results respond in proportion to each input, so doubling the principal, the rate or the time doubles the interest. Keeping that in mind makes it easier to spot an error when a result looks wrong.</p>
+<figure><img src="/assets/images/tools/simple-interest-calculator/simple-interest-by-rate-and-term-heatmap.svg" alt="Heatmap of total simple interest on $14,750 by interest rate and time period, with the 4.35% for 3.75 years cell outlined"><figcaption>Total interest for three rates and four terms, with the worked example's $2,406 cell outlined.</figcaption></figure>
+        </section>
+        <section id="simple-interest-calculator-guide-section-11" class="panel article-content p-4 sm:p-6" aria-labelledby="simple-interest-calculator-guide-heading-11">
+<h2 id="simple-interest-calculator-guide-heading-11">Advantages and Limits of Simple Interest</h2>
+<p>Simple interest earns its place because it is transparent. You can see exactly what a borrower pays in each period, which makes it easy to budget, compare lenders and spot hidden charges. It also rewards early repayment, since a shorter term directly shrinks the interest, and there is no penalty from a growing balance.</p>
+<ul>
+<li><strong>Predictable cost:</strong> the interest rate and the principal amount fix the charge for every period, so a fixed payment plan is easy to build.</li>
+<li><strong>Easy comparison:</strong> two loans with the same rate and term differ only by principal, which makes offers simple to rank.</li>
+<li><strong>Lower cost for borrowers:</strong> no interest is charged on interest that has already built up.</li>
+<li><strong>Weaker growth for savers:</strong> an investment that does not compound trails one that does, especially over long terms.</li>
+</ul>
+<p>The main limit is that most long-term finance products compound, so the calculator's result is best treated as a floor for them, as the comparison above shows. For short loans, invoices and fixed-coupon products, though, the figure it returns is exactly the right measure.</p>
+        </section>
+        <section id="simple-interest-calculator-guide-section-12" class="panel article-content p-4 sm:p-6" aria-labelledby="simple-interest-calculator-guide-heading-12">
+<h2 id="simple-interest-calculator-guide-heading-12">Common Mistakes When You Calculate Simple Interest</h2>
+<p>Small slips cause most wrong answers. Watch for these before you trust a result from any interest calculator:</p>
+<ul>
+<li>Typing 0.0435 into a field that expects a percentage, which makes the interest 100 times too small.</li>
+<li>Mixing units, such as a yearly interest rate with a term counted in months.</li>
+<li>Forgetting to add the interest back to the principal when you want the final balance.</li>
+<li>Applying the formula to an account that actually compounds, such as a credit card.</li>
+</ul>
+<p>One last check: if a product relies on compounding, such as a mortgage, the simple result understates what an investment will earn or what you will repay, so compare both figures before you commit to any investment.</p>
+        </section>
+      </div>
+
+      <section id="simple-interest-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="simple-interest-calculator-faq-heading" data-section="faq">
+        <h2 id="simple-interest-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Simple Interest Calculator questions</h2>
+        <div id="simple-interest-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="simple-interest-calculator-faq-1" class="faq-item" open><summary id="simple-interest-calculator-faq-1-summary" class="faq-summary"><h3 id="simple-interest-calculator-faq-1-question" class="faq-question">What is simple interest?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="simple-interest-calculator-faq-1-answer" class="faq-answer"><p>Simple interest is interest calculated only on the original principal. Interest that has already been earned or charged is never added to the base, so the same amount accrues in every period.</p></div></details>
+          <details id="simple-interest-calculator-faq-2" class="faq-item" open><summary id="simple-interest-calculator-faq-2-summary" class="faq-summary"><h3 id="simple-interest-calculator-faq-2-question" class="faq-question">What is the simple interest formula?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="simple-interest-calculator-faq-2-answer" class="faq-answer"><p>Interest = Principal × Rate × Time, written I = Prt, where the rate is a decimal and the time is in years. The end balance is A = P(1 + rt).</p></div></details>
+          <details id="simple-interest-calculator-faq-3" class="faq-item" open><summary id="simple-interest-calculator-faq-3-summary" class="faq-summary"><h3 id="simple-interest-calculator-faq-3-question" class="faq-question">How do I calculate simple interest for months or days?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="simple-interest-calculator-faq-3-answer" class="faq-answer"><p>Convert the period to years first: divide months by 12, weeks by 52, or days by 365 (or 360 for some loans and invoices). You can also pick the term unit in the calculator and it converts for you.</p></div></details>
+          <details id="simple-interest-calculator-faq-4" class="faq-item" open><summary id="simple-interest-calculator-faq-4-summary" class="faq-summary"><h3 id="simple-interest-calculator-faq-4-question" class="faq-question">What is the difference between simple and compound interest?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="simple-interest-calculator-faq-4-answer" class="faq-answer"><p>Simple interest only ever applies to the original principal, while compound interest also applies to interest already added to the balance. Over the same term and rate, compound interest produces a higher total.</p></div></details>
+          <details id="simple-interest-calculator-faq-5" class="faq-item" open><summary id="simple-interest-calculator-faq-5-summary" class="faq-summary"><h3 id="simple-interest-calculator-faq-5-question" class="faq-question">Which loans and investments use simple interest?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="simple-interest-calculator-faq-5-answer" class="faq-answer"><p>Many short-term and auto loans, some personal loans, bond coupons and certain short certificates of deposit use simple interest. Most savings accounts and credit cards compound instead.</p></div></details>
+          <details id="simple-interest-calculator-faq-6" class="faq-item" open><summary id="simple-interest-calculator-faq-6-summary" class="faq-summary"><h3 id="simple-interest-calculator-faq-6-question" class="faq-question">Does the interest rate change over time with simple interest?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="simple-interest-calculator-faq-6-answer" class="faq-answer"><p>No. The rate stays fixed for the whole term and is applied to the same principal, so the interest earned or owed is identical every year.</p></div></details>
+          <details id="simple-interest-calculator-faq-7" class="faq-item" open><summary id="simple-interest-calculator-faq-7-summary" class="faq-summary"><h3 id="simple-interest-calculator-faq-7-question" class="faq-question">How do I find the interest rate or time if I know the interest?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="simple-interest-calculator-faq-7-answer" class="faq-answer"><p>Rearrange the formula: r = I ÷ (P × t) for the rate and t = I ÷ (P × r) for the time. Keep the rate and the time in matching units.</p></div></details>
+          <details id="simple-interest-calculator-faq-8" class="faq-item" open><summary id="simple-interest-calculator-faq-8-summary" class="faq-summary"><h3 id="simple-interest-calculator-faq-8-question" class="faq-question">How is an interest-only loan payment worked out?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="simple-interest-calculator-faq-8-answer" class="faq-answer"><p>For an interest-only loan the payment is the yearly interest divided by the number of payments per year, so on a monthly schedule it is Principal × annual rate ÷ 12. The principal balance does not change.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="simple-interest-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="simple-interest-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="simple-interest-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="simple-interest-calculator-ad-bottom-leaderboard">
+            <ins id="simple-interest-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("simple-interest-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="simple-interest-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="simple-interest-calculator-right-rail-top" class="mb-6">
+        <aside id="simple-interest-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="simple-interest-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="simple-interest-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="simple-interest-calculator-ad-right-rail-rectangle">
+            <ins id="simple-interest-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("simple-interest-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="simple-interest-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="simple-interest-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="simple-interest-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="simple-interest-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="simple-interest-calculator-ad-right-rail-skyscraper">
+            <ins id="simple-interest-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("simple-interest-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="simple-interest-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="simple-interest-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="simple-interest-calculator-footer-brand">
+        <a id="simple-interest-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="simple-interest-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="simple-interest-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="simple-interest-calculator-footer-categories" aria-labelledby="simple-interest-calculator-footer-categories-heading">
+        <h2 id="simple-interest-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="simple-interest-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="simple-interest-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="simple-interest-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="simple-interest-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="simple-interest-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="simple-interest-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="simple-interest-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="simple-interest-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="simple-interest-calculator-footer-company" aria-labelledby="simple-interest-calculator-footer-company-heading">
+        <h2 id="simple-interest-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="simple-interest-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="simple-interest-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="simple-interest-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="simple-interest-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="simple-interest-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="simple-interest-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="simple-interest-calculator-footer-bottom" class="border-t border-line">
+      <p id="simple-interest-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="simple-interest-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Simple interest: I = P x R x T and A = P(1 + R x T), with R the yearly rate (a monthly rate x 12)
+  // and T in years (months / 12, days / 365). Rearranged to solve for any one unknown:
+  //   P = A / (1 + RT),  R = (A/P - 1) / T,  T = (A/P - 1) / R.
+  // Checked in Node (five.test.js): $10,000 at 6% for 5 years = $3,000 interest, $13,000 balance;
+  // solving back from $13,000 returns $10,000, 6% and 5 years; $20,000 at 3% for 10 years = $26,000;
+  // 1% a month for 18 months on $5,000 = $900; $1,000 at 5% for 73 days = $10.00;
+  // compounded-yearly comparison $10,000 x 1.06^5 = $13,382.26.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 });
+  var MODES = ['end', 'principal', 'rate', 'term'];
+  var RADIOS = { end: 'siSolveEnd', principal: 'siSolvePrincipal', rate: 'siSolveRate', term: 'siSolveTerm' };
+  var FIELDS = { end: 'siBalanceField', principal: 'siPrincipalField', rate: 'siRateField', term: 'siTermField' };
+  var LABELS = { end: 'Total interest', principal: 'Principal needed', rate: 'Interest rate needed', term: 'Time needed' };
+  var UNIT_YEARS = { years: 1, months: 1 / 12, days: 1 / 365 };
+  var UNIT_NAMES = { years: ['year', 'years'], months: ['month', 'months'], days: ['day', 'days'] };
+  var OUTPUTS = ['siAnswer', 'siEnd', 'siPrincipalOut', 'siInterest', 'siRateOut', 'siTermOut', 'siPerYear', 'siPerDay', 'siCompound'];
+
+  // --- calc start
+  function interest(p, rYear, tYears) { return p * rYear * tYears; }
+  function solvePrincipal(a, rYear, tYears) { return a / (1 + rYear * tYears); }
+  function solveRate(a, p, tYears) { return (a / p - 1) / tYears; }
+  function solveTerm(a, p, rYear) { return (a / p - 1) / rYear; }
+  // --- calc end
+
+  function num(id) {
+    var v = parseFloat(document.getElementById(id).value);
+    return isNaN(v) ? NaN : v;
+  }
+
+  function fmt(x, digits) { return x.toFixed(digits).replace(/\.?0+$/, ''); }
+
+  function mode() {
+    for (var k = 0; k < MODES.length; k++) if (document.getElementById(RADIOS[MODES[k]]).checked) return MODES[k];
+    return 'end';
+  }
+
+  function fail(msg) {
+    var error = document.getElementById('siError');
+    error.hidden = false;
+    error.textContent = msg;
+    OUTPUTS.forEach(function (id) { document.getElementById(id).textContent = '–'; });
+    document.getElementById('siSchedule').innerHTML = '';
+  }
+
+  function update() {
+    var solve = mode();
+    MODES.forEach(function (m) { document.getElementById(FIELDS[m]).hidden = m === solve; });
+    document.getElementById('siAnswerLabel').textContent = LABELS[solve];
+    document.getElementById('siError').hidden = true;
+
+    var a = num('siBalance'), p = num('siPrincipal'), rate = num('siRate'), term = num('siTerm');
+    var rateUnit = document.getElementById('siRateUnit').value, termUnit = document.getElementById('siTermUnit').value;
+    var rateMult = rateUnit === 'month' ? 12 : 1, unitYears = UNIT_YEARS[termUnit];
+    var need = { end: [p, rate, term], principal: [a, rate, term], rate: [a, p, term], term: [a, p, rate] }[solve];
+    if (need.some(isNaN)) return fail('Fill in every visible field with a number.');
+    if (solve !== 'principal' && p <= 0) return fail('Enter a principal above $0.');
+    if (solve !== 'end' && a <= 0) return fail('Enter an end balance above $0.');
+    if (solve !== 'rate' && (rate < 0 || rate > 1000)) return fail('Enter an interest rate from 0 to 1,000%.');
+    if (solve !== 'term' && (term <= 0 || term * unitYears > 1000)) return fail('Enter a term above 0 and no longer than 1,000 years.');
+    if ((solve === 'rate' || solve === 'term') && a < p) return fail('The end balance must be at least the principal, since interest only adds to it.');
+
+    var rYear = rate / 100 * rateMult, tYears = term * unitYears;
+    if (solve === 'principal') p = solvePrincipal(a, rYear, tYears);
+    else if (solve === 'rate') { rYear = solveRate(a, p, tYears); rate = rYear / rateMult * 100; }
+    else if (solve === 'term') {
+      if (rYear === 0) return fail(a === p ? 'At 0% the balance never changes, so any term works.' : 'At 0% interest the balance never grows. Enter a rate above 0.');
+      tYears = solveTerm(a, p, rYear); term = tYears / unitYears;
+      if (tYears > 1000) return fail('At this rate it would take more than 1,000 years.');
+    }
+    var i = interest(p, rYear, tYears), end = p + i;
+    var compound = p * Math.pow(1 + rYear, tYears);
+    if (![p, i, end, rate, term].every(isFinite) || Math.abs(end) > 1e15) return fail('That result is too large to show. Try smaller numbers.');
+
+    var unitName = UNIT_NAMES[termUnit];
+    var termText = fmt(term, 2) + ' ' + (Math.abs(term - 1) < 1e-9 ? unitName[0] : unitName[1]);
+    var rateText = fmt(rate, 4) + '% per ' + rateUnit;
+    var answer = { end: money.format(i), principal: money.format(p), rate: rateText, term: termText }[solve];
+    document.getElementById('siAnswer').textContent = answer;
+    document.getElementById('siEnd').textContent = money.format(end);
+    document.getElementById('siPrincipalOut').textContent = money.format(p);
+    document.getElementById('siInterest').textContent = money.format(i);
+    document.getElementById('siRateOut').textContent = rateText + (rateUnit === 'month' ? ' (' + fmt(rYear * 100, 4) + '% a year)' : '');
+    document.getElementById('siTermOut').textContent = termText;
+    document.getElementById('siPerYear').textContent = money.format(p * rYear);
+    document.getElementById('siPerDay').textContent = money.format(p * rYear / 365);
+    document.getElementById('siCompound').textContent = isFinite(compound) && compound < 1e15 ? money.format(compound) : 'Too large to show';
+
+    // Schedule: one row per term unit; switch to years when that would be more than 1,200 rows.
+    var step = unitYears, count = term, head = unitName[0].charAt(0).toUpperCase() + unitName[0].slice(1);
+    if (count > 1200) { step = 1; count = tYears; head = 'Year'; }
+    document.getElementById('siPeriodHead').textContent = head;
+    var rows = [], perPeriod = p * rYear * step, whole = Math.ceil(count - 1e-9);
+    for (var k = 1; k <= whole && k <= 1200; k++) {
+      var elapsed = Math.min(k, count) * step, total = p * rYear * elapsed, part = k > count + 1e-9;
+      rows.push('<tr><td>' + k + (part ? ' (part)' : '') + '</td><td>' + money.format(part ? total - perPeriod * (k - 1) : perPeriod) +
+                '</td><td>' + money.format(total) + '</td><td>' + money.format(p + total) + '</td></tr>');
+    }
+    document.getElementById('siSchedule').innerHTML = rows.join('');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('siForm');
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

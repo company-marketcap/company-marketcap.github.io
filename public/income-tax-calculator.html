@@ -1,0 +1,1085 @@
+<!doctype html>
+<html lang="en" id="income-tax-calculator-document" data-page-slug="income-tax-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Income Tax Calculator: Estimate Federal Taxes &amp; Refund</title>
+  <meta name="description" content="Use this free income tax calculator to estimate your federal taxes, refund or amount owed from your income, filing status and deductions for the 2025 tax year.">
+  <link rel="canonical" href="https://company-marketcap.github.io/income-tax-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Income Tax Calculator: Estimate Federal Taxes &amp; Refund">
+  <meta property="og:description" content="Use this free income tax calculator to estimate your federal taxes, refund or amount owed from your income, filing status and deductions for the 2025 tax year.">
+  <meta property="og:url" content="https://company-marketcap.github.io/income-tax-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Income Tax Calculator", "url": "https://company-marketcap.github.io/income-tax-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Use this free income tax calculator to estimate your federal taxes, refund or amount owed from your income, filing status and deductions for the 2025 tax year."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Income Tax & Tax Planning", "item": "https://company-marketcap.github.io/financial-calculators.html#tax-calculators"}, {"@type": "ListItem", "position": 4, "name": "Income Tax Calculator", "item": "https://company-marketcap.github.io/income-tax-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How does an income tax calculator estimate my federal tax?", "acceptedAnswer": {"@type": "Answer", "text": "It adds up your income, subtracts adjustments such as 401(k) and IRA contributions to reach adjusted gross income, subtracts the larger of the standard or itemized deduction, then charges each slice of the remaining taxable income at its bracket rate. Credits and the tax you already paid through withholding then give your refund or amount owed."}}, {"@type": "Question", "name": "What is the difference between a marginal and an effective tax rate?", "acceptedAnswer": {"@type": "Answer", "text": "Your marginal rate is the bracket your last dollar of taxable income falls into, so it tells you what extra income or a bigger deduction is worth. Your effective rate is total federal tax divided by income, which blends every bracket into one lower percentage."}}, {"@type": "Question", "name": "Should I take the standard deduction or itemize?", "acceptedAnswer": {"@type": "Answer", "text": "Take whichever is larger. The standard deduction is a fixed amount set by your filing status, while itemizing adds up mortgage interest, state and local taxes up to the cap, charitable gifts and other qualifying costs. Leave Deduction Type on 'Whichever is larger' and the calculator picks for you."}}, {"@type": "Question", "name": "What is the difference between a tax deduction and a tax credit?", "acceptedAnswer": {"@type": "Answer", "text": "A deduction lowers the income that gets taxed, so it saves you your bracket rate on that amount. A credit subtracts directly from the tax itself, so a $1,000 credit saves $1,000. Some credits, such as part of the child tax credit, are refundable and can increase your refund."}}, {"@type": "Question", "name": "Why does my estimated refund change when I update my withholding?", "acceptedAnswer": {"@type": "Answer", "text": "Your refund is the tax you have already paid through withholding and estimated payments minus the tax you owe. Raising or lowering the federal tax withheld shifts that gap dollar for dollar, which is why updating your W-4 is the simplest way to move your refund toward zero."}}, {"@type": "Question", "name": "Does this calculator include state and local income tax?", "acceptedAnswer": {"@type": "Answer", "text": "It estimates state and local tax by applying the combined rate you enter to your state taxable income, so look up your own state and city rates for a closer figure. Rules such as state-specific deductions and credits are not modeled, so treat that line as a rough guide."}}, {"@type": "Question", "name": "Do I need to enter my spouse's information?", "acceptedAnswer": {"@type": "Answer", "text": "Only when you choose Married Filing Jointly. The spouse fields add a second set of wages, business income and withholding to the same return. For other filing statuses they are ignored."}}, {"@type": "Question", "name": "How accurate is this estimate compared with my filed return?", "acceptedAnswer": {"@type": "Answer", "text": "It follows the published federal brackets, deductions and common credits, so it is a reliable planning figure. It does not model the alternative minimum tax, the qualified business income deduction or every phase-out, so confirm exact amounts with IRS forms or a tax professional before you file."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="income-tax-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="income-tax-calculator" data-page-type="calculator">
+  <a id="income-tax-calculator-skip-link" href="#income-tax-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="income-tax-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="income-tax-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="income-tax-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="income-tax-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="income-tax-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="income-tax-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="income-tax-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="income-tax-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="income-tax-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="income-tax-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="income-tax-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="income-tax-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="income-tax-calculator-header-search-status" aria-controls="income-tax-calculator-header-search-results" data-search-input="header">
+              <p id="income-tax-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="income-tax-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="income-tax-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="income-tax-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="income-tax-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="income-tax-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="income-tax-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="income-tax-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="income-tax-calculator-mobile-search-status" aria-controls="income-tax-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="income-tax-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="income-tax-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="income-tax-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="income-tax-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="income-tax-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="income-tax-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="income-tax-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="income-tax-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="income-tax-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="income-tax-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="income-tax-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="income-tax-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="income-tax-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="income-tax-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="income-tax-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="income-tax-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="income-tax-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="income-tax-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="income-tax-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="income-tax-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="income-tax-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="income-tax-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="income-tax-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="income-tax-calculator-sidebar-search-status" aria-controls="income-tax-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="income-tax-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="income-tax-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="income-tax-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="income-tax-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="income-tax-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="income-tax-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="income-tax-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="income-tax-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="income-tax-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="income-tax-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="income-tax-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="income-tax-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="income-tax-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="income-tax-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="income-tax-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="income-tax-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="income-tax-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="income-tax-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="income-tax-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="income-tax-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="income-tax-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="income-tax-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="income-tax-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators" aria-current="true">Income Tax &amp; Planning</a></li><li><a id="income-tax-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="income-tax-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="income-tax-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="income-tax-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="income-tax-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="income-tax-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="income-tax-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="income-tax-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="income-tax-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="income-tax-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="income-tax-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="income-tax-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="income-tax-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="income-tax-calculator" data-calculator-slug="income-tax-calculator" data-sub-category-slug="tax-calculators">
+      <aside id="income-tax-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="income-tax-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="income-tax-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="income-tax-calculator-ad-top-leaderboard">
+            <ins id="income-tax-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("income-tax-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="income-tax-calculator-intro-area" class="space-y-4">
+        <nav id="income-tax-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="income-tax-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="income-tax-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="income-tax-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="income-tax-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#tax-calculators" itemprop="item"><span itemprop="name">Income Tax &amp; Tax Planning</span></a><meta itemprop="position" content="3"></li>
+            <li id="income-tax-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Income Tax Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/income-tax-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="income-tax-calculator-hero-section" aria-labelledby="income-tax-calculator-hero-heading" data-section="hero">
+          <h1 id="income-tax-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Income Tax Calculator: Estimate Federal Taxes &amp; Refund</h1>
+          <p id="income-tax-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Wondering how much of your pay the IRS will actually keep? An income tax calculator turns your earnings, filing status and deductions into a number you can plan around. The estimated tax refund or amount owed it returns tells you whether your pay is on track before you ever submit a tax return. This guide shows what a good tax calculator does behind the scenes, walks one full example with real figures, and explains how to read the result. <!-- SILO_START:slot_a -->The <a class="silo-link" href="/salary-calculator.html">salary calculator online</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="income-tax-calculator-tool" class="space-y-6" data-page-slug="income-tax-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="itFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="itForm" class="space-y-5" novalidate aria-labelledby="itFormHeading">
+      <h2 id="itFormHeading" class="panel-heading">Enter your 2026 tax details</h2>
+      <p class="badge badge-sky">2026 federal tax year (return filed in 2027)</p>
+      <div><label for="itStatus" class="form-label">Filing status</label>
+        <select id="itStatus" class="form-select"><option value="single" selected>Single</option><option value="mfj">Married filing jointly</option><option value="mfs">Married filing separately</option><option value="hoh">Head of household</option><option value="qss">Qualifying surviving spouse</option></select></div>
+      <div class="form-row form-row-2">
+<div><label for="itWages" class="form-label">Wages, salaries and tips</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="itWages" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1000" value="75000" inputmode="decimal"></div><p class="form-hint">Form W-2, box 1, for everyone on the return.</p></div>
+<div><label for="itWithheld" class="form-label">Federal income tax withheld</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="itWithheld" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="8000" inputmode="decimal"></div><p class="form-hint">Form W-2, box 2, plus any withholding on 1099s.</p></div>
+      </div>
+      <div class="form-row form-row-2">
+<div><label for="itKids" class="form-label">Children under 17</label><div class="input-group"><input type="number" id="itKids" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="20" step="1" value="0" inputmode="numeric"></div></div>
+<div><label for="itOtherDeps" class="form-label">Other dependents</label><div class="input-group"><input type="number" id="itOtherDeps" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="20" step="1" value="0" inputmode="numeric"></div><p class="form-hint">Older children, students and relatives you support.</p></div>
+      </div>
+      <div class="form-choice-group form-choice-group-inline">
+        <label class="form-choice"><input type="checkbox" id="itYou65" class="form-choice-input"><span class="form-choice-text">I am 65 or older</span></label>
+        <label class="form-choice"><input type="checkbox" id="itYouBlind" class="form-choice-input"><span class="form-choice-text">I am blind</span></label>
+        <label class="form-choice"><input type="checkbox" id="itSpouse65" class="form-choice-input"><span class="form-choice-text">Spouse is 65 or older</span></label>
+        <label class="form-choice"><input type="checkbox" id="itSpouseBlind" class="form-choice-input"><span class="form-choice-text">Spouse is blind</span></label>
+      </div>
+      <details class="form-details">
+        <summary class="form-details-summary">Other income</summary>
+        <div class="mt-4 space-y-5">
+          <div class="form-row form-row-2">
+<div><label for="itInterest" class="form-label">Taxable interest</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="itInterest" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="0" inputmode="decimal"></div></div>
+<div><label for="itDividends" class="form-label">Ordinary dividends</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="itDividends" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="0" inputmode="decimal"></div><p class="form-hint">Form 1099-DIV, box 1a.</p></div>
+          </div>
+          <div class="form-row form-row-2">
+<div><label for="itQualDiv" class="form-label">Qualified dividends</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="itQualDiv" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="0" inputmode="decimal"></div><p class="form-hint">Part of ordinary dividends (box 1b).</p></div>
+<div><label for="itTaxExempt" class="form-label">Tax-exempt interest</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="itTaxExempt" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="0" inputmode="decimal"></div><p class="form-hint">Only affects how much Social Security is taxed.</p></div>
+          </div>
+          <div class="form-row form-row-2">
+<div><label for="itShortGain" class="form-label">Net short-term capital gain or loss</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="itShortGain" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="-100000000" step="100" value="0" inputmode="decimal"></div><p class="form-hint">Use a minus sign for a loss.</p></div>
+<div><label for="itLongGain" class="form-label">Net long-term capital gain or loss</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="itLongGain" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="-100000000" step="100" value="0" inputmode="decimal"></div><p class="form-hint">Assets held more than a year.</p></div>
+          </div>
+          <div class="form-row form-row-2">
+<div><label for="itSelfEmp" class="form-label">Self-employment net profit</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="itSelfEmp" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="0" inputmode="decimal"></div><p class="form-hint">Schedule C profit. Self-employment tax is added.</p></div>
+<div><label for="itRetire" class="form-label">Taxable IRA, pension and annuity income</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="itRetire" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="0" inputmode="decimal"></div></div>
+          </div>
+          <div class="form-row form-row-2">
+<div><label for="itSocSec" class="form-label">Social Security benefits</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="itSocSec" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="0" inputmode="decimal"></div><p class="form-hint">Total benefits (Form SSA-1099, box 5).</p></div>
+<div><label for="itOtherInc" class="form-label">Other taxable income</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="itOtherInc" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="0" inputmode="decimal"></div><p class="form-hint">Unemployment, rental profit, alimony from pre-2019 divorces and similar.</p></div>
+          </div>
+        </div>
+      </details>
+      <details class="form-details">
+        <summary class="form-details-summary">Adjustments and new 2026 deductions</summary>
+        <div class="mt-4 space-y-5">
+          <div class="form-row form-row-2">
+<div><label for="itIra" class="form-label">Traditional IRA deduction</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="itIra" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="0" inputmode="decimal"></div></div>
+<div><label for="itHsa" class="form-label">HSA contributions you made yourself</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="itHsa" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="0" inputmode="decimal"></div><p class="form-hint">Not ones made through payroll.</p></div>
+          </div>
+          <div class="form-row form-row-2">
+<div><label for="itStudentLoan" class="form-label">Student loan interest</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="itStudentLoan" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="0" inputmode="decimal"></div><p class="form-hint">Up to $2,500, phased out at higher incomes.</p></div>
+<div><label for="itOtherAdj" class="form-label">Other adjustments</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="itOtherAdj" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="0" inputmode="decimal"></div><p class="form-hint">Educator expenses, self-employed health insurance or retirement plans and similar.</p></div>
+          </div>
+          <div class="form-row form-row-2">
+<div><label for="itTips" class="form-label">Qualified tips</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="itTips" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="0" inputmode="decimal"></div><p class="form-hint">Up to $25,000. Not for married filing separately.</p></div>
+<div><label for="itOvertime" class="form-label">Qualified overtime premium</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="itOvertime" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="0" inputmode="decimal"></div><p class="form-hint">The extra half in time-and-a-half pay.</p></div>
+          </div>
+<div><label for="itCarInterest" class="form-label">Interest on a new U.S.-assembled car loan</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="itCarInterest" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="0" inputmode="decimal"></div><p class="form-hint">Up to $10,000 for a personal vehicle bought new after 2024.</p></div>
+        </div>
+      </details>
+      <details class="form-details">
+        <summary class="form-details-summary">Itemized deductions</summary>
+        <div class="mt-4 space-y-5">
+          <p class="form-hint">The calculator uses whichever is larger: these itemized deductions or your standard deduction.</p>
+          <div class="form-row form-row-2">
+<div><label for="itMedical" class="form-label">Medical and dental expenses</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="itMedical" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="0" inputmode="decimal"></div><p class="form-hint">Only the part above 7.5% of AGI counts.</p></div>
+<div><label for="itSalt" class="form-label">State and local taxes</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="itSalt" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="0" inputmode="decimal"></div><p class="form-hint">Income or sales tax plus property taxes, before the cap.</p></div>
+          </div>
+          <div class="form-row form-row-2">
+<div><label for="itMortgage" class="form-label">Mortgage interest and points</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="itMortgage" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="0" inputmode="decimal"></div><p class="form-hint">Form 1098. Include deductible mortgage insurance.</p></div>
+<div><label for="itOtherItem" class="form-label">Other itemized deductions</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="itOtherItem" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="0" inputmode="decimal"></div></div>
+          </div>
+          <div class="form-row form-row-2">
+<div><label for="itCharityCash" class="form-label">Cash gifts to charity</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="itCharityCash" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="0" inputmode="decimal"></div></div>
+<div><label for="itCharityNonCash" class="form-label">Non-cash gifts to charity</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="itCharityNonCash" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="0" inputmode="decimal"></div></div>
+          </div>
+        </div>
+      </details>
+      <details class="form-details">
+        <summary class="form-details-summary">Other credits and payments</summary>
+        <div class="mt-4 space-y-5">
+          <div class="form-row form-row-2">
+<div><label for="itEstimated" class="form-label">Estimated tax payments</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="itEstimated" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="0" inputmode="decimal"></div><p class="form-hint">Including any prior-year overpayment applied to 2026.</p></div>
+<div><label for="itOtherCredits" class="form-label">Other nonrefundable credits</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="itOtherCredits" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="0" inputmode="decimal"></div><p class="form-hint">Child care, education, retirement saver's and similar.</p></div>
+          </div>
+<div><label for="itRefundable" class="form-label">Other refundable credits</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="itRefundable" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="0" inputmode="decimal"></div><p class="form-hint">Refundable education credit, premium tax credit and similar.</p></div>
+          <div class="form-choice-group">
+            <label class="form-choice"><input type="checkbox" id="itEitc" class="form-choice-input" checked><span class="form-choice-text">Estimate the earned income credit<span class="form-choice-note">Uses your children under 17 as qualifying children. Without children, you must be 25 to 64.</span></span></label>
+          </div>
+        </div>
+      </details>
+      <p id="itError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="itResults" aria-live="polite" aria-labelledby="itResultsHeading">
+      <h2 id="itResultsHeading" class="panel-heading">Your 2026 estimate</h2>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p id="itResultLabel" class="stat-label">Estimated refund</p><p id="itResult" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Total federal tax</p><p id="itTotalTax" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Taxable income</p><p id="itTaxable" class="stat-value">–</p></div>
+      </div>
+      <div class="mt-4">
+        <div class="result-row"><span class="result-term">Adjusted gross income (AGI)</span><span id="itAgi" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Deduction used</span><span id="itDeduction" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Marginal tax bracket</span><span id="itMarginal" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Effective tax rate (total tax ÷ total income)</span><span id="itEffective" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Total payments and refundable credits</span><span id="itPayments" class="result-value">–</span></div>
+      </div>
+      <p id="itNote" class="callout callout-note mt-4 text-sm" hidden></p>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="itBreakdownHeading" data-section="breakdown">
+  <h2 id="itBreakdownHeading" class="panel-heading">Your Form 1040, line by line</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">A summary of how the estimate is built, in the same order as the 2026 Form 1040.</p>
+  <div class="table-scroll mt-5" tabindex="0" role="region" aria-labelledby="itBreakdownHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Item</th><th scope="col">Amount</th></tr></thead>
+      <tbody id="itBreakdown"></tbody>
+    </table>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="itBracketHeading" data-section="brackets">
+  <h2 id="itBracketHeading" class="panel-heading">How your ordinary income is taxed</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">The part of your taxable income taxed at ordinary rates, spread across the 2026 brackets for your filing status. Qualified dividends and long-term gains are taxed separately at 0%, 15% or 20%.</p>
+  <div class="table-scroll mt-5" tabindex="0" role="region" aria-labelledby="itBracketHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Rate</th><th scope="col">Bracket</th><th scope="col">Income taxed</th><th scope="col">Tax</th></tr></thead>
+      <tbody id="itBrackets"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="income-tax-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="income-tax-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Wondering how much of your pay the IRS will actually keep? An income tax calculator turns your earnings, filing status and deductions into a number you can plan around. The estimated tax refund or amount owed it returns tells you whether your pay is on track before you ever submit a tax return. This guide shows what a good tax calculator does behind the scenes, walks one full example with real figures, and explains how to read the result. <!-- SILO_START:slot_a_m -->The <a class="silo-link" href="/salary-calculator.html">salary calculator online</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="income-tax-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="income-tax-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="income-tax-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="income-tax-calculator-ad-in-feed">
+            <ins id="income-tax-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("income-tax-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="income-tax-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="income-tax-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="income-tax-calculator-guide-heading-1">
+<h2 id="income-tax-calculator-guide-heading-1">How a Federal Income Tax Calculator Works</h2>
+<p>A <strong>federal income tax calculator</strong> follows the same path the IRS uses on Form 1040, only faster. You supply your earnings, the tool subtracts what the law lets you subtract, and then it applies the rates for your status one slice at a time. Any dependable tax calculator, from a quick tax estimator to a full tax refund calculator, moves through the same four stages.</p>
+<ol>
+<li><strong>Add up gross income:</strong> paychecks, interest income, dividends and any other earnings for the tax year.</li>
+<li><strong>Subtract adjustments:</strong> retirement contributions and similar items bring you down to adjusted gross income.</li>
+<li><strong>Subtract deductions:</strong> either the standard deduction or itemized deductions leaves the amount the brackets will tax.</li>
+<li><strong>Apply the rates:</strong> each slice is charged at its own percentage, then any credit and money already paid settle the final balance.</li>
+</ol>
+<p>Each stage mirrors a line on the real form, so a result from a reliable tax calculator should land close to what you later file. The remaining sections explain every stage in detail and show what happens to real pay.</p>
+
+<h3>From Earnings to Taxable Income</h3>
+<p>Your <strong>gross income</strong> is everything you earned before anything was taken out. It is always a bigger number than the one the government taxes, because <strong>taxable income</strong> is what remains after adjustments and deductions. A salary of $87,400 does not mean $87,400 is charged tax; contributions to a 401(k) and a few other items shrink the figure first. The only number the rates ever see is the one left over, which is why the tool asks about deductions before it shows a single dollar of tax.</p>
+
+<h3>Tax Brackets and the Marginal Tax Rate</h3>
+<p>The United States uses a <strong>progressive</strong> system, so higher slices of income face higher percentages. The seven <strong>tax brackets</strong> run from 10% to 37%. Your <strong>marginal rate</strong> is what the last dollar you earn costs, not what all of your income costs. Moving into a higher band never reduces your pay, because only the dollars above the threshold are charged the higher percentage. That single idea clears up most of the fear people have about a raise pushing them into a bigger bill.</p>
+        </section>
+        <section id="income-tax-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="income-tax-calculator-guide-heading-2">
+<h2 id="income-tax-calculator-guide-heading-2">Inputs a Tax Refund Calculator Needs From You</h2>
+<p>This kind of tool is only as accurate as the details you give it. Gather your latest pay stub or W-2 first, because most of the figures it needs are printed there. Nearly every tool asks the same short list of questions, and the answers shape every line of the result. <!-- SILO_START:slot_c -->The <a class="silo-link" href="/life-insurance-calculator.html">free life insurance calculator</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_c --></p>
+
+<h3>Filing Status and Dependents</h3>
+<p>Your <strong>filing status</strong> controls which rates and which standard deduction apply, so it is the first question every tool asks. The IRS recognizes five choices: single, <strong>married filing jointly</strong>, <strong>married filing separately</strong>, <strong>head of household</strong> and qualifying surviving spouse. Married couples usually owe less together, though a big gap between what each spouse earns can make separate returns worth testing. Next comes the number of <strong>dependents</strong>, because a qualifying child can unlock a credit that cuts the tax bill dollar for dollar.</p>
+
+<h3>Income, Paycheck Tax and Estimated Payments</h3>
+<p>Enter pay from every job, plus interest, dividends and any profit from selling investments. Then add the <strong>withholding</strong> already taken from your paychecks and any <strong>estimated tax</strong> payments you made during the year. The calculator compares the total tax you owe against the total you have already paid; the gap is your result. People who skip the payments field get a tax bill instead of a refund estimate, so keep your latest pay stub within reach.</p>
+<ul>
+<li>Pay from each W-2 form, including bonuses</li>
+<li>Pre-tax 401(k) or IRA contributions that lower your adjusted gross income</li>
+<li>Interest, dividends and gains from investments</li>
+<li>Federal income tax already taken from pay, or sent in as installments</li>
+<li>Whether you plan to take the fixed amount or list your expenses</li>
+</ul>
+        </section>
+        <section id="income-tax-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="income-tax-calculator-guide-heading-3">
+<h2 id="income-tax-calculator-guide-heading-3">Tax Return Estimate Example for a Single Filer</h2>
+<p>The clearest way to see a tax calculator in action is to follow one worker all the way through. Suppose you are single, earn <strong>$87,400</strong> in pay, put <strong>$6,500</strong> into a 401(k) before tax, and paid <strong>$1,150</strong> of student loan interest. Your payroll department withheld <strong>$10,300</strong> in federal income tax over the year, and you take the 2025 standard deduction of $15,750. <!-- SILO_START:slot_d -->The <a class="silo-link" href="/marriage-tax-calculator.html">marriage tax calculator</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_d --></p>
+<p>The calculator builds your starting point in two steps, then charges tax slice by slice:</p>
+<p>$$\text{Adjusted gross income} = 87{,}400 - 6{,}500 - 1{,}150 = 79{,}750$$</p>
+<p>$$\text{Taxable income} = 79{,}750 - 15{,}750 = 64{,}000$$</p>
+
+<h3>Slice-by-Slice Tax Calculation</h3>
+<p>Your $64,000 spills across three of the seven bands. Each row below applies one percentage to only the part of your income that lands in that band.</p>
+<table>
+<thead><tr><th>Rate</th><th>Slice of income taxed</th><th>Amount in slice</th><th>Tax owed</th></tr></thead>
+<tbody>
+<tr><td>10%</td><td>$0 to $11,925</td><td>$11,925.00</td><td>$1,192.50</td></tr>
+<tr><td>12%</td><td>$11,925 to $48,475</td><td>$36,550.00</td><td>$4,386.00</td></tr>
+<tr><td>22%</td><td>$48,475 to $64,000</td><td>$15,525.00</td><td>$3,415.50</td></tr>
+<tr><td><strong>Total</strong></td><td></td><td><strong>$64,000.00</strong></td><td><strong>$8,994.00</strong></td></tr>
+</tbody>
+</table>
+<p>The same arithmetic in formula form is:</p>
+<p>$$\text{Tax} = \sum_{i} \text{rate}_i \times \text{income in slice}_i = 0.10 \times 11{,}925 + 0.12 \times 36{,}550 + 0.22 \times 15{,}525$$</p>
+<figure><img src="/assets/images/tools/income-tax-calculator/income-tax-calculator-bracket-slices.svg" alt="Zone bar splitting $64,000 of taxable income into 10%, 12% and 22% tax bracket slices, with the tax each slice produces"><figcaption>The same $64,000 charged slice by slice: $1,192.50 + $4,386.00 + $3,415.50 = $8,994.00 of federal income tax.</figcaption></figure>
+
+<h3>Refund or Amount Owed</h3>
+<p>Because $10,300 was already sent to the IRS and your <strong>tax liability</strong> is $8,994.00, you overpaid by <strong>$1,306.00</strong>. That overpayment comes back as your <strong>tax refund</strong>. Had only $8,000 been sent, the same tax return would show $994.00 owed. The refund formula is simple:</p>
+<p>$$\text{Refund} = \text{Money already paid} - \text{Total tax}$$</p>
+        </section>
+        <section id="income-tax-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="income-tax-calculator-guide-heading-4">
+<h2 id="income-tax-calculator-guide-heading-4">Tax Bracket Calculator Reference: 2025 Rates and Standard Deductions</h2>
+<p>Every tax bracket calculator relies on the same published thresholds. The first table shows the 2025 rates (the tax year you file in 2026) for the statuses most people use, and the second shows the matching fixed deduction. These are published IRS thresholds, so they match in every reliable tool.</p>
+<table>
+<thead><tr><th>Rate</th><th>Single</th><th>Married filing jointly</th><th>Head of household</th></tr></thead>
+<tbody>
+<tr><td>10%</td><td>Up to $11,925</td><td>Up to $23,850</td><td>Up to $17,000</td></tr>
+<tr><td>12%</td><td>$11,925 to $48,475</td><td>$23,850 to $96,950</td><td>$17,000 to $64,850</td></tr>
+<tr><td>22%</td><td>$48,475 to $103,350</td><td>$96,950 to $206,700</td><td>$64,850 to $103,350</td></tr>
+<tr><td>24%</td><td>$103,350 to $197,300</td><td>$206,700 to $394,600</td><td>$103,350 to $197,300</td></tr>
+<tr><td>32%</td><td>$197,300 to $250,525</td><td>$394,600 to $501,050</td><td>$197,300 to $250,500</td></tr>
+<tr><td>35%</td><td>$250,525 to $626,350</td><td>$501,050 to $751,600</td><td>$250,500 to $626,350</td></tr>
+<tr><td>37%</td><td>Over $626,350</td><td>Over $751,600</td><td>Over $626,350</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th>Who you are</th><th>2025 fixed amount</th></tr></thead>
+<tbody>
+<tr><td>Single or married filing separately</td><td>$15,750</td></tr>
+<tr><td>Married filing jointly</td><td>$31,500</td></tr>
+<tr><td>Head of household</td><td>$23,625</td></tr>
+</tbody>
+</table>
+<p>Each year the IRS adjusts these figures for inflation, which is why a tax calculator labeled for a single tax year matters. Run last year's numbers through the wrong version and every result drifts, sometimes by hundreds of dollars.</p>
+        </section>
+        <section id="income-tax-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="income-tax-calculator-guide-heading-5">
+<h2 id="income-tax-calculator-guide-heading-5">Deductions and Credits Your Tax Estimator Applies</h2>
+<p>Two tools lower what you owe, and they work differently. <strong>Deductions</strong> shrink the income that gets charged, while a credit cuts the tax itself. A good tool handles both, and knowing the difference helps you decide which inputs deserve your attention.</p>
+
+<h3>Standard Deduction vs Itemized Deductions</h3>
+<p>Most people take the <strong>standard deduction</strong> because it is a flat amount that needs no paperwork. You itemize only when your qualifying expenses add up to more. The common <strong>itemized deductions</strong> are mortgage interest, state and local taxes (the SALT deduction) and charitable contributions. Compare the two totals and use the larger. Your return can use only one method in a given year.</p>
+<ul>
+<li>Fixed amount: set by who you are filing as, no receipts needed</li>
+<li>Itemizing: mortgage interest, SALT deduction, charitable contributions and medical costs above the IRS threshold</li>
+<li>Pick whichever is higher; a strong tax calculator can show both side by side</li>
+</ul>
+
+<h3>Above-the-Line and Below-the-Line Deductions</h3>
+<p>Some <strong>tax deductions</strong> are available however you file. Adjustments such as traditional IRA contributions and <strong>student loan interest</strong> come straight off gross income, so they are called above-the-line items, and they lower your adjusted gross income directly. The fixed or itemized amount comes later, which makes it a <strong>below-the-line</strong> deduction. Newer rules for 2025 through 2028 also let some workers deduct qualified tips, overtime pay and car loan interest, each with income phase-outs. A lower <strong>adjusted gross income</strong> also helps you qualify for other benefits that depend on <strong>MAGI</strong>, which is that figure with certain deductions added back.</p>
+
+<h3>Tax Credits That Reduce What You Owe</h3>
+<p>A $1,000 deduction saves you only your top rate on that amount, roughly $220 for the example filer. A $1,000 credit saves $1,000. That is why <strong>tax credits</strong> such as the <strong>child tax credit</strong> and education credits are powerful. Some are refundable, meaning they can push your refund above what you paid in. Others only bring your balance down to zero. Check which kind you have before relying on a credit to produce a refund, since two benefits of equal size can behave differently on the same return.</p>
+        </section>
+        <section id="income-tax-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="income-tax-calculator-guide-heading-6">
+<h2 id="income-tax-calculator-guide-heading-6">Paycheck Calculator View: Payroll Taxes, Withholding and Take-Home Pay</h2>
+<p>Your annual return is only one slice of the picture. A salary paycheck calculator works the other direction, starting from gross pay and subtracting each payroll item until it reaches your <strong>take-home pay</strong>. Reading both views together shows whether the amount taken from each check matches the tax you will really owe.</p>
+
+<h3>FICA Taxes for W-2 Employees</h3>
+<p>If you are a <strong>W-2</strong> employee, your employer takes <strong>FICA</strong> (Social Security and Medicare) from every paycheck. Social Security charges 6.2% of wages up to the annual wage base limit ($176,100 for 2025), and the Medicare portion charges 1.45% on everything you earn. Those payroll taxes are separate from federal income tax, and the company pays a matching share. On your $87,400 pay, Social Security comes to $5,418.80 and the hospital-insurance share to $1,267.30.</p>
+
+<h3>Self-Employment Tax for 1099 Workers</h3>
+<p>If your income is reported on a <strong>1099</strong> form, nobody holds taxes back for you. You owe the full 15.3% <strong>self-employment tax</strong> yourself, covering both the employee and employer halves, and you make quarterly estimated payments. A 1099 worker should leave a cushion when using a tax calculator, since there is no paycheck to cover the bill.</p>
+
+<h3>The W-4 Form and Your Paycheck</h3>
+<p>The <strong>W-4</strong> you hand your payroll department tells them how much to take from each check. Your answers about status, children and extra income set the amount. If your refund is large year after year, you are lending the government money at zero interest. If you owe every spring, too little is being taken. Updating the form is the simplest fix, and the IRS tax withholding estimator can suggest exactly what to enter.</p>
+<p>Your yearly pay after every tax in the example works out like this:</p>
+<p>$$\text{Take-home pay} = 87{,}400 - 6{,}500 - 8{,}994.00 - 5{,}418.80 - 1{,}267.30 = 65{,}219.90$$</p>
+<figure><img src="/assets/images/tools/income-tax-calculator/income-tax-calculator-paycheck-breakdown.svg" alt="Donut chart showing how an $87,400 salary splits into take-home pay, federal income tax, payroll taxes and a 401(k) contribution"><figcaption>Where the worked example's $87,400 goes: $65,219.90 take-home, $8,994.00 federal tax, $6,686.10 payroll taxes, $6,500.00 401(k).</figcaption></figure>
+        </section>
+        <section id="income-tax-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="income-tax-calculator-guide-heading-7">
+<h2 id="income-tax-calculator-guide-heading-7">Tax Calculator Walkthrough: A Couple Checks Their Refund in October</h2>
+<p>It is October, and Priya and Marcus want to know whether their daughter, born in March, has changed their year before they plan holiday spending. Their pay stubs project <strong>$118,420</strong> in combined wages, Marcus is putting <strong>$9,300</strong> into a 401(k), and <strong>$9,640</strong> of federal tax has already been taken from pay.</p>
+<p>They open a tax calculator and enter exactly that: married filing jointly, one qualifying child, the three figures above, and the $31,500 fixed deduction.</p>
+<ol>
+<li>Wages less the 401(k) leave adjusted gross income of $109,120.</li>
+<li>Subtracting $31,500 leaves $77,620 to be charged.</li>
+<li>The tax is $2,385.00 on the first $23,850, plus $6,452.40 at 12% on the next $53,770, for $8,837.40.</li>
+<li>The $2,200 child credit cuts it to $6,637.40.</li>
+</ol>
+<p>Against the $9,640 already paid, the result reads <strong>$3,002.60 refund</strong>. The calculator also shows a 12% marginal rate, since $77,620 sits $19,330 below the $96,950 line where joint filers reach the 22% band. That tells them an extra 401(k) dollar would save only 12 cents, so extra retirement saving is not the fix.</p>
+<p>A $3,002.60 refund means they are lending the IRS money all year. Priya files a new W-4 with the child entered in Step 3, which should return about $115.48 to each of her 26 biweekly paychecks next year ($3,002.60 divided by 26), and the couple reruns the tool in January to confirm the new withholding lands near zero.</p>
+        </section>
+        <section id="income-tax-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="income-tax-calculator-guide-heading-8">
+<h2 id="income-tax-calculator-guide-heading-8">Marginal vs Effective Tax Rate in a Free Tax Calculator</h2>
+<p>Any such tool reports two percentages, and they answer different questions. Mixing them up leads to bad decisions about raises, bonuses and 401(k) contributions.</p>
+
+<h3>Marginal Tax Rate Explained</h3>
+<p>Your top band, 22% in the example, sets your marginal rate. It tells you what the next dollar of income costs. If you earned an extra $1,000 of wages, your income tax would rise by $220. If you put $1,000 more into a 401(k), it would fall by the same $220, which is the reason pre-tax contributions are a core part of tax planning.</p>
+<figure><img src="/assets/images/tools/income-tax-calculator/income-tax-calculator-tax-by-income-curve.svg" alt="Line chart of federal tax rising through the 10%, 12% and 22% brackets as taxable income grows, with the $8,994 example marked"><figcaption>Federal tax climbs more steeply after each bracket starts, but the marginal tax rate applies only to the new slice.</figcaption></figure>
+
+<h3>Effective Tax Rate Formula</h3>
+<p>Your <strong>effective rate</strong> is total tax divided by income, so it blends every band into one figure. Measured against the amount actually charged, the example is 14.05%. Measured against the original $87,400 income, it is only 10.3%. Both are far below 22%, which shows why quoting only the top number overstates what you pay.</p>
+<p>$$\text{Effective rate} = \frac{\text{Total tax}}{\text{Income charged}} = \frac{8{,}994.00}{64{,}000} = 14.05\%$$</p>
+<aside><p><strong>Tip:</strong> To see your own result, divide total federal tax by your full pay as well as by the lower figure, and compare. The gap shows how much your deductions are doing for you.</p></aside>
+        </section>
+        <section id="income-tax-calculator-guide-section-9" class="panel article-content p-4 sm:p-6" aria-labelledby="income-tax-calculator-guide-heading-9">
+<h2 id="income-tax-calculator-guide-heading-9">Free Tax Calculator Scenarios for Different Taxpayers</h2>
+<p>The single filer above is only one pattern. Running other households through the same tax calculator shows how status, deductions and credit amounts change the final bill. The table compares three taxpayers using 2025 figures: the single filer from the worked example, a married couple filing jointly with a combined $142,600 in wages and $11,000 in 401(k) contributions, and a head-of-household parent earning $58,300 with one qualifying child.</p>
+<table>
+<thead><tr><th>Taxpayer</th><th>Total pay</th><th>Income after deductions</th><th>Tax before credit</th><th>Child credit</th><th>Final federal tax</th></tr></thead>
+<tbody>
+<tr><td>Single filer</td><td>$87,400</td><td>$64,000</td><td>$8,994.00</td><td>$0</td><td>$8,994.00</td></tr>
+<tr><td>Married couple</td><td>$142,600</td><td>$100,100</td><td>$11,850.00</td><td>$0</td><td>$11,850.00</td></tr>
+<tr><td>Parent with a qualifying child</td><td>$58,300</td><td>$34,675</td><td>$3,821.00</td><td>$2,200</td><td>$1,621.00</td></tr>
+</tbody>
+</table>
+
+<h3>Single Filers and Couples</h3>
+<p>Single filers reach the 22% band sooner than couples, whose thresholds are roughly double. That is why two people earning the same combined amount often owe less together than they would alone. The couple in the table keeps $31,500 as their fixed amount, and nearly all their taxable amount stays inside the 12% and 22% bands.</p>
+
+<h3>Single Parents and Qualifying Children</h3>
+<p>The head-of-household parent pays only $3,821.00 before the credit, and the $2,200 child credit then cuts the final federal tax to $1,621.00. A credit matters most at lower incomes, where a single credit can erase half the bill. This is the clearest reason to answer the question about qualifying children honestly in any tax return calculator.</p>
+        </section>
+        <section id="income-tax-calculator-guide-section-10" class="panel article-content p-4 sm:p-6" aria-labelledby="income-tax-calculator-guide-heading-10">
+<h2 id="income-tax-calculator-guide-heading-10">How Tax Law Changes Affect Your Tax Return Estimate</h2>
+<p>Congress rewrites parts of the tax law often, and each change can move your refund. An estimate built on stale rules misleads you, so check which year your tool covers. Three kinds of change matter most.</p>
+<ul>
+<li><strong>Thresholds:</strong> brackets and deduction amounts are indexed to inflation, so they rise every year.</li>
+<li><strong>Deduction rules:</strong> new categories such as tips, overtime and senior deductions appear for set years and then expire.</li>
+<li><strong>Credit amounts:</strong> the child credit and education credits change size and phase-out ranges.</li>
+</ul>
+
+<h3>Why Exemptions No Longer Count</h3>
+<p>Before 2018, every taxpayer subtracted a <strong>personal exemption</strong> for themselves and each dependent. The 2017 reform removed that benefit and nearly doubled the fixed deduction instead. Older articles and calculators that still ask about <strong>exemptions</strong> are out of date, and a tool for the current year should not ask for them.</p>
+
+<h3>Checking That Your Tool Uses Current Rules</h3>
+<p>Look for the tax year printed near the results, the date the page was last updated, and a link to IRS publications. If a tool cannot say which year it models, do not trust its tax refund calculation. A tax calculator 2025 edition should show 2025 thresholds, such as the $15,750 figure for singles.</p>
+        </section>
+        <section id="income-tax-calculator-guide-section-11" class="panel article-content p-4 sm:p-6" aria-labelledby="income-tax-calculator-guide-heading-11">
+<h2 id="income-tax-calculator-guide-heading-11">Reading Your Tax Refund Estimator Result</h2>
+<p>A tax refund estimator ends with one of two outcomes. Either the IRS owes you money or you owe the IRS. Neither is a final answer, only a forecast built from the numbers you entered, so treat it as a checkpoint rather than a promise.</p>
+
+<h3>When You Get a Refund</h3>
+<p>A refund means your payments exceeded your tax. Our single filer's $1,306.00 refund looks like a windfall, but it is really money taken from pay too early. If the tool shows a refund you would rather have in each pay period, lower the amount on a new W-4 and rerun the estimate to watch it move toward zero. Spend any refund deliberately, perhaps on debt, an emergency fund or long-term savings, rather than letting it disappear.</p>
+
+<h3>When You Owe Taxes</h3>
+<p>If the estimate says you owe, you still have time to act before you file. Raise the amount taken from pay, make an estimated payment, or increase your 401(k) contributions. Underpaying by too much can trigger a penalty, so a mid-year check with a tax calculator is worth five minutes. Many people run their numbers once in autumn and again after any big life change such as marriage, a new baby or a new job.</p>
+
+<h4>Refund Checklist Before You File</h4>
+<ul>
+<li>Match each W-2 and 1099 to the income you typed into the tax calculator</li>
+<li>Confirm how you are filing as of December 31</li>
+<li>Compare itemized deductions with the fixed amount one last time</li>
+<li>Check that every credit has a qualifying person or expense behind it</li>
+<li>Save your tax refund estimate to compare with the amount on your accepted return</li>
+</ul>
+
+<h4>How Long a Refund Takes</h4>
+<p>E-filed returns with direct deposit are typically processed fastest, often within about three weeks, while paper returns take longer. A return that claims certain credits may be held for extra review. The IRS offers a refund status tool on its website, which updates once your return is accepted.</p>
+        </section>
+        <section id="income-tax-calculator-guide-section-12" class="panel article-content p-4 sm:p-6" aria-labelledby="income-tax-calculator-guide-heading-12">
+<h2 id="income-tax-calculator-guide-heading-12">Tax Savings Ideas to Test in Any Tax Calculator</h2>
+<p>The best use of a tax calculator is not looking back but trying changes before you make them. Change one input at a time and watch the result move. A smaller <strong>tax burden</strong> usually comes from a handful of moves rather than any single trick.</p>
+
+<h3>Adjust Retirement Contributions</h3>
+<p>Raising pre-tax contributions lowers your income charged and your tax liability together. In the single example, an extra $2,000 into the 401(k) would cut federal tax by $440. Compare that against how much you can comfortably spare from your paycheck, since a refund funded by lower take-home pay is not free money.</p>
+
+<h3>Bunch Deductions and Give Strategically</h3>
+<p>If your list of expenses lands just below the fixed amount, grouping two years of charitable gifts into one can lift you above it. Alternate years: list expenses in the big year, take the fixed amount in the lean one. Run both versions before committing.</p>
+
+<h3>Mind Investment Income</h3>
+<p>Enter sales of shares in the gains and dividend fields rather than the pay field, because they are charged on a different schedule. In the single example, adding a $2,000 long-term gain would raise the estimate by $300 at the 15% long-term rate, while the same $2,000 counted as short-term income would cost $440 at 22%. Entering each type separately gives the calculator what it needs to apply the right percentage.</p>
+        </section>
+        <section id="income-tax-calculator-guide-section-13" class="panel article-content p-4 sm:p-6" aria-labelledby="income-tax-calculator-guide-heading-13">
+<h2 id="income-tax-calculator-guide-heading-13">Mistakes That Skew Your Tax Calculator Result</h2>
+<p>Most bad estimates come from a short list of input errors rather than a faulty formula. Each one below is easy to catch once you know it exists.</p>
+
+<h3>Forgetting Other Income</h3>
+<p>Leaving the other-income fields blank makes the calculator understate your tax, because it cannot charge what you never enter. Savings interest, a weekend side business, a rental room and the sale of an investment each have a field of their own. Skipping $4,000 of freelance profit in the single example would hide about $880 of federal tax at the 22% rate, turning an honest refund into a surprise tax liability in April. Add every 1099 you received, even for small amounts, because the IRS already has a copy.</p>
+
+<h3>Mixing Up Deductions and Credits</h3>
+<p>People often enter a credit where a deduction belongs, or the reverse, and the answer shifts by thousands. Remember the order: tax deductions lower the income that is charged, while <strong>tax credits</strong> subtract from the finished tax. Enter each in its own field and the tool will apply them in the correct sequence. If a credit is partly refundable, the portion above zero tax shows up as extra refund, which is why the entry should be exact.</p>
+
+<h3>Using the Wrong Tax Year</h3>
+<p>Thresholds change every January, so a tool set for last year can misstate your federal tax by a visible amount. Confirm the year, then confirm your own numbers match the year as well, since a raise in December belongs to the year it was paid.</p>
+        </section>
+        <section id="income-tax-calculator-guide-section-14" class="panel article-content p-4 sm:p-6" aria-labelledby="income-tax-calculator-guide-heading-14">
+<h2 id="income-tax-calculator-guide-heading-14">Documents to Gather for an Accurate Tax Return Calculator Result</h2>
+<p>Accuracy starts before you type a single figure. Collecting your paperwork first means the estimate reflects real numbers instead of guesses, and it stops you forgetting taxes you already paid during the year. A few minutes of preparation usually decides whether your refund estimate lands within a few dollars of your filed return or misses it by hundreds.</p>
+<ul>
+<li>Every wage statement from your jobs, especially the boxes showing pay and federal income taxes already taken out</li>
+<li>Each 1099 form for interest, dividends, freelance pay or pension withdrawals</li>
+<li>Statements showing student loan interest, tuition and other education costs</li>
+<li>Records of mortgage interest, property taxes and charitable gifts if you plan to itemize</li>
+<li>A copy of last year's tax return for comparison</li>
+</ul>
+
+<h3>Using Last Year's Return as a Cross-Check</h3>
+<p>Your previous return is the best sanity check available. Compare last year's <strong>AGI</strong> and total tax liability with this year's estimate; a large jump should have an explanation, such as a raise, a new side business or a one-time sale of shares. Compare the calculator's total tax and AGI line by line with last year's return, and recheck any input that moved without a reason. If nothing changed in your life but the estimate moved a lot, one of the inputs is probably wrong. Last year's return also reveals any carryovers, such as unused <strong>capital gains</strong> losses, that reduce this year's federal tax.</p>
+        </section>
+        <section id="income-tax-calculator-guide-section-15" class="panel article-content p-4 sm:p-6" aria-labelledby="income-tax-calculator-guide-heading-15">
+<h2 id="income-tax-calculator-guide-heading-15">Federal Tax and State Taxes: Using the Tax Withholding Estimator</h2>
+<p>Federal tax is only one layer of what you pay. Most states add their own levy, and some cities do too, so the figure on your screen is rarely your whole bill. Knowing where the layers split helps you read the estimate correctly and decide which tool to use next.</p>
+
+<h3>How Federal Tax Differs From State Taxes</h3>
+<p>The federal system uses a single national schedule, while every state sets its own rules. Several states charge no tax on wages at all, some use one flat percentage, and others use graduated bands of their own. A calculator built for federal tax will not apply any of this, so budget separately for what your state and city take. Check your state revenue department for its schedule, then add that amount to the federal result before you decide whether you are due money or owe more.</p>
+
+<h3>Using the IRS Tool to Fix Your Paycheck</h3>
+<p>The IRS publishes its own <strong>tax withholding estimator</strong>, a step-by-step questionnaire that covers who you are, your income, adjustments, deductions and credits before it shows a result. It is built for one job: telling you what to write on your W-4 so that the right amount of tax leaves each paycheck. Use the quick tool in this guide to see the shape of your year, then use the IRS version when you want exact figures to hand your payroll team.</p>
+        </section>
+        <section id="income-tax-calculator-guide-section-16" class="panel article-content p-4 sm:p-6" aria-labelledby="income-tax-calculator-guide-heading-16">
+<h2 id="income-tax-calculator-guide-heading-16">Limits of a Tax Calculator 2025 Estimate</h2>
+<p>Every estimate of this kind is not a filed return. It cannot see paperwork you have not entered, and it simplifies rules that have many exceptions. Knowing where the edges are keeps you from trusting the number too far. A responsible <strong>taxpayer</strong> uses the estimate to plan and then checks the details against official guidance.</p>
+<ul>
+<li>A federal tool does not include <strong>state income tax</strong> or other local taxes, which vary widely by region.</li>
+<li>The <strong>alternative minimum tax</strong> and complex phase-outs may not be modeled in a basic tax calculator.</li>
+<li>Long-term gains and <strong>qualified dividends</strong> use their own rate schedule, and ordinary dividends are charged like regular pay.</li>
+<li>Rental, business and passive income can change the result quickly and may need a financial advisor's help.</li>
+</ul>
+<p>Treat the output as a planning figure, then confirm details with the IRS instructions for Form 1040 or a qualified tax professional. Your <strong>net income</strong> after every tax is what really reaches your bank account, and a few minutes with a tax calculator each year keeps that number from surprising you.</p>
+        </section>
+      </div>
+
+      <section id="income-tax-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="income-tax-calculator-faq-heading" data-section="faq">
+        <h2 id="income-tax-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Income Tax Calculator questions</h2>
+        <div id="income-tax-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="income-tax-calculator-faq-1" class="faq-item" open><summary id="income-tax-calculator-faq-1-summary" class="faq-summary"><h3 id="income-tax-calculator-faq-1-question" class="faq-question">How does an income tax calculator estimate my federal tax?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="income-tax-calculator-faq-1-answer" class="faq-answer"><p>It adds up your income, subtracts adjustments such as 401(k) and IRA contributions to reach adjusted gross income, subtracts the larger of the standard or itemized deduction, then charges each slice of the remaining taxable income at its bracket rate. Credits and the tax you already paid through withholding then give your refund or amount owed.</p></div></details>
+          <details id="income-tax-calculator-faq-2" class="faq-item" open><summary id="income-tax-calculator-faq-2-summary" class="faq-summary"><h3 id="income-tax-calculator-faq-2-question" class="faq-question">What is the difference between a marginal and an effective tax rate?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="income-tax-calculator-faq-2-answer" class="faq-answer"><p>Your marginal rate is the bracket your last dollar of taxable income falls into, so it tells you what extra income or a bigger deduction is worth. Your effective rate is total federal tax divided by income, which blends every bracket into one lower percentage.</p></div></details>
+          <details id="income-tax-calculator-faq-3" class="faq-item" open><summary id="income-tax-calculator-faq-3-summary" class="faq-summary"><h3 id="income-tax-calculator-faq-3-question" class="faq-question">Should I take the standard deduction or itemize?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="income-tax-calculator-faq-3-answer" class="faq-answer"><p>Take whichever is larger. The standard deduction is a fixed amount set by your filing status, while itemizing adds up mortgage interest, state and local taxes up to the cap, charitable gifts and other qualifying costs. Leave Deduction Type on &#x27;Whichever is larger&#x27; and the calculator picks for you.</p></div></details>
+          <details id="income-tax-calculator-faq-4" class="faq-item" open><summary id="income-tax-calculator-faq-4-summary" class="faq-summary"><h3 id="income-tax-calculator-faq-4-question" class="faq-question">What is the difference between a tax deduction and a tax credit?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="income-tax-calculator-faq-4-answer" class="faq-answer"><p>A deduction lowers the income that gets taxed, so it saves you your bracket rate on that amount. A credit subtracts directly from the tax itself, so a $1,000 credit saves $1,000. Some credits, such as part of the child tax credit, are refundable and can increase your refund.</p></div></details>
+          <details id="income-tax-calculator-faq-5" class="faq-item" open><summary id="income-tax-calculator-faq-5-summary" class="faq-summary"><h3 id="income-tax-calculator-faq-5-question" class="faq-question">Why does my estimated refund change when I update my withholding?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="income-tax-calculator-faq-5-answer" class="faq-answer"><p>Your refund is the tax you have already paid through withholding and estimated payments minus the tax you owe. Raising or lowering the federal tax withheld shifts that gap dollar for dollar, which is why updating your W-4 is the simplest way to move your refund toward zero.</p></div></details>
+          <details id="income-tax-calculator-faq-6" class="faq-item" open><summary id="income-tax-calculator-faq-6-summary" class="faq-summary"><h3 id="income-tax-calculator-faq-6-question" class="faq-question">Does this calculator include state and local income tax?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="income-tax-calculator-faq-6-answer" class="faq-answer"><p>It estimates state and local tax by applying the combined rate you enter to your state taxable income, so look up your own state and city rates for a closer figure. Rules such as state-specific deductions and credits are not modeled, so treat that line as a rough guide.</p></div></details>
+          <details id="income-tax-calculator-faq-7" class="faq-item" open><summary id="income-tax-calculator-faq-7-summary" class="faq-summary"><h3 id="income-tax-calculator-faq-7-question" class="faq-question">Do I need to enter my spouse&#x27;s information?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="income-tax-calculator-faq-7-answer" class="faq-answer"><p>Only when you choose Married Filing Jointly. The spouse fields add a second set of wages, business income and withholding to the same return. For other filing statuses they are ignored.</p></div></details>
+          <details id="income-tax-calculator-faq-8" class="faq-item" open><summary id="income-tax-calculator-faq-8-summary" class="faq-summary"><h3 id="income-tax-calculator-faq-8-question" class="faq-question">How accurate is this estimate compared with my filed return?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="income-tax-calculator-faq-8-answer" class="faq-answer"><p>It follows the published federal brackets, deductions and common credits, so it is a reliable planning figure. It does not model the alternative minimum tax, the qualified business income deduction or every phase-out, so confirm exact amounts with IRS forms or a tax professional before you file.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="income-tax-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="income-tax-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="income-tax-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="income-tax-calculator-ad-bottom-leaderboard">
+            <ins id="income-tax-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("income-tax-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="income-tax-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="income-tax-calculator-right-rail-top" class="mb-6">
+        <aside id="income-tax-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="income-tax-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="income-tax-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="income-tax-calculator-ad-right-rail-rectangle">
+            <ins id="income-tax-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("income-tax-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="income-tax-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="income-tax-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="income-tax-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="income-tax-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="income-tax-calculator-ad-right-rail-skyscraper">
+            <ins id="income-tax-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("income-tax-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="income-tax-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="income-tax-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="income-tax-calculator-footer-brand">
+        <a id="income-tax-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="income-tax-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="income-tax-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="income-tax-calculator-footer-categories" aria-labelledby="income-tax-calculator-footer-categories-heading">
+        <h2 id="income-tax-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="income-tax-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="income-tax-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="income-tax-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="income-tax-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="income-tax-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="income-tax-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="income-tax-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="income-tax-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="income-tax-calculator-footer-company" aria-labelledby="income-tax-calculator-footer-company-heading">
+        <h2 id="income-tax-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="income-tax-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="income-tax-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="income-tax-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="income-tax-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="income-tax-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="income-tax-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="income-tax-calculator-footer-bottom" class="border-t border-line">
+      <p id="income-tax-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="income-tax-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // 2026 federal income tax estimate following the Form 1040 flow:
+  //   total income (wages, interest, dividends, capital gain/loss, self-employment, retirement,
+  //     taxable Social Security, other) - adjustments (IRA, HSA, half SE tax, student loan
+  //     interest, other) = AGI
+  //   AGI - larger of standard deduction (+ non-itemizer cash charity) or itemized deductions
+  //     - Schedule 1-A deductions (tips, overtime, car loan interest, senior) - QBI deduction
+  //     = taxable income
+  //   Tax: ordinary brackets, with qualified dividends and net long-term gains stacked on top at
+  //     0/15/20% (Qualified Dividends and Capital Gain Tax Worksheet).
+  //   - child tax credit / credit for other dependents and other nonrefundable credits
+  //   + self-employment tax + 0.9% Additional Medicare tax + 3.8% net investment income tax
+  //   = total tax; payments = withholding + estimated payments + Additional Medicare withheld
+  //     on wages over $200,000 + additional child tax credit + earned income credit
+  //     + other refundable credits. Refund or amount owed = payments - total tax.
+  // Not modeled: alternative minimum tax, QBI wage/property limits above the threshold,
+  //   capital loss carryovers, kiddie tax, foreign income, and credits other than CTC/ODC/EITC.
+  // Verified (Node, scratch tests, each against an independent hand calculation):
+  //   Single, $75,000 wages, $8,000 withheld -> taxable $58,900, tax $7,670.00, refund $330.00
+  //     (matches take-home-paycheck-calculator). MFJ $100,000, 2 children -> taxable $67,800,
+  //     tax $7,640 - $4,400 credit = $3,240.00.
+  //   HOH $25,000 wages, 1 child -> tax $85 wiped out by the credit, ACTC $1,700,
+  //     EITC $4,249.62 ($4,427 - 15.98% x $1,110); IRS tables use $50 bands, so +/- a few dollars.
+  //   Single $40,000 wages + $10,000 qualified dividends -> $2,620.00 (dividends in the 0% band);
+  //     $80,000 wages + $20,000 long-term gain -> $11,770.00 ($8,770 + 15% x $20,000).
+  //   Single, $30,000 Social Security + $20,000 pension -> $5,350 taxable (Pub. 915 worksheet).
+  //   $50,000 self-employment profit -> SE tax $7,064.78, QBI deduction $6,073.52 (taxable-income
+  //     limit), taxable $24,294.09, total tax $9,732.07.
+  //   Single $700,000 wages + $50,000 interest, $60,000 SALT, $20,000 mortgage, $10,000 charity ->
+  //     SALT cap $10,000 (floor), itemized $34,290.54 after the 2/37 cut, tax $220,769.75,
+  //     Additional Medicare $4,500, NIIT $1,900.
+  //   Single $60,000 wages, 65+, $10,000 tips, $5,000 overtime, $2,000 car interest ->
+  //     Schedule 1-A $23,000, taxable $18,850, tax $2,014.00.
+  //   Bracket table and capital gains breakpoints are the same constants as take-home-paycheck-
+  //     calculator and tax-harvesting (checked against Rev. Proc. 2025-32).
+  //
+  // ---- 2026 FEDERAL CONSTANTS (tax year 2026) -------------------------------------------
+  // Brackets, standard deductions, additional 65+/blind amounts, capital gains breakpoints,
+  //   child tax credit ($2,200; $1,700 refundable), EITC table and $12,200 investment income
+  //   limit, student loan interest phase-out, QBI threshold: IRS Rev. Proc. 2025-32 (as amended
+  //   by P.L. 119-21), sections 4.01, 4.03, 4.05, 4.06, 4.14, 4.26, 4.29.
+  // Tips, overtime, car loan interest and senior deductions (amounts, phase-outs and rounding):
+  //   Schedule 1-A (Form 1040); IRS newsroom "One Big Beautiful Bill Act: tax deductions for
+  //   working Americans and seniors". Not available to married filing separately (except car loan).
+  // SALT cap $40,400 ($20,200 MFS), reduced by 30% of AGI over $505,000 ($252,500 MFS):
+  //   draft 2026 Schedule A line 5e; $10,000 ($5,000 MFS) floor: IRC 164(b)(7).
+  // Charity: 0.5%-of-AGI floor for itemizers, $1,000/$2,000 non-itemizer cash deduction, and the
+  //   2/37 itemized deduction reduction above the 37% bracket: Form 1040-ES (2026), IRC 68.
+  // QBI minimum deduction $400 when QBI is at least $1,000: IRC 199A(i), Rev. Proc. 2025-32 s. 3.12.
+  // Social Security wage base $184,500: Form 1040-ES (2026), SSA. SE tax 15.3% on 92.35% of
+  //   profit: IRC 1401, 1402. Additional Medicare 0.9% and NIIT 3.8% thresholds are statutory
+  //   (IRC 3101(b)(2), 1411) and not indexed. Social Security benefit base amounts: IRC 86.
+  var TAX_YEAR = 2026;
+  var KEY = { single: 'single', mfj: 'mfj', mfs: 'mfs', hoh: 'hoh', qss: 'mfj' }; // QSS uses joint brackets
+  var BRACKETS = { // upper limit of each band; rates 10, 12, 22, 24, 32, 35, 37%
+    single: [12400, 50400, 105700, 201775, 256225, 640600],
+    mfj:    [24800, 100800, 211400, 403550, 512450, 768700],
+    mfs:    [12400, 50400, 105700, 201775, 256225, 384350],
+    hoh:    [17700, 67450, 105700, 201750, 256200, 640600]
+  };
+  var RATES = [0.10, 0.12, 0.22, 0.24, 0.32, 0.35, 0.37];
+  var CG_BREAKS = { single: [49450, 545500], mfj: [98900, 613700], hoh: [66200, 579600], mfs: [49450, 306850] };
+  var STANDARD_DEDUCTION = { single: 16100, mfj: 32200, mfs: 16100, hoh: 24150, qss: 32200 };
+  var ADDITIONAL_STD = { single: 2050, hoh: 2050, mfj: 1650, mfs: 1650, qss: 1650 }; // per 65+ or blind
+  var LOSS_LIMIT = { single: 3000, mfj: 3000, hoh: 3000, mfs: 1500, qss: 3000 };
+  var CHILD_CREDIT = 2200, CHILD_REFUNDABLE = 1700, OTHER_DEPENDENT_CREDIT = 500;
+  var CTC_PHASEOUT = { single: 200000, hoh: 200000, mfs: 200000, mfj: 400000, qss: 200000 };
+  var ACTC_EARNED_FLOOR = 2500, ACTC_RATE = 0.15;
+  var EITC = { // by qualifying children 0..3: credit rate, earned income amount, phase-out rate,
+               // phase-out start (other / joint)
+    rate: [0.0765, 0.34, 0.40, 0.45], earned: [8680, 13020, 18290, 18290], max: [664, 4427, 7316, 8231],
+    phaseRate: [0.0765, 0.1598, 0.2106, 0.2106],
+    start: [10860, 23890, 23890, 23890], startJoint: [18140, 31160, 31160, 31160]
+  };
+  var EITC_INVESTMENT_LIMIT = 12200;
+  var STUDENT_LOAN_MAX = 2500;
+  var STUDENT_LOAN_PHASE = { single: [85000, 100000], hoh: [85000, 100000], qss: [85000, 100000], mfj: [175000, 205000] };
+  var TIPS_MAX = 25000, OVERTIME_MAX = { mfj: 25000, other: 12500 }, TIP_OT_PHASE = { mfj: 300000, other: 150000 };
+  var CAR_MAX = 10000, CAR_PHASE = { mfj: 200000, other: 100000 };
+  var SENIOR_DEDUCTION = 6000, SENIOR_PHASE = { mfj: 150000, other: 75000 }, SENIOR_RATE = 0.06;
+  var SALT_CAP = { single: 40400, mfj: 40400, hoh: 40400, qss: 40400, mfs: 20200 };
+  var SALT_PHASE = { single: 505000, mfj: 505000, hoh: 505000, qss: 505000, mfs: 252500 };
+  var SALT_FLOOR = { single: 10000, mfj: 10000, hoh: 10000, qss: 10000, mfs: 5000 };
+  var MEDICAL_FLOOR = 0.075, CHARITY_FLOOR = 0.005;
+  var NONITEMIZER_CHARITY = { mfj: 2000, other: 1000 };
+  var QBI_RATE = 0.20, QBI_MIN = 400, QBI_MIN_INCOME = 1000;
+  var QBI_THRESHOLD = { single: 201750, hoh: 201750, qss: 201750, mfs: 201775, mfj: 403500 };
+  var SS_WAGE_BASE = 184500, SE_FACTOR = 0.9235, SE_SS = 0.124, SE_MED = 0.029;
+  var ADDL_MED_RATE = 0.009, ADDL_MED = { mfj: 250000, mfs: 125000, other: 200000 };
+  var NIIT_RATE = 0.038, NIIT = { mfj: 250000, qss: 250000, mfs: 125000, other: 200000 };
+  var SS_BASE = { single: [25000, 34000], hoh: [25000, 34000], qss: [25000, 34000], mfj: [32000, 44000], mfs: [0, 0] };
+  // ---------------------------------------------------------------------------------------
+
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  var whole = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+
+  function pick(map, status) { return map[status] !== undefined ? map[status] : map.other; }
+
+  function ordinaryTax(income, key) {
+    var limits = BRACKETS[key], tax = 0, lower = 0;
+    for (var i = 0; i < RATES.length; i++) {
+      var upper = i < limits.length ? limits[i] : Infinity;
+      if (income > lower) tax += (Math.min(income, upper) - lower) * RATES[i];
+      lower = upper;
+    }
+    return tax;
+  }
+  function marginalRate(income, key) {
+    var limits = BRACKETS[key];
+    for (var i = 0; i < limits.length; i++) if (income <= limits[i]) return RATES[i];
+    return RATES[RATES.length - 1];
+  }
+
+  // Qualified Dividends and Capital Gain Tax Worksheet.
+  function incomeTax(taxable, pref, key) {
+    var gains = Math.max(0, Math.min(pref, taxable)), base = taxable - gains, b = CG_BREAKS[key];
+    var mid = Math.max(0, Math.min(taxable, b[1]) - Math.max(base, b[0]));
+    var top = Math.max(0, taxable - Math.max(base, b[1]));
+    return { tax: Math.min(ordinaryTax(base, key) + 0.15 * mid + 0.20 * top, ordinaryTax(taxable, key)), ordinary: base };
+  }
+
+  function taxableSocialSecurity(benefits, otherIncome, status) {
+    if (benefits <= 0) return 0;
+    var prov = otherIncome + 0.5 * benefits, b = SS_BASE[status];
+    if (status === 'mfs') return Math.min(0.85 * benefits, 0.85 * Math.max(0, prov));
+    var over1 = prov - b[0];
+    if (over1 <= 0) return 0;
+    var tier1 = Math.min(over1, b[1] - b[0]);
+    var over2 = Math.max(0, prov - b[1]);
+    return Math.min(Math.min(0.5 * tier1, 0.5 * benefits) + 0.85 * over2, 0.85 * benefits);
+  }
+
+  function eitcAmount(n, x, joint) {
+    var cap = EITC.max[n];
+    var start = joint ? EITC.startJoint[n] : EITC.start[n];
+    return Math.max(0, Math.min(EITC.rate[n] * x, cap) - EITC.phaseRate[n] * Math.max(0, x - start));
+  }
+
+  function compute(o) {
+    var s = o.status, key = KEY[s], joint = s === 'mfj';
+    // Self-employment tax (Schedule SE)
+    var nese = Math.max(0, o.selfEmp) * SE_FACTOR;
+    if (nese < 400) nese = 0;
+    var seTax = SE_SS * Math.min(nese, Math.max(0, SS_WAGE_BASE - o.wages)) + SE_MED * nese;
+    var halfSe = seTax / 2;
+    // Capital gains and losses (Schedule D)
+    var netCap = o.shortGain + o.longGain;
+    var capIncluded = netCap >= 0 ? netCap : -Math.min(-netCap, LOSS_LIMIT[s]);
+    var netLtGain = netCap > 0 ? Math.max(0, Math.min(o.longGain, netCap)) : 0;
+    var qualDiv = Math.min(o.qualDiv, o.dividends);
+    // Income and adjustments
+    var incomeExSs = o.wages + o.interest + o.dividends + capIncluded + o.selfEmp + o.retire + o.otherInc;
+    var adjExSl = o.ira + o.hsa + halfSe + o.otherAdj;
+    var taxableSs = taxableSocialSecurity(o.socSec, incomeExSs - adjExSl + o.taxExempt, s);
+    var totalIncome = incomeExSs + taxableSs;
+    var agiBeforeSl = totalIncome - adjExSl;
+    var sl = 0;
+    if (s !== 'mfs' && o.studentLoan > 0) {
+      var ph = STUDENT_LOAN_PHASE[s];
+      var share = Math.min(1, Math.max(0, (agiBeforeSl - ph[0]) / (ph[1] - ph[0])));
+      sl = Math.min(o.studentLoan, STUDENT_LOAN_MAX) * (1 - share);
+    }
+    var adjustments = adjExSl + sl;
+    var agi = totalIncome - adjustments;
+    var agiPos = Math.max(0, agi);
+
+    // Standard deduction vs itemized (Schedule A)
+    var extraCount = (o.you65 ? 1 : 0) + (o.youBlind ? 1 : 0) +
+                     (joint || s === 'mfs' ? (o.spouse65 ? 1 : 0) + (o.spouseBlind ? 1 : 0) : 0);
+    var standard = STANDARD_DEDUCTION[s] + extraCount * ADDITIONAL_STD[s];
+    var nonItemCharity = Math.min(o.charityCash, pick(NONITEMIZER_CHARITY, s));
+    var saltCap = Math.max(SALT_FLOOR[s], SALT_CAP[s] - 0.30 * Math.max(0, agi - SALT_PHASE[s]));
+    var salt = Math.min(o.salt, saltCap);
+    var medical = Math.max(0, o.medical - MEDICAL_FLOOR * agiPos);
+    var charity = Math.max(0, o.charityCash + o.charityNonCash - CHARITY_FLOOR * agiPos);
+    var itemizedRaw = medical + salt + o.mortgage + charity + o.otherItem;
+    var top = BRACKETS[key][BRACKETS[key].length - 1];
+    var itemized = itemizedRaw - (2 / 37) * Math.min(itemizedRaw, Math.max(0, agi - top));
+    var itemize = itemized > standard + nonItemCharity;
+    var deduction = itemize ? itemized : standard + nonItemCharity;
+
+    // Schedule 1-A
+    var tips = 0, overtime = 0, car = 0, senior = 0, over;
+    if (s !== 'mfs') {
+      over = Math.max(0, agi - pick(TIP_OT_PHASE, s));
+      var cut = Math.floor(over / 1000) * 100;
+      tips = Math.max(0, Math.min(o.tips, TIPS_MAX) - cut);
+      overtime = Math.max(0, Math.min(o.overtime, pick(OVERTIME_MAX, s)) - cut);
+      var seniors = (o.you65 ? 1 : 0) + (joint && o.spouse65 ? 1 : 0);
+      senior = seniors * Math.max(0, SENIOR_DEDUCTION - SENIOR_RATE * Math.max(0, agi - pick(SENIOR_PHASE, s)));
+    }
+    over = Math.max(0, agi - pick(CAR_PHASE, s));
+    car = Math.max(0, Math.min(o.carInterest, CAR_MAX) - Math.ceil(over / 1000) * 200);
+    var schedule1a = tips + overtime + car + senior;
+
+    // Qualified business income deduction (simplified, Form 8995)
+    var pref = qualDiv + netLtGain;
+    var beforeQbi = Math.max(0, agi - deduction - schedule1a);
+    var qbiIncome = Math.max(0, o.selfEmp) - halfSe;
+    var qbi = 0;
+    if (qbiIncome > 0) {
+      qbi = Math.min(QBI_RATE * qbiIncome, QBI_RATE * Math.max(0, beforeQbi - pref));
+      if (qbiIncome >= QBI_MIN_INCOME) qbi = Math.max(qbi, Math.min(QBI_MIN, beforeQbi));
+    }
+    var taxable = Math.max(0, beforeQbi - qbi);
+    var it = incomeTax(taxable, pref, key);
+
+    // Credits (Schedule 8812) and nonrefundable credits
+    var ctcTotal = o.kids * CHILD_CREDIT + o.otherDeps * OTHER_DEPENDENT_CREDIT;
+    ctcTotal = Math.max(0, ctcTotal - Math.ceil(Math.max(0, agi - CTC_PHASEOUT[s]) / 1000) * 50);
+    var ctcUsed = Math.min(ctcTotal, it.tax);
+    var otherCredits = Math.min(o.otherCredits, it.tax - ctcUsed);
+    var taxAfterCredits = it.tax - ctcUsed - otherCredits;
+    var earned = o.wages + Math.max(0, nese > 0 ? o.selfEmp - halfSe : 0);
+    var actc = o.kids > 0 ? Math.max(0, Math.min(ctcTotal - ctcUsed, o.kids * CHILD_REFUNDABLE,
+                                               ACTC_RATE * Math.max(0, earned - ACTC_EARNED_FLOOR))) : 0;
+    var eitc = 0, invIncome = o.interest + o.dividends + o.taxExempt + Math.max(0, netCap);
+    if (o.eitcOn && s !== 'mfs' && invIncome <= EITC_INVESTMENT_LIMIT && earned > 0) {
+      var n = Math.min(3, o.kids);
+      eitc = eitcAmount(n, earned, joint);
+      var start = joint ? EITC.startJoint[n] : EITC.start[n];
+      if (agi >= start) eitc = Math.min(eitc, eitcAmount(n, Math.max(0, agi), joint));
+    }
+
+    // Other taxes (Schedule 2)
+    var addlMed = ADDL_MED_RATE * Math.max(0, o.wages + nese - pick(ADDL_MED, s));
+    var addlMedWithheld = ADDL_MED_RATE * Math.max(0, o.wages - 200000);
+    var nii = Math.max(0, o.interest + o.dividends + capIncluded);
+    var niit = NIIT_RATE * Math.min(nii, Math.max(0, agi - pick(NIIT, s)));
+    var totalTax = taxAfterCredits + seTax + addlMed + niit;
+    var payments = o.withheld + o.estimated + addlMedWithheld + actc + eitc + o.refundable;
+
+    return {
+      wages: o.wages, interest: o.interest, dividends: o.dividends, capIncluded: capIncluded, selfEmp: o.selfEmp,
+      retire: o.retire, taxableSs: taxableSs, otherInc: o.otherInc, totalIncome: totalIncome,
+      adjustments: adjustments, halfSe: halfSe, sl: sl, agi: agi, standard: standard, nonItemCharity: nonItemCharity,
+      itemized: itemized, itemize: itemize, deduction: deduction, saltCap: saltCap, schedule1a: schedule1a,
+      tips: tips, overtime: overtime, car: car, senior: senior, qbi: qbi, taxable: taxable, pref: pref,
+      ordinaryIncome: it.ordinary, tax: it.tax, ctcUsed: ctcUsed, otherCredits: otherCredits,
+      taxAfterCredits: taxAfterCredits, seTax: seTax, addlMed: addlMed, niit: niit, totalTax: totalTax,
+      withheld: o.withheld, estimated: o.estimated, addlMedWithheld: addlMedWithheld, actc: actc, eitc: eitc,
+      refundable: o.refundable, payments: payments, balance: payments - totalTax,
+      marginal: marginalRate(Math.max(0, it.ordinary), key), key: key
+    };
+  }
+
+  // ---- page wiring ----------------------------------------------------------------------
+  var FIELDS = {
+    wages: 'itWages', withheld: 'itWithheld', kids: 'itKids', otherDeps: 'itOtherDeps', interest: 'itInterest',
+    dividends: 'itDividends', qualDiv: 'itQualDiv', taxExempt: 'itTaxExempt', shortGain: 'itShortGain',
+    longGain: 'itLongGain', selfEmp: 'itSelfEmp', retire: 'itRetire', socSec: 'itSocSec', otherInc: 'itOtherInc',
+    ira: 'itIra', hsa: 'itHsa', studentLoan: 'itStudentLoan', otherAdj: 'itOtherAdj', tips: 'itTips',
+    overtime: 'itOvertime', carInterest: 'itCarInterest', medical: 'itMedical', salt: 'itSalt', mortgage: 'itMortgage',
+    otherItem: 'itOtherItem', charityCash: 'itCharityCash', charityNonCash: 'itCharityNonCash',
+    estimated: 'itEstimated', otherCredits: 'itOtherCredits', refundable: 'itRefundable'
+  };
+  var SIGNED = { shortGain: true, longGain: true };
+
+  function readNum(id) {
+    var el = document.getElementById(id);
+    if (!el || el.value === '') return 0;
+    var v = parseFloat(el.value);
+    return isNaN(v) ? NaN : v;
+  }
+  function isChecked(id) { var el = document.getElementById(id); return !!(el && el.checked); }
+  function set(id, text) { var el = document.getElementById(id); if (el) el.textContent = text; }
+  function signed(v) { return v < -0.005 ? '−' + money.format(-v) : money.format(Math.max(0, v)); }
+  function minus(v) { return v > 0.005 ? '−' + money.format(v) : money.format(0); }
+
+  function fillTable(id, rows) {
+    var body = document.getElementById(id);
+    if (!body) return;
+    while (body.firstChild) body.removeChild(body.firstChild);
+    rows.forEach(function (cells) {
+      var tr = document.createElement('tr');
+      cells.forEach(function (t, i) {
+        var td = document.createElement(i === 0 ? 'th' : 'td');
+        if (i === 0) td.setAttribute('scope', 'row');
+        td.textContent = t;
+        tr.appendChild(td);
+      });
+      body.appendChild(tr);
+    });
+  }
+
+  function clear() {
+    ['itResult', 'itTotalTax', 'itTaxable', 'itAgi', 'itDeduction', 'itMarginal', 'itEffective', 'itPayments']
+      .forEach(function (id) { set(id, '–'); });
+    set('itResultLabel', 'Estimated refund');
+    fillTable('itBreakdown', []);
+    fillTable('itBrackets', []);
+    var note = document.getElementById('itNote');
+    if (note) note.hidden = true;
+  }
+
+  function update() {
+    var statusEl = document.getElementById('itStatus');
+    var o = { status: statusEl && KEY[statusEl.value] ? statusEl.value : 'single' };
+    var msg = '';
+    Object.keys(FIELDS).forEach(function (k) {
+      var v = readNum(FIELDS[k]);
+      if (!isFinite(v) || Math.abs(v) > 1e10) msg = msg || 'Enter numbers only. Leave a field at 0 if it does not apply.';
+      else if (v < 0 && !SIGNED[k]) msg = msg || 'Only capital gains can be negative. Enter the other amounts as 0 or more.';
+      o[k] = v;
+    });
+    if (!msg && (o.kids > 20 || o.otherDeps > 20 || Math.round(o.kids) !== o.kids || Math.round(o.otherDeps) !== o.otherDeps)) {
+      msg = 'Enter the number of children and dependents as whole numbers up to 20.';
+    }
+    if (!msg && o.qualDiv > o.dividends) msg = 'Qualified dividends are part of ordinary dividends, so they cannot be larger.';
+    var error = document.getElementById('itError');
+    if (error) { error.hidden = !msg; error.textContent = msg; }
+    if (msg) { clear(); return; }
+    o.you65 = isChecked('itYou65'); o.youBlind = isChecked('itYouBlind');
+    o.spouse65 = isChecked('itSpouse65'); o.spouseBlind = isChecked('itSpouseBlind');
+    o.eitcOn = isChecked('itEitc');
+
+    var r = compute(o);
+    var refund = r.balance >= 0;
+    set('itResultLabel', refund ? 'Estimated refund' : 'Estimated amount you owe');
+    set('itResult', money.format(Math.abs(r.balance)));
+    set('itTotalTax', money.format(r.totalTax));
+    set('itTaxable', money.format(r.taxable));
+    set('itAgi', signed(r.agi));
+    set('itDeduction', (r.itemize ? 'Itemized ' : 'Standard ') + money.format(r.deduction));
+    set('itMarginal', Math.round(r.marginal * 100) + '%');
+    set('itEffective', r.totalIncome > 0 ? (r.totalTax / r.totalIncome * 100).toFixed(1) + '%' : '0.0%');
+    set('itPayments', money.format(r.payments));
+
+    var rows = [
+      ['Wages, salaries and tips', money.format(r.wages)],
+      ['Interest and ordinary dividends', money.format(r.interest + r.dividends)],
+      ['Capital gain or (allowed loss)', signed(r.capIncluded)],
+      ['Self-employment profit', money.format(r.selfEmp)],
+      ['IRA, pension and annuity income', money.format(r.retire)],
+      ['Taxable Social Security', money.format(r.taxableSs)],
+      ['Other income', money.format(r.otherInc)],
+      ['Total income', signed(r.totalIncome)],
+      ['Adjustments to income (incl. half of SE tax)', minus(r.adjustments)],
+      ['Adjusted gross income', signed(r.agi)],
+      [(r.itemize ? 'Itemized deductions' : 'Standard deduction' + (r.nonItemCharity > 0 ? ' + cash charity' : '')), minus(r.deduction)],
+      ['Tips, overtime, car loan and senior deductions', minus(r.schedule1a)],
+      ['Qualified business income deduction', minus(r.qbi)],
+      ['Taxable income', money.format(r.taxable)],
+      ['Income tax', money.format(r.tax)],
+      ['Child and other dependent credit', minus(r.ctcUsed)],
+      ['Other nonrefundable credits', minus(r.otherCredits)],
+      ['Self-employment tax', money.format(r.seTax)],
+      ['Additional Medicare tax', money.format(r.addlMed)],
+      ['Net investment income tax', money.format(r.niit)],
+      ['Total tax', money.format(r.totalTax)],
+      ['Federal income tax withheld', money.format(r.withheld)],
+      ['Estimated tax payments', money.format(r.estimated)],
+      ['Additional Medicare tax withheld by employer', money.format(r.addlMedWithheld)],
+      ['Earned income credit', money.format(r.eitc)],
+      ['Additional child tax credit (refundable)', money.format(r.actc)],
+      ['Other refundable credits', money.format(r.refundable)],
+      ['Total payments and refundable credits', money.format(r.payments)],
+      [refund ? 'Refund' : 'Amount you owe', money.format(Math.abs(r.balance))]
+    ];
+    fillTable('itBreakdown', rows);
+
+    var limits = BRACKETS[r.key], lower = 0, brows = [];
+    for (var i = 0; i < RATES.length; i++) {
+      var upper = i < limits.length ? limits[i] : Infinity;
+      var amt = Math.max(0, Math.min(r.ordinaryIncome, upper) - lower);
+      brows.push([Math.round(RATES[i] * 100) + '%',
+                  isFinite(upper) ? whole.format(lower) + ' – ' + whole.format(upper) : 'Over ' + whole.format(lower),
+                  money.format(amt), money.format(amt * RATES[i])]);
+      lower = upper;
+    }
+    fillTable('itBrackets', brows);
+
+    var notes = [];
+    if (r.itemize) notes.push('Your itemized deductions are larger than your ' + whole.format(r.standard) + ' standard deduction, so they are used.');
+    if (o.salt > r.saltCap) notes.push('State and local taxes are capped at ' + whole.format(r.saltCap) + ' for your income.');
+    if (o.status === 'mfs' && (o.tips > 0 || o.overtime > 0)) notes.push('The tips and overtime deductions require a joint return if you are married.');
+    if ((o.spouse65 || o.spouseBlind) && o.status !== 'mfj' && o.status !== 'mfs') notes.push('Spouse boxes only apply to married filing statuses.');
+    if (o.status === 'mfs' && (o.spouse65 || o.spouseBlind)) notes.push('When filing separately, the spouse amounts count only if your spouse has no income and cannot be claimed by someone else.');
+    if (o.selfEmp > 0 && r.taxable > QBI_THRESHOLD[o.status]) notes.push('Your taxable income is above the ' + whole.format(QBI_THRESHOLD[o.status]) + ' QBI threshold, where wage and property limits can shrink the business income deduction shown here.');
+    if (!refund && -r.balance >= 1000) notes.push('Owing $1,000 or more can mean an underpayment penalty unless your withholding and estimated payments meet a safe harbor.');
+    var note = document.getElementById('itNote');
+    if (note) { note.hidden = notes.length === 0; note.textContent = notes.join(' '); }
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('itForm');
+    if (!form) return;
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

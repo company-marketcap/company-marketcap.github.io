@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="en" id="loan-and-credit-line-payment-calculator-document" data-page-slug="loan-and-credit-line-payment-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Loan and Line of Credit Payment Calculator</title>
+  <meta name="description" content="Estimate your monthly payments on a loan or line of credit, then see total interest, payoff time and a full amortization schedule before you borrow.">
+  <link rel="canonical" href="https://company-marketcap.github.io/loan-and-credit-line-payment-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Loan and Line of Credit Payment Calculator">
+  <meta property="og:description" content="Estimate your monthly payments on a loan or line of credit, then see total interest, payoff time and a full amortization schedule before you borrow.">
+  <meta property="og:url" content="https://company-marketcap.github.io/loan-and-credit-line-payment-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Loan and Credit Line Payment Calculator", "url": "https://company-marketcap.github.io/loan-and-credit-line-payment-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Estimate your monthly payments on a loan or line of credit, then see total interest, payoff time and a full amortization schedule before you borrow."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Credit Cards & Debt Payoff", "item": "https://company-marketcap.github.io/financial-calculators.html#credit-card-debt-calculators"}, {"@type": "ListItem", "position": 4, "name": "Loan and Credit Line Payment Calculator", "item": "https://company-marketcap.github.io/loan-and-credit-line-payment-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I calculate a loan payment?", "acceptedAnswer": {"@type": "Answer", "text": "Divide the annual rate by the number of payments per year to get the periodic rate, then apply the amortization formula M = P × r(1+r)^n ÷ ((1+r)^n − 1). The calculator does this for you from the loan amount, interest rate and loan term."}}, {"@type": "Question", "name": "What is the difference between a loan payment and a line of credit payment?", "acceptedAnswer": {"@type": "Answer", "text": "A term loan has a fixed schedule where every installment covers interest and principal. A line of credit charges interest only on the balance you have drawn, and the minimum payment is often just that interest, so the balance may not fall unless you pay more."}}, {"@type": "Question", "name": "How is interest calculated on a line of credit?", "acceptedAnswer": {"@type": "Answer", "text": "Most lenders divide the annual rate by 365 to get a daily rate, multiply it by your outstanding balance each day, and bill the total at the end of the billing cycle. The calculator uses the monthly rate, so a statement can differ by a few cents."}}, {"@type": "Question", "name": "What does the interest-only payment show?", "acceptedAnswer": {"@type": "Answer", "text": "When you choose line of credit, the interest-only payment is the periodic interest on your starting balance. Paying only that amount keeps the balance unchanged, so use the fixed payment mode to see how long a bigger payment takes to clear it."}}, {"@type": "Question", "name": "Does paying more often reduce total interest?", "acceptedAnswer": {"@type": "Answer", "text": "Slightly. Weekly or bi-weekly payments lower the average balance, and bi-weekly payments add up to one extra monthly payment per year. Choose a payment frequency and compare the total interest."}}, {"@type": "Question", "name": "What happens if my payment is lower than the interest charged?", "acceptedAnswer": {"@type": "Answer", "text": "The balance never falls, so the calculator reports that the payment does not cover interest. Raise the payment above the periodic interest to get a payoff time."}}, {"@type": "Question", "name": "How much can an extra payment save?", "acceptedAnswer": {"@type": "Answer", "text": "Enter an extra amount to see the new payoff time and the interest saved against the original schedule. Early payments save the most because interest is highest while the balance is large."}}, {"@type": "Question", "name": "Do fees change the result?", "acceptedAnswer": {"@type": "Answer", "text": "Origination fees, annual fees and prepayment penalties are not part of the formula. Add them to your total cost of borrowing when your lender charges them."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="loan-and-credit-line-payment-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="loan-and-credit-line-payment-calculator" data-page-type="calculator">
+  <a id="loan-and-credit-line-payment-calculator-skip-link" href="#loan-and-credit-line-payment-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="loan-and-credit-line-payment-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="loan-and-credit-line-payment-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="loan-and-credit-line-payment-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="loan-and-credit-line-payment-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="loan-and-credit-line-payment-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="loan-and-credit-line-payment-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="loan-and-credit-line-payment-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="loan-and-credit-line-payment-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="loan-and-credit-line-payment-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="loan-and-credit-line-payment-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="loan-and-credit-line-payment-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="loan-and-credit-line-payment-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="loan-and-credit-line-payment-calculator-header-search-status" aria-controls="loan-and-credit-line-payment-calculator-header-search-results" data-search-input="header">
+              <p id="loan-and-credit-line-payment-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="loan-and-credit-line-payment-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="loan-and-credit-line-payment-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="loan-and-credit-line-payment-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="loan-and-credit-line-payment-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="loan-and-credit-line-payment-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="loan-and-credit-line-payment-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="loan-and-credit-line-payment-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="loan-and-credit-line-payment-calculator-mobile-search-status" aria-controls="loan-and-credit-line-payment-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="loan-and-credit-line-payment-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="loan-and-credit-line-payment-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="loan-and-credit-line-payment-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="loan-and-credit-line-payment-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="loan-and-credit-line-payment-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="loan-and-credit-line-payment-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="loan-and-credit-line-payment-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="loan-and-credit-line-payment-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="loan-and-credit-line-payment-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="loan-and-credit-line-payment-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="loan-and-credit-line-payment-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="loan-and-credit-line-payment-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="loan-and-credit-line-payment-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="loan-and-credit-line-payment-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="loan-and-credit-line-payment-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="loan-and-credit-line-payment-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="loan-and-credit-line-payment-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="loan-and-credit-line-payment-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="loan-and-credit-line-payment-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="loan-and-credit-line-payment-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="loan-and-credit-line-payment-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="loan-and-credit-line-payment-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="loan-and-credit-line-payment-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="loan-and-credit-line-payment-calculator-sidebar-search-status" aria-controls="loan-and-credit-line-payment-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="loan-and-credit-line-payment-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="loan-and-credit-line-payment-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="loan-and-credit-line-payment-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="loan-and-credit-line-payment-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="loan-and-credit-line-payment-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="loan-and-credit-line-payment-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="loan-and-credit-line-payment-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="loan-and-credit-line-payment-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="loan-and-credit-line-payment-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="loan-and-credit-line-payment-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="loan-and-credit-line-payment-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="loan-and-credit-line-payment-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="loan-and-credit-line-payment-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="loan-and-credit-line-payment-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="loan-and-credit-line-payment-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators" aria-current="true">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="loan-and-credit-line-payment-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="loan-and-credit-line-payment-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="loan-and-credit-line-payment-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="loan-and-credit-line-payment-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="loan-and-credit-line-payment-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="loan-and-credit-line-payment-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="loan-and-credit-line-payment-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="loan-and-credit-line-payment-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="loan-and-credit-line-payment-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="loan-and-credit-line-payment-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="loan-and-credit-line-payment-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="loan-and-credit-line-payment-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="loan-and-credit-line-payment-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="loan-and-credit-line-payment-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="loan-and-credit-line-payment-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="loan-and-credit-line-payment-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="loan-and-credit-line-payment-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="loan-and-credit-line-payment-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="loan-and-credit-line-payment-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="loan-and-credit-line-payment-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="loan-and-credit-line-payment-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="loan-and-credit-line-payment-calculator" data-calculator-slug="loan-and-credit-line-payment-calculator" data-sub-category-slug="credit-card-debt-calculators">
+      <aside id="loan-and-credit-line-payment-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="loan-and-credit-line-payment-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="loan-and-credit-line-payment-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="loan-and-credit-line-payment-calculator-ad-top-leaderboard">
+            <ins id="loan-and-credit-line-payment-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("loan-and-credit-line-payment-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="loan-and-credit-line-payment-calculator-intro-area" class="space-y-4">
+        <nav id="loan-and-credit-line-payment-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="loan-and-credit-line-payment-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="loan-and-credit-line-payment-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="loan-and-credit-line-payment-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="loan-and-credit-line-payment-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#credit-card-debt-calculators" itemprop="item"><span itemprop="name">Credit Cards &amp; Debt Payoff</span></a><meta itemprop="position" content="3"></li>
+            <li id="loan-and-credit-line-payment-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Loan and Credit Line Payment Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/loan-and-credit-line-payment-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="loan-and-credit-line-payment-calculator-hero-section" aria-labelledby="loan-and-credit-line-payment-calculator-hero-heading" data-section="hero">
+          <h1 id="loan-and-credit-line-payment-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Loan and Line of Credit Payment Calculator</h1>
+          <p id="loan-and-credit-line-payment-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Before you sign for a term loan or draw on revolving credit, you need to know what each month will cost you. The loan and credit line payment calculator turns a loan amount, interest rate and repayment term into your monthly payment, total interest and payoff date, so you can compare a lump sum against a flexible balance with real numbers instead of guesses. Every figure below comes from the same formulas lenders use, which means you can check the math yourself. <!-- SILO_START:slot_a -->If you want to see how the figures change, the <a class="silo-link" href="/debt-to-income-ratio-calculator.html">free debt to income ratio calculator</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="loan-and-credit-line-payment-calculator-tool" class="space-y-6" data-page-slug="loan-and-credit-line-payment-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="lcpFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="lcpForm" class="space-y-6" novalidate aria-labelledby="lcpFormHeading">
+      <h2 id="lcpFormHeading" class="panel-heading">Loan or credit line?</h2>
+      <div><label for="lcpAmount" class="form-label">Amount you need</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="lcpAmount" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="20000" inputmode="decimal"></div><p class="form-hint">Borrowed in full today under both options.</p></div>
+      <fieldset class="form-fieldset">
+        <legend class="form-legend">Fixed-term loan</legend>
+        <div class="form-row form-row-2">
+          <div><label for="lcpLoanRate" class="form-label">Loan APR</label><div class="input-group"><input type="number" id="lcpLoanRate" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="0.1" value="9" inputmode="decimal"><span class="input-affix">%</span></div></div>
+          <div><label for="lcpTerm" class="form-label">Loan term</label><div class="input-group"><input type="number" id="lcpTerm" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1" max="360" step="1" value="48" inputmode="numeric"><span class="input-affix">months</span></div></div>
+        </div>
+      </fieldset>
+      <fieldset class="form-fieldset">
+        <legend class="form-legend">Line of credit</legend>
+        <div><label for="lcpLineRate" class="form-label">Credit line APR</label><div class="input-group"><input type="number" id="lcpLineRate" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="0.1" value="10.5" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">Most credit lines have a variable rate; this assumes it stays the same.</p></div>
+        <div><label for="lcpOption" class="form-label">Monthly payment on the line</label><select id="lcpOption" class="form-select"><option value="0">Interest only</option><option value="0.01" selected>Interest + 1% of the balance</option><option value="0.015">Interest + 1.5% of the balance</option><option value="0.02">Interest + 2% of the balance</option><option value="0.025">Interest + 2.5% of the balance</option><option value="0.03">Interest + 3% of the balance</option><option value="fixed">A fixed amount I choose</option></select></div>
+        <div id="lcpFixedWrap" hidden><label for="lcpFixed" class="form-label">Fixed monthly payment</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="lcpFixed" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="25" value="400" inputmode="decimal"></div></div>
+        <div id="lcpFloorWrap"><label for="lcpFloor" class="form-label">Lowest payment the lender accepts</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="lcpFloor" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="5" value="50" inputmode="decimal"></div><p class="form-hint">Once the percentage payment falls below this, you pay this amount until the line is clear.</p></div>
+      </fieldset>
+      <p id="lcpError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="lcpResults" aria-live="polite" aria-labelledby="lcpResultsHeading">
+      <h2 id="lcpResultsHeading" class="panel-heading">Side by side</h2>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p class="stat-label">Loan payment</p><p id="lcpLoanPay" class="stat-value">–</p><p id="lcpLoanNote" class="mt-1 text-xs text-ink-muted"></p></div>
+        <div class="stat-card stat-card-highlight"><p class="stat-label">First credit line payment</p><p id="lcpLinePay" class="stat-value">–</p><p id="lcpLinePayNote" class="mt-1 text-xs text-ink-muted"></p></div>
+        <div class="stat-card"><p class="stat-label">Line still owed when the loan is paid off</p><p id="lcpLineLeft" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Credit line paid off in</p><p id="lcpLineTime" class="stat-value">–</p><p id="lcpLineTimeNote" class="mt-1 text-xs text-ink-muted"></p></div>
+      </div>
+      <div class="table-scroll mt-5" tabindex="0" role="region" aria-label="Loan and credit line totals">
+        <table class="data-table">
+          <thead><tr><th scope="col"></th><th scope="col">Loan</th><th scope="col">Credit line</th></tr></thead>
+          <tbody id="lcpCompare"></tbody>
+        </table>
+      </div>
+      <p id="lcpTip" class="callout callout-tip mt-5 text-sm" hidden></p>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="lcpYearsHeading" data-section="schedule">
+  <h2 id="lcpYearsHeading" class="panel-heading">Year by year</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">What you pay and still owe at the end of each year under each option, until both are paid off or 30 years have passed.</p>
+  <div class="table-scroll mt-5 max-h-[520px]" tabindex="0" role="region" aria-labelledby="lcpYearsHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Year</th><th scope="col">Loan paid</th><th scope="col">Loan balance</th><th scope="col">Line paid</th><th scope="col">Line interest</th><th scope="col">Line balance</th></tr></thead>
+      <tbody id="lcpYears"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="loan-and-credit-line-payment-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="loan-and-credit-line-payment-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Before you sign for a term loan or draw on revolving credit, you need to know what each month will cost you. The loan and credit line payment calculator turns a loan amount, interest rate and repayment term into your monthly payment, total interest and payoff date, so you can compare a lump sum against a flexible balance with real numbers instead of guesses. Every figure below comes from the same formulas lenders use, which means you can check the math yourself. <!-- SILO_START:slot_a_m -->If you want to see how the figures change, the <a class="silo-link" href="/debt-to-income-ratio-calculator.html">free debt to income ratio calculator</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="loan-and-credit-line-payment-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="loan-and-credit-line-payment-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="loan-and-credit-line-payment-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="loan-and-credit-line-payment-calculator-ad-in-feed">
+            <ins id="loan-and-credit-line-payment-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("loan-and-credit-line-payment-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="loan-and-credit-line-payment-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="loan-and-credit-line-payment-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="loan-and-credit-line-payment-calculator-guide-heading-1">
+<h2 id="loan-and-credit-line-payment-calculator-guide-heading-1">How the Loan and Credit Line Payment Calculator Works</h2>
+<p>A term loan and a revolving account behave differently, so the calculator asks for slightly different inputs. For a loan you enter the <strong>loan amount</strong>, the <strong>annual interest rate</strong> and the <strong>loan term</strong> in months or years. For a revolving account you enter your <strong>outstanding balance</strong>, the rate, and either the <strong>minimum payment</strong> you plan to make or a fixed amount you want to pay each month. The results show your <strong>estimated monthly payment</strong>, the <strong>total of all payments</strong> and the <strong>total interest</strong> you will pay over time. <!-- SILO_START:slot_b -->The <a class="silo-link" href="/credit-card-minimum-calculator.html">credit card minimum payment calculator</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_b --></p>
+
+<h3>Inputs you need before you start</h3>
+<ul>
+<li><strong>Starting balance</strong>: the sum you borrow, or the part of your approved credit limit you have drawn.</li>
+<li><strong>Interest rate</strong>: the annual interest rate quoted by your lender, written as a percentage.</li>
+<li><strong>Length of the loan</strong>: how many months or years you have to repay.</li>
+<li><strong>Payment amount</strong>: only needed when you want to see how long a fixed payment takes to pay off the balance.</li>
+</ul>
+
+<h3>Results the calculator returns</h3>
+<p>You get a payment figure, the <strong>total interest</strong> and an <strong>amortization schedule</strong> that splits every installment between interest and principal. Think of it as a simple loan calculator and a payoff calculator in one panel, because it also shows how soon a larger payment clears what you owe.</p>
+        </section>
+        <section id="loan-and-credit-line-payment-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="loan-and-credit-line-payment-calculator-guide-heading-2">
+<h2 id="loan-and-credit-line-payment-calculator-guide-heading-2">Loan Payment Calculator Formula and Monthly Payment Math</h2>
+<p>A fixed loan uses equal monthly installments. Each month your payment covers the interest accrued on the remaining principal balance first, and whatever is left reduces the principal. The standard formula for a <strong>loan payment</strong> is: <!-- SILO_START:slot_c -->If you want to see how the figures change, the <a class="silo-link" href="/loan-early-payoff-calculator.html">loan early payoff calculator</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_c --></p>
+$$M = P \times \frac{r(1+r)^{n}}{(1+r)^{n}-1}$$
+<p>Here \(M\) is the monthly payment, \(P\) is the loan amount, \(r\) is the monthly rate (the annual rate divided by 12) and \(n\) is the number of monthly payments. The total cost of borrowing is \(M \times n - P\).</p>
+
+<h3>Why the first payments are mostly interest</h3>
+<p>Interest is charged on the balance you still owe, and the balance is largest at the start. That is why an early installment feels like it barely dents the loan, while a late one chips away at the principal quickly. The calculator's schedule makes this visible: month 1 of the $18,500 example below carries $137.21 of interest, while month 48 carries $3.38. Every extra dollar you send in the first year saves more than the same dollar sent in the last.</p>
+        </section>
+        <section id="loan-and-credit-line-payment-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="loan-and-credit-line-payment-calculator-guide-heading-3">
+<h2 id="loan-and-credit-line-payment-calculator-guide-heading-3">Personal Loan Calculator Worked Example: $18,500 Over 48 Months</h2>
+<p>Suppose you borrow <strong>$18,500</strong> at a <strong>fixed 8.9% annual rate</strong> for a <strong>48-month fixed term</strong>. The monthly rate is 0.089 ÷ 12 = 0.7417%, and the formula gives a payment of <strong>$459.50</strong>. Over 48 payments you repay <strong>$22,055.78</strong>, which means the <strong>total interest is $3,555.78</strong>.</p>
+<figure><img src="/assets/images/tools/loan-and-credit-line-payment-calculator/personal-loan-total-cost-of-borrowing.svg" alt="Waterfall chart adding $3,555.78 total interest to an $18,500 loan amount for $22,055.78 repaid"><figcaption>The $18,500 loan amount plus $3,555.78 of total interest equals the $22,055.78 you repay.</figcaption></figure>
+
+<h3>Amortization schedule excerpt</h3>
+<table>
+<thead><tr><th>Payment</th><th>Interest</th><th>Principal</th><th>Ending balance</th></tr></thead>
+<tbody>
+<tr><td>Month 1</td><td>$137.21</td><td>$322.29</td><td>$18,177.71</td></tr>
+<tr><td>Month 12</td><td>$109.92</td><td>$349.58</td><td>$14,470.83</td></tr>
+<tr><td>Month 24</td><td>$77.50</td><td>$381.99</td><td>$10,068.07</td></tr>
+<tr><td>Month 36</td><td>$42.09</td><td>$417.41</td><td>$5,257.08</td></tr>
+<tr><td>Month 48</td><td>$3.38</td><td>$456.11</td><td>$0.00</td></tr>
+</tbody>
+</table>
+<p>Interest falls from <strong>$1,485</strong> in the first year to <strong>$1,111</strong>, <strong>$703</strong> and finally <strong>$257</strong> in year four. The payment never changes, but its mix does.</p>
+<figure><img src="/assets/images/tools/loan-and-credit-line-payment-calculator/loan-payment-principal-vs-interest-over-time.svg" alt="Stacked area chart showing each $459.50 loan payment shifting from mostly principal and some interest to almost all principal over 48 months"><figcaption>How each fixed monthly payment splits between principal and interest across the $18,500 loan's 48-month amortization schedule.</figcaption></figure>
+        </section>
+        <section id="loan-and-credit-line-payment-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="loan-and-credit-line-payment-calculator-guide-heading-4">
+<h2 id="loan-and-credit-line-payment-calculator-guide-heading-4">Line of Credit Calculator Math: Interest-Only vs Fixed Payments</h2>
+<p>A revolving account charges interest only on the part of your approved credit limit that you actually use. Most lenders work out <strong>daily interest</strong> as your balance times the annual rate divided by 365, add it up across the <strong>billing cycle</strong>, and bill you once a month. Many accounts set the minimum at the interest due plus any insurance premiums, which can leave the principal untouched.</p>
+
+<h3>Interest-only minimum payment</h3>
+<p>Take a drawn balance of <strong>$9,750</strong> on a <strong>variable rate</strong> currently at <strong>11.25%</strong>. One month of interest is $9,750 × 0.1125 ÷ 12 = <strong>$91.41</strong>. Pay only that and you owe exactly $9,750 next month, month after month. A 30-day cycle on the daily method comes to $90.15, so expect a few cents of variation between statements.</p>
+
+<h3>Fixed payment payoff</h3>
+<p>Now commit to a fixed <strong>$325</strong> a month. The balance reaches zero in about <strong>36 months</strong> and the account collects roughly <strong>$1,752</strong> in interest. Raise the payment to <strong>$450</strong> and the payoff date moves up to about <strong>25 months</strong>, with interest falling to roughly <strong>$1,200</strong>. A bigger fixed payment is the single most effective way to shorten a revolving balance.</p>
+        </section>
+        <section id="loan-and-credit-line-payment-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="loan-and-credit-line-payment-calculator-guide-heading-5">
+<h2 id="loan-and-credit-line-payment-calculator-guide-heading-5">How Interest Rate, Loan Term and Payment Frequency Change Your Cost</h2>
+<p>Three levers decide what you pay. Moving any one of them changes both your monthly burden and the total cost, which is why a loan calculator is best used to test several scenarios instead of one.</p>
+
+<h3>Interest rate</h3>
+<p>Each percentage point matters, and interest rates vary with your credit profile, the lender and the market. Rates on an unsecured personal loan usually sit above secured rates. On the same $18,500 loan, a 6.9% <strong>APR</strong> gives a $442.15 payment over 48 months, while 10.9% gives $477.24. That is a gap of about $35 a month, or roughly $1,684 across the term.</p>
+
+<h3>Loan term and length of repayment</h3>
+<p>A longer schedule lowers the payment but raises the cost. At 8.9% on $18,500:</p>
+<table>
+<thead><tr><th>Loan term</th><th>Monthly payment</th><th>Total interest</th></tr></thead>
+<tbody>
+<tr><td>36 months</td><td>$587.43</td><td>$2,647.64</td></tr>
+<tr><td>48 months</td><td>$459.50</td><td>$3,555.78</td></tr>
+<tr><td>60 months</td><td>$383.13</td><td>$4,487.94</td></tr>
+<tr><td>72 months</td><td>$332.56</td><td>$5,443.96</td></tr>
+</tbody>
+</table>
+<p>Stretching from 36 to 72 months saves $254.87 on each payment but adds <strong>$2,796.32</strong> to what you pay in interest.</p>
+<figure><img src="/assets/images/tools/loan-and-credit-line-payment-calculator/loan-payment-by-interest-rate-and-term.svg" alt="Heatmap of monthly payment on an $18,500 loan by interest rate from 6.9% to 10.9% and term of 36, 48 or 60 months"><figcaption>Monthly payment on $18,500 across five interest rates and three loan terms, with the 8.9%, 48-month example outlined.</figcaption></figure>
+
+<h3>Payment frequency</h3>
+<p>Lenders may let you pay <strong>weekly</strong>, <strong>bi-weekly</strong>, <strong>semi-monthly</strong> or monthly. Because interest accrues daily, paying more often trims the average balance slightly, and splitting a monthly payment in half every two weeks adds one extra payment a year.</p>
+
+<h3>Fixed rate vs variable rate information</h3>
+<p>With a <strong>fixed rate loan</strong> the payment stays put for the whole term. With a <strong>variable rate loan</strong> the rate follows the <strong>prime rate</strong>, so the payment or the payoff date moves when rates change. If rates rise, your payments usually stay the same while the amortization stretches out; if they fall, you finish sooner.</p>
+        </section>
+        <section id="loan-and-credit-line-payment-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="loan-and-credit-line-payment-calculator-guide-heading-6">
+<h2 id="loan-and-credit-line-payment-calculator-guide-heading-6">How to Read Your Loan Payment Results</h2>
+<p>The headline monthly figure is only part of the story. Check three things before you accept an offer.</p>
+<ol>
+<li>Compare the <strong>total cost of borrowing</strong>, not only the payment.</li>
+<li>Look at how fast the principal falls in the first 12 months.</li>
+<li>Test the plan with a higher payment to see how much interest it saves.</li>
+</ol>
+<p>Remember that an <strong>origination fee</strong> or a <strong>prepayment penalty</strong> sits outside the formula, so add those to the total when your <strong>lender</strong> charges them. Some lenders deduct fees from the funds you receive, which means you borrow more than you collect.</p>
+        </section>
+        <section id="loan-and-credit-line-payment-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="loan-and-credit-line-payment-calculator-guide-heading-7">
+<h2 id="loan-and-credit-line-payment-calculator-guide-heading-7">A Photographer Compares a Studio Loan Payment With a Line of Credit Payment</h2>
+<p>Marisol Quintero, a wedding photographer, needs <strong>$23,840</strong> to build out a rented studio, and two offers are on the table: a 60-month term loan at <strong>9.65%</strong> fixed, or a variable-rate line of credit at <strong>12.4%</strong> with an interest-only minimum. She opens the payment calculator and enters the loan first.</p>
+<p>The loan comes back at <strong>$502.43</strong> a month, with <strong>$6,306.02</strong> in total interest over 60 payments. Switching to the line of credit, the minimum is only <strong>$246.35</strong> a month ($23,840 × 0.124 ÷ 12), and that figure tempts her for a moment, because it is less than half the loan payment.</p>
+<p>Then she types $502.43 into the fixed-payment field to see what happens if she pays the revolving balance at the same pace. The result is <strong>66 months</strong> to zero and about <strong>$9,099</strong> in interest, roughly $2,790 more than the loan. The lower minimum would have left the balance untouched, and the higher rate costs her six extra months.</p>
+<p>She checks the budget next. Her monthly income is $6,180 and she already pays $412 toward a car note, so the loan raises her debt payments to $914.43, or <strong>14.8%</strong> of income. That sits far under the 36% ceiling lenders commonly use, and under the 43% cap that most mortgage underwriters apply, so the extra payment is safe to carry.</p>
+<p>Her decision: take the fixed loan for the build-out, then ask the lender about a small line of credit, capped at $5,000, for slow months between wedding seasons. She reruns the loan at 8.65% to see what a one-point rate cut from a credit-union quote would save: $11.59 a month and $695.66 over the term.</p>
+        </section>
+        <section id="loan-and-credit-line-payment-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="loan-and-credit-line-payment-calculator-guide-heading-8">
+<h2 id="loan-and-credit-line-payment-calculator-guide-heading-8">Loan vs Line of Credit: Choosing the Right Borrowing Option</h2>
+<p>A loan pays out one <strong>lump sum</strong> and sets a schedule. A line of credit gives you access to funds up to a limit, and you borrow, repay and borrow again. Use the table to see which fits your need.</p>
+<table>
+<thead><tr><th>Feature</th><th>Term loan</th><th>Revolving line of credit</th></tr></thead>
+<tbody>
+<tr><td>Funds</td><td>One lump sum</td><td>Draw as needed up to the limit</td></tr>
+<tr><td>Interest charged on</td><td>Full principal balance</td><td>Amount drawn only</td></tr>
+<tr><td>Payments</td><td>Fixed schedule</td><td>Minimum payment or fixed amount</td></tr>
+<tr><td>Best for</td><td>One-time purchase</td><td>Ongoing or unpredictable costs</td></tr>
+</tbody>
+</table>
+
+<h3>Secured loan or unsecured loan</h3>
+<p>A <strong>secured loan</strong> uses <strong>collateral</strong> such as a car or a home, and the rate is often lower because the lender has less risk. An unsecured loan relies on your <strong>credit score</strong> and income. A <strong>home equity loan</strong> is the most common secured product, and the same logic applies to an <strong>auto loan</strong> or <strong>student loan</strong>.</p>
+
+<h3>Run both options through the calculator</h3>
+<p>Enter the loan in fixed-term mode and the revolving balance in fixed-payment mode, then compare the two total-interest figures. Home renovations with a firm quote usually suit a fixed loan, while <strong>unexpected bills</strong> and staged projects suit a line of credit. A <strong>mortgage</strong> uses the same formula with a bigger \(n\), and if you are weighing <strong>debt consolidation</strong>, compare the new payment against the sum of your current ones.</p>
+        </section>
+        <section id="loan-and-credit-line-payment-calculator-guide-section-9" class="panel article-content p-4 sm:p-6" aria-labelledby="loan-and-credit-line-payment-calculator-guide-heading-9">
+<h2 id="loan-and-credit-line-payment-calculator-guide-heading-9">Using Your Loan Calculator Results to Set a Budget</h2>
+<p>Start with the monthly figure the calculator returns, because a payment is only affordable if it fits the rest of your month. Lenders often divide your total monthly debt payments by your gross income to get a <strong>debt-to-income ratio</strong>. If you earn $5,400 a month before tax and already pay $620 toward other debts, adding the $459.50 installment brings your total to $1,079.50, or about <strong>20%</strong> of income. Many lenders prefer to see that figure stay well below the mid-30s, so this loan would sit comfortably.</p>
+
+<h3>Stress-test the payment</h3>
+<p>Run the calculator three times: once at the quoted rate, once with the rate one point higher, and once with a longer term. If the higher scenario still fits your budget, you have room for a surprise. If it does not, shorten the amount you borrow before you apply.</p>
+
+<h3>Why your estimate can differ from the lender's statement</h3>
+<p>The calculator assumes equal monthly installments, a fixed rate and a payment made on the due date, so a real statement can differ by a few dollars because of cycle length, rounding or a rate reset. Treat its figure as a reliable guide, then confirm the exact payoff amount with your bank before you send an extra payment.</p>
+
+<h3>Questions to ask before you borrow</h3>
+<ul>
+<li>Is the rate fixed or tied to the prime rate, and how often can it reset?</li>
+<li>What happens to my monthly payment if rates rise?</li>
+<li>Is the minimum payment interest-only, or does it include principal?</li>
+<li>Are there annual fees, draw fees or a penalty for closing the account early?</li>
+</ul>
+        </section>
+        <section id="loan-and-credit-line-payment-calculator-guide-section-10" class="panel article-content p-4 sm:p-6" aria-labelledby="loan-and-credit-line-payment-calculator-guide-heading-10">
+<h2 id="loan-and-credit-line-payment-calculator-guide-heading-10">Tips to Lower Your Loan Payments and Total Interest</h2>
+<ul>
+<li>Shop several <strong>loan offers</strong> and compare the APR, not just the headline rate.</li>
+<li>Choose the shortest term that fits your <strong>monthly budget</strong>; many lenders weigh your <strong>debt-to-income ratio</strong> when they approve you.</li>
+<li>Send extra principal when you can, and confirm there is no penalty to <strong>pay off</strong> early.</li>
+<li>Ask what <strong>loan fees</strong> apply, since they raise the real cost.</li>
+<li>Build savings so a <strong>credit limit</strong> is a backup, not your plan, for <strong>financial goals</strong>.</li>
+</ul>
+<p>Treat the output as an estimate. Your bank or credit union will confirm the final figures, and each <strong>borrower</strong> should read the agreement. Good <strong>finance</strong> habits start with knowing the number before you commit to <strong>lending</strong> terms you cannot carry.</p>
+        </section>
+      </div>
+
+      <section id="loan-and-credit-line-payment-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="loan-and-credit-line-payment-calculator-faq-heading" data-section="faq">
+        <h2 id="loan-and-credit-line-payment-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Loan and Credit Line Payment Calculator questions</h2>
+        <div id="loan-and-credit-line-payment-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="loan-and-credit-line-payment-calculator-faq-1" class="faq-item" open><summary id="loan-and-credit-line-payment-calculator-faq-1-summary" class="faq-summary"><h3 id="loan-and-credit-line-payment-calculator-faq-1-question" class="faq-question">How do I calculate a loan payment?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="loan-and-credit-line-payment-calculator-faq-1-answer" class="faq-answer"><p>Divide the annual rate by the number of payments per year to get the periodic rate, then apply the amortization formula M = P × r(1+r)^n ÷ ((1+r)^n − 1). The calculator does this for you from the loan amount, interest rate and loan term.</p></div></details>
+          <details id="loan-and-credit-line-payment-calculator-faq-2" class="faq-item" open><summary id="loan-and-credit-line-payment-calculator-faq-2-summary" class="faq-summary"><h3 id="loan-and-credit-line-payment-calculator-faq-2-question" class="faq-question">What is the difference between a loan payment and a line of credit payment?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="loan-and-credit-line-payment-calculator-faq-2-answer" class="faq-answer"><p>A term loan has a fixed schedule where every installment covers interest and principal. A line of credit charges interest only on the balance you have drawn, and the minimum payment is often just that interest, so the balance may not fall unless you pay more.</p></div></details>
+          <details id="loan-and-credit-line-payment-calculator-faq-3" class="faq-item" open><summary id="loan-and-credit-line-payment-calculator-faq-3-summary" class="faq-summary"><h3 id="loan-and-credit-line-payment-calculator-faq-3-question" class="faq-question">How is interest calculated on a line of credit?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="loan-and-credit-line-payment-calculator-faq-3-answer" class="faq-answer"><p>Most lenders divide the annual rate by 365 to get a daily rate, multiply it by your outstanding balance each day, and bill the total at the end of the billing cycle. The calculator uses the monthly rate, so a statement can differ by a few cents.</p></div></details>
+          <details id="loan-and-credit-line-payment-calculator-faq-4" class="faq-item" open><summary id="loan-and-credit-line-payment-calculator-faq-4-summary" class="faq-summary"><h3 id="loan-and-credit-line-payment-calculator-faq-4-question" class="faq-question">What does the interest-only payment show?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="loan-and-credit-line-payment-calculator-faq-4-answer" class="faq-answer"><p>When you choose line of credit, the interest-only payment is the periodic interest on your starting balance. Paying only that amount keeps the balance unchanged, so use the fixed payment mode to see how long a bigger payment takes to clear it.</p></div></details>
+          <details id="loan-and-credit-line-payment-calculator-faq-5" class="faq-item" open><summary id="loan-and-credit-line-payment-calculator-faq-5-summary" class="faq-summary"><h3 id="loan-and-credit-line-payment-calculator-faq-5-question" class="faq-question">Does paying more often reduce total interest?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="loan-and-credit-line-payment-calculator-faq-5-answer" class="faq-answer"><p>Slightly. Weekly or bi-weekly payments lower the average balance, and bi-weekly payments add up to one extra monthly payment per year. Choose a payment frequency and compare the total interest.</p></div></details>
+          <details id="loan-and-credit-line-payment-calculator-faq-6" class="faq-item" open><summary id="loan-and-credit-line-payment-calculator-faq-6-summary" class="faq-summary"><h3 id="loan-and-credit-line-payment-calculator-faq-6-question" class="faq-question">What happens if my payment is lower than the interest charged?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="loan-and-credit-line-payment-calculator-faq-6-answer" class="faq-answer"><p>The balance never falls, so the calculator reports that the payment does not cover interest. Raise the payment above the periodic interest to get a payoff time.</p></div></details>
+          <details id="loan-and-credit-line-payment-calculator-faq-7" class="faq-item" open><summary id="loan-and-credit-line-payment-calculator-faq-7-summary" class="faq-summary"><h3 id="loan-and-credit-line-payment-calculator-faq-7-question" class="faq-question">How much can an extra payment save?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="loan-and-credit-line-payment-calculator-faq-7-answer" class="faq-answer"><p>Enter an extra amount to see the new payoff time and the interest saved against the original schedule. Early payments save the most because interest is highest while the balance is large.</p></div></details>
+          <details id="loan-and-credit-line-payment-calculator-faq-8" class="faq-item" open><summary id="loan-and-credit-line-payment-calculator-faq-8-summary" class="faq-summary"><h3 id="loan-and-credit-line-payment-calculator-faq-8-question" class="faq-question">Do fees change the result?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="loan-and-credit-line-payment-calculator-faq-8-answer" class="faq-answer"><p>Origination fees, annual fees and prepayment penalties are not part of the formula. Add them to your total cost of borrowing when your lender charges them.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="loan-and-credit-line-payment-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="loan-and-credit-line-payment-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="loan-and-credit-line-payment-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="loan-and-credit-line-payment-calculator-ad-bottom-leaderboard">
+            <ins id="loan-and-credit-line-payment-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("loan-and-credit-line-payment-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="loan-and-credit-line-payment-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="loan-and-credit-line-payment-calculator-right-rail-top" class="mb-6">
+        <aside id="loan-and-credit-line-payment-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="loan-and-credit-line-payment-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="loan-and-credit-line-payment-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="loan-and-credit-line-payment-calculator-ad-right-rail-rectangle">
+            <ins id="loan-and-credit-line-payment-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("loan-and-credit-line-payment-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="loan-and-credit-line-payment-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="loan-and-credit-line-payment-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="loan-and-credit-line-payment-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="loan-and-credit-line-payment-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="loan-and-credit-line-payment-calculator-ad-right-rail-skyscraper">
+            <ins id="loan-and-credit-line-payment-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("loan-and-credit-line-payment-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="loan-and-credit-line-payment-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="loan-and-credit-line-payment-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="loan-and-credit-line-payment-calculator-footer-brand">
+        <a id="loan-and-credit-line-payment-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="loan-and-credit-line-payment-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="loan-and-credit-line-payment-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="loan-and-credit-line-payment-calculator-footer-categories" aria-labelledby="loan-and-credit-line-payment-calculator-footer-categories-heading">
+        <h2 id="loan-and-credit-line-payment-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="loan-and-credit-line-payment-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="loan-and-credit-line-payment-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="loan-and-credit-line-payment-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="loan-and-credit-line-payment-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="loan-and-credit-line-payment-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="loan-and-credit-line-payment-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="loan-and-credit-line-payment-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="loan-and-credit-line-payment-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="loan-and-credit-line-payment-calculator-footer-company" aria-labelledby="loan-and-credit-line-payment-calculator-footer-company-heading">
+        <h2 id="loan-and-credit-line-payment-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="loan-and-credit-line-payment-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="loan-and-credit-line-payment-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="loan-and-credit-line-payment-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="loan-and-credit-line-payment-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="loan-and-credit-line-payment-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="loan-and-credit-line-payment-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="loan-and-credit-line-payment-calculator-footer-bottom" class="border-t border-line">
+      <p id="loan-and-credit-line-payment-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="loan-and-credit-line-payment-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Fixed-term loan vs a line of credit for the same amount, drawn in full today.
+  //   Loan: level payment P = A x i / (1 - (1 + i)^-n), i = APR / 12 (P = A / n at 0%), with the
+  //     last payment trimmed to what is owed.
+  //   Line: each month interest = balance x APR / 12 (rounded to the cent), then the payment is
+  //     interest only, or interest + p% of the month's starting balance but at least the
+  //     lender's lowest payment, or a fixed amount - always capped at what is owed.
+  //   "Line still owed when the loan is paid off" is the line balance after the loan's term.
+  //   Interest-only (or a payment that does not cover the interest) never clears the line.
+  // Verified (scratchpad b6credit/lc.test.js): $20,000 at 9% over 48 months -> $497.70
+  //   (published amortization tables) and $3,889.61 of interest; line at 9%, interest + 1%
+  //   with a $50 floor -> first payment $350.00 ($150 interest + $200), interest-only ->
+  //   $150.00 a month and $20,000 still owed; a fixed $497.71 (the suggested payment, rounded up) on a
+  //   9% line clears it in 48 months like the loan; at 0% the loan payment is A / n; total paid = amount +
+  //   interest for every option.
+
+  // ---- Calculation ----
+  var MAX_MONTHS = 1200;
+  function cents(x) { return Math.round(x * 100) / 100; }
+
+  function loanPayment(amount, apr, months) {
+    var i = apr / 12;
+    if (i === 0) return amount / months;
+    return amount * i / (1 - Math.pow(1 + i, -months));
+  }
+
+  // Returns month-by-month rows [{ pay, interest, balance }] until cleared or MAX_MONTHS.
+  function schedule(amount, apr, payFn) {
+    var bal = amount, rows = [];
+    for (var m = 1; m <= MAX_MONTHS && bal > 0.005; m++) {
+      var interest = cents(bal * apr / 12);
+      var pay = Math.min(cents(payFn(bal, interest, m)), cents(bal + interest));
+      bal = cents(bal + interest - pay);
+      if (bal < 0.005) bal = 0;
+      rows.push({ pay: pay, interest: interest, balance: bal });
+    }
+    return rows;
+  }
+
+  function loanSchedule(amount, apr, months) {
+    var P = loanPayment(amount, apr, months);
+    return schedule(amount, apr, function (bal, interest, m) { return m >= months ? bal + interest : P; });
+  }
+
+  function lineSchedule(amount, apr, option, floor, fixed) {
+    return schedule(amount, apr, function (bal, interest) {
+      if (option === 'fixed') return fixed;
+      if (option === 0) return interest;
+      return Math.max(interest + option * bal, floor);
+    });
+  }
+
+  function summarize(rows, upTo) {
+    var paid = 0, interest = 0, n = Math.min(upTo, rows.length);
+    for (var k = 0; k < n; k++) { paid += rows[k].pay; interest += rows[k].interest; }
+    return { paid: paid, interest: interest, balance: n ? rows[n - 1].balance : 0 };
+  }
+
+  // ---- UI ----
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+  function duration(months) {
+    var y = Math.floor(months / 12), m = months % 12, parts = [];
+    if (y) parts.push(y + (y === 1 ? ' year' : ' years'));
+    if (m || !y) parts.push(m + (m === 1 ? ' month' : ' months'));
+    return parts.join(' ');
+  }
+  function num(id) { var v = parseFloat(document.getElementById(id).value); return isNaN(v) ? NaN : v; }
+  function set(id, text) { document.getElementById(id).textContent = text; }
+  function clearBody(id) {
+    var body = document.getElementById(id);
+    while (body.firstChild) body.removeChild(body.firstChild);
+    return body;
+  }
+  function addRow(body, cells, firstIsHeader) {
+    var tr = document.createElement('tr');
+    cells.forEach(function (t, k) {
+      var c = document.createElement(firstIsHeader && k === 0 ? 'th' : 'td');
+      if (firstIsHeader && k === 0) c.setAttribute('scope', 'row');
+      c.textContent = t; tr.appendChild(c);
+    });
+    body.appendChild(tr);
+  }
+  function clearedAt(rows) {
+    return rows.length && rows[rows.length - 1].balance === 0 ? rows.length : 0;
+  }
+
+  function clearResults() {
+    ['lcpLoanPay', 'lcpLinePay', 'lcpLineLeft', 'lcpLineTime'].forEach(function (id) { set(id, '–'); });
+    ['lcpLoanNote', 'lcpLinePayNote', 'lcpLineTimeNote'].forEach(function (id) { set(id, ''); });
+    document.getElementById('lcpTip').hidden = true;
+    clearBody('lcpCompare'); clearBody('lcpYears');
+  }
+
+  function update() {
+    var optRaw = document.getElementById('lcpOption').value;
+    var option = optRaw === 'fixed' ? 'fixed' : parseFloat(optRaw);
+    document.getElementById('lcpFixedWrap').hidden = option !== 'fixed';
+    document.getElementById('lcpFloorWrap').hidden = option === 'fixed' || option === 0;
+    var amount = num('lcpAmount'), loanRate = num('lcpLoanRate'), term = Math.round(num('lcpTerm')),
+        lineRate = num('lcpLineRate'), floor = num('lcpFloor'), fixed = num('lcpFixed');
+    if (option !== 'fixed' && option !== 0 && document.getElementById('lcpFloor').value.trim() === '') floor = 0;
+    var error = document.getElementById('lcpError'), problem = '';
+    if (isNaN(amount) || amount <= 0 || amount > 1e8) problem = 'Enter an amount above $0.';
+    else if (isNaN(loanRate) || loanRate < 0 || loanRate > 100 || isNaN(lineRate) || lineRate < 0 || lineRate > 100) problem = 'Enter APRs from 0 to 100%.';
+    else if (isNaN(term) || term < 1 || term > 360) problem = 'Enter a loan term from 1 to 360 months.';
+    else if (option === 'fixed' && (isNaN(fixed) || fixed <= 0)) problem = 'Enter a fixed monthly payment above $0.';
+    else if (option !== 'fixed' && option !== 0 && (isNaN(floor) || floor < 0)) problem = 'Enter a lowest payment of $0 or more.';
+    if (problem) { error.hidden = false; error.textContent = problem; clearResults(); return; }
+    error.hidden = true; error.textContent = '';
+
+    var loan = loanSchedule(amount, loanRate / 100, term);
+    var line = lineSchedule(amount, lineRate / 100, option, floor, fixed);
+    var loanAll = summarize(loan, loan.length), lineTerm = summarize(line, term), lineAll = summarize(line, line.length);
+    var lineDone = clearedAt(line);
+
+    set('lcpLoanPay', money.format(loan[0].pay) + '/mo');
+    set('lcpLoanNote', 'Fixed for ' + duration(term) + '.');
+    set('lcpLinePay', money.format(line[0].pay) + '/mo');
+    var lastLinePay = line[Math.min(term, line.length) - 1].pay;
+    set('lcpLinePayNote', option === 'fixed' ? 'The same each month.' :
+      (option === 0 ? 'Interest only: the balance never goes down.' : 'Falls to ' + money.format(lastLinePay) + ' by month ' + Math.min(term, line.length) + ' as the balance shrinks.'));
+    set('lcpLineLeft', money.format(lineTerm.balance));
+    set('lcpLineTime', lineDone ? duration(lineDone) : 'Never');
+    set('lcpLineTimeNote', lineDone ? 'Total interest ' + money.format(lineAll.interest) + '.' : (line[line.length - 1].balance > amount + 0.005 ? 'This payment does not cover the interest, so the balance keeps growing.' : 'This payment never reduces the balance. You would still owe ' + money.format(amount) + '.'));
+
+    var body = clearBody('lcpCompare');
+    addRow(body, ['Monthly payment', money.format(loan[0].pay), option === 'fixed' || option === 0 ? money.format(line[0].pay) : money.format(line[0].pay) + ' falling'], true);
+    addRow(body, ['Paid in the first ' + duration(term), money.format(loanAll.paid), money.format(lineTerm.paid)], true);
+    addRow(body, ['Interest in the first ' + duration(term), money.format(loanAll.interest), money.format(lineTerm.interest)], true);
+    addRow(body, ['Still owed after ' + duration(term), money.format(0), money.format(lineTerm.balance)], true);
+    addRow(body, ['Time to pay off', duration(loan.length), lineDone ? duration(lineDone) : 'Never'], true);
+    addRow(body, ['Total interest to pay off', money.format(loanAll.interest), lineDone ? money.format(lineAll.interest) : 'Keeps growing'], true);
+
+    var tip = document.getElementById('lcpTip');
+    var clearPay = loanPayment(amount, lineRate / 100, term);
+    tip.hidden = false;
+    tip.textContent = 'To clear the credit line in the same ' + duration(term) + ', pay at least ' + money.format(Math.ceil(clearPay * 100) / 100) +
+      ' a month on it. A lower required payment eases your budget now but leaves the balance, and the interest, running for longer.';
+
+    var years = clearBody('lcpYears');
+    var horizon = Math.min(360, Math.max(loan.length, lineDone || 360));
+    for (var y = 1; y * 12 - 11 <= horizon; y++) {
+      var from = (y - 1) * 12, to = Math.min(y * 12, horizon);
+      var lp = 0, li = 0, kp = 0;
+      for (var k = from; k < to; k++) {
+        if (k < loan.length) kp += loan[k].pay;
+        if (k < line.length) { lp += line[k].pay; li += line[k].interest; }
+      }
+      var loanBal = to <= loan.length ? loan[to - 1].balance : 0;
+      var lineBal = to <= line.length ? line[to - 1].balance : 0;
+      addRow(years, [String(y), money.format(kp), money.format(loanBal), money.format(lp), money.format(li), money.format(lineBal)]);
+      if (loanBal === 0 && lineBal === 0) break;
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('lcpForm');
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

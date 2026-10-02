@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="en" id="cash-flow-calculator-document" data-page-slug="cash-flow-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cash Flow Calculator: Monthly Income vs Expenses</title>
+  <meta name="description" content="Free tool that turns your monthly income and expenses into net cash flow, so you can see where your money goes and how much is left to save or invest.">
+  <link rel="canonical" href="https://company-marketcap.github.io/cash-flow-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Cash Flow Calculator: Monthly Income vs Expenses">
+  <meta property="og:description" content="Free tool that turns your monthly income and expenses into net cash flow, so you can see where your money goes and how much is left to save or invest.">
+  <meta property="og:url" content="https://company-marketcap.github.io/cash-flow-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Cash Flow Calculator", "url": "https://company-marketcap.github.io/cash-flow-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Free tool that turns your monthly income and expenses into net cash flow, so you can see where your money goes and how much is left to save or invest."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Business Finance & Valuation", "item": "https://company-marketcap.github.io/financial-calculators.html#business-calculators"}, {"@type": "ListItem", "position": 4, "name": "Cash Flow Calculator", "item": "https://company-marketcap.github.io/cash-flow-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a cash flow calculator?", "acceptedAnswer": {"@type": "Answer", "text": "It adds up all the money you receive and all the money you spend over the same period and subtracts the two. The difference is your net cash flow: positive means a surplus, negative means a shortfall."}}, {"@type": "Question", "name": "How do I calculate my cash flow by hand?", "acceptedAnswer": {"@type": "Answer", "text": "Convert every income and expense to the same period (monthly is easiest), add each group, then subtract total outflow from total inflow."}}, {"@type": "Question", "name": "Should savings count as an expense?", "acceptedAnswer": {"@type": "Answer", "text": "Many cash flow tools list savings as an outflow because the money leaves your spending account. If you count it that way, the remaining figure is truly unallocated cash."}}, {"@type": "Question", "name": "What counts as income in a cash flow calculation?", "acceptedAnswer": {"@type": "Answer", "text": "Take-home pay, government benefits, side income, interest and any other regular money received. Use amounts after tax so you only count what you can spend."}}, {"@type": "Question", "name": "What does a negative cash flow mean?", "acceptedAnswer": {"@type": "Answer", "text": "Your spending is higher than your income for that period. You are covering the gap with savings or debt, so look for outflows to cut or income to raise."}}, {"@type": "Question", "name": "How often should I recalculate my cash flow?", "acceptedAnswer": {"@type": "Answer", "text": "Monthly is a good habit, and any time your income or a major bill changes. Comparing months shows trends a single result cannot."}}, {"@type": "Question", "name": "How are weekly or biweekly amounts converted?", "acceptedAnswer": {"@type": "Answer", "text": "Weekly amounts are multiplied by 52 and biweekly by 26, then divided by 12 to get a monthly equivalent; twice-a-month amounts are doubled and annual amounts divided by 12."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="cash-flow-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="cash-flow-calculator" data-page-type="calculator">
+  <a id="cash-flow-calculator-skip-link" href="#cash-flow-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="cash-flow-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="cash-flow-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="cash-flow-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="cash-flow-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="cash-flow-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="cash-flow-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="cash-flow-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="cash-flow-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="cash-flow-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="cash-flow-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="cash-flow-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="cash-flow-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="cash-flow-calculator-header-search-status" aria-controls="cash-flow-calculator-header-search-results" data-search-input="header">
+              <p id="cash-flow-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="cash-flow-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="cash-flow-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="cash-flow-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="cash-flow-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="cash-flow-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="cash-flow-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="cash-flow-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="cash-flow-calculator-mobile-search-status" aria-controls="cash-flow-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="cash-flow-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="cash-flow-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="cash-flow-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="cash-flow-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="cash-flow-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="cash-flow-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="cash-flow-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="cash-flow-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="cash-flow-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="cash-flow-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="cash-flow-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="cash-flow-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="cash-flow-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="cash-flow-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="cash-flow-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="cash-flow-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="cash-flow-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="cash-flow-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="cash-flow-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="cash-flow-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="cash-flow-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="cash-flow-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="cash-flow-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="cash-flow-calculator-sidebar-search-status" aria-controls="cash-flow-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="cash-flow-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="cash-flow-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="cash-flow-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="cash-flow-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="cash-flow-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="cash-flow-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="cash-flow-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="cash-flow-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="cash-flow-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="cash-flow-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="cash-flow-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="cash-flow-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="cash-flow-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="cash-flow-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="cash-flow-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="cash-flow-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="cash-flow-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="cash-flow-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="cash-flow-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="cash-flow-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="cash-flow-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="cash-flow-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="cash-flow-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="cash-flow-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="cash-flow-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="cash-flow-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="cash-flow-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="cash-flow-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="cash-flow-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="cash-flow-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="cash-flow-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators" aria-current="true">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="cash-flow-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="cash-flow-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="cash-flow-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="cash-flow-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="cash-flow-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="cash-flow-calculator" data-calculator-slug="cash-flow-calculator" data-sub-category-slug="business-calculators">
+      <aside id="cash-flow-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="cash-flow-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="cash-flow-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="cash-flow-calculator-ad-top-leaderboard">
+            <ins id="cash-flow-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("cash-flow-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="cash-flow-calculator-intro-area" class="space-y-4">
+        <nav id="cash-flow-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="cash-flow-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="cash-flow-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="cash-flow-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="cash-flow-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#business-calculators" itemprop="item"><span itemprop="name">Business Finance &amp; Valuation</span></a><meta itemprop="position" content="3"></li>
+            <li id="cash-flow-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Cash Flow Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/cash-flow-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="cash-flow-calculator-hero-section" aria-labelledby="cash-flow-calculator-hero-heading" data-section="hero">
+          <h1 id="cash-flow-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Cash Flow Calculator: Monthly Income vs Expenses</h1>
+          <p id="cash-flow-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Ever finish the month and wonder where does the money go? A cash flow calculator answers that by lining up every payment you receive against every bill you pay, so you can see the net amount left over before it disappears. Gather your bank account and credit card statements, list your income and monthly payments, and you will know within minutes whether you are building a surplus or quietly borrowing against next month. <!-- SILO_START:slot_a -->Next, open the <a class="silo-link" href="/margin-calculator.html">free profit margin calculator</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="cash-flow-calculator-tool" class="space-y-6" data-page-slug="cash-flow-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="cfFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="cfForm" class="space-y-6" novalidate aria-labelledby="cfFormHeading">
+      <h2 id="cfFormHeading" class="panel-heading">Enter your monthly cash flow</h2>
+<div class="form-row form-row-2">
+<div><label for="cfStart" class="form-label">Starting cash</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="cfStart" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" step="1000" value="20000" inputmode="decimal" aria-describedby="cfStartHint"></div><p id="cfStartHint" class="form-hint">Cash in the bank at the start of the first month.</p></div>
+<div><label for="cfBuffer" class="form-label">Minimum cash cushion</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="cfBuffer" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1000" value="5000" inputmode="decimal" aria-describedby="cfBufferHint"></div><p id="cfBufferHint" class="form-hint">The lowest balance you are comfortable holding. Use 0 for none.</p></div>
+</div>
+      <div><label for="cfFirst" class="form-label">First month</label><select id="cfFirst" class="form-select"><option value="0" selected>January</option><option value="1">February</option><option value="2">March</option><option value="3">April</option><option value="4">May</option><option value="5">June</option><option value="6">July</option><option value="7">August</option><option value="8">September</option><option value="9">October</option><option value="10">November</option><option value="11">December</option></select></div>
+      <fieldset class="form-fieldset">
+        <legend class="form-legend">Cash in and cash out by month</legend>
+        <p class="form-hint">Cash in: customer receipts and any loans or owner money received. Cash out: payroll, rent, suppliers, loan payments, taxes and purchases. Leave a box blank for $0.</p>
+        <div class="grid grid-cols-[2.75rem_minmax(0,1fr)_minmax(0,1fr)] items-center gap-x-2 gap-y-2">
+          <span class="text-xs font-semibold text-ink-muted">Month</span><span class="text-xs font-semibold text-ink-muted">Cash in</span><span class="text-xs font-semibold text-ink-muted">Cash out</span>
+          <span id="cfMonth1" class="text-sm font-medium text-ink">Jan</span><div class="input-group"><span class="input-affix">$</span><input type="number" id="cfIn1" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="28000" inputmode="decimal" aria-label="Cash in, Jan"></div><div class="input-group"><span class="input-affix">$</span><input type="number" id="cfOut1" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="33000" inputmode="decimal" aria-label="Cash out, Jan"></div>
+          <span id="cfMonth2" class="text-sm font-medium text-ink">Feb</span><div class="input-group"><span class="input-affix">$</span><input type="number" id="cfIn2" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="26000" inputmode="decimal" aria-label="Cash in, Feb"></div><div class="input-group"><span class="input-affix">$</span><input type="number" id="cfOut2" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="33000" inputmode="decimal" aria-label="Cash out, Feb"></div>
+          <span id="cfMonth3" class="text-sm font-medium text-ink">Mar</span><div class="input-group"><span class="input-affix">$</span><input type="number" id="cfIn3" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="30000" inputmode="decimal" aria-label="Cash in, Mar"></div><div class="input-group"><span class="input-affix">$</span><input type="number" id="cfOut3" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="33000" inputmode="decimal" aria-label="Cash out, Mar"></div>
+          <span id="cfMonth4" class="text-sm font-medium text-ink">Apr</span><div class="input-group"><span class="input-affix">$</span><input type="number" id="cfIn4" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="32000" inputmode="decimal" aria-label="Cash in, Apr"></div><div class="input-group"><span class="input-affix">$</span><input type="number" id="cfOut4" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="38000" inputmode="decimal" aria-label="Cash out, Apr"></div>
+          <span id="cfMonth5" class="text-sm font-medium text-ink">May</span><div class="input-group"><span class="input-affix">$</span><input type="number" id="cfIn5" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="35000" inputmode="decimal" aria-label="Cash in, May"></div><div class="input-group"><span class="input-affix">$</span><input type="number" id="cfOut5" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="33000" inputmode="decimal" aria-label="Cash out, May"></div>
+          <span id="cfMonth6" class="text-sm font-medium text-ink">Jun</span><div class="input-group"><span class="input-affix">$</span><input type="number" id="cfIn6" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="38000" inputmode="decimal" aria-label="Cash in, Jun"></div><div class="input-group"><span class="input-affix">$</span><input type="number" id="cfOut6" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="33000" inputmode="decimal" aria-label="Cash out, Jun"></div>
+          <span id="cfMonth7" class="text-sm font-medium text-ink">Jul</span><div class="input-group"><span class="input-affix">$</span><input type="number" id="cfIn7" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="36000" inputmode="decimal" aria-label="Cash in, Jul"></div><div class="input-group"><span class="input-affix">$</span><input type="number" id="cfOut7" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="33000" inputmode="decimal" aria-label="Cash out, Jul"></div>
+          <span id="cfMonth8" class="text-sm font-medium text-ink">Aug</span><div class="input-group"><span class="input-affix">$</span><input type="number" id="cfIn8" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="34000" inputmode="decimal" aria-label="Cash in, Aug"></div><div class="input-group"><span class="input-affix">$</span><input type="number" id="cfOut8" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="33000" inputmode="decimal" aria-label="Cash out, Aug"></div>
+          <span id="cfMonth9" class="text-sm font-medium text-ink">Sep</span><div class="input-group"><span class="input-affix">$</span><input type="number" id="cfIn9" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="31000" inputmode="decimal" aria-label="Cash in, Sep"></div><div class="input-group"><span class="input-affix">$</span><input type="number" id="cfOut9" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="33000" inputmode="decimal" aria-label="Cash out, Sep"></div>
+          <span id="cfMonth10" class="text-sm font-medium text-ink">Oct</span><div class="input-group"><span class="input-affix">$</span><input type="number" id="cfIn10" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="29000" inputmode="decimal" aria-label="Cash in, Oct"></div><div class="input-group"><span class="input-affix">$</span><input type="number" id="cfOut10" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="33000" inputmode="decimal" aria-label="Cash out, Oct"></div>
+          <span id="cfMonth11" class="text-sm font-medium text-ink">Nov</span><div class="input-group"><span class="input-affix">$</span><input type="number" id="cfIn11" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="40000" inputmode="decimal" aria-label="Cash in, Nov"></div><div class="input-group"><span class="input-affix">$</span><input type="number" id="cfOut11" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="33000" inputmode="decimal" aria-label="Cash out, Nov"></div>
+          <span id="cfMonth12" class="text-sm font-medium text-ink">Dec</span><div class="input-group"><span class="input-affix">$</span><input type="number" id="cfIn12" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="45000" inputmode="decimal" aria-label="Cash in, Dec"></div><div class="input-group"><span class="input-affix">$</span><input type="number" id="cfOut12" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="33000" inputmode="decimal" aria-label="Cash out, Dec"></div>
+        </div>
+      </fieldset>
+      <details class="form-details"><summary class="form-details-summary">Fill all 12 months at once</summary>
+<div class="form-row form-row-2">
+<div><label for="cfFillIn" class="form-label">Typical monthly cash in</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="cfFillIn" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="30000" inputmode="decimal"></div></div>
+<div><label for="cfFillInGrowth" class="form-label">Monthly change in cash in</label><div class="input-group"><input type="number" id="cfFillInGrowth" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="-100" max="100" step="0.5" value="0" inputmode="decimal"><span class="input-affix">%</span></div></div>
+</div>
+<div class="form-row form-row-2">
+<div><label for="cfFillOut" class="form-label">Typical monthly cash out</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="cfFillOut" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="30000" inputmode="decimal"></div></div>
+<div><label for="cfFillOutGrowth" class="form-label">Monthly change in cash out</label><div class="input-group"><input type="number" id="cfFillOutGrowth" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="-100" max="100" step="0.5" value="0" inputmode="decimal"><span class="input-affix">%</span></div></div>
+</div>
+        <p class="form-hint">Month 1 uses the typical amount; each later month changes by the percentage you enter. You can still edit any month afterwards.</p>
+        <button type="button" id="cfFill" class="button-secondary">Fill the 12 months</button>
+      </details>
+      <p id="cfError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="cfResults" aria-live="polite" aria-labelledby="cfResultsHeading">
+      <h2 id="cfResultsHeading" class="panel-heading">Your 12-month cash position</h2>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p class="stat-label">Lowest balance</p><p id="cfLowest" class="stat-value">–</p><p id="cfLowestNote" class="mt-1 text-xs text-ink-muted"></p></div>
+        <div class="stat-card"><p class="stat-label">Months below $0</p><p id="cfNegMonths" class="stat-value">–</p><p id="cfNegNote" class="mt-1 text-xs text-ink-muted"></p></div>
+        <div class="stat-card"><p class="stat-label">Ending cash</p><p id="cfEnding" class="stat-value">–</p><p id="cfEndingNote" class="mt-1 text-xs text-ink-muted"></p></div>
+        <div class="stat-card"><p class="stat-label">Extra cash needed</p><p id="cfNeeded" class="stat-value">–</p><p id="cfNeededNote" class="mt-1 text-xs text-ink-muted"></p></div>
+      </div>
+      <div class="mt-5">
+        <div class="result-row"><span class="result-term">Total cash in</span><span id="cfTotalIn" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Total cash out</span><span id="cfTotalOut" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Net cash flow for the year</span><span id="cfNet" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Months below your cushion</span><span id="cfBelowBuffer" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Average monthly net cash flow</span><span id="cfAvgNet" class="result-value">–</span></div>
+      </div>
+      <div id="cfVerdict" class="callout mt-5" hidden><p id="cfVerdictTitle" class="callout-title"></p><p id="cfVerdictText" class="text-sm"></p></div>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="cfTableHeading" data-section="schedule">
+  <h2 id="cfTableHeading" class="panel-heading">Month-by-month cash balance</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">Opening balance plus cash in, minus cash out, gives each month's closing balance.</p>
+  <div class="table-scroll mt-5" tabindex="0" role="region" aria-labelledby="cfTableHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Month</th><th scope="col">Opening</th><th scope="col">Cash in</th><th scope="col">Cash out</th><th scope="col">Net</th><th scope="col">Closing</th><th scope="col">Status</th></tr></thead>
+      <tbody id="cfTable"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="cash-flow-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="cash-flow-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Ever finish the month and wonder where does the money go? A cash flow calculator answers that by lining up every payment you receive against every bill you pay, so you can see the net amount left over before it disappears. Gather your bank account and credit card statements, list your income and monthly payments, and you will know within minutes whether you are building a surplus or quietly borrowing against next month. <!-- SILO_START:slot_a_m -->Next, open the <a class="silo-link" href="/margin-calculator.html">free profit margin calculator</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="cash-flow-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="cash-flow-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="cash-flow-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="cash-flow-calculator-ad-in-feed">
+            <ins id="cash-flow-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("cash-flow-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="cash-flow-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="cash-flow-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="cash-flow-calculator-guide-heading-1">
+<h2 id="cash-flow-calculator-guide-heading-1">Personal Cash Flow Calculator Inputs: Income and Expenses</h2>
+<p>A <strong>personal budgeting tool</strong> like this one asks for two kinds of numbers: money arriving and money leaving. Keep them in separate groups, enter amounts for the same period (all monthly or all annually), and the arithmetic takes care of itself. The hard part is honesty, because forgotten subscriptions and irregular bills are what make a plan look better than reality. <!-- SILO_START:slot_b -->The <a class="silo-link" href="/business-valuation-discounted-cash-flow-calculator.html">business valuation discounted cash flow calculator</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_b --></p>
+
+<h3>Cash Inflow: Every Source of Income</h3>
+<p>Your <strong>cash inflow</strong> is everything that lands in your account in the period: take-home pay, side income, benefits, interest and rental receipts. Use the amount after tax unless the tool says otherwise, since a figure taken <em>before tax</em> overstates what you can actually spend. If your pay varies, average the last three months rather than using your best one.</p>
+
+<h3>Cash Outflow: Housing, Debt Repayment and Savings</h3>
+<p>Your <strong>cash outflow</strong> covers each category of spending. The usual groups are listed below, and every one belongs in the tool even when it feels small.</p>
+<ul>
+<li><strong>Housing:</strong> rent or mortgage, utilities, insurance and upkeep</li>
+<li><strong>Car and transportation:</strong> fuel, transit passes, parking and repairs</li>
+<li><strong>Personal and living costs:</strong> groceries, phone, clothing and entertainment</li>
+<li><strong>Debt repayment:</strong> student loan, auto loan or credit card minimums, plus other loan payments</li>
+<li><strong>Savings:</strong> transfers to emergency funds or registered accounts, within your contribution limits</li>
+</ul>
+        </section>
+        <section id="cash-flow-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="cash-flow-calculator-guide-heading-2">
+<h2 id="cash-flow-calculator-guide-heading-2">Net Cash Flow Formula and a Monthly Worked Example</h2>
+<p>The calculation behind the tool is simple subtraction. Net <strong>cash flow</strong> equals total inflow minus total outflow for the same period: <!-- SILO_START:slot_c -->The <a class="silo-link" href="/payback-period-calculator.html">payback period calculator</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_c --></p>
+<p>$$\text{Net Cash Flow} = \text{Total Cash Inflow} - \text{Total Cash Outflow}$$</p>
+<p>Take a household with $4,860 in take-home pay and $415 of freelance income. That gives a <strong>total cash inflow</strong> of $5,275. Their monthly outflow is itemised below.</p>
+<table>
+<tr><th>Category</th><th>Monthly amount</th></tr>
+<tr><td>Housing</td><td>$1,640</td></tr>
+<tr><td>Car and transportation</td><td>$487</td></tr>
+<tr><td>Personal and living</td><td>$912</td></tr>
+<tr><td>Debt repayment</td><td>$318</td></tr>
+<tr><td>Savings</td><td>$650</td></tr>
+<tr><td>Other</td><td>$276</td></tr>
+<tr><td><strong>Total cash outflow</strong></td><td><strong>$4,283</strong></td></tr>
+<tr><td><strong>Unallocated cash flow</strong></td><td><strong>$992</strong></td></tr>
+</table>
+<p>Their <strong>total cash outflow</strong> is $4,283, so \(5{,}275 - 4{,}283 = 992\). Their <strong>monthly cash flow</strong> is a surplus of $992, which is $11,904 over a year and about 18.8% of income.</p>
+
+<figure><img src="/assets/images/tools/cash-flow-calculator/cash-flow-calculator-monthly-income-expense-waterfall.svg" alt="Waterfall chart taking $5,275 of monthly cash inflow down through six expense categories to $992 of unallocated cash flow"><figcaption>How $5,275 of monthly inflow becomes $992 of unallocated cash flow after six expense categories.</figcaption></figure>
+<h3>Reading Unallocated Cash Flow</h3>
+<p>The leftover $992 is <strong>unallocated cash flow</strong>: money with no job yet. A negative result means expenses exceed income, and you are covering the gap with debt or reserves. A positive result is only useful once you assign it, to an emergency fund, extra debt repayment or an investment.</p>
+
+<h3>Handling Irregular Bills in Your Cash Flow Result</h3>
+<p>Annual bills such as car registration, holiday travel or a dental plan can wreck an otherwise healthy result because they hit one month hard. Divide each one by twelve and enter that slice as its own outflow line every time you run the tool, so the surplus it returns is the surplus you can truly spend. Freelancers and seasonal workers should do the same with lean quarters: enter the average across a full year, and read a negative result as a seasonal gap that your reserve has to cover.</p>
+<p>Fixed costs, such as your lease and insurance, rarely move, so test the flexible lines instead: lower dining out or streaming, rerun the tool, and watch the surplus change.</p>
+        </section>
+        <section id="cash-flow-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="cash-flow-calculator-guide-heading-3">
+<h2 id="cash-flow-calculator-guide-heading-3">Business Cash Flow Calculator: Payroll and Accounts Payable</h2>
+<p>The business version follows the same logic with different labels. Inflow is customer receipts and financing; outflow is payroll, rent, supplier bills, tax and loan payments. Because invoices are paid late, <strong>accounts payable</strong> and receivables timing matter as much as the totals. Running out of available cash means missing obligations such as payroll even when the business is profitable on paper, which is why owners forecast monthly rather than yearly.</p>
+        </section>
+        <section id="cash-flow-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="cash-flow-calculator-guide-heading-4">
+<h2 id="cash-flow-calculator-guide-heading-4">Checking a Freelancer's Cash Flow Before Signing a Lease</h2>
+<p>Marisol Quintero, a freelance illustrator, is deciding whether a $1,385 studio rental is affordable. She opens the cash flow tool and enters the last six months of deposits averaged to $3,942, then adds $186 of annual software refunds spread across the year at $15.50 a month, giving $3,957.50 of inflow.</p>
+<p>For outflow she types her current rent of $1,120, utilities of $164, groceries of $398, a car payment of $271, health insurance of $312 and $240 of other spending, then swaps the rent line to the studio's $1,385. Total outflow comes to $2,770. The result reads $1,187.50 of unallocated cash flow before saving anything.</p>
+<p>That clears the common rule of thumb that rent should stay under 35% of income: $1,385 against $3,957.50 is 35.0%, right on the line, so she tests a weak month. Dropping inflow to $2,900, her lowest deposit total, leaves $130 of surplus, still positive but thin. She decides to sign only if she moves $1,500 into a reserve first, then reruns the numbers with a $1,500 target and a $250 monthly savings line to confirm the surplus stays above zero.</p>
+        </section>
+        <section id="cash-flow-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="cash-flow-calculator-guide-heading-5">
+<h2 id="cash-flow-calculator-guide-heading-5">Rental Cashflow Calculator: Cash-on-Cash Return</h2>
+<p>A <strong>rental cashflow calculator</strong> adds property costs: rent received, mortgage, maintenance and CapEx reserves. Real estate investors and landlords use <strong>monthly cashflow</strong> to judge whether a <strong>rental property</strong> pays for itself. Positive cashflow means rent covers every cost with money to spare.</p>
+
+<h3>Cash-on-Cash Return Formula</h3>
+<p>The <strong>cash-on-cash return</strong> compares one year of net cashflow to the cash you actually put in, including your down payment and every upfront cost:</p>
+<p>$$\text{Cash-on-Cash Return} = \frac{\text{Net Monthly Cash Flow} \times 12}{\text{Total Cash Invested}} \times 100$$</p>
+<p>If the <strong>purchase price</strong> and closing leave you with $38,400 invested, and the property nets $215 a month, then \(215 \times 12 = 2{,}580\) and the return is 6.72%. Compare that figure with what the same cash would earn elsewhere, and keep your risk tolerance in view: a thin margin can vanish after one vacancy.</p>
+        </section>
+        <section id="cash-flow-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="cash-flow-calculator-guide-heading-6">
+<h2 id="cash-flow-calculator-guide-heading-6">Present Value of Cash Flows Calculator: Discounting Future Payments</h2>
+<p>When money arrives over several years, a dollar later is worth less than a dollar now. A <strong>present value of cash flows calculator</strong> converts each future receipt to today's money with a <strong>discount rate</strong>, your expected rate of return, then adds them up. The tool treats <strong>uneven cash flows</strong> and even payments alike, and the <strong>rate per period</strong> must match the length of one period.</p>
+<p>$$PV = \sum_{n=1}^{N} \frac{CF_n}{(1+i)^n}$$</p>
+<p>Here <em>CF</em> is the payment in period <em>n</em> and <em>i</em> is the rate. With compounding more than once per period, divide the rate by the number of compounding periods. At 7.5% a year, four payments produce this <strong>cash flow stream</strong>:</p>
+<table>
+<tr><th>Period</th><th>Cash flow</th><th>Present value</th></tr>
+<tr><td>1</td><td>$900.00</td><td>$837.21</td></tr>
+<tr><td>2</td><td>$1,150.00</td><td>$995.13</td></tr>
+<tr><td>3</td><td>$1,400.00</td><td>$1,126.94</td></tr>
+<tr><td>4</td><td>$1,650.00</td><td>$1,235.52</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>$5,100.00</strong></td><td><strong>$4,194.81</strong></td></tr>
+</table>
+<p>The summation shows that $5,100 of future receipts is worth $4,194.81 today, so paying more than that as a <strong>lump sum</strong> loses value. If payments arrive at the start of each period, as with an <strong>annuity</strong> due, multiply the result by \(1 + i\) to get $4,509.42. Subtracting the initial investment from this total gives the <strong>net present value</strong>.</p>
+
+<figure><img src="/assets/images/tools/cash-flow-calculator/present-value-of-cash-flows-discounting-gap.svg" alt="Dumbbell chart comparing four future cash flows with their present values at a 7.5% discount rate"><figcaption>Each future payment sits to the right of its present value; the gap widens in later periods.</figcaption></figure>
+        </section>
+        <section id="cash-flow-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="cash-flow-calculator-guide-heading-7">
+<h2 id="cash-flow-calculator-guide-heading-7">Using Monthly Cash Flow Results to Reach Financial Goals</h2>
+<p>Once the tool returns your number, let it drive decisions. A positive net result is surplus to assign: build a reserve first, then accelerate debt repayment, then invest. A negative one tells you which outflow line to cut or which source of income to raise before the gap turns into debt. Rerun the calculation each month and compare it with the last one, because trends tell more than a single result, and link the surplus to your financial goals. Treat the figure as an estimate rather than a <strong>financial plan</strong>, and check the totals against your statements each period so missed receipts do not distort it. The accuracy of the result depends on your inputs, so a monthly analysis with an advisor can help allocate the surplus once the numbers are solid.</p>
+        </section>
+      </div>
+
+      <section id="cash-flow-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="cash-flow-calculator-faq-heading" data-section="faq">
+        <h2 id="cash-flow-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Cash Flow Calculator questions</h2>
+        <div id="cash-flow-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="cash-flow-calculator-faq-1" class="faq-item" open><summary id="cash-flow-calculator-faq-1-summary" class="faq-summary"><h3 id="cash-flow-calculator-faq-1-question" class="faq-question">What is a cash flow calculator?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="cash-flow-calculator-faq-1-answer" class="faq-answer"><p>It adds up all the money you receive and all the money you spend over the same period and subtracts the two. The difference is your net cash flow: positive means a surplus, negative means a shortfall.</p></div></details>
+          <details id="cash-flow-calculator-faq-2" class="faq-item" open><summary id="cash-flow-calculator-faq-2-summary" class="faq-summary"><h3 id="cash-flow-calculator-faq-2-question" class="faq-question">How do I calculate my cash flow by hand?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="cash-flow-calculator-faq-2-answer" class="faq-answer"><p>Convert every income and expense to the same period (monthly is easiest), add each group, then subtract total outflow from total inflow.</p></div></details>
+          <details id="cash-flow-calculator-faq-3" class="faq-item" open><summary id="cash-flow-calculator-faq-3-summary" class="faq-summary"><h3 id="cash-flow-calculator-faq-3-question" class="faq-question">Should savings count as an expense?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="cash-flow-calculator-faq-3-answer" class="faq-answer"><p>Many cash flow tools list savings as an outflow because the money leaves your spending account. If you count it that way, the remaining figure is truly unallocated cash.</p></div></details>
+          <details id="cash-flow-calculator-faq-4" class="faq-item" open><summary id="cash-flow-calculator-faq-4-summary" class="faq-summary"><h3 id="cash-flow-calculator-faq-4-question" class="faq-question">What counts as income in a cash flow calculation?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="cash-flow-calculator-faq-4-answer" class="faq-answer"><p>Take-home pay, government benefits, side income, interest and any other regular money received. Use amounts after tax so you only count what you can spend.</p></div></details>
+          <details id="cash-flow-calculator-faq-5" class="faq-item" open><summary id="cash-flow-calculator-faq-5-summary" class="faq-summary"><h3 id="cash-flow-calculator-faq-5-question" class="faq-question">What does a negative cash flow mean?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="cash-flow-calculator-faq-5-answer" class="faq-answer"><p>Your spending is higher than your income for that period. You are covering the gap with savings or debt, so look for outflows to cut or income to raise.</p></div></details>
+          <details id="cash-flow-calculator-faq-6" class="faq-item" open><summary id="cash-flow-calculator-faq-6-summary" class="faq-summary"><h3 id="cash-flow-calculator-faq-6-question" class="faq-question">How often should I recalculate my cash flow?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="cash-flow-calculator-faq-6-answer" class="faq-answer"><p>Monthly is a good habit, and any time your income or a major bill changes. Comparing months shows trends a single result cannot.</p></div></details>
+          <details id="cash-flow-calculator-faq-7" class="faq-item" open><summary id="cash-flow-calculator-faq-7-summary" class="faq-summary"><h3 id="cash-flow-calculator-faq-7-question" class="faq-question">How are weekly or biweekly amounts converted?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="cash-flow-calculator-faq-7-answer" class="faq-answer"><p>Weekly amounts are multiplied by 52 and biweekly by 26, then divided by 12 to get a monthly equivalent; twice-a-month amounts are doubled and annual amounts divided by 12.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="cash-flow-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="cash-flow-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="cash-flow-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="cash-flow-calculator-ad-bottom-leaderboard">
+            <ins id="cash-flow-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("cash-flow-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="cash-flow-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="cash-flow-calculator-right-rail-top" class="mb-6">
+        <aside id="cash-flow-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="cash-flow-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="cash-flow-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="cash-flow-calculator-ad-right-rail-rectangle">
+            <ins id="cash-flow-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("cash-flow-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="cash-flow-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="cash-flow-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="cash-flow-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="cash-flow-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="cash-flow-calculator-ad-right-rail-skyscraper">
+            <ins id="cash-flow-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("cash-flow-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="cash-flow-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="cash-flow-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="cash-flow-calculator-footer-brand">
+        <a id="cash-flow-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="cash-flow-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="cash-flow-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="cash-flow-calculator-footer-categories" aria-labelledby="cash-flow-calculator-footer-categories-heading">
+        <h2 id="cash-flow-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="cash-flow-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="cash-flow-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="cash-flow-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="cash-flow-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="cash-flow-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="cash-flow-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="cash-flow-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="cash-flow-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="cash-flow-calculator-footer-company" aria-labelledby="cash-flow-calculator-footer-company-heading">
+        <h2 id="cash-flow-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="cash-flow-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="cash-flow-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="cash-flow-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="cash-flow-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="cash-flow-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="cash-flow-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="cash-flow-calculator-footer-bottom" class="border-t border-line">
+      <p id="cash-flow-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="cash-flow-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // 12-month cash flow projection.
+  //   closing[m] = opening[m] + cashIn[m] - cashOut[m]; opening[1] = starting cash; opening[m+1] = closing[m].
+  //   Lowest balance = the smallest of the 12 closing balances (the month it first occurs is reported).
+  //   Months below $0 = closing < 0; months below cushion = closing < cushion.
+  //   Extra cash needed = max(0, cushion - lowest balance): the amount that, added at the start,
+  //   keeps every closing balance at or above the cushion.
+  //   Fill helper: month k amount = typical x (1 + g)^(k-1), rounded to the dollar.
+  // Verified (scratchpad b4biz/cf.test.js): default example, starting cash $20,000, closing balances
+  //   15,000 / 8,000 / 5,000 / -1,000 / 1,000 / 6,000 / 9,000 / 10,000 / 8,000 / 4,000 / 11,000 / 23,000
+  //   (hand-summed); lowest -$1,000 in Apr, 1 month below $0, 3 months below the $5,000 cushion,
+  //   extra cash needed $6,000, net +$3,000; a first month of Oct relabels the months Oct..Sep;
+  //   fill helper $10,000 growing 10% gives 10,000 / 11,000 / 12,100 / ... / 28,531 in month 12 (= 10,000 x 1.1^11);
+  //   blank boxes count as $0; negative cash in/out shows an error instead of a result.
+  var MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+
+  function fmt(x) { return Math.abs(x) < 0.5 ? money.format(0) : money.format(x); }
+  function signed(x) { return Math.abs(x) < 0.5 ? money.format(0) : (x > 0 ? '+' : '−') + money.format(Math.abs(x)); }
+  function set(id, text) { document.getElementById(id).textContent = text; }
+
+  function project(start, ins, outs, cushion) {
+    var bal = start, rows = [], lowest = Infinity, lowIdx = 0, neg = 0, below = 0, tin = 0, tout = 0;
+    for (var i = 0; i < ins.length; i++) {
+      var open = bal;
+      bal = open + ins[i] - outs[i];
+      tin += ins[i]; tout += outs[i];
+      if (bal < lowest - 1e-9) { lowest = bal; lowIdx = i; }
+      if (bal < 0) neg++;
+      if (bal < cushion) below++;
+      rows.push({ open: open, cin: ins[i], cout: outs[i], close: bal });
+    }
+    return { rows: rows, lowest: lowest, lowIdx: lowIdx, neg: neg, below: below, totalIn: tin, totalOut: tout,
+             ending: bal, needed: Math.max(0, cushion - lowest) };
+  }
+
+  function monthName(first, i) { return MONTHS[(first + i) % 12]; }
+
+  function readCell(id) {
+    var el = document.getElementById(id), raw = el.value.trim();
+    if (raw === '') { el.setAttribute('aria-invalid', 'false'); return 0; }
+    var v = parseFloat(raw), bad = isNaN(v) || v < 0 || v > 1e10;
+    el.setAttribute('aria-invalid', String(bad));
+    return bad ? NaN : v;
+  }
+
+  function relabel(first) {
+    for (var i = 0; i < 12; i++) {
+      var name = monthName(first, i);
+      set('cfMonth' + (i + 1), name);
+      document.getElementById('cfIn' + (i + 1)).setAttribute('aria-label', 'Cash in, ' + name);
+      document.getElementById('cfOut' + (i + 1)).setAttribute('aria-label', 'Cash out, ' + name);
+    }
+  }
+
+  function clearBody(id) {
+    var body = document.getElementById(id);
+    while (body.firstChild) body.removeChild(body.firstChild);
+    return body;
+  }
+
+  function addRow(body, cells) {
+    var tr = document.createElement('tr');
+    cells.forEach(function (text) { var td = document.createElement('td'); td.textContent = text; tr.appendChild(td); });
+    body.appendChild(tr);
+  }
+
+  function clearResults() {
+    ['cfLowest', 'cfNegMonths', 'cfEnding', 'cfNeeded', 'cfTotalIn', 'cfTotalOut', 'cfNet', 'cfBelowBuffer', 'cfAvgNet'].forEach(function (id) { set(id, '–'); });
+    ['cfLowestNote', 'cfNegNote', 'cfEndingNote', 'cfNeededNote'].forEach(function (id) { set(id, ''); });
+    document.getElementById('cfVerdict').hidden = true;
+    clearBody('cfTable');
+  }
+
+  function update() {
+    var first = parseInt(document.getElementById('cfFirst').value, 10) || 0;
+    relabel(first);
+    var start = parseFloat(document.getElementById('cfStart').value);
+    var cushionRaw = document.getElementById('cfBuffer').value.trim();
+    var cushion = cushionRaw === '' ? 0 : parseFloat(cushionRaw);
+    var ins = [], outs = [], cellsOk = true;
+    for (var i = 1; i <= 12; i++) {
+      var a = readCell('cfIn' + i), b = readCell('cfOut' + i);
+      if (isNaN(a) || isNaN(b)) cellsOk = false;
+      ins.push(a); outs.push(b);
+    }
+    var error = document.getElementById('cfError'), problem = '';
+    if (isNaN(start) || Math.abs(start) > 1e10) problem = 'Enter your starting cash (it can be negative if you begin overdrawn).';
+    else if (isNaN(cushion) || cushion < 0 || cushion > 1e10) problem = 'Enter a minimum cash cushion of $0 or more.';
+    else if (!cellsOk) problem = 'Monthly cash in and cash out must be $0 or more. Check the highlighted months.';
+    error.hidden = !problem;
+    error.textContent = problem;
+    if (problem) { clearResults(); return; }
+
+    var r = project(start, ins, outs, cushion);
+    var lowName = monthName(first, r.lowIdx);
+    set('cfLowest', fmt(r.lowest));
+    set('cfLowestNote', 'Reached at the end of ' + lowName + '.');
+    set('cfNegMonths', String(r.neg));
+    set('cfNegNote', r.neg ? 'Months that end overdrawn without extra funding.' : 'Every month ends with cash in the bank.');
+    set('cfEnding', fmt(r.ending));
+    set('cfEndingNote', 'Change of ' + signed(r.ending - start) + ' over 12 months.');
+    set('cfNeeded', fmt(r.needed));
+    set('cfNeededNote', r.needed > 0 ? 'Cash or credit to have ready so no month drops below your ' + fmt(cushion) + ' cushion.' : 'Your balance never drops below your ' + fmt(cushion) + ' cushion.');
+    set('cfTotalIn', fmt(r.totalIn));
+    set('cfTotalOut', fmt(r.totalOut));
+    set('cfNet', signed(r.totalIn - r.totalOut));
+    set('cfBelowBuffer', String(r.below));
+    set('cfAvgNet', signed((r.totalIn - r.totalOut) / 12));
+
+    var verdict = document.getElementById('cfVerdict');
+    verdict.hidden = false;
+    if (r.neg > 0) {
+      verdict.className = 'callout callout-warning mt-5';
+      set('cfVerdictTitle', 'You run out of cash in ' + r.neg + (r.neg === 1 ? ' month' : ' months'));
+      set('cfVerdictText', 'The balance falls to ' + fmt(r.lowest) + ' in ' + lowName + '. Line up ' + fmt(-r.lowest) + ' or more of funding (a credit line, faster customer collections or delayed purchases) before then, or ' + fmt(r.needed) + ' to stay above your cushion.');
+    } else if (r.below > 0) {
+      verdict.className = 'callout callout-caution mt-5';
+      set('cfVerdictTitle', 'Cash stays positive but gets tight');
+      set('cfVerdictText', 'The balance dips below your ' + fmt(cushion) + ' cushion in ' + r.below + (r.below === 1 ? ' month' : ' months') + ', with a low of ' + fmt(r.lowest) + ' in ' + lowName + '.');
+    } else {
+      verdict.className = 'callout callout-success mt-5';
+      set('cfVerdictTitle', 'Cash stays above your cushion all year');
+      set('cfVerdictText', 'The lowest closing balance is ' + fmt(r.lowest) + ' in ' + lowName + '.');
+    }
+
+    var tb = clearBody('cfTable');
+    r.rows.forEach(function (row, i) {
+      var status = row.close < 0 ? 'Overdrawn' : (row.close < cushion ? 'Below cushion' : 'OK');
+      addRow(tb, [monthName(first, i), fmt(row.open), fmt(row.cin), fmt(row.cout), signed(row.cin - row.cout), fmt(row.close), status]);
+    });
+  }
+
+  function fillMonths() {
+    var a = parseFloat(document.getElementById('cfFillIn').value), ga = parseFloat(document.getElementById('cfFillInGrowth').value);
+    var b = parseFloat(document.getElementById('cfFillOut').value), gb = parseFloat(document.getElementById('cfFillOutGrowth').value);
+    if (isNaN(ga)) ga = 0;
+    if (isNaN(gb)) gb = 0;
+    var error = document.getElementById('cfError');
+    if (isNaN(a) || isNaN(b) || a < 0 || b < 0 || a > 1e10 || b > 1e10 || ga < -100 || gb < -100 || ga > 100 || gb > 100) {
+      error.hidden = false;
+      error.textContent = 'To fill the months, enter typical amounts of $0 or more and monthly changes from -100% to 100%.';
+      return;
+    }
+    for (var i = 0; i < 12; i++) {
+      document.getElementById('cfIn' + (i + 1)).value = String(Math.round(a * Math.pow(1 + ga / 100, i)));
+      document.getElementById('cfOut' + (i + 1)).value = String(Math.round(b * Math.pow(1 + gb / 100, i)));
+    }
+    update();
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('cfForm');
+    form.addEventListener('input', function (e) { if (!e.target || !/^cfFill/.test(e.target.id || '')) update(); });
+    form.addEventListener('change', function (e) { if (!e.target || !/^cfFill/.test(e.target.id || '')) update(); });
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    document.getElementById('cfFill').addEventListener('click', fillMonths);
+    update();
+  });
+})();
+</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

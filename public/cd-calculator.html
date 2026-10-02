@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en" id="cd-calculator-document" data-page-slug="cd-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CD Calculator: Certificate of Deposit (CD) Earnings</title>
+  <meta name="description" content="Use this free CD calculator to find the interest a certificate of deposit earns. Enter your rate, term and compounding to estimate your balance at maturity.">
+  <link rel="canonical" href="https://company-marketcap.github.io/cd-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="CD Calculator: Certificate of Deposit (CD) Earnings">
+  <meta property="og:description" content="Use this free CD calculator to find the interest a certificate of deposit earns. Enter your rate, term and compounding to estimate your balance at maturity.">
+  <meta property="og:url" content="https://company-marketcap.github.io/cd-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "CD Calculator", "url": "https://company-marketcap.github.io/cd-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Use this free CD calculator to find the interest a certificate of deposit earns. Enter your rate, term and compounding to estimate your balance at maturity."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Bonds, CDs & Fixed Income", "item": "https://company-marketcap.github.io/financial-calculators.html#bond-cd-calculators"}, {"@type": "ListItem", "position": 4, "name": "CD Calculator", "item": "https://company-marketcap.github.io/cd-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How is CD interest calculated?", "acceptedAnswer": {"@type": "Answer", "text": "Most CDs use the compound interest formula A = P(1 + r/n)^(n×t), where P is your deposit, r is the annual rate, n is how many times per year interest compounds and t is the number of years. The result minus your deposit is the interest you earn."}}, {"@type": "Question", "name": "What is the difference between APY and the stated interest rate?", "acceptedAnswer": {"@type": "Answer", "text": "The stated rate ignores interest earned on interest, while the annual percentage yield (APY) includes it. Because of compounding, the APY is almost always slightly higher than the stated rate, which makes it the better figure for comparing CDs."}}, {"@type": "Question", "name": "Does compounding frequency make a big difference on a CD?", "acceptedAnswer": {"@type": "Answer", "text": "Usually only a small one. For the same rate and term, moving from annual to daily compounding adds a modest amount, so the interest rate and the length of the term matter far more than how often interest is credited."}}, {"@type": "Question", "name": "What happens if I withdraw money from a CD early?", "acceptedAnswer": {"@type": "Answer", "text": "Most banks charge an early withdrawal penalty, commonly a set number of days or months of interest. If you have not earned enough interest to cover it, the bank may take the difference from your principal."}}, {"@type": "Question", "name": "Are CDs FDIC insured?", "acceptedAnswer": {"@type": "Answer", "text": "CDs from FDIC-insured banks are protected up to $250,000 per depositor, per bank, per ownership category. Credit unions offer share certificates with the same limit through NCUA coverage."}}, {"@type": "Question", "name": "Is the interest on a CD taxable?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Interest is taxed as ordinary income in the year it is credited, unless the CD sits in a tax-deferred or tax-free account such as an IRA. Use the income tax rate field to see your after-tax earnings."}}, {"@type": "Question", "name": "What CD term should I choose?", "acceptedAnswer": {"@type": "Answer", "text": "Match the term to when you will need the money. Shorter CDs keep your cash accessible, while longer ones often pay higher rates. A CD ladder splits your money across several terms to balance both."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="cd-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="cd-calculator" data-page-type="calculator">
+  <a id="cd-calculator-skip-link" href="#cd-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="cd-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="cd-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="cd-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="cd-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="cd-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="cd-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="cd-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="cd-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="cd-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="cd-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="cd-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="cd-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="cd-calculator-header-search-status" aria-controls="cd-calculator-header-search-results" data-search-input="header">
+              <p id="cd-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="cd-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="cd-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="cd-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="cd-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="cd-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="cd-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="cd-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="cd-calculator-mobile-search-status" aria-controls="cd-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="cd-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="cd-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="cd-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="cd-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="cd-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="cd-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="cd-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="cd-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="cd-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="cd-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="cd-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="cd-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="cd-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="cd-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="cd-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="cd-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="cd-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="cd-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="cd-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="cd-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="cd-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="cd-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="cd-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="cd-calculator-sidebar-search-status" aria-controls="cd-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="cd-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="cd-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="cd-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="cd-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="cd-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="cd-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="cd-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="cd-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="cd-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="cd-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="cd-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="cd-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="cd-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="cd-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="cd-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="cd-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="cd-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="cd-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="cd-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="cd-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="cd-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators" aria-current="true">Bonds &amp; CDs</a></li><li><a id="cd-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="cd-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="cd-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="cd-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="cd-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="cd-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="cd-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="cd-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="cd-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="cd-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="cd-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="cd-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="cd-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="cd-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="cd-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="cd-calculator" data-calculator-slug="cd-calculator" data-sub-category-slug="bond-cd-calculators">
+      <aside id="cd-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="cd-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="cd-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="cd-calculator-ad-top-leaderboard">
+            <ins id="cd-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("cd-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="cd-calculator-intro-area" class="space-y-4">
+        <nav id="cd-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="cd-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="cd-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="cd-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="cd-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#bond-cd-calculators" itemprop="item"><span itemprop="name">Bonds, CDs &amp; Fixed Income</span></a><meta itemprop="position" content="3"></li>
+            <li id="cd-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">CD Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/cd-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="cd-calculator-hero-section" aria-labelledby="cd-calculator-hero-heading" data-section="hero">
+          <h1 id="cd-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">CD Calculator: Certificate of Deposit (CD) Earnings</h1>
+          <p id="cd-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Use this CD calculator to see exactly what a certificate of deposit will be worth on the day it matures. Enter your opening amount, the rate, the length of the term and how often interest compounds, and you get your end balance and total interest in seconds. Because CDs lock in your rate for a fixed period, the arithmetic is predictable, and a few minutes with the numbers shows whether an offer fits your savings goals. <!-- SILO_START:slot_a -->Try the <a class="silo-link" href="/compound-interest-calculator.html">compound interest calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="cd-calculator-tool" class="space-y-6" data-page-slug="cd-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="cdFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="cdForm" class="space-y-5" novalidate aria-labelledby="cdFormHeading">
+      <h2 id="cdFormHeading" class="panel-heading">Enter your CD details</h2>
+      <div><label for="cdDeposit" class="form-label">Initial deposit</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="cdDeposit" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="7500" inputmode="decimal"></div></div>
+      <div class="form-row form-row-2">
+        <div><label for="cdRate" class="form-label">Interest rate</label><div class="input-group"><input type="number" id="cdRate" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="0.05" value="4" inputmode="decimal"><span class="input-affix">%</span></div></div>
+        <div><label for="cdTerm" class="form-label">Term</label><div class="input-group"><input type="number" id="cdTerm" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1" max="600" step="1" value="24" inputmode="numeric"><span class="input-affix">months</span></div></div>
+      </div>
+      <div><label for="cdRateType" class="form-label">The rate is quoted as</label>
+        <select id="cdRateType" class="form-select"><option value="apy" selected>APY (annual percentage yield)</option><option value="apr">Interest rate (APR)</option></select><p class="form-hint">Banks usually advertise CDs by APY, which already includes compounding.</p></div>
+      <div><label for="cdCompound" class="form-label">Compounding</label>
+        <select id="cdCompound" class="form-select"><option value="365">Daily</option><option value="12" selected>Monthly</option><option value="4">Quarterly</option><option value="2">Semiannually</option><option value="1">Annually</option><option value="0">Continuously</option></select></div>
+      <details class="form-details">
+        <summary class="form-details-summary">More options</summary>
+        <div class="mt-4 space-y-5">
+        <div><label for="cdTax" class="form-label">Marginal tax rate</label><div class="input-group"><input type="number" id="cdTax" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="1" value="0" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">Your combined federal and state rate on interest income.</p></div>
+        </div>
+      </details>
+      <p id="cdError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="cdResults" aria-live="polite" aria-labelledby="cdResultsHeading">
+      <h2 id="cdResultsHeading" class="panel-heading">Your CD at maturity</h2>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p class="stat-label">Balance at maturity</p><p id="cdBalance" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Interest earned</p><p id="cdInterest" class="stat-value">–</p></div>
+        <div class="stat-card"><p id="cdRateOutLabel" class="stat-label">Equivalent interest rate (APR)</p><p id="cdRateOut" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Interest after tax</p><p id="cdAfterTax" class="stat-value">–</p><p id="cdAfterTaxNote" class="mt-1 text-xs text-ink-muted"></p></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="cdScheduleHeading" data-section="schedule">
+  <h2 id="cdScheduleHeading" class="panel-heading">Growth by year</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">Interest credited each year and the running balance until the CD matures.</p>
+  <div class="table-scroll mt-5 max-h-[520px]" tabindex="0" role="region" aria-labelledby="cdScheduleHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Period</th><th scope="col">Interest that period</th><th scope="col">Total interest</th><th scope="col">Balance</th></tr></thead>
+      <tbody id="cdSchedule"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="cd-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="cd-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Use this CD calculator to see exactly what a certificate of deposit will be worth on the day it matures. Enter your opening amount, the rate, the length of the term and how often interest compounds, and you get your end balance and total interest in seconds. Because CDs lock in your rate for a fixed period, the arithmetic is predictable, and a few minutes with the numbers shows whether an offer fits your savings goals. <!-- SILO_START:slot_a_m -->Try the <a class="silo-link" href="/compound-interest-calculator.html">compound interest calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="cd-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="cd-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="cd-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="cd-calculator-ad-in-feed">
+            <ins id="cd-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("cd-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="cd-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="cd-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="cd-calculator-guide-heading-1">
+<h2 id="cd-calculator-guide-heading-1">How the CD Calculator Turns Your Inputs Into Earnings</h2>
+
+<p>A <strong>CD</strong> is a simple product, so the tool needs only a handful of inputs. Each one maps to a line on the lender's disclosure sheet, which means you can copy the numbers straight from an offer and compare several <strong>CDs</strong> side by side before you commit any funds. <!-- SILO_START:slot_b -->The <a class="silo-link" href="/investment-calculator.html">free investment calculator</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_b --></p>
+
+<h3>Setting the CD Term and Initial Deposit</h3>
+
+<p>The <strong>initial deposit</strong> is the lump sum of money you hand over on day one; unlike a savings account, you cannot add to it later. The length of the <strong>CD term</strong> runs from a few months to five years or more, and it decides how long your cash stays locked up. Most banks also set a <strong>minimum deposit</strong>, often between $500 and $2,500, so check that requirement before you run a scenario.</p>
+
+<h3>Interest Rate, APY and Compounding Schedule</h3>
+
+<p>Enter the stated rate and pick a <strong>compounding frequency</strong>, anything from daily up to annual. If the lender quotes only the <strong>APY</strong>, choose annual compounding so the figure you type is the return you actually receive. The distinction matters because the stated, or nominal rate, ignores interest on interest, while the APY includes it, which is why advertisers lead with the larger-looking number when promoting <strong>CD rates</strong>.</p>
+
+<h3>Optional Tax Rate on Your Gains</h3>
+
+<p>Gains from CDs are taxed as ordinary income, so a tax field lets you see what you keep after the bill. Leave it at zero when the CD sits inside a tax-deferred retirement account such as an IRA or Roth IRA. Otherwise, enter your marginal bracket and the calculator subtracts the <strong>income tax</strong> from your gain, since taxes can shave a meaningful slice off the final result.</p>
+        </section>
+        <section id="cd-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="cd-calculator-guide-heading-2">
+<h2 id="cd-calculator-guide-heading-2">The Compound Interest Formula Behind Every Certificate of Deposit</h2>
+
+<p>Every result on the page comes from a single equation. Here <em>A</em> is the maturity value, <em>P</em> is the principal you deposit, <em>r</em> is the annual rate as a decimal, <em>n</em> is how many times per year interest compounds, and <em>t</em> is the number of years:</p>
+
+<p>$$A = P \times \left(1 + \frac{r}{n}\right)^{n \times t}$$</p>
+
+<p>Total gain is simply \(A - P\). To compare two offers that compound differently, convert each to its yield with the second formula below, where \(r\) and \(n\) are the same as above:</p>
+
+<p>$$\text{APY} = \left(1 + \frac{r}{n}\right)^{n} - 1$$</p>
+
+<h3>Worked Example: $18,500 at 4.20% for 30 Months</h3>
+
+<p>Suppose you place <strong>$18,500</strong> in a 30-month CD that pays <strong>4.20%</strong>, compounded monthly. That schedule means \(n = 12\), the periodic rate is \(0.042 \div 12 = 0.0035\), and the duration is 2.5 years, so the exponent is \(12 \times 2.5 = 30\):</p>
+
+<p>$$A = 18{,}500 \times (1.0035)^{30} = 20{,}544.38$$</p>
+
+<p>Your <strong>end balance</strong> is <strong>$20,544.38</strong>, so you gain <strong>$2,044.38</strong> in interest earned, an 11.05% gain over the whole stretch. Plain simple interest on the same amount would pay only $1,942.50, so compounding contributes an extra $101.88. That kind of steady growth is why long holding periods reward patience.</p>
+
+<figure><img src="/assets/images/tools/cd-calculator/cd-calculator-balance-growth-chart.svg" alt="Line chart of an $18,500 certificate of deposit growing to $20,544.38 over 30 months at 4.20% compounded monthly"><figcaption>The example CD balance rises from $18,500 to $20,544.38, with a little more growth each month.</figcaption></figure>
+
+<h3>Turning the Stated Rate Into APY</h3>
+
+<p>Run the yield formula on the same offer and the 4.20% stated rate becomes an <strong>annual percentage yield</strong> of 4.28%. That small gap is the entire effect of compounding in one year. If one of the other banks advertises 4.25% compounded once a year, the comparison shows immediately that your 4.20% beats it, even though the headline figure looks lower.</p>
+        </section>
+        <section id="cd-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="cd-calculator-guide-heading-3">
+<h2 id="cd-calculator-guide-heading-3">Reading the Accumulation Schedule and Your Results</h2>
+
+<p>After you click Calculate, the CD calculator reports your headline figures and a table showing how the balance builds. The <strong>accumulation schedule</strong> for the example above looks like this at six-month checkpoints: <!-- SILO_START:slot_d -->Pair this with the <a class="silo-link" href="/bond-calculator.html">bond calculator</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_d --></p>
+
+<table>
+<thead>
+<tr><th>Month</th><th>Interest this period</th><th>Ending balance</th></tr>
+</thead>
+<tbody>
+<tr><td>6</td><td>$391.92</td><td>$18,891.92</td></tr>
+<tr><td>12</td><td>$400.21</td><td>$19,292.13</td></tr>
+<tr><td>18</td><td>$408.70</td><td>$19,700.83</td></tr>
+<tr><td>24</td><td>$417.35</td><td>$20,118.18</td></tr>
+<tr><td>30</td><td>$426.20</td><td>$20,544.38</td></tr>
+</tbody>
+</table>
+
+<p>Notice that the gain in each half-year climbs from $391.92 to $426.20. That rising pattern is how CDs build wealth, and it is compounding at work: each period's gain is calculated on a larger base than the one before.</p>
+
+<h3>Balance After Maturity, Gain and After-Tax Value</h3>
+
+<ul>
+<li><strong>Balance after maturity:</strong> what your CD is worth once it ends, principal plus every gain, here $20,544.38.</li>
+<li><strong>Total interest:</strong> that figure minus the amount you started with, here $2,044.38.</li>
+<li><strong>After-tax value:</strong> at a 22% marginal rate, the tax on that gain is $449.76, leaving $20,094.62.</li>
+</ul>
+
+<p>The after-tax line is the number to use when you weigh a CD against a tax-free alternative, because a pre-tax yield can overstate what you actually keep.</p>
+        </section>
+        <section id="cd-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="cd-calculator-guide-heading-4">
+<h2 id="cd-calculator-guide-heading-4">How Compounding Frequency Changes CD Earnings</h2>
+
+<p>Banks and credit unions price CDs differently, so compare them one by one. Holding the amount, rate and 30-month duration constant, only the compounding schedule changes in the table below. The spread between the best and worst schedule is $43.91, which tells you that the interest rate matters far more than this setting.</p>
+
+<table>
+<thead>
+<tr><th>Compounding</th><th>Final amount</th><th>Gain</th></tr>
+</thead>
+<tbody>
+<tr><td>Annually</td><td>$20,504.11</td><td>$2,004.11</td></tr>
+<tr><td>Semiannually</td><td>$20,525.82</td><td>$2,025.82</td></tr>
+<tr><td>Quarterly</td><td>$20,536.90</td><td>$2,036.90</td></tr>
+<tr><td>Monthly</td><td>$20,544.38</td><td>$2,044.38</td></tr>
+<tr><td>Daily</td><td>$20,548.02</td><td>$2,048.02</td></tr>
+</tbody>
+</table>
+
+<p>Daily compounding wins, but only slightly. Use the quarterly option when comparing offers from different lenders, since many credit earnings on that schedule, and ask for the daily interest figure if a lender publishes one.</p>
+        </section>
+        <section id="cd-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="cd-calculator-guide-heading-5">
+<h2 id="cd-calculator-guide-heading-5">Testing a 20-Month CD Against a Condo Down Payment</h2>
+
+<p>You are saving toward a condo listed at $265,000, and the lender wants 10% down, which is $26,500. A tax refund and a year-end bonus leave you with $23,640 sitting in checking, and you plan to buy in 20 months. Before opening anything, you price the offer on the table: 4.55% with daily compounding.</p>
+
+<p>You enter <strong>$23,640</strong> as the opening amount, <strong>4.55%</strong> as the rate, <strong>20 months</strong> as the length, and daily as the compounding schedule. The tax field stays at zero for now because you want the pre-tax payout first.</p>
+
+<p>The result comes back at <strong>$25,502.30</strong>, which is $1,862.30 of earnings. That is $997.70 short of the $26,500 target, so the plain answer is that this offer alone does not get you to closing.</p>
+
+<table>
+<thead>
+<tr><th>Check</th><th>Figure</th></tr>
+</thead>
+<tbody>
+<tr><td>Lender's 10% requirement</td><td>$26,500.00</td></tr>
+<tr><td>Value at 4.55%, daily</td><td>$25,502.30</td></tr>
+<tr><td>Shortfall</td><td>$997.70</td></tr>
+</tbody>
+</table>
+
+<p>You have two ways to close the gap, and you test the first one by changing a single input. Raising the opening amount to <strong>$24,566</strong> and recalculating returns $26,501.25, which clears the lender's number by $1.25. That means moving another $926 from your other funds into it today, and nothing else about the plan changes.</p>
+
+<p>The second route is to keep the $23,640 where it is and set aside $49.89 from each of the next 20 paychecks, which adds up to $997.80 and covers the $997.70 gap on its own. You pick the first route, because it leaves your paycheck untouched, and you set a reminder for the day it comes due so the cash is available before the closing date.</p>
+        </section>
+        <section id="cd-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="cd-calculator-guide-heading-6">
+<h2 id="cd-calculator-guide-heading-6">Early Withdrawal Penalties and Other CD Rules to Know</h2>
+
+<p>The calculator assumes you leave the funds alone until they mature. Real <strong>CDs</strong> add rules that can change the outcome, and the list below covers the ones that most often surprise savers:</p>
+
+<ul>
+<li>An <strong>early withdrawal penalty</strong> usually costs a set stretch of interest, such as 180 days, and a lender may reach into your deposit if you have not yet earned enough.</li>
+<li>Many <strong>CDs</strong> renew automatically at whatever <strong>rates</strong> are current when the CD comes due, so note the grace period for switching.</li>
+<li>Gains are reported as income for the year they are credited, even if the payout waits until the maturity date.</li>
+<li>A <strong>brokered CD</strong> is bought through a brokerage rather than directly from the issuer, and it can be sold on a secondary market instead of being cashed out with a penalty.</li>
+<li>Some issuers sell a no-fee <strong>CD account</strong> online, while others require a branch visit, so confirm how you will open and fund it.</li>
+</ul>
+
+<h3>What an Early Withdrawal Costs</h3>
+
+<p>Consider the example CD with a 180-day forfeit rule. The penalty equals $18,500 \(\times\) 4.20% \(\times\) 180 \(\div\) 365, or $383.18. If you withdraw in month four, you have earned only about $260.36, so the lender would take that entire gain and $122.82 of your principal too. A penalty can erase every dollar of gain, so run the numbers first.</p>
+
+<figure><img src="/assets/images/tools/cd-calculator/cd-early-withdrawal-penalty-breakeven.svg" alt="Zone bar showing that withdrawing the example CD before month 5.9 makes a 180-day early withdrawal penalty cut into principal"><figcaption>Accrued interest first covers the $383.18 penalty in month 5.9 of the example CD.</figcaption></figure>
+
+<h3>FDIC and NCUA Insurance</h3>
+
+<p>Certificates of deposit from an <strong>FDIC-insured</strong> institution are protected up to $250,000 per depositor, per bank, per ownership category. A <strong>credit union</strong> offers a similar share certificate backed by NCUA coverage at the same limit. Because of that backing, few options are safer, so CDs are a natural home for money you cannot afford to lose, such as an emergency fund or a down payment due within a few years. Every <strong>financial institution</strong> you use gets its own separate limit.</p>
+
+<h3>Building a CD Ladder</h3>
+
+<p>A <strong>CD ladder</strong> splits your cash across several maturities, for example 12, 24, 36, 48 and 60 months, so one rung comes due every year. You capture the higher rates that longer CDs usually pay while keeping regular access to part of your funds, and you can reinvest each rung at the newest rates. The approach also softens <strong>interest rate risk</strong>, the chance that you lock in a rate just before rates climb.</p>
+        </section>
+        <section id="cd-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="cd-calculator-guide-heading-7">
+<h2 id="cd-calculator-guide-heading-7">Comparing a High-Yield CD With Other Savings Options</h2>
+
+<p>A <strong>high-yield</strong> CD from an online lender often pays more than most branch-based banks, so it pays to <strong>shop around</strong> before you commit. Each choice trades flexibility for return in a different way:</p>
+
+<ul>
+<li>A <strong>savings account</strong> lets you add and withdraw freely, but its variable rate can fall at any time.</li>
+<li>A <strong>money market</strong> account sits between the two, with check-writing features and a floating rate.</li>
+<li>A fixed-rate CD guarantees the same return for its whole length, which protects you if rates drop but leaves you behind if they rise.</li>
+</ul>
+
+<p>The Federal Reserve's <strong>federal funds rate</strong> sets the backdrop for all of these. When it falls, the best new offers fall with it, which is one reason savers lock in a long-term CD while rates are still attractive. Inflation matters too: if prices rise faster than your return, your balance grows on paper while its buying power shrinks. Even so, the tax-deferred retirement route and a <strong>low-risk</strong> guaranteed payout keep CDs relevant for the safe portion of an investment portfolio and for near-term goals.</p>
+
+<h3>Questions to Ask Before You Lock In a Rate</h3>
+
+<p>Two offers with the same headline rate can behave differently once the paperwork arrives. Ask whether the CD pays its gain out to checking or adds it back to the balance, whether the quoted rate is a limited promotion that drops on renewal, and whether the lender caps how large a balance you can open. Find out how many days you get after the due date to move your funds without being rolled over. Each answer maps to a calculator input such as length, rate or compounding, so settle them before you run the numbers.</p>
+
+<h3>Choosing Between the APR and APY on an Offer</h3>
+
+<p>The <strong>annual percentage rate</strong>, often shortened to <strong>APR</strong>, is the stated rate without compounding, while the APY adds it back in. Compare CDs on APY alone, then use this calculator to translate that figure into dollars for the amount and duration you actually plan to use.</p>
+        </section>
+      </div>
+
+      <section id="cd-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="cd-calculator-faq-heading" data-section="faq">
+        <h2 id="cd-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">CD Calculator questions</h2>
+        <div id="cd-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="cd-calculator-faq-1" class="faq-item" open><summary id="cd-calculator-faq-1-summary" class="faq-summary"><h3 id="cd-calculator-faq-1-question" class="faq-question">How is CD interest calculated?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="cd-calculator-faq-1-answer" class="faq-answer"><p>Most CDs use the compound interest formula A = P(1 + r/n)^(n×t), where P is your deposit, r is the annual rate, n is how many times per year interest compounds and t is the number of years. The result minus your deposit is the interest you earn.</p></div></details>
+          <details id="cd-calculator-faq-2" class="faq-item" open><summary id="cd-calculator-faq-2-summary" class="faq-summary"><h3 id="cd-calculator-faq-2-question" class="faq-question">What is the difference between APY and the stated interest rate?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="cd-calculator-faq-2-answer" class="faq-answer"><p>The stated rate ignores interest earned on interest, while the annual percentage yield (APY) includes it. Because of compounding, the APY is almost always slightly higher than the stated rate, which makes it the better figure for comparing CDs.</p></div></details>
+          <details id="cd-calculator-faq-3" class="faq-item" open><summary id="cd-calculator-faq-3-summary" class="faq-summary"><h3 id="cd-calculator-faq-3-question" class="faq-question">Does compounding frequency make a big difference on a CD?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="cd-calculator-faq-3-answer" class="faq-answer"><p>Usually only a small one. For the same rate and term, moving from annual to daily compounding adds a modest amount, so the interest rate and the length of the term matter far more than how often interest is credited.</p></div></details>
+          <details id="cd-calculator-faq-4" class="faq-item" open><summary id="cd-calculator-faq-4-summary" class="faq-summary"><h3 id="cd-calculator-faq-4-question" class="faq-question">What happens if I withdraw money from a CD early?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="cd-calculator-faq-4-answer" class="faq-answer"><p>Most banks charge an early withdrawal penalty, commonly a set number of days or months of interest. If you have not earned enough interest to cover it, the bank may take the difference from your principal.</p></div></details>
+          <details id="cd-calculator-faq-5" class="faq-item" open><summary id="cd-calculator-faq-5-summary" class="faq-summary"><h3 id="cd-calculator-faq-5-question" class="faq-question">Are CDs FDIC insured?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="cd-calculator-faq-5-answer" class="faq-answer"><p>CDs from FDIC-insured banks are protected up to $250,000 per depositor, per bank, per ownership category. Credit unions offer share certificates with the same limit through NCUA coverage.</p></div></details>
+          <details id="cd-calculator-faq-6" class="faq-item" open><summary id="cd-calculator-faq-6-summary" class="faq-summary"><h3 id="cd-calculator-faq-6-question" class="faq-question">Is the interest on a CD taxable?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="cd-calculator-faq-6-answer" class="faq-answer"><p>Yes. Interest is taxed as ordinary income in the year it is credited, unless the CD sits in a tax-deferred or tax-free account such as an IRA. Use the income tax rate field to see your after-tax earnings.</p></div></details>
+          <details id="cd-calculator-faq-7" class="faq-item" open><summary id="cd-calculator-faq-7-summary" class="faq-summary"><h3 id="cd-calculator-faq-7-question" class="faq-question">What CD term should I choose?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="cd-calculator-faq-7-answer" class="faq-answer"><p>Match the term to when you will need the money. Shorter CDs keep your cash accessible, while longer ones often pay higher rates. A CD ladder splits your money across several terms to balance both.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="cd-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="cd-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="cd-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="cd-calculator-ad-bottom-leaderboard">
+            <ins id="cd-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("cd-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="cd-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="cd-calculator-right-rail-top" class="mb-6">
+        <aside id="cd-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="cd-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="cd-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="cd-calculator-ad-right-rail-rectangle">
+            <ins id="cd-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("cd-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="cd-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="cd-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="cd-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="cd-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="cd-calculator-ad-right-rail-skyscraper">
+            <ins id="cd-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("cd-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="cd-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="cd-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="cd-calculator-footer-brand">
+        <a id="cd-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="cd-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="cd-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="cd-calculator-footer-categories" aria-labelledby="cd-calculator-footer-categories-heading">
+        <h2 id="cd-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="cd-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="cd-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="cd-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="cd-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="cd-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="cd-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="cd-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="cd-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="cd-calculator-footer-company" aria-labelledby="cd-calculator-footer-company-heading">
+        <h2 id="cd-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="cd-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="cd-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="cd-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="cd-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="cd-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="cd-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="cd-calculator-footer-bottom" class="border-t border-line">
+      <p id="cd-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="cd-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Certificate of deposit growth. Every rate is first turned into an annual percentage yield:
+  //   APR compounded n times a year: APY = (1 + r/n)^n - 1;  continuous: APY = e^r - 1;
+  //   rate entered as APY: used as is.
+  // Balance after m months = deposit x (1 + APY)^(m/12), which equals deposit x (1 + r/n)^(n x m/12).
+  // The nominal rate shown for an APY input is n x ((1 + APY)^(1/n) - 1) (continuous: ln(1 + APY)).
+  // Tax: interest x (1 - marginal rate), assuming the interest is taxed as ordinary income.
+  // Verified (scratchpad tests/cd.test.js): $10,000 at 5% compounded annually for 36 months =
+  // $11,576.25; 5% monthly for 36 months = $11,614.72 (APY 5.116%); 5% daily for 12 months =
+  // $10,512.67; 5% continuous for 12 months = $10,512.71; 4% APY for 18 months = $10,605.96;
+  // 24% tax on the 36-month annual case leaves $1,197.95 of interest; 0% returns the deposit unchanged.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 });
+
+  function num(id) {
+    var v = parseFloat(document.getElementById(id).value);
+    return isNaN(v) ? NaN : v;
+  }
+
+  function pct(x) { return (x * 100).toFixed(3).replace(/0+$/, '').replace(/\.$/, '') + '%'; }
+
+  function toApy(rate, n) { return n === 0 ? Math.exp(rate) - 1 : Math.pow(1 + rate / n, n) - 1; }
+  function toNominal(apy, n) { return n === 0 ? Math.log(1 + apy) : n * (Math.pow(1 + apy, 1 / n) - 1); }
+
+  function grow(deposit, apy, months) {
+    var rows = [], prev = deposit;
+    for (var m = 12; m < months + 12; m += 12) {
+      var at = Math.min(m, months), bal = deposit * Math.pow(1 + apy, at / 12);
+      rows.push({ month: at, interest: bal - prev, total: bal - deposit, balance: bal });
+      prev = bal;
+    }
+    return { balance: deposit * Math.pow(1 + apy, months / 12), rows: rows };
+  }
+
+  function set(id, text) { document.getElementById(id).textContent = text; }
+
+  function update() {
+    var deposit = num('cdDeposit'), rate = num('cdRate'), months = Math.round(num('cdTerm')),
+        n = parseInt(document.getElementById('cdCompound').value, 10), type = document.getElementById('cdRateType').value,
+        tax = num('cdTax');
+    if (isNaN(tax)) tax = 0;
+    var error = document.getElementById('cdError');
+    var bad = [deposit, rate, months].some(isNaN) || deposit < 0 || rate < 0 || rate > 100 ||
+              months < 1 || months > 600 || tax < 0 || tax > 100 || isNaN(n);
+    error.hidden = !bad;
+    if (bad) {
+      error.textContent = 'Enter a deposit of $0 or more, a rate from 0 to 100%, a term of 1 to 600 months and a tax rate from 0 to 100%.';
+      ['cdBalance', 'cdInterest', 'cdRateOut', 'cdAfterTax'].forEach(function (id) { set(id, '–'); });
+      document.getElementById('cdSchedule').innerHTML = '';
+      return;
+    }
+    var apy, other;
+    if (type === 'apy') {
+      apy = rate / 100;
+      other = toNominal(apy, n);
+      set('cdRateOutLabel', 'Equivalent interest rate (APR)');
+    } else {
+      apy = toApy(rate / 100, n);
+      other = apy;
+      set('cdRateOutLabel', 'Annual percentage yield (APY)');
+    }
+    var g = grow(deposit, apy, months), interest = g.balance - deposit;
+    set('cdBalance', money.format(g.balance));
+    set('cdInterest', money.format(interest));
+    set('cdRateOut', pct(other));
+    set('cdAfterTax', money.format(interest * (1 - tax / 100)));
+    set('cdAfterTaxNote', tax > 0 ? 'At a ' + tax + '% tax rate: ' + money.format(interest * tax / 100) + ' in tax.' : 'Add your tax rate under More options.');
+    document.getElementById('cdSchedule').innerHTML = g.rows.map(function (row) {
+      var label = row.month % 12 === 0 ? 'Year ' + row.month / 12 : 'Month ' + row.month;
+      return '<tr><td>' + label + '</td><td>' + money.format(row.interest) + '</td><td>' +
+             money.format(row.total) + '</td><td>' + money.format(row.balance) + '</td></tr>';
+    }).join('');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('cdForm');
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="en" id="investment-goal-calculator-document" data-page-slug="investment-goal-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Investment Goal Calculator: Low, Expected and High Returns</title>
+  <meta name="description" content="Find how much to invest each month, quarter or year to reach an investment goal, with low, expected and high return scenarios side by side.">
+  <link rel="canonical" href="https://company-marketcap.github.io/investment-goal-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Investment Goal Calculator: Low, Expected and High Returns">
+  <meta property="og:description" content="Find how much to invest each month, quarter or year to reach an investment goal, with low, expected and high return scenarios side by side.">
+  <meta property="og:url" content="https://company-marketcap.github.io/investment-goal-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Investment Goal Calculator", "url": "https://company-marketcap.github.io/investment-goal-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Find how much to invest each month, quarter or year to reach an investment goal, with low, expected and high return scenarios side by side."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Investment Returns & Growth", "item": "https://company-marketcap.github.io/financial-calculators.html#investment-calculators"}, {"@type": "ListItem", "position": 4, "name": "Investment Goal Calculator", "item": "https://company-marketcap.github.io/investment-goal-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does an investment goal calculator do?", "acceptedAnswer": {"@type": "Answer", "text": "It works backwards from a target balance. You enter the amount you want, your starting amount, the years you have and an expected return, and it solves for the deposit you need to make each period."}}, {"@type": "Question", "name": "What rate of return should I use?", "acceptedAnswer": {"@type": "Answer", "text": "Match it to what you actually hold. Cash and savings accounts earn far less than a stock-heavy mix. Many people run the calculator at a cautious rate and an optimistic rate to see how much the required deposit changes."}}, {"@type": "Question", "name": "Why does the calculator ask about inflation?", "acceptedAnswer": {"@type": "Answer", "text": "Prices rise over time, so a balance reached in the future buys less than the same figure today. The inflation rate converts your result into today's dollars so you can judge whether the goal is large enough."}}, {"@type": "Question", "name": "How do taxes change the result?", "acceptedAnswer": {"@type": "Answer", "text": "Interest and gains in a taxable account are reduced by your combined federal and state marginal rate. The after-tax result shows what growth remains once that drag is applied. Tax-advantaged accounts follow different rules."}}, {"@type": "Question", "name": "Is it better to deposit at the beginning or end of each period?", "acceptedAnswer": {"@type": "Answer", "text": "Beginning-of-period deposits start earning sooner, so you need to deposit slightly less to reach the same goal. The difference is small with monthly deposits and larger with yearly ones."}}, {"@type": "Question", "name": "How does compounding frequency affect my goal?", "acceptedAnswer": {"@type": "Answer", "text": "More frequent compounding adds interest on interest sooner, which raises the final balance a little. Moving from annual to monthly compounding matters more than moving from monthly to daily."}}, {"@type": "Question", "name": "Can I change the time frame instead of the deposit?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Try more years to see a lower required deposit. Starting earlier is usually cheaper than chasing a higher return, because compound growth builds on itself."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="investment-goal-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="investment-goal-calculator" data-page-type="calculator">
+  <a id="investment-goal-calculator-skip-link" href="#investment-goal-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="investment-goal-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="investment-goal-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="investment-goal-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="investment-goal-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="investment-goal-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="investment-goal-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="investment-goal-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="investment-goal-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="investment-goal-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="investment-goal-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="investment-goal-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="investment-goal-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="investment-goal-calculator-header-search-status" aria-controls="investment-goal-calculator-header-search-results" data-search-input="header">
+              <p id="investment-goal-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="investment-goal-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="investment-goal-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="investment-goal-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="investment-goal-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="investment-goal-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="investment-goal-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="investment-goal-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="investment-goal-calculator-mobile-search-status" aria-controls="investment-goal-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="investment-goal-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="investment-goal-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="investment-goal-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="investment-goal-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="investment-goal-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="investment-goal-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="investment-goal-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="investment-goal-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="investment-goal-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="investment-goal-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="investment-goal-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="investment-goal-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="investment-goal-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="investment-goal-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="investment-goal-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="investment-goal-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="investment-goal-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="investment-goal-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="investment-goal-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="investment-goal-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="investment-goal-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="investment-goal-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="investment-goal-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="investment-goal-calculator-sidebar-search-status" aria-controls="investment-goal-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="investment-goal-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="investment-goal-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="investment-goal-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="investment-goal-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="investment-goal-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="investment-goal-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="investment-goal-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="investment-goal-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="investment-goal-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="investment-goal-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="investment-goal-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="investment-goal-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="investment-goal-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="investment-goal-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="investment-goal-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="investment-goal-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="investment-goal-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="investment-goal-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="investment-goal-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators" aria-current="true">Investment Returns</a></li><li><a id="investment-goal-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="investment-goal-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="investment-goal-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="investment-goal-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="investment-goal-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="investment-goal-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="investment-goal-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="investment-goal-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="investment-goal-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="investment-goal-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="investment-goal-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="investment-goal-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="investment-goal-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="investment-goal-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="investment-goal-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="investment-goal-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="investment-goal-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="investment-goal-calculator" data-calculator-slug="investment-goal-calculator" data-sub-category-slug="investment-calculators">
+      <aside id="investment-goal-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="investment-goal-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="investment-goal-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="investment-goal-calculator-ad-top-leaderboard">
+            <ins id="investment-goal-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("investment-goal-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="investment-goal-calculator-intro-area" class="space-y-4">
+        <nav id="investment-goal-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="investment-goal-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="investment-goal-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="investment-goal-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="investment-goal-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#investment-calculators" itemprop="item"><span itemprop="name">Investment Returns &amp; Growth</span></a><meta itemprop="position" content="3"></li>
+            <li id="investment-goal-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Investment Goal Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/investment-goal-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="investment-goal-calculator-hero-section" aria-labelledby="investment-goal-calculator-hero-heading" data-section="hero">
+          <h1 id="investment-goal-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Investment Goal Calculator</h1>
+          <p id="investment-goal-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Picture the number you want your portfolio to hit, then work backwards: the investment goal calculator turns that target into the monthly amount you need to invest, the time frame it takes and the return rate you have to earn. Whether you are planning an investment process for retirement, a house deposit or a legacy for your kids, you plug in what you have today and see the earning potential of every extra dollar, with a clear view of what inflation does to the final figure and what you keep after taxes. <!-- SILO_START:slot_a -->Try the <a class="silo-link" href="/investment-loan-calculator.html">investment loan calculator online</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="investment-goal-calculator-tool" class="space-y-6" data-page-slug="investment-goal-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="igFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="igForm" class="space-y-5" novalidate aria-labelledby="igFormHeading">
+      <h2 id="igFormHeading" class="panel-heading">Enter your goal</h2>
+<div><label for="igGoal" class="form-label">Investment goal</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="igGoal" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1000" value="250000" inputmode="decimal"></div></div>
+<div class="form-row form-row-2"><div><label for="igYears" class="form-label">Years to invest</label><div class="input-group"><input type="number" id="igYears" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1" max="60" step="1" value="15" inputmode="numeric"></div></div><div><label for="igCurrent" class="form-label">Already invested</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="igCurrent" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="20000" inputmode="decimal"></div></div></div>
+<div><label for="igFreq" class="form-label">How often you invest</label><select id="igFreq" class="form-select"><option value="12" selected>Monthly</option><option value="4">Quarterly</option><option value="1">Yearly</option></select></div>
+<fieldset class="form-fieldset"><legend class="form-legend">Yearly return scenarios</legend><p class="form-hint">Average yearly returns to test. They are assumptions, not forecasts.</p><div class="form-row form-row-3"><div><label for="igLow" class="form-label">Low</label><div class="input-group"><input type="number" id="igLow" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="-50" max="50" step="0.1" value="3" inputmode="decimal"><span class="input-affix">%</span></div></div><div><label for="igMid" class="form-label">Expected</label><div class="input-group"><input type="number" id="igMid" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="-50" max="50" step="0.1" value="6" inputmode="decimal"><span class="input-affix">%</span></div></div><div><label for="igHigh" class="form-label">High</label><div class="input-group"><input type="number" id="igHigh" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="-50" max="50" step="0.1" value="9" inputmode="decimal"><span class="input-affix">%</span></div></div></div></fieldset>
+<div><label for="igPlanned" class="form-label">Amount you plan to invest each period</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="igPlanned" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="25" value="600" inputmode="decimal" aria-describedby="igPlannedHint"></div><p id="igPlannedHint" class="form-hint">Used to show where your current plan lands and the return it would need.</p></div>
+<details class="form-details"><summary class="form-details-summary">More options</summary>
+<label class="form-choice"><input type="checkbox" id="igToday" class="form-choice-input"><span class="form-choice-text">My goal is in today’s dollars<span class="form-choice-note">The goal is raised by inflation to the amount you will need in the final year.</span></span></label>
+<div><label for="igInflation" class="form-label">Inflation rate</label><div class="input-group"><input type="number" id="igInflation" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="20" step="0.1" value="2.5" inputmode="decimal"><span class="input-affix">%</span></div></div>
+<div><label for="igRaise" class="form-label">Increase contributions each year by</label><div class="input-group"><input type="number" id="igRaise" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="20" step="0.1" value="0" inputmode="decimal"><span class="input-affix">%</span></div></div>
+<div><label for="igTiming" class="form-label">Contributions are made at the</label><select id="igTiming" class="form-select"><option value="end" selected>End of each period</option><option value="start">Start of each period</option></select></div>
+<div><label for="igTax" class="form-label">Tax rate on yearly growth</label><div class="input-group"><input type="number" id="igTax" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="60" step="0.1" value="0" inputmode="decimal" aria-describedby="igTaxHint"><span class="input-affix">%</span></div><p id="igTaxHint" class="form-hint">Leave at 0% for a 401(k), IRA or other tax-deferred account. For a taxable account, a rough rate on the yearly gains lowers each scenario’s return.</p></div>
+</details>
+      <p id="igError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="igResults" aria-live="polite" aria-labelledby="igResultsHeading">
+      <h2 id="igResultsHeading" class="panel-heading">What you need to invest</h2>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p class="stat-label">Needed at the expected return</p><p id="igNeed" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Needed if returns are low</p><p id="igNeedLow" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Needed if returns are high</p><p id="igNeedHigh" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Return your planned amount needs</p><p id="igRateNeeded" class="stat-value">–</p></div>
+      </div>
+      <dl class="key-value-list mt-4">
+        <div class="key-value-row"><dt>Goal in the final year</dt><dd id="igGoalFuture">–</dd></div>
+        <div class="key-value-row"><dt>Your plan at the expected return</dt><dd id="igPlanEnd">–</dd></div>
+        <div class="key-value-row"><dt>Surplus or shortfall at the expected return</dt><dd id="igPlanGap">–</dd></div>
+      </dl>
+      <p id="igNote" class="callout callout-note mt-4 text-sm" hidden></p>
+      <p class="mt-4 text-sm text-ink-muted">Returns are treated as steady yearly averages. Real returns vary from year to year, so compare the scenarios rather than relying on one figure.</p>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="igScenarioHeading" data-section="scenarios">
+  <h2 id="igScenarioHeading" class="panel-heading">Scenarios side by side</h2>
+  <p id="igScenarioIntro" class="mt-0.5 text-sm text-ink-muted">The amount needed under each return assumption, and where your planned amount would end up.</p>
+  <div class="table-scroll mt-5 max-h-[520px]" tabindex="0" role="region" aria-labelledby="igScenarioHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Scenario</th><th scope="col">Yearly return</th><th scope="col" id="igColNeed">Needed each month</th><th scope="col">Total you invest</th><th scope="col">Your plan reaches</th><th scope="col">Versus goal</th></tr></thead>
+      <tbody id="igScenarioBody"></tbody>
+    </table>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="igYearHeading" data-section="schedule">
+  <h2 id="igYearHeading" class="panel-heading">Year-by-year range</h2>
+  <p id="igYearIntro" class="mt-0.5 text-sm text-ink-muted"></p>
+  <div class="table-scroll mt-5 max-h-[520px]" tabindex="0" role="region" aria-labelledby="igYearHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Year</th><th scope="col">Invested</th><th scope="col">Low return</th><th scope="col">Expected return</th><th scope="col">High return</th></tr></thead>
+      <tbody id="igYearBody"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="investment-goal-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="investment-goal-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Picture the number you want your portfolio to hit, then work backwards: the investment goal calculator turns that target into the monthly amount you need to invest, the time frame it takes and the return rate you have to earn. Whether you are planning an investment process for retirement, a house deposit or a legacy for your kids, you plug in what you have today and see the earning potential of every extra dollar, with a clear view of what inflation does to the final figure and what you keep after taxes. <!-- SILO_START:slot_a_m -->Try the <a class="silo-link" href="/investment-loan-calculator.html">investment loan calculator online</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="investment-goal-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="investment-goal-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="investment-goal-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="investment-goal-calculator-ad-in-feed">
+            <ins id="investment-goal-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("investment-goal-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="investment-goal-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="investment-goal-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-goal-calculator-guide-heading-1">
+<h2 id="investment-goal-calculator-guide-heading-1">How the Investment Goal Calculator Works</h2>
+<p>A goal-based tool flips the usual question. Instead of asking "what will my money be worth?", it asks "what does it take to reach a specific number?" You choose the end amount, and the calculator solves for the one variable you leave open, usually the <strong>periodic contribution</strong>, but also the years needed or the return you must earn. Think of it as an <strong>investment goals calculator</strong> that does the algebra so you can focus on the decisions behind the numbers. <!-- SILO_START:slot_b -->The <a class="silo-link" href="/asset-allocation-broad-portfolio-calculator.html">free asset allocation broad portfolio calculator</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_b --></p>
+
+<h3>The Initial Investment and Starting Amount</h3>
+<p>Your <strong>initial investment</strong> is the lump sum already working for you on day one. It might be a brokerage account balance, a rollover or an old savings account you are ready to put to better use. Because this starting amount compounds for the entire period, even a modest sum matters: in the worked example below, a $23,750 lump sum grows to more than $80,000 without a single extra deposit.</p>
+
+<h3>Return Rate and Expected Inflation Rate</h3>
+<p>The <strong>rate of return</strong> is your assumed yearly growth. A cash-heavy mix earns far less than a stock-heavy one, so match the figure to the assets you actually hold. Next comes the <strong>expected inflation rate</strong>, the pace at which prices rise. Subtracting it shows what your goal is worth in today's money, and the consumer price index has averaged roughly 3% over the long run, which is a sensible default if you have no better estimate.</p>
+
+<h3>Contribution Frequency and Timing</h3>
+<p><strong>Contribution frequency</strong> decides how often you add money: monthly, quarterly or yearly. Timing matters too. Deposits at the beginning of the period start earning immediately, while deposits at the end of the period wait one cycle. The gap is small for a monthly schedule but grows with less frequent deposits.</p>
+        </section>
+        <section id="investment-goal-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-goal-calculator-guide-heading-2">
+<h2 id="investment-goal-calculator-guide-heading-2">The Formula Behind an Investment Calculator for Goals</h2>
+<p>Any <strong>investment calculator</strong> that targets a goal rests on the future value of an annuity plus a lump sum. Once you know the three pieces, you can check any result by hand. <!-- SILO_START:slot_c -->If you want to see how the figures change, the <a class="silo-link" href="/inflation-historic-impact-on-investments-calculator.html">inflation historic impact on investments calculator</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_c --></p>
+<p>$$FV = P \times (1 + r)^{n} + C \times \frac{(1 + r)^{n} - 1}{r}$$</p>
+<p>Here \(FV\) is the end amount you want, \(P\) the starting amount, \(C\) the contribution each period, \(r\) the rate per period and \(n\) the number of periods. To find the contribution, rearrange the formula:</p>
+<p>$$C = \frac{FV - P \times (1 + r)^{n}}{\frac{(1 + r)^{n} - 1}{r}}$$</p>
+
+<h3>Solving for the Periodic Contribution</h3>
+<p>The numerator is the shortfall: your goal minus what the lump sum will become by itself. The denominator converts one dollar deposited every period into its future value. Divide one by the other and you have the monthly amount. Divide the yearly rate by 12 for monthly <strong>compounding</strong>, and multiply the years by 12 for the number of periods.</p>
+
+<h3>Years to Accumulate and Investment Length</h3>
+<p>If you fix the contribution instead, the same equation can be solved for time. The <strong>years to accumulate</strong> is the answer when your budget is set and the goal is flexible. A shorter <strong>investment length</strong> demands much larger deposits, because there is less room for <strong>compound interest</strong> to do the heavy lifting, which is why the time frame is usually the most powerful lever you control.</p>
+        </section>
+        <section id="investment-goal-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-goal-calculator-guide-heading-3">
+<h2 id="investment-goal-calculator-guide-heading-3">Investment Goals Calculator Example: Reaching $320,000 in 18 Years</h2>
+<p>Suppose you want a <strong>$320,000</strong> end amount in <strong>18 years</strong>. You already have <strong>$23,750</strong> invested, you expect <strong>6.8%</strong> a year compounded monthly, and you plan to deposit at the end of every month. Plug those into the formula: the lump sum grows by a factor of 3.389 to about $80,490, leaving a shortfall of $239,510. The annuity factor over 216 months is 421.6, so the required deposit is <strong>$568.11 a month</strong>.</p>
+
+<table>
+<thead><tr><th>Year</th><th>Starting amount plus deposits</th><th>Interest earned</th><th>Ending balance</th></tr></thead>
+<tbody>
+<tr><td>3</td><td>$44,202</td><td>$7,522</td><td>$51,724</td></tr>
+<tr><td>6</td><td>$64,654</td><td>$21,356</td><td>$86,010</td></tr>
+<tr><td>9</td><td>$85,105</td><td>$42,924</td><td>$128,029</td></tr>
+<tr><td>12</td><td>$105,558</td><td>$73,970</td><td>$179,528</td></tr>
+<tr><td>15</td><td>$126,009</td><td>$116,636</td><td>$242,645</td></tr>
+<tr><td>18</td><td>$146,461</td><td>$173,539</td><td>$320,000</td></tr>
+</tbody>
+</table>
+
+<h3>Reading the Accumulation Schedule</h3>
+<p>This <strong>accumulation schedule</strong> shows something a single number can hide. Across the 18 years you contribute $146,461, including the opening $23,750, yet the account reaches $320,000. The other $173,539, more than half of the final balance, is <strong>accumulated interest</strong>. In the first three years the interest is only $7,522; in the last three it is about $56,900. Growth is back-loaded, so stopping early or pausing deposits costs far more than the missed contributions alone.</p>
+<figure><img src="/assets/images/tools/investment-goal-calculator/investment-goal-calculator-balance-growth-over-time.svg" alt="Stacked area chart of a balance growing to $320,000 over 18 years, split into starting amount, monthly deposits and interest"><figcaption>Interest becomes the largest share of the balance in the later years of the plan.</figcaption></figure>
+
+<h3>What Inflation Does to the End Amount</h3>
+<p>A nominal $320,000 in 18 years will not buy what $320,000 buys today. At 2.6% a year, the purchasing power of that balance falls to about <strong>$201,603 in today's dollars</strong>, a loss of $118,397 to rising prices. If your plan needs $320,000 of real spending power, you would raise the goal to roughly $508,000 and recalculate. Looking at your result <strong>after inflation</strong> keeps the target honest.</p>
+<figure><img src="/assets/images/tools/investment-goal-calculator/investment-goal-inflation-adjusted-end-amount.svg" alt="Waterfall chart showing a $320,000 goal reduced by $118,397 of inflation to $201,603 in today's dollars"><figcaption>At 2.6% inflation, $320,000 in 18 years is worth about $201,603 today.</figcaption></figure>
+        </section>
+        <section id="investment-goal-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-goal-calculator-guide-heading-4">
+<h2 id="investment-goal-calculator-guide-heading-4">How Return Rate and Time Frame Change Your Savings Goal</h2>
+<p>Every variable in the formula moves the monthly deposit, but two dominate: the return you earn and the years you give the plan. The table below keeps the $320,000 goal, the $23,750 starting amount and the 18-year horizon, then changes only the <strong>interest rate</strong>.</p>
+
+<table>
+<thead><tr><th>Average annual return</th><th>Monthly deposit required</th></tr></thead>
+<tbody>
+<tr><td>4.8%</td><td>$770.88</td></tr>
+<tr><td>5.8%</td><td>$666.19</td></tr>
+<tr><td>6.8%</td><td>$568.11</td></tr>
+<tr><td>7.8%</td><td>$476.36</td></tr>
+<tr><td>8.8%</td><td>$390.66</td></tr>
+</tbody>
+</table>
+
+<h3>Testing Slower and Faster Return Rates</h3>
+<p>Each full percentage point is worth roughly $85 to $105 a month here. That is why a prudent plan runs the numbers at a lower rate as well as the hopeful one: a <strong>hypothetical</strong> 8.8% looks comfortable, but at 4.8% you would need $770.88 a month, about $200 more. Treat the middle row as a base case and the outer rows as a stress test.</p>
+<figure><img src="/assets/images/tools/investment-goal-calculator/investment-goal-monthly-deposit-by-return-and-years.svg" alt="Heatmap of the monthly deposit needed for a $320,000 investment goal across return rates from 4.8% to 8.8% and 12 to 24 years"><figcaption>The monthly deposit needed for $320,000 by return rate and number of years.</figcaption></figure>
+
+<h3>Compound Growth Rewards Starting Early</h3>
+<p>Now hold the 6.8% return fixed and change the number of years. <strong>Compound growth</strong> rewards patience sharply: a 24-year plan needs $275.81 a month, an 18-year plan $568.11, and a 12-year plan $1,201.75. If you can only afford $500 a month, the same inputs show the goal arriving after about 19 years instead of 18, and at $400 a month it takes 21 years. Starting a few years sooner is almost always cheaper than chasing a higher return.</p>
+        </section>
+        <section id="investment-goal-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-goal-calculator-guide-heading-5">
+<h2 id="investment-goal-calculator-guide-heading-5">Planning a College Fund with an Investment Calculator</h2>
+<p>Marisol is 41, and her daughter starts university in nine years. A statement from her 529 plan shows <strong>$11,840</strong> already invested, and she wants <strong>$85,000</strong> in the account by the first tuition bill. She opens the goal calculator and enters $85,000 as the end amount, $11,840 as the starting amount, 9 years as the investment length and monthly deposits at the end of each month.</p>
+<p>For the return, she reads the plan's age-based portfolio fact sheet, which is mostly equity funds today and shifts toward bonds as enrollment nears, and enters <strong>5.4%</strong> a year compounded monthly, deliberately below the stock-market averages she has seen quoted. The calculator returns <strong>$474.29 a month</strong>, or $5,691.51 a year. Her $11,840 alone would grow to about $19,228, so deposits and interest must cover the remaining $65,772.</p>
+<p>Next she asks whether $474.29 a month is safe to rely on, so she changes one input and reruns the calculation at <strong>3.4%</strong>, the pace she would see if the funds become conservative early. The required deposit rises to <strong>$546.45 a month</strong>, a gap of $72.16.</p>
+<p>The result gives her a clear decision. She sets the automatic transfer at $550, which covers the cautious case with a few dollars to spare, and she plans to rerun the inputs every January with the new balance. If the plan beats 5.4%, she lowers the deposit; if it falls short, she knows exactly how much to add.</p>
+        </section>
+        <section id="investment-goal-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-goal-calculator-guide-heading-6">
+<h2 id="investment-goal-calculator-guide-heading-6">Choosing Investments for an Investment Plan</h2>
+<p>The calculator needs a single return assumption, but your <strong>investment plan</strong> is built from real assets, and each has its own trade-offs. These are the main <strong>investment choices</strong> and how they typically relate to a goal.</p>
+
+<h3>Bonds, CDs and Savings Accounts</h3>
+<p><strong>Bonds</strong> are loans to a government or company that pay interest and return your principal at maturity. A <strong>certificate of deposit</strong> (or CDs more broadly) is a deposit at a <strong>financial institution</strong> or credit union with a fixed rate for a set term, while a <strong>savings account</strong> offers flexibility but a lower rate. These suit short horizons, where a <strong>fixed rate of return</strong> and protection from <strong>loss of principal</strong> matter more than growth, though their returns can struggle to outpace inflation over decades.</p>
+
+<h3>Stocks, Mutual Funds and ETFs</h3>
+<p><strong>Stocks</strong> are ownership shares and, over long periods, have been the main engine of growth, along with <strong>dividends</strong> that can be put to work through <strong>reinvestment</strong>. A <strong>growth stock</strong> reinvests profits instead of paying them out. Rather than picking single companies, a cautious investor can buy <strong>mutual funds</strong> or <strong>ETFs</strong> that track an <strong>index</strong> such as the <strong>S&P 500</strong>, spreading money across hundreds of businesses for one low-cost holding. The <strong>average annual</strong> return of such an index has been near 10% over long stretches, but single years can be deeply negative, so do not use that figure as a promise. For a stock-heavy goal portfolio, enter a return below that headline number, such as 6% to 7%, and watch the required monthly deposit rise.</p>
+
+<h3>Real Estate and Commodities</h3>
+<p><strong>Real estate</strong> can produce rent and appreciation but is illiquid and usually needs a separate budget from your goal-based savings. <strong>Commodities</strong> such as gold, oil and grains tend to follow supply and demand rather than earnings, which makes them hard to project with a fixed rate. For that reason, keep them as a separate holding and leave them out of the return you enter, so the required deposit reflects only the money you will actually contribute.</p>
+        </section>
+        <section id="investment-goal-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-goal-calculator-guide-heading-7">
+<h2 id="investment-goal-calculator-guide-heading-7">Savings Goal Calculator Limits: Taxes, Risk and Volatility</h2>
+<p>A clean projection assumes steady growth. Real investing is bumpier, and a good plan acknowledges three things the arithmetic leaves out. Keep these in mind whenever you rely on a <strong>savings goal calculator</strong> for a big decision.</p>
+
+<h3>Marginal Tax Rate and Account Type</h3>
+<p>Results <strong>before taxes</strong> and <strong>after taxes</strong> can differ a lot. Your <strong>marginal tax rate</strong> depends on your <strong>filing status</strong>, your <strong>federal income tax</strong> bracket and, in many places, <strong>state taxes</strong>. Interest and gains inside a regular <strong>brokerage account</strong> are taxed in the year they arise or when you sell, while a 401(k) or <strong>Roth IRA</strong> shelters growth for <strong>retirement</strong>. To reflect this in the calculator, enter a return reduced by your tax drag, which lowers the growth rate and raises the monthly deposit needed. A licensed <strong>investment professional</strong>, or a program such as SmartVestor, can confirm which rules apply to you.</p>
+
+<h3>Risk Tolerance and Volatility</h3>
+<p>Your <strong>risk tolerance</strong> is how much of a drop you can sit through without selling. Market <strong>volatility</strong> means the balance will not follow the smooth curve in the schedule, and a bad <strong>risk</strong> year just before you need the money can set a goal back by years. As you approach your date, many investors shift from stocks toward bonds, and a bigger <strong>nest egg</strong> usually calls for a more careful mix, particularly when your <strong>age</strong> leaves little time to recover.</p>
+
+<h3>Long-Term Investing and the Bigger Picture</h3>
+<p><strong>Long-term investing</strong> works when contributions continue through good and bad markets, so treat the calculated deposit as a standing commitment. Rerun the inputs once a year with your actual balance, lower the monthly figure if you are ahead, and raise it if you are behind. A bonus or inheritance can be added to the starting amount and recalculated at any point, and a legacy goal simply becomes a larger target balance. The result is a direction and a first number; your own discipline and a realistic <strong>time frame</strong> supply the rest.</p>
+        </section>
+      </div>
+
+      <section id="investment-goal-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="investment-goal-calculator-faq-heading" data-section="faq">
+        <h2 id="investment-goal-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Investment Goal Calculator questions</h2>
+        <div id="investment-goal-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="investment-goal-calculator-faq-1" class="faq-item" open><summary id="investment-goal-calculator-faq-1-summary" class="faq-summary"><h3 id="investment-goal-calculator-faq-1-question" class="faq-question">What does an investment goal calculator do?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="investment-goal-calculator-faq-1-answer" class="faq-answer"><p>It works backwards from a target balance. You enter the amount you want, your starting amount, the years you have and an expected return, and it solves for the deposit you need to make each period.</p></div></details>
+          <details id="investment-goal-calculator-faq-2" class="faq-item" open><summary id="investment-goal-calculator-faq-2-summary" class="faq-summary"><h3 id="investment-goal-calculator-faq-2-question" class="faq-question">What rate of return should I use?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="investment-goal-calculator-faq-2-answer" class="faq-answer"><p>Match it to what you actually hold. Cash and savings accounts earn far less than a stock-heavy mix. Many people run the calculator at a cautious rate and an optimistic rate to see how much the required deposit changes.</p></div></details>
+          <details id="investment-goal-calculator-faq-3" class="faq-item" open><summary id="investment-goal-calculator-faq-3-summary" class="faq-summary"><h3 id="investment-goal-calculator-faq-3-question" class="faq-question">Why does the calculator ask about inflation?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="investment-goal-calculator-faq-3-answer" class="faq-answer"><p>Prices rise over time, so a balance reached in the future buys less than the same figure today. The inflation rate converts your result into today&#x27;s dollars so you can judge whether the goal is large enough.</p></div></details>
+          <details id="investment-goal-calculator-faq-4" class="faq-item" open><summary id="investment-goal-calculator-faq-4-summary" class="faq-summary"><h3 id="investment-goal-calculator-faq-4-question" class="faq-question">How do taxes change the result?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="investment-goal-calculator-faq-4-answer" class="faq-answer"><p>Interest and gains in a taxable account are reduced by your combined federal and state marginal rate. The after-tax result shows what growth remains once that drag is applied. Tax-advantaged accounts follow different rules.</p></div></details>
+          <details id="investment-goal-calculator-faq-5" class="faq-item" open><summary id="investment-goal-calculator-faq-5-summary" class="faq-summary"><h3 id="investment-goal-calculator-faq-5-question" class="faq-question">Is it better to deposit at the beginning or end of each period?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="investment-goal-calculator-faq-5-answer" class="faq-answer"><p>Beginning-of-period deposits start earning sooner, so you need to deposit slightly less to reach the same goal. The difference is small with monthly deposits and larger with yearly ones.</p></div></details>
+          <details id="investment-goal-calculator-faq-6" class="faq-item" open><summary id="investment-goal-calculator-faq-6-summary" class="faq-summary"><h3 id="investment-goal-calculator-faq-6-question" class="faq-question">How does compounding frequency affect my goal?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="investment-goal-calculator-faq-6-answer" class="faq-answer"><p>More frequent compounding adds interest on interest sooner, which raises the final balance a little. Moving from annual to monthly compounding matters more than moving from monthly to daily.</p></div></details>
+          <details id="investment-goal-calculator-faq-7" class="faq-item" open><summary id="investment-goal-calculator-faq-7-summary" class="faq-summary"><h3 id="investment-goal-calculator-faq-7-question" class="faq-question">Can I change the time frame instead of the deposit?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="investment-goal-calculator-faq-7-answer" class="faq-answer"><p>Yes. Try more years to see a lower required deposit. Starting earlier is usually cheaper than chasing a higher return, because compound growth builds on itself.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="investment-goal-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="investment-goal-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="investment-goal-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="investment-goal-calculator-ad-bottom-leaderboard">
+            <ins id="investment-goal-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("investment-goal-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="investment-goal-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="investment-goal-calculator-right-rail-top" class="mb-6">
+        <aside id="investment-goal-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="investment-goal-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="investment-goal-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="investment-goal-calculator-ad-right-rail-rectangle">
+            <ins id="investment-goal-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("investment-goal-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="investment-goal-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="investment-goal-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="investment-goal-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="investment-goal-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="investment-goal-calculator-ad-right-rail-skyscraper">
+            <ins id="investment-goal-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("investment-goal-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="investment-goal-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="investment-goal-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="investment-goal-calculator-footer-brand">
+        <a id="investment-goal-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="investment-goal-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="investment-goal-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="investment-goal-calculator-footer-categories" aria-labelledby="investment-goal-calculator-footer-categories-heading">
+        <h2 id="investment-goal-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="investment-goal-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="investment-goal-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="investment-goal-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="investment-goal-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="investment-goal-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="investment-goal-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="investment-goal-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="investment-goal-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="investment-goal-calculator-footer-company" aria-labelledby="investment-goal-calculator-footer-company-heading">
+        <h2 id="investment-goal-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="investment-goal-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="investment-goal-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="investment-goal-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="investment-goal-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="investment-goal-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="investment-goal-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="investment-goal-calculator-footer-bottom" class="border-t border-line">
+      <p id="investment-goal-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="investment-goal-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Investment goal: the regular investment needed to reach a target under three return
+  // scenarios (low / expected / high), shown side by side, plus the return your planned amount needs.
+  //   Each scenario's yearly return r is an effective annual rate. A yearly tax rate t on growth
+  //   (taxable account) lowers it to r' = r x (1 - t). Per-period rate i = (1 + r')^(1/f) - 1 for
+  //   f contributions a year. Contributions rise by c% at the start of each year; deposits at the
+  //   end (or start) of each period. Ending value is linear in the first-year contribution C:
+  //     FV = A + C x U, A = current amount grown, U = ending value of $1-a-period contributions,
+  //   so the required C = (goal - A) / U (zero if A already reaches the goal).
+  //   A goal in today's dollars is grown by inflation: goal x (1 + inflation)^years.
+  //   Return needed for the planned amount: bisection on r over -90% .. 100% (FV rises with r).
+  // Verified (Node, scratch tests): $100,000 goal, 10 years, nothing invested, 6%, annual deposits
+  //   at year end -> $7,586.80 a year (100,000 x 0.06 / (1.06^10 - 1)); monthly at 6% effective ->
+  //   monthly rate 0.486755%, $615.49 a month (100,000 x i / ((1 + i)^120 - 1));
+  //   0% return -> goal / number of deposits ($833.33 a month);
+  //   $50,000 already invested at 8% for 10 years -> $107,946.25, goal $100,000 needs $0;
+  //   annuity-due check: annual at start, 6%, 10 years -> $7,157.35 (= 7,586.80 / 1.06);
+  //   planned $7,586.80 a year -> return needed 6.00%; 8% with a 25% tax on growth -> same as 6%;
+  //   today's-dollar goal $100,000, 2% inflation, 10 years -> $121,899.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+  var money2 = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  var PERIOD_WORD = { 12: 'month', 4: 'quarter', 1: 'year' };
+
+  function num(id) {
+    var el = document.getElementById(id);
+    var v = el ? parseFloat(el.value) : NaN;
+    return isNaN(v) ? NaN : v;
+  }
+  function set(id, text) { var el = document.getElementById(id); if (el) el.textContent = text; }
+  function pctText(v) { return (Math.round(v * 10000) / 100).toFixed(2) + '%'; }
+  function signed(v) { return v < 0 ? '−' + money.format(-v) : '+' + money.format(v); }
+
+  // Simulate the account: returns ending value and year-end balances.
+  function simulate(o, annualRate, contribution) {
+    var i = Math.pow(1 + annualRate, 1 / o.freq) - 1;
+    var bal = o.current, invested = o.current, rows = [];
+    for (var y = 1; y <= o.years; y++) {
+      var amt = contribution * Math.pow(1 + o.raise, y - 1);
+      for (var p = 0; p < o.freq; p++) {
+        if (o.atStart) { bal += amt; bal *= 1 + i; } else { bal *= 1 + i; bal += amt; }
+        invested += amt;
+      }
+      rows.push({ year: y, invested: invested, balance: bal });
+    }
+    return { balance: bal, invested: invested, rows: rows };
+  }
+
+  function required(o, annualRate) {
+    var a = simulate(o, annualRate, 0).balance;
+    var u = simulate(Object.assign({}, o, { current: 0 }), annualRate, 1).balance;
+    if (a >= o.goal) return 0;
+    return u > 0 ? (o.goal - a) / u : NaN;
+  }
+
+  function rateNeeded(o, contribution) {
+    // Pre-tax annual return so that the planned amount reaches the goal.
+    var keep = 1 - o.tax;
+    function f(r) { return simulate(o, r * keep, contribution).balance - o.goal; }
+    var lo = -0.9, hi = 1;
+    if (f(lo) >= 0) return { below: true };
+    if (f(hi) < 0) return { above: true };
+    for (var k = 0; k < 200; k++) {
+      var mid = (lo + hi) / 2;
+      if (f(mid) >= 0) hi = mid; else lo = mid;
+    }
+    return { rate: (lo + hi) / 2 };
+  }
+
+  function update() {
+    var o = {
+      goalInput: num('igGoal'), years: Math.round(num('igYears')), current: num('igCurrent'),
+      freq: parseInt(document.getElementById('igFreq').value, 10),
+      atStart: document.getElementById('igTiming').value === 'start',
+      tax: num('igTax') / 100, raise: num('igRaise') / 100, inflation: num('igInflation') / 100,
+      today: document.getElementById('igToday').checked
+    };
+    var low = num('igLow') / 100, mid = num('igMid') / 100, high = num('igHigh') / 100, planned = num('igPlanned');
+    var error = document.getElementById('igError');
+    var vals = [o.goalInput, o.years, o.current, o.tax, o.raise, o.inflation, low, mid, high, planned];
+    var msg = '';
+    if (vals.some(isNaN)) msg = 'Fill in every field with a number.';
+    else if (o.goalInput <= 0) msg = 'Enter a goal above $0.';
+    else if (o.years < 1 || o.years > 60) msg = 'Enter from 1 to 60 years.';
+    else if (o.current < 0 || planned < 0) msg = 'Amounts cannot be negative.';
+    else if ([low, mid, high].some(function (r) { return r < -0.5 || r > 0.5; })) msg = 'Enter yearly returns from -50% to 50%.';
+    else if (o.tax < 0 || o.tax > 0.6) msg = 'Enter a tax rate from 0% to 60%.';
+    else if (o.raise < 0 || o.raise > 0.2) msg = 'Enter a yearly increase from 0% to 20%.';
+    else if (o.inflation < 0 || o.inflation > 0.2) msg = 'Enter an inflation rate from 0% to 20%.';
+    error.hidden = !msg;
+    error.textContent = msg;
+    if (msg) return;
+
+    o.goal = o.today ? o.goalInput * Math.pow(1 + o.inflation, o.years) : o.goalInput;
+    var word = PERIOD_WORD[o.freq] || 'period';
+    var keep = 1 - o.tax;
+    var scen = [['Low', low], ['Expected', mid], ['High', high]].map(function (s) {
+      var net = s[1] * keep;
+      var c = required(o, net);
+      var need = isFinite(c) ? simulate(o, net, c) : null;
+      var plan = simulate(o, net, planned);
+      return { name: s[0], rate: s[1], net: net, c: c, invested: need ? need.invested : NaN, plan: plan, rows: need ? need.rows : [] };
+    });
+    var exp = scen[1];
+
+    set('igNeed', isFinite(exp.c) ? money2.format(exp.c) + ' a ' + word : '–');
+    set('igNeedLow', isFinite(scen[0].c) ? money2.format(scen[0].c) : '–');
+    set('igNeedHigh', isFinite(scen[2].c) ? money2.format(scen[2].c) : '–');
+    var rn = rateNeeded(o, planned);
+    set('igRateNeeded', planned === 0 && o.current === 0 ? 'Enter a planned amount' : rn.below ? 'Under -90% (already enough)' : rn.above ? 'Over 100% a year' : pctText(rn.rate) + ' a year');
+    set('igGoalFuture', money.format(o.goal));
+    set('igPlanEnd', money.format(exp.plan.balance));
+    set('igPlanGap', signed(exp.plan.balance - o.goal));
+    var note = document.getElementById('igNote');
+    if (exp.c === 0) {
+      note.hidden = false;
+      note.textContent = 'At the expected return, what you have already invested reaches the goal without any more contributions.';
+    } else note.hidden = true;
+
+    document.getElementById('igScenarioBody').innerHTML = scen.map(function (s) {
+      return '<tr><th scope="row">' + s.name + '</th><td>' + pctText(s.rate) + (o.tax > 0 ? ' (' + pctText(s.net) + ' after tax)' : '') +
+        '</td><td>' + (isFinite(s.c) ? money2.format(s.c) : '–') + '</td><td>' + (isFinite(s.invested) ? money.format(s.invested) : '–') +
+        '</td><td>' + money.format(s.plan.balance) + '</td><td>' + signed(s.plan.balance - o.goal) + '</td></tr>';
+    }).join('');
+    set('igColNeed', 'Needed each ' + word);
+
+    // Year-by-year: the expected-case contribution, grown at each scenario's return.
+    var c = isFinite(exp.c) ? exp.c : 0;
+    var lowRun = simulate(o, scen[0].net, c), midRun = simulate(o, exp.net, c), highRun = simulate(o, scen[2].net, c);
+    set('igYearIntro', 'Investing ' + money2.format(c) + ' a ' + word + ' (the expected-case amount' +
+      (o.raise > 0 ? ', rising ' + pctText(o.raise) + ' a year' : '') + '), here is how the balance could grow if returns come in low, as expected or high.');
+    document.getElementById('igYearBody').innerHTML = midRun.rows.map(function (r, k) {
+      return '<tr><td>' + r.year + '</td><td>' + money.format(r.invested) + '</td><td>' + money.format(lowRun.rows[k].balance) +
+        '</td><td>' + money.format(r.balance) + '</td><td>' + money.format(highRun.rows[k].balance) + '</td></tr>';
+    }).join('');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('igForm');
+    if (!form) return;
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

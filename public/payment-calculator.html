@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en" id="payment-calculator-document" data-page-slug="payment-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Payment Calculator: Monthly Payment or Payoff Time</title>
+  <meta name="description" content="Find the monthly payment for a fixed-rate loan, or how long a fixed monthly payment takes to repay it, with total interest and a schedule.">
+  <link rel="canonical" href="https://company-marketcap.github.io/payment-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Payment Calculator: Monthly Payment or Payoff Time">
+  <meta property="og:description" content="Find the monthly payment for a fixed-rate loan, or how long a fixed monthly payment takes to repay it, with total interest and a schedule.">
+  <meta property="og:url" content="https://company-marketcap.github.io/payment-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Payment Calculator", "url": "https://company-marketcap.github.io/payment-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Find the monthly payment for a fixed-rate loan, or how long a fixed monthly payment takes to repay it, with total interest and a schedule."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Personal & General Loans", "item": "https://company-marketcap.github.io/financial-calculators.html#loan-calculators"}, {"@type": "ListItem", "position": 4, "name": "Payment Calculator", "item": "https://company-marketcap.github.io/payment-calculator.html"}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="payment-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="payment-calculator" data-page-type="calculator">
+  <a id="payment-calculator-skip-link" href="#payment-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="payment-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="payment-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="payment-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="payment-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="payment-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="payment-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="payment-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="payment-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="payment-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="payment-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="payment-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="payment-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="payment-calculator-header-search-status" aria-controls="payment-calculator-header-search-results" data-search-input="header">
+              <p id="payment-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="payment-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="payment-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="payment-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="payment-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="payment-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="payment-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="payment-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="payment-calculator-mobile-search-status" aria-controls="payment-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="payment-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="payment-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="payment-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="payment-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="payment-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="payment-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="payment-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="payment-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="payment-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="payment-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="payment-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="payment-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="payment-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="payment-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="payment-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="payment-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="payment-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="payment-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="payment-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="payment-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="payment-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="payment-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="payment-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="payment-calculator-sidebar-search-status" aria-controls="payment-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="payment-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="payment-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="payment-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="payment-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="payment-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="payment-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="payment-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="payment-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="payment-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="payment-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="payment-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="payment-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators" aria-current="true">Personal Loans</a></li><li><a id="payment-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="payment-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="payment-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="payment-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="payment-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="payment-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="payment-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="payment-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="payment-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="payment-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="payment-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="payment-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="payment-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="payment-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="payment-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="payment-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="payment-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="payment-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="payment-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="payment-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="payment-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="payment-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="payment-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="payment-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="payment-calculator" data-calculator-slug="payment-calculator" data-sub-category-slug="loan-calculators">
+      <aside id="payment-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="payment-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="payment-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="payment-calculator-ad-top-leaderboard">
+            <ins id="payment-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("payment-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="payment-calculator-intro-area" class="space-y-4">
+        <nav id="payment-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="payment-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="payment-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="payment-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="payment-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#loan-calculators" itemprop="item"><span itemprop="name">Personal &amp; General Loans</span></a><meta itemprop="position" content="3"></li>
+            <li id="payment-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Payment Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/payment-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="payment-calculator-hero-section" aria-labelledby="payment-calculator-hero-heading" data-section="hero">
+          <h1 id="payment-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Payment Calculator</h1>
+          <p id="payment-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Work out the monthly payment on a fixed-rate loan, or turn it around and see how long a payment you choose will take to clear the debt. <!-- SILO_START:slot_a -->Next, open the <a class="silo-link" href="/loan-calculator.html">free loan calculator</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="payment-calculator-tool" class="space-y-6" data-page-slug="payment-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="pmFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="pmForm" class="space-y-5" novalidate aria-labelledby="pmFormHeading">
+      <h2 id="pmFormHeading" class="panel-heading">Enter your loan</h2>
+<fieldset class="form-fieldset"><legend class="form-legend">Calculate</legend><div class="form-choice-group-inline"><label class="form-choice"><input type="radio" name="pmMode" id="pmModePayment" class="form-choice-input" value="payment" checked><span class="form-choice-text">Monthly payment</span></label><label class="form-choice"><input type="radio" name="pmMode" id="pmModeTerm" class="form-choice-input" value="term"><span class="form-choice-text">Time to pay off</span></label></div></fieldset>
+<div><label for="pmAmount" class="form-label">Loan amount</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="pmAmount" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="25000" inputmode="decimal"></div></div>
+<div><label for="pmRate" class="form-label">Interest rate (annual)</label><div class="input-group"><input type="number" id="pmRate" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="0.1" value="7" inputmode="decimal" aria-describedby="pmRateHint"><span class="input-affix">%</span></div><p id="pmRateHint" class="form-hint">The APR on your loan. Interest is charged monthly.</p></div>
+<div id="pmTermFields" class="form-row form-row-2"><div><label for="pmYears" class="form-label">Loan term</label><div class="input-group"><input type="number" id="pmYears" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="50" step="1" value="5" inputmode="numeric"><span class="input-affix">years</span></div></div><div><label for="pmMonths" class="form-label">Plus months</label><div class="input-group"><input type="number" id="pmMonths" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="11" step="1" value="0" inputmode="numeric"><span class="input-affix">months</span></div></div></div>
+<div id="pmPayField" hidden><label for="pmPay" class="form-label">Monthly payment</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="pmPay" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="500" inputmode="decimal" aria-describedby="pmPayHint"></div><p id="pmPayHint" class="form-hint">The amount you plan to pay each month.</p></div>
+      <p id="pmError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="pmResults" aria-live="polite" aria-labelledby="pmResultsHeading">
+      <h2 id="pmResultsHeading" class="panel-heading">Your results</h2>
+<div class="stat-grid mt-4">
+<div class="stat-card stat-card-highlight"><p id="pmMainLabel" class="stat-label">Monthly payment</p><p id="pmMain" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">Total interest</p><p id="pmInterest" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">Total of all payments</p><p id="pmTotal" class="stat-value">–</p></div>
+</div>
+<p id="pmSummary" class="mt-4 text-sm text-ink-muted"></p>
+<div class="mt-5">
+<div class="result-row"><span class="result-term">Number of payments</span><span id="pmCount" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Final payment</span><span id="pmFinal" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Interest as a share of the loan</span><span id="pmShare" class="result-value">–</span></div>
+</div>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="pmCompareHeading" data-section="compare">
+  <h2 id="pmCompareHeading" class="panel-heading">Payment at other terms</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">The same loan and rate with a different term or payment.</p>
+  <div class="table-scroll mt-5 max-h-[520px]" tabindex="0" role="region" aria-labelledby="pmCompareHeading">
+    <table class="data-table">
+      <thead id="pmCompareHead"><tr><th scope="col">Term</th><th scope="col">Monthly payment</th><th scope="col">Total interest</th></tr></thead>
+      <tbody id="pmCompare"></tbody>
+    </table>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="pmScheduleHeading" data-section="schedule">
+  <h2 id="pmScheduleHeading" class="panel-heading">Amortization schedule</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">How each payment splits between interest and principal, and the balance left after it.</p>
+  <div class="mt-4 max-w-[220px]"><label for="pmView" class="form-label">Show</label><select id="pmView" class="form-select"><option value="year" selected>By year</option><option value="period">Every payment</option></select></div>
+  <div class="table-scroll mt-5 max-h-[520px]" tabindex="0" role="region" aria-labelledby="pmScheduleHeading">
+    <table class="data-table">
+      <thead id="pmScheduleHead"><tr><th scope="col">Year</th><th scope="col">Principal</th><th scope="col">Interest</th><th scope="col">Ending balance</th></tr></thead>
+      <tbody id="pmSchedule"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="payment-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="payment-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Work out the monthly payment on a fixed-rate loan, or turn it around and see how long a payment you choose will take to clear the debt. <!-- SILO_START:slot_a_m -->Next, open the <a class="silo-link" href="/loan-calculator.html">free loan calculator</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="payment-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="payment-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="payment-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="payment-calculator-ad-in-feed">
+            <ins id="payment-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("payment-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      
+
+      
+
+      <nav id="payment-calculator-related-section" class="border-t border-line pt-8" aria-labelledby="payment-calculator-related-heading" data-section="related-calculators">
+        <h2 id="payment-calculator-related-heading" class="guide-heading">Related calculators</h2>
+        <ul id="payment-calculator-related-list" class="mt-5 grid gap-3 @2xl:grid-cols-2 @5xl:grid-cols-3" role="list">
+          <li><a id="payment-calculator-related-link-loan-calculator" class="related-link" href="/loan-calculator.html" data-calculator-name="Loan Calculator" data-category-name="Personal &amp; General Loans">Loan Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
+          <li><a id="payment-calculator-related-link-repayment-calculator" class="related-link" href="/repayment-calculator.html" data-calculator-name="Repayment Calculator" data-category-name="Personal &amp; General Loans">Repayment Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
+          <li><a id="payment-calculator-related-link-interest-rate-calculator" class="related-link" href="/interest-rate-calculator.html" data-calculator-name="Interest Rate Calculator" data-category-name="Interest, APR &amp; Time Value of Money">Interest Rate Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
+          <li><a id="payment-calculator-related-link-amortization-calculator" class="related-link" href="/amortization-calculator.html" data-calculator-name="Amortization Calculator" data-category-name="Mortgage &amp; Home Buying">Amortization Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
+          <li><a id="payment-calculator-related-link-loan-comparison-calculator" class="related-link" href="/loan-comparison-calculator.html" data-calculator-name="Loan Comparison Calculator" data-category-name="Personal &amp; General Loans">Loan Comparison Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
+          <li><a id="payment-calculator-related-link-365-360-loan-calculator" class="related-link" href="/365-360-loan-calculator.html" data-calculator-name="365/360 Loan Calculator" data-category-name="Personal &amp; General Loans">365/360 Loan Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
+        </ul>
+      </nav>
+
+      <aside id="payment-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="payment-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="payment-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="payment-calculator-ad-bottom-leaderboard">
+            <ins id="payment-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("payment-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="payment-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="payment-calculator-right-rail-top" class="mb-6">
+        <aside id="payment-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="payment-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="payment-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="payment-calculator-ad-right-rail-rectangle">
+            <ins id="payment-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("payment-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="payment-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="payment-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="payment-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="payment-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="payment-calculator-ad-right-rail-skyscraper">
+            <ins id="payment-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("payment-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="payment-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="payment-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="payment-calculator-footer-brand">
+        <a id="payment-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="payment-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="payment-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="payment-calculator-footer-categories" aria-labelledby="payment-calculator-footer-categories-heading">
+        <h2 id="payment-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="payment-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="payment-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="payment-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="payment-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="payment-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="payment-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="payment-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="payment-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="payment-calculator-footer-company" aria-labelledby="payment-calculator-footer-company-heading">
+        <h2 id="payment-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="payment-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="payment-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="payment-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="payment-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="payment-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="payment-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="payment-calculator-footer-bottom" class="border-t border-line">
+      <p id="payment-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="payment-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+
+<script>(function () {
+  'use strict';
+  // Payment calculator: fixed-rate loan, monthly payments, rate is an APR compounded monthly (i = r/12).
+  //   Payment for a term of n months: PMT = L * i / (1 - (1 + i)^-n); PMT = L / n at 0%.
+  //   Term for a fixed payment P: simulate month by month (n = -ln(1 - L*i/P) / ln(1 + i) in closed
+  //   form); the last payment is whatever clears the balance. P must exceed the first month's interest L*i.
+  // Verified in Node (scratchpad w3loans/tests): $200,000 at 6% for 15 years = $1,687.71/mo, total
+  //   interest $103,788.46 (closed form; matches a published calculator's default result); $25,000 at 7%
+  //   for 5 years = $495.03/mo; $12,000 at 0% for 24 months = $500.00; $200,000 at 6% paying $2,000/mo
+  //   takes 139 payments (11 years 7 months, final payment $1,951.56), matching the closed form n = 138.98; a payment that does
+  //   not cover the interest, blank, negative and 0-term input show an error, never NaN.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 });
+  var pct = new Intl.NumberFormat('en-US', { style: 'percent', minimumFractionDigits: 1, maximumFractionDigits: 1 });
+  var MAX_MONTHS = 1200;
+  var last = null;
+
+  function el(id) { return document.getElementById(id); }
+  function setText(id, text) { el(id).textContent = text; }
+
+  function read(id, blankAsZero) {
+    var raw = String(el(id).value).trim();
+    if (raw === '') return blankAsZero ? 0 : NaN;
+    var v = Number(raw);
+    return isFinite(v) ? v : NaN;
+  }
+
+  function mode() {
+    var r = document.querySelector('input[name="pmMode"]:checked');
+    return r ? r.value : 'payment';
+  }
+
+  function payment(principal, i, n) {
+    if (n <= 0 || principal <= 0) return 0;
+    if (i === 0) return principal / n;
+    return principal * i / (1 - Math.pow(1 + i, -n));
+  }
+
+  // Pays `pay` each month until the balance is gone (or maxN payments). Returns the rows.
+  function simulate(loan, i, pay, maxN) {
+    var bal = loan, rows = [], totalInterest = 0, totalPaid = 0;
+    for (var k = 1; k <= maxN && bal > 0.005; k++) {
+      var interest = bal * i;
+      var amount = Math.min(pay, bal + interest);
+      bal = bal + interest - amount;
+      if (bal < 0.005) bal = 0;
+      totalInterest += interest;
+      totalPaid += amount;
+      rows.push({ n: k, amount: amount, interest: interest, principal: amount - interest, balance: bal });
+    }
+    return { rows: rows, totalInterest: totalInterest, totalPaid: totalPaid, balance: bal };
+  }
+
+  function duration(months) {
+    months = Math.round(months);
+    var y = Math.floor(months / 12), m = months % 12, parts = [];
+    if (y) parts.push(y + (y === 1 ? ' year' : ' years'));
+    if (m || !y) parts.push(m + (m === 1 ? ' month' : ' months'));
+    return parts.join(' ');
+  }
+
+  function cell(tr, text) { var td = document.createElement('td'); td.textContent = text; tr.appendChild(td); }
+
+  function headRow(id, labels) {
+    var head = el(id);
+    head.textContent = '';
+    var tr = document.createElement('tr');
+    labels.forEach(function (t) { var th = document.createElement('th'); th.scope = 'col'; th.textContent = t; tr.appendChild(th); });
+    head.appendChild(tr);
+  }
+
+  function clearResults() {
+    ['pmMain', 'pmInterest', 'pmTotal', 'pmCount', 'pmFinal', 'pmShare'].forEach(function (id) { setText(id, '–'); });
+    el('pmCompare').textContent = '';
+    el('pmSchedule').textContent = '';
+    last = null;
+  }
+
+  function renderSchedule() {
+    var body = el('pmSchedule');
+    body.textContent = '';
+    if (!last) return;
+    if (el('pmView').value === 'period') {
+      headRow('pmScheduleHead', ['Payment', 'Amount', 'Principal', 'Interest', 'Balance']);
+      last.rows.forEach(function (row) {
+        var tr = document.createElement('tr');
+        cell(tr, String(row.n)); cell(tr, money.format(row.amount)); cell(tr, money.format(row.principal));
+        cell(tr, money.format(row.interest)); cell(tr, money.format(row.balance));
+        body.appendChild(tr);
+      });
+    } else {
+      headRow('pmScheduleHead', ['Year', 'Principal', 'Interest', 'Ending balance']);
+      var p = 0, intr = 0;
+      last.rows.forEach(function (row, idx) {
+        p += row.principal; intr += row.interest;
+        if (row.n % 12 === 0 || idx === last.rows.length - 1) {
+          var tr = document.createElement('tr');
+          cell(tr, String(Math.ceil(row.n / 12))); cell(tr, money.format(p)); cell(tr, money.format(intr));
+          cell(tr, money.format(row.balance));
+          body.appendChild(tr);
+          p = 0; intr = 0;
+        }
+      });
+    }
+  }
+
+  function renderCompare(amount, i, m, termMonths, pay) {
+    var body = el('pmCompare');
+    body.textContent = '';
+    if (m === 'payment') {
+      setText('pmCompareHeading', 'Payment at other terms');
+      headRow('pmCompareHead', ['Term', 'Monthly payment', 'Total interest']);
+      var terms = [36, 60, 84, 120, 180, 240, 360];
+      if (terms.indexOf(termMonths) === -1) terms.push(termMonths);
+      terms.sort(function (a, b) { return a - b; });
+      terms.forEach(function (t) {
+        var pmt = payment(amount, i, t), tr = document.createElement('tr');
+        cell(tr, duration(t) + (t === termMonths ? ' (yours)' : ''));
+        cell(tr, money.format(pmt));
+        cell(tr, money.format(Math.max(0, pmt * t - amount)));
+        body.appendChild(tr);
+      });
+    } else {
+      setText('pmCompareHeading', 'Payoff time at other payments');
+      headRow('pmCompareHead', ['Monthly payment', 'Time to pay off', 'Total interest']);
+      [1, 1.1, 1.25, 1.5, 2].forEach(function (f) {
+        var p = f === 1 ? pay : Math.ceil(pay * f), s = simulate(amount, i, p, MAX_MONTHS), tr = document.createElement('tr');
+        cell(tr, money.format(p) + (f === 1 ? ' (yours)' : ''));
+        cell(tr, s.balance > 0 ? 'Over 100 years' : duration(s.rows.length));
+        cell(tr, money.format(s.totalInterest));
+        body.appendChild(tr);
+      });
+    }
+  }
+
+  function update() {
+    var m = mode();
+    el('pmTermFields').hidden = m !== 'payment';
+    el('pmPayField').hidden = m !== 'term';
+    var amount = read('pmAmount'), rate = read('pmRate'), years = read('pmYears', true), months = read('pmMonths', true),
+        pay = read('pmPay'), msg = '';
+    var termMonths = years * 12 + months;
+    if (isNaN(amount) || amount <= 0) msg = 'Enter a loan amount greater than $0.';
+    else if (isNaN(rate) || rate < 0 || rate > 100) msg = 'Enter an interest rate from 0% to 100%.';
+    else if (m === 'payment') {
+      if (isNaN(years) || isNaN(months) || years < 0 || months < 0 || years % 1 !== 0 || months % 1 !== 0 || years > 50 || months > 11)
+        msg = 'Enter the term as whole years (0 to 50) and months (0 to 11).';
+      else if (termMonths < 1) msg = 'Enter a loan term of at least one month.';
+    } else if (isNaN(pay) || pay <= 0) msg = 'Enter a monthly payment greater than $0.';
+    var i = isNaN(rate) ? 0 : rate / 100 / 12;
+    if (!msg && m === 'term' && pay <= amount * i + 0.005)
+      msg = 'That payment does not cover the first month’s interest of ' + money.format(amount * i) +
+            ', so the loan would never be repaid. Enter a larger payment.';
+    var r = null;
+    if (!msg) {
+      r = m === 'payment' ? simulate(amount, i, payment(amount, i, termMonths), termMonths + 1) : simulate(amount, i, pay, MAX_MONTHS);
+      if (m === 'term' && r.balance > 0) msg = 'At that payment the loan would take more than 100 years to repay. Enter a larger payment.';
+    }
+    var error = el('pmError');
+    error.hidden = !msg;
+    error.textContent = msg;
+    if (msg) { clearResults(); return; }
+
+    var n = r.rows.length, finalPay = r.rows[n - 1].amount;
+    if (m === 'payment') {
+      setText('pmMainLabel', 'Monthly payment');
+      setText('pmMain', money.format(r.rows[0].amount));
+      setText('pmSummary', 'Pay ' + money.format(r.rows[0].amount) + ' a month for ' + duration(termMonths) + ' to repay the loan.');
+    } else {
+      setText('pmMainLabel', 'Time to pay off');
+      setText('pmMain', duration(n));
+      setText('pmSummary', 'Paying ' + money.format(pay) + ' a month clears the loan in ' + n + (n === 1 ? ' payment.' : ' payments.'));
+    }
+    setText('pmInterest', money.format(r.totalInterest));
+    setText('pmTotal', money.format(r.totalPaid));
+    setText('pmCount', String(n));
+    setText('pmFinal', money.format(finalPay));
+    setText('pmShare', pct.format(r.totalInterest / amount));
+    last = { rows: r.rows };
+    renderCompare(amount, i, m, termMonths, pay);
+    renderSchedule();
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = el('pmForm');
+    if (!form) return;
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    el('pmView').addEventListener('change', renderSchedule);
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

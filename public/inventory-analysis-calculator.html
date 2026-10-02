@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="en" id="inventory-analysis-calculator-document" data-page-slug="inventory-analysis-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inventory Analysis Calculator: Stock Levels &amp; Reorder Timing</title>
+  <meta name="description" content="Use this inventory analysis calculator to see how much stock you should hold, when to reorder and how long your starting inventory lasts before a stockout.">
+  <link rel="canonical" href="https://company-marketcap.github.io/inventory-analysis-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Inventory Analysis Calculator: Stock Levels &amp; Reorder Timing">
+  <meta property="og:description" content="Use this inventory analysis calculator to see how much stock you should hold, when to reorder and how long your starting inventory lasts before a stockout.">
+  <meta property="og:url" content="https://company-marketcap.github.io/inventory-analysis-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Inventory Analysis Calculator", "url": "https://company-marketcap.github.io/inventory-analysis-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Use this inventory analysis calculator to see how much stock you should hold, when to reorder and how long your starting inventory lasts before a stockout."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Business Finance & Valuation", "item": "https://company-marketcap.github.io/financial-calculators.html#business-calculators"}, {"@type": "ListItem", "position": 4, "name": "Inventory Analysis Calculator", "item": "https://company-marketcap.github.io/inventory-analysis-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does an inventory analysis calculator do?", "acceptedAnswer": {"@type": "Answer", "text": "It projects your weekly sales forward and compares the stock you hold with the stock you need while waiting for a delivery, so you know how much inventory to keep and when to place the next order."}}, {"@type": "Question", "name": "How do I calculate a reorder point?", "acceptedAnswer": {"@type": "Answer", "text": "Add up the demand you expect during your supplier lead time and add your safety stock on top. With steady sales, that is average daily sales times lead time in days, plus safety stock."}}, {"@type": "Question", "name": "What is safety stock and how much should I hold?", "acceptedAnswer": {"@type": "Answer", "text": "Safety stock is extra inventory that protects you from demand spikes and late suppliers. Too little causes stockouts and too much ties up cash, so set it from how much your demand and lead time actually vary."}}, {"@type": "Question", "name": "Why does lead time matter so much?", "acceptedAnswer": {"@type": "Answer", "text": "A longer lead time means more sales happen before a replenishment order lands, which raises your reorder point and moves the order date earlier. It is the input that most often catches new owners by surprise."}}, {"@type": "Question", "name": "What is average inventory and how do I find it?", "acceptedAnswer": {"@type": "Answer", "text": "Average inventory is your beginning inventory plus your ending inventory, divided by two. It smooths out swings in stock over a period and is used to work out inventory turnover."}}, {"@type": "Question", "name": "What is a good inventory turnover ratio?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the industry. Fast-moving retail and grocery stock turns over many times a year, while slower goods turn less often. Compare your ratio with businesses that sell similar products."}}, {"@type": "Question", "name": "What is economic order quantity (EOQ)?", "acceptedAnswer": {"@type": "Answer", "text": "EOQ is the order size that balances the cost of placing orders against the cost of holding stock. It answers how much to order, while the reorder point answers when."}}, {"@type": "Question", "name": "How often should I rerun the calculation?", "acceptedAnswer": {"@type": "Answer", "text": "Rerun it whenever your demand forecast, lead time or starting inventory changes, such as after a promotion or a supplier delay, and change only the input that moved."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="inventory-analysis-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="inventory-analysis-calculator" data-page-type="calculator">
+  <a id="inventory-analysis-calculator-skip-link" href="#inventory-analysis-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="inventory-analysis-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="inventory-analysis-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="inventory-analysis-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="inventory-analysis-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="inventory-analysis-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="inventory-analysis-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="inventory-analysis-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="inventory-analysis-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="inventory-analysis-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="inventory-analysis-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="inventory-analysis-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="inventory-analysis-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="inventory-analysis-calculator-header-search-status" aria-controls="inventory-analysis-calculator-header-search-results" data-search-input="header">
+              <p id="inventory-analysis-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="inventory-analysis-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="inventory-analysis-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="inventory-analysis-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="inventory-analysis-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="inventory-analysis-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="inventory-analysis-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="inventory-analysis-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="inventory-analysis-calculator-mobile-search-status" aria-controls="inventory-analysis-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="inventory-analysis-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="inventory-analysis-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="inventory-analysis-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="inventory-analysis-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="inventory-analysis-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="inventory-analysis-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="inventory-analysis-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="inventory-analysis-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="inventory-analysis-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="inventory-analysis-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="inventory-analysis-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="inventory-analysis-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="inventory-analysis-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="inventory-analysis-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="inventory-analysis-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="inventory-analysis-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="inventory-analysis-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="inventory-analysis-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="inventory-analysis-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="inventory-analysis-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="inventory-analysis-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="inventory-analysis-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="inventory-analysis-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="inventory-analysis-calculator-sidebar-search-status" aria-controls="inventory-analysis-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="inventory-analysis-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="inventory-analysis-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="inventory-analysis-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="inventory-analysis-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="inventory-analysis-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="inventory-analysis-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="inventory-analysis-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="inventory-analysis-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="inventory-analysis-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="inventory-analysis-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="inventory-analysis-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="inventory-analysis-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="inventory-analysis-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="inventory-analysis-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="inventory-analysis-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="inventory-analysis-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="inventory-analysis-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="inventory-analysis-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="inventory-analysis-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="inventory-analysis-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="inventory-analysis-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="inventory-analysis-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="inventory-analysis-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="inventory-analysis-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="inventory-analysis-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="inventory-analysis-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="inventory-analysis-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="inventory-analysis-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="inventory-analysis-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="inventory-analysis-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="inventory-analysis-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators" aria-current="true">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="inventory-analysis-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="inventory-analysis-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="inventory-analysis-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="inventory-analysis-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="inventory-analysis-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="inventory-analysis-calculator" data-calculator-slug="inventory-analysis-calculator" data-sub-category-slug="business-calculators">
+      <aside id="inventory-analysis-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="inventory-analysis-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="inventory-analysis-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="inventory-analysis-calculator-ad-top-leaderboard">
+            <ins id="inventory-analysis-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("inventory-analysis-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="inventory-analysis-calculator-intro-area" class="space-y-4">
+        <nav id="inventory-analysis-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="inventory-analysis-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="inventory-analysis-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="inventory-analysis-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="inventory-analysis-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#business-calculators" itemprop="item"><span itemprop="name">Business Finance &amp; Valuation</span></a><meta itemprop="position" content="3"></li>
+            <li id="inventory-analysis-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Inventory Analysis Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/inventory-analysis-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="inventory-analysis-calculator-hero-section" aria-labelledby="inventory-analysis-calculator-hero-heading" data-section="hero">
+          <h1 id="inventory-analysis-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Inventory Analysis Calculator: Stock Levels &amp; Reorder Timing</h1>
+          <p id="inventory-analysis-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Running short on a best seller or sitting on shelves of slow movers both drain cash, and the inventory analysis calculator on this page helps you avoid either by showing how much inventory to hold and when to place your next order. You enter your starting inventory, expected weekly demand, growth, safety stock and supplier timing, and you get back the week your stock needs replenishing. <!-- SILO_START:slot_a -->The <a class="silo-link" href="/margin-calculator.html">free profit margin calculator</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="inventory-analysis-calculator-tool" class="space-y-6" data-page-slug="inventory-analysis-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="iaFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="iaForm" class="space-y-6" novalidate aria-labelledby="iaFormHeading">
+      <h2 id="iaFormHeading" class="panel-heading">Enter your inventory figures</h2>
+      <fieldset class="form-fieldset">
+        <legend class="form-legend">Inventory performance (yearly, at cost)</legend>
+<div class="form-row form-row-2">
+<div><label for="iaSales" class="form-label">Annual net sales</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="iaSales" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10000" value="1500000" inputmode="decimal"></div></div>
+<div><label for="iaCogs" class="form-label">Annual cost of goods sold</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="iaCogs" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10000" value="900000" inputmode="decimal"></div></div>
+</div>
+<div class="form-row form-row-2">
+<div><label for="iaBegin" class="form-label">Beginning inventory</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="iaBegin" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1000" value="160000" inputmode="decimal"></div></div>
+<div><label for="iaEnd" class="form-label">Ending inventory</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="iaEnd" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1000" value="140000" inputmode="decimal"></div></div>
+</div>
+        <p class="form-hint">Value inventory at cost. Average inventory is the mean of the beginning and ending values.</p>
+      </fieldset>
+      <fieldset class="form-fieldset">
+        <legend class="form-legend">Ordering one item (EOQ and reorder point)</legend>
+<div class="form-row form-row-2">
+<div><label for="iaDemand" class="form-label">Annual demand</label><div class="input-group"><input type="number" id="iaDemand" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="12000" inputmode="numeric"><span class="input-affix">units</span></div></div>
+<div><label for="iaUnitCost" class="form-label">Cost per unit</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="iaUnitCost" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="0.5" value="25" inputmode="decimal"></div></div>
+</div>
+<div class="form-row form-row-2">
+<div><label for="iaOrderCost" class="form-label">Cost to place one order</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="iaOrderCost" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="5" value="75" inputmode="decimal" aria-describedby="iaOrderCostHint"></div><p id="iaOrderCostHint" class="form-hint">Processing, shipping and receiving costs that do not depend on order size.</p></div>
+<div><label for="iaHolding" class="form-label">Yearly holding cost</label><div class="input-group"><input type="number" id="iaHolding" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="200" step="1" value="20" inputmode="decimal" aria-describedby="iaHoldingHint"><span class="input-affix">%</span></div><p id="iaHoldingHint" class="form-hint">Storage, insurance, shrinkage and the cost of money, as a % of unit cost.</p></div>
+</div>
+<div class="form-row form-row-2">
+<div><label for="iaLead" class="form-label">Lead time</label><div class="input-group"><input type="number" id="iaLead" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="365" step="1" value="10" inputmode="numeric" aria-describedby="iaLeadHint"><span class="input-affix">days</span></div><p id="iaLeadHint" class="form-hint">Days from placing an order to having the stock.</p></div>
+<div><label for="iaSafety" class="form-label">Safety stock</label><div class="input-group"><input type="number" id="iaSafety" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="200" inputmode="numeric" aria-describedby="iaSafetyHint"><span class="input-affix">units</span></div><p id="iaSafetyHint" class="form-hint">Extra units kept to cover demand spikes and late deliveries.</p></div>
+</div>
+        <details class="form-details"><summary class="form-details-summary">More options</summary>
+          <div><label for="iaDays" class="form-label">Selling days per year</label><div class="input-group"><input type="number" id="iaDays" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1" max="366" step="1" value="365" inputmode="numeric" aria-describedby="iaDaysHint"><span class="input-affix">days</span></div><p id="iaDaysHint" class="form-hint">Use your working days (for example 260 or 300) if you only sell on some days.</p></div>
+        </details>
+      </fieldset>
+      <p id="iaError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="iaResults" aria-live="polite" aria-labelledby="iaResultsHeading">
+      <h2 id="iaResultsHeading" class="panel-heading">Inventory performance</h2>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p class="stat-label">Inventory turnover</p><p id="iaTurns" class="stat-value">–</p><p id="iaTurnsNote" class="mt-1 text-xs text-ink-muted"></p></div>
+        <div class="stat-card"><p class="stat-label">Days on hand</p><p id="iaDoh" class="stat-value">–</p><p id="iaDohNote" class="mt-1 text-xs text-ink-muted"></p></div>
+        <div class="stat-card"><p class="stat-label">GMROI</p><p id="iaGmroi" class="stat-value">–</p><p id="iaGmroiNote" class="mt-1 text-xs text-ink-muted"></p></div>
+      </div>
+      <div class="mt-3">
+        <div class="result-row"><span class="result-term">Average inventory</span><span id="iaAvg" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Gross margin</span><span id="iaMargin" class="result-value">–</span></div>
+      </div>
+      <h2 class="panel-heading mt-8">Ordering plan</h2>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p class="stat-label">Economic order quantity</p><p id="iaEoq" class="stat-value">–</p><p id="iaEoqNote" class="mt-1 text-xs text-ink-muted"></p></div>
+        <div class="stat-card"><p class="stat-label">Reorder point</p><p id="iaRop" class="stat-value">–</p><p id="iaRopNote" class="mt-1 text-xs text-ink-muted"></p></div>
+      </div>
+      <div class="mt-3">
+        <div class="result-row"><span class="result-term">Orders per year</span><span id="iaOrders" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Days between orders</span><span id="iaCycle" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Yearly ordering cost</span><span id="iaOrdCost" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Yearly holding cost (incl. safety stock)</span><span id="iaHoldCost" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Average units on hand</span><span id="iaAvgUnits" class="result-value">–</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="iaTableHeading" data-section="compare">
+  <h2 id="iaTableHeading" class="panel-heading">Yearly cost at different order sizes</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">Ordering and holding costs for the item, excluding safety stock. The total is lowest at the economic order quantity, and fairly flat near it.</p>
+  <div class="table-scroll mt-5" tabindex="0" role="region" aria-labelledby="iaTableHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Order size</th><th scope="col">Orders a year</th><th scope="col">Ordering cost</th><th scope="col">Holding cost</th><th scope="col">Total</th></tr></thead>
+      <tbody id="iaTable"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="inventory-analysis-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="inventory-analysis-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Running short on a best seller or sitting on shelves of slow movers both drain cash, and the inventory analysis calculator on this page helps you avoid either by showing how much inventory to hold and when to place your next order. You enter your starting inventory, expected weekly demand, growth, safety stock and supplier timing, and you get back the week your stock needs replenishing. <!-- SILO_START:slot_a_m -->The <a class="silo-link" href="/margin-calculator.html">free profit margin calculator</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="inventory-analysis-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="inventory-analysis-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="inventory-analysis-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="inventory-analysis-calculator-ad-in-feed">
+            <ins id="inventory-analysis-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("inventory-analysis-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="inventory-analysis-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="inventory-analysis-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="inventory-analysis-calculator-guide-heading-1">
+<h2 id="inventory-analysis-calculator-guide-heading-1">How the Inventory Analysis Calculator Works</h2>
+<p>The calculator projects your sales forward week by week, then compares the stock you have on hand with the stock you will need to survive a supplier delivery. It treats an order as arriving in a single batch after a known wait, which is how most small business buyers actually receive purchase orders. Five inputs drive the whole projection, and each one maps to a number you can pull from your sales records.</p>
+
+<h3>Starting Inventory, Initial Demand and Annual Growth Rate</h3>
+<p><strong>Starting inventory</strong> is the units you hold today, counted from your shelves or your <em>stock status</em> report. <strong>Initial demand</strong> is the number of units you expect to sell in the first week, and the <strong>annual growth rate</strong> lifts that weekly figure steadily over the following twelve months. A shop selling 340 units a week with 18% sales growth will be moving about 401 units a week by this time next year, so a plan built on a flat number understates what you will need.</p>
+
+<h3>Safety Stock and Order Lead Time</h3>
+<p><strong>Safety stock</strong> is a buffer, entered as a percent of the demand you expect while waiting for a delivery. It protects you from an out of stock event when a customer rush or a late supplier shows up at the worst moment. <strong>Order lead time</strong> is the number of weeks between placing a purchase order and receiving it. Together, lead time and safety stock set the trigger level at which the calculator tells you to order.</p>
+<p>Use the inputs honestly: a lead time quoted by a supplier is a best case, and the longest delay you have actually experienced is a better planning number. A longer lead time raises the trigger level for every product you buy from that supplier, and it is the single input that most often catches new owners by surprise.</p>
+        </section>
+        <section id="inventory-analysis-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="inventory-analysis-calculator-guide-heading-2">
+<h2 id="inventory-analysis-calculator-guide-heading-2">Worked Example: Reading Your Inventory Planning Results</h2>
+<p>Take a home goods retailer that starts with <strong>2,150 units</strong>, expects an initial demand of <strong>340 units a week</strong>, an annual growth rate of <strong>18%</strong>, safety stock of <strong>12%</strong>, and an order lead time of <strong>3 weeks</strong>. Demand over the three weeks after week 3 totals about 1,036 units, so the buffer is 12% of that, or about 124 units. <!-- SILO_START:slot_c -->Next, open the <a class="silo-link" href="/weighted-average-cost-of-capital-calculator.html">weighted average cost of capital calculator</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_c --></p>
+<p>$$\text{Reorder point} = \text{Lead-time demand} \times (1 + \text{Safety stock \%})$$</p>
+<p>\(1{,}036 \times 1.12 \approx 1{,}161\) units. Your stock falls to 1,127 units at the start of week 4, which is the first week it sits at or below that trigger, so week 4 is when to order.</p>
+<figure><img src="/assets/images/tools/inventory-analysis-calculator/inventory-analysis-reorder-point-waterfall.svg" alt="Waterfall chart showing 1,036 units of lead-time demand plus 124 units of safety stock adding up to a 1,160-unit reorder point"><figcaption>How lead-time demand and safety stock add up to the reorder point in the worked example.</figcaption></figure>
+<table>
+<thead><tr><th>Item</th><th>Result</th></tr></thead>
+<tbody>
+<tr><td>Weekly demand at the start</td><td>340 units</td></tr>
+<tr><td>Weekly demand after 52 weeks</td><td>401 units</td></tr>
+<tr><td>Demand during lead time</td><td>1,036 units</td></tr>
+<tr><td>Safety stock buffer</td><td>124 units</td></tr>
+<tr><td>Reorder point</td><td>1,160 units</td></tr>
+<tr><td>Week to place the order</td><td>Week 4</td></tr>
+<tr><td>Stock left when the order lands (week 7)</td><td>94 units</td></tr>
+<tr><td>Weeks your starting inventory lasts</td><td>About 6.3</td></tr>
+</tbody>
+</table>
+<p>Notice that the 94 units left on delivery day sit below the 124-unit buffer. Checking inventory once a week lets stock slip under the trigger before you act, which is why many buyers raise safety stock a few points when they only review levels weekly.</p>
+<figure><img src="/assets/images/tools/inventory-analysis-calculator/inventory-stock-timeline-order-and-delivery.svg" alt="Timeline of inventory stock from 2,150 starting units to the week 4 reorder point and the week 7 delivery with 94 units left"><figcaption>When to order and when the delivery lands in the worked example.</figcaption></figure>
+        </section>
+        <section id="inventory-analysis-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="inventory-analysis-calculator-guide-heading-3">
+<h2 id="inventory-analysis-calculator-guide-heading-3">Reorder Point Calculator and Safety Stock Calculator Formulas</h2>
+<p>If your demand is steady and you track it daily, you can skip the growth projection and use the classic <strong>reorder point formula</strong>, the same math behind any reorder point calculator:</p>
+<p>$$\text{Reorder point} = (\text{Average daily sales} \times \text{Lead time in days}) + \text{Safety stock}$$</p>
+<p>A café supplier that sells 34 units a day, waits 9 days for a delivery and holds 60 units of buffer reorders at \(34 \times 9 + 60 = 366\) units. Where demand and delivery times swing widely, a safety stock calculator uses the gap between your maximum daily sales and your average daily sales, plus the gap between maximum and average lead time, so the buffer grows with the volatility of your demand variability rather than a flat guess.</p>
+<ol>
+<li>Pull 8 to 12 weeks of daily sales from your records.</li>
+<li>Find the average and the highest day.</li>
+<li>Record the typical and the worst supplier delay.</li>
+<li>Apply the formula and set the reorder trigger in your system.</li>
+</ol>
+
+<h3>Economic Order Quantity (EOQ)</h3>
+<p>Knowing when to order is half of the question; <strong>economic order quantity</strong> answers how much. EOQ balances the ordering cost of each purchase order against the holding cost of keeping units in a warehouse:</p>
+<p>$$\text{EOQ} = \sqrt{\frac{2 \times \text{Annual demand} \times \text{Ordering cost}}{\text{Holding cost per unit}}}$$</p>
+<p>With annual demand of 9,600 units, a $75 order fee and $3.20 to hold a unit for a year, EOQ is about 671 units, or roughly 14 orders a year. A bigger batch saves on paperwork but ties up cash and shelves, and a smaller batch does the reverse.</p>
+        </section>
+        <section id="inventory-analysis-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="inventory-analysis-calculator-guide-heading-4">
+<h2 id="inventory-analysis-calculator-guide-heading-4">Inventory Stock Calculator Walkthrough: Restocking Bike Lights Before Spring</h2>
+<p>Dana runs a small online shop and is down to <strong>3,846</strong> rechargeable bike lights in February. Her freight forwarder quotes a 5-week ocean transit, and sales are running at 412 units a week with a 9% annual growth trend. She wants to know when the purchase order has to go out, so she enters 3,846 as the starting inventory, 412 as initial demand, 9% growth, 15% safety stock and 5 weeks of lead time.</p>
+<p>The calculator projects demand of about 2,070 units across the five weeks of transit, and adds the 15% buffer, so the trigger sits near 2,381 units. Her stock only falls under that line at the start of week 5, when 2,194 units remain, so the order should be placed that week. Left alone, the shelves would be empty around week 10; if the shipment follows the plan, it lands with about 113 units still on hand.</p>
+<p>That thin margin bothers her. The carrier's own port notice warns that congestion can stretch transit to 7 weeks, so she reruns the calculator changing only the lead time. The trigger jumps to about 3,350 units and the order date moves up to <strong>week 3</strong>, two weeks earlier, when 3,021 units are still on the shelf.</p>
+<ul>
+<li>Plan A (5 weeks): order in week 5, with the delivery arriving in week 10.</li>
+<li>Plan B (7 weeks): order in week 3, which protects against the carrier's worst case.</li>
+</ul>
+<p>Dana picks plan B. The reorder week the calculator computes becomes the date on her calendar, and she tells her supplier to confirm a 500-unit minimum order for week 3, tying up cash for only two extra weeks instead of risking a spring stockout.</p>
+        </section>
+        <section id="inventory-analysis-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="inventory-analysis-calculator-guide-heading-5">
+<h2 id="inventory-analysis-calculator-guide-heading-5">Inventory Turnover Calculator and Average Inventory Calculator Math</h2>
+<p>Projection tells you what comes next, while turnover tells you how well your stock has performed. An average inventory calculator starts with the <strong>average inventory</strong> over a period:</p>
+<p>$$\text{Average inventory} = \frac{\text{Beginning inventory} + \text{Ending inventory}}{2}$$</p>
+<p>Beginning inventory is also called opening stock, and ending inventory is your closing stock; both come from the inventory balance on your balance sheet or income statement records. With $88,400 at the start of the year and $104,600 at the end, average inventory is $96,500. Divide <strong>cost of goods sold</strong> (COGS) of $612,000 by that figure and the <strong>inventory turnover</strong> ratio is about 6.3 times a year. In other words, you sell through and replace your whole stock roughly every 58 days.</p>
+<p>The same turnover ratio feeds financial reporting, because average inventory sits in current assets, COGS drives your profit line, and your accounting method for inventory valuation (FIFO, LIFO or weighted average) changes both figures on your financial statements. Lenders and buyers use it as a benchmark for cost management and for pricing decisions, so it is worth knowing before you apply for financing. A low ratio also signals overstock, which is your cue to lower the order size or buffer percent you feed into the calculator.</p>
+
+<h3>Days on Hand and Stockout Risk</h3>
+<p><strong>Days on hand</strong> is current stock divided by average daily sales, and it shows how long you can operate before a stockout. A product with 480 units and 32 units of daily sales has 15 days of cover. Pair that with your lead time: if the cover is shorter than the wait for a supplier, you are already late.</p>
+        </section>
+        <section id="inventory-analysis-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="inventory-analysis-calculator-guide-heading-6">
+<h2 id="inventory-analysis-calculator-guide-heading-6">ABC Analysis Calculator and the Pareto Principle</h2>
+<p>An ABC analysis calculator sorts products by annual usage value, because of the <strong>Pareto Principle</strong>: the familiar 80/20 rule holds that a small share of items produces most of your revenue. Sort your SKUs from highest to lowest annual usage value, add up the cumulative percentages, and cut the list into classes.</p>
+<table>
+<thead><tr><th>Class</th><th>Share of SKUs</th><th>Share of annual usage value</th><th>Cumulative value</th></tr></thead>
+<tbody>
+<tr><td>A</td><td>14%</td><td>72%</td><td>72%</td></tr>
+<tr><td>B</td><td>26%</td><td>20%</td><td>92%</td></tr>
+<tr><td>C</td><td>60%</td><td>8%</td><td>100%</td></tr>
+</tbody>
+</table>
+<p>Class A items deserve tight control, frequent counts and a higher buffer percent in the calculator. Class C items can use simple rules and bulk orders. Items that have not moved in 90 days are <strong>dead stock</strong>, and they are the first candidates for a discount, a bundle or a write-off, since overstocking turns shelves into frozen cash.</p>
+<figure><img src="/assets/images/tools/inventory-analysis-calculator/abc-inventory-analysis-sku-share-vs-value.svg" alt="Stacked bars comparing class A, B and C share of SKUs with share of annual usage value in an ABC inventory analysis"><figcaption>Class A holds 14% of SKUs but 72% of annual usage value.</figcaption></figure>
+        </section>
+        <section id="inventory-analysis-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="inventory-analysis-calculator-guide-heading-7">
+<h2 id="inventory-analysis-calculator-guide-heading-7">Inventory Tools, Inventory Management and Stock Management Software</h2>
+<p>Free inventory tools like this one, or any simple inventory stock calculator, are ideal when you review a handful of products a few times a month. Once you carry hundreds of items across a retail floor or a manufacturing line, inventory management software tracks stock in real time, records every supplier delivery and flags what needs to replenish. Good stock management still starts with the same few numbers, so use the calculator to understand your own inputs before automating them.</p>
+<p>Whatever approach you choose, remember what holding stock costs. Your inventory carrying cost includes storage, insurance, depreciation and the cash you could have used elsewhere, and together these commonly add up to roughly a quarter of stock value each year. Sell through faster and those carrying costs fall; hold too much and they eat your profitability.</p>
+        </section>
+        <section id="inventory-analysis-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="inventory-analysis-calculator-guide-heading-8">
+<h2 id="inventory-analysis-calculator-guide-heading-8">Inventory Planning Tips for Small Business Owners</h2>
+<p>Good inventory planning with this calculator is mostly habit. Rerun it whenever your demand forecast changes or a supplier slips a delivery, and change only the input that moved: lead time after a delay, initial demand after a promotion. Read the reorder week it returns, not just the units, and raise the buffer percent if you only review stock weekly, as the worked example shows. Your unit cost also decides how much cash each reorder ties up, and a lean position improves efficiency as long as the buffer holds. Count a sample of shelves each month and compare inventory levels against the projection.</p>
+        </section>
+      </div>
+
+      <section id="inventory-analysis-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="inventory-analysis-calculator-faq-heading" data-section="faq">
+        <h2 id="inventory-analysis-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Inventory Analysis Calculator questions</h2>
+        <div id="inventory-analysis-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="inventory-analysis-calculator-faq-1" class="faq-item" open><summary id="inventory-analysis-calculator-faq-1-summary" class="faq-summary"><h3 id="inventory-analysis-calculator-faq-1-question" class="faq-question">What does an inventory analysis calculator do?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="inventory-analysis-calculator-faq-1-answer" class="faq-answer"><p>It projects your weekly sales forward and compares the stock you hold with the stock you need while waiting for a delivery, so you know how much inventory to keep and when to place the next order.</p></div></details>
+          <details id="inventory-analysis-calculator-faq-2" class="faq-item" open><summary id="inventory-analysis-calculator-faq-2-summary" class="faq-summary"><h3 id="inventory-analysis-calculator-faq-2-question" class="faq-question">How do I calculate a reorder point?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="inventory-analysis-calculator-faq-2-answer" class="faq-answer"><p>Add up the demand you expect during your supplier lead time and add your safety stock on top. With steady sales, that is average daily sales times lead time in days, plus safety stock.</p></div></details>
+          <details id="inventory-analysis-calculator-faq-3" class="faq-item" open><summary id="inventory-analysis-calculator-faq-3-summary" class="faq-summary"><h3 id="inventory-analysis-calculator-faq-3-question" class="faq-question">What is safety stock and how much should I hold?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="inventory-analysis-calculator-faq-3-answer" class="faq-answer"><p>Safety stock is extra inventory that protects you from demand spikes and late suppliers. Too little causes stockouts and too much ties up cash, so set it from how much your demand and lead time actually vary.</p></div></details>
+          <details id="inventory-analysis-calculator-faq-4" class="faq-item" open><summary id="inventory-analysis-calculator-faq-4-summary" class="faq-summary"><h3 id="inventory-analysis-calculator-faq-4-question" class="faq-question">Why does lead time matter so much?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="inventory-analysis-calculator-faq-4-answer" class="faq-answer"><p>A longer lead time means more sales happen before a replenishment order lands, which raises your reorder point and moves the order date earlier. It is the input that most often catches new owners by surprise.</p></div></details>
+          <details id="inventory-analysis-calculator-faq-5" class="faq-item" open><summary id="inventory-analysis-calculator-faq-5-summary" class="faq-summary"><h3 id="inventory-analysis-calculator-faq-5-question" class="faq-question">What is average inventory and how do I find it?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="inventory-analysis-calculator-faq-5-answer" class="faq-answer"><p>Average inventory is your beginning inventory plus your ending inventory, divided by two. It smooths out swings in stock over a period and is used to work out inventory turnover.</p></div></details>
+          <details id="inventory-analysis-calculator-faq-6" class="faq-item" open><summary id="inventory-analysis-calculator-faq-6-summary" class="faq-summary"><h3 id="inventory-analysis-calculator-faq-6-question" class="faq-question">What is a good inventory turnover ratio?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="inventory-analysis-calculator-faq-6-answer" class="faq-answer"><p>It depends on the industry. Fast-moving retail and grocery stock turns over many times a year, while slower goods turn less often. Compare your ratio with businesses that sell similar products.</p></div></details>
+          <details id="inventory-analysis-calculator-faq-7" class="faq-item" open><summary id="inventory-analysis-calculator-faq-7-summary" class="faq-summary"><h3 id="inventory-analysis-calculator-faq-7-question" class="faq-question">What is economic order quantity (EOQ)?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="inventory-analysis-calculator-faq-7-answer" class="faq-answer"><p>EOQ is the order size that balances the cost of placing orders against the cost of holding stock. It answers how much to order, while the reorder point answers when.</p></div></details>
+          <details id="inventory-analysis-calculator-faq-8" class="faq-item" open><summary id="inventory-analysis-calculator-faq-8-summary" class="faq-summary"><h3 id="inventory-analysis-calculator-faq-8-question" class="faq-question">How often should I rerun the calculation?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="inventory-analysis-calculator-faq-8-answer" class="faq-answer"><p>Rerun it whenever your demand forecast, lead time or starting inventory changes, such as after a promotion or a supplier delay, and change only the input that moved.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="inventory-analysis-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="inventory-analysis-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="inventory-analysis-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="inventory-analysis-calculator-ad-bottom-leaderboard">
+            <ins id="inventory-analysis-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("inventory-analysis-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="inventory-analysis-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="inventory-analysis-calculator-right-rail-top" class="mb-6">
+        <aside id="inventory-analysis-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="inventory-analysis-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="inventory-analysis-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="inventory-analysis-calculator-ad-right-rail-rectangle">
+            <ins id="inventory-analysis-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("inventory-analysis-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="inventory-analysis-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="inventory-analysis-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="inventory-analysis-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="inventory-analysis-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="inventory-analysis-calculator-ad-right-rail-skyscraper">
+            <ins id="inventory-analysis-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("inventory-analysis-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="inventory-analysis-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="inventory-analysis-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="inventory-analysis-calculator-footer-brand">
+        <a id="inventory-analysis-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="inventory-analysis-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="inventory-analysis-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="inventory-analysis-calculator-footer-categories" aria-labelledby="inventory-analysis-calculator-footer-categories-heading">
+        <h2 id="inventory-analysis-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="inventory-analysis-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="inventory-analysis-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="inventory-analysis-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="inventory-analysis-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="inventory-analysis-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="inventory-analysis-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="inventory-analysis-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="inventory-analysis-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="inventory-analysis-calculator-footer-company" aria-labelledby="inventory-analysis-calculator-footer-company-heading">
+        <h2 id="inventory-analysis-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="inventory-analysis-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="inventory-analysis-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="inventory-analysis-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="inventory-analysis-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="inventory-analysis-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="inventory-analysis-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="inventory-analysis-calculator-footer-bottom" class="border-t border-line">
+      <p id="inventory-analysis-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="inventory-analysis-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Inventory analysis.
+  //   Average inventory = (beginning + ending) / 2 (at cost).
+  //   Turnover = COGS / average inventory; days on hand = days per year / turnover.
+  //   GMROI = gross margin $ / average inventory at cost = (sales - COGS) / average inventory.
+  //   EOQ (Wilson formula) = sqrt(2 x D x S / H), D = annual units, S = cost per order,
+  //   H = unit cost x holding % per year. Orders a year = D / Q; ordering cost = (D / Q) x S;
+  //   holding cost = (Q / 2 + safety stock) x H.
+  //   Reorder point = daily demand x lead time + safety stock, daily demand = D / selling days,
+  //   rounded up to a whole unit.
+  // Verified (scratchpad b4biz/ia.test.js): textbook EOQ D = 12,000, S = $75, H = $5 -> sqrt(360,000)
+  //   = 600 units, 20 orders a year, ordering cost = cycle holding cost = $1,500 (equal at the EOQ,
+  //   as theory requires); second textbook case D = 1,000, S = $10, H = $0.50 -> 200 units.
+  //   Reorder point 12,000 / 365 x 10 + 200 = 528.8 -> 529 units. Turnover: COGS $900,000 /
+  //   average $150,000 = 6.0x, 60.8 days; GMROI $600,000 / $150,000 = 4.00.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+  var money2 = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  var units = new Intl.NumberFormat('en-US', { maximumFractionDigits: 0 });
+  var one = new Intl.NumberFormat('en-US', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+
+  function set(id, text) { document.getElementById(id).textContent = text; }
+  function num(id) { var v = parseFloat(document.getElementById(id).value); return isNaN(v) ? NaN : v; }
+
+  function performance(sales, cogs, begin, end, days) {
+    var avg = (begin + end) / 2;
+    if (avg <= 0) return { avg: avg, turns: NaN, doh: NaN, gmroi: NaN };
+    var turns = cogs / avg;
+    return { avg: avg, turns: turns, doh: turns > 0 ? days / turns : NaN, gmroi: (sales - cogs) / avg };
+  }
+
+  function eoq(D, S, H) { return Math.sqrt(2 * D * S / H); }
+
+  function costs(D, S, H, Q, safety) {
+    return { orders: D / Q, ordering: D / Q * S, holding: Q / 2 * H, safetyHolding: safety * H };
+  }
+
+  function reorderPoint(D, days, lead, safety) { return Math.ceil(D / days * lead + safety - 1e-9); }
+
+  function clearBody(id) {
+    var body = document.getElementById(id);
+    while (body.firstChild) body.removeChild(body.firstChild);
+    return body;
+  }
+
+  function addRow(body, cells) {
+    var tr = document.createElement('tr');
+    cells.forEach(function (text) { var td = document.createElement('td'); td.textContent = text; tr.appendChild(td); });
+    body.appendChild(tr);
+  }
+
+  var PERF_IDS = ['iaTurns', 'iaDoh', 'iaGmroi', 'iaAvg', 'iaMargin'];
+  var ORDER_IDS = ['iaEoq', 'iaRop', 'iaOrders', 'iaCycle', 'iaOrdCost', 'iaHoldCost', 'iaAvgUnits'];
+
+  function dash(ids) { ids.forEach(function (id) { set(id, '–'); }); }
+
+  function update() {
+    var sales = num('iaSales'), cogs = num('iaCogs'), begin = num('iaBegin'), end = num('iaEnd'),
+        D = num('iaDemand'), C = num('iaUnitCost'), S = num('iaOrderCost'), h = num('iaHolding'),
+        lead = num('iaLead'), safety = num('iaSafety'), days = num('iaDays');
+    if (document.getElementById('iaSafety').value.trim() === '') safety = 0;
+    if (document.getElementById('iaDays').value.trim() === '') days = 365;
+    var problems = [];
+
+    // Section 1: performance
+    var perfBad = [sales, cogs, begin, end].some(function (x) { return isNaN(x) || x < 0 || x > 1e12; });
+    var daysBad = isNaN(days) || days < 1 || days > 366;
+    if (perfBad) problems.push('Enter sales, cost of goods sold and inventory values of $0 or more.');
+    else if (begin + end <= 0) problems.push('Enter a beginning or ending inventory above $0 to measure turnover.');
+    if (daysBad) problems.push('Enter 1 to 366 selling days per year.');
+    if (!perfBad && !daysBad && begin + end > 0) {
+      var p = performance(sales, cogs, begin, end, days);
+      set('iaTurns', one.format(p.turns) + '×');
+      set('iaTurnsNote', 'Times you sell through your average stock in a year.');
+      set('iaDoh', isNaN(p.doh) ? '–' : one.format(p.doh) + ' days');
+      set('iaDohNote', isNaN(p.doh) ? 'No cost of goods sold, so stock never turns.' : 'How long the average item waits before it sells.');
+      set('iaGmroi', money2.format(p.gmroi));
+      set('iaGmroiNote', 'Gross margin earned per $1 of inventory at cost.');
+      set('iaAvg', money.format(p.avg));
+      set('iaMargin', money.format(sales - cogs) + (sales > 0 ? ' (' + one.format((sales - cogs) / sales * 100) + '%)' : ''));
+    } else {
+      dash(PERF_IDS); set('iaTurnsNote', ''); set('iaDohNote', ''); set('iaGmroiNote', '');
+    }
+
+    // Section 2: ordering
+    var ordBad = false;
+    if (isNaN(D) || D <= 0 || D > 1e12) { problems.push('Enter annual demand above 0 units.'); ordBad = true; }
+    else if (isNaN(C) || C <= 0 || C > 1e9) { problems.push('Enter a cost per unit above $0.'); ordBad = true; }
+    else if (isNaN(S) || S <= 0 || S > 1e9) { problems.push('Enter a cost per order above $0.'); ordBad = true; }
+    else if (isNaN(h) || h <= 0 || h > 200) { problems.push('Enter a yearly holding cost above 0% (up to 200%).'); ordBad = true; }
+    else if (isNaN(lead) || lead < 0 || lead > 365) { problems.push('Enter a lead time from 0 to 365 days.'); ordBad = true; }
+    else if (isNaN(safety) || safety < 0 || safety > 1e12) { problems.push('Enter safety stock of 0 units or more.'); ordBad = true; }
+    if (daysBad) ordBad = true;
+
+    var tb = clearBody('iaTable');
+    if (!ordBad) {
+      var H = C * h / 100, Q = eoq(D, S, H);
+      var c = costs(D, S, H, Q, safety);
+      var rop = reorderPoint(D, days, lead, safety);
+      set('iaEoq', units.format(Math.round(Q)) + ' units');
+      set('iaEoqNote', 'Worth ' + money.format(Q * C) + ' at cost per order.');
+      set('iaRop', units.format(rop) + ' units');
+      set('iaRopNote', 'Reorder when stock falls to this level: ' + one.format(D / days * lead) + ' units of lead-time demand plus safety stock.');
+      set('iaOrders', one.format(c.orders));
+      set('iaCycle', one.format(days / c.orders) + ' days');
+      set('iaOrdCost', money.format(c.ordering));
+      set('iaHoldCost', money.format(c.holding + c.safetyHolding));
+      set('iaAvgUnits', units.format(Math.round(Q / 2 + safety)));
+      [0.5, 0.75, 1, 1.25, 1.5, 2].forEach(function (m) {
+        var q = Math.max(1, Math.round(Q * m)), k = costs(D, S, H, q, 0);
+        addRow(tb, [units.format(q) + (m === 1 ? ' (EOQ)' : ''), one.format(k.orders), money.format(k.ordering), money.format(k.holding), money.format(k.ordering + k.holding)]);
+      });
+    } else {
+      dash(ORDER_IDS); set('iaEoqNote', ''); set('iaRopNote', '');
+    }
+
+    var error = document.getElementById('iaError');
+    error.hidden = problems.length === 0;
+    error.textContent = problems.join(' ');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('iaForm');
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();
+</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

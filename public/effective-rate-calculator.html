@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en" id="effective-rate-calculator-document" data-page-slug="effective-rate-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Effective Rate Calculator: Convert APR to APY and Back</title>
+  <meta name="description" content="Convert a nominal interest rate (APR) to the effective annual rate (APY), or back again, for daily, monthly, quarterly or continuous compounding.">
+  <link rel="canonical" href="https://company-marketcap.github.io/effective-rate-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Effective Rate Calculator: Convert APR to APY and Back">
+  <meta property="og:description" content="Convert a nominal interest rate (APR) to the effective annual rate (APY), or back again, for daily, monthly, quarterly or continuous compounding.">
+  <meta property="og:url" content="https://company-marketcap.github.io/effective-rate-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Effective Rate Calculator", "url": "https://company-marketcap.github.io/effective-rate-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Convert a nominal interest rate (APR) to the effective annual rate (APY), or back again, for daily, monthly, quarterly or continuous compounding."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Interest, APR & Time Value of Money", "item": "https://company-marketcap.github.io/financial-calculators.html#interest-calculators"}, {"@type": "ListItem", "position": 4, "name": "Effective Rate Calculator", "item": "https://company-marketcap.github.io/effective-rate-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the effective interest rate?", "acceptedAnswer": {"@type": "Answer", "text": "It is the annualized rate you actually pay or earn once compounding is included. A stated rate of 9.25% compounded daily, for instance, works out to an effective rate of about 9.69%."}}, {"@type": "Question", "name": "How is the effective rate different from the nominal rate?", "acceptedAnswer": {"@type": "Answer", "text": "The nominal rate is the quoted figure before compounding. The effective rate adds the effect of interest earning interest, so it is equal to the nominal rate only when interest compounds once per period."}}, {"@type": "Question", "name": "What is the formula for the effective annual rate?", "acceptedAnswer": {"@type": "Answer", "text": "EAR = (1 + r / m)^m - 1, where r is the nominal rate as a decimal and m is the number of compounding periods per year. For continuous compounding the formula becomes e^r - 1."}}, {"@type": "Question", "name": "Are EAR, APY and AER the same thing?", "acceptedAnswer": {"@type": "Answer", "text": "They describe the same compounded annual figure. APY is the usual US term for deposits, AER is common in the UK, and EAR or effective annual rate is the general finance term."}}, {"@type": "Question", "name": "Does more frequent compounding always raise the effective rate?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, for the same nominal rate. Moving from annual to monthly to daily compounding raises the effective rate each time, but the gains get smaller, and continuous compounding is the upper limit."}}, {"@type": "Question", "name": "What does the number of periods field do?", "acceptedAnswer": {"@type": "Answer", "text": "With 1 period you get the effective rate for one period. With more than 1, the compounded interest rate shows the total growth over the whole span, calculated as (1 + i)^t - 1."}}, {"@type": "Question", "name": "Can I use the calculator to compare a loan and a savings account?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Convert each quoted rate to its effective rate and compare the results directly. Fees and deposits are not part of the compounding calculation, so they need to be considered separately."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="effective-rate-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="effective-rate-calculator" data-page-type="calculator">
+  <a id="effective-rate-calculator-skip-link" href="#effective-rate-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="effective-rate-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="effective-rate-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="effective-rate-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="effective-rate-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="effective-rate-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="effective-rate-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="effective-rate-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="effective-rate-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="effective-rate-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="effective-rate-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="effective-rate-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="effective-rate-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="effective-rate-calculator-header-search-status" aria-controls="effective-rate-calculator-header-search-results" data-search-input="header">
+              <p id="effective-rate-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="effective-rate-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="effective-rate-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="effective-rate-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="effective-rate-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="effective-rate-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="effective-rate-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="effective-rate-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="effective-rate-calculator-mobile-search-status" aria-controls="effective-rate-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="effective-rate-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="effective-rate-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="effective-rate-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="effective-rate-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="effective-rate-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="effective-rate-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="effective-rate-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="effective-rate-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="effective-rate-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="effective-rate-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="effective-rate-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="effective-rate-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="effective-rate-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="effective-rate-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="effective-rate-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="effective-rate-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="effective-rate-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="effective-rate-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="effective-rate-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="effective-rate-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="effective-rate-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="effective-rate-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="effective-rate-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="effective-rate-calculator-sidebar-search-status" aria-controls="effective-rate-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="effective-rate-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="effective-rate-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="effective-rate-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="effective-rate-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="effective-rate-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="effective-rate-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="effective-rate-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="effective-rate-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="effective-rate-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="effective-rate-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="effective-rate-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="effective-rate-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="effective-rate-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="effective-rate-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="effective-rate-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="effective-rate-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="effective-rate-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="effective-rate-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="effective-rate-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="effective-rate-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="effective-rate-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="effective-rate-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators" aria-current="true">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="effective-rate-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="effective-rate-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="effective-rate-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="effective-rate-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="effective-rate-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="effective-rate-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="effective-rate-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="effective-rate-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="effective-rate-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="effective-rate-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="effective-rate-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="effective-rate-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="effective-rate-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="effective-rate-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="effective-rate-calculator" data-calculator-slug="effective-rate-calculator" data-sub-category-slug="interest-calculators">
+      <aside id="effective-rate-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="effective-rate-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="effective-rate-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="effective-rate-calculator-ad-top-leaderboard">
+            <ins id="effective-rate-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("effective-rate-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="effective-rate-calculator-intro-area" class="space-y-4">
+        <nav id="effective-rate-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="effective-rate-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="effective-rate-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="effective-rate-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="effective-rate-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#interest-calculators" itemprop="item"><span itemprop="name">Interest, APR &amp; Time Value of Money</span></a><meta itemprop="position" content="3"></li>
+            <li id="effective-rate-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Effective Rate Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/effective-rate-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="effective-rate-calculator-hero-section" aria-labelledby="effective-rate-calculator-hero-heading" data-section="hero">
+          <h1 id="effective-rate-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Effective Rate Calculator</h1>
+          <p id="effective-rate-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Use this effective rate calculator to see what a loan or an investment really pays once compounding is counted, because the interest rate on the sticker is rarely the rate you actually earn or owe. Enter the quoted rate and how often it compounds, and you get the true annual percentage in seconds, which makes any savings account, bond or credit offer easy to compare. <!-- SILO_START:slot_a -->Try the <a class="silo-link" href="/interest-calculator.html">free interest calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="effective-rate-calculator-tool" class="space-y-6" data-page-slug="effective-rate-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="erFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="erForm" class="space-y-5" novalidate aria-labelledby="erFormHeading">
+      <h2 id="erFormHeading" class="panel-heading">Enter your rate</h2>
+      <div><label for="erDirection" class="form-label">Convert</label><select id="erDirection" class="form-select"><option value="toEffective" selected>Nominal rate (APR) to effective rate (APY)</option><option value="toNominal">Effective rate (APY) to nominal rate (APR)</option></select></div>
+      <div id="erRateWrap"><label for="erRate" class="form-label">Nominal annual rate</label><div class="input-group"><input type="number" id="erRate" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="0.01" value="6" inputmode="decimal"><span class="input-affix">%</span></div></div>
+      <div><label for="erFreq" class="form-label">Compounding</label><select id="erFreq" class="form-select"><option value="cont">Continuously</option><option value="365">Daily (365 times a year)</option><option value="360">Daily, 360-day year basis</option><option value="52">Weekly (52)</option><option value="26">Biweekly (26)</option><option value="24">Semimonthly (24)</option><option value="12" selected>Monthly (12)</option><option value="6">Every two months (6)</option><option value="4">Quarterly (4)</option><option value="2">Semiannually (2)</option><option value="1">Annually (1)</option><option value="custom">Other number of times a year</option></select><p class="form-hint">How often interest is added to the balance.</p></div>
+      <div id="erCustomWrap" hidden><label for="erCustom" class="form-label">Compounding periods per year</label><div class="input-group"><input type="number" id="erCustom" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1" max="100000" step="1" value="8" inputmode="numeric"><span class="input-affix">times</span></div></div>
+      <details class="form-details"><summary class="form-details-summary">More options</summary>
+        <div><label for="erAmount" class="form-label">Example balance</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="erAmount" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1000" value="10000" inputmode="decimal"></div><p class="form-hint">Shows the interest this balance would earn (or be charged) over one year.</p></div>
+      </details>
+      <p id="erError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="erResults" aria-live="polite" aria-labelledby="erResultsHeading">
+      <h2 id="erResultsHeading" class="panel-heading">Your results</h2>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p class="stat-label" id="erMainLabel">Effective annual rate (APY)</p><p id="erMain" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label" id="erOtherLabel">Nominal annual rate (APR)</p><p id="erOther" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Rate per compounding period</p><p id="erPeriodic" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Interest over one year</p><p id="erInterest" class="stat-value">–</p></div>
+      </div>
+      <dl class="key-value-list mt-4">
+        <div class="key-value-row"><dt>Compounding periods a year</dt><dd id="erPeriods">–</dd></div>
+        <div class="key-value-row"><dt>Difference from the nominal rate</dt><dd id="erGap">–</dd></div>
+        <div class="key-value-row"><dt>Example balance after one year</dt><dd id="erEnd">–</dd></div>
+      </dl>
+      <p id="erNote" class="callout callout-note mt-4 text-sm" hidden></p>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="erTableHeading" data-section="comparison">
+  <h2 id="erTableHeading" class="panel-heading">The same rate at every compounding frequency</h2>
+  <p id="erTableIntro" class="mt-0.5 text-sm text-ink-muted">How the effective rate changes when the nominal rate stays the same but interest compounds more or less often.</p>
+  <div class="table-scroll mt-5 max-h-[520px]" tabindex="0" role="region" aria-labelledby="erTableHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Compounding</th><th scope="col">Periods a year</th><th scope="col">Nominal rate (APR)</th><th scope="col">Effective rate (APY)</th></tr></thead>
+      <tbody id="erTable"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="effective-rate-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="effective-rate-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Use this effective rate calculator to see what a loan or an investment really pays once compounding is counted, because the interest rate on the sticker is rarely the rate you actually earn or owe. Enter the quoted rate and how often it compounds, and you get the true annual percentage in seconds, which makes any savings account, bond or credit offer easy to compare. <!-- SILO_START:slot_a_m -->Try the <a class="silo-link" href="/interest-calculator.html">free interest calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="effective-rate-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="effective-rate-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="effective-rate-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="effective-rate-calculator-ad-in-feed">
+            <ins id="effective-rate-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("effective-rate-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="effective-rate-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="effective-rate-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="effective-rate-calculator-guide-heading-1">
+<h2 id="effective-rate-calculator-guide-heading-1">What Is the Effective Interest Rate?</h2>
+<p>The <strong>effective interest rate</strong> is the annualized interest rate you end up with after interest is added to the balance and starts earning interest of its own. Any effective interest rate calculator starts from a quoted figure, and lenders and banks usually advertise the <strong>nominal interest rate</strong>, also called the <strong>stated rate</strong>, which ignores that effect. The two figures only match when interest is paid once a year, so the gap between them is a direct measure of how much <strong>interest on interest</strong> you will see. <!-- SILO_START:slot_b -->The <a class="silo-link" href="/compound-savings-calculator.html">compound savings calculator online</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_b --></p>
+<p>You will meet the same idea under several names. The <strong>effective annual rate</strong>, the <strong>annual equivalent rate (AER)</strong>, the <strong>annual percentage yield (APY)</strong>, the <strong>EAR</strong> and the <strong>EIR</strong> all describe one measure, and <strong>effective annual yield</strong> is the phrase credit unions often use on investment pages. When someone quotes the <strong>effective rate of interest</strong> on a debt, they mean the same compounded figure, expressed per annum.</p>
+<h3>Why Compounding Frequency Changes the Result</h3>
+<p>Each time interest is credited, the next period's interest is calculated on a larger balance. More frequent compounding intervals therefore always produce a higher result, all else being equal. The ladder runs from annual through semi-annual, quarterly and monthly to daily, and the endpoint is continuous compounding, where the effect is at its maximum.</p>
+<ul>
+<li><strong>Annual:</strong> compounding periods per year = 1</li>
+<li><strong>Semi-annual:</strong> compounding frequency = 2</li>
+<li><strong>Quarterly:</strong> compounding frequency = 4</li>
+<li><strong>Monthly:</strong> compounding frequency = 12</li>
+<li><strong>Daily:</strong> compounding frequency = 365</li>
+</ul>
+<figure><img src="/assets/images/tools/effective-rate-calculator/effective-interest-by-compounding-frequency-chart.svg" alt="Stacked column chart of one year of interest on $18,500 at 9.25% under annual, semi-annual, quarterly, monthly and daily compounding"><figcaption>Interest on $18,500 over one year rises from $1,711 to $1,793 as compounding gets more frequent.</figcaption></figure>
+        </section>
+        <section id="effective-rate-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="effective-rate-calculator-guide-heading-2">
+<h2 id="effective-rate-calculator-guide-heading-2">How to Use the Effective Interest Rate Calculator</h2>
+<p>The effective interest rate calculator on this page takes three entries and returns the answer instantly. Enter the nominal rate exactly as your bank, lender or issuer states it, choose how often interest compounds, and add the number of years if you want the multi-year figure too. Press the calculate button on the calculator and the tool shows the effective annual interest rate, the periodic rate and, for a given balance, the interest earned over the period. <!-- SILO_START:slot_c -->Try the <a class="silo-link" href="/cash-back-or-low-interest-calculator.html">cash back or low interest calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_c --></p>
+<p>Because a calculator removes the arithmetic, you can try several offers in a row. A <strong>loan</strong> quoted at 11.75% monthly and another at 11.9% semi-annually look close on paper, yet only a quick run through the calculator tells you which one costs less. The same habit works for any savings product where <strong>compound interest</strong> is credited on a schedule, because the tool reveals how much extra a frequent schedule adds to what you have earned.</p>
+        </section>
+        <section id="effective-rate-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="effective-rate-calculator-guide-heading-3">
+<h2 id="effective-rate-calculator-guide-heading-3">Effective Annual Interest Rate Formula</h2>
+<p>The <strong>effective annual interest rate</strong> (the effective interest rate on a one-year basis) needs just two inputs: the nominal interest rate in <strong>decimal form</strong> and the number of compounding periods in a year. This is the same <strong>formula</strong> the calculator runs behind the scenes.</p>
+<p>$$\text{EAR} = \left(1 + \frac{r}{m}\right)^{m} - 1$$</p>
+<p>Here \(r\) is the nominal rate (so 9.25 <strong>percent</strong> becomes 0.0925) and \(m\) is the number of times interest compounds per period. The <strong>periodic interest rate</strong>, or <strong>interest rate per period</strong>, is simply \(r/m\), the slice of the stated rate applied at each compounding step. For a multi-year horizon, the <strong>compounded interest rate</strong> over \(t\) years is:</p>
+<p>$$I_t = \left(1 + \frac{r}{m}\right)^{mt} - 1$$</p>
+<h3>Continuous Compounding</h3>
+<p>As \(m\) grows without limit, the expression approaches a ceiling. With <strong>continuous compounding</strong>, the result is \(e^{r} - 1\), where \(e \approx 2.71828\). It is mostly a theoretical ceiling, but it shows how little is gained once compounding is already daily.</p>
+<h3>Step-by-Step Calculation by Hand</h3>
+<ol>
+<li>Write the nominal rate as a decimal by dividing the percentage by 100.</li>
+<li>Divide it by the number of compounding periods to get the periodic rate.</li>
+<li>Add 1, then raise the sum to the power of the number of periods.</li>
+<li>Subtract 1 and multiply by 100 to convert back to a percentage.</li>
+</ol>
+        </section>
+        <section id="effective-rate-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="effective-rate-calculator-guide-heading-4">
+<h2 id="effective-rate-calculator-guide-heading-4">Worked Example: Effective Rate of a 9.25% Loan Compounded Daily</h2>
+<p>Suppose a lender offering a personal <strong>loan</strong> quotes a nominal rate of 9.25% on an amount borrowed of $18,500, with interest compounding daily over 365 intervals. First find the periodic rate: 0.0925 ÷ 365 = 0.000253425. Then apply the formula:</p>
+<p>$$\text{EAR} = (1 + 0.000253425)^{365} - 1 = 0.0969 = 9.69\%$$</p>
+<p>So the lender's 9.25% is really a 9.69% <strong>effective interest rate</strong>, and the effective interest rate calculator would show you the same figure. A loan priced this way costs you 0.44 percentage points more than the stated number suggests. On the $18,500 <strong>principal</strong>, one year of interest comes to <strong>$1,792.66</strong> when it compounds daily, compared with $1,711.25 if the same nominal rate compounded only once a year. Over three years of monthly compounding, the <strong>total interest</strong> on that balance reaches $5,890.82, which is a 31.84% compounded rate for the whole term.</p>
+<figure><img src="/assets/images/tools/effective-rate-calculator/effective-rate-formula-9-25-percent-daily-compounding.svg" alt="Effective annual rate formula applied to a 9.25% nominal rate compounded daily, giving a 9.69% effective interest rate"><figcaption>The effective interest rate formula applied to a 9.25% loan rate that compounds daily.</figcaption></figure>
+
+<table>
+<thead><tr><th>Compounding</th><th>Periods per year</th><th>Effective rate</th><th>Interest on $18,500</th></tr></thead>
+<tbody>
+<tr><td>Annual</td><td>1</td><td>9.25%</td><td>$1,711.25</td></tr>
+<tr><td>Semi-annual</td><td>2</td><td>9.46%</td><td>$1,750.82</td></tr>
+<tr><td>Quarterly</td><td>4</td><td>9.58%</td><td>$1,771.53</td></tr>
+<tr><td>Monthly</td><td>12</td><td>9.65%</td><td>$1,785.70</td></tr>
+<tr><td>Daily</td><td>365</td><td>9.69%</td><td>$1,792.66</td></tr>
+</tbody>
+</table>
+        </section>
+        <section id="effective-rate-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="effective-rate-calculator-guide-heading-5">
+<h2 id="effective-rate-calculator-guide-heading-5">Ranking Three Deposit Offers by Effective Annual Rate</h2>
+<p>Marguerite has $26,400 from a sold motorcycle and wants it parked for twelve months. Three offers sit on her screen, and each advertises a different headline number on a different compounding schedule, so the quoted rates cannot be compared directly. She decides to convert each one to its effective annual rate first.</p>
+<table>
+<thead><tr><th>Offer</th><th>Stated rate</th><th>Compounding</th><th>Effective annual rate</th><th>Interest after 12 months</th></tr></thead>
+<tbody>
+<tr><td>Online savings</td><td>4.15%</td><td>Monthly</td><td>4.23%</td><td>$1,116.68</td></tr>
+<tr><td>Money market</td><td>4.10%</td><td>Daily</td><td>4.185%</td><td>$1,104.83</td></tr>
+<tr><td>Credit union certificate</td><td>4.18%</td><td>Quarterly</td><td>4.246%</td><td>$1,120.94</td></tr>
+</tbody>
+</table>
+<p>She types 4.15 and 12 into the calculator and reads 4.23%, then repeats the step with 4.10 and 365, and with 4.18 and 4. The ordering flips: the money market account has the lowest stated rate, and even daily compounding cannot close the gap, so it finishes last at 4.185%, while the certificate with the middle stated rate finishes first at 4.246%. On her balance that is $4.26 more than the online savings account and $16.11 more than the money market account over the year.</p>
+<p>On interest alone, the effective annual rate settles the ranking, and the gaps are small. The one thing it cannot show is liquidity: a certificate locks the money until its term ends, whereas the savings account stays accessible, and all three sit under the $250,000 FDIC coverage limit. Her decision: $20,000 goes into the certificate at 4.246%, and the remaining $6,400 stays in the online savings account as an emergency cushion, which she re-runs at a 3.9% stated rate to see how much a future rate cut would cost her.</p>
+        </section>
+        <section id="effective-rate-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="effective-rate-calculator-guide-heading-6">
+<h2 id="effective-rate-calculator-guide-heading-6">Effective vs. Nominal Interest Rate: Reading the Difference</h2>
+<p>A side-by-side <strong>comparison</strong> is the quickest way to see how the <strong>nominal rate</strong> and the effective figure diverge. The gap widens as the stated rate climbs and as compounding speeds up, so a higher-priced product is hit hardest.</p>
+<table>
+<thead><tr><th>Nominal rate</th><th>Annual</th><th>Quarterly</th><th>Monthly</th><th>Daily</th></tr></thead>
+<tbody>
+<tr><td>7.50%</td><td>7.50%</td><td>7.71%</td><td>7.76%</td><td>7.79%</td></tr>
+<tr><td>9.25%</td><td>9.25%</td><td>9.58%</td><td>9.65%</td><td>9.69%</td></tr>
+<tr><td>11.75%</td><td>11.75%</td><td>12.28%</td><td>12.40%</td><td>12.47%</td></tr>
+<tr><td>15.50%</td><td>15.50%</td><td>16.42%</td><td>16.65%</td><td>16.76%</td></tr>
+</tbody>
+</table>
+<figure><img src="/assets/images/tools/effective-rate-calculator/effective-rate-table-nominal-rate-vs-compounding.svg" alt="Heatmap grid of effective annual rates for nominal rates from 7.50% to 15.50% across four compounding frequencies"><figcaption>Effective annual rate by nominal rate and compounding frequency, with the 9.25% daily example outlined.</figcaption></figure>
+
+<p>For a <strong>borrower</strong> with a loan or credit card balance, this table is a warning: the <strong>real cost</strong> of a card or loan is the right-hand column, not the left. For a saver it is good news, because the same pattern lifts the <strong>actual return</strong> on deposits. Either way, the effective rate gives you an <strong>apples-to-apples</strong> basis for choosing between offers that compound on different schedules.</p>
+        </section>
+        <section id="effective-rate-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="effective-rate-calculator-guide-heading-7">
+<h2 id="effective-rate-calculator-guide-heading-7">Where an Effective Rate Calculator Helps Most</h2>
+<p>Any product that quotes a stated rate and compounds on its own schedule is a candidate. Typical uses include:</p>
+<ul>
+<li>Comparing a <strong>savings account</strong> against a <strong>money market account</strong> or certificate when they compound differently</li>
+<li>Measuring the <strong>cost of borrowing</strong> on a loan, line of credit or credit card</li>
+<li>Checking the true <strong>yield</strong> on an <strong>investment</strong> before committing funds</li>
+<li>Converting a quoted <strong>annualized interest rate</strong> into a figure your finance team can compare across <strong>debt</strong> instruments</li>
+<li>Checking how much interest you have earned on a deposit with a free online calculator</li>
+<li>Building the same calculation in <strong>Excel</strong> with the EFFECT() function, which takes the nominal rate and the number of compounding periods</li>
+</ul>
+<h3>Lenders, Savers and Financial Modeling</h3>
+<p>A <strong>lender</strong> uses the effective interest rate to price a loan honestly, while a saver uses it to rank deposits by <strong>return</strong>. Analysts doing <strong>financial modeling</strong> convert every instrument to the same basis before discounting cash flows, and the effective rate is the standard way to do it. Each instalment <strong>payment</strong> plan or bond held to <strong>maturity</strong> is converted to its effective annual rate first, so a different stated period never distorts the comparison.</p>
+<h3>Common Mistakes When Using the Calculator</h3>
+<ul>
+<li>Entering the rate as 0.0925 when the field expects a <strong>percent</strong> figure such as 9.25</li>
+<li>Mixing up periods: a monthly rate typed into a field that expects an annual one</li>
+<li>Forgetting that fees are a separate <strong>cost</strong> and are not part of a pure compounding calculation</li>
+<li>Comparing a <strong>stated interest rate</strong> on one product with the effective figure on another</li>
+</ul>
+<p>The effective rate you get back is only as accurate as the stated rate and compounding schedule you enter. Read both from the product's own terms, whether it comes from a bank, a credit union or an issuer of <strong>securities</strong>, and use a realistic <strong>example</strong> balance when you compare. A <strong>financial</strong> decision of size is worth confirming with the provider, since the <strong>time</strong> you hold funds, plus deposits and withdrawals, can change what an <strong>investment account</strong> actually earns beyond its effective rate.</p>
+        </section>
+      </div>
+
+      <section id="effective-rate-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="effective-rate-calculator-faq-heading" data-section="faq">
+        <h2 id="effective-rate-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Effective Rate Calculator questions</h2>
+        <div id="effective-rate-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="effective-rate-calculator-faq-1" class="faq-item" open><summary id="effective-rate-calculator-faq-1-summary" class="faq-summary"><h3 id="effective-rate-calculator-faq-1-question" class="faq-question">What is the effective interest rate?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="effective-rate-calculator-faq-1-answer" class="faq-answer"><p>It is the annualized rate you actually pay or earn once compounding is included. A stated rate of 9.25% compounded daily, for instance, works out to an effective rate of about 9.69%.</p></div></details>
+          <details id="effective-rate-calculator-faq-2" class="faq-item" open><summary id="effective-rate-calculator-faq-2-summary" class="faq-summary"><h3 id="effective-rate-calculator-faq-2-question" class="faq-question">How is the effective rate different from the nominal rate?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="effective-rate-calculator-faq-2-answer" class="faq-answer"><p>The nominal rate is the quoted figure before compounding. The effective rate adds the effect of interest earning interest, so it is equal to the nominal rate only when interest compounds once per period.</p></div></details>
+          <details id="effective-rate-calculator-faq-3" class="faq-item" open><summary id="effective-rate-calculator-faq-3-summary" class="faq-summary"><h3 id="effective-rate-calculator-faq-3-question" class="faq-question">What is the formula for the effective annual rate?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="effective-rate-calculator-faq-3-answer" class="faq-answer"><p>EAR = (1 + r / m)^m - 1, where r is the nominal rate as a decimal and m is the number of compounding periods per year. For continuous compounding the formula becomes e^r - 1.</p></div></details>
+          <details id="effective-rate-calculator-faq-4" class="faq-item" open><summary id="effective-rate-calculator-faq-4-summary" class="faq-summary"><h3 id="effective-rate-calculator-faq-4-question" class="faq-question">Are EAR, APY and AER the same thing?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="effective-rate-calculator-faq-4-answer" class="faq-answer"><p>They describe the same compounded annual figure. APY is the usual US term for deposits, AER is common in the UK, and EAR or effective annual rate is the general finance term.</p></div></details>
+          <details id="effective-rate-calculator-faq-5" class="faq-item" open><summary id="effective-rate-calculator-faq-5-summary" class="faq-summary"><h3 id="effective-rate-calculator-faq-5-question" class="faq-question">Does more frequent compounding always raise the effective rate?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="effective-rate-calculator-faq-5-answer" class="faq-answer"><p>Yes, for the same nominal rate. Moving from annual to monthly to daily compounding raises the effective rate each time, but the gains get smaller, and continuous compounding is the upper limit.</p></div></details>
+          <details id="effective-rate-calculator-faq-6" class="faq-item" open><summary id="effective-rate-calculator-faq-6-summary" class="faq-summary"><h3 id="effective-rate-calculator-faq-6-question" class="faq-question">What does the number of periods field do?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="effective-rate-calculator-faq-6-answer" class="faq-answer"><p>With 1 period you get the effective rate for one period. With more than 1, the compounded interest rate shows the total growth over the whole span, calculated as (1 + i)^t - 1.</p></div></details>
+          <details id="effective-rate-calculator-faq-7" class="faq-item" open><summary id="effective-rate-calculator-faq-7-summary" class="faq-summary"><h3 id="effective-rate-calculator-faq-7-question" class="faq-question">Can I use the calculator to compare a loan and a savings account?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="effective-rate-calculator-faq-7-answer" class="faq-answer"><p>Yes. Convert each quoted rate to its effective rate and compare the results directly. Fees and deposits are not part of the compounding calculation, so they need to be considered separately.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="effective-rate-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="effective-rate-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="effective-rate-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="effective-rate-calculator-ad-bottom-leaderboard">
+            <ins id="effective-rate-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("effective-rate-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="effective-rate-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="effective-rate-calculator-right-rail-top" class="mb-6">
+        <aside id="effective-rate-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="effective-rate-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="effective-rate-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="effective-rate-calculator-ad-right-rail-rectangle">
+            <ins id="effective-rate-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("effective-rate-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="effective-rate-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="effective-rate-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="effective-rate-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="effective-rate-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="effective-rate-calculator-ad-right-rail-skyscraper">
+            <ins id="effective-rate-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("effective-rate-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="effective-rate-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="effective-rate-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="effective-rate-calculator-footer-brand">
+        <a id="effective-rate-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="effective-rate-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="effective-rate-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="effective-rate-calculator-footer-categories" aria-labelledby="effective-rate-calculator-footer-categories-heading">
+        <h2 id="effective-rate-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="effective-rate-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="effective-rate-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="effective-rate-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="effective-rate-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="effective-rate-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="effective-rate-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="effective-rate-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="effective-rate-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="effective-rate-calculator-footer-company" aria-labelledby="effective-rate-calculator-footer-company-heading">
+        <h2 id="effective-rate-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="effective-rate-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="effective-rate-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="effective-rate-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="effective-rate-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="effective-rate-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="effective-rate-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="effective-rate-calculator-footer-bottom" class="border-t border-line">
+      <p id="effective-rate-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="effective-rate-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Nominal annual rate r compounded n times a year <-> effective annual rate E (APY):
+  //   E = (1 + r/n)^n - 1               r = n * ((1 + E)^(1/n) - 1)
+  //   continuous: E = e^r - 1           r = ln(1 + E)
+  //   daily on a 360-day basis (r/360 credited for each of 365 days):
+  //     E = (1 + r/360)^365 - 1          r = 360 * ((1 + E)^(1/365) - 1)
+  // Verified (Node): 6% monthly -> 6.1678%; 12% quarterly -> 12.5509%; 5% daily (365) -> 5.1267%;
+  // 10% continuous -> 10.5171%; 6% daily on a 360-day basis -> 6.2716%; round trips (E -> r -> E)
+  // return the input to 1e-12; 0% -> 0% at every frequency.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 });
+  var ROWS = [
+    ['cont', 'Continuously'], ['365', 'Daily'], ['360', 'Daily, 360-day basis'], ['52', 'Weekly'], ['26', 'Biweekly'],
+    ['24', 'Semimonthly'], ['12', 'Monthly'], ['6', 'Every two months'], ['4', 'Quarterly'], ['2', 'Semiannually'], ['1', 'Annually']
+  ];
+
+  // --- calc start
+  // freq: 'cont', '360' (r/360 for 365 days) or a number of periods a year.
+  function toEffective(r, freq) {
+    if (freq === 'cont') return Math.exp(r) - 1;
+    if (freq === '360') return Math.pow(1 + r / 360, 365) - 1;
+    var n = Number(freq);
+    return Math.pow(1 + r / n, n) - 1;
+  }
+
+  function toNominal(e, freq) {
+    if (freq === 'cont') return Math.log(1 + e);
+    if (freq === '360') return 360 * (Math.pow(1 + e, 1 / 365) - 1);
+    var n = Number(freq);
+    return n * (Math.pow(1 + e, 1 / n) - 1);
+  }
+
+  function periodsPerYear(freq) {
+    if (freq === 'cont') return Infinity;
+    if (freq === '360') return 365;
+    return Number(freq);
+  }
+
+  function periodicRate(r, freq) {
+    if (freq === 'cont') return null;
+    if (freq === '360') return r / 360;
+    return r / Number(freq);
+  }
+  // --- calc end
+
+  function el(id) { return document.getElementById(id); }
+  function pct(x, dp) {
+    return (x * 100).toLocaleString('en-US', { minimumFractionDigits: dp, maximumFractionDigits: dp }) + '%';
+  }
+  function periodsText(freq) {
+    if (freq === 'cont') return 'Unlimited';
+    if (freq === '360') return '365 (at r/360 a day)';
+    return Number(freq).toLocaleString('en-US');
+  }
+
+  function clear() {
+    ['erMain', 'erOther', 'erPeriodic', 'erInterest', 'erPeriods', 'erGap', 'erEnd'].forEach(function (id) {
+      el(id).textContent = '–';
+    });
+    el('erTable').innerHTML = '';
+  }
+
+  function update() {
+    var toEff = el('erDirection').value === 'toEffective';
+    var sel = el('erFreq').value;
+    el('erCustomWrap').hidden = sel !== 'custom';
+    el('erRateWrap').querySelector('label').textContent = toEff ? 'Nominal annual rate (APR)' : 'Effective annual rate (APY)';
+    el('erMainLabel').textContent = toEff ? 'Effective annual rate (APY)' : 'Nominal annual rate (APR)';
+    el('erOtherLabel').textContent = toEff ? 'Nominal annual rate (APR)' : 'Effective annual rate (APY)';
+    el('erTableIntro').textContent = toEff
+      ? 'The effective rate you get from the same nominal rate at each compounding frequency.'
+      : 'The nominal rate needed at each compounding frequency to give the same effective rate.';
+
+    var rate = parseFloat(el('erRate').value), custom = parseFloat(el('erCustom').value);
+    var amountText = el('erAmount').value.trim(), amount = amountText === '' ? 0 : parseFloat(amountText);
+    var msg = '';
+    if (isNaN(rate) || rate < 0 || rate > 100) msg = 'Enter a rate from 0% to 100%.';
+    else if (sel === 'custom' && (isNaN(custom) || custom < 1 || custom > 100000 || Math.round(custom) !== custom)) msg = 'Enter a whole number of compounding periods from 1 to 100,000.';
+    else if (isNaN(amount) || amount < 0 || amount > 1e12) msg = 'Enter an example balance from $0 to $1 trillion.';
+    var error = el('erError');
+    error.hidden = !msg;
+    error.textContent = msg;
+    if (msg) { clear(); return; }
+
+    var freq = sel === 'custom' ? String(custom) : sel;
+    var r = rate / 100, nominal, effective;
+    if (toEff) { nominal = r; effective = toEffective(r, freq); }
+    else { effective = r; nominal = toNominal(r, freq); }
+    var periodic = periodicRate(nominal, freq);
+
+    el('erMain').textContent = pct(toEff ? effective : nominal, 4);
+    el('erOther').textContent = pct(toEff ? nominal : effective, 4);
+    el('erPeriodic').textContent = periodic === null ? 'Not applicable' : pct(periodic, 6);
+    el('erInterest').textContent = money.format(amount * effective);
+    el('erPeriods').textContent = periodsText(freq);
+    el('erGap').textContent = ((effective - nominal) * 100).toLocaleString('en-US', { minimumFractionDigits: 4, maximumFractionDigits: 4 }) + ' percentage points';
+    el('erEnd').textContent = money.format(amount * (1 + effective));
+    var note = el('erNote');
+    note.hidden = true;
+    if (freq === '360') {
+      note.textContent = 'On a 360-day basis the daily rate is the annual rate divided by 360 but is charged or paid for all 365 days, so the effective rate is a little higher than with ordinary daily compounding.';
+      note.hidden = false;
+    }
+
+    el('erTable').innerHTML = ROWS.map(function (row) {
+      var n = toEff ? r : toNominal(r, row[0]);
+      var e = toEff ? toEffective(r, row[0]) : r;
+      return '<tr><td>' + row[1] + '</td><td>' + periodsText(row[0]) + '</td><td>' + pct(n, 4) + '</td><td>' + pct(e, 4) + '</td></tr>';
+    }).join('');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = el('erForm');
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

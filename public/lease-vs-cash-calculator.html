@@ -1,0 +1,622 @@
+<!doctype html>
+<html lang="en" id="lease-vs-cash-calculator-document" data-page-slug="lease-vs-cash-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lease vs. Cash Calculator: Lease vs Buy a Car</title>
+  <meta name="description" content="Compare leasing a car against paying cash or taking a loan to buy it. Enter your monthly lease payment, fees and investment return to see which option costs less.">
+  <link rel="canonical" href="https://company-marketcap.github.io/lease-vs-cash-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Lease vs. Cash Calculator: Lease vs Buy a Car">
+  <meta property="og:description" content="Compare leasing a car against paying cash or taking a loan to buy it. Enter your monthly lease payment, fees and investment return to see which option costs less.">
+  <meta property="og:url" content="https://company-marketcap.github.io/lease-vs-cash-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Lease vs. Cash Calculator", "url": "https://company-marketcap.github.io/lease-vs-cash-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Compare leasing a car against paying cash or taking a loan to buy it. Enter your monthly lease payment, fees and investment return to see which option costs less."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Auto Loans & Leasing", "item": "https://company-marketcap.github.io/financial-calculators.html#auto-loan-calculators"}, {"@type": "ListItem", "position": 4, "name": "Lease vs. Cash Calculator", "item": "https://company-marketcap.github.io/lease-vs-cash-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is it better to lease or pay cash for a car?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on what your cash would earn elsewhere. Paying cash saves lease charges and fees, but it removes a large sum from your investments. The calculator totals both options over the lease term so you can see which one leaves you with more money."}}, {"@type": "Question", "name": "What is lost investment income?", "acceptedAnswer": {"@type": "Answer", "text": "It is the growth your up-front money would have earned if it had stayed invested at your chosen rate of return. It is added to both options, in proportion to the cash each one needs on day one."}}, {"@type": "Question", "name": "How is a lease payment calculated?", "acceptedAnswer": {"@type": "Answer", "text": "The payment is a depreciation charge, which is the capitalized cost minus the residual value divided by the number of months, plus a rent charge equal to the capitalized cost plus the residual multiplied by the money factor. Sales tax is then added to each payment."}}, {"@type": "Question", "name": "How do I convert a lease interest rate to a money factor?", "acceptedAnswer": {"@type": "Answer", "text": "Divide the annual percentage rate by 2,400. For example, 6% becomes 0.0025. To go the other way, multiply the money factor by 2,400."}}, {"@type": "Question", "name": "What residual percent should I enter?", "acceptedAnswer": {"@type": "Answer", "text": "Use the figure on your lease quote, since the leasing company sets it. A higher residual lowers your payment, and it should be confirmed in writing before you sign."}}, {"@type": "Question", "name": "Does a bigger down payment make a lease cheaper?", "acceptedAnswer": {"@type": "Answer", "text": "It lowers each monthly payment, but the total you pay stays about the same, and you lose the money if the car is stolen or totaled early. That is why the calculator also counts the investment earnings you give up."}}, {"@type": "Question", "name": "Are security deposits included?", "acceptedAnswer": {"@type": "Answer", "text": "A refundable deposit is assumed to come back at the end of the lease, so it only adds lost investment earnings, not a permanent cost."}}, {"@type": "Question", "name": "Does the calculator include insurance, maintenance or excess mileage charges?", "acceptedAnswer": {"@type": "Answer", "text": "No. Those costs vary by contract and driver, so add any expected excess-mileage or wear charges to your lease fees to get a fuller picture."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="lease-vs-cash-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="lease-vs-cash-calculator" data-page-type="calculator">
+  <a id="lease-vs-cash-calculator-skip-link" href="#lease-vs-cash-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="lease-vs-cash-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="lease-vs-cash-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="lease-vs-cash-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="lease-vs-cash-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="lease-vs-cash-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="lease-vs-cash-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="lease-vs-cash-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="lease-vs-cash-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="lease-vs-cash-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="lease-vs-cash-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="lease-vs-cash-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="lease-vs-cash-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="lease-vs-cash-calculator-header-search-status" aria-controls="lease-vs-cash-calculator-header-search-results" data-search-input="header">
+              <p id="lease-vs-cash-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="lease-vs-cash-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="lease-vs-cash-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="lease-vs-cash-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="lease-vs-cash-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="lease-vs-cash-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="lease-vs-cash-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="lease-vs-cash-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="lease-vs-cash-calculator-mobile-search-status" aria-controls="lease-vs-cash-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="lease-vs-cash-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="lease-vs-cash-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="lease-vs-cash-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="lease-vs-cash-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="lease-vs-cash-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="lease-vs-cash-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="lease-vs-cash-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="lease-vs-cash-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="lease-vs-cash-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="lease-vs-cash-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="lease-vs-cash-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="lease-vs-cash-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="lease-vs-cash-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="lease-vs-cash-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="lease-vs-cash-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="lease-vs-cash-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="lease-vs-cash-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="lease-vs-cash-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="lease-vs-cash-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="lease-vs-cash-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="lease-vs-cash-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="lease-vs-cash-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="lease-vs-cash-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="lease-vs-cash-calculator-sidebar-search-status" aria-controls="lease-vs-cash-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="lease-vs-cash-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="lease-vs-cash-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="lease-vs-cash-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="lease-vs-cash-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="lease-vs-cash-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="lease-vs-cash-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="lease-vs-cash-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="lease-vs-cash-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="lease-vs-cash-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="lease-vs-cash-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="lease-vs-cash-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="lease-vs-cash-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="lease-vs-cash-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators" aria-current="true">Auto Loans &amp; Leasing</a></li><li><a id="lease-vs-cash-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="lease-vs-cash-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="lease-vs-cash-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="lease-vs-cash-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="lease-vs-cash-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="lease-vs-cash-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="lease-vs-cash-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="lease-vs-cash-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="lease-vs-cash-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="lease-vs-cash-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="lease-vs-cash-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="lease-vs-cash-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="lease-vs-cash-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="lease-vs-cash-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="lease-vs-cash-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="lease-vs-cash-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="lease-vs-cash-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="lease-vs-cash-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="lease-vs-cash-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="lease-vs-cash-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="lease-vs-cash-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="lease-vs-cash-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="lease-vs-cash-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="lease-vs-cash-calculator" data-calculator-slug="lease-vs-cash-calculator" data-sub-category-slug="auto-loan-calculators">
+      <aside id="lease-vs-cash-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="lease-vs-cash-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="lease-vs-cash-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="lease-vs-cash-calculator-ad-top-leaderboard">
+            <ins id="lease-vs-cash-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("lease-vs-cash-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="lease-vs-cash-calculator-intro-area" class="space-y-4">
+        <nav id="lease-vs-cash-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="lease-vs-cash-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="lease-vs-cash-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="lease-vs-cash-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="lease-vs-cash-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#auto-loan-calculators" itemprop="item"><span itemprop="name">Auto Loans &amp; Leasing</span></a><meta itemprop="position" content="3"></li>
+            <li id="lease-vs-cash-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Lease vs. Cash Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/lease-vs-cash-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="lease-vs-cash-calculator-hero-section" aria-labelledby="lease-vs-cash-calculator-hero-heading" data-section="hero">
+          <h1 id="lease-vs-cash-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Lease vs. Cash Calculator: Lease vs Buy a Car</h1>
+          <p id="lease-vs-cash-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Wondering whether to sign a lease or write a check for your next vehicle? The lease vs. cash calculator adds up what each route really costs you over the same stretch of time, including the investment growth you give up when cash leaves your account, so you can see the net cost of each option side by side instead of judging by the monthly payment alone. <!-- SILO_START:slot_a -->Next, open the <a class="silo-link" href="/auto-loan-calculator.html">free car loan calculator</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="lease-vs-cash-calculator-tool" class="space-y-6" data-page-slug="lease-vs-cash-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="lcFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="lcForm" class="space-y-5" novalidate aria-labelledby="lcFormHeading">
+      <h2 id="lcFormHeading" class="panel-heading">Enter the vehicle and the lease offer</h2>
+<div class="form-row form-row-2">
+<div><label for="lcPrice" class="form-label">Vehicle price</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="lcPrice" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="35000" inputmode="decimal" aria-describedby="lcPriceHint"></div><p id="lcPriceHint" class="form-hint">The negotiated price, used for both options.</p></div>
+<div><label for="lcTaxRate" class="form-label">Sales tax rate</label><div class="input-group"><input type="number" id="lcTaxRate" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="20" step="0.25" value="6" inputmode="decimal"><span class="input-affix">%</span></div></div>
+</div>
+<fieldset class="form-fieldset">
+<legend class="form-legend">Paying cash</legend>
+<div class="form-row form-row-2">
+<div><label for="lcBuyFees" class="form-label">Title, registration and dealer fees</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="lcBuyFees" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="50" value="800" inputmode="decimal"></div></div>
+<div><label for="lcDep" class="form-label">Yearly depreciation</label><div class="input-group"><input type="number" id="lcDep" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="99" step="1" value="15" inputmode="decimal" aria-describedby="lcDepHint"><span class="input-affix">%</span></div><p id="lcDepHint" class="form-hint">Used to estimate what the car is worth when the lease would end.</p></div>
+</div>
+</fieldset>
+<fieldset class="form-fieldset">
+<legend class="form-legend">Leasing</legend>
+<div class="form-row form-row-2">
+<div><label for="lcTerm" class="form-label">Lease term</label><div class="input-group"><input type="number" id="lcTerm" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="12" max="60" step="12" value="36" inputmode="numeric" aria-describedby="lcTermHint"><span class="input-affix">months</span></div><p id="lcTermHint" class="form-hint">Both options are compared over this period.</p></div>
+<div><label for="lcResidual" class="form-label">Residual value</label><div class="input-group"><input type="number" id="lcResidual" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="1" value="58" inputmode="decimal" aria-describedby="lcResidualHint"><span class="input-affix">%</span></div><p id="lcResidualHint" class="form-hint">Percent of the vehicle price.</p></div>
+</div>
+<div class="form-row form-row-2">
+<div><label for="lcLeaseApr" class="form-label">Lease interest rate</label><div class="input-group"><input type="number" id="lcLeaseApr" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="40" step="0.1" value="6" inputmode="decimal" aria-describedby="lcLeaseAprHint"><span class="input-affix">%</span></div><p id="lcLeaseAprHint" class="form-hint">Money factor × 2400.</p></div>
+<div><label for="lcLeaseDown" class="form-label">Cash down</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="lcLeaseDown" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="250" value="2000" inputmode="decimal"></div></div>
+</div>
+<div><label for="lcLeaseFees" class="form-label">Acquisition and other upfront fees</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="lcLeaseFees" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="50" value="995" inputmode="decimal"></div></div>
+<details class="form-details"><summary class="form-details-summary">More options</summary>
+<div class="form-row form-row-2">
+<div><label for="lcDeposit" class="form-label">Security deposit</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="lcDeposit" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="0" inputmode="decimal"></div></div>
+<div><label for="lcEndFees" class="form-label">End-of-lease charges</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="lcEndFees" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="25" value="395" inputmode="decimal" aria-describedby="lcEndFeesHint"></div><p id="lcEndFeesHint" class="form-hint">Disposition fee plus expected mileage or wear charges.</p></div>
+</div>
+</details>
+</fieldset>
+<div><label for="lcInvest" class="form-label">Return you could earn on your cash</label><div class="input-group"><input type="number" id="lcInvest" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="30" step="0.5" value="5" inputmode="decimal" aria-describedby="lcInvestHint"><span class="input-affix">%</span></div><p id="lcInvestHint" class="form-hint">What the cash could earn if you didn’t spend it on the car. Use an after-tax figure, or 0 to ignore it.</p></div>
+      <p id="lcError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="lcResults" aria-live="polite" aria-labelledby="lcResultsHeading">
+      <h2 id="lcResultsHeading" class="panel-heading">Your results</h2>
+<div class="stat-grid mt-4">
+<div class="stat-card stat-card-highlight"><p id="lcVerdictLabel" class="stat-label">Cheaper option</p><p id="lcVerdict" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">Cost of paying cash</p><p id="lcCashTotal" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">Cost of leasing</p><p id="lcLeaseTotal" class="stat-value">–</p></div>
+</div>
+<div class="mt-5">
+<div class="result-row"><span class="result-term">Cash paid up front to buy</span><span id="lcOutlay" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Car’s value at the end of the term</span><span id="lcValue" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Lease payment (with tax)</span><span id="lcLeasePayment" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Break-even return on cash</span><span id="lcBreakEven" class="result-value">–</span></div>
+</div>
+<p class="form-hint">Costs cover the lease term only. Paying cash gets credit for the car you still own; both include what the money could have earned. Above the break-even return, leasing comes out cheaper.</p>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="lcBreakdownHeading" data-section="breakdown">
+  <h2 id="lcBreakdownHeading" class="panel-heading">Side-by-side breakdown</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">Where each option’s cost comes from over the lease term. Negative amounts are money back.</p>
+  <div class="table-scroll mt-5" tabindex="0" role="region" aria-labelledby="lcBreakdownHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Item</th><th scope="col">Pay cash</th><th scope="col">Lease</th></tr></thead>
+      <tbody id="lcBreakdown"></tbody>
+    </table>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="lcReturnsHeading" data-section="returns">
+  <h2 id="lcReturnsHeading" class="panel-heading">How the return on your cash changes the answer</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">The same deal at different investment returns. The higher the return, the more paying cash costs you in lost earnings.</p>
+  <div class="table-scroll mt-5" tabindex="0" role="region" aria-labelledby="lcReturnsHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Return on cash</th><th scope="col">Cost of paying cash</th><th scope="col">Cost of leasing</th><th scope="col">Cheaper</th></tr></thead>
+      <tbody id="lcReturns"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="lease-vs-cash-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="lease-vs-cash-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Wondering whether to sign a lease or write a check for your next vehicle? The lease vs. cash calculator adds up what each route really costs you over the same stretch of time, including the investment growth you give up when cash leaves your account, so you can see the net cost of each option side by side instead of judging by the monthly payment alone. <!-- SILO_START:slot_a_m -->Next, open the <a class="silo-link" href="/auto-loan-calculator.html">free car loan calculator</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="lease-vs-cash-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="lease-vs-cash-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="lease-vs-cash-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="lease-vs-cash-calculator-ad-in-feed">
+            <ins id="lease-vs-cash-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("lease-vs-cash-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="lease-vs-cash-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="lease-vs-cash-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="lease-vs-cash-calculator-guide-heading-1">
+<h2 id="lease-vs-cash-calculator-guide-heading-1">How the Lease vs. Cash Calculator Compares Your Options</h2>
+<p>Every car deal hides two different cash stories. When you pay cash, a large amount leaves your savings on day one and you keep a car that is still worth something when the period ends. When you lease, you pay far less up front, send a monthly payment to the leasing company, and hand the car back. The calculator puts both stories on one timeline and asks a single question: after the lease term is over, which choice left you with more money? Think of it as a lease vs buy calculator built for people who have cash on hand and a vehicle to choose. Each input below feeds one side of that comparison, so it helps to know what to type into every box. <!-- SILO_START:slot_b -->The <a class="silo-link" href="/home-equity-loan-vs-auto-loan-calculator.html">home equity vs auto loan calculator</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_b --></p>
+
+<h3>Purchase price, negotiated sales price and MSRP</h3>
+<p>Start with the <strong>purchase price</strong> you expect to pay for the vehicle after any manufacturer discount. Dealers often quote the MSRP, the manufacturer's suggested retail price, but your <strong>negotiated sales price</strong> is the number that counts because both the lease and the cash purchase of the vehicle are built on it. Using the same price for each side keeps the comparison fair.</p>
+
+<h3>Sales tax rate and transaction fees</h3>
+<p>Your <strong>sales tax rate</strong> applies to the whole price when you buy, while a lease usually folds tax into every monthly payment. Add <strong>transaction fees</strong> such as title and registration, which you pay once when you take delivery and which are normally not taxed. These costs belong in the buying column even though no lender ever bills you for them.</p>
+
+<h3>Investment rate of return</h3>
+<p>This is the input most people skip, and it often decides the result. The <strong>investment rate of return</strong> is what your cash would earn if it stayed invested instead of going into a vehicle. Paying cash for a car means giving up that growth, and the calculator reports it as lost investment earnings. A savings account might pay a few percent; a stock fund could earn more but carries risk, so choose a rate you would genuinely expect to earn.</p>
+
+<h3>Annual depreciation and market value</h3>
+<p>A new vehicle loses value every year. A high <strong>annual depreciation</strong> rate is around 20%, a medium one 15% and a low one 10%. Applied over your holding period, it produces the <strong>market value</strong> of the car when the lease would have ended, which is what you keep as the cash buyer of the vehicle.</p>
+
+<h3>Residual percent and lease money factor</h3>
+<p>On the leasing side, the <strong>residual percent</strong> sets the car's expected worth at lease end. A higher residual value means you pay for less depreciation, so your lease payment drops. The <strong>lease money factor</strong> is the finance charge, and you can convert it from a lease interest rate by dividing the annual percentage by 2,400. A 6.0% rate, for instance, equals a money factor of 0.0025. If your dealer quotes only a money factor, the same rule works backwards.</p>
+
+<h3>Lease term, security deposit and other fees</h3>
+<p>The <strong>lease term</strong> is the number of months you will drive the car before returning it; 24, 36 and 48 months are typical. A refundable <strong>security deposit</strong> is assumed to come back at the end, but it still ties up cash in the meantime. Enter any <strong>other fees</strong> due at signing, such as the acquisition fee, documentation fee or destination charge, since these are lease-related fees that raise the total even though they never appear in the payment.</p>
+
+<h3>Down payment, trade-in and cash rebate</h3>
+<p>A <strong>down payment</strong> on a lease is also called a capital reduction or cap cost reduction. It lowers the capitalized cost and therefore each payment, but it does not lower what you pay overall. Your trade-in works similarly: its trade-in value, minus any amount owed on it, reduces what you finance or capitalize. A cash rebate or other cash incentives cut the price for either route. Because the credit helps both sides, make sure you apply it once to each.</p>
+        </section>
+        <section id="lease-vs-cash-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="lease-vs-cash-calculator-guide-heading-2">
+<h2 id="lease-vs-cash-calculator-guide-heading-2">Lease or Buy Formulas: Net Cost of Lease and Net Cost of Buying</h2>
+<p>The comparison boils down to two totals. The option with the smaller figure is the cheaper one over your chosen period, and the gap between them is your estimated savings. <!-- SILO_START:slot_c -->If you want to see how the figures change, the <a class="silo-link" href="/boat-loan-calculator.html">boat loan calculator online</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_c --></p>
+
+<h3>Net cost of buying</h3>
+<p>Take everything you spend to own the car, add the growth you forgo, and subtract what the car is still worth:</p>
+<p>$$\text{Net cost of buying} = P(1+t) + F + E_{buy} - V_{end}$$</p>
+<p>Here \(P\) is the purchase price, \(t\) is the tax rate, \(F\) is the fees, \(E_{buy}\) is the lost investment earnings on those <strong>upfront costs</strong> and \(V_{end}\) is the market value at the end. Lost investment earnings equal the amount paid multiplied by \((1+r/12)^{n}-1\), where \(r\) is your rate of return and \(n\) is the number of months.</p>
+
+<h3>Net cost of lease</h3>
+<p>For the lease, add the cash due at signing, all <strong>total lease payments</strong> and the earnings you give up on the money you put down:</p>
+<p>$$\text{Net cost of lease} = D + F_{lease} + (N \times M) + E_{lease}$$</p>
+<p>\(D\) is the down payment, \(F_{lease}\) is the other fees, \(N\) is the number of months, \(M\) is the monthly payment and \(E_{lease}\) is the lost investment earnings on the down payment, deposit and fees. Nothing is subtracted at the end, because you hand the car back and own nothing afterward.</p>
+
+<h3>Lease payment from residual value and money factor</h3>
+<p>The monthly payment is built from a depreciation charge plus a <strong>lease charge</strong> (the rent), then taxed:</p>
+<p>$$M = \left(\frac{C-R}{n} + (C+R)\times MF\right)\times(1+t)$$</p>
+<p>\(C\) is the capitalized cost after your cash down payment, \(R\) is the residual value in dollars and \(MF\) is the money factor. A larger residual lowers the first term, which is why two cars with the same sticker price can lease for very different amounts.</p>
+        </section>
+        <section id="lease-vs-cash-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="lease-vs-cash-calculator-guide-heading-3">
+<h2 id="lease-vs-cash-calculator-guide-heading-3">Buy or Lease: A Worked Example Over 36 Months</h2>
+<p>Suppose you are choosing between leasing and paying cash for a sedan with a negotiated price of $38,450. Sales tax is 6.25%, transaction fees are $385, and your cash would otherwise earn 5.5% a year. The car depreciates 15% annually. The lease runs 36 months at a 6.0% lease interest rate (a money factor of 0.0025), with a $2,000 down payment, $595 in other fees, a $500 security deposit and a 58% residual, which equals $22,301.</p>
+<ul>
+<li><strong>Cash side:</strong> price plus tax is $40,853, and with fees you pay $41,238 on day one.</li>
+<li><strong>Lease side:</strong> the capitalized cost is $36,450 after the down payment, giving a depreciation charge of $393.03 and a lease charge of $146.88 each month. With tax added, your monthly payment is $573.65.</li>
+</ul>
+
+<table>
+<thead><tr><th>Item</th><th>Pay cash</th><th>Lease</th></tr></thead>
+<tbody>
+<tr><td>Cash paid up front</td><td>$41,238</td><td>$2,595</td></tr>
+<tr><td>Total lease payments</td><td>n/a</td><td>$20,651</td></tr>
+<tr><td>Lost investment earnings</td><td>$7,380</td><td>$554</td></tr>
+<tr><td>Market value of the car at 36 months</td><td>-$23,613</td><td>$0</td></tr>
+<tr><td>Net cost</td><td>$25,005</td><td>$23,800</td></tr>
+</tbody>
+</table>
+
+<p>In this case, leasing wins by roughly $1,200. The cash buyer keeps a $23,613 car, but it took $41,238 out of an account that would have grown by $7,380.</p>
+
+<h3>What changes the answer: your rate of return</h3>
+<p>The result flips if your money would earn less. At a 4% rate of return, the net cost of buying drops to $22,873 while leasing costs $23,640, so paying cash saves you about $767. At 8%, buying climbs to $28,769 against $24,083 for the lease. In this example the break-even point sits near 4.6%, which makes the rate of return the single most sensitive input you will enter.</p>
+
+<h3>How residual value shifts the lease</h3>
+<p>Residual value moves the lease almost as much. Drop the residual to 50% and the monthly payment rises to $656.26, pushing the net cost of lease to $26,774, which is more than buying. Raise it to 65% and the payment falls to $501.36 with a net cost of $21,198. Always ask the dealership for the residual and money factor in writing, because both can be negotiated or marked up.</p>
+        </section>
+        <section id="lease-vs-cash-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="lease-vs-cash-calculator-guide-heading-4">
+<h2 id="lease-vs-cash-calculator-guide-heading-4">Leasing vs. Buying a Photographer's SUV with the Lease vs. Cash Calculator</h2>
+<p>Marisol, a freelance photographer, needs an SUV for gear and location shoots. Her dealer offers a $46,915 price, and she has about $51,000 sitting in a 36-month certificate of deposit that pays 4.2%. Before touching that money, she wants to know which route leaves her better off in three years.</p>
+<p>She enters a 7.25% sales tax rate, $612 in transaction fees, 18% annual depreciation and a 4.2% rate of return. For the lease side, she types a 36-month term, a 5.4% lease interest rate, $1,500 down, $725 in other fees and the quoted residual of 55%, which is $25,803.</p>
+<p>The calculator returns a <strong>monthly lease payment of $756.13</strong>, or $27,221 in total lease payments. Adding the down payment, fees and $298 of lost investment earnings, the net cost of lease is <strong>$29,744</strong>. Paying cash costs $50,928 up front plus $6,826 in forgone interest, minus the $25,867 the SUV would still be worth, so the net cost of buying is <strong>$31,887</strong>. Leasing comes out $2,143 ahead.</p>
+<p>The result is only as firm as the residual, so she reruns it with one change. At a 50% residual, the payment climbs to $820.35, the net cost of lease becomes $32,056 and buying wins by $169. A five-point residual swing erases the whole advantage, which tells her exactly what to do next: she asks the dealer to put the 55% residual in writing, and if the figure comes back lower, she pays cash and leaves the certificate of deposit to mature on schedule.</p>
+        </section>
+        <section id="lease-vs-cash-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="lease-vs-cash-calculator-guide-heading-5">
+<h2 id="lease-vs-cash-calculator-guide-heading-5">Lease or Buy: Pros, Cons and Costs the Totals Miss</h2>
+<p>These factors sit outside the net cost totals above, so weigh them alongside the result. Numbers settle the cost question, but a lease contract comes with conditions that a calculator cannot price. Weigh these before you decide between a lease versus buy.</p>
+
+<h3>Lease versus buy trade-offs</h3>
+<p>The classic lease vs. buy debate rarely has one right answer. An auto lease gives you lower monthly payments, a fresh vehicle every few years, repairs covered by the factory warranty and no resale hassle. Buying lets you modify the vehicle, drive without limits and own the car outright once the loan is gone, so you can enjoy payment-free years. If you drive a lot, ownership usually wins; if you like a new car every three years, a lease fits better. Compare lease terms from several lessors before you sign.</p>
+<ul>
+<li>A lease limits your annual miles, often to 10,000, 12,000 or 15,000, and charges for excess mileage.</li>
+<li>You may owe wear-and-tear charges and a disposition fee when you return the car.</li>
+<li>Ending the lease early can be expensive if your plans change.</li>
+<li>Insurance on a leased car is often required at higher coverage levels than on a car you own.</li>
+<li>Paying cash means no auto loan at all, but it leaves you responsible for maintenance and repairs after the warranty expires.</li>
+</ul>
+
+<h3>Why depreciation and resale value matter</h3>
+<p>As a lessee, you pay for depreciation but never carry the risk of a poor resale value on the vehicle. As an owner, you keep both the upside and the loss of that vehicle. The market value it produces is what the calculator subtracts from what you paid, so a vehicle that holds its value makes buying more attractive, while one that drops quickly favors leasing.</p>
+        </section>
+        <section id="lease-vs-cash-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="lease-vs-cash-calculator-guide-heading-6">
+<h2 id="lease-vs-cash-calculator-guide-heading-6">Financing the Purchase Instead of Paying Cash</h2>
+<p>The comparison above assumes a cash purchase, so financing changes the buying side from one large outlay into a stream of payments. Many shoppers cannot or would rather not pay cash. If you finance, replace the cash price with an auto loan and compare the loan payment with the lease payment. Unlike a basic lease vs buy car calculator that stops at the payment, this comparison keeps going until the end of the term. Your loan term and interest rate then drive the buying side, and your credit score shapes the rate a bank or credit union will offer. A longer loan lowers the monthly payments but raises the total cost through extra interest, and it can leave you upside down, owing more than the car is worth, in the early years.</p>
+
+<h3>Loan term and interest rate</h3>
+<p>Shorter loan terms usually carry lower rates and higher payments; longer ones do the opposite. Compare the full total cost, not only the payment: a loan turns the buying side of your result into payments plus interest instead of a single cash outlay.</p>
+
+<h3>Acquisition fee and other lease costs</h3>
+<p>Enter the acquisition fee in the calculator's lease fee input so it counts toward your lease result. Leasing companies charge it to arrange the contract, and it is easy to overlook next to the headline payment. Savings from a cheaper payment can vanish once every fee is counted.</p>
+        </section>
+      </div>
+
+      <section id="lease-vs-cash-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="lease-vs-cash-calculator-faq-heading" data-section="faq">
+        <h2 id="lease-vs-cash-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Lease vs. Cash Calculator questions</h2>
+        <div id="lease-vs-cash-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="lease-vs-cash-calculator-faq-1" class="faq-item" open><summary id="lease-vs-cash-calculator-faq-1-summary" class="faq-summary"><h3 id="lease-vs-cash-calculator-faq-1-question" class="faq-question">Is it better to lease or pay cash for a car?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="lease-vs-cash-calculator-faq-1-answer" class="faq-answer"><p>It depends on what your cash would earn elsewhere. Paying cash saves lease charges and fees, but it removes a large sum from your investments. The calculator totals both options over the lease term so you can see which one leaves you with more money.</p></div></details>
+          <details id="lease-vs-cash-calculator-faq-2" class="faq-item" open><summary id="lease-vs-cash-calculator-faq-2-summary" class="faq-summary"><h3 id="lease-vs-cash-calculator-faq-2-question" class="faq-question">What is lost investment income?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="lease-vs-cash-calculator-faq-2-answer" class="faq-answer"><p>It is the growth your up-front money would have earned if it had stayed invested at your chosen rate of return. It is added to both options, in proportion to the cash each one needs on day one.</p></div></details>
+          <details id="lease-vs-cash-calculator-faq-3" class="faq-item" open><summary id="lease-vs-cash-calculator-faq-3-summary" class="faq-summary"><h3 id="lease-vs-cash-calculator-faq-3-question" class="faq-question">How is a lease payment calculated?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="lease-vs-cash-calculator-faq-3-answer" class="faq-answer"><p>The payment is a depreciation charge, which is the capitalized cost minus the residual value divided by the number of months, plus a rent charge equal to the capitalized cost plus the residual multiplied by the money factor. Sales tax is then added to each payment.</p></div></details>
+          <details id="lease-vs-cash-calculator-faq-4" class="faq-item" open><summary id="lease-vs-cash-calculator-faq-4-summary" class="faq-summary"><h3 id="lease-vs-cash-calculator-faq-4-question" class="faq-question">How do I convert a lease interest rate to a money factor?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="lease-vs-cash-calculator-faq-4-answer" class="faq-answer"><p>Divide the annual percentage rate by 2,400. For example, 6% becomes 0.0025. To go the other way, multiply the money factor by 2,400.</p></div></details>
+          <details id="lease-vs-cash-calculator-faq-5" class="faq-item" open><summary id="lease-vs-cash-calculator-faq-5-summary" class="faq-summary"><h3 id="lease-vs-cash-calculator-faq-5-question" class="faq-question">What residual percent should I enter?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="lease-vs-cash-calculator-faq-5-answer" class="faq-answer"><p>Use the figure on your lease quote, since the leasing company sets it. A higher residual lowers your payment, and it should be confirmed in writing before you sign.</p></div></details>
+          <details id="lease-vs-cash-calculator-faq-6" class="faq-item" open><summary id="lease-vs-cash-calculator-faq-6-summary" class="faq-summary"><h3 id="lease-vs-cash-calculator-faq-6-question" class="faq-question">Does a bigger down payment make a lease cheaper?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="lease-vs-cash-calculator-faq-6-answer" class="faq-answer"><p>It lowers each monthly payment, but the total you pay stays about the same, and you lose the money if the car is stolen or totaled early. That is why the calculator also counts the investment earnings you give up.</p></div></details>
+          <details id="lease-vs-cash-calculator-faq-7" class="faq-item" open><summary id="lease-vs-cash-calculator-faq-7-summary" class="faq-summary"><h3 id="lease-vs-cash-calculator-faq-7-question" class="faq-question">Are security deposits included?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="lease-vs-cash-calculator-faq-7-answer" class="faq-answer"><p>A refundable deposit is assumed to come back at the end of the lease, so it only adds lost investment earnings, not a permanent cost.</p></div></details>
+          <details id="lease-vs-cash-calculator-faq-8" class="faq-item" open><summary id="lease-vs-cash-calculator-faq-8-summary" class="faq-summary"><h3 id="lease-vs-cash-calculator-faq-8-question" class="faq-question">Does the calculator include insurance, maintenance or excess mileage charges?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="lease-vs-cash-calculator-faq-8-answer" class="faq-answer"><p>No. Those costs vary by contract and driver, so add any expected excess-mileage or wear charges to your lease fees to get a fuller picture.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="lease-vs-cash-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="lease-vs-cash-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="lease-vs-cash-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="lease-vs-cash-calculator-ad-bottom-leaderboard">
+            <ins id="lease-vs-cash-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("lease-vs-cash-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="lease-vs-cash-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="lease-vs-cash-calculator-right-rail-top" class="mb-6">
+        <aside id="lease-vs-cash-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="lease-vs-cash-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="lease-vs-cash-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="lease-vs-cash-calculator-ad-right-rail-rectangle">
+            <ins id="lease-vs-cash-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("lease-vs-cash-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="lease-vs-cash-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="lease-vs-cash-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="lease-vs-cash-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="lease-vs-cash-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="lease-vs-cash-calculator-ad-right-rail-skyscraper">
+            <ins id="lease-vs-cash-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("lease-vs-cash-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="lease-vs-cash-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="lease-vs-cash-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="lease-vs-cash-calculator-footer-brand">
+        <a id="lease-vs-cash-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="lease-vs-cash-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="lease-vs-cash-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="lease-vs-cash-calculator-footer-categories" aria-labelledby="lease-vs-cash-calculator-footer-categories-heading">
+        <h2 id="lease-vs-cash-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="lease-vs-cash-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="lease-vs-cash-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="lease-vs-cash-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="lease-vs-cash-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="lease-vs-cash-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="lease-vs-cash-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="lease-vs-cash-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="lease-vs-cash-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="lease-vs-cash-calculator-footer-company" aria-labelledby="lease-vs-cash-calculator-footer-company-heading">
+        <h2 id="lease-vs-cash-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="lease-vs-cash-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="lease-vs-cash-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="lease-vs-cash-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="lease-vs-cash-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="lease-vs-cash-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="lease-vs-cash-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="lease-vs-cash-calculator-footer-bottom" class="border-t border-line">
+      <p id="lease-vs-cash-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="lease-vs-cash-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Lease vs paying cash outright, compared over the lease term, with the opportunity cost of cash.
+  // Paying cash
+  //   Cash out at signing C = price + sales tax (price x tax rate) + purchase fees.
+  //   Value at the end of the term V = price x (1 - yearly depreciation)^(months / 12).
+  //   Net cost = C - V. Lost earnings = C x ((1 + j)^T - 1), j = yearly return / 12 (monthly compounding).
+  // Leasing (closed-end, standard US method)
+  //   Adjusted cap cost A = price - cash down. Residual R = residual % x price.
+  //   Base payment = (A - R) / T + (A + R) x money factor, money factor = lease APR / 2400;
+  //   payment and cash down are taxed at the sales tax rate. Payments at the start of each month.
+  //   Net cost = cash down + its tax + lease fees + payments + end-of-lease charges (the security
+  //   deposit is refunded, so it only adds lost earnings).
+  //   Lost earnings = sum of each outlay grown to month T at j, minus the outlays themselves.
+  // Break-even return: the yearly return at which both totals are equal, found by bisection on 0-30%.
+  // Verified in Node (scratchpad tests/auto5): $30,000 cash, no tax or fees, 20%/yr depreciation over
+  //   36 months -> net $14,640.00 (30,000 - 30,000 x 0.8^3); lost earnings at 6% = 30,000 x (1.005^36 - 1)
+  //   = $5,900.42; lease payment for $50,000, 48% residual, $10,000 down, money factor 0.00208
+  //   (4.992% APR), 36 months, 7% tax = $617.99 (same hand check as the site's lease calculator);
+  //   lease lost earnings match the annuity-due future value; break-even return makes both totals
+  //   equal to the cent; no NaN on blank, zero or negative input.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 });
+  var RETURNS = [0, 2, 4, 6, 8, 10];
+
+  function el(id) { return document.getElementById(id); }
+  function setText(id, text) { el(id).textContent = text; }
+
+  function read(id, blankAsZero) {
+    var raw = String(el(id).value).trim();
+    if (raw === '') return blankAsZero ? 0 : NaN;
+    var v = Number(raw);
+    return isFinite(v) ? v : NaN;
+  }
+
+  function cash(o, yearly) {
+    var j = yearly / 12, tax = o.price * o.taxRate, outlay = o.price + tax + o.buyFees;
+    var value = o.price * Math.pow(1 - o.dep, o.T / 12);
+    var lost = outlay * (Math.pow(1 + j, o.T) - 1);
+    return { tax: tax, outlay: outlay, value: value, net: outlay - value, lost: lost, total: outlay - value + lost };
+  }
+
+  function lease(o, yearly) {
+    var j = yearly / 12, cap = o.price - o.leaseDown, residual = o.price * o.residualPct, mf = o.leaseApr / 2400;
+    var base = (cap - residual) / o.T + (cap + residual) * mf;
+    var payment = base * (1 + o.taxRate);
+    var upfront = o.leaseDown * (1 + o.taxRate) + o.leaseFees + o.deposit;
+    var nominal = upfront, fv = upfront * Math.pow(1 + j, o.T);
+    for (var m = 0; m < o.T; m++) { nominal += payment; fv += payment * Math.pow(1 + j, o.T - m); }
+    nominal += o.endFees; fv += o.endFees;
+    var net = nominal - o.deposit;
+    return { payment: payment, upfront: upfront, paid: payment * o.T, net: net, lost: fv - nominal, total: net + fv - nominal };
+  }
+
+  function breakEven(o) {
+    function gap(r) { return cash(o, r).total - lease(o, r).total; }
+    var lo = 0, hi = 0.3, glo = gap(lo), ghi = gap(hi);
+    if (glo === 0) return 0;
+    if (glo * ghi > 0) return null;
+    for (var k = 0; k < 80; k++) {
+      var mid = (lo + hi) / 2, g = gap(mid);
+      if (g * glo > 0) { lo = mid; glo = g; } else { hi = mid; }
+    }
+    return (lo + hi) / 2;
+  }
+
+  function signed(v) { return (v < 0 ? '−' : '') + money.format(Math.abs(v)); }
+
+  function clearResults() {
+    ['lcVerdict', 'lcCashTotal', 'lcLeaseTotal', 'lcLeasePayment', 'lcOutlay', 'lcValue', 'lcBreakEven'].forEach(function (id) { setText(id, '–'); });
+    setText('lcVerdictLabel', 'Cheaper option');
+    el('lcBreakdown').innerHTML = '';
+    el('lcReturns').innerHTML = '';
+  }
+
+  function update() {
+    var o = {
+      price: read('lcPrice'), taxRate: read('lcTaxRate', true), buyFees: read('lcBuyFees', true),
+      dep: read('lcDep', true), T: read('lcTerm'), residualPct: read('lcResidual'), leaseApr: read('lcLeaseApr'),
+      leaseDown: read('lcLeaseDown', true), leaseFees: read('lcLeaseFees', true), deposit: read('lcDeposit', true),
+      endFees: read('lcEndFees', true), invest: read('lcInvest', true)
+    };
+    var error = el('lcError'), msg = '';
+    if (isNaN(o.price) || o.price <= 0) msg = 'Enter a vehicle price greater than $0.';
+    else if (isNaN(o.T) || o.T < 12 || o.T > 60 || o.T % 1 !== 0) msg = 'Enter a lease term of 12 to 60 whole months.';
+    else if (isNaN(o.residualPct) || o.residualPct <= 0 || o.residualPct >= 100) msg = 'Enter a residual value between 0% and 100% of the price.';
+    else if (isNaN(o.leaseApr) || o.leaseApr < 0 || o.leaseApr > 40) msg = 'Enter a lease interest rate from 0% to 40%.';
+    else if (['taxRate', 'buyFees', 'dep', 'leaseDown', 'leaseFees', 'deposit', 'endFees', 'invest'].some(function (k) { return isNaN(o[k]) || o[k] < 0; })) msg = 'Amounts and rates cannot be negative.';
+    else if (o.taxRate > 20) msg = 'Enter a sales tax rate of 20% or less.';
+    else if (o.dep >= 100) msg = 'Enter a yearly depreciation below 100%.';
+    else if (o.invest > 30) msg = 'Enter a return of 30% or less.';
+    else if (o.price - o.leaseDown <= o.price * o.residualPct / 100) msg = 'The lease cash down brings the cost below the residual value. Lower it.';
+    if (msg) { error.hidden = false; error.textContent = msg; clearResults(); return; }
+    error.hidden = true;
+    error.textContent = '';
+
+    o.taxRate /= 100; o.dep /= 100; o.residualPct /= 100;
+    var r = o.invest / 100, c = cash(o, r), l = lease(o, r), d = c.total - l.total;
+    if (Math.abs(d) < 0.5) {
+      setText('lcVerdictLabel', 'Cheaper option');
+      setText('lcVerdict', 'About the same');
+    } else {
+      setText('lcVerdictLabel', d > 0 ? 'Leasing saves you' : 'Paying cash saves you');
+      setText('lcVerdict', money.format(Math.abs(d)));
+    }
+    setText('lcCashTotal', money.format(c.total));
+    setText('lcLeaseTotal', money.format(l.total));
+    setText('lcLeasePayment', money.format(l.payment));
+    setText('lcOutlay', money.format(c.outlay));
+    setText('lcValue', money.format(c.value));
+    var be = breakEven(o);
+    if (be === null) {
+      setText('lcBreakEven', cash(o, 0).total < lease(o, 0).total ? 'None: cash wins up to 30%' : 'None: leasing wins at any return');
+    } else {
+      setText('lcBreakEven', (be * 100).toFixed(2) + '% a year');
+    }
+
+    var rows = [
+      ['Cash at signing', c.outlay, l.upfront],
+      ['Lease payments over ' + o.T + ' months', null, l.paid],
+      ['End-of-lease charges', null, o.endFees],
+      ['Vehicle value you keep', -c.value, null],
+      ['Security deposit returned', null, -o.deposit],
+      ['Net cost', c.net, l.net],
+      ['Lost investment earnings', c.lost, l.lost],
+      ['Total cost incl. lost earnings', c.total, l.total]
+    ];
+    el('lcBreakdown').innerHTML = rows.map(function (row, idx) {
+      var strong = idx === rows.length - 1 ? ' class="font-semibold"' : '';
+      return '<tr' + strong + '><th scope="row">' + row[0] + '</th><td>' + (row[1] === null ? '—' : signed(row[1])) +
+        '</td><td>' + (row[2] === null ? '—' : signed(row[2])) + '</td></tr>';
+    }).join('');
+
+    el('lcReturns').innerHTML = RETURNS.map(function (pctRet) {
+      var cc = cash(o, pctRet / 100), ll = lease(o, pctRet / 100), dd = cc.total - ll.total;
+      var better = Math.abs(dd) < 0.5 ? 'About the same' : (dd > 0 ? 'Lease by ' : 'Cash by ') + money.format(Math.abs(dd));
+      return '<tr><td>' + pctRet + '%</td><td>' + money.format(cc.total) + '</td><td>' + money.format(ll.total) +
+        '</td><td>' + better + '</td></tr>';
+    }).join('');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = el('lcForm');
+    if (!form) return;
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

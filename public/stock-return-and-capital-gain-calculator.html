@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en" id="stock-return-and-capital-gain-calculator-document" data-page-slug="stock-return-and-capital-gain-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stock Return Calculator: Capital Gain and Annualized Return</title>
+  <meta name="description" content="Calculate the capital gain, total return and annualized return on a stock trade, including commissions, dividends and an optional tax estimate.">
+  <link rel="canonical" href="https://company-marketcap.github.io/stock-return-and-capital-gain-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Stock Return Calculator: Capital Gain and Annualized Return">
+  <meta property="og:description" content="Calculate the capital gain, total return and annualized return on a stock trade, including commissions, dividends and an optional tax estimate.">
+  <meta property="og:url" content="https://company-marketcap.github.io/stock-return-and-capital-gain-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Stock Return and Capital Gain Calculator", "url": "https://company-marketcap.github.io/stock-return-and-capital-gain-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Calculate the capital gain, total return and annualized return on a stock trade, including commissions, dividends and an optional tax estimate."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Stocks, Dividends & Trading", "item": "https://company-marketcap.github.io/financial-calculators.html#stock-calculators"}, {"@type": "ListItem", "position": 4, "name": "Stock Return and Capital Gain Calculator", "item": "https://company-marketcap.github.io/stock-return-and-capital-gain-calculator.html"}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="stock-return-and-capital-gain-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="stock-return-and-capital-gain-calculator" data-page-type="calculator">
+  <a id="stock-return-and-capital-gain-calculator-skip-link" href="#stock-return-and-capital-gain-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="stock-return-and-capital-gain-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="stock-return-and-capital-gain-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="stock-return-and-capital-gain-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="stock-return-and-capital-gain-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="stock-return-and-capital-gain-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="stock-return-and-capital-gain-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="stock-return-and-capital-gain-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="stock-return-and-capital-gain-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="stock-return-and-capital-gain-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="stock-return-and-capital-gain-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="stock-return-and-capital-gain-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="stock-return-and-capital-gain-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="stock-return-and-capital-gain-calculator-header-search-status" aria-controls="stock-return-and-capital-gain-calculator-header-search-results" data-search-input="header">
+              <p id="stock-return-and-capital-gain-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="stock-return-and-capital-gain-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="stock-return-and-capital-gain-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="stock-return-and-capital-gain-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="stock-return-and-capital-gain-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="stock-return-and-capital-gain-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="stock-return-and-capital-gain-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="stock-return-and-capital-gain-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="stock-return-and-capital-gain-calculator-mobile-search-status" aria-controls="stock-return-and-capital-gain-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="stock-return-and-capital-gain-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="stock-return-and-capital-gain-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="stock-return-and-capital-gain-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="stock-return-and-capital-gain-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="stock-return-and-capital-gain-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="stock-return-and-capital-gain-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="stock-return-and-capital-gain-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="stock-return-and-capital-gain-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="stock-return-and-capital-gain-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="stock-return-and-capital-gain-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="stock-return-and-capital-gain-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="stock-return-and-capital-gain-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="stock-return-and-capital-gain-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="stock-return-and-capital-gain-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="stock-return-and-capital-gain-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="stock-return-and-capital-gain-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="stock-return-and-capital-gain-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="stock-return-and-capital-gain-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="stock-return-and-capital-gain-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="stock-return-and-capital-gain-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="stock-return-and-capital-gain-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="stock-return-and-capital-gain-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="stock-return-and-capital-gain-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="stock-return-and-capital-gain-calculator-sidebar-search-status" aria-controls="stock-return-and-capital-gain-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="stock-return-and-capital-gain-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="stock-return-and-capital-gain-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="stock-return-and-capital-gain-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="stock-return-and-capital-gain-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="stock-return-and-capital-gain-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="stock-return-and-capital-gain-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="stock-return-and-capital-gain-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="stock-return-and-capital-gain-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="stock-return-and-capital-gain-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="stock-return-and-capital-gain-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="stock-return-and-capital-gain-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="stock-return-and-capital-gain-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="stock-return-and-capital-gain-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="stock-return-and-capital-gain-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="stock-return-and-capital-gain-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="stock-return-and-capital-gain-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="stock-return-and-capital-gain-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="stock-return-and-capital-gain-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="stock-return-and-capital-gain-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="stock-return-and-capital-gain-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators" aria-current="true">Stocks &amp; Trading</a></li><li><a id="stock-return-and-capital-gain-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="stock-return-and-capital-gain-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="stock-return-and-capital-gain-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="stock-return-and-capital-gain-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="stock-return-and-capital-gain-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="stock-return-and-capital-gain-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="stock-return-and-capital-gain-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="stock-return-and-capital-gain-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="stock-return-and-capital-gain-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="stock-return-and-capital-gain-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="stock-return-and-capital-gain-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="stock-return-and-capital-gain-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="stock-return-and-capital-gain-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="stock-return-and-capital-gain-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="stock-return-and-capital-gain-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="stock-return-and-capital-gain-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="stock-return-and-capital-gain-calculator" data-calculator-slug="stock-return-and-capital-gain-calculator" data-sub-category-slug="stock-calculators">
+      <aside id="stock-return-and-capital-gain-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="stock-return-and-capital-gain-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="stock-return-and-capital-gain-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="stock-return-and-capital-gain-calculator-ad-top-leaderboard">
+            <ins id="stock-return-and-capital-gain-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("stock-return-and-capital-gain-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="stock-return-and-capital-gain-calculator-intro-area" class="space-y-4">
+        <nav id="stock-return-and-capital-gain-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="stock-return-and-capital-gain-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="stock-return-and-capital-gain-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="stock-return-and-capital-gain-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="stock-return-and-capital-gain-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#stock-calculators" itemprop="item"><span itemprop="name">Stocks, Dividends &amp; Trading</span></a><meta itemprop="position" content="3"></li>
+            <li id="stock-return-and-capital-gain-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Stock Return and Capital Gain Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/stock-return-and-capital-gain-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="stock-return-and-capital-gain-calculator-hero-section" aria-labelledby="stock-return-and-capital-gain-calculator-hero-heading" data-section="hero">
+          <h1 id="stock-return-and-capital-gain-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Stock Return and Capital Gain Calculator</h1>
+          <p id="stock-return-and-capital-gain-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Enter what you paid and received for a stock, including commissions and dividends, to see your capital gain, total return, annualized return and whether the gain is short- or long-term. <!-- SILO_START:slot_a -->The <a class="silo-link" href="/pivot-point-calculator.html">pivot point calculator</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="stock-return-and-capital-gain-calculator-tool" class="space-y-6" data-page-slug="stock-return-and-capital-gain-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="srFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="srForm" class="space-y-5" novalidate aria-labelledby="srFormHeading">
+      <h2 id="srFormHeading" class="panel-heading">Enter your trade</h2>
+      <div><label for="srShares" class="form-label">Number of shares</label><div class="input-group"><input type="number" id="srShares" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1" value="100" inputmode="decimal"><span class="input-affix">shares</span></div></div>
+      <div class="form-row form-row-2">
+        <div><label for="srBuyPrice" class="form-label">Purchase price per share</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="srBuyPrice" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="0.01" value="50" inputmode="decimal"></div></div>
+        <div><label for="srBuyFee" class="form-label">Purchase commission</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="srBuyFee" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1" value="5" inputmode="decimal"></div></div>
+      </div>
+      <div class="form-row form-row-2">
+        <div><label for="srSellPrice" class="form-label">Sale price per share</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="srSellPrice" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="0.01" value="68" inputmode="decimal"></div><p class="form-hint">Or the current price, to see an unrealized gain.</p></div>
+        <div><label for="srSellFee" class="form-label">Sale commission</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="srSellFee" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1" value="5" inputmode="decimal"></div></div>
+      </div>
+      <div><label for="srDividends" class="form-label">Dividends received</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="srDividends" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="240" inputmode="decimal"></div><p class="form-hint">Total cash dividends you received while holding the shares. Use 0 if they were reinvested into the share count.</p></div>
+      <div class="form-row form-row-2">
+        <div><label for="srBuyDate" class="form-label">Purchase date</label><input type="date" id="srBuyDate" class="form-input" value="2023-03-15"></div>
+        <div><label for="srSellDate" class="form-label">Sale date</label><input type="date" id="srSellDate" class="form-input" value="2025-09-15"></div>
+      </div>
+      <p class="form-hint">Dates are optional. They are needed for the annualized return and the short- or long-term holding period.</p>
+      <details class="form-details"><summary class="form-details-summary">More options</summary>
+        <div><label for="srTaxRate" class="form-label">Capital gains tax rate</label><div class="input-group"><input type="number" id="srTaxRate" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="0.1" value="0" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">Your combined federal and state rate, applied to a positive capital gain only (dividends are taxed separately). Short-term gains are generally taxed at ordinary income rates and long-term gains at lower capital gains rates. Use 0 to skip.</p></div>
+      </details>
+      <p id="srError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="srResults" aria-live="polite" aria-labelledby="srResultsHeading">
+      <h2 id="srResultsHeading" class="panel-heading">Your results</h2>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p class="stat-label">Total return</p><p id="srTotalPct" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Annualized return</p><p id="srAnnual" class="stat-value">–</p></div>
+        <div class="stat-card"><p id="srGainLabel" class="stat-label">Capital gain</p><p id="srGain" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Total profit</p><p id="srProfit" class="stat-value">–</p></div>
+      </div>
+      <div class="mt-5">
+        <div class="result-row"><span class="result-term">Cost basis (incl. commission)</span><span id="srBasis" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Net sale proceeds</span><span id="srProceeds" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Capital gain return</span><span id="srGainPct" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Dividend return</span><span id="srDivPct" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Break-even sale price per share</span><span id="srBreakeven" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Holding period</span><span id="srHeld" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Gain type</span><span id="srTerm" class="result-value">–</span></div>
+        <div id="srTaxRows" hidden>
+          <div class="result-row"><span class="result-term">Estimated tax on the gain</span><span id="srTax" class="result-value">–</span></div>
+          <div class="result-row"><span class="result-term">Profit after tax</span><span id="srAfterTax" class="result-value">–</span></div>
+          <div class="result-row"><span class="result-term">Return after tax</span><span id="srAfterTaxPct" class="result-value">–</span></div>
+        </div>
+      </div>
+      <p id="srNote" class="callout callout-note mt-5 text-sm" hidden></p>
+    </div>
+  </div>
+</section>
+        <p id="stock-return-and-capital-gain-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="stock-return-and-capital-gain-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Enter what you paid and received for a stock, including commissions and dividends, to see your capital gain, total return, annualized return and whether the gain is short- or long-term. <!-- SILO_START:slot_a_m -->The <a class="silo-link" href="/pivot-point-calculator.html">pivot point calculator</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="stock-return-and-capital-gain-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="stock-return-and-capital-gain-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="stock-return-and-capital-gain-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="stock-return-and-capital-gain-calculator-ad-in-feed">
+            <ins id="stock-return-and-capital-gain-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("stock-return-and-capital-gain-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      
+
+      
+
+      <nav id="stock-return-and-capital-gain-calculator-related-section" class="border-t border-line pt-8" aria-labelledby="stock-return-and-capital-gain-calculator-related-heading" data-section="related-calculators">
+        <h2 id="stock-return-and-capital-gain-calculator-related-heading" class="guide-heading">Related calculators</h2>
+        <ul id="stock-return-and-capital-gain-calculator-related-list" class="mt-5 grid gap-3 @2xl:grid-cols-2 @5xl:grid-cols-3" role="list">
+          <li><a id="stock-return-and-capital-gain-calculator-related-link-holding-period-return-calculator" class="related-link" href="/holding-period-return-calculator.html" data-calculator-name="Holding Period Return Calculator" data-category-name="Stocks, Dividends &amp; Trading">Holding Period Return Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
+          <li><a id="stock-return-and-capital-gain-calculator-related-link-tax-harvesting" class="related-link" href="/tax-harvesting.html" data-calculator-name="Tax-Loss Harvesting Calculator" data-category-name="Income Tax &amp; Tax Planning">Tax-Loss Harvesting Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
+          <li><a id="stock-return-and-capital-gain-calculator-related-link-dividend-reinvestment" class="related-link" href="/dividend-reinvestment.html" data-calculator-name="Dividend Reinvestment Breakeven Calculator" data-category-name="Stocks, Dividends &amp; Trading">Dividend Reinvestment Breakeven Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
+          <li><a id="stock-return-and-capital-gain-calculator-related-link-roi-calculator" class="related-link" href="/roi-calculator.html" data-calculator-name="ROI Calculator" data-category-name="Investment Returns &amp; Growth">ROI Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
+          <li><a id="stock-return-and-capital-gain-calculator-related-link-market-cap-growth-calculator" class="related-link" href="/market-cap-growth-calculator.html" data-calculator-name="Market Cap Growth Calculator" data-category-name="Stocks, Dividends &amp; Trading">Market Cap Growth Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
+          <li><a id="stock-return-and-capital-gain-calculator-related-link-position-sizing" class="related-link" href="/position-sizing.html" data-calculator-name="Position Sizing Calculator" data-category-name="Stocks, Dividends &amp; Trading">Position Sizing Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
+        </ul>
+      </nav>
+
+      <aside id="stock-return-and-capital-gain-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="stock-return-and-capital-gain-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="stock-return-and-capital-gain-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="stock-return-and-capital-gain-calculator-ad-bottom-leaderboard">
+            <ins id="stock-return-and-capital-gain-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("stock-return-and-capital-gain-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="stock-return-and-capital-gain-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="stock-return-and-capital-gain-calculator-right-rail-top" class="mb-6">
+        <aside id="stock-return-and-capital-gain-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="stock-return-and-capital-gain-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="stock-return-and-capital-gain-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="stock-return-and-capital-gain-calculator-ad-right-rail-rectangle">
+            <ins id="stock-return-and-capital-gain-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("stock-return-and-capital-gain-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="stock-return-and-capital-gain-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="stock-return-and-capital-gain-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="stock-return-and-capital-gain-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="stock-return-and-capital-gain-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="stock-return-and-capital-gain-calculator-ad-right-rail-skyscraper">
+            <ins id="stock-return-and-capital-gain-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("stock-return-and-capital-gain-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="stock-return-and-capital-gain-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="stock-return-and-capital-gain-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="stock-return-and-capital-gain-calculator-footer-brand">
+        <a id="stock-return-and-capital-gain-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="stock-return-and-capital-gain-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="stock-return-and-capital-gain-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="stock-return-and-capital-gain-calculator-footer-categories" aria-labelledby="stock-return-and-capital-gain-calculator-footer-categories-heading">
+        <h2 id="stock-return-and-capital-gain-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="stock-return-and-capital-gain-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="stock-return-and-capital-gain-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="stock-return-and-capital-gain-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="stock-return-and-capital-gain-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="stock-return-and-capital-gain-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="stock-return-and-capital-gain-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="stock-return-and-capital-gain-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="stock-return-and-capital-gain-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="stock-return-and-capital-gain-calculator-footer-company" aria-labelledby="stock-return-and-capital-gain-calculator-footer-company-heading">
+        <h2 id="stock-return-and-capital-gain-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="stock-return-and-capital-gain-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="stock-return-and-capital-gain-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="stock-return-and-capital-gain-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="stock-return-and-capital-gain-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="stock-return-and-capital-gain-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="stock-return-and-capital-gain-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="stock-return-and-capital-gain-calculator-footer-bottom" class="border-t border-line">
+      <p id="stock-return-and-capital-gain-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="stock-return-and-capital-gain-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+
+<script>(function () {
+  'use strict';
+  // Return on a stock you bought and sold (or still hold at a current price):
+  //   cost basis = shares x purchase price + purchase commission
+  //   net proceeds = shares x sale price - sale commission
+  //   capital gain = net proceeds - cost basis;  total profit = capital gain + cash dividends
+  //   total return = total profit / cost basis
+  //   annualized return = (1 + total return)^(365 / days held) - 1
+  //   break-even sale price = (cost basis + sale commission) / shares
+  // Long-term when the sale date is after the one-year anniversary of the purchase date (held more
+  // than one year, IRS Publication 550 / Topic 409), otherwise short-term.
+  // Optional flat tax rate applies to a positive capital gain only (dividends are taxed separately).
+  // Checked in Node (sr.test.js): 100 shares $50 -> $68, $5 + $5 commission, $240 dividends,
+  // 2023-03-15 to 2025-09-15 (915 days): basis $5,005, proceeds $6,795, gain $1,790, profit $2,030,
+  // total return 40.5594%, annualized 14.5467%, break-even $50.10, long-term; 2024-01-10 to
+  // 2025-01-10 is short-term (exactly one year), 2025-01-11 long-term; 20 shares $100 -> $80 no
+  // fees = -$400, -20%; 15% tax on a $1,790 gain = $268.50.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 });
+  var DAY = 86400000;
+  var OUTPUTS = ['srTotalPct', 'srAnnual', 'srGain', 'srProfit', 'srBasis', 'srProceeds', 'srGainPct', 'srDivPct',
+    'srBreakeven', 'srHeld', 'srTerm', 'srTax', 'srAfterTax', 'srAfterTaxPct'];
+
+  // --- calc start
+  function parseDate(s) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(s || '');
+    if (!m) return null;
+    var t = Date.UTC(+m[1], +m[2] - 1, +m[3]);
+    return isFinite(t) ? { t: t, y: +m[1], m: +m[2] - 1, d: +m[3] } : null;
+  }
+
+  // Held more than one year: the sale falls after the purchase's one-year anniversary.
+  function isLongTerm(buy, sell) {
+    return sell.t > Date.UTC(buy.y + 1, buy.m, buy.d);
+  }
+
+  function stockReturn(p) {
+    var basis = p.shares * p.buyPrice + p.buyFee;
+    var proceeds = p.shares * p.sellPrice - p.sellFee;
+    var gain = proceeds - basis, profit = gain + p.dividends;
+    var total = profit / basis;
+    var annual = null;
+    if (p.days && p.days > 0) annual = 1 + total <= 0 ? -1 : Math.pow(1 + total, 365 / p.days) - 1;
+    var tax = gain > 0 ? gain * p.taxRate : 0;
+    return {
+      basis: basis, proceeds: proceeds, gain: gain, profit: profit, total: total, annual: annual,
+      gainPct: gain / basis, divPct: p.dividends / basis,
+      breakeven: (basis + p.sellFee) / p.shares,
+      tax: tax, afterTax: profit - tax, afterTaxPct: (profit - tax) / basis
+    };
+  }
+  // --- calc end
+
+  function el(id) { return document.getElementById(id); }
+  function val(id, blankAs) {
+    var t = el(id).value.trim();
+    if (t === '' && blankAs !== undefined) return blankAs;
+    var v = parseFloat(t);
+    return isFinite(v) ? v : NaN;
+  }
+  function fix(x, dp) {
+    if (Math.abs(x) < 0.5 * Math.pow(10, -dp)) x = 0;
+    return x.toLocaleString('en-US', { minimumFractionDigits: dp, maximumFractionDigits: dp }).replace(/^-/, '−');
+  }
+  function pct(x) {
+    if (!isFinite(x) || x > 1e6) return 'Over 100,000,000%';
+    return fix(x * 100, 2) + '%';
+  }
+  function usd(x) { return money.format(Math.abs(x) < 0.005 ? 0 : x).replace(/^-/, '−'); }
+
+  function clear(msg) {
+    var error = el('srError');
+    error.hidden = !msg;
+    error.textContent = msg;
+    OUTPUTS.forEach(function (id) { el(id).textContent = '–'; });
+    el('srTaxRows').hidden = true;
+    el('srNote').hidden = true;
+  }
+
+  function update() {
+    var p = {
+      shares: val('srShares'), buyPrice: val('srBuyPrice'), buyFee: val('srBuyFee', 0),
+      sellPrice: val('srSellPrice'), sellFee: val('srSellFee', 0), dividends: val('srDividends', 0),
+      taxRate: val('srTaxRate', 0)
+    };
+    var buyTxt = el('srBuyDate').value, sellTxt = el('srSellDate').value;
+    var buy = parseDate(buyTxt), sell = parseDate(sellTxt);
+    var msg = '';
+    if (isNaN(p.shares) || p.shares <= 0 || p.shares > 1e10) msg = 'Enter a number of shares above 0.';
+    else if (isNaN(p.buyPrice) || p.buyPrice < 0 || p.buyPrice > 1e7) msg = 'Enter a purchase price of $0 or more.';
+    else if (isNaN(p.sellPrice) || p.sellPrice < 0 || p.sellPrice > 1e7) msg = 'Enter a sale price of $0 or more.';
+    else if (isNaN(p.buyFee) || p.buyFee < 0 || p.buyFee > 1e9 || isNaN(p.sellFee) || p.sellFee < 0 || p.sellFee > 1e9) msg = 'Enter commissions of $0 or more.';
+    else if (isNaN(p.dividends) || p.dividends < 0 || p.dividends > 1e12) msg = 'Enter dividends of $0 or more.';
+    else if (isNaN(p.taxRate) || p.taxRate < 0 || p.taxRate > 100) msg = 'Enter a tax rate from 0% to 100%.';
+    else if (p.shares * p.buyPrice + p.buyFee <= 0) msg = 'The total purchase cost must be above $0.';
+    else if ((buyTxt && !buy) || (sellTxt && !sell)) msg = 'Enter valid dates, or leave both blank.';
+    else if (buy && sell && sell.t < buy.t) msg = 'The sale date must be on or after the purchase date.';
+    if (msg) { clear(msg); return; }
+    clear('');
+
+    var days = buy && sell ? Math.round((sell.t - buy.t) / DAY) : null;
+    p.taxRate = p.taxRate / 100;
+    p.days = days;
+    var r = stockReturn(p);
+    el('srTotalPct').textContent = pct(r.total);
+    el('srAnnual').textContent = r.annual === null ? (days === 0 ? 'Needs 1+ day' : 'Add dates') : pct(r.annual);
+    el('srGainLabel').textContent = r.gain < 0 ? 'Capital loss' : 'Capital gain';
+    el('srGain').textContent = usd(r.gain);
+    el('srProfit').textContent = usd(r.profit);
+    el('srBasis').textContent = usd(r.basis);
+    el('srProceeds').textContent = usd(r.proceeds);
+    el('srGainPct').textContent = pct(r.gainPct);
+    el('srDivPct').textContent = pct(r.divPct);
+    el('srBreakeven').textContent = usd(r.breakeven);
+    if (days !== null) {
+      var yrs = days / 365;
+      el('srHeld').textContent = days.toLocaleString('en-US') + (days === 1 ? ' day' : ' days') + ' (' + fix(yrs, 2) + ' years)';
+      el('srTerm').textContent = isLongTerm(buy, sell) ? 'Long-term (held more than 1 year)' : 'Short-term (held 1 year or less)';
+    } else {
+      el('srHeld').textContent = 'Add dates';
+      el('srTerm').textContent = 'Add dates';
+    }
+    if (p.taxRate > 0) {
+      el('srTaxRows').hidden = false;
+      el('srTax').textContent = usd(r.tax);
+      el('srAfterTax').textContent = usd(r.afterTax);
+      el('srAfterTaxPct').textContent = pct(r.afterTaxPct);
+    }
+    var note = el('srNote');
+    if (r.gain < 0) {
+      note.hidden = false;
+      note.textContent = 'This trade shows a capital loss. Realized capital losses can offset capital gains and, within IRS limits, part of your ordinary income.';
+    } else if (days !== null && days < 365 && r.annual !== null) {
+      note.hidden = false;
+      note.textContent = 'The holding period is under a year, so the annualized return assumes the same pace continues for a full year and can look much larger than the actual gain.';
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = el('srForm');
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

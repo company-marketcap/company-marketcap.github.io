@@ -1,0 +1,732 @@
+<!doctype html>
+<html lang="en" id="rental-property-calculator-document" data-page-slug="rental-property-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rental Property Calculator: ROI, Cap Rate &amp; Cash Flow</title>
+  <meta name="description" content="Use this free rental property calculator to judge an investment: enter price, rent and expenses to see cap rate, NOI, ROI and the monthly cash you keep.">
+  <link rel="canonical" href="https://company-marketcap.github.io/rental-property-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Rental Property Calculator: ROI, Cap Rate &amp; Cash Flow">
+  <meta property="og:description" content="Use this free rental property calculator to judge an investment: enter price, rent and expenses to see cap rate, NOI, ROI and the monthly cash you keep.">
+  <meta property="og:url" content="https://company-marketcap.github.io/rental-property-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Rental Property Calculator", "url": "https://company-marketcap.github.io/rental-property-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Use this free rental property calculator to judge an investment: enter price, rent and expenses to see cap rate, NOI, ROI and the monthly cash you keep."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Real Estate & Rental Property", "item": "https://company-marketcap.github.io/financial-calculators.html#real-estate-calculators"}, {"@type": "ListItem", "position": 4, "name": "Rental Property Calculator", "item": "https://company-marketcap.github.io/rental-property-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I calculate ROI on a rental property?", "acceptedAnswer": {"@type": "Answer", "text": "Divide the cash the property leaves you each year by the cash you put in. For a leveraged purchase that is annual cash flow divided by down payment, closing costs and repairs, which is the cash-on-cash return this calculator shows as its main result."}}, {"@type": "Question", "name": "What is a good cap rate for a rental property?", "acceptedAnswer": {"@type": "Answer", "text": "There is no single number. Cap rates run lower in expensive, stable markets and higher where risk is greater. Compare the cap rate with similar buildings nearby and with your own financing cost instead of chasing one target."}}, {"@type": "Question", "name": "What is the difference between cap rate and cash-on-cash return?", "acceptedAnswer": {"@type": "Answer", "text": "Cap rate divides net operating income by the purchase price and ignores the mortgage. Cash-on-cash return divides cash flow after the mortgage by the cash you actually invested, so financing changes it."}}, {"@type": "Question", "name": "What vacancy rate should I use?", "acceptedAnswer": {"@type": "Answer", "text": "Use the vacancy rate for your local market and property type, then add a cushion if your units turn over often. A zero vacancy rate overstates income because every turnover costs some rent."}}, {"@type": "Question", "name": "Does the calculator include a management fee?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Enter a percentage of collected rent, a flat monthly fee, or both. Set them to zero only if you manage the property yourself and are comfortable ignoring the value of your time."}}, {"@type": "Question", "name": "How is IRR calculated for a rental property?", "acceptedAnswer": {"@type": "Answer", "text": "The calculator lays out your cash investment, each year of cash flow with the growth rates you entered, and the net sale proceeds after the loan is paid off at the end of the holding length. IRR is the yearly rate that makes those cash flows add up to zero."}}, {"@type": "Question", "name": "Can I use this rental property calculator for an all-cash purchase?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Set Use a Loan to No. The mortgage payment drops to zero, so cash flow equals net operating income and cash-on-cash return matches the cap rate on your total cash invested."}}, {"@type": "Question", "name": "Does the calculator account for inflation or taxes?", "acceptedAnswer": {"@type": "Answer", "text": "It does not model income tax or general inflation. Rent and expense growth rates are the only escalation it applies, so treat long holding periods as estimates and check tax effects with a professional."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="rental-property-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="rental-property-calculator" data-page-type="calculator">
+  <a id="rental-property-calculator-skip-link" href="#rental-property-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="rental-property-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="rental-property-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="rental-property-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="rental-property-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="rental-property-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="rental-property-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="rental-property-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="rental-property-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="rental-property-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="rental-property-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="rental-property-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="rental-property-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="rental-property-calculator-header-search-status" aria-controls="rental-property-calculator-header-search-results" data-search-input="header">
+              <p id="rental-property-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="rental-property-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="rental-property-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="rental-property-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="rental-property-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="rental-property-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="rental-property-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="rental-property-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="rental-property-calculator-mobile-search-status" aria-controls="rental-property-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="rental-property-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="rental-property-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="rental-property-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="rental-property-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="rental-property-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="rental-property-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="rental-property-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="rental-property-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="rental-property-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="rental-property-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="rental-property-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="rental-property-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="rental-property-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="rental-property-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="rental-property-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="rental-property-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="rental-property-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="rental-property-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="rental-property-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="rental-property-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="rental-property-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="rental-property-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="rental-property-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="rental-property-calculator-sidebar-search-status" aria-controls="rental-property-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="rental-property-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="rental-property-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="rental-property-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="rental-property-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="rental-property-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="rental-property-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="rental-property-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="rental-property-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="rental-property-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="rental-property-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="rental-property-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators" aria-current="true">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="rental-property-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="rental-property-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="rental-property-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="rental-property-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="rental-property-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="rental-property-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="rental-property-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="rental-property-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="rental-property-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="rental-property-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="rental-property-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="rental-property-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="rental-property-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="rental-property-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="rental-property-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="rental-property-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="rental-property-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="rental-property-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="rental-property-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="rental-property-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="rental-property-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="rental-property-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="rental-property-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="rental-property-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="rental-property-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="rental-property-calculator" data-calculator-slug="rental-property-calculator" data-sub-category-slug="real-estate-calculators">
+      <aside id="rental-property-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="rental-property-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="rental-property-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="rental-property-calculator-ad-top-leaderboard">
+            <ins id="rental-property-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("rental-property-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="rental-property-calculator-intro-area" class="space-y-4">
+        <nav id="rental-property-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="rental-property-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="rental-property-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="rental-property-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="rental-property-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#real-estate-calculators" itemprop="item"><span itemprop="name">Real Estate &amp; Rental Property</span></a><meta itemprop="position" content="3"></li>
+            <li id="rental-property-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Rental Property Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/rental-property-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="rental-property-calculator-hero-section" aria-labelledby="rental-property-calculator-hero-heading" data-section="hero">
+          <h1 id="rental-property-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Rental Property Calculator: ROI, Cap Rate &amp; Cash Flow</h1>
+          <p id="rental-property-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Thinking about buying a duplex, or wondering whether the condo you already own really pays its way? This rental property calculator turns a handful of numbers about a rental property into the cap rate, net operating income, cash flow and cash-on-cash return a real estate investor needs before signing anything. Enter what you would pay, what the tenants will pay you and what it costs to keep the doors open, then read the verdict in seconds. <!-- SILO_START:slot_a -->The <a class="silo-link" href="/rent-calculator.html">rent calculator online</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="rental-property-calculator-tool" class="space-y-6" data-page-slug="rental-property-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="rpFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="rpForm" class="space-y-6" novalidate aria-labelledby="rpFormHeading">
+      <h2 id="rpFormHeading" class="panel-heading">Enter the property details</h2>
+      <fieldset class="form-fieldset">
+        <legend class="form-legend">Purchase and loan</legend>
+        <div class="form-row form-row-2">
+          <div><label for="rpPrice" class="form-label">Purchase price</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="rpPrice" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1000" value="300000" inputmode="decimal"></div></div>
+          <div><label for="rpClosing" class="form-label">Closing costs</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="rpClosing" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="9000" inputmode="decimal"></div></div>
+        </div>
+        <div class="form-row form-row-2">
+          <div><label for="rpDown" class="form-label">Down payment</label><div class="input-group"><input type="number" id="rpDown" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="1" value="25" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">Use 100 for an all-cash purchase.</p></div>
+          <div><label for="rpRate" class="form-label">Interest rate</label><div class="input-group"><input type="number" id="rpRate" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="30" step="0.125" value="6.5" inputmode="decimal"><span class="input-affix">%</span></div></div>
+        </div>
+        <div class="form-row form-row-2">
+          <div><label for="rpTerm" class="form-label">Loan term</label><div class="input-group"><input type="number" id="rpTerm" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1" max="40" step="1" value="30" inputmode="decimal"><span class="input-affix">yrs</span></div></div>
+        </div>
+      </fieldset>
+      <fieldset class="form-fieldset">
+        <legend class="form-legend">Rental income</legend>
+        <div class="form-row form-row-2">
+          <div><label for="rpRent" class="form-label">Monthly rent</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="rpRent" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="50" value="2700" inputmode="decimal"></div></div>
+          <div><label for="rpOtherIncome" class="form-label">Other monthly income</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="rpOtherIncome" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="0" inputmode="decimal"></div><p class="form-hint">Parking, laundry, storage and similar.</p></div>
+        </div>
+        <div class="form-row form-row-2">
+          <div><label for="rpVacancy" class="form-label">Vacancy rate</label><div class="input-group"><input type="number" id="rpVacancy" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="0.5" value="6" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">Share of the year the unit sits empty.</p></div>
+          <div><label for="rpManagement" class="form-label">Management fee</label><div class="input-group"><input type="number" id="rpManagement" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="0.5" value="10" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">Share of rent collected. Use 0 if you self-manage.</p></div>
+        </div>
+      </fieldset>
+      <fieldset class="form-fieldset">
+        <legend class="form-legend">Operating expenses</legend>
+        <div class="form-row form-row-2">
+          <div><label for="rpTax" class="form-label">Property tax per year</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="rpTax" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="3600" inputmode="decimal"></div></div>
+          <div><label for="rpInsurance" class="form-label">Insurance per year</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="rpInsurance" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="1500" inputmode="decimal"></div></div>
+        </div>
+        <div class="form-row form-row-2">
+          <div><label for="rpMaintenance" class="form-label">Maintenance per year</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="rpMaintenance" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="2400" inputmode="decimal"></div><p class="form-hint">Repairs and upkeep; many owners budget about 1% of the value a year.</p></div>
+          <div><label for="rpHoa" class="form-label">HOA fee per month</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="rpHoa" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="0" inputmode="decimal"></div></div>
+        </div>
+        <div class="form-row form-row-2">
+          <div><label for="rpOtherCost" class="form-label">Other costs per year</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="rpOtherCost" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="600" inputmode="decimal"></div><p class="form-hint">Utilities you pay, landscaping, accounting.</p></div>
+        </div>
+      </fieldset>
+      <fieldset class="form-fieldset">
+        <legend class="form-legend">Growth and sale</legend>
+        <div class="form-row form-row-2">
+          <div><label for="rpRentGrowth" class="form-label">Rent increase per year</label><div class="input-group"><input type="number" id="rpRentGrowth" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="-20" max="20" step="0.1" value="2.5" inputmode="decimal"><span class="input-affix">%</span></div></div>
+          <div><label for="rpCostGrowth" class="form-label">Expense increase per year</label><div class="input-group"><input type="number" id="rpCostGrowth" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="-20" max="20" step="0.1" value="2.5" inputmode="decimal"><span class="input-affix">%</span></div></div>
+        </div>
+        <div class="form-row form-row-2">
+          <div><label for="rpAppreciation" class="form-label">Property value increase per year</label><div class="input-group"><input type="number" id="rpAppreciation" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="-20" max="20" step="0.1" value="3.5" inputmode="decimal"><span class="input-affix">%</span></div></div>
+          <div><label for="rpHold" class="form-label">Years you keep it</label><div class="input-group"><input type="number" id="rpHold" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1" max="40" step="1" value="10" inputmode="decimal"><span class="input-affix">yrs</span></div></div>
+        </div>
+        <div class="form-row form-row-2">
+          <div><label for="rpSellCost" class="form-label">Selling costs</label><div class="input-group"><input type="number" id="rpSellCost" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="50" step="0.5" value="7" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">Agent commission and closing costs when you sell, as a share of the sale price.</p></div>
+        </div>
+      </fieldset>
+      <details class="form-details">
+        <summary class="form-details-summary">Repairs before renting</summary>
+        <div class="mt-4 space-y-5">
+        <div class="form-row form-row-2">
+          <div><label for="rpRepairs" class="form-label">Repair cost</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="rpRepairs" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="0" inputmode="decimal"></div><p class="form-hint">Paid in cash up front.</p></div>
+          <div><label for="rpArv" class="form-label">Value after repairs</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="rpArv" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1000" value="" inputmode="decimal"></div><p class="form-hint">Leave blank to use the purchase price.</p></div>
+        </div>
+        </div>
+      </details>
+      <p id="rpError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="rpResults" aria-live="polite" aria-labelledby="rpResultsHeading">
+      <h2 id="rpResultsHeading" class="panel-heading">Your results</h2>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p class="stat-label">Monthly cash flow (year 1)</p><p id="rpCashFlow" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Cash-on-cash return</p><p id="rpCoc" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Cap rate</p><p id="rpCap" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">IRR over holding period</p><p id="rpIrr" class="stat-value">–</p></div>
+      </div>
+      <dl class="key-value-list mt-4">
+        <div class="key-value-row"><dt>Cash needed to buy</dt><dd id="rpCashIn">–</dd></div>
+        <div class="key-value-row"><dt>Loan amount</dt><dd id="rpLoan">–</dd></div>
+        <div class="key-value-row"><dt>Mortgage payment (principal and interest)</dt><dd id="rpPayment">–</dd></div>
+        <div class="key-value-row"><dt>Net operating income (year 1)</dt><dd id="rpNoi">–</dd></div>
+        <div class="key-value-row"><dt>Operating expenses (year 1)</dt><dd id="rpOpex">–</dd></div>
+        <div class="key-value-row"><dt>Debt service coverage ratio</dt><dd id="rpDscr">–</dd></div>
+        <div class="key-value-row"><dt id="rpSaleLabel">Sale price at the end</dt><dd id="rpSalePrice">–</dd></div>
+        <div class="key-value-row"><dt>Cash from the sale after loan payoff</dt><dd id="rpProceeds">–</dd></div>
+        <div class="key-value-row"><dt>Total profit</dt><dd id="rpProfit">–</dd></div>
+      </dl>
+      <p class="form-hint mt-3">Figures are before income tax. Total profit is all cash flow plus the cash from the sale, minus the cash you put in.</p>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="rpScheduleHeading" data-section="schedule">
+  <h2 id="rpScheduleHeading" class="panel-heading">Year-by-year cash flow</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">Rent collected after vacancy, operating expenses, mortgage payments and your equity in the property at the end of each year.</p>
+  <div class="table-scroll mt-5 max-h-[520px]" tabindex="0" role="region" aria-labelledby="rpScheduleHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Year</th><th scope="col">Rent collected</th><th scope="col">Expenses</th><th scope="col">Net operating income</th><th scope="col">Mortgage</th><th scope="col">Cash flow</th><th scope="col">Equity</th></tr></thead>
+      <tbody id="rpSchedule"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="rental-property-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="rental-property-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Thinking about buying a duplex, or wondering whether the condo you already own really pays its way? This rental property calculator turns a handful of numbers about a rental property into the cap rate, net operating income, cash flow and cash-on-cash return a real estate investor needs before signing anything. Enter what you would pay, what the tenants will pay you and what it costs to keep the doors open, then read the verdict in seconds. <!-- SILO_START:slot_a_m -->The <a class="silo-link" href="/rent-calculator.html">rent calculator online</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="rental-property-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="rental-property-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="rental-property-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="rental-property-calculator-ad-in-feed">
+            <ins id="rental-property-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("rental-property-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="rental-property-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="rental-property-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="rental-property-calculator-guide-heading-1">
+<h2 id="rental-property-calculator-guide-heading-1">How the Rental Property Calculator Works</h2>
+<p>Every rental property calculator follows the same chain of arithmetic: money comes in as rent, money leaks out to vacancies and operating expenses, what is left is net operating income, and the mortgage takes its share of that before any cash reaches your pocket. A good <strong>rental income calculator</strong> walks you through those steps in order so you can see where a deal is strong and where it is thin. <!-- SILO_START:slot_b -->Try the <a class="silo-link" href="/refinance-calculator.html">free mortgage refinance calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_b --></p>
+<p>The tool you are reading about works as a <strong>rental cash flow calculator</strong> and as a <strong>real estate investment calculator</strong> at the same time. It estimates monthly and annual cash flow, then compares that cash flow with the property's price and with the cash you actually put in. That gives you two different lenses on the same <strong>real estate investment</strong>: how hard the building works on its own, and how hard your own money works once financing is involved.</p>
+
+<h3>The three questions every result answers</h3>
+<p>Whatever buttons you press, the output boils down to three questions. First, does the property earn more than it costs to run? That is <strong>net operating income</strong>. Second, does it still earn money after the lender is paid? That is <strong>cash flow</strong>. Third, is the return on your invested cash better than the alternatives? That is the <strong>cash-on-cash return</strong>, which you can compare with a stock fund or a savings account.</p>
+
+<h3>Why running the numbers before buying matters</h3>
+<p>A <strong>rental investment</strong> is capital-intensive and hard to exit quickly, so a miscalculation costs years rather than days. Running a rental unit through a <strong>free rental property calculator</strong> before you make an offer lets you test a bad assumption on screen, where it costs nothing, instead of discovering it in your bank statement.</p>
+<p>Treat the result as one step of a wider financial analysis of the deal: the income and expense lines you enter here are the ones that drive every result, and the same lines you will later record in your rental accounting, so a clean first model can be reused to compare deals. A well-built model also shows which rental property deserves your time, since a ROI that looks fine on paper can still lose to a simpler purchase once your own hours are counted.</p>
+        </section>
+        <section id="rental-property-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="rental-property-calculator-guide-heading-2">
+<h2 id="rental-property-calculator-guide-heading-2">Rental Property Calculator Inputs You Need</h2>
+<p>The fields fall into four groups. Using realistic numbers in each group matters more than the precision of any single field, because small mistakes in rent or expenses compound across every year you hold the <strong>investment property</strong>. <!-- SILO_START:slot_c -->The <a class="silo-link" href="/rent-vs-buy-calculator.html">free rent vs buy calculator</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_c --></p>
+
+<h3>Purchase and financing inputs</h3>
+<p>These fields describe the money you commit on day one and the debt that funds the rest. If you plan to borrow, a <strong>rental property mortgage calculator</strong> built into the same tool saves you from switching tabs to estimate the payment.</p>
+<ul>
+<li><strong>Purchase price</strong> — the contract price, before closing costs and repairs.</li>
+<li><strong>Down payment</strong> — your cash share, often 20 to 25 percent for an investment loan.</li>
+<li><strong>Loan amount, interest rate and loan term</strong> — these three produce the monthly mortgage payment.</li>
+<li><strong>Closing costs</strong> — lender, title and legal fees paid at signing.</li>
+<li><strong>Repair costs</strong> — renovation money you need to spend before the first tenant moves in.</li>
+<li><strong>Square footage and bedrooms</strong> — optional details that let you compare the purchase price per square foot with nearby sales.</li>
+</ul>
+
+<h3>Rental income and vacancy inputs</h3>
+<p>Income is simple to enter into a rental income calculator but easy to overstate. Use the rent that comparable units actually achieved, not the listing price someone hoped for.</p>
+<ul>
+<li><strong>Monthly rent</strong> — the gross rent from all units when fully occupied.</li>
+<li><strong>Other monthly income</strong> — parking, laundry, storage or pet fees.</li>
+<li><strong>Vacancy rate</strong> — the share of the year a unit sits empty between tenants.</li>
+<li><strong>Annual increase</strong> — how fast you expect rent to grow.</li>
+</ul>
+
+<h3>Operating expense inputs</h3>
+<p>A <strong>rental calculator</strong> is only as honest as its expense fields. Landlords who skip the line items below tend to report a return that vanishes once the first water heater fails.</p>
+<ul>
+<li><strong>Property tax and insurance</strong> — usually entered as annual totals.</li>
+<li><strong>Maintenance and repairs</strong> — a monthly reserve for routine upkeep and surprise fixes.</li>
+<li><strong>HOA fee</strong> — condo or association dues, if any.</li>
+<li><strong>Management fee</strong> — a percentage of collected rent if you hire a property manager to handle tenants for you.</li>
+<li><strong>Other expenses</strong> — utilities you cover, advertising and legal costs.</li>
+</ul>
+
+<h3>Sale and holding period inputs</h3>
+<p>If you want a long-range view, add the exit. Enter the <strong>holding period</strong> in years, the yearly <strong>value appreciation</strong>, and the cost to sell. Leave the selling price blank to let the tool project it, or type your own <strong>selling price</strong> when you already have a buyer in mind.</p>
+        </section>
+        <section id="rental-property-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="rental-property-calculator-guide-heading-3">
+<h2 id="rental-property-calculator-guide-heading-3">Rental ROI Calculator Results Explained</h2>
+<p>Used as a <strong>rental property ROI calculator</strong>, the tool returns a small set of metrics. Each one answers a different question, so read them together rather than chasing a single number.</p>
+<p>ROI here means <strong>return on investment</strong>: the profit a rental property earns relative to the money you put into it. The calculator reports ROI two ways, as the cap rate measured against the purchase price and as cash-on-cash return measured against your own cash. Both are a form of ROI, and a ROI figure is only meaningful when you know its base, so check whether it divides by the purchase price or by the upfront investment you actually paid. Comparing two deals on ROI alone, without checking the base, is how investors talk themselves into the wrong property.</p>
+
+<h3>Net operating income (NOI)</h3>
+<p><strong>Net operating income</strong>, shortened to <strong>NOI</strong>, is the rent you collect after vacancy and after every operating cost, but before any mortgage payment. Because it ignores financing, NOI measures the property itself, which is why lenders and buyers compare it across deals. Investors often split it into <strong>gross potential income</strong> (everything the units could earn at full occupancy), <strong>vacancy loss</strong> (the rent you do not collect) and <strong>effective gross income</strong> (what is left), then subtract <strong>operating costs</strong> to reach NOI.</p>
+
+<h3>Cap rate</h3>
+<p>The <strong>cap rate</strong>, short for <strong>capitalization rate</strong>, divides NOI by the property's price or <strong>market value</strong>. It tells you the yield you would earn if you paid all cash, which makes it the quickest way to compare two buildings. A higher cap rate means more income per dollar of price, though it often signals higher risk or a weaker neighborhood.</p>
+
+<h3>Cash-on-cash return</h3>
+<p>The <strong>cash-on-cash return</strong> divides your yearly cash flow, the net income the property leaves you after the mortgage, by the <strong>cash investment</strong> you made: the down payment, closing costs and repairs. It is also called the <strong>annual yield</strong>, and it is the number to compare with other places your cash could go. Because it reflects the mortgage, the same property can show a very different cash-on-cash return under a different <strong>interest rate</strong>.</p>
+
+<h3>Cash flow and gross rent multiplier</h3>
+<p>The <strong>annual cash flow</strong> is NOI minus <strong>debt service</strong>, the yearly total of your <strong>mortgage payment</strong>. A positive result means the property carries itself; a <strong>negative cash flow</strong> means you feed it from your own pocket every month. The <strong>gross rent multiplier</strong> divides price by gross yearly rent and offers a rough, expense-blind screen: the lower it is, the less you pay per dollar of rent.</p>
+        </section>
+        <section id="rental-property-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="rental-property-calculator-guide-heading-4">
+<h2 id="rental-property-calculator-guide-heading-4">Investment Property Calculator Formulas</h2>
+<p>Every figure above comes from a short formula, so you can check any <strong>investment property calculator</strong> by hand. Here is the chain the tool follows, from rent to <strong>rate of return</strong>.</p>
+<p>Start with the income side:</p>
+<p>$$\text{EGI} = \text{Gross Potential Income} \times (1 - \text{Vacancy Rate})$$</p>
+<p>$$\text{NOI} = \text{EGI} - \text{Operating Expenses}$$</p>
+<p>Then measure the property and your own money:</p>
+<p>$$\text{Cap Rate} = \frac{\text{NOI}}{\text{Purchase Price}} \times 100$$</p>
+<p>$$\text{Annual Cash Flow} = \text{NOI} - \text{Annual Debt Service}$$</p>
+<p>$$\text{Cash-on-Cash Return} = \frac{\text{Annual Cash Flow}}{\text{Total Cash Invested}} \times 100$$</p>
+<p>Finally, the monthly loan payment uses the standard amortization formula, where \(P\) is the <strong>loan amount</strong>, \(r\) the monthly <strong>interest rate</strong> and \(n\) the number of payments:</p>
+<p>$$M = P \times \frac{r(1+r)^{n}}{(1+r)^{n} - 1}$$</p>
+<p>Gross rent multiplier is simply \(\text{Price} \div \text{Annual Gross Rent}\). Note that every formula uses annual or monthly figures consistently; mixing the two is the most common reason a hand calculation disagrees with the tool.</p>
+<figure><img src="/assets/images/tools/rental-property-calculator/rental-property-cap-rate-cash-on-cash-formulas.svg" alt="Two formula cards showing a 7.58% cap rate and a 6.18% cash-on-cash return for a $268,500 rental property"><figcaption>The cap rate ignores financing, while cash-on-cash return measures the yield on the cash you actually invested.</figcaption></figure>
+        </section>
+        <section id="rental-property-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="rental-property-calculator-guide-heading-5">
+<h2 id="rental-property-calculator-guide-heading-5">Worked Example: Rental Cash Flow Calculator on a $268,500 Property</h2>
+<p>To see the formulas in action, take a <strong>rental property</strong> priced at <strong>$268,500</strong>. You put 25 percent down (<strong>$67,125</strong>), pay <strong>$5,900</strong> in closing costs and borrow <strong>$201,375</strong> over a 30-year term at <strong>6.85 percent</strong>. That <strong>monthly mortgage payment</strong> comes to <strong>$1,319.53</strong>, or $15,834 a year in debt service. Your total cash investment is $73,025.</p>
+<p>The unit rents for $2,495 a month and brings in $85 of other income, so gross potential income is $30,960 a year. With a 5 percent vacancy rate, the vacancy loss is $1,548 and effective gross income is $29,412. Operating expenses total $9,063. The table shows each line.</p>
+<table>
+<thead><tr><th>Line item</th><th>Annual amount</th></tr></thead>
+<tbody>
+<tr><td>Gross potential income ($2,580 a month)</td><td>$30,960</td></tr>
+<tr><td>Vacancy loss (5 percent)</td><td>-$1,548</td></tr>
+<tr><td>Effective gross income</td><td>$29,412</td></tr>
+<tr><td>Management fee (8 percent)</td><td>-$2,353</td></tr>
+<tr><td>Property tax</td><td>-$3,420</td></tr>
+<tr><td>Insurance</td><td>-$1,310</td></tr>
+<tr><td>Maintenance reserve</td><td>-$1,140</td></tr>
+<tr><td>Repairs reserve</td><td>-$840</td></tr>
+<tr><td>Net operating income</td><td>$20,349</td></tr>
+<tr><td>Debt service</td><td>-$15,834</td></tr>
+<tr><td>Annual cash flow</td><td>$4,515</td></tr>
+</tbody>
+</table>
+<p>From there the results follow directly. The <strong>cap rate</strong> is $20,349 ÷ $268,500, or <strong>7.58 percent</strong>. The yearly cash flow of $4,515, or about $376 a month, divided by $73,025 gives a <strong>cash-on-cash return of 6.18 percent</strong>. The gross rent multiplier is 8.67. Rent is 0.93 percent of the price, so this deal narrowly misses the 1 percent screen. Its ROI as cash-on-cash is solid for the price paid, and the deal still clears a comfortable margin over its debt: NOI covers debt service 1.29 times.</p>
+<figure><img src="/assets/images/tools/rental-property-calculator/rental-property-income-breakdown-donut.svg" alt="Donut chart splitting $30,960 of yearly rent into debt service, operating expenses, vacancy loss and cash flow"><figcaption>Of $30,960 in gross yearly rent, $4,515 remains as cash flow after the mortgage, operating costs and vacancy.</figcaption></figure>
+        </section>
+        <section id="rental-property-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="rental-property-calculator-guide-heading-6">
+<h2 id="rental-property-calculator-guide-heading-6">Testing a Condo Offer with the Rental Property ROI Calculator</h2>
+<p>Priya has $55,000 saved and a listing for a two-bedroom condo at $231,750. The unit next door rents for $1,985 a month, so the plan looks simple. Before calling an agent, Priya opens the rental property ROI calculator and types in what is known: a 20 percent down payment of $46,350, $4,100 in closing costs, a 7.1 percent rate on a 30-year loan, and a 4 percent vacancy rate.</p>
+<p>The expense fields come from the listing and the insurance quote: $2,874 in property tax, $1,146 in insurance, a $210 monthly HOA fee, and a maintenance reserve of 7 percent of rent. There is no management fee, because Priya will handle the tenants personally.</p>
+<p>The results are not what the listing suggested. Net operating income is $14,660, a cap rate of 6.33 percent, but the mortgage payment of $1,245.95 a month means $14,951 of debt service. Annual cash flow is <strong>negative $292</strong>, and NOI covers the loan only 0.98 times. Lenders that write investor loans commonly ask for a debt service coverage ratio of at least 1.25, so this loan would likely be declined.</p>
+<p>Priya changes one input at a time. Rent first: a similar unit in the same complex is asking $2,140, which lifts cash flow to $1,364 a year but only reaches a coverage ratio of 1.09. The purchase price is the lever that remains. Setting it to $202,000 with 20 percent down, a $161,600 loan and the $2,140 rent gives a $1,086.00 monthly payment, NOI of $16,315, a coverage ratio of 1.25 and a cash-on-cash return of 7.38 percent on $44,500 of cash.</p>
+<p>The calculation decides the next step: a counteroffer of $202,000, with a walk-away line at $205,000. The tool never says whether the deal is good; it shows the exact price at which this rental property passes the bank's test.</p>
+        </section>
+        <section id="rental-property-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="rental-property-calculator-guide-heading-7">
+<h2 id="rental-property-calculator-guide-heading-7">What Is a Good ROI for a Rental Property?</h2>
+<p>There is no universal answer, because a <strong>good ROI</strong> for a rental property depends on your market, your financing and your appetite for risk. Many investors treat a <strong>return on investment</strong> below 5 percent as a poor use of capital, 5 to 10 percent as reasonable if your expense reserves are honest, and anything above 10 percent as strong, provided your rent and cost estimates are accurate. Judge any ROI target against your next best use of the same cash. Another common benchmark is a few hundred dollars of positive cash flow <strong>per door</strong> each month, enough to absorb a bad quarter.</p>
+
+<h3>Rules of thumb: the 1%, 50% and 70% rules</h3>
+<p>Three shortcuts help you screen listings before you build a full model. The <strong>1% rule</strong> compares monthly rent with the purchase price and asks for at least one percent. The <strong>50% rule</strong> assumes operating expenses, the costs that shape the results, will consume about half of income, excluding the mortgage. The calculator's results are the follow-up check for both. The <strong>70% rule</strong> belongs to buying and <strong>flipping</strong> distressed homes (pay no more than 70 percent of the after-repair value minus rehab costs), so it does not apply to a buy-and-hold rental. Treat the others as filters, not verdicts; the worked example above fails the 1% rule yet produces a respectable result.</p>
+
+<h3>IRR and the time value of money</h3>
+<p>The <strong>internal rate of return</strong>, or <strong>IRR</strong>, folds in the sale of the property and recognizes the <strong>time value of money</strong>: a dollar of cash flow this year is worth more than a dollar ten years from now. IRR is the best single measure of a long hold, while cap rate and cash-on-cash return describe a single year. Use all three, since each hides something the others reveal.</p>
+        </section>
+        <section id="rental-property-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="rental-property-calculator-guide-heading-8">
+<h2 id="rental-property-calculator-guide-heading-8">Financing and Market Factors That Shape Rental Income Returns</h2>
+<p>Two investors can buy identical buildings and earn very different returns because of how they pay for them and what the market does afterward.</p>
+
+<h3>Interest rate, leverage and your mortgage</h3>
+<p><strong>Leverage</strong> lets you control a larger asset with less cash, and the <strong>principal</strong> you repay slowly builds <strong>home equity</strong>. Each payment adds a little equity, which matters when you refinance or sell. But borrowing is not free. In the example above, moving the rate from 6.85 percent to 8.50 percent drops the cash-on-cash return from 6.18 percent to 2.42 percent, and at 9 percent the same property earns only 1.24 percent. Use the calculator to find the rate where your <strong>financing</strong> stops making sense.</p>
+<figure><img src="/assets/images/tools/rental-property-calculator/rental-property-interest-rate-cash-on-cash-chart.svg" alt="Line chart of cash-on-cash return falling from 9.08% at a 5.5% mortgage rate to 1.24% at 9%"><figcaption>Only the mortgage interest rate changes here; the 6.85% example sits at a 6.18% cash-on-cash return.</figcaption></figure>
+
+<h3>Appreciation, inflation and the exit</h3>
+<p><strong>Appreciation</strong> is the rise in <strong>property value</strong> over the holding period, and it is a bonus rather than a promise. Rents also tend to rise with <strong>inflation</strong>, which is why property is often described as a hedge, but costs rise with it. When you model a sale, remember that a <strong>gross yield</strong> or <strong>annual return</strong> that includes appreciation is a forecast, not income you can spend.</p>
+        </section>
+        <section id="rental-property-calculator-guide-section-9" class="panel article-content p-4 sm:p-6" aria-labelledby="rental-property-calculator-guide-heading-9">
+<h2 id="rental-property-calculator-guide-heading-9">Rental Property Investment Calculator Limits and Common Mistakes</h2>
+<p>Even the best <strong>rental property investment calculator</strong> only reports what you feed it. Watch for these traps before trusting a result.</p>
+<ul>
+<li><strong>Ignoring CapEx.</strong> Roofs, furnaces and appliances wear out; set aside a reserve beyond routine maintenance and repairs.</li>
+<li><strong>Skipping the management fee.</strong> Even if you manage the unit yourself, your time has value, and professional property management may become necessary as your rental property portfolio grows.</li>
+<li><strong>Optimistic vacancy.</strong> A zero vacancy rate does not exist; a unit turns over, and each turnover costs rent and cleaning.</li>
+<li><strong>Forgetting tenants' turnover costs.</strong> Lower-priced units often see more frequent move-outs and heavier wear.</li>
+<li><strong>Treating projections as promises.</strong> Appreciation, rent growth and expenses all drift away from plan over decades.</li>
+</ul>
+<p>Use the output as a screening tool: if a deal looks promising, replace your estimates with quotes and real <strong>annual expenses</strong>, then run it again. Pay particular attention to <strong>monthly expenses</strong> that scale with age, such as repairs on an older building.</p>
+        </section>
+        <section id="rental-property-calculator-guide-section-10" class="panel article-content p-4 sm:p-6" aria-labelledby="rental-property-calculator-guide-heading-10">
+<h2 id="rental-property-calculator-guide-heading-10">Who Uses a Rental Property Calculator for Landlords</h2>
+<p>This kind of tool serves anyone who owns, or plans to own, a building that tenants pay to live in. Beginners use it to learn which numbers matter. Experienced <strong>investors</strong> use it to compare each listing's results side by side and to check whether an existing building still earns its keep.</p>
+
+<h3>Property types you can model</h3>
+<p>The same math works for a <strong>single-family</strong> home, a <strong>duplex</strong>, a <strong>condo</strong>, a townhouse or a small <strong>multi-family</strong> building. For a multi-family building, enter the combined rent of every unit, and the same results apply. Larger complexes carry extra costs the fields do not cover, so treat any result for them as a first pass. A <strong>turnkey</strong> purchase, where the unit arrives renovated and already rented, needs few repair inputs.</p>
+
+<h3>Rental property versus stocks and bonds</h3>
+<p>The yield figures the calculator reports are the numbers to set against the return of stocks and bonds, a fair test of whether the effort pays. A rental concentrates your money in one building, so many investors use it to diversify a portfolio that is mostly paper assets, and the rental income can support retirement plans. A lease with a long-term tenant gives that income a predictable base, and real estate has a reputation as a hedge against inflation. The trade-offs are liquidity, since a building takes months to sell, and exposure to a local recession that broad stock and bond funds may not share. It is also rarely truly passive income, so run the numbers for each candidate building: its profitability varies more from one property to the next than it does between index funds.</p>
+
+<h3>Rental property versus other real estate options</h3>
+<p>Owning a rental is not the only way into the market. A REIT offers exposure with no landlord duties, <strong>wholesaling</strong> involves selling contracts rather than buildings, and flipping depends on a quick resale. None of them produces what a landlord's results reflect: <strong>profit</strong> from monthly <strong>rent</strong>, loan paydown, <strong>tax benefits</strong> and appreciation.</p>
+        </section>
+      </div>
+
+      <section id="rental-property-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="rental-property-calculator-faq-heading" data-section="faq">
+        <h2 id="rental-property-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Rental Property Calculator questions</h2>
+        <div id="rental-property-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="rental-property-calculator-faq-1" class="faq-item" open><summary id="rental-property-calculator-faq-1-summary" class="faq-summary"><h3 id="rental-property-calculator-faq-1-question" class="faq-question">How do I calculate ROI on a rental property?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="rental-property-calculator-faq-1-answer" class="faq-answer"><p>Divide the cash the property leaves you each year by the cash you put in. For a leveraged purchase that is annual cash flow divided by down payment, closing costs and repairs, which is the cash-on-cash return this calculator shows as its main result.</p></div></details>
+          <details id="rental-property-calculator-faq-2" class="faq-item" open><summary id="rental-property-calculator-faq-2-summary" class="faq-summary"><h3 id="rental-property-calculator-faq-2-question" class="faq-question">What is a good cap rate for a rental property?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="rental-property-calculator-faq-2-answer" class="faq-answer"><p>There is no single number. Cap rates run lower in expensive, stable markets and higher where risk is greater. Compare the cap rate with similar buildings nearby and with your own financing cost instead of chasing one target.</p></div></details>
+          <details id="rental-property-calculator-faq-3" class="faq-item" open><summary id="rental-property-calculator-faq-3-summary" class="faq-summary"><h3 id="rental-property-calculator-faq-3-question" class="faq-question">What is the difference between cap rate and cash-on-cash return?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="rental-property-calculator-faq-3-answer" class="faq-answer"><p>Cap rate divides net operating income by the purchase price and ignores the mortgage. Cash-on-cash return divides cash flow after the mortgage by the cash you actually invested, so financing changes it.</p></div></details>
+          <details id="rental-property-calculator-faq-4" class="faq-item" open><summary id="rental-property-calculator-faq-4-summary" class="faq-summary"><h3 id="rental-property-calculator-faq-4-question" class="faq-question">What vacancy rate should I use?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="rental-property-calculator-faq-4-answer" class="faq-answer"><p>Use the vacancy rate for your local market and property type, then add a cushion if your units turn over often. A zero vacancy rate overstates income because every turnover costs some rent.</p></div></details>
+          <details id="rental-property-calculator-faq-5" class="faq-item" open><summary id="rental-property-calculator-faq-5-summary" class="faq-summary"><h3 id="rental-property-calculator-faq-5-question" class="faq-question">Does the calculator include a management fee?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="rental-property-calculator-faq-5-answer" class="faq-answer"><p>Yes. Enter a percentage of collected rent, a flat monthly fee, or both. Set them to zero only if you manage the property yourself and are comfortable ignoring the value of your time.</p></div></details>
+          <details id="rental-property-calculator-faq-6" class="faq-item" open><summary id="rental-property-calculator-faq-6-summary" class="faq-summary"><h3 id="rental-property-calculator-faq-6-question" class="faq-question">How is IRR calculated for a rental property?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="rental-property-calculator-faq-6-answer" class="faq-answer"><p>The calculator lays out your cash investment, each year of cash flow with the growth rates you entered, and the net sale proceeds after the loan is paid off at the end of the holding length. IRR is the yearly rate that makes those cash flows add up to zero.</p></div></details>
+          <details id="rental-property-calculator-faq-7" class="faq-item" open><summary id="rental-property-calculator-faq-7-summary" class="faq-summary"><h3 id="rental-property-calculator-faq-7-question" class="faq-question">Can I use this rental property calculator for an all-cash purchase?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="rental-property-calculator-faq-7-answer" class="faq-answer"><p>Yes. Set Use a Loan to No. The mortgage payment drops to zero, so cash flow equals net operating income and cash-on-cash return matches the cap rate on your total cash invested.</p></div></details>
+          <details id="rental-property-calculator-faq-8" class="faq-item" open><summary id="rental-property-calculator-faq-8-summary" class="faq-summary"><h3 id="rental-property-calculator-faq-8-question" class="faq-question">Does the calculator account for inflation or taxes?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="rental-property-calculator-faq-8-answer" class="faq-answer"><p>It does not model income tax or general inflation. Rent and expense growth rates are the only escalation it applies, so treat long holding periods as estimates and check tax effects with a professional.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="rental-property-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="rental-property-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="rental-property-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="rental-property-calculator-ad-bottom-leaderboard">
+            <ins id="rental-property-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("rental-property-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="rental-property-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="rental-property-calculator-right-rail-top" class="mb-6">
+        <aside id="rental-property-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="rental-property-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="rental-property-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="rental-property-calculator-ad-right-rail-rectangle">
+            <ins id="rental-property-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("rental-property-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="rental-property-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="rental-property-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="rental-property-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="rental-property-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="rental-property-calculator-ad-right-rail-skyscraper">
+            <ins id="rental-property-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("rental-property-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="rental-property-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="rental-property-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="rental-property-calculator-footer-brand">
+        <a id="rental-property-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="rental-property-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="rental-property-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="rental-property-calculator-footer-categories" aria-labelledby="rental-property-calculator-footer-categories-heading">
+        <h2 id="rental-property-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="rental-property-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="rental-property-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="rental-property-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="rental-property-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="rental-property-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="rental-property-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="rental-property-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="rental-property-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="rental-property-calculator-footer-company" aria-labelledby="rental-property-calculator-footer-company-heading">
+        <h2 id="rental-property-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="rental-property-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="rental-property-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="rental-property-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="rental-property-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="rental-property-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="rental-property-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="rental-property-calculator-footer-bottom" class="border-t border-line">
+      <p id="rental-property-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="rental-property-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Rental property cash flow and returns, modelled year by year (all figures before income tax):
+  //   gross income_y = (rent + other income) x 12 x (1 + rent growth)^(y-1)
+  //   rent collected = gross x (1 - vacancy); management fee = rent collected x fee %
+  //   operating expenses_y = (tax + insurance + maintenance + other + HOA x 12) x (1 + cost growth)^(y-1) + management
+  //   NOI = rent collected - operating expenses; cash flow = NOI - mortgage payments (P&I)
+  //   mortgage payment = L x i / (1 - (1 + i)^-n), i = rate / 12 (L / n at 0%)
+  //   cap rate = year-1 NOI / property value; cash-on-cash = year-1 cash flow / cash invested
+  //   cash invested = down payment + closing costs + repairs
+  //   sale = value x (1 + appreciation)^years; cash from sale = sale x (1 - selling costs) - loan balance
+  //   IRR solves NPV = 0 for [-cash invested, CF1, ..., CFn + cash from sale].
+  // Verified: $240,000 at 6.5% for 30 years = $1,516.96/month (standard amortization table value);
+  // balance after 10 years = $203,462.70 (closed form L(1+i)^k - P((1+i)^k - 1)/i); a simple
+  // case (price $100,000 cash, $1,000/month rent, no costs/growth, sold after 1 year at cost)
+  // gives NOI $12,000, cap rate 12%, cash-on-cash 12% and IRR 12%.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+  var money2 = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 });
+
+  // --- calc start
+  function payment(loan, annualRate, years) {
+    var n = years * 12, i = annualRate / 12;
+    if (loan <= 0) return 0;
+    return i === 0 ? loan / n : loan * i / (1 - Math.pow(1 + i, -n));
+  }
+
+  function npv(rate, flows) {
+    var total = 0, factor = 1;
+    for (var t = 0; t < flows.length; t++) {
+      if (t > 0) factor *= 1 + rate;
+      total += flows[t] / factor;
+    }
+    return total;
+  }
+
+  // All IRRs between -99% and 1,000% (scan for sign changes, then bisect); the one nearest 10% is used.
+  function irr(flows) {
+    var hasPos = flows.some(function (f) { return f > 0; }), hasNeg = flows.some(function (f) { return f < 0; });
+    if (!hasPos || !hasNeg) return NaN;
+    var grid = [], r, roots = [];
+    for (r = -0.99; r < 1; r += 0.01) grid.push(r);
+    for (r = 1; r <= 10.0001; r += 0.05) grid.push(r);
+    var prevR = grid[0], prevV = npv(prevR, flows);
+    for (var g = 1; g < grid.length; g++) {
+      var curR = grid[g], curV = npv(curR, flows);
+      if (isFinite(curV) && isFinite(prevV) && (prevV < 0) !== (curV < 0)) {
+        var lo = prevR, hi = curR, loV = prevV;
+        for (var k = 0; k < 200 && hi - lo > 1e-12; k++) {
+          var mid = (lo + hi) / 2, midV = npv(mid, flows);
+          if ((midV < 0) === (loV < 0)) { lo = mid; loV = midV; } else { hi = mid; }
+        }
+        roots.push((lo + hi) / 2);
+      }
+      prevR = curR; prevV = curV;
+    }
+    if (!roots.length) return NaN;
+    return roots.reduce(function (a, b) { return Math.abs(b - 0.1) < Math.abs(a - 0.1) ? b : a; });
+  }
+
+  function analyze(p) {
+    var down = p.price * p.downPct;
+    var loan = p.price - down;
+    var cashIn = down + p.closing + p.repairs;
+    var value0 = p.arv > 0 ? p.arv : p.price;
+    var pmt = payment(loan, p.rate, p.term);
+    var i = p.rate / 12, bal = loan, month = 0;
+    var fixedCosts = p.tax + p.insurance + p.maintenance + p.otherCost + p.hoa * 12;
+    var rows = [], flows = [-cashIn];
+    for (var y = 1; y <= p.hold; y++) {
+      var gross = (p.rent + p.otherIncome) * 12 * Math.pow(1 + p.rentGrowth, y - 1);
+      var collected = gross * (1 - p.vacancy);
+      var opex = fixedCosts * Math.pow(1 + p.costGrowth, y - 1) + collected * p.management;
+      var noi = collected - opex;
+      var debt = 0;
+      for (var m = 0; m < 12; m++) {
+        if (bal <= 1e-9 || month >= p.term * 12) break;
+        var interest = bal * i;
+        var pay = Math.min(pmt, bal + interest);
+        bal = bal + interest - pay;
+        debt += pay;
+        month++;
+      }
+      if (bal < 1e-6) bal = 0;
+      var value = value0 * Math.pow(1 + p.appreciation, y);
+      var cf = noi - debt;
+      rows.push({ year: y, collected: collected, opex: opex, noi: noi, debt: debt, cashFlow: cf, value: value, balance: bal });
+      flows.push(cf);
+    }
+    var last = rows[rows.length - 1];
+    var salePrice = last.value;
+    var proceeds = salePrice * (1 - p.sellCost) - last.balance;
+    flows[flows.length - 1] += proceeds;
+    var totalCf = rows.reduce(function (s, r) { return s + r.cashFlow; }, 0);
+    var first = rows[0];
+    return {
+      down: down, loan: loan, cashIn: cashIn, payment: pmt, value0: value0, rows: rows,
+      noi1: first.noi, opex1: first.opex, cashFlow1: first.cashFlow,
+      capRate: value0 > 0 ? first.noi / value0 : NaN,
+      coc: cashIn > 0 ? first.cashFlow / cashIn : NaN,
+      dscr: first.debt > 0 ? first.noi / first.debt : NaN,
+      salePrice: salePrice, proceeds: proceeds, profit: totalCf + proceeds - cashIn,
+      irr: irr(flows)
+    };
+  }
+  // --- calc end
+
+  function num(id) {
+    var raw = document.getElementById(id).value;
+    if (id === 'rpArv' && raw.trim() === '') return 0;
+    var v = parseFloat(raw);
+    return isNaN(v) ? NaN : v;
+  }
+
+  function pct(x) {
+    return isFinite(x) ? (x * 100).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '%' : '–';
+  }
+
+  var OUT = ['rpCashFlow', 'rpCoc', 'rpCap', 'rpIrr', 'rpCashIn', 'rpLoan', 'rpPayment', 'rpNoi', 'rpOpex', 'rpDscr',
+             'rpSalePrice', 'rpProceeds', 'rpProfit'];
+
+  function update() {
+    var p = {
+      price: num('rpPrice'), closing: num('rpClosing'), downPct: num('rpDown'), rate: num('rpRate'), term: Math.round(num('rpTerm')),
+      rent: num('rpRent'), otherIncome: num('rpOtherIncome'), vacancy: num('rpVacancy'), management: num('rpManagement'),
+      tax: num('rpTax'), insurance: num('rpInsurance'), maintenance: num('rpMaintenance'), hoa: num('rpHoa'), otherCost: num('rpOtherCost'),
+      rentGrowth: num('rpRentGrowth'), costGrowth: num('rpCostGrowth'), appreciation: num('rpAppreciation'),
+      hold: Math.round(num('rpHold')), sellCost: num('rpSellCost'), repairs: num('rpRepairs'), arv: num('rpArv')
+    };
+    var dollars = ['price', 'closing', 'rent', 'otherIncome', 'tax', 'insurance', 'maintenance', 'hoa', 'otherCost', 'repairs', 'arv'];
+    var msg = '';
+    if (dollars.some(function (k) { return isNaN(p[k]) || p[k] < 0 || p[k] > 1e10; })) msg = 'Enter dollar amounts of $0 or more.';
+    else if (p.price <= 0) msg = 'Enter a purchase price above $0.';
+    else if (isNaN(p.downPct) || p.downPct < 0 || p.downPct > 100) msg = 'Enter a down payment from 0% to 100%.';
+    else if (isNaN(p.rate) || p.rate < 0 || p.rate > 30) msg = 'Enter an interest rate from 0% to 30%.';
+    else if (isNaN(p.term) || p.term < 1 || p.term > 40) msg = 'Enter a loan term of 1 to 40 years.';
+    else if ([p.vacancy, p.management].some(function (v) { return isNaN(v) || v < 0 || v > 100; })) msg = 'Enter vacancy and management rates from 0% to 100%.';
+    else if ([p.rentGrowth, p.costGrowth, p.appreciation].some(function (v) { return isNaN(v) || v < -20 || v > 20; })) msg = 'Enter yearly increases between -20% and 20%.';
+    else if (isNaN(p.hold) || p.hold < 1 || p.hold > 40) msg = 'Enter a holding period of 1 to 40 years.';
+    else if (isNaN(p.sellCost) || p.sellCost < 0 || p.sellCost > 50) msg = 'Enter selling costs from 0% to 50%.';
+    var error = document.getElementById('rpError');
+    error.hidden = !msg;
+    error.textContent = msg;
+    if (msg) {
+      OUT.forEach(function (id) { document.getElementById(id).textContent = '–'; });
+      document.getElementById('rpSchedule').innerHTML = '';
+      return;
+    }
+    ['downPct', 'rate', 'vacancy', 'management', 'rentGrowth', 'costGrowth', 'appreciation', 'sellCost'].forEach(function (k) { p[k] /= 100; });
+    var r = analyze(p);
+    document.getElementById('rpCashFlow').textContent = money2.format(r.cashFlow1 / 12);
+    document.getElementById('rpCoc').textContent = r.cashIn > 0 ? pct(r.coc) : '–';
+    document.getElementById('rpCap').textContent = pct(r.capRate);
+    document.getElementById('rpIrr').textContent = r.cashIn > 0 && isFinite(r.irr) ? pct(r.irr) : 'Not defined';
+    document.getElementById('rpCashIn').textContent = money.format(r.cashIn);
+    document.getElementById('rpLoan').textContent = money.format(r.loan);
+    document.getElementById('rpPayment').textContent = money2.format(r.payment) + '/mo';
+    document.getElementById('rpNoi').textContent = money.format(r.noi1);
+    document.getElementById('rpOpex').textContent = money.format(r.opex1);
+    document.getElementById('rpDscr').textContent = isFinite(r.dscr) ? r.dscr.toFixed(2) + '×' : 'No loan';
+    document.getElementById('rpSaleLabel').textContent = 'Sale price after ' + p.hold + (p.hold === 1 ? ' year' : ' years');
+    document.getElementById('rpSalePrice').textContent = money.format(r.salePrice);
+    document.getElementById('rpProceeds').textContent = money.format(r.proceeds);
+    document.getElementById('rpProfit').textContent = money.format(r.profit);
+    document.getElementById('rpSchedule').innerHTML = r.rows.map(function (row) {
+      return '<tr><td>' + row.year + '</td><td>' + money.format(row.collected) + '</td><td>' + money.format(row.opex) + '</td><td>' +
+             money.format(row.noi) + '</td><td>' + money.format(row.debt) + '</td><td>' + money.format(row.cashFlow) + '</td><td>' +
+             money.format(row.value - row.balance) + '</td></tr>';
+    }).join('');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('rpForm');
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

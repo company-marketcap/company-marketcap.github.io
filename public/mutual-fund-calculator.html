@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="en" id="mutual-fund-calculator-document" data-page-slug="mutual-fund-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mutual Fund Calculator – Free Investment Calculator</title>
+  <meta name="description" content="Use this mutual fund calculator to estimate your ending balance, net return and IRR after fees. Enter your starting investment, contributions, years and expense ratio.">
+  <link rel="canonical" href="https://company-marketcap.github.io/mutual-fund-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Mutual Fund Calculator – Free Investment Calculator">
+  <meta property="og:description" content="Use this mutual fund calculator to estimate your ending balance, net return and IRR after fees. Enter your starting investment, contributions, years and expense ratio.">
+  <meta property="og:url" content="https://company-marketcap.github.io/mutual-fund-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Mutual Fund Calculator", "url": "https://company-marketcap.github.io/mutual-fund-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Use this mutual fund calculator to estimate your ending balance, net return and IRR after fees. Enter your starting investment, contributions, years and expense ratio."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Investment Returns & Growth", "item": "https://company-marketcap.github.io/financial-calculators.html#investment-calculators"}, {"@type": "ListItem", "position": 4, "name": "Mutual Fund Calculator", "item": "https://company-marketcap.github.io/mutual-fund-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does a mutual fund calculator show?", "acceptedAnswer": {"@type": "Answer", "text": "It projects the ending value of a fund investment from your starting amount, regular contributions, expected return and holding period, then subtracts sales charges and operating expenses so you see the net return and IRR you actually keep."}}, {"@type": "Question", "name": "What is an expense ratio and where do I find it?", "acceptedAnswer": {"@type": "Answer", "text": "The expense ratio is the fund's yearly cost as a percentage of its assets, covering management, distribution and other operating expenses. It appears in the fund's prospectus and on its fact sheet; enter it in the operating expenses field."}}, {"@type": "Question", "name": "What is the difference between a front-end and a deferred sales charge?", "acceptedAnswer": {"@type": "Answer", "text": "A front-end load is taken from each purchase before it is invested. A deferred (back-end) load is charged when you sell, usually on the lesser of your original investment or the final value, and it often shrinks to zero the longer you hold."}}, {"@type": "Question", "name": "What rate of return should I enter?", "acceptedAnswer": {"@type": "Answer", "text": "Use a realistic long-term assumption for the fund's asset class rather than last year's result. Past performance does not guarantee future returns, so run a conservative and an optimistic case, or use the variance range to see both at once."}}, {"@type": "Question", "name": "What is the net IRR in the results?", "acceptedAnswer": {"@type": "Answer", "text": "The net IRR is the single yearly rate that turns all your dated deposits into the ending value after charges. It will sit below the gross return by roughly the operating expenses plus the drag from any sales charge."}}, {"@type": "Question", "name": "Does the calculator include taxes?", "acceptedAnswer": {"@type": "Answer", "text": "No. Results are pre-tax and assume dividends and gains are reinvested. Taxes on a taxable account or fund distributions would lower the final figure."}}, {"@type": "Question", "name": "How does compounding frequency change the result?", "acceptedAnswer": {"@type": "Answer", "text": "More frequent compounding gives a slightly higher ending value at the same stated rate. Over long periods the difference between monthly and daily is small, but annual compounding is noticeably lower."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="mutual-fund-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="mutual-fund-calculator" data-page-type="calculator">
+  <a id="mutual-fund-calculator-skip-link" href="#mutual-fund-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="mutual-fund-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="mutual-fund-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="mutual-fund-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="mutual-fund-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="mutual-fund-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="mutual-fund-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="mutual-fund-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="mutual-fund-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="mutual-fund-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="mutual-fund-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="mutual-fund-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="mutual-fund-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="mutual-fund-calculator-header-search-status" aria-controls="mutual-fund-calculator-header-search-results" data-search-input="header">
+              <p id="mutual-fund-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="mutual-fund-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="mutual-fund-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="mutual-fund-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="mutual-fund-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="mutual-fund-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="mutual-fund-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="mutual-fund-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="mutual-fund-calculator-mobile-search-status" aria-controls="mutual-fund-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="mutual-fund-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="mutual-fund-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="mutual-fund-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="mutual-fund-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="mutual-fund-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="mutual-fund-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="mutual-fund-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="mutual-fund-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="mutual-fund-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="mutual-fund-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="mutual-fund-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="mutual-fund-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="mutual-fund-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="mutual-fund-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="mutual-fund-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="mutual-fund-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="mutual-fund-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="mutual-fund-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="mutual-fund-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="mutual-fund-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="mutual-fund-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="mutual-fund-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="mutual-fund-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="mutual-fund-calculator-sidebar-search-status" aria-controls="mutual-fund-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="mutual-fund-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="mutual-fund-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="mutual-fund-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="mutual-fund-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="mutual-fund-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="mutual-fund-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="mutual-fund-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="mutual-fund-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="mutual-fund-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="mutual-fund-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="mutual-fund-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="mutual-fund-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="mutual-fund-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="mutual-fund-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="mutual-fund-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="mutual-fund-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="mutual-fund-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="mutual-fund-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="mutual-fund-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators" aria-current="true">Investment Returns</a></li><li><a id="mutual-fund-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="mutual-fund-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="mutual-fund-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="mutual-fund-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="mutual-fund-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="mutual-fund-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="mutual-fund-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="mutual-fund-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="mutual-fund-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="mutual-fund-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="mutual-fund-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="mutual-fund-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="mutual-fund-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="mutual-fund-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="mutual-fund-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="mutual-fund-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="mutual-fund-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="mutual-fund-calculator" data-calculator-slug="mutual-fund-calculator" data-sub-category-slug="investment-calculators">
+      <aside id="mutual-fund-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="mutual-fund-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="mutual-fund-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="mutual-fund-calculator-ad-top-leaderboard">
+            <ins id="mutual-fund-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("mutual-fund-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="mutual-fund-calculator-intro-area" class="space-y-4">
+        <nav id="mutual-fund-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="mutual-fund-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="mutual-fund-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="mutual-fund-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="mutual-fund-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#investment-calculators" itemprop="item"><span itemprop="name">Investment Returns &amp; Growth</span></a><meta itemprop="position" content="3"></li>
+            <li id="mutual-fund-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Mutual Fund Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/mutual-fund-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="mutual-fund-calculator-hero-section" aria-labelledby="mutual-fund-calculator-hero-heading" data-section="hero">
+          <h1 id="mutual-fund-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Mutual Fund Calculator – Free Investment Calculator</h1>
+          <p id="mutual-fund-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Wondering what your fund will really be worth once costs take their cut? This mutual fund calculator projects your ending balance from your starting amount, yearly deposits, holding period, expected return and costs, so you see the net amount you keep instead of the headline number. Because investing in a fund means paying for professional management, the result also shows how those charges compound over time. <!-- SILO_START:slot_a -->Next, open the <a class="silo-link" href="/investment-calculator.html">investment calculator online</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="mutual-fund-calculator-tool" class="space-y-6" data-page-slug="mutual-fund-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="mfFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="mfForm" class="space-y-5" novalidate aria-labelledby="mfFormHeading">
+      <h2 id="mfFormHeading" class="panel-heading">Enter your fund details</h2>
+      <div class="form-row form-row-2">
+        <div><label for="mfInitial" class="form-label">Initial investment</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="mfInitial" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="10000" inputmode="decimal"></div></div>
+        <div><label for="mfMonthly" class="form-label">Monthly investment</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="mfMonthly" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="200" inputmode="decimal"></div></div>
+      </div>
+      <div class="form-row form-row-2">
+        <div><label for="mfReturn" class="form-label">Annual return before fees</label>
+          <div class="input-group"><input type="number" id="mfReturn" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="-50" max="50" step="0.1" value="6" inputmode="decimal"><span class="input-affix">%</span></div></div>
+        <div><label for="mfYears" class="form-label">Years held</label>
+          <div class="input-group"><input type="number" id="mfYears" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1" max="60" step="1" value="10" inputmode="numeric"><span class="input-affix">yrs</span></div></div>
+      </div>
+      <div class="form-row form-row-2">
+        <div><label for="mfExpense" class="form-label">Expense ratio</label>
+          <div class="input-group"><input type="number" id="mfExpense" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="10" step="0.01" value="0.75" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">Yearly operating expenses, from the fund's prospectus.</p></div>
+        <div><label for="mfLoad" class="form-label">Front-end sales charge</label>
+          <div class="input-group"><input type="number" id="mfLoad" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="10" step="0.25" value="3" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">Taken from every purchase. Use 0 for a no-load fund.</p></div>
+      </div>
+      <details class="form-details">
+        <summary class="form-details-summary">More options</summary>
+        <div class="mt-4 space-y-5">
+          <div><label for="mfDeferred" class="form-label">Deferred sales charge when you sell</label>
+            <div class="input-group"><input type="number" id="mfDeferred" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="10" step="0.25" value="0" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">Back-end load for the year you sell, charged on the smaller of the amount you invested and the ending value.</p></div>
+          <div><label for="mfAccountFee" class="form-label">Annual account fee</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="mfAccountFee" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="5" value="0" inputmode="decimal"></div><p class="form-hint">A flat yearly fee taken from the account, if your fund or broker charges one.</p></div>
+        </div>
+      </details>
+      <p id="mfError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="mfResults" aria-live="polite" aria-labelledby="mfResultsHeading">
+      <h2 id="mfResultsHeading" class="panel-heading">Your results</h2>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p class="stat-label">Ending value after fees</p><p id="mfEnding" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Total invested</p><p id="mfInvested" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Fees and charges paid</p><p id="mfFees" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Total cost of fees</p><p id="mfCost" class="stat-value">–</p></div>
+      </div>
+      <dl class="key-value-list mt-4">
+        <div class="key-value-row"><dt>Front-end sales charges</dt><dd id="mfLoadPaid">–</dd></div>
+        <div class="key-value-row"><dt>Operating expenses</dt><dd id="mfExpensePaid">–</dd></div>
+        <div class="key-value-row"><dt>Account fees</dt><dd id="mfAccountPaid">–</dd></div>
+        <div class="key-value-row"><dt>Deferred sales charge</dt><dd id="mfDeferredPaid">–</dd></div>
+        <div class="key-value-row"><dt>Value with no fees</dt><dd id="mfNoFee">–</dd></div>
+        <div class="key-value-row"><dt>Gain after fees</dt><dd id="mfGain">–</dd></div>
+        <div class="key-value-row"><dt>Your annual return after fees</dt><dd id="mfNetReturn">–</dd></div>
+      </dl>
+      <p class="form-hint mt-3">Total cost of fees is the gap between the no-fee value and your ending value: the fees themselves plus the growth they would have earned.</p>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="mfScheduleHeading" data-section="schedule">
+  <h2 id="mfScheduleHeading" class="panel-heading">Year-by-year fund value</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">How your balance and the fees you have paid build up, next to the same plan with no fees.</p>
+  <div class="table-scroll mt-5 max-h-[520px]" tabindex="0" role="region" aria-labelledby="mfScheduleHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Year</th><th scope="col">Invested</th><th scope="col">Fees paid</th><th scope="col">Balance</th><th scope="col">With no fees</th></tr></thead>
+      <tbody id="mfSchedule"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="mutual-fund-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="mutual-fund-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Wondering what your fund will really be worth once costs take their cut? This mutual fund calculator projects your ending balance from your starting amount, yearly deposits, holding period, expected return and costs, so you see the net amount you keep instead of the headline number. Because investing in a fund means paying for professional management, the result also shows how those charges compound over time. <!-- SILO_START:slot_a_m -->Next, open the <a class="silo-link" href="/investment-calculator.html">investment calculator online</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="mutual-fund-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="mutual-fund-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="mutual-fund-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="mutual-fund-calculator-ad-in-feed">
+            <ins id="mutual-fund-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("mutual-fund-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="mutual-fund-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="mutual-fund-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="mutual-fund-calculator-guide-heading-1">
+<h2 id="mutual-fund-calculator-guide-heading-1">How the Mutual Fund Calculator Estimates Your Balance After Costs</h2>
+<p>The tool takes your assumed <strong>annual return</strong>, subtracts the fund's yearly cost to get a net yearly rate, and then applies compound interest to your starting balance and to every deposit you add. Contributions are treated as end-of-year deposits, which keeps the math transparent and easy to check by hand. <!-- SILO_START:slot_b -->The <a class="silo-link" href="/average-return-calculator.html">average return calculator online</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_b --></p>
+<p>First, the net yearly rate (return minus the fund's yearly cost):</p>
+<p>$$i = r - e$$</p>
+<p>Then the future value of your starting balance plus a stream of equal yearly deposits:</p>
+<p>$$FV = P \times (1 + i)^{n} + C \times \frac{(1 + i)^{n} - 1}{i}$$</p>
+<ul>
+<li><strong>P</strong> is the amount you invest on day one.</li>
+<li><strong>C</strong> is the deposit you make at the end of each year.</li>
+<li><strong>r</strong> is the expected gross yearly return and <strong>e</strong> is the yearly cost taken from the fund's assets.</li>
+<li><strong>n</strong> is the number of years you stay invested.</li>
+</ul>
+<p>If the fund charges a one-time load on purchases, each deposit is reduced by that percentage before it starts compounding. Your gain is then simply the final value minus everything you paid in:</p>
+<p>$$\text{Gain} = FV - (P + C \times n)$$</p>
+
+<p>This calculator, like any projection, leaves some things out. The model assumes a constant return every year, whereas real markets rise and fall, so two funds with the same average can finish with very different balances. It also assumes you keep investing through downturns, which is where most plans are actually tested. Use the output to compare options against each other, such as a cheaper fund against a pricier one, rather than as a forecast of a single exact figure. Whichever option builds more wealth under identical assumptions is the better deal.</p>
+        </section>
+        <section id="mutual-fund-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="mutual-fund-calculator-guide-heading-2">
+<h2 id="mutual-fund-calculator-guide-heading-2">Inputs for This Investment Calculator</h2>
+<p>Each field maps to one term in the formulas above. Fill them in with realistic assumptions, because the output is only as sound as the numbers you provide. <!-- SILO_START:slot_c -->If you want to see how the figures change, the <a class="silo-link" href="/roi-calculator.html">roi calculator online</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_c --></p>
+
+<h3>Initial Investment and Annual Contribution</h3>
+<p>Enter the lump sum you are putting in on day one, then the amount you plan to add every year. Anyone investing on a regular schedule can start small. Many funds set a minimum opening amount, but regular deposits often satisfy it, so a small start is fine as long as you keep adding. Every extra dollar you can invest early has more years to work, so even a modest increase in the yearly deposit changes the final number noticeably.</p>
+
+<h3>Annual Return and Time Horizon</h3>
+<p>The expected yearly gain you type in is an assumption, not a promise. Past performance of a fund is a reasonable reference point, yet it does not guarantee future results, so test a conservative figure alongside an optimistic one. The longer you stay invested, the more a long-term plan benefits from compounding, and the more any difference in yearly cost matters.</p>
+
+<h3>Expense Ratio and Annual Fees</h3>
+<p>The expense ratio bundles management fees, 12b-1 fees and other operating expenses into one yearly percentage of the fund's assets. You never see an invoice; the cost is deducted from the fund's value every day, which is why it is easy to overlook and so important to enter correctly.</p>
+
+<h3>Sales Charge: Front-End Load or Deferred Sales Charge</h3>
+<p>Some funds charge a commission when you buy, called a front-end sales charge, while others charge when you sell, known as a back-end load. A contingent deferred sales charge shrinks the longer you hold the shares and can reach zero. Funds that skip these commissions are called no-load funds, and they simply need a 0% entry in this field. Shares are bought and sold at the fund's net asset value, so a load is a separate cost on top of that price. Smaller one-time items such as purchase fees and exchange fees are not modelled, so add them to your own estimate if your fund charges them.</p>
+        </section>
+        <section id="mutual-fund-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="mutual-fund-calculator-guide-heading-3">
+<h2 id="mutual-fund-calculator-guide-heading-3">Worked Example: Investment Returns Calculator Results</h2>
+<p>Suppose you open a stock fund with <strong>$12,500</strong>, add <strong>$3,600</strong> at the end of each year for <strong>15 years</strong>, expect a gross <strong>7.4%</strong> yearly return and pay a <strong>0.85%</strong> yearly cost with no load. The net rate is 7.4% − 0.85% = 6.55%, so the multiplier over 15 years is 1.0655<sup>15</sup> ≈ 2.5779.</p>
+<table>
+<thead>
+<tr><th>Result</th><th>Value</th></tr>
+</thead>
+<tbody>
+<tr><td>Initial investment</td><td>$12,500.00</td></tr>
+<tr><td>Total contributions</td><td>$54,000.00</td></tr>
+<tr><td>Total principal</td><td>$66,500.00</td></tr>
+<tr><td>Ending value</td><td>$119,765.14</td></tr>
+<tr><td>Net return</td><td>$53,265.14</td></tr>
+<tr><td>Net IRR</td><td>6.55% per year</td></tr>
+<tr><td>Total charges and fees</td><td>$10,009.31</td></tr>
+</tbody>
+</table>
+<p>The balance passes $37,683.90 after year 5 and $72,269.09 after year 10 before reaching $119,765.14 at year 15. Most of the gain arrives late, because compounding works on an ever larger base.</p>
+<figure><img src="/assets/images/tools/mutual-fund-calculator/mutual-fund-calculator-balance-growth-chart.svg" alt="Line chart of a mutual fund balance growing from $12,500 to $119,765 over 15 years with yearly deposits"><figcaption>The example balance at years 5, 10 and 15 at a 6.55% net yearly rate.</figcaption></figure>
+
+<h3>Net Return and Internal Rate of Return</h3>
+<p>The net gain of $53,265.14 is what you walk away with beyond your deposits. The internal rate of return is the single yearly rate that turns your dated deposits into the final balance; with end-of-year deposits it lands on exactly 6.55%, the gross rate less the yearly cost.</p>
+
+<h3>Total Principal vs. Ending Balance</h3>
+<p>Your own money accounts for $66,500, or about 55.5% of the final value; the remaining 44.5% is investment gain. Charges are the gap between the gross scenario at 7.4% ($129,774.45) and the net scenario ($119,765.14), which is $10,009.31 that never reached you.</p>
+<figure><img src="/assets/images/tools/mutual-fund-calculator/mutual-fund-ending-value-breakdown.svg" alt="Donut chart splitting a $119,765 ending value into initial investment, contributions and net return"><figcaption>Your deposits supply 55.5% of the final balance; the investment gain supplies 44.5%.</figcaption></figure>
+        </section>
+        <section id="mutual-fund-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="mutual-fund-calculator-guide-heading-4">
+<h2 id="mutual-fund-calculator-guide-heading-4">Fees That Shrink Your Investment Calculator Results</h2>
+<p>Cost is the one variable you control before you invest. Holding every other input from the example fixed, only the yearly cost and the load change the outcome below:</p>
+<ul>
+<li>A 0.10% index fund ends at <strong>$128,549.80</strong>.</li>
+<li>The 0.85% fund from the example ends at <strong>$119,765.14</strong>.</li>
+<li>The same 0.85% fund with a 3% front-end load ends at $116,172.18.</li>
+<li>A 2.00% fund ends at $107,574.80.</li>
+</ul>
+<p>The gap between the cheapest and the priciest option is $20,975.00, which is more than the entire $12,500 you started with.</p>
+<figure><img src="/assets/images/tools/mutual-fund-calculator/mutual-fund-expense-ratio-impact-comparison.svg" alt="Bar chart comparing ending values for 0.10%, 0.85% and 2.00% expense ratio funds and a 3% load"><figcaption>Final balance after 15 years under four cost scenarios with identical deposits.</figcaption></figure>
+
+<h3>Transaction Fees and Periodic Fees</h3>
+<p>One-time costs are charged when you trade, while ongoing costs are charged every year you hold the fund. Fees of the second kind usually matter more, because they apply to the whole balance, every year, and they reduce the base that your future gains are calculated on. This calculator models only the yearly cost and the one-time load, so fold any other ongoing charges into the yearly cost field.</p>
+
+<h3>Index Funds Versus Actively Managed Funds</h3>
+<p>Passively managed funds copy a market index such as the S&P 500, so they need little research and can keep costs very low. Actively managed funds employ fund managers who try to beat a benchmark, and they usually charge more for it. Exchange-traded funds (ETFs) track an index in the same way but trade like shares during the day. Index funds are therefore a common reference point: use roughly 0.10% for an index fund and 2.00% for a costly active one, as in the scenarios above, to judge whether a higher fee is worth paying.</p>
+        </section>
+        <section id="mutual-fund-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="mutual-fund-calculator-guide-heading-5">
+<h2 id="mutual-fund-calculator-guide-heading-5">Choosing Between Two Funds With a Mutual Fund Return Calculator</h2>
+<p>Priya Raman has $8,350 saved and can add $2,175 a year for the next 22 years. Her plan has two candidates: Fund A charges 0.58% a year but takes a 4.25% load on purchases, and Fund B charges 0.74% with no load. At first glance Fund A looks cheaper, since its yearly cost is 0.16 percentage points lower.</p>
+<p>She keeps the expected gross return at 8.1% for both and enters each fund in turn: starting amount $8,350, yearly deposit $2,175, 22 years, yearly cost 0.58%, load 4.25%. The load removes $354.88 from her first deposit and $92.44 from every later one before anything compounds.</p>
+<table>
+<thead>
+<tr><th>Fund</th><th>Net rate</th><th>Final balance</th></tr>
+</thead>
+<tbody>
+<tr><td>Fund A (0.58%, 4.25% load)</td><td>7.52%</td><td>$148,218.27</td></tr>
+<tr><td>Fund B (0.74%, no load)</td><td>7.36%</td><td>$151,246.09</td></tr>
+</tbody>
+</table>
+<p>Fund B finishes $3,027.82 ahead on total deposits of $56,200, so the lower yearly cost never makes up for the commission. The 4.25% load sits comfortably under the 8.5% ceiling FINRA sets on sales charges, which is why Fund A is perfectly legal; it is just the weaker deal at this holding period.</p>
+<p>Before deciding, Priya reruns both with the return cut to 6.0%. Fund B still wins, $112,164.47 against $109,828.16, so the ranking survives a weaker market. She opens Fund B and sets up a $2,175 yearly transfer.</p>
+        </section>
+        <section id="mutual-fund-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="mutual-fund-calculator-guide-heading-6">
+<h2 id="mutual-fund-calculator-guide-heading-6">Reading Your Investment Returns Calculator Results Against Your Goals</h2>
+<p>A projected number only helps when you compare it with something you actually need. Decide what the money is for, then judge whether the plan gets there.</p>
+
+<h3>Investment Goal and Investment Length</h3>
+<p>Write down the target, such as a nest egg for retirement, and match it to your wider investment strategy and savings habits, and the date you will need it. Then adjust for the expected inflation rate, because prices rise and a future dollar buys less. Your risk tolerance decides how much volatility you can accept along the way, and a financial professional can help you choose cautious or optimistic return assumptions to enter. Compare the projected balance with that target, and rerun the tool with other funds' costs if it falls short. Money held in retirement accounts such as a Roth IRA grows differently from a taxable account, and this projection ignores taxes and any reinvested dividends, so treat the figure as a pre-tax planning estimate.</p>
+
+<h3>Types of Mutual Funds and How They Differ</h3>
+<p>Check a fund's stated investment objectives first, since they tell you whether it targets income, capital preservation or appreciation. Fund type guides which assumed return and yearly cost you should enter: stock funds justify a higher return assumption than cash-like holdings, and tracker funds a lower cost. Funds that share an objective can still differ in structure and risk:</p>
+<dl>
+<dt>Growth stock mutual funds</dt>
+<dd>Hold stocks and aim to beat inflation over decades; categories include growth and income, aggressive growth and international funds.</dd>
+<dt>Money market funds and hybrid funds</dt>
+<dd>Money market funds hold short-term debt for stability, while hybrid funds mix stocks and bonds in one portfolio.</dd>
+<dt>Open-end funds, closed-end funds and unit investment trusts</dt>
+<dd>Open-end funds issue and redeem shares at the fund's value, closed-end funds trade at a market price with a fixed number of shares outstanding, and unit investment trusts hold a fixed basket until they end.</dd>
+</dl>
+<p>Compared with CDs, commodities or real estate, these pooled securities offer diversification, low investment minimums and daily liquidity, so a projection for mutual funds is a sensible first test, and many mutual funds suit investors who want a diversified holding of stocks and bonds. If the projected balance beats your target, you can buy the fund through a brokerage account; before you do, rerun the same inputs for an index fund tracking a market index such as the S&P 500 to see whether a cheaper fund does the job.</p>
+        </section>
+      </div>
+
+      <section id="mutual-fund-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="mutual-fund-calculator-faq-heading" data-section="faq">
+        <h2 id="mutual-fund-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Mutual Fund Calculator questions</h2>
+        <div id="mutual-fund-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="mutual-fund-calculator-faq-1" class="faq-item" open><summary id="mutual-fund-calculator-faq-1-summary" class="faq-summary"><h3 id="mutual-fund-calculator-faq-1-question" class="faq-question">What does a mutual fund calculator show?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="mutual-fund-calculator-faq-1-answer" class="faq-answer"><p>It projects the ending value of a fund investment from your starting amount, regular contributions, expected return and holding period, then subtracts sales charges and operating expenses so you see the net return and IRR you actually keep.</p></div></details>
+          <details id="mutual-fund-calculator-faq-2" class="faq-item" open><summary id="mutual-fund-calculator-faq-2-summary" class="faq-summary"><h3 id="mutual-fund-calculator-faq-2-question" class="faq-question">What is an expense ratio and where do I find it?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="mutual-fund-calculator-faq-2-answer" class="faq-answer"><p>The expense ratio is the fund&#x27;s yearly cost as a percentage of its assets, covering management, distribution and other operating expenses. It appears in the fund&#x27;s prospectus and on its fact sheet; enter it in the operating expenses field.</p></div></details>
+          <details id="mutual-fund-calculator-faq-3" class="faq-item" open><summary id="mutual-fund-calculator-faq-3-summary" class="faq-summary"><h3 id="mutual-fund-calculator-faq-3-question" class="faq-question">What is the difference between a front-end and a deferred sales charge?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="mutual-fund-calculator-faq-3-answer" class="faq-answer"><p>A front-end load is taken from each purchase before it is invested. A deferred (back-end) load is charged when you sell, usually on the lesser of your original investment or the final value, and it often shrinks to zero the longer you hold.</p></div></details>
+          <details id="mutual-fund-calculator-faq-4" class="faq-item" open><summary id="mutual-fund-calculator-faq-4-summary" class="faq-summary"><h3 id="mutual-fund-calculator-faq-4-question" class="faq-question">What rate of return should I enter?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="mutual-fund-calculator-faq-4-answer" class="faq-answer"><p>Use a realistic long-term assumption for the fund&#x27;s asset class rather than last year&#x27;s result. Past performance does not guarantee future returns, so run a conservative and an optimistic case, or use the variance range to see both at once.</p></div></details>
+          <details id="mutual-fund-calculator-faq-5" class="faq-item" open><summary id="mutual-fund-calculator-faq-5-summary" class="faq-summary"><h3 id="mutual-fund-calculator-faq-5-question" class="faq-question">What is the net IRR in the results?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="mutual-fund-calculator-faq-5-answer" class="faq-answer"><p>The net IRR is the single yearly rate that turns all your dated deposits into the ending value after charges. It will sit below the gross return by roughly the operating expenses plus the drag from any sales charge.</p></div></details>
+          <details id="mutual-fund-calculator-faq-6" class="faq-item" open><summary id="mutual-fund-calculator-faq-6-summary" class="faq-summary"><h3 id="mutual-fund-calculator-faq-6-question" class="faq-question">Does the calculator include taxes?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="mutual-fund-calculator-faq-6-answer" class="faq-answer"><p>No. Results are pre-tax and assume dividends and gains are reinvested. Taxes on a taxable account or fund distributions would lower the final figure.</p></div></details>
+          <details id="mutual-fund-calculator-faq-7" class="faq-item" open><summary id="mutual-fund-calculator-faq-7-summary" class="faq-summary"><h3 id="mutual-fund-calculator-faq-7-question" class="faq-question">How does compounding frequency change the result?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="mutual-fund-calculator-faq-7-answer" class="faq-answer"><p>More frequent compounding gives a slightly higher ending value at the same stated rate. Over long periods the difference between monthly and daily is small, but annual compounding is noticeably lower.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="mutual-fund-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="mutual-fund-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="mutual-fund-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="mutual-fund-calculator-ad-bottom-leaderboard">
+            <ins id="mutual-fund-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("mutual-fund-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="mutual-fund-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="mutual-fund-calculator-right-rail-top" class="mb-6">
+        <aside id="mutual-fund-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="mutual-fund-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="mutual-fund-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="mutual-fund-calculator-ad-right-rail-rectangle">
+            <ins id="mutual-fund-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("mutual-fund-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="mutual-fund-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="mutual-fund-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="mutual-fund-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="mutual-fund-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="mutual-fund-calculator-ad-right-rail-skyscraper">
+            <ins id="mutual-fund-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("mutual-fund-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="mutual-fund-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="mutual-fund-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="mutual-fund-calculator-footer-brand">
+        <a id="mutual-fund-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="mutual-fund-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="mutual-fund-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="mutual-fund-calculator-footer-categories" aria-labelledby="mutual-fund-calculator-footer-categories-heading">
+        <h2 id="mutual-fund-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="mutual-fund-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="mutual-fund-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="mutual-fund-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="mutual-fund-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="mutual-fund-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="mutual-fund-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="mutual-fund-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="mutual-fund-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="mutual-fund-calculator-footer-company" aria-labelledby="mutual-fund-calculator-footer-company-heading">
+        <h2 id="mutual-fund-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="mutual-fund-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="mutual-fund-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="mutual-fund-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="mutual-fund-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="mutual-fund-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="mutual-fund-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="mutual-fund-calculator-footer-bottom" class="border-t border-line">
+      <p id="mutual-fund-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="mutual-fund-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Mutual fund value after fees, simulated month by month:
+  //   purchase: each deposit is reduced by the front-end sales charge (load);
+  //   each month: balance grows at the monthly rate equivalent to the gross annual return,
+  //     (1 + r)^(1/12) - 1, then the expense ratio / 12 is deducted from the balance,
+  //     then the month's net deposit is added (end of month);
+  //   each year end: the flat account fee is deducted;
+  //   at sale: deferred sales charge = rate x min(total invested, value).
+  // "Value with no fees" runs the same plan with every fee set to zero; cost of fees is the gap.
+  // Net annual return is the money-weighted return (IRR of the monthly deposits and the ending
+  // value), annualized as (1 + monthly)^12 - 1.
+  // Verified: with no fees, $10,000 at 6% for 10 years = 10,000 x 1.06^10 = $17,908.48;
+  // $0 initial + $100/month at a 12.6825% annual rate (1% a month) for 1 year = $1,268.25
+  // (annuity factor 12.6825); a 2% load and 0.5% expense ratio on $10,000 at 0% for 1 year
+  // = 9,800 x (1 - 0.005/12)^12 = $9,751.11; net return with no fees equals the gross return.
+  // Cross-check: calculator.net's default ($20,000 + $1,000/month, 5%, 5 years, 2% load,
+  // 0.5% expenses) shows $90,077.09 and $1,323.40 of expenses; this model gives $90,011.17
+  // and $1,328.78 (within 0.1%; the sites time growth and fee deductions differently).
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 });
+
+  // --- calc start
+  function simulate(p) {
+    var rm = Math.pow(1 + p.rate, 1 / 12) - 1;
+    var load = p.load, er = p.expense;
+    var bal = p.initial * (1 - load), plain = p.initial;
+    var invested = p.initial, loadPaid = p.initial * load, expensePaid = 0, accountPaid = 0, deferredPaid = 0;
+    var rows = [];
+    for (var m = 1; m <= p.years * 12; m++) {
+      bal *= 1 + rm;
+      var exp = bal * er / 12;
+      bal -= exp;
+      expensePaid += exp;
+      bal += p.monthly * (1 - load);
+      loadPaid += p.monthly * load;
+      invested += p.monthly;
+      plain = plain * (1 + rm) + p.monthly;
+      if (m % 12 === 0) {
+        var fee = Math.min(p.accountFee, Math.max(bal, 0));
+        bal -= fee;
+        accountPaid += fee;
+        if (m === p.years * 12) {
+          deferredPaid = p.deferred * Math.max(0, Math.min(invested, bal));
+          bal -= deferredPaid;
+        }
+        rows.push({ year: m / 12, invested: invested, fees: loadPaid + expensePaid + accountPaid + deferredPaid, balance: bal, plain: plain });
+      }
+    }
+    return { ending: bal, plain: plain, invested: invested, loadPaid: loadPaid, expensePaid: expensePaid,
+             accountPaid: accountPaid, deferredPaid: deferredPaid, rows: rows };
+  }
+
+  // Monthly money-weighted return: solves P(1+i)^n + M * sum (1+i)^(n-t) = ending by bisection.
+  function netAnnualReturn(initial, monthly, months, ending) {
+    if (ending <= 0) return -1;
+    function fv(i) {
+      var v = initial;
+      for (var t = 1; t <= months; t++) v = v * (1 + i) + monthly;
+      return v - ending;
+    }
+    var lo = -0.99, hi = 1;
+    if (fv(lo) > 0 || fv(hi) < 0) return NaN;
+    for (var k = 0; k < 200; k++) {
+      var mid = (lo + hi) / 2;
+      if (fv(mid) > 0) hi = mid; else lo = mid;
+      if (hi - lo < 1e-13) break;
+    }
+    return Math.pow(1 + (lo + hi) / 2, 12) - 1;
+  }
+  // --- calc end
+
+  function num(id) {
+    var v = parseFloat(document.getElementById(id).value);
+    return isNaN(v) ? NaN : v;
+  }
+
+  function pct(x) {
+    return (x * 100).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '%';
+  }
+
+  var OUT = ['mfEnding', 'mfInvested', 'mfFees', 'mfCost', 'mfLoadPaid', 'mfExpensePaid', 'mfAccountPaid',
+             'mfDeferredPaid', 'mfNoFee', 'mfGain', 'mfNetReturn'];
+
+  function update() {
+    var p = {
+      initial: num('mfInitial'), monthly: num('mfMonthly'), rate: num('mfReturn'), years: Math.round(num('mfYears')),
+      expense: num('mfExpense'), load: num('mfLoad'), deferred: num('mfDeferred'), accountFee: num('mfAccountFee')
+    };
+    var error = document.getElementById('mfError');
+    var msg = '';
+    if ([p.initial, p.monthly, p.accountFee].some(isNaN) || p.initial < 0 || p.monthly < 0 || p.accountFee < 0 ||
+        p.initial > 1e10 || p.monthly > 1e9 || p.accountFee > 1e6) msg = 'Enter amounts of $0 or more.';
+    else if (p.initial === 0 && p.monthly === 0) msg = 'Enter an initial investment, a monthly investment or both.';
+    else if (isNaN(p.rate) || p.rate < -50 || p.rate > 50) msg = 'Enter an annual return between -50% and 50%.';
+    else if (isNaN(p.years) || p.years < 1 || p.years > 60) msg = 'Enter a holding period of 1 to 60 years.';
+    else if ([p.expense, p.load, p.deferred].some(function (v) { return isNaN(v) || v < 0 || v > 10; }))
+      msg = 'Enter fee percentages between 0% and 10%.';
+    error.hidden = !msg;
+    error.textContent = msg;
+    if (msg) {
+      OUT.forEach(function (id) { document.getElementById(id).textContent = '–'; });
+      document.getElementById('mfSchedule').innerHTML = '';
+      return;
+    }
+    p.rate /= 100; p.expense /= 100; p.load /= 100; p.deferred /= 100;
+    var r = simulate(p);
+    var fees = r.loadPaid + r.expensePaid + r.accountPaid + r.deferredPaid;
+    var net = netAnnualReturn(p.initial, p.monthly, p.years * 12, r.ending);
+    document.getElementById('mfEnding').textContent = money.format(r.ending);
+    document.getElementById('mfInvested').textContent = money.format(r.invested);
+    document.getElementById('mfFees').textContent = money.format(fees);
+    document.getElementById('mfCost').textContent = money.format(r.plain - r.ending);
+    document.getElementById('mfLoadPaid').textContent = money.format(r.loadPaid);
+    document.getElementById('mfExpensePaid').textContent = money.format(r.expensePaid);
+    document.getElementById('mfAccountPaid').textContent = money.format(r.accountPaid);
+    document.getElementById('mfDeferredPaid').textContent = money.format(r.deferredPaid);
+    document.getElementById('mfNoFee').textContent = money.format(r.plain);
+    document.getElementById('mfGain').textContent = money.format(r.ending - r.invested);
+    document.getElementById('mfNetReturn').textContent = isFinite(net) ? pct(net) : '–';
+    document.getElementById('mfSchedule').innerHTML = r.rows.map(function (row) {
+      return '<tr><td>' + row.year + '</td><td>' + money.format(row.invested) + '</td><td>' + money.format(row.fees) +
+             '</td><td>' + money.format(row.balance) + '</td><td>' + money.format(row.plain) + '</td></tr>';
+    }).join('');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('mfForm');
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

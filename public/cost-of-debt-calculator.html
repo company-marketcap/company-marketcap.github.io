@@ -1,0 +1,736 @@
+<!doctype html>
+<html lang="en" id="cost-of-debt-calculator-document" data-page-slug="cost-of-debt-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cost of Debt Calculator: After-Tax Cost of Debt</title>
+  <meta name="description" content="Use this free cost of debt calculator to enter your total debt and annual interest expense, then see the pre-tax rate and what you really pay on borrowed money.">
+  <link rel="canonical" href="https://company-marketcap.github.io/cost-of-debt-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Cost of Debt Calculator: After-Tax Cost of Debt">
+  <meta property="og:description" content="Use this free cost of debt calculator to enter your total debt and annual interest expense, then see the pre-tax rate and what you really pay on borrowed money.">
+  <meta property="og:url" content="https://company-marketcap.github.io/cost-of-debt-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Cost of Debt Calculator", "url": "https://company-marketcap.github.io/cost-of-debt-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Use this free cost of debt calculator to enter your total debt and annual interest expense, then see the pre-tax rate and what you really pay on borrowed money."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Credit Cards & Debt Payoff", "item": "https://company-marketcap.github.io/financial-calculators.html#credit-card-debt-calculators"}, {"@type": "ListItem", "position": 4, "name": "Cost of Debt Calculator", "item": "https://company-marketcap.github.io/cost-of-debt-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the cost of debt?", "acceptedAnswer": {"@type": "Answer", "text": "It is the effective rate a company pays to borrow money through loans and bonds, and the minimum return lenders require. This calculator reports it both before and after tax."}}, {"@type": "Question", "name": "What is the difference between pre-tax and after-tax cost of debt?", "acceptedAnswer": {"@type": "Answer", "text": "The pre-tax figure is the plain borrowing rate. The after-tax figure multiplies it by one minus the tax rate, because interest is tax-deductible and creates a tax shield."}}, {"@type": "Question", "name": "How do I find the marginal corporate tax rate?", "acceptedAnswer": {"@type": "Answer", "text": "Divide net income by pre-tax income and subtract the result from one. A company with $1,840,000 of pre-tax income and $1,398,400 of net income has a 24% rate."}}, {"@type": "Question", "name": "Should I use the coupon rate or the yield to maturity?", "acceptedAnswer": {"@type": "Answer", "text": "Use the current yield to maturity when you can find it, since it shows what lenders demand today. The coupon on older debt reflects terms agreed in the past."}}, {"@type": "Question", "name": "How do I calculate the cost of debt for a private company?", "acceptedAnswer": {"@type": "Answer", "text": "With no traded bonds, look at yields on comparable companies with a similar credit rating, or divide annual interest expense by total debt for a blended effective rate."}}, {"@type": "Question", "name": "Why is the after-tax cost of debt used in WACC?", "acceptedAnswer": {"@type": "Answer", "text": "Interest reduces taxable income, so the true cost to the company is lower than the stated rate. WACC uses the after-tax figure for its debt component to reflect that tax shield."}}, {"@type": "Question", "name": "Why does the result have to be lower than the pre-tax rate?", "acceptedAnswer": {"@type": "Answer", "text": "Any positive tax rate shrinks the effective cost. If your tax rate is zero, for example when a company has no taxable profit, the two figures are identical."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="cost-of-debt-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="cost-of-debt-calculator" data-page-type="calculator">
+  <a id="cost-of-debt-calculator-skip-link" href="#cost-of-debt-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="cost-of-debt-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="cost-of-debt-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="cost-of-debt-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="cost-of-debt-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="cost-of-debt-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="cost-of-debt-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="cost-of-debt-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="cost-of-debt-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="cost-of-debt-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="cost-of-debt-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="cost-of-debt-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="cost-of-debt-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="cost-of-debt-calculator-header-search-status" aria-controls="cost-of-debt-calculator-header-search-results" data-search-input="header">
+              <p id="cost-of-debt-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="cost-of-debt-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="cost-of-debt-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="cost-of-debt-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="cost-of-debt-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="cost-of-debt-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="cost-of-debt-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="cost-of-debt-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="cost-of-debt-calculator-mobile-search-status" aria-controls="cost-of-debt-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="cost-of-debt-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="cost-of-debt-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="cost-of-debt-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="cost-of-debt-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="cost-of-debt-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="cost-of-debt-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="cost-of-debt-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="cost-of-debt-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="cost-of-debt-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="cost-of-debt-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="cost-of-debt-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="cost-of-debt-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="cost-of-debt-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="cost-of-debt-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="cost-of-debt-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="cost-of-debt-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="cost-of-debt-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="cost-of-debt-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="cost-of-debt-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="cost-of-debt-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="cost-of-debt-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="cost-of-debt-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="cost-of-debt-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="cost-of-debt-calculator-sidebar-search-status" aria-controls="cost-of-debt-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="cost-of-debt-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="cost-of-debt-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="cost-of-debt-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="cost-of-debt-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="cost-of-debt-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="cost-of-debt-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="cost-of-debt-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="cost-of-debt-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="cost-of-debt-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="cost-of-debt-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="cost-of-debt-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="cost-of-debt-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="cost-of-debt-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="cost-of-debt-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="cost-of-debt-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators" aria-current="true">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="cost-of-debt-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="cost-of-debt-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="cost-of-debt-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="cost-of-debt-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="cost-of-debt-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="cost-of-debt-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="cost-of-debt-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="cost-of-debt-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="cost-of-debt-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="cost-of-debt-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="cost-of-debt-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="cost-of-debt-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="cost-of-debt-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="cost-of-debt-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="cost-of-debt-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="cost-of-debt-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="cost-of-debt-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="cost-of-debt-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="cost-of-debt-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="cost-of-debt-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="cost-of-debt-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="cost-of-debt-calculator" data-calculator-slug="cost-of-debt-calculator" data-sub-category-slug="credit-card-debt-calculators">
+      <aside id="cost-of-debt-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="cost-of-debt-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="cost-of-debt-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="cost-of-debt-calculator-ad-top-leaderboard">
+            <ins id="cost-of-debt-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("cost-of-debt-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="cost-of-debt-calculator-intro-area" class="space-y-4">
+        <nav id="cost-of-debt-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="cost-of-debt-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="cost-of-debt-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="cost-of-debt-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="cost-of-debt-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#credit-card-debt-calculators" itemprop="item"><span itemprop="name">Credit Cards &amp; Debt Payoff</span></a><meta itemprop="position" content="3"></li>
+            <li id="cost-of-debt-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Cost of Debt Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/cost-of-debt-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="cost-of-debt-calculator-hero-section" aria-labelledby="cost-of-debt-calculator-hero-heading" data-section="hero">
+          <h1 id="cost-of-debt-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Cost of Debt Calculator: After-Tax Cost of Debt</h1>
+          <p id="cost-of-debt-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Every dollar you borrow has a price, and the cost of debt calculator turns that price into one clear percentage. Enter your total debt and your annual interest expense, add your tax rate, and you get the pre-tax cost of debt plus the lower after-tax cost of debt you actually bear once the interest deduction is counted. Whether you run a company or just want to know what your loans really cost, the number tells you what your borrowing costs you each year. <!-- SILO_START:slot_a -->The <a class="silo-link" href="/debt-to-income-ratio-calculator.html">debt to income ratio calculator online</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="cost-of-debt-calculator-tool" class="space-y-6" data-page-slug="cost-of-debt-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="codFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="codForm" class="space-y-6" novalidate aria-labelledby="codFormHeading">
+      <h2 id="codFormHeading" class="panel-heading">Enter your debts</h2>
+      <fieldset class="form-fieldset">
+        <legend class="form-legend">Your debts</legend>
+        <p class="form-hint">Enter each debt's balance, APR and what you pay on it each month. Rows with no balance are skipped.</p>
+        <div id="codDebts" class="space-y-4"></div>
+        <button type="button" id="codAdd" class="button-secondary">Add a debt</button>
+      </fieldset>
+      <div class="form-row form-row-2">
+        <div><label for="codReturn" class="form-label">Investment return</label><div class="input-group"><input type="number" id="codReturn" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="30" step="0.5" value="7" inputmode="decimal" aria-describedby="codReturnHint"><span class="input-affix">%</span></div><p id="codReturnHint" class="form-hint">Yearly return if the interest were invested instead.</p></div>
+        <div><label for="codYearsIn" class="form-label">Growth period</label><div class="input-group"><input type="number" id="codYearsIn" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1" max="50" step="1" value="20" inputmode="numeric"><span class="input-affix">yrs</span></div></div>
+      </div>
+      <p id="codError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="codResults" aria-live="polite" aria-labelledby="codResultsHeading">
+      <h2 id="codResultsHeading" class="panel-heading">What your debt costs</h2>
+      <p class="mt-0.5 text-sm text-ink-muted">Interest at today's balances.</p>
+      <div class="stat-grid mt-4">
+        <div class="stat-card"><p class="stat-label">Per day</p><p id="codDay" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Per month</p><p id="codMonth" class="stat-value">–</p></div>
+        <div class="stat-card stat-card-highlight"><p class="stat-label">Per year</p><p id="codYear" class="stat-value">–</p></div>
+      </div>
+      <p class="mt-6 text-sm text-ink-muted">Until every debt is paid off at your current payments.</p>
+      <div class="stat-grid mt-3">
+        <div class="stat-card"><p class="stat-label">Total interest still to pay</p><p id="codTotal" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Debt-free date</p><p id="codDate" class="stat-value">–</p><p id="codDateNote" class="mt-1 text-xs text-ink-muted"></p></div>
+        <div class="stat-card stat-card-highlight"><p class="stat-label">That interest, invested instead</p><p id="codGrow" class="stat-value">–</p><p id="codGrowNote" class="mt-1 text-xs text-ink-muted"></p></div>
+      </div>
+      <p id="codHorizonNote" class="callout callout-note mt-5 text-sm" hidden></p>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="codByDebtHeading" data-section="by-debt">
+  <h2 id="codByDebtHeading" class="panel-heading">Cost of each debt</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">The interest share is how much of this month's payment goes to interest rather than the balance.</p>
+  <div class="table-scroll mt-5" tabindex="0" role="region" aria-labelledby="codByDebtHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Debt</th><th scope="col">Balance</th><th scope="col">APR</th><th scope="col">Per day</th><th scope="col">Per year</th><th scope="col">Interest share of payment</th><th scope="col">Paid off</th><th scope="col">Interest left</th><th scope="col">Invested instead</th></tr></thead>
+      <tbody id="codByDebt"></tbody>
+    </table>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="codYearsHeading" data-section="years">
+  <h2 id="codYearsHeading" class="panel-heading">Year-by-year cost</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">Interest paid each year, what is still owed, and what the interest paid so far would be worth had you invested it.</p>
+  <div class="table-scroll mt-5 max-h-[520px]" tabindex="0" role="region" aria-labelledby="codYearsHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Year</th><th scope="col">Interest paid</th><th scope="col">Total interest so far</th><th scope="col">Still owed</th><th scope="col">Value if invested</th></tr></thead>
+      <tbody id="codYears"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="cost-of-debt-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="cost-of-debt-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Every dollar you borrow has a price, and the cost of debt calculator turns that price into one clear percentage. Enter your total debt and your annual interest expense, add your tax rate, and you get the pre-tax cost of debt plus the lower after-tax cost of debt you actually bear once the interest deduction is counted. Whether you run a company or just want to know what your loans really cost, the number tells you what your borrowing costs you each year. <!-- SILO_START:slot_a_m -->The <a class="silo-link" href="/debt-to-income-ratio-calculator.html">debt to income ratio calculator online</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="cost-of-debt-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="cost-of-debt-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="cost-of-debt-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="cost-of-debt-calculator-ad-in-feed">
+            <ins id="cost-of-debt-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("cost-of-debt-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="cost-of-debt-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="cost-of-debt-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="cost-of-debt-calculator-guide-heading-1">
+<h2 id="cost-of-debt-calculator-guide-heading-1">What Is the Cost of Debt?</h2>
+<p>The <strong>cost of debt</strong> is the minimum rate of return that lenders require before they will provide debt financing to a borrower. Put another way, it is the effective price a company pays to borrow money through loans and bonds. Compared with the cost of equity, which has to be estimated from market models, the cost of debt is relatively straightforward because debt obligations carry interest rates that you can observe directly in the credit markets. <!-- SILO_START:slot_b -->The <a class="silo-link" href="/line-of-credit-payoff-calculator.html">line of credit payoff calculator</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_b --></p>
+<p>A loan's stated coupon is a contract signed in the past, so it is not always the true <strong>cost of borrowing</strong> today. If your credit profile has weakened since you signed, a lender would charge you more now; if your credit metrics and cash flow have improved, a lender would charge you less. The rate you would pay if you borrowed today is the figure that matters for planning.</p>
+<p>Borrowing comes in different forms. <strong>Long-term debt</strong> such as a ten-year term loan or corporate bonds sits alongside short revolving lines, and together they make up the <strong>debt capital</strong> a company relies on. Where a business has <strong>public debt</strong> trading on an exchange, the market itself tells you the going rate; otherwise a company has to estimate it. Each company's mix of loans is different, which is why a single average rate is so useful for comparing one firm with another.</p>
+
+<h3>Nominal Interest Rate vs. Effective Interest Rate</h3>
+<p>The <strong>nominal interest rate</strong> is the number printed on the loan agreement. The <strong>effective interest rate</strong> is the blended average interest rate you pay across all of your debt, after fees and different balances are taken into account. A business with three loans at three different rates has one effective figure, and that is what the calculator returns.</p>
+        </section>
+        <section id="cost-of-debt-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="cost-of-debt-calculator-guide-heading-2">
+<h2 id="cost-of-debt-calculator-guide-heading-2">Cost of Debt Formula: Pre-Tax and After-Tax</h2>
+<p>There are two versions of the <strong>cost of debt formula</strong>. The first ignores taxes and the second adjusts for them. Most finance work uses the second, but you need the first to get there. <!-- SILO_START:slot_c -->The <a class="silo-link" href="/stream-lined-snowball-debt-elimination-calculator.html">free streamlined snowball debt elimination calculator</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_c --></p>
+
+<h3>Pre-Tax Cost of Debt Formula</h3>
+<p>When you have no market yield to lean on, the <strong>before-tax cost of debt</strong> is the annual interest expense divided by the total debt outstanding:</p>
+<p>$$\text{Pre-Tax Cost of Debt} = \frac{\text{Annual Interest Expense}}{\text{Total Debt}}$$</p>
+<p>For a business with $313,500 of interest on $4,750,000 of borrowings, that works out to \(313{,}500 \div 4{,}750{,}000 = 6.6\%\).</p>
+
+<h3>After-Tax Cost of Debt Formula</h3>
+<p>Interest is <strong>tax-deductible</strong>, so every dollar of interest lowers taxable income and creates a <strong>tax shield</strong>. The <strong>after-tax cost of debt formula</strong> multiplies the pre-tax rate by one minus the tax rate:</p>
+<p>$$\text{After-Tax Cost of Debt} = \text{Pre-Tax Cost of Debt} \times (1 - \text{Tax Rate})$$</p>
+<p>Because the result is already tax-affected, it is the version you place in a WACC calculation. The higher your tax rate, the bigger the shield and the cheaper your borrowing becomes.</p>
+<figure><img src="/assets/images/tools/cost-of-debt-calculator/after-tax-cost-of-debt-formula.svg" alt="After-tax cost of debt formula showing a 6.60% pre-tax rate and 24% tax rate giving 5.02%"><figcaption>The after-tax cost of debt formula, applied to the worked example.</figcaption></figure>
+<table>
+<thead><tr><th>Term</th><th>Meaning</th><th>Where to find it</th></tr></thead>
+<tbody>
+<tr><td>Annual interest expense</td><td>Interest paid on all debt over one year</td><td>Income statement</td></tr>
+<tr><td>Total debt</td><td>Short-term plus long-term borrowings</td><td>Balance sheet</td></tr>
+<tr><td>Tax rate</td><td>Marginal corporate tax rate applied to profit</td><td>Tax filing or net income vs. pre-tax income</td></tr>
+<tr><td>Pre-tax cost of debt</td><td>Interest expense divided by total debt</td><td>Calculator output</td></tr>
+<tr><td>After-tax cost of debt</td><td>Pre-tax cost of debt times (1 &minus; tax rate)</td><td>Calculator output</td></tr>
+</tbody>
+</table>
+        </section>
+        <section id="cost-of-debt-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="cost-of-debt-calculator-guide-heading-3">
+<h2 id="cost-of-debt-calculator-guide-heading-3">How to Calculate Cost of Debt Step by Step</h2>
+<p>You can <strong>calculate cost of debt</strong> by hand in a few minutes, and the calculator simply does the same arithmetic instantly. Follow these steps:</p>
+<ol>
+<li>Add up every balance you owe, including bonds, bank loans and credit lines, to get the <strong>total debt</strong>.</li>
+<li>Find the annual interest expense for those balances on the income statement.</li>
+<li>Divide the interest expense by the total debt to get the pre-tax rate.</li>
+<li>Work out your tax rate, either from your filing or from the net income and pre-tax income figures described below.</li>
+<li>Multiply the pre-tax rate by one minus the tax rate to reach the after-tax rate.</li>
+</ol>
+
+<h3>Finding the Marginal Corporate Tax Rate</h3>
+<p>If you do not know your <strong>marginal corporate tax rate</strong>, back it out from two lines on the income statement. The rate equals one minus net income divided by pre-tax income, so a company with $1,840,000 of <strong>pre-tax income</strong> and $1,398,400 of <strong>net income</strong> has a marginal corporate tax rate of \(1 - 1{,}398{,}400 \div 1{,}840{,}000 = 24\%\). Pre-tax income is also called earnings before taxes, and it is the base on which the rate applies.</p>
+        </section>
+        <section id="cost-of-debt-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="cost-of-debt-calculator-guide-heading-4">
+<h2 id="cost-of-debt-calculator-guide-heading-4">Worked Example With the After-Tax Cost of Debt Calculator</h2>
+<p>Take a mid-sized manufacturer, a company that carries $4,750,000 of total debt and pays $313,500 of interest each year. Its tax rate, found from the income statement above, is 24%. Here is the full cost of debt calculation in one place:</p>
+<table>
+<thead><tr><th>Step</th><th>Calculation</th><th>Result</th></tr></thead>
+<tbody>
+<tr><td>Pre-tax cost of debt</td><td>$313,500 &divide; $4,750,000</td><td>6.60%</td></tr>
+<tr><td>Annual tax shield</td><td>$313,500 &times; 24%</td><td>$75,240</td></tr>
+<tr><td>Interest after tax</td><td>$313,500 &minus; $75,240</td><td>$238,260</td></tr>
+<tr><td>After-tax cost of debt</td><td>6.60% &times; (1 &minus; 0.24)</td><td>5.02%</td></tr>
+</tbody>
+</table>
+<p>The company's borrowing looks like a <strong>6.60%</strong> cost on paper, yet the deduction brings the true figure down to <strong>5.02%</strong>. The $75,240 tax shield is the entire gap between the two numbers.</p>
+<figure><img src="/assets/images/tools/cost-of-debt-calculator/interest-tax-shield-waterfall.svg" alt="Waterfall chart from $313,500 of annual interest less a $75,240 tax shield to $238,260 of interest after tax"><figcaption>How a 24% tax rate turns $313,500 of interest into $238,260.</figcaption></figure>
+        </section>
+        <section id="cost-of-debt-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="cost-of-debt-calculator-guide-heading-5">
+<h2 id="cost-of-debt-calculator-guide-heading-5">Checking a Trailer Purchase Against the Cost of Borrowing</h2>
+<p>Dana Whitcombe, the controller of a regional trucking firm, has a proposal on her desk: a $410,000 refrigerated trailer that the operations team expects to return 6.4% a year. Before she signs off on debt financing, she wants the real price of the money.</p>
+<p>She opens the calculator and enters what the books show: <strong>$2,386,400</strong> of total debt and <strong>$171,820</strong> of interest paid last year. For the tax rate she uses the profit figures, $912,300 of pre-tax income and $720,717 of net income, which give a marginal corporate tax rate of 21%, the same as the US federal corporate rate.</p>
+<ul>
+<li>Pre-tax cost of debt: $171,820 &divide; $2,386,400 = <strong>7.20%</strong></li>
+<li>Tax shield on the interest: $171,820 &times; 21% = <strong>$36,082</strong></li>
+<li>After-tax cost of debt: 7.20% &times; (1 &minus; 0.21) = <strong>5.69%</strong></li>
+</ul>
+<p>The after-tax cost of debt of 5.69% sits below the trailer's 6.4% expected return, a margin of 0.71 percentage points, so a debt-funded purchase clears the hurdle. The 7.20% pre-tax rate alone would have shown a gap of &minus;0.80 points and the project would have been rejected, which is exactly why she keeps the tax step in.</p>
+<p>Her next move is concrete: she reruns the calculator with the interest expense raised by the new loan's first-year interest, $32,390 (the trailer loan is quoted at 7.9%), and adds the $410,000 to total debt to check that the blended rate stays under 6%. It lands at 5.77%, so she approves the purchase and files the calculation with the capital request.</p>
+        </section>
+        <section id="cost-of-debt-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="cost-of-debt-calculator-guide-heading-6">
+<h2 id="cost-of-debt-calculator-guide-heading-6">Cost of Debt Using Yield to Maturity</h2>
+<p>For a company with bonds that trade publicly, market practice is to use the <strong>yield to maturity</strong> rather than the coupon. The <strong>YTM</strong> is the internal rate of return on a bond bought at today's price and held until it matures, so it reflects what lenders demand right now. A bond's yield tells you the current <strong>bond yield</strong> investors demand, and it depends on two inputs, the nominal interest rate and the bond market price. This is the preferred way to estimate the pre-tax number whenever a quote is available, for example on a Bloomberg terminal.</p>
+<p>As an illustration, a bond with a $1,000 face value, a 5.5% coupon, seven years left and a market price of $968 has a yield-to-maturity of about 6.07% on a semi-annual basis, which is the cost of debt a lender is pricing in today. Quote the YTM the same way every time, since a company that mixes quoting conventions will compare unlike numbers.</p>
+
+<h3>Bond Equivalent Yield vs. Effective Annual Yield</h3>
+<p>Quoted yields usually appear as the <strong>bond equivalent yield</strong>, which simply doubles the semi-annual rate. The <strong>effective annual yield</strong> compounds it instead. For the bond above, doubling the half-year yield gives 6.07%, while compounding gives 6.16%. The difference is small and rarely changes a conclusion, so pick one and stay consistent.</p>
+
+<h3>Private Companies and Synthetic Credit Ratings</h3>
+<p>To estimate the pre-tax cost of debt for a privately held business, which has no traded bonds and so no yield to read, you can look at <strong>comparable companies</strong> with a similar <strong>credit rating</strong> and maturity. Another option is to add a <strong>default spread</strong> to the <strong>risk-free rate</strong>. If even a rating is missing, divide EBIT by interest to get the <strong>interest coverage ratio</strong> and match it to a synthetic credit rating, a method published by Professor Damodaran. Whichever route you take, the rate you land on is the pre-tax cost of debt, so enter it into the formula above and apply your tax rate as usual.</p>
+        </section>
+        <section id="cost-of-debt-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="cost-of-debt-calculator-guide-heading-7">
+<h2 id="cost-of-debt-calculator-guide-heading-7">Why the After-Tax Cost of Debt Matters</h2>
+<p>The after-tax figure feeds directly into several decisions. Understanding where it goes helps you read the result with the right context.</p>
+<figure><img src="/assets/images/tools/cost-of-debt-calculator/after-tax-cost-of-debt-rate-grid.svg" alt="Grid of after-tax cost of debt for pre-tax rates of 5.5% to 8.5% and tax rates of 15% to 30%"><figcaption>After-tax cost of debt across pre-tax rates and tax rates; the outlined cell is the worked example.</figcaption></figure>
+<ul>
+<li><strong>Investment decisions:</strong> if a project is funded entirely with debt, its rate of return must exceed the after-tax cost of debt, which acts as the required rate of return.</li>
+<li><strong>Risk assessment:</strong> a rate far above the market average signals that investors see more financial risk in the company.</li>
+<li><strong>Valuation:</strong> the figure sits inside the discount rate used in a discounted cash flow model that values free cash flows.</li>
+<li><strong>Capital structure:</strong> compared with the cost of equity, it shows why companies lean on borrowing, within the limits of their debt-to-equity ratio.</li>
+</ul>
+
+<h3>Using the Cost of Capital in WACC</h3>
+<p>The <strong>weighted average cost of capital</strong>, or <strong>WACC</strong>, blends the cost of equity and the after-tax cost of debt in proportion to how the business is financed. Because interest is deductible, you use the after-tax figure for the debt portion and the plain rate for equity. This is why the <strong>cost of capital</strong> falls when a firm adds sensible debt, and why financial modeling courses spend so much time on the debt side of the formula.</p>
+        </section>
+        <section id="cost-of-debt-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="cost-of-debt-calculator-guide-heading-8">
+<h2 id="cost-of-debt-calculator-guide-heading-8">Personal Debt: Using a Debt Calculator for Loans and Credit Cards</h2>
+<p>You do not need a balance sheet to apply this idea. Households carry credit card balances, auto loans, a student loan or a mortgage, and each charges an annual percentage rate. A personal <strong>debt calculator</strong> takes the balance and <strong>APR</strong> of every account and shows how much interest you will pay and how long repayment takes. A cost-of-debt calculator built for households asks for your <strong>total balance</strong> and your <strong>monthly payment</strong> on each account, then adds the interest up across everything you owe.</p>
+<p>Your household cost of debt is the balance-weighted average of those rates, which is the same pre-tax figure the company formula above produces. Personal interest is usually not deductible, so that pre-tax rate is your real rate. Rank your accounts by APR to see which carries the highest cost: that is the <strong>bad debt</strong> to attack first with the <strong>debt avalanche</strong> method, while a low-rate mortgage or education loan is closer to <strong>good debt</strong> that you can keep paying on schedule, and the <strong>debt snowball</strong> only changes the order, not the cost. Adding a one-time payment or a little above each minimum payment shortens debt repayment and saves both time and money.</p>
+        </section>
+        <section id="cost-of-debt-calculator-guide-section-9" class="panel article-content p-4 sm:p-6" aria-labelledby="cost-of-debt-calculator-guide-heading-9">
+<h2 id="cost-of-debt-calculator-guide-heading-9">Common Mistakes When You Calculate Cost of Debt</h2>
+<p>A few errors skew the result more often than any others. Avoiding them keeps your pre-tax cost of debt and your after-tax cost of debt honest.</p>
+<ul>
+<li><strong>Using the coupon instead of the current yield.</strong> A bond issued years ago may carry a rate that no lender would offer today, so the coupon understates or overstates your real cost.</li>
+<li><strong>Applying the wrong tax rate.</strong> Use the marginal corporate tax rate, not an average built from a year with unusual write-offs. A company with no taxable profit gets no tax shield at all.</li>
+<li><strong>Leaving out part of the debt.</strong> Capital leases, revolving credit and short-term notes all belong in total debt, and their interest belongs in the interest expense line.</li>
+<li><strong>Mixing time periods.</strong> Pair a full year of interest expense with the debt balance that was outstanding through that year, not a balance taken right after a big repayment.</li>
+</ul>
+<p>Remember too that the calculator gives a single blended figure. If you are comparing one specific new loan against another, look at each loan's own interest rate and fees, because a blended average can hide a very expensive balance. Rerun the numbers whenever you refinance, repay a large balance or see your tax situation change, since each of those moves the final percentage.</p>
+        </section>
+      </div>
+
+      <section id="cost-of-debt-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="cost-of-debt-calculator-faq-heading" data-section="faq">
+        <h2 id="cost-of-debt-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Cost of Debt Calculator questions</h2>
+        <div id="cost-of-debt-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="cost-of-debt-calculator-faq-1" class="faq-item" open><summary id="cost-of-debt-calculator-faq-1-summary" class="faq-summary"><h3 id="cost-of-debt-calculator-faq-1-question" class="faq-question">What is the cost of debt?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="cost-of-debt-calculator-faq-1-answer" class="faq-answer"><p>It is the effective rate a company pays to borrow money through loans and bonds, and the minimum return lenders require. This calculator reports it both before and after tax.</p></div></details>
+          <details id="cost-of-debt-calculator-faq-2" class="faq-item" open><summary id="cost-of-debt-calculator-faq-2-summary" class="faq-summary"><h3 id="cost-of-debt-calculator-faq-2-question" class="faq-question">What is the difference between pre-tax and after-tax cost of debt?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="cost-of-debt-calculator-faq-2-answer" class="faq-answer"><p>The pre-tax figure is the plain borrowing rate. The after-tax figure multiplies it by one minus the tax rate, because interest is tax-deductible and creates a tax shield.</p></div></details>
+          <details id="cost-of-debt-calculator-faq-3" class="faq-item" open><summary id="cost-of-debt-calculator-faq-3-summary" class="faq-summary"><h3 id="cost-of-debt-calculator-faq-3-question" class="faq-question">How do I find the marginal corporate tax rate?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="cost-of-debt-calculator-faq-3-answer" class="faq-answer"><p>Divide net income by pre-tax income and subtract the result from one. A company with $1,840,000 of pre-tax income and $1,398,400 of net income has a 24% rate.</p></div></details>
+          <details id="cost-of-debt-calculator-faq-4" class="faq-item" open><summary id="cost-of-debt-calculator-faq-4-summary" class="faq-summary"><h3 id="cost-of-debt-calculator-faq-4-question" class="faq-question">Should I use the coupon rate or the yield to maturity?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="cost-of-debt-calculator-faq-4-answer" class="faq-answer"><p>Use the current yield to maturity when you can find it, since it shows what lenders demand today. The coupon on older debt reflects terms agreed in the past.</p></div></details>
+          <details id="cost-of-debt-calculator-faq-5" class="faq-item" open><summary id="cost-of-debt-calculator-faq-5-summary" class="faq-summary"><h3 id="cost-of-debt-calculator-faq-5-question" class="faq-question">How do I calculate the cost of debt for a private company?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="cost-of-debt-calculator-faq-5-answer" class="faq-answer"><p>With no traded bonds, look at yields on comparable companies with a similar credit rating, or divide annual interest expense by total debt for a blended effective rate.</p></div></details>
+          <details id="cost-of-debt-calculator-faq-6" class="faq-item" open><summary id="cost-of-debt-calculator-faq-6-summary" class="faq-summary"><h3 id="cost-of-debt-calculator-faq-6-question" class="faq-question">Why is the after-tax cost of debt used in WACC?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="cost-of-debt-calculator-faq-6-answer" class="faq-answer"><p>Interest reduces taxable income, so the true cost to the company is lower than the stated rate. WACC uses the after-tax figure for its debt component to reflect that tax shield.</p></div></details>
+          <details id="cost-of-debt-calculator-faq-7" class="faq-item" open><summary id="cost-of-debt-calculator-faq-7-summary" class="faq-summary"><h3 id="cost-of-debt-calculator-faq-7-question" class="faq-question">Why does the result have to be lower than the pre-tax rate?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="cost-of-debt-calculator-faq-7-answer" class="faq-answer"><p>Any positive tax rate shrinks the effective cost. If your tax rate is zero, for example when a company has no taxable profit, the two figures are identical.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="cost-of-debt-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="cost-of-debt-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="cost-of-debt-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="cost-of-debt-calculator-ad-bottom-leaderboard">
+            <ins id="cost-of-debt-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("cost-of-debt-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="cost-of-debt-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="cost-of-debt-calculator-right-rail-top" class="mb-6">
+        <aside id="cost-of-debt-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="cost-of-debt-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="cost-of-debt-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="cost-of-debt-calculator-ad-right-rail-rectangle">
+            <ins id="cost-of-debt-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("cost-of-debt-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="cost-of-debt-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="cost-of-debt-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="cost-of-debt-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="cost-of-debt-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="cost-of-debt-calculator-ad-right-rail-skyscraper">
+            <ins id="cost-of-debt-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("cost-of-debt-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="cost-of-debt-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="cost-of-debt-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="cost-of-debt-calculator-footer-brand">
+        <a id="cost-of-debt-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="cost-of-debt-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="cost-of-debt-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="cost-of-debt-calculator-footer-categories" aria-labelledby="cost-of-debt-calculator-footer-categories-heading">
+        <h2 id="cost-of-debt-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="cost-of-debt-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="cost-of-debt-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="cost-of-debt-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="cost-of-debt-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="cost-of-debt-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="cost-of-debt-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="cost-of-debt-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="cost-of-debt-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="cost-of-debt-calculator-footer-company" aria-labelledby="cost-of-debt-calculator-footer-company-heading">
+        <h2 id="cost-of-debt-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="cost-of-debt-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="cost-of-debt-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="cost-of-debt-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="cost-of-debt-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="cost-of-debt-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="cost-of-debt-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="cost-of-debt-calculator-footer-bottom" class="border-t border-line">
+      <p id="cost-of-debt-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="cost-of-debt-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Cost of debt: what each debt costs today and until it is paid off, and what that interest
+  // would grow to if it were invested instead.
+  //   Cost at today's balance: per year = balance x APR, per month = balance x APR / 12,
+  //   per day = balance x APR / 365.
+  //   Payoff at the current payment: each month interest = balance x APR / 12 (rounded to the
+  //   cent) is added, then the fixed payment (capped at what is owed) is paid.
+  //   Invested instead: each month's interest charge is treated as a deposit at the end of that
+  //   month into an account earning the chosen return, compounded monthly (r / 12), and valued
+  //   at the end of the horizon: sum of I_m x (1 + r/12)^(H - m) for months m <= H. Interest
+  //   charged after the horizon is not counted.
+  // Verified (scratchpad b5debt/math.test.js):
+  //   $10,000 at 12% paid $222.45 a month -> 60 months, total interest within $0.10 of the
+  //   closed form 60 x 222.4445 - 10,000 = $3,346.67; $10,000 at 0% paid $500 -> 20 months, $0;
+  //   per day for $6,200 at 23.99% = $4.08 (6,200 x 0.2399 / 365 = 4.0750);
+  //   a single $100 interest charge in month 1 invested at 12% for a 1-year horizon grows to
+  //   100 x 1.01^11 = $111.57; a constant $100 a month for 12 months at 0% return = $1,200;
+  //   a stream of $100 a month for 12 months at 6% = 100 x ((1.005^12 - 1) / 0.005) = $1,233.56;
+  //   a payment at or below the first month's interest is reported by name, never as a result.
+  var MAX_MONTHS = 1200;
+  var MAX_DEBTS = 10;
+  var DEFAULTS = [
+    { name: 'Credit card', balance: 6200, apr: 23.99, pay: 200 },
+    { name: 'Car loan', balance: 14000, apr: 7.5, pay: 380 },
+    { name: 'Student loan', balance: 22000, apr: 5.5, pay: 240 }
+  ];
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  var monthName = new Intl.DateTimeFormat('en-US', { month: 'short', year: 'numeric' });
+  var rowCounter = 0;
+
+  // ---- Calculation ----
+  function cents(x) { return Math.round(x * 100) / 100; }
+
+  // debt: { balance, apr (decimal), pay }. Returns the monthly interest charges until paid off.
+  function payoff(debt) {
+    var bal = debt.balance, charges = [], total = 0, owedByMonth = [];
+    for (var m = 1; m <= MAX_MONTHS; m++) {
+      var interest = cents(bal * debt.apr / 12);
+      bal += interest;
+      bal = cents(bal - Math.min(debt.pay, bal));
+      charges.push(interest); total += interest; owedByMonth.push(bal);
+      if (bal <= 0.005) return { paidOff: true, months: m, interest: total, charges: charges, owed: owedByMonth };
+    }
+    return { paidOff: false, months: MAX_MONTHS, interest: total, charges: charges, owed: owedByMonth };
+  }
+
+  // Value at month `horizon` of interest charges invested at the end of each month.
+  function investedValue(charges, annualReturn, horizon) {
+    var i = annualReturn / 12, value = 0;
+    for (var m = 1; m <= horizon; m++) {
+      value = value * (1 + i) + (m <= charges.length ? charges[m - 1] : 0);
+    }
+    return value;
+  }
+
+  function costToday(debt) {
+    return { day: debt.balance * debt.apr / 365, month: debt.balance * debt.apr / 12, year: debt.balance * debt.apr };
+  }
+
+  // ---- Page ----
+  function duration(months) {
+    var y = Math.floor(months / 12), m = months % 12, parts = [];
+    if (y) parts.push(y + (y === 1 ? ' year' : ' years'));
+    if (m || !y) parts.push(m + (m === 1 ? ' month' : ' months'));
+    return parts.join(' ');
+  }
+
+  function dateAfter(months) {
+    var now = new Date();
+    return monthName.format(new Date(now.getFullYear(), now.getMonth() + months, 1));
+  }
+
+  function set(id, text) { document.getElementById(id).textContent = text; }
+
+  function clearBody(id) {
+    var body = document.getElementById(id);
+    while (body.firstChild) body.removeChild(body.firstChild);
+    return body;
+  }
+
+  function addRow(body, cells) {
+    var tr = document.createElement('tr');
+    cells.forEach(function (text) {
+      var td = document.createElement('td');
+      td.textContent = text;
+      tr.appendChild(td);
+    });
+    body.appendChild(tr);
+  }
+
+  function el(tag, className, text) {
+    var e = document.createElement(tag);
+    if (className) e.className = className;
+    if (text) e.textContent = text;
+    return e;
+  }
+
+  function numberField(id, label, value, affix, affixFirst, step, max) {
+    var wrap = el('div');
+    var lab = el('label', 'form-label', label);
+    lab.setAttribute('for', id);
+    var group = el('div', 'input-group');
+    var input = el('input', 'min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none');
+    input.type = 'number'; input.id = id; input.min = '0'; input.step = step; input.inputMode = 'decimal';
+    if (max) input.max = max;
+    input.value = value === '' ? '' : String(value);
+    var a = el('span', 'input-affix', affix);
+    if (affixFirst) { group.appendChild(a); group.appendChild(input); } else { group.appendChild(input); group.appendChild(a); }
+    wrap.appendChild(lab); wrap.appendChild(group);
+    return wrap;
+  }
+
+  function addDebtRow(d) {
+    var list = document.getElementById('codDebts');
+    rowCounter++;
+    var n = rowCounter;
+    var row = el('div', 'space-y-3 rounded-xl border border-line p-4');
+    row.setAttribute('data-debt-row', String(n));
+    var head = el('div', 'flex flex-wrap items-center justify-between gap-2');
+    var title = el('p', 'text-sm font-semibold text-ink', 'Debt');
+    title.setAttribute('data-debt-title', '');
+    var remove = el('button', 'button-secondary h-9 px-3 text-sm', 'Remove');
+    remove.type = 'button';
+    remove.setAttribute('data-remove', '');
+    remove.addEventListener('click', function () {
+      if (list.querySelectorAll('[data-debt-row]').length <= 1) return;
+      row.remove();
+      refreshRows(); update();
+    });
+    head.appendChild(title); head.appendChild(remove);
+    row.appendChild(head);
+
+    var nameWrap = el('div');
+    var nameLabel = el('label', 'form-label', 'Name');
+    nameLabel.setAttribute('for', 'codName' + n);
+    var name = el('input', 'form-control');
+    name.type = 'text'; name.id = 'codName' + n; name.maxLength = 40; name.autocomplete = 'off';
+    name.placeholder = 'e.g. Visa card';
+    name.value = d.name || '';
+    nameWrap.appendChild(nameLabel); nameWrap.appendChild(name);
+    row.appendChild(nameWrap);
+
+    var pair = el('div', 'form-row form-row-2');
+    pair.appendChild(numberField('codBal' + n, 'Balance', d.balance, '$', true, '100'));
+    pair.appendChild(numberField('codApr' + n, 'APR', d.apr, '%', false, '0.1', '100'));
+    row.appendChild(pair);
+    row.appendChild(numberField('codPay' + n, 'Monthly payment', d.pay, '$', true, '10'));
+    list.appendChild(row);
+    refreshRows();
+  }
+
+  function refreshRows() {
+    var rows = document.getElementById('codDebts').querySelectorAll('[data-debt-row]');
+    rows.forEach(function (row, i) {
+      row.querySelector('[data-debt-title]').textContent = 'Debt ' + (i + 1);
+      var rm = row.querySelector('[data-remove]');
+      rm.disabled = rows.length <= 1;
+      rm.setAttribute('aria-label', 'Remove debt ' + (i + 1));
+    });
+    document.getElementById('codAdd').disabled = rows.length >= MAX_DEBTS;
+  }
+
+  function readDebts() {
+    var out = [], ok = true;
+    var rows = document.getElementById('codDebts').querySelectorAll('[data-debt-row]');
+    rows.forEach(function (row, i) {
+      var n = row.getAttribute('data-debt-row');
+      var name = document.getElementById('codName' + n).value.trim() || ('Debt ' + (i + 1));
+      var balEl = document.getElementById('codBal' + n), aprEl = document.getElementById('codApr' + n), payEl = document.getElementById('codPay' + n);
+      var bal = parseFloat(balEl.value), apr = aprEl.value.trim() === '' ? 0 : parseFloat(aprEl.value), pay = parseFloat(payEl.value);
+      if (balEl.value.trim() === '' || bal === 0) {
+        [balEl, aprEl, payEl].forEach(function (e) { e.setAttribute('aria-invalid', 'false'); });
+        return;
+      }
+      var badBal = isNaN(bal) || bal < 0 || bal > 1e8, badApr = isNaN(apr) || apr < 0 || apr > 100, badPay = isNaN(pay) || pay <= 0;
+      balEl.setAttribute('aria-invalid', String(badBal));
+      aprEl.setAttribute('aria-invalid', String(badApr));
+      payEl.setAttribute('aria-invalid', String(badPay));
+      if (badBal || badApr || badPay) { ok = false; return; }
+      out.push({ name: name, balance: bal, apr: apr / 100, pay: pay });
+    });
+    return { ok: ok, debts: out };
+  }
+
+  function clearResults() {
+    ['codDay', 'codMonth', 'codYear', 'codTotal', 'codDate', 'codGrow'].forEach(function (id) { set(id, '–'); });
+    set('codGrowNote', ''); set('codDateNote', '');
+    document.getElementById('codHorizonNote').hidden = true;
+    clearBody('codByDebt'); clearBody('codYears');
+  }
+
+  function aprText(apr) { return (apr * 100).toFixed(2).replace(/\.?0+$/, '') + '%'; }
+
+  function update() {
+    var error = document.getElementById('codError');
+    var ret = parseFloat(document.getElementById('codReturn').value);
+    var years = Math.round(parseFloat(document.getElementById('codYearsIn').value));
+    var input = readDebts();
+    var problem = '';
+    if (!input.ok) problem = 'Check the highlighted debts: balances of $0 or more, APRs from 0 to 100% and monthly payments above $0.';
+    else if (!input.debts.length) problem = 'Enter at least one debt with a balance above $0.';
+    else if (isNaN(ret) || ret < 0 || ret > 30) problem = 'Enter an investment return from 0 to 30%.';
+    else if (isNaN(years) || years < 1 || years > 50) problem = 'Enter a growth period of 1 to 50 years.';
+    var debts = input.debts, plans = [];
+    if (!problem) {
+      for (var k = 0; k < debts.length; k++) {
+        var p = payoff(debts[k]);
+        if (!p.paidOff) {
+          problem = 'The payment on ' + debts[k].name + ' does not cover enough of its interest to pay it off within 100 years. Raise that payment.';
+          break;
+        }
+        plans.push(p);
+      }
+    }
+    if (problem) { error.hidden = false; error.textContent = problem; clearResults(); return; }
+    error.hidden = true; error.textContent = '';
+
+    var horizon = years * 12, ret01 = ret / 100;
+    var tot = { day: 0, month: 0, year: 0, interest: 0, grow: 0, months: 0 };
+    var byDebt = clearBody('codByDebt');
+    debts.forEach(function (d, i) {
+      var c = costToday(d), p = plans[i], g = investedValue(p.charges, ret01, horizon);
+      tot.day += c.day; tot.month += c.month; tot.year += c.year; tot.interest += p.interest; tot.grow += g;
+      tot.months = Math.max(tot.months, p.months);
+      var share = Math.min(c.month / d.pay, 1);
+      addRow(byDebt, [d.name, money.format(d.balance), aprText(d.apr), money.format(c.day), money.format(c.year),
+        Math.round(share * 100) + '%', dateAfter(p.months), money.format(p.interest), money.format(g)]);
+    });
+    set('codDay', money.format(tot.day));
+    set('codMonth', money.format(tot.month));
+    set('codYear', money.format(tot.year));
+    set('codTotal', money.format(tot.interest));
+    set('codDate', dateAfter(tot.months));
+    set('codDateNote', 'Last debt cleared in ' + duration(tot.months) + ' at your current payments.');
+    set('codGrow', money.format(tot.grow));
+    set('codGrowNote', 'Every interest charge invested at ' + (Math.round(ret * 100) / 100) + '% a year and left to grow for ' + years + (years === 1 ? ' year.' : ' years.'));
+    var hn = document.getElementById('codHorizonNote');
+    hn.hidden = tot.months <= horizon;
+    if (!hn.hidden) hn.textContent = 'Some debts run past ' + years + (years === 1 ? ' year' : ' years') + ', so only the interest charged within that time is counted in the invested value.';
+
+    var yearsBody = clearBody('codYears');
+    var lastYear = Math.ceil(Math.max(tot.months, horizon) / 12), cum = 0;
+    var i01 = ret01 / 12, inv = 0;
+    for (var y = 1; y <= lastYear; y++) {
+      var yInt = 0, owed = 0;
+      for (var m = (y - 1) * 12 + 1; m <= y * 12; m++) {
+        var mInt = 0;
+        plans.forEach(function (p) { if (m <= p.charges.length) mInt += p.charges[m - 1]; });
+        yInt += mInt;
+        inv = inv * (1 + i01) + mInt;
+      }
+      plans.forEach(function (p) { owed += y * 12 <= p.owed.length ? p.owed[y * 12 - 1] : 0; });
+      cum += yInt;
+      addRow(yearsBody, [String(y), money.format(yInt), money.format(cum), money.format(owed), money.format(inv)]);
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    DEFAULTS.forEach(addDebtRow);
+    var form = document.getElementById('codForm');
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    document.getElementById('codAdd').addEventListener('click', function () {
+      if (document.getElementById('codDebts').querySelectorAll('[data-debt-row]').length >= MAX_DEBTS) return;
+      addDebtRow({ name: '', balance: '', apr: '', pay: '' });
+      update();
+    });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

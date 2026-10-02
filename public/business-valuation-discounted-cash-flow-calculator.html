@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="en" id="business-valuation-discounted-cash-flow-calculator-document" data-page-slug="business-valuation-discounted-cash-flow-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Discounted Cash Flow Calculator for Business Valuation</title>
+  <meta name="description" content="Estimate the value of a company with a discounted cash flow calculator: enter projected future cash flows, growth and your discount rate to see enterprise value.">
+  <link rel="canonical" href="https://company-marketcap.github.io/business-valuation-discounted-cash-flow-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Discounted Cash Flow Calculator for Business Valuation">
+  <meta property="og:description" content="Estimate the value of a company with a discounted cash flow calculator: enter projected future cash flows, growth and your discount rate to see enterprise value.">
+  <meta property="og:url" content="https://company-marketcap.github.io/business-valuation-discounted-cash-flow-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Business Valuation (Discounted Cash Flow) Calculator", "url": "https://company-marketcap.github.io/business-valuation-discounted-cash-flow-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Estimate the value of a company with a discounted cash flow calculator: enter projected future cash flows, growth and your discount rate to see enterprise value."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Business Finance & Valuation", "item": "https://company-marketcap.github.io/financial-calculators.html#business-calculators"}, {"@type": "ListItem", "position": 4, "name": "Business Valuation (Discounted Cash Flow) Calculator", "item": "https://company-marketcap.github.io/business-valuation-discounted-cash-flow-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a discounted cash flow calculator?", "acceptedAnswer": {"@type": "Answer", "text": "It estimates what a business is worth today by projecting its future free cash flows and discounting each one back to present value with a required rate of return, then adding a terminal value for the years beyond the forecast."}}, {"@type": "Question", "name": "What discount rate should I use to value a business?", "acceptedAnswer": {"@type": "Answer", "text": "Use the return a buyer would demand for the risk involved. Large, stable companies often use their weighted average cost of capital; small private businesses usually add a size and company-specific premium, so rates well above 10% are common."}}, {"@type": "Question", "name": "What terminal growth rate is reasonable?", "acceptedAnswer": {"@type": "Answer", "text": "Most analysts stay close to long-run inflation, often 2% to 3%. It must stay below the discount rate, and a business cannot sensibly grow faster than the economy forever."}}, {"@type": "Question", "name": "What is the difference between enterprise value and equity value?", "acceptedAnswer": {"@type": "Answer", "text": "Enterprise value is the worth of the operating business before financing. Subtract net debt (debt minus cash) to get equity value, the part that belongs to shareholders."}}, {"@type": "Question", "name": "Why does terminal value make up so much of the result?", "acceptedAnswer": {"@type": "Answer", "text": "Most of a company's cash flow arrives after the explicit forecast years, so the terminal value often supplies 50% to 80% of enterprise value. That makes the terminal growth and discount rate the inputs to test first."}}, {"@type": "Question", "name": "How many forecast years should I project?", "acceptedAnswer": {"@type": "Answer", "text": "Five to ten years is typical. Use a shorter period for slow, competitive businesses and a longer one for companies still growing quickly, ending the forecast once growth settles."}}, {"@type": "Question", "name": "Is a DCF result the same as an appraisal?", "acceptedAnswer": {"@type": "Answer", "text": "No. It is an estimate that depends entirely on your assumptions. Use it as a range, compare it with market multiples, and get a qualified appraisal for a sale, tax or legal purpose."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="business-valuation-discounted-cash-flow-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="business-valuation-discounted-cash-flow-calculator" data-page-type="calculator">
+  <a id="business-valuation-discounted-cash-flow-calculator-skip-link" href="#business-valuation-discounted-cash-flow-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="business-valuation-discounted-cash-flow-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="business-valuation-discounted-cash-flow-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="business-valuation-discounted-cash-flow-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="business-valuation-discounted-cash-flow-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="business-valuation-discounted-cash-flow-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="business-valuation-discounted-cash-flow-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="business-valuation-discounted-cash-flow-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="business-valuation-discounted-cash-flow-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="business-valuation-discounted-cash-flow-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="business-valuation-discounted-cash-flow-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="business-valuation-discounted-cash-flow-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="business-valuation-discounted-cash-flow-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="business-valuation-discounted-cash-flow-calculator-header-search-status" aria-controls="business-valuation-discounted-cash-flow-calculator-header-search-results" data-search-input="header">
+              <p id="business-valuation-discounted-cash-flow-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="business-valuation-discounted-cash-flow-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="business-valuation-discounted-cash-flow-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="business-valuation-discounted-cash-flow-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="business-valuation-discounted-cash-flow-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="business-valuation-discounted-cash-flow-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="business-valuation-discounted-cash-flow-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="business-valuation-discounted-cash-flow-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="business-valuation-discounted-cash-flow-calculator-mobile-search-status" aria-controls="business-valuation-discounted-cash-flow-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="business-valuation-discounted-cash-flow-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="business-valuation-discounted-cash-flow-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="business-valuation-discounted-cash-flow-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="business-valuation-discounted-cash-flow-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="business-valuation-discounted-cash-flow-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="business-valuation-discounted-cash-flow-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="business-valuation-discounted-cash-flow-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="business-valuation-discounted-cash-flow-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="business-valuation-discounted-cash-flow-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="business-valuation-discounted-cash-flow-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="business-valuation-discounted-cash-flow-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="business-valuation-discounted-cash-flow-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="business-valuation-discounted-cash-flow-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="business-valuation-discounted-cash-flow-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="business-valuation-discounted-cash-flow-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="business-valuation-discounted-cash-flow-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="business-valuation-discounted-cash-flow-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="business-valuation-discounted-cash-flow-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="business-valuation-discounted-cash-flow-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="business-valuation-discounted-cash-flow-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="business-valuation-discounted-cash-flow-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="business-valuation-discounted-cash-flow-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="business-valuation-discounted-cash-flow-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="business-valuation-discounted-cash-flow-calculator-sidebar-search-status" aria-controls="business-valuation-discounted-cash-flow-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="business-valuation-discounted-cash-flow-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="business-valuation-discounted-cash-flow-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="business-valuation-discounted-cash-flow-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="business-valuation-discounted-cash-flow-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="business-valuation-discounted-cash-flow-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="business-valuation-discounted-cash-flow-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="business-valuation-discounted-cash-flow-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="business-valuation-discounted-cash-flow-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="business-valuation-discounted-cash-flow-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="business-valuation-discounted-cash-flow-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="business-valuation-discounted-cash-flow-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="business-valuation-discounted-cash-flow-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="business-valuation-discounted-cash-flow-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="business-valuation-discounted-cash-flow-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="business-valuation-discounted-cash-flow-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="business-valuation-discounted-cash-flow-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="business-valuation-discounted-cash-flow-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="business-valuation-discounted-cash-flow-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="business-valuation-discounted-cash-flow-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="business-valuation-discounted-cash-flow-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="business-valuation-discounted-cash-flow-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="business-valuation-discounted-cash-flow-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="business-valuation-discounted-cash-flow-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="business-valuation-discounted-cash-flow-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="business-valuation-discounted-cash-flow-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="business-valuation-discounted-cash-flow-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="business-valuation-discounted-cash-flow-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="business-valuation-discounted-cash-flow-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="business-valuation-discounted-cash-flow-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="business-valuation-discounted-cash-flow-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="business-valuation-discounted-cash-flow-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators" aria-current="true">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="business-valuation-discounted-cash-flow-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="business-valuation-discounted-cash-flow-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="business-valuation-discounted-cash-flow-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="business-valuation-discounted-cash-flow-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="business-valuation-discounted-cash-flow-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="business-valuation-discounted-cash-flow-calculator" data-calculator-slug="business-valuation-discounted-cash-flow-calculator" data-sub-category-slug="business-calculators">
+      <aside id="business-valuation-discounted-cash-flow-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="business-valuation-discounted-cash-flow-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="business-valuation-discounted-cash-flow-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="business-valuation-discounted-cash-flow-calculator-ad-top-leaderboard">
+            <ins id="business-valuation-discounted-cash-flow-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("business-valuation-discounted-cash-flow-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="business-valuation-discounted-cash-flow-calculator-intro-area" class="space-y-4">
+        <nav id="business-valuation-discounted-cash-flow-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="business-valuation-discounted-cash-flow-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="business-valuation-discounted-cash-flow-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="business-valuation-discounted-cash-flow-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="business-valuation-discounted-cash-flow-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#business-calculators" itemprop="item"><span itemprop="name">Business Finance &amp; Valuation</span></a><meta itemprop="position" content="3"></li>
+            <li id="business-valuation-discounted-cash-flow-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Business Valuation (Discounted Cash Flow) Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/business-valuation-discounted-cash-flow-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="business-valuation-discounted-cash-flow-calculator-hero-section" aria-labelledby="business-valuation-discounted-cash-flow-calculator-hero-heading" data-section="hero">
+          <h1 id="business-valuation-discounted-cash-flow-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Discounted Cash Flow Calculator for Business Valuation</h1>
+          <p id="business-valuation-discounted-cash-flow-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">The Business Valuation (Discounted Cash Flow) Calculator turns your forecast of future cash flows into one present value for the whole company. Enter last year&#x27;s free cash flow, a growth rate, a discount rate and a terminal growth rate, and you get an enterprise value, an equity value and an optional intrinsic value per share that shows investors whether an asking price is fair. <!-- SILO_START:slot_a -->Pair this with the <a class="silo-link" href="/margin-calculator.html">free profit margin calculator</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="business-valuation-discounted-cash-flow-calculator-tool" class="space-y-6" data-page-slug="business-valuation-discounted-cash-flow-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="dcFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="dcForm" class="space-y-5" novalidate aria-labelledby="dcFormHeading">
+      <h2 id="dcFormHeading" class="panel-heading">Enter cash flows and assumptions</h2>
+      <div><label for="dcMode" class="form-label">Starting cash flow</label>
+        <select id="dcMode" class="form-select"><option value="direct" selected>I know the free cash flow</option><option value="build">Build it from operating profit</option></select></div>
+      <div id="dcDirectWrap" class="space-y-5">
+        <div><label for="dcFcf" class="form-label">Free cash flow, most recent year</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="dcFcf" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" step="10000" value="1000000" inputmode="decimal"></div><p class="form-hint">Cash from operations minus capital expenditures. Each projected year grows from this.</p></div>
+      </div>
+      <div id="dcBuildWrap" class="space-y-5" hidden>
+      <div class="form-row form-row-2">
+<div><label for="dcEbit" class="form-label">Operating profit (EBIT)</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="dcEbit" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" step="10000" value="1500000" inputmode="decimal"></div></div>
+<div><label for="dcTax" class="form-label">Tax rate on operating profit</label><div class="input-group"><input type="number" id="dcTax" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="99" step="0.5" value="21" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">The federal corporate rate is 21%; add state tax if it applies.</p></div>
+      </div>
+      <div class="form-row form-row-2">
+<div><label for="dcDa" class="form-label">Depreciation and amortization</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="dcDa" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10000" value="200000" inputmode="decimal"></div></div>
+<div><label for="dcCapex" class="form-label">Capital expenditures</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="dcCapex" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10000" value="300000" inputmode="decimal"></div></div>
+      </div>
+        <div><label for="dcNwc" class="form-label">Increase in working capital</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="dcNwc" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" step="10000" value="50000" inputmode="decimal"></div><p class="form-hint">Growth in receivables and inventory minus growth in payables. Negative if it fell.</p></div>
+      </div>
+      <div class="form-row form-row-2">
+<div><label for="dcGrowth" class="form-label">Cash flow growth per year</label><div class="input-group"><input type="number" id="dcGrowth" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="-99" max="100" step="0.5" value="5" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">For the projection years.</p></div>
+<div><label for="dcYears" class="form-label">Projection years</label><div class="input-group"><input type="number" id="dcYears" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1" max="30" step="1" value="5" inputmode="numeric"><span class="input-affix">yrs</span></div></div>
+      </div>
+      <div><label for="dcRate" class="form-label">Discount rate (WACC)</label><div class="input-group"><input type="number" id="dcRate" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="-99" max="100" step="0.25" value="10" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">Your weighted average cost of capital or required return.</p></div>
+      <div><label for="dcMethod" class="form-label">Terminal value method</label>
+        <select id="dcMethod" class="form-select"><option value="gordon" selected>Perpetual growth (Gordon growth)</option><option value="exit">Exit multiple of EBITDA</option></select></div>
+      <div id="dcGordonWrap">
+        <div><label for="dcTermGrowth" class="form-label">Long-term growth rate after the projection</label><div class="input-group"><input type="number" id="dcTermGrowth" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="-99" max="100" step="0.25" value="2.5" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">Usually close to long-run inflation or economic growth, and below the discount rate.</p></div>
+      </div>
+      <div id="dcExitWrap" class="space-y-5" hidden>
+        <div><label for="dcMultiple" class="form-label">Exit multiple (enterprise value ÷ EBITDA)</label><div class="input-group"><input type="number" id="dcMultiple" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="0.5" value="10" inputmode="decimal"><span class="input-affix">×</span></div><p class="form-hint">Applied to EBITDA in the final projection year.</p></div>
+        <div id="dcEbitdaWrap"><label for="dcEbitda" class="form-label">EBITDA, most recent year</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="dcEbitda" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" step="10000" value="1700000" inputmode="decimal"></div><p class="form-hint">Grows at the same rate as cash flow.</p></div>
+      </div>
+      <div class="form-row form-row-2">
+<div><label for="dcDebt" class="form-label">Total debt</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="dcDebt" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10000" value="2000000" inputmode="decimal"></div><p class="form-hint">Loans, bonds and other interest-bearing debt.</p></div>
+<div><label for="dcCash" class="form-label">Cash and equivalents</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="dcCash" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10000" value="500000" inputmode="decimal"></div></div>
+      </div>
+      <div><label for="dcShares" class="form-label">Shares outstanding</label><div class="input-group"><input type="number" id="dcShares" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1000" value="1000000" inputmode="numeric"></div><p class="form-hint">Optional. Leave at 0 to skip the per-share value.</p></div>
+      <details class="form-details"><summary class="form-details-summary">More options</summary>
+        <div class="form-choice-group">
+          <label class="form-choice"><input type="checkbox" id="dcMidYear" class="form-choice-input"><span class="form-choice-text">Use the mid-year convention<span class="form-choice-note">Discounts each year&#39;s cash flow from the middle of the year, as if it arrives evenly. The terminal value is still discounted from the end of the final year.</span></span></label>
+        </div>
+        <div><label for="dcCustom" class="form-label">Your own yearly free cash flow forecast</label>
+          <textarea id="dcCustom" class="form-textarea" rows="4" placeholder="1,050,000; 1,120,000; 1,180,000"></textarea>
+          <p class="form-hint">Optional. One amount per year, separated by semicolons or new lines. Replaces the growth-rate projection and sets the number of years.</p></div>
+      </details>
+      <p id="dcError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="dcResults" aria-live="polite" aria-labelledby="dcResultsHeading">
+      <h2 id="dcResultsHeading" class="panel-heading">Your valuation</h2>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p class="stat-label">Equity value</p><p id="dcEquity" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Value per share</p><p id="dcPerShare" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Enterprise value</p><p id="dcEv" class="stat-value">–</p></div>
+      </div>
+      <div class="mt-4">
+        <div class="result-row"><span class="result-term">Starting free cash flow</span><span id="dcBaseFcf" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Present value of projected cash flows</span><span id="dcPvFlows" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Terminal value (at the end of the projection)</span><span id="dcTv" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Present value of terminal value</span><span id="dcPvTv" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Net debt (debt minus cash)</span><span id="dcNetDebt" class="result-value">–</span></div>
+        <div class="result-row"><span id="dcCrossLabel" class="result-term">Implied exit multiple</span><span id="dcCross" class="result-value">–</span></div>
+      </div>
+      <p id="dcNote" class="callout callout-warning mt-4 text-sm" hidden></p>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="dcScheduleHeading" data-section="schedule">
+  <h2 id="dcScheduleHeading" class="panel-heading">Discounted cash flow by year</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">Each year&#39;s free cash flow multiplied by its discount factor gives its value today. Their sum plus the discounted terminal value is the enterprise value.</p>
+  <div class="table-scroll mt-5 max-h-[520px]" tabindex="0" role="region" aria-labelledby="dcScheduleHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Year</th><th scope="col">Free cash flow</th><th scope="col">Discount factor</th><th scope="col">Present value</th></tr></thead>
+      <tbody id="dcSchedule"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="business-valuation-discounted-cash-flow-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="business-valuation-discounted-cash-flow-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">The Business Valuation (Discounted Cash Flow) Calculator turns your forecast of future cash flows into one present value for the whole company. Enter last year&#x27;s free cash flow, a growth rate, a discount rate and a terminal growth rate, and you get an enterprise value, an equity value and an optional intrinsic value per share that shows investors whether an asking price is fair. <!-- SILO_START:slot_a_m -->Pair this with the <a class="silo-link" href="/margin-calculator.html">free profit margin calculator</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="business-valuation-discounted-cash-flow-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="business-valuation-discounted-cash-flow-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="business-valuation-discounted-cash-flow-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="business-valuation-discounted-cash-flow-calculator-ad-in-feed">
+            <ins id="business-valuation-discounted-cash-flow-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("business-valuation-discounted-cash-flow-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="business-valuation-discounted-cash-flow-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="business-valuation-discounted-cash-flow-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="business-valuation-discounted-cash-flow-calculator-guide-heading-1">
+<h2 id="business-valuation-discounted-cash-flow-calculator-guide-heading-1">How a Discounted Cash Flow Calculator Values a Business</h2>
+<p>A <strong>discounted cash flow calculator</strong> rests on one idea: a company is worth the cash it will generate for its owners, adjusted for the <strong>time value of money</strong>. A dollar received in six years is worth less than a dollar in your account today, so every projected payment gets shrunk by a discount rate before you add the payments together. The sum is the <strong>fair value</strong> of the business right now. <!-- SILO_START:slot_b -->The <a class="silo-link" href="/balance-sheet-and-income-statement-analysis.html">balance sheet analysis online</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_b --></p>
+<p>Professional appraisers describe three families of business valuation: the <strong>income approach</strong>, the <strong>asset approach</strong> and the market approach. <strong>DCF valuation</strong> belongs to the income approach, and it is the one to reach for when cash flows are expected to change from year to year rather than stay flat. A simpler cousin, <strong>income capitalization</strong>, divides one year of earnings by a single rate and works only when performance is stable.</p>
+
+<h3>What the calculator returns</h3>
+<p>Run your assumptions through the tool and it reports four numbers: the total of the discounted forecast-year cash flows, the discounted <strong>terminal value</strong>, the combined <strong>enterprise value</strong>, and, once you subtract debt and add cash, the <strong>equity value</strong> that belongs to shareholders. If you also enter the number of <strong>shares outstanding</strong>, you receive the <strong>per share</strong> figure too.</p>
+
+<h3>Who uses a DCF business valuation</h3>
+<p>Business owners use it before selling or bringing in a partner, <strong>investors</strong> use it to test a stock against its market quote, and a <strong>financial analyst</strong> builds it into a model for <strong>mergers and acquisitions</strong>. Founders of a startup with little revenue lean on it because comparable sales do not yet exist, which makes <strong>startup valuation</strong> a natural fit for forward-looking cash flow work.</p>
+        </section>
+        <section id="business-valuation-discounted-cash-flow-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="business-valuation-discounted-cash-flow-calculator-guide-heading-2">
+<h2 id="business-valuation-discounted-cash-flow-calculator-guide-heading-2">Business Valuation (Discounted Cash Flow) Calculator Inputs and Assumptions</h2>
+<p>Every <strong>DCF analysis</strong> is only as good as its <strong>assumptions</strong>. The calculator asks for a handful of inputs, and the table below shows the exact values used in the worked example later on this page. <!-- SILO_START:slot_c -->Try the <a class="silo-link" href="/cash-flow-calculator.html">free cash flow calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_c --></p>
+<table>
+<thead><tr><th>Input</th><th>What it means</th><th>Example value</th></tr></thead>
+<tbody>
+<tr><td>Starting free cash flow</td><td>Cash left after operating costs, tax and reinvestment in the latest year</td><td>$386,500</td></tr>
+<tr><td>Annual growth rate</td><td>Yearly rise in free cash flow during the forecast period</td><td>9%</td></tr>
+<tr><td>Projection years</td><td>Number of explicit years you forecast</td><td>6</td></tr>
+<tr><td>Discount rate (WACC)</td><td>Required return that reflects the risk of the business</td><td>11.5%</td></tr>
+<tr><td>Terminal growth rate</td><td>Steady growth assumed after the last forecast year</td><td>2.5%</td></tr>
+<tr><td>Net debt</td><td>Total debt minus cash on the balance sheet</td><td>$1,150,000</td></tr>
+<tr><td>Shares outstanding</td><td>Units used to express equity value per share</td><td>250,000</td></tr>
+</tbody>
+</table>
+
+<h3>Free cash flow: the base of the forecast</h3>
+<p><strong>Free cash flow</strong> is the money a business has left after it pays <strong>operating costs</strong>, taxes and the investment needed to keep growing. Pull the figure from your income statement and cash flow statement, then take the average of a few recent years if one year looks unusual. Revenue and profit alone are not enough, because profit ignores the cash tied up in equipment and inventory.</p>
+
+<h3>Growth rate and forecast period</h3>
+<p>Two fields shape the forecast. The projection years field sets the <strong>forecast period</strong>, and the annual <strong>growth rate</strong> field decides how fast each year's cash flow rises across it; the calculator applies that rate to the starting figure year by year and begins the terminal value after the last one. In the example, 9% over six years is followed by 2.5%, so the pace fades toward the economy's. Entering a steady rate in one run and a fading rate in another, as two <strong>scenarios</strong>, is more honest than trusting a single path.</p>
+
+<h3>Discount rate, WACC and cost of capital</h3>
+<p>The <strong>discount rate</strong> is the yearly return a buyer demands for taking this particular risk. For a company with both debt and equity it is usually the <strong>WACC</strong>, the weighted blend of your borrowing cost and your owners' expected return, which is why it is also called the <strong>cost of capital</strong>. For a small private firm, a <strong>required rate of return</strong> built from a risk-free rate plus a size and company-specific premium is common. A higher rate means a lower value, so this is the input that moves the answer most.</p>
+
+<h3>Terminal growth rate and exit multiple</h3>
+<p>Beyond the last forecast year, the calculator assumes the business keeps growing at a low, constant <strong>terminal growth rate</strong>, typically close to long-run inflation. Keep it below the discount rate and below the growth of the economy. Some analysts replace this step with an <strong>exit multiple</strong>, applying an industry multiple to the final year's EBITDA; both routes need conservative numbers to avoid <strong>overvaluation</strong>.</p>
+        </section>
+        <section id="business-valuation-discounted-cash-flow-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="business-valuation-discounted-cash-flow-calculator-guide-heading-3">
+<h2 id="business-valuation-discounted-cash-flow-calculator-guide-heading-3">DCF Valuation Formula: From Free Cash Flow to Equity Value</h2>
+<p>The method has five steps. You can work through them by hand or in a <strong>spreadsheet</strong> such as Excel, which is a good way to learn how the calculator reaches its answer.</p>
+
+<h3>Step 1: project free cash flow to the firm (FCFF)</h3>
+<p><strong>FCFF</strong> is the cash available to everyone who funds the company, lenders and owners alike. Start from operating profit (<strong>EBIT</strong>), apply the <strong>tax rate</strong>, add back <strong>depreciation</strong> and other <strong>non-cash charges</strong>, then subtract <strong>capital expenditure</strong> and the increase in <strong>working capital</strong>:</p>
+<p>$$FCFF = EBIT \times (1 - \text{tax rate}) + \text{non-cash charges} - \text{CapEx} - \Delta\text{working capital}$$</p>
+<p>The <strong>net investment</strong> figure is simply capital expenditure minus depreciation. Working capital, meaning current assets minus current liabilities, rises as a company expands because more cash is locked up in stock and receivables.</p>
+
+<h3>Step 2: estimate the terminal value with the Gordon growth model</h3>
+<p>The <strong>Gordon growth model</strong> values every cash flow after the forecast period as one lump sum:</p>
+<p>$$TV = \frac{FCFF_{n} \times (1 + g)}{r - g}$$</p>
+<p>Here \(FCFF_{n}\) is the final forecast-year cash flow, \(g\) the terminal growth rate and \(r\) the discount rate. The formula only works when \(r\) is larger than \(g\); if the two come close, the result explodes, which is why a <strong>margin of safety</strong> in your growth input matters.</p>
+
+<h3>Step 3: discount each cash flow to present value</h3>
+<p>Each year's cash flow is divided by one plus the discount rate, raised to the year number:</p>
+<p>$$PV = \frac{FCFF_{t}}{(1 + r)^{t}}$$</p>
+<p>Summing these gives the <strong>present value of future cash flows</strong> for the explicit years. The terminal value is discounted with the same factor as the last forecast year.</p>
+<figure><img src="/assets/images/tools/business-valuation-discounted-cash-flow-calculator/present-value-of-future-cash-flows-by-year.svg" alt="Dumbbell chart comparing each year's projected free cash flow with its present value over a six-year forecast period"><figcaption>Later cash flows lose more value to discounting at an 11.5% discount rate.</figcaption></figure>
+
+<h3>Step 4: add the parts to reach enterprise value</h3>
+<p>$$EV = \sum_{t=1}^{n} \frac{FCFF_{t}}{(1 + r)^{t}} + \frac{TV}{(1 + r)^{n}}$$</p>
+<p>The result is the <strong>enterprise value</strong>, the worth of the operating business before you consider how it is financed.</p>
+
+<h3>Step 5: subtract net debt for equity value and per-share value</h3>
+<p>$$\text{Equity value} = EV - \text{net debt}, \qquad \text{Value per share} = \frac{\text{Equity value}}{\text{shares outstanding}}$$</p>
+<p>The <strong>net debt</strong> adjustment is what separates the value of the whole firm from the slice owned by shareholders.</p>
+        </section>
+        <section id="business-valuation-discounted-cash-flow-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="business-valuation-discounted-cash-flow-calculator-guide-heading-4">
+<h2 id="business-valuation-discounted-cash-flow-calculator-guide-heading-4">Worked Example: Intrinsic Value of a Company with the DCF Calculator</h2>
+<p>Take a regional packaging company whose latest free cash flow is <strong>$386,500</strong>. You expect it to grow <strong>9%</strong> a year for six years, you apply an <strong>11.5%</strong> discount rate, and you assume <strong>2.5%</strong> growth after year six. The business carries <strong>$1,150,000</strong> of net debt and has 250,000 shares. The table shows how each year's cash flow is projected and discounted.</p>
+<table>
+<thead><tr><th>Year</th><th>Projected free cash flow</th><th>Discount factor</th><th>Present value</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>$421,285</td><td>0.8969</td><td>$377,834</td></tr>
+<tr><td>2</td><td>$459,201</td><td>0.8044</td><td>$369,362</td></tr>
+<tr><td>3</td><td>$500,529</td><td>0.7214</td><td>$361,081</td></tr>
+<tr><td>4</td><td>$545,576</td><td>0.6470</td><td>$352,985</td></tr>
+<tr><td>5</td><td>$594,678</td><td>0.5803</td><td>$345,070</td></tr>
+<tr><td>6</td><td>$648,199</td><td>0.5204</td><td>$337,333</td></tr>
+<tr><td><strong>Total</strong></td><td></td><td></td><td><strong>$2,143,666</strong></td></tr>
+</tbody>
+</table>
+<p>The final-year cash flow of $648,199 feeds the terminal value: $648,199 × 1.025 ÷ (0.115 − 0.025) gives about <strong>$7,382,269</strong>, which discounts to <strong>$3,841,852</strong> today. Adding that to the $2,143,666 of forecast-year value produces an <strong>enterprise value of $5,985,518</strong>. After subtracting the $1,150,000 of net debt, the <strong>equity value</strong> is <strong>$4,835,518</strong>, or <strong>$19.34 per share</strong>.</p>
+<figure><img src="/assets/images/tools/business-valuation-discounted-cash-flow-calculator/dcf-enterprise-value-to-equity-value-waterfall.svg" alt="Waterfall chart adding discounted forecast cash flows and discounted terminal value to reach a $5,985,518 enterprise value, then subtracting net debt for $4,835,518 equity value"><figcaption>How present value of forecast years, terminal value and net debt combine into equity value in the worked example.</figcaption></figure>
+        </section>
+        <section id="business-valuation-discounted-cash-flow-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="business-valuation-discounted-cash-flow-calculator-guide-heading-5">
+<h2 id="business-valuation-discounted-cash-flow-calculator-guide-heading-5">Reading Your Result: Fair Value, Undervalued or Overvalued</h2>
+<p>Compare the <strong>intrinsic value</strong> the calculator returns with the <strong>current market price</strong> or with the price a seller is asking. If the asking price sits well below your equity value, the business looks <strong>undervalued</strong>; if it sits above, it looks <strong>overvalued</strong>. Buyers often demand a discount of 20% or more between the calculator's output and their offer as a built-in cushion against forecast errors.</p>
+
+<h3>Check how much comes from the terminal value</h3>
+<p>In the example above, <strong>64.2%</strong> of the enterprise value comes from the terminal value. That is normal for a six-year forecast, but it means the answer depends heavily on two assumptions you cannot observe. If the share climbs past roughly three quarters, shorten your reliance on it, lower the terminal growth rate or lengthen the explicit period.</p>
+
+<h3>Run a sensitivity analysis</h3>
+<p>A <strong>sensitivity analysis</strong> changes the discount rate and terminal growth one step at a time and records the enterprise value. The grid below uses the same example and shows how a one-point move in the discount rate shifts the answer by hundreds of thousands of dollars.</p>
+<figure><img src="/assets/images/tools/business-valuation-discounted-cash-flow-calculator/dcf-sensitivity-analysis-discount-rate-terminal-growth.svg" alt="Heatmap of DCF enterprise value across three discount rates and three terminal growth rates"><figcaption>Sensitivity analysis grid with the base case outlined.</figcaption></figure>
+<table>
+<thead><tr><th>Discount rate</th><th>Terminal growth 1.5%</th><th>Terminal growth 2.5%</th><th>Terminal growth 3.5%</th></tr></thead>
+<tbody>
+<tr><td>10.5%</td><td>$6,226,954</td><td>$6,773,421</td><td>$7,476,023</td></tr>
+<tr><td>11.5%</td><td>$5,567,599</td><td>$5,985,518</td><td>$6,507,916</td></tr>
+<tr><td>12.5%</td><td>$5,029,484</td><td>$5,356,488</td><td>$5,756,159</td></tr>
+</tbody>
+</table>
+<p>The cheapest corner of the grid is about 16% below the base case, and the most generous is about 25% above it. A fair summary for a buyer is a range, not a point.</p>
+        </section>
+        <section id="business-valuation-discounted-cash-flow-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="business-valuation-discounted-cash-flow-calculator-guide-heading-6">
+<h2 id="business-valuation-discounted-cash-flow-calculator-guide-heading-6">Pricing a Two-Shop Bakery with a DCF Valuation Calculator</h2>
+<p>Dana Okafor is weighing an offer to buy a two-shop bakery whose owner wants <strong>$1,650,000</strong>. The seller's books show an average free cash flow of <strong>$148,200</strong> over the last three years, after paying a manager a market salary. Before the asking price is discussed again, Dana opens the calculator to see what a discounted cash flow valuation says the business is worth.</p>
+<p>Dana enters <strong>$148,200</strong> as the starting cash flow and <strong>6.5%</strong> growth for <strong>5</strong> years, because a third shop would take about that long to fill. The discount rate is <strong>13.5%</strong>, Dana's own hurdle for a single-region food business. Terminal growth is set to <strong>2.0%</strong>, matching the Federal Reserve's long-run inflation target, and net debt is the <strong>$212,000</strong> equipment loan that stays with the company.</p>
+<p>After pressing the calculate button, the page shows year-five cash flow of $203,047, a discounted forecast total of $614,664 and a discounted terminal value of $956,135. The <strong>enterprise value is $1,570,799</strong>, and the equity value after the loan is <strong>$1,358,799</strong>. The terminal value supplies 60.9% of the total, which is lower than most businesses carry, so Dana trusts the figure a little more.</p>
+<ul>
+<li>The asking price is $79,201, or 5.0%, above the calculated enterprise value.</li>
+<li>Re-running the same inputs at a 12.5% discount rate gives $1,725,113, so the seller's number only works if Dana accepts a lower required return.</li>
+<li>At 14.5% the value falls to $1,441,310, which is Dana's walk-away boundary.</li>
+</ul>
+<p>The result gives Dana a specific next step: offer <strong>$1,570,000</strong>, state that the figure comes from the 13.5% rate, and ask the seller to justify any lower rate with the third-shop lease evidence. Dana now negotiates one named assumption rather than an unexplained price.</p>
+        </section>
+        <section id="business-valuation-discounted-cash-flow-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="business-valuation-discounted-cash-flow-calculator-guide-heading-7">
+<h2 id="business-valuation-discounted-cash-flow-calculator-guide-heading-7">Business Valuation Methods Compared with DCF Analysis</h2>
+<p>No single method settles a price. The <strong>market approach</strong> looks at <strong>comparable</strong> companies and applies multiples of <strong>EBITDA</strong>, revenue or <strong>earnings</strong>; it is fast and rooted in what buyers actually pay, but it says little about a company that differs from its peers. The asset approach adds up what the balance sheet holds, which suits a holding company or a business about to be liquidated. DCF is the most detailed of the three because it models the business itself, and it does not require any comparable firm to exist.</p>
+<ul>
+<li><strong>Pros of DCF:</strong> captures growth and risk explicitly, works for companies without peers, supports scenarios and a sensitivity analysis, and links directly to the <strong>internal rate of return</strong> an investor would earn.</li>
+<li><strong>Cons of DCF:</strong> demands many assumptions, is dominated by the terminal value, and rewards overconfidence when inputs are rosy.</li>
+<li><strong>Best practice:</strong> reconcile the answer with <strong>peer benchmarks</strong> before you rely on it.</li>
+</ul>
+        </section>
+        <section id="business-valuation-discounted-cash-flow-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="business-valuation-discounted-cash-flow-calculator-guide-heading-8">
+<h2 id="business-valuation-discounted-cash-flow-calculator-guide-heading-8">Using a DCF Value Calculator to Find the Value of a Business</h2>
+<p>A <strong>DCF value calculator</strong> works the same way whether you want the value of a business you own, a company you plan to buy or a listed stock. What changes is the quality of the inputs. A <strong>business owner</strong> starts from the cash left after a fair salary for the owner; a stock investor starts from reported free cash flow; a startup with no profit starts from a revenue plan. Each route leads to the <strong>value of a business</strong> as a sum of discounted payments, and it helps to ask a plain question first: what would this investment pay me over six years if I then sold it?</p>
+<p>Good <strong>cash flow projections</strong> begin with <strong>revenue growth</strong>. Estimate customers and price, apply the operating margin the company has earned before, then deduct <strong>expenses</strong>, tax and reinvestment. Check whether your figures describe <strong>net operating profit</strong> or <strong>pre-tax</strong> profit, because the two differ by the interest bill. Treat the result as <strong>projected cash flows</strong>, not as a promise.</p>
+<p>Choose a <strong>projection period</strong> that ends once the company reaches <strong>stable growth</strong>. Every <strong>explicit year</strong> should carry its own revenue, margin and reinvestment assumption, and the last one feeds the terminal value. If the business is still expanding fast in year six, lengthen the period rather than forcing a low terminal rate. As a cross-check, the <strong>exit multiple method</strong> sells the company at the end of the period at an industry multiple of EBITDA; a large gap between that answer and the Gordon result tells you one assumption is off.</p>
+<p>The enterprise value is a close relative of <strong>net present value</strong>: <strong>NPV</strong> subtracts the price you pay from it, and the discount rate that brings that difference to zero is the <strong>IRR</strong>. For <strong>stock valuation</strong>, set the per-share result beside the <strong>price target</strong> an analyst quotes. A company that pays <strong>dividends</strong> can also be valued by discounting them, though free cash flow is the better input when payouts are small. Because the discount factor is <strong>compounded</strong> yearly, a change in the rate bites harder on late years than early ones.</p>
+<p>The calculator reports an <strong>absolute value</strong>, an amount in dollars, rather than a multiple of earnings, which is why <strong>finance</strong> teams, lenders and a seller weighing an <strong>acquisition</strong> can test an offer against what the cash flows support. Keep a short <strong>methodology</strong> note recording where each input came from, and weigh <strong>competition</strong> when you set growth, since rivals squeeze margins. To <strong>value a business</strong> credibly, show the value of a business as a range.</p>
+<p>A <strong>free discounted cash flow calculator</strong> like this one removes the arithmetic but not the judgment. Use a <strong>DCF valuation calculator</strong> for a quick range, and move to a spreadsheet-based <strong>business valuation calculator</strong> model when you need every year's costs on view. Either way, the <strong>DCF calculator</strong> is a decision aid for an investment, not a replacement for an appraisal.</p>
+        </section>
+        <section id="business-valuation-discounted-cash-flow-calculator-guide-section-9" class="panel article-content p-4 sm:p-6" aria-labelledby="business-valuation-discounted-cash-flow-calculator-guide-heading-9">
+<h2 id="business-valuation-discounted-cash-flow-calculator-guide-heading-9">Common Mistakes When You Value a Company with DCF</h2>
+<ul>
+<li><strong>Terminal growth that is too high.</strong> A company growing forever at 6% would eventually outgrow the economy. Stay near inflation.</li>
+<li><strong>A discount rate that ignores risk.</strong> Using a large-company rate for a small private firm overstates the answer.</li>
+<li><strong>Forgetting working capital and capital spending.</strong> Profit growth that needs new machinery or stock is not free cash flow.</li>
+<li><strong>Mixing enterprise and equity figures.</strong> Divide only the equity value, never the enterprise value, by shares outstanding.</li>
+<li><strong>Treating one result as the truth.</strong> The output is an estimate built on stated assumptions, not an independent appraisal.</li>
+</ul>
+        </section>
+      </div>
+
+      <section id="business-valuation-discounted-cash-flow-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="business-valuation-discounted-cash-flow-calculator-faq-heading" data-section="faq">
+        <h2 id="business-valuation-discounted-cash-flow-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Business Valuation (Discounted Cash Flow) Calculator questions</h2>
+        <div id="business-valuation-discounted-cash-flow-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="business-valuation-discounted-cash-flow-calculator-faq-1" class="faq-item" open><summary id="business-valuation-discounted-cash-flow-calculator-faq-1-summary" class="faq-summary"><h3 id="business-valuation-discounted-cash-flow-calculator-faq-1-question" class="faq-question">What is a discounted cash flow calculator?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="business-valuation-discounted-cash-flow-calculator-faq-1-answer" class="faq-answer"><p>It estimates what a business is worth today by projecting its future free cash flows and discounting each one back to present value with a required rate of return, then adding a terminal value for the years beyond the forecast.</p></div></details>
+          <details id="business-valuation-discounted-cash-flow-calculator-faq-2" class="faq-item" open><summary id="business-valuation-discounted-cash-flow-calculator-faq-2-summary" class="faq-summary"><h3 id="business-valuation-discounted-cash-flow-calculator-faq-2-question" class="faq-question">What discount rate should I use to value a business?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="business-valuation-discounted-cash-flow-calculator-faq-2-answer" class="faq-answer"><p>Use the return a buyer would demand for the risk involved. Large, stable companies often use their weighted average cost of capital; small private businesses usually add a size and company-specific premium, so rates well above 10% are common.</p></div></details>
+          <details id="business-valuation-discounted-cash-flow-calculator-faq-3" class="faq-item" open><summary id="business-valuation-discounted-cash-flow-calculator-faq-3-summary" class="faq-summary"><h3 id="business-valuation-discounted-cash-flow-calculator-faq-3-question" class="faq-question">What terminal growth rate is reasonable?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="business-valuation-discounted-cash-flow-calculator-faq-3-answer" class="faq-answer"><p>Most analysts stay close to long-run inflation, often 2% to 3%. It must stay below the discount rate, and a business cannot sensibly grow faster than the economy forever.</p></div></details>
+          <details id="business-valuation-discounted-cash-flow-calculator-faq-4" class="faq-item" open><summary id="business-valuation-discounted-cash-flow-calculator-faq-4-summary" class="faq-summary"><h3 id="business-valuation-discounted-cash-flow-calculator-faq-4-question" class="faq-question">What is the difference between enterprise value and equity value?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="business-valuation-discounted-cash-flow-calculator-faq-4-answer" class="faq-answer"><p>Enterprise value is the worth of the operating business before financing. Subtract net debt (debt minus cash) to get equity value, the part that belongs to shareholders.</p></div></details>
+          <details id="business-valuation-discounted-cash-flow-calculator-faq-5" class="faq-item" open><summary id="business-valuation-discounted-cash-flow-calculator-faq-5-summary" class="faq-summary"><h3 id="business-valuation-discounted-cash-flow-calculator-faq-5-question" class="faq-question">Why does terminal value make up so much of the result?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="business-valuation-discounted-cash-flow-calculator-faq-5-answer" class="faq-answer"><p>Most of a company&#x27;s cash flow arrives after the explicit forecast years, so the terminal value often supplies 50% to 80% of enterprise value. That makes the terminal growth and discount rate the inputs to test first.</p></div></details>
+          <details id="business-valuation-discounted-cash-flow-calculator-faq-6" class="faq-item" open><summary id="business-valuation-discounted-cash-flow-calculator-faq-6-summary" class="faq-summary"><h3 id="business-valuation-discounted-cash-flow-calculator-faq-6-question" class="faq-question">How many forecast years should I project?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="business-valuation-discounted-cash-flow-calculator-faq-6-answer" class="faq-answer"><p>Five to ten years is typical. Use a shorter period for slow, competitive businesses and a longer one for companies still growing quickly, ending the forecast once growth settles.</p></div></details>
+          <details id="business-valuation-discounted-cash-flow-calculator-faq-7" class="faq-item" open><summary id="business-valuation-discounted-cash-flow-calculator-faq-7-summary" class="faq-summary"><h3 id="business-valuation-discounted-cash-flow-calculator-faq-7-question" class="faq-question">Is a DCF result the same as an appraisal?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="business-valuation-discounted-cash-flow-calculator-faq-7-answer" class="faq-answer"><p>No. It is an estimate that depends entirely on your assumptions. Use it as a range, compare it with market multiples, and get a qualified appraisal for a sale, tax or legal purpose.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="business-valuation-discounted-cash-flow-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="business-valuation-discounted-cash-flow-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="business-valuation-discounted-cash-flow-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="business-valuation-discounted-cash-flow-calculator-ad-bottom-leaderboard">
+            <ins id="business-valuation-discounted-cash-flow-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("business-valuation-discounted-cash-flow-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="business-valuation-discounted-cash-flow-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="business-valuation-discounted-cash-flow-calculator-right-rail-top" class="mb-6">
+        <aside id="business-valuation-discounted-cash-flow-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="business-valuation-discounted-cash-flow-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="business-valuation-discounted-cash-flow-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="business-valuation-discounted-cash-flow-calculator-ad-right-rail-rectangle">
+            <ins id="business-valuation-discounted-cash-flow-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("business-valuation-discounted-cash-flow-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="business-valuation-discounted-cash-flow-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="business-valuation-discounted-cash-flow-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="business-valuation-discounted-cash-flow-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="business-valuation-discounted-cash-flow-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="business-valuation-discounted-cash-flow-calculator-ad-right-rail-skyscraper">
+            <ins id="business-valuation-discounted-cash-flow-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("business-valuation-discounted-cash-flow-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="business-valuation-discounted-cash-flow-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="business-valuation-discounted-cash-flow-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="business-valuation-discounted-cash-flow-calculator-footer-brand">
+        <a id="business-valuation-discounted-cash-flow-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="business-valuation-discounted-cash-flow-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="business-valuation-discounted-cash-flow-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="business-valuation-discounted-cash-flow-calculator-footer-categories" aria-labelledby="business-valuation-discounted-cash-flow-calculator-footer-categories-heading">
+        <h2 id="business-valuation-discounted-cash-flow-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="business-valuation-discounted-cash-flow-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="business-valuation-discounted-cash-flow-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="business-valuation-discounted-cash-flow-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="business-valuation-discounted-cash-flow-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="business-valuation-discounted-cash-flow-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="business-valuation-discounted-cash-flow-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="business-valuation-discounted-cash-flow-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="business-valuation-discounted-cash-flow-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="business-valuation-discounted-cash-flow-calculator-footer-company" aria-labelledby="business-valuation-discounted-cash-flow-calculator-footer-company-heading">
+        <h2 id="business-valuation-discounted-cash-flow-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="business-valuation-discounted-cash-flow-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="business-valuation-discounted-cash-flow-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="business-valuation-discounted-cash-flow-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="business-valuation-discounted-cash-flow-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="business-valuation-discounted-cash-flow-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="business-valuation-discounted-cash-flow-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="business-valuation-discounted-cash-flow-calculator-footer-bottom" class="border-t border-line">
+      <p id="business-valuation-discounted-cash-flow-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="business-valuation-discounted-cash-flow-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Discounted cash flow (DCF) business valuation.
+  //   Base-year free cash flow (FCF) = entered directly, or operating profit x (1 - tax rate)
+  //     + depreciation and amortization - capital expenditures - increase in working capital.
+  //   Projected FCF_t = base x (1 + g)^t for t = 1..N, unless year-by-year values are entered.
+  //   PV_t = FCF_t / (1 + r)^t  (or ^(t - 0.5) with the mid-year convention).
+  //   Terminal value at year N: Gordon growth TV = FCF_N x (1 + g_t) / (r - g_t), or
+  //     exit multiple TV = multiple x EBITDA_N (EBITDA grows at the projection rate).
+  //     Discounted from the end of year N: PV(TV) = TV / (1 + r)^N.
+  //   Enterprise value = sum PV_t + PV(TV); equity value = EV - debt + cash; per share = equity / shares.
+  //   Cross-checks: implied exit multiple TV / EBITDA_N; implied perpetual growth from an exit-multiple
+  //     TV: g = (TV x r - FCF_N) / (TV + FCF_N).
+  // Verified (Node, scratch tests, against hand calculations):
+  //   FCF $100 for 5 years flat (g = 0), r = 10%, no terminal (g_t = 0 and Gordon gives 100/0.1 = 1,000):
+  //     PV of FCFs = 100 x annuity factor 3.790787 = $379.08; PV(TV) = 1,000 / 1.1^5 = $620.92;
+  //     EV = $1,000.00 (a level perpetuity is worth FCF / r, as it should be).
+  //   Growing perpetuity check: base $100, g = g_t = 3%, r = 10% -> EV = 100 x 1.03 / 0.07 = $1,471.43.
+  //   Defaults: EBIT $1.5M, 21% tax, D&A $200k, capex $300k, working capital $50k -> base FCF $1,035,000.
+  //   Mid-year convention multiplies each PV_t by 1.1^0.5 = 1.048809 at r = 10% (checked: $436 -> $457).
+  //   Exit multiple: EBITDA $1.7M grown 5% for 5 years = $2,169,678.66; x 10 = TV $21,696,786.56.
+  //
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+  var cents = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+  function el(id) { return document.getElementById(id); }
+  function raw(id) { return el(id).value.trim() === '' ? 0 : parseFloat(el(id).value); }
+  function ok(v) { return typeof v === 'number' && isFinite(v); }
+  function pct(x) { return (x * 100).toFixed(2).replace(/\.?0+$/, '') + '%'; }
+
+  // Parses a list of yearly amounts separated by semicolons or new lines ("1,200,000; 1,300,000").
+  // Returns null when any entry is not a number.
+  function parseList(text) {
+    var parts = text.split(/[;\n]+/), out = [];
+    for (var i = 0; i < parts.length; i++) {
+      var p = parts[i].replace(/[$,\s]/g, '');
+      if (p === '') continue;
+      var v = Number(p);
+      if (!isFinite(v)) return null;
+      out.push(v);
+    }
+    return out;
+  }
+
+  function value(o) {
+    var flows = [], ebitda = [], f = o.baseFcf, e = o.baseEbitda;
+    var n = o.custom ? o.custom.length : o.years;
+    for (var t = 1; t <= n; t++) {
+      f = f * (1 + o.growth); e = e * (1 + o.growth);
+      flows.push(o.custom ? o.custom[t - 1] : f);
+      ebitda.push(e);
+    }
+    var rows = [], pvSum = 0;
+    for (var k = 0; k < n; k++) {
+      var period = o.midYear ? k + 0.5 : k + 1;
+      var df = 1 / Math.pow(1 + o.rate, period);
+      rows.push({ year: k + 1, fcf: flows[k], df: df, pv: flows[k] * df });
+      pvSum += flows[k] * df;
+    }
+    var last = flows[n - 1], lastEbitda = ebitda[n - 1], tv;
+    if (o.method === 'gordon') tv = last * (1 + o.termGrowth) / (o.rate - o.termGrowth);
+    else tv = o.multiple * lastEbitda;
+    var pvTv = tv / Math.pow(1 + o.rate, n);
+    var ev = pvSum + pvTv, equity = ev - o.debt + o.cash;
+    var impliedGrowth = (tv + last) !== 0 ? (tv * o.rate - last) / (tv + last) : NaN;
+    return { rows: rows, pvSum: pvSum, tv: tv, pvTv: pvTv, ev: ev, equity: equity, last: last, n: n,
+             lastEbitda: lastEbitda, impliedGrowth: impliedGrowth, tvDf: 1 / Math.pow(1 + o.rate, n) };
+  }
+
+  function cell(text) { var td = document.createElement('td'); td.textContent = text; return td; }
+  function fail(msg) { var e = el('dcError'); e.hidden = false; e.textContent = msg; }
+
+  function update() {
+    var mode = el('dcMode').value, method = el('dcMethod').value;
+    var build = mode === 'build', exit = method === 'exit';
+    el('dcDirectWrap').hidden = build;
+    el('dcBuildWrap').hidden = !build;
+    el('dcGordonWrap').hidden = exit;
+    el('dcExitWrap').hidden = !exit;
+    el('dcEbitdaWrap').hidden = !(exit && !build);
+
+    var o = {
+      method: method, growth: raw('dcGrowth') / 100, years: Math.round(raw('dcYears')), rate: raw('dcRate') / 100,
+      termGrowth: raw('dcTermGrowth') / 100, multiple: raw('dcMultiple'), debt: raw('dcDebt'), cash: raw('dcCash'),
+      shares: raw('dcShares'), midYear: el('dcMidYear').checked, custom: null
+    };
+    var ebit = raw('dcEbit'), tax = raw('dcTax') / 100, da = raw('dcDa'), capex = raw('dcCapex'), nwc = raw('dcNwc');
+    if (build) { o.baseFcf = ebit * (1 - tax) + da - capex - nwc; o.baseEbitda = ebit + da; }
+    else { o.baseFcf = raw('dcFcf'); o.baseEbitda = raw('dcEbitda'); }
+
+    var listText = el('dcCustom').value.trim();
+    if (listText !== '') {
+      o.custom = parseList(listText);
+      if (!o.custom || o.custom.length === 0 || o.custom.length > 30) return fail('Enter 1 to 30 yearly cash flows as numbers separated by semicolons or new lines.');
+    }
+    var all = [o.growth, o.years, o.rate, o.termGrowth, o.multiple, o.debt, o.cash, o.shares, o.baseFcf, o.baseEbitda, ebit, tax, da, capex, nwc];
+    if (!all.every(ok)) return fail('Fill in every field with a number.');
+    if (!o.custom && (o.years < 1 || o.years > 30)) return fail('Use a projection period of 1 to 30 years.');
+    if (o.rate <= -0.99 || o.rate > 1 || o.growth <= -1 || o.growth > 1) return fail('Use a discount rate and growth rate between -99% and 100%.');
+    if (tax < 0 || tax >= 1) return fail('Use a tax rate from 0% up to 100%.');
+    if (o.debt < 0 || o.cash < 0 || o.shares < 0 || o.multiple < 0) return fail('Debt, cash, shares and the exit multiple cannot be negative.');
+    if (method === 'gordon' && o.termGrowth >= o.rate) return fail('The terminal growth rate must be lower than the discount rate, or the value would be infinite.');
+    el('dcError').hidden = true;
+
+    var r = value(o);
+    var vals = [r.ev, r.equity, r.pvSum, r.pvTv, r.tv];
+    if (!vals.every(ok)) return fail('These inputs produce a value too large to show. Check the rates and amounts.');
+
+    el('dcEquity').textContent = money.format(r.equity);
+    el('dcPerShare').textContent = o.shares > 0 ? cents.format(r.equity / o.shares) : '–';
+    el('dcEv').textContent = money.format(r.ev);
+    el('dcBaseFcf').textContent = money.format(o.baseFcf);
+    el('dcPvFlows').textContent = money.format(r.pvSum);
+    el('dcTv').textContent = money.format(r.tv);
+    el('dcPvTv').textContent = money.format(r.pvTv) + (r.ev > 0 ? ' (' + pct(r.pvTv / r.ev) + ' of value)' : '');
+    el('dcNetDebt').textContent = money.format(o.debt - o.cash);
+    var cross = el('dcCross'), crossLabel = el('dcCrossLabel');
+    if (method === 'gordon') {
+      crossLabel.textContent = 'Implied exit multiple of final-year ' + (build ? 'EBITDA' : 'free cash flow');
+      var denom = build ? r.lastEbitda : r.last;
+      cross.textContent = denom > 0 ? (r.tv / denom).toFixed(1) + '×' : '–';
+    } else {
+      crossLabel.textContent = 'Implied perpetual growth rate';
+      cross.textContent = ok(r.impliedGrowth) && r.last > 0 ? pct(r.impliedGrowth) : '–';
+    }
+    var note = el('dcNote'), msgs = [];
+    if (r.ev < 0) msgs.push('The enterprise value is negative because the projected cash flows are negative.');
+    else if (r.equity < 0) msgs.push('Net debt is larger than the enterprise value, so the equity value is negative.');
+    if (r.ev > 0 && r.pvTv / r.ev > 0.75) msgs.push('More than three quarters of the value comes from the terminal value, so the result is very sensitive to the terminal assumptions.');
+    note.hidden = msgs.length === 0;
+    note.textContent = msgs.join(' ');
+
+    var body = el('dcSchedule');
+    while (body.firstChild) body.removeChild(body.firstChild);
+    r.rows.forEach(function (row) {
+      var tr = document.createElement('tr');
+      tr.appendChild(cell(String(row.year)));
+      tr.appendChild(cell(money.format(row.fcf)));
+      tr.appendChild(cell(row.df.toFixed(4)));
+      tr.appendChild(cell(money.format(row.pv)));
+      body.appendChild(tr);
+    });
+    var tr = document.createElement('tr');
+    tr.className = 'font-semibold';
+    tr.appendChild(cell('Terminal value (end of year ' + r.n + ')'));
+    tr.appendChild(cell(money.format(r.tv)));
+    tr.appendChild(cell(r.tvDf.toFixed(4)));
+    tr.appendChild(cell(money.format(r.pvTv)));
+    body.appendChild(tr);
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = el('dcForm');
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

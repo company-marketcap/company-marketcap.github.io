@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="en" id="budget-calculator-document" data-page-slug="budget-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Budget Calculator: Plan Your Monthly Income and Spending</title>
+  <meta name="description" content="Use this free budget calculator to split your monthly income across needs, wants and savings, then see exactly how much is left over each month.">
+  <link rel="canonical" href="https://company-marketcap.github.io/budget-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Budget Calculator: Plan Your Monthly Income and Spending">
+  <meta property="og:description" content="Use this free budget calculator to split your monthly income across needs, wants and savings, then see exactly how much is left over each month.">
+  <meta property="og:url" content="https://company-marketcap.github.io/budget-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Budget Calculator", "url": "https://company-marketcap.github.io/budget-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Use this free budget calculator to split your monthly income across needs, wants and savings, then see exactly how much is left over each month."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Budgeting, Net Worth & Cash Flow", "item": "https://company-marketcap.github.io/financial-calculators.html#budget-calculators"}, {"@type": "ListItem", "position": 4, "name": "Budget Calculator", "item": "https://company-marketcap.github.io/budget-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a budget calculator?", "acceptedAnswer": {"@type": "Answer", "text": "A budget calculator adds up your income, subtracts your expenses and savings, and shows where your money goes each month so you can plan ahead instead of guessing."}}, {"@type": "Question", "name": "How does zero-based budgeting work?", "acceptedAnswer": {"@type": "Answer", "text": "You assign every dollar of income to an expense, a savings goal or a debt payment before the month starts, until income minus expenses equals zero. Zero does not mean broke; it means no dollar is left without a job."}}, {"@type": "Question", "name": "What is the 50/30/20 rule?", "acceptedAnswer": {"@type": "Answer", "text": "It splits after-tax income into 50% for needs, 30% for wants and 20% for savings and debt repayment. It is a broad guide rather than a detailed plan, and the calculator shows your own split next to it."}}, {"@type": "Question", "name": "What is the difference between before-tax and take-home income?", "acceptedAnswer": {"@type": "Answer", "text": "Before-tax (gross) income is what you earn before taxes and deductions; take-home pay or net income is what reaches your account. This calculator takes income before tax and applies your tax rate to get net income."}}, {"@type": "Question", "name": "How much of my income should go to housing?", "acceptedAnswer": {"@type": "Answer", "text": "A common rule of thumb keeps housing at or below about 30% of gross income, and many planners prefer 25% of take-home pay. The housing share result shows where you stand."}}, {"@type": "Question", "name": "What is the debt-to-income ratio?", "acceptedAnswer": {"@type": "Answer", "text": "It divides your monthly debt payments, including rent or mortgage, by gross monthly income. Lenders use it to judge how much more debt you can carry, and lower is safer."}}, {"@type": "Question", "name": "What should I do if my monthly balance is negative?", "acceptedAnswer": {"@type": "Answer", "text": "A negative balance means you are spending more than you earn. Trim wants first, review the largest needs such as housing and transportation, and avoid covering the gap with credit cards."}}, {"@type": "Question", "name": "How much should I keep in an emergency fund?", "acceptedAnswer": {"@type": "Answer", "text": "Many planners suggest a starter cushion of about $1,000 first, then three to six months of expenses once high-interest debt is paid down. Enter the monthly contribution under Emergency fund & other savings."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="budget-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="budget-calculator" data-page-type="calculator">
+  <a id="budget-calculator-skip-link" href="#budget-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="budget-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="budget-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="budget-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="budget-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="budget-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="budget-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="budget-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="budget-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="budget-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="budget-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="budget-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="budget-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="budget-calculator-header-search-status" aria-controls="budget-calculator-header-search-results" data-search-input="header">
+              <p id="budget-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="budget-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="budget-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="budget-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="budget-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="budget-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="budget-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="budget-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="budget-calculator-mobile-search-status" aria-controls="budget-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="budget-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="budget-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="budget-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="budget-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="budget-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="budget-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="budget-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="budget-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="budget-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="budget-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="budget-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="budget-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="budget-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="budget-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="budget-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="budget-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="budget-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="budget-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="budget-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="budget-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="budget-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="budget-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="budget-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="budget-calculator-sidebar-search-status" aria-controls="budget-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="budget-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="budget-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="budget-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="budget-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="budget-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="budget-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="budget-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="budget-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="budget-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="budget-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="budget-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="budget-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="budget-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="budget-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="budget-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="budget-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="budget-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="budget-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="budget-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="budget-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="budget-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="budget-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="budget-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="budget-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="budget-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="budget-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="budget-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="budget-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators" aria-current="true">Budgeting &amp; Net Worth</a></li><li><a id="budget-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="budget-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="budget-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="budget-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="budget-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="budget-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="budget-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="budget-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="budget-calculator" data-calculator-slug="budget-calculator" data-sub-category-slug="budget-calculators">
+      <aside id="budget-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="budget-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="budget-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="budget-calculator-ad-top-leaderboard">
+            <ins id="budget-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("budget-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="budget-calculator-intro-area" class="space-y-4">
+        <nav id="budget-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="budget-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="budget-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="budget-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="budget-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#budget-calculators" itemprop="item"><span itemprop="name">Budgeting, Net Worth &amp; Cash Flow</span></a><meta itemprop="position" content="3"></li>
+            <li id="budget-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Budget Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/budget-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="budget-calculator-hero-section" aria-labelledby="budget-calculator-hero-heading" data-section="hero">
+          <h1 id="budget-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Budget Calculator: Plan Your Monthly Income and Spending</h1>
+          <p id="budget-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Wondering where your paycheck disappears each month? This free budget calculator splits your monthly income across needs, wants and savings, then shows the difference between what you earn and what you spend, so every pay period starts with a financial plan instead of a guess about your money. <!-- SILO_START:slot_a -->Try the <a class="silo-link" href="/currency-calculator.html">free currency converter</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="budget-calculator-tool" class="space-y-6" data-page-slug="budget-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="bgFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="bgForm" class="space-y-6" novalidate aria-labelledby="bgFormHeading">
+      <h2 id="bgFormHeading" class="panel-heading">Enter your monthly budget</h2>
+      <p class="form-hint">Enter monthly amounts. Leave anything that does not apply blank.</p>
+      <fieldset class="form-fieldset">
+        <legend class="form-legend">Income after tax</legend>
+        <div class="form-row form-row-2">
+          <div><label for="bgPay" class="form-label">Take-home pay</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="bgPay" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="4800" inputmode="decimal"></div><p class="form-hint">What lands in your bank account each month after tax and paycheck deductions.</p></div>
+          <div><label for="bgOtherIncome" class="form-label">Other income</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="bgOtherIncome" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="0" inputmode="decimal"></div><p class="form-hint">Side work, benefits, child support received.</p></div>
+        </div>
+      </fieldset>
+      <fieldset class="form-fieldset">
+        <legend class="form-legend">Housing</legend>
+        <div class="form-row form-row-2">
+          <div><label for="bgRent" class="form-label">Rent or mortgage</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="bgRent" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="1500" inputmode="decimal"></div></div>
+          <div><label for="bgUtilities" class="form-label">Utilities</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="bgUtilities" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="200" inputmode="decimal"></div><p class="form-hint">Electricity, gas, water and trash.</p></div>
+        </div>
+        <div class="form-row form-row-2">
+          <div><label for="bgPhone" class="form-label">Phone and internet</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="bgPhone" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="120" inputmode="decimal"></div></div>
+          <div><label for="bgHomeIns" class="form-label">Insurance, property tax and HOA</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="bgHomeIns" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="20" inputmode="decimal"></div><p class="form-hint">Renters or homeowners insurance and any costs not in your mortgage payment.</p></div>
+        </div>
+      </fieldset>
+      <fieldset class="form-fieldset">
+        <legend class="form-legend">Transportation</legend>
+        <div class="form-row form-row-2">
+          <div><label for="bgCarPay" class="form-label">Car payment</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="bgCarPay" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="350" inputmode="decimal"></div></div>
+          <div><label for="bgFuel" class="form-label">Fuel, transit and parking</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="bgFuel" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="160" inputmode="decimal"></div></div>
+        </div>
+        <div class="form-row form-row-2">
+          <div><label for="bgCarIns" class="form-label">Car insurance</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="bgCarIns" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="140" inputmode="decimal"></div></div>
+          <div><label for="bgCarCare" class="form-label">Maintenance and registration</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="bgCarCare" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="50" inputmode="decimal"></div></div>
+        </div>
+      </fieldset>
+      <fieldset class="form-fieldset">
+        <legend class="form-legend">Food</legend>
+        <div class="form-row form-row-2">
+          <div><label for="bgGroceries" class="form-label">Groceries</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="bgGroceries" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="480" inputmode="decimal"></div></div>
+          <div><label for="bgDining" class="form-label">Dining out and takeout</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="bgDining" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="180" inputmode="decimal"></div></div>
+        </div>
+      </fieldset>
+      <fieldset class="form-fieldset">
+        <legend class="form-legend">Health</legend>
+        <div class="form-row form-row-2">
+          <div><label for="bgHealthIns" class="form-label">Health insurance</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="bgHealthIns" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="0" inputmode="decimal"></div><p class="form-hint">Only premiums not already taken out of your paycheck.</p></div>
+          <div><label for="bgMedical" class="form-label">Medical, dental and prescriptions</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="bgMedical" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="60" inputmode="decimal"></div></div>
+        </div>
+      </fieldset>
+      <fieldset class="form-fieldset">
+        <legend class="form-legend">Debt payments</legend>
+        <div class="form-row form-row-2">
+          <div><label for="bgCards" class="form-label">Credit cards</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="bgCards" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="150" inputmode="decimal"></div></div>
+          <div><label for="bgStudent" class="form-label">Student loans</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="bgStudent" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="0" inputmode="decimal"></div></div>
+        </div>
+        <div><label for="bgLoans" class="form-label">Other loans</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="bgLoans" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="0" inputmode="decimal"></div></div>
+      </fieldset>
+      <fieldset class="form-fieldset">
+        <legend class="form-legend">Family and personal</legend>
+        <div class="form-row form-row-2">
+          <div><label for="bgChildcare" class="form-label">Child care and school costs</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="bgChildcare" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="0" inputmode="decimal"></div></div>
+          <div><label for="bgClothing" class="form-label">Clothing and personal care</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="bgClothing" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="80" inputmode="decimal"></div></div>
+        </div>
+        <div class="form-row form-row-2">
+          <div><label for="bgSubs" class="form-label">Subscriptions and memberships</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="bgSubs" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="40" inputmode="decimal"></div></div>
+          <div><label for="bgFun" class="form-label">Entertainment and hobbies</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="bgFun" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="120" inputmode="decimal"></div></div>
+        </div>
+        <div class="form-row form-row-2">
+          <div><label for="bgGifts" class="form-label">Gifts and donations</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="bgGifts" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="50" inputmode="decimal"></div></div>
+          <div><label for="bgPets" class="form-label">Pets</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="bgPets" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="0" inputmode="decimal"></div></div>
+        </div>
+        <div class="form-row form-row-2">
+          <div><label for="bgOther" class="form-label">Other spending</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="bgOther" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="100" inputmode="decimal"></div></div>
+          <div><label for="bgAnnual" class="form-label">Yearly costs (per year)</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="bgAnnual" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="1800" inputmode="decimal"></div><p class="form-hint">Travel, holidays, annual subscriptions and other once-a-year costs. Divided by 12.</p></div>
+        </div>
+      </fieldset>
+      <fieldset class="form-fieldset">
+        <legend class="form-legend">Savings</legend>
+        <div class="form-row form-row-2">
+          <div><label for="bgRetire" class="form-label">Retirement saving</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="bgRetire" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="200" inputmode="decimal"></div><p class="form-hint">Only contributions not already taken out of your paycheck.</p></div>
+          <div><label for="bgEmergency" class="form-label">Emergency fund and other savings</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="bgEmergency" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10" value="200" inputmode="decimal"></div></div>
+        </div>
+      </fieldset>
+      <p id="bgError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="bgResults" aria-live="polite" aria-labelledby="bgResultsHeading">
+      <h2 id="bgResultsHeading" class="panel-heading">Your budget summary</h2>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p class="stat-label">Left over each month</p><p id="bgLeft" class="stat-value">–</p><p id="bgLeftNote" class="mt-1 text-xs text-ink-muted"></p></div>
+        <div class="stat-card"><p class="stat-label">Monthly income</p><p id="bgIncomeOut" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Monthly spending</p><p id="bgSpendOut" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Monthly savings</p><p id="bgSaveOut" class="stat-value">–</p><p id="bgSaveNote" class="mt-1 text-xs text-ink-muted"></p></div>
+      </div>
+      <div id="bgStatus" class="callout mt-5" hidden><p id="bgStatusTitle" class="callout-title"></p><p id="bgStatusText" class="text-sm"></p></div>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="bgRuleHeading" data-section="rule">
+  <h2 id="bgRuleHeading" class="panel-heading">Your budget vs the 50/30/20 rule</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">Needs, wants and savings as a share of take-home pay, against the 50/30/20 guideline.</p>
+  <div class="table-scroll mt-5" tabindex="0" role="region" aria-labelledby="bgRuleHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Bucket</th><th scope="col">Your amount</th><th scope="col">Share of income</th><th scope="col">50/30/20 target</th><th scope="col">Difference</th></tr></thead>
+      <tbody id="bgRule"></tbody>
+    </table>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="bgCategoriesHeading" data-section="categories">
+  <h2 id="bgCategoriesHeading" class="panel-heading">Spending by category</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">Monthly and yearly totals for each part of your budget.</p>
+  <div class="table-scroll mt-5" tabindex="0" role="region" aria-labelledby="bgCategoriesHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Category</th><th scope="col">Monthly</th><th scope="col">Yearly</th><th scope="col">Share of income</th></tr></thead>
+      <tbody id="bgCategories"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="budget-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="budget-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Wondering where your paycheck disappears each month? This free budget calculator splits your monthly income across needs, wants and savings, then shows the difference between what you earn and what you spend, so every pay period starts with a financial plan instead of a guess about your money. <!-- SILO_START:slot_a_m -->Try the <a class="silo-link" href="/currency-calculator.html">free currency converter</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="budget-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="budget-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="budget-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="budget-calculator-ad-in-feed">
+            <ins id="budget-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("budget-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="budget-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="budget-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="budget-calculator-guide-heading-1">
+<h2 id="budget-calculator-guide-heading-1">How a Budgeting Tool Turns Take-Home Pay Into a Plan</h2>
+<p>A budget is simply a written plan for your income and your expenses. You enter what lands in your account each month, list what leaves it, and the tool does the subtraction. The output is one number, and that number tells you whether the month is in the red, at zero, or in the green. Run the numbers at the start of a month, before the bills arrive, because a plan made in advance is the only kind you can still change.</p>
+<p>The core arithmetic is short enough to write on a sticky note:</p>
+<p>$$\text{Difference} = \text{Net income} - \text{Total expenses}$$</p>
+<figure><img src="/assets/images/tools/budget-calculator/budget-calculator-difference-formula.svg" alt="Formula card showing net income minus total expenses equals the difference, applied to $4,860 take-home pay and $4,202 of expenses to leave $658"><figcaption>The difference formula: take-home pay minus total expenses leaves $658 to assign in this example.</figcaption></figure>
+<p>A <strong>negative difference</strong> means you are spending more than you earn. <strong>Zero</strong> means every dollar has been assigned. A <strong>positive difference</strong> means unassigned money is waiting for a job. Nothing else in the page matters as much as which of those three you land on.</p>
+
+<h3>Entering your net income</h3>
+<p>Start with <strong>take-home pay</strong>, the amount your employer deposits after taxes and payroll deductions. That figure is also called <strong>net income</strong> or <strong>after-tax income</strong>, and it is the only income number that can actually be spent. If your salary is irregular, use the lowest paycheck from the last six months. Side earnings and freelance deposits belong in the same field once taxes are set aside.</p>
+
+<h3>Adding expenses by budget category</h3>
+<p>Next, to use the budget calculator properly, list your expenses in a <strong>budget category</strong> each: housing, groceries, transportation, insurance, debt, subscriptions and so on. Use your bank statements for real figures. Rounded guesses feel quicker, but they hide the small recurring bills that quietly decide whether the month balances.</p>
+
+<h3>Reading the difference</h3>
+<p>The result is only useful if you act on it. Red means trimming a category or raising income. Green means giving the leftover dollars a destination such as savings or extra debt payments. Zero means you are done, and the next job is simply to follow the plan.</p>
+        </section>
+        <section id="budget-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="budget-calculator-guide-heading-2">
+<h2 id="budget-calculator-guide-heading-2">The 50/30/20 Rule Behind a 50/30/20 Budget Calculator</h2>
+<p>The <strong>50/30/20 rule</strong> is the most common starting template for splitting after-tax pay. It sends 50% to needs, 30% to wants and 20% to savings and debt repayment. It is broad on purpose: a quick sanity check rather than a detailed plan, and it is the reason a calculator built on it can produce a full breakdown from a single input. <!-- SILO_START:slot_c -->The <a class="silo-link" href="/inflation-calculator.html">inflation calculator</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_c --></p>
+
+<h3>What counts as needs, wants and savings</h3>
+<p><strong>Needs, wants</strong> and savings only work as a method if the buckets are sorted honestly. Needs are the costs you cannot skip without real consequences, such as rent or mortgage, utilities, groceries, insurance and the minimum on a loan. Wants are the optional extras: dining out, streaming, hobbies and trips. The third bucket holds money moving toward your future, including retirement, an emergency fund and any payment above the minimum on a balance.</p>
+<table>
+<thead><tr><th>Bucket</th><th>Share of take-home pay</th><th>Typical items</th></tr></thead>
+<tbody>
+<tr><td>Needs</td><td>50%</td><td>Rent, utilities, groceries, insurance, transportation, minimum loan payments</td></tr>
+<tr><td>Wants</td><td>30%</td><td>Dining out, subscriptions, entertainment, shopping</td></tr>
+<tr><td>Savings and debt</td><td>20%</td><td>Emergency fund, retirement, extra debt payments</td></tr>
+</tbody>
+</table>
+<p>Treat the percentages as a guide. In a high-cost city, needs may legitimately take 60% of your income, and the plan then has to shrink wants rather than pretend the rent is lower.</p>
+        </section>
+        <section id="budget-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="budget-calculator-guide-heading-3">
+<h2 id="budget-calculator-guide-heading-3">A Worked Example With Our Budget Calculator</h2>
+<p>Here is a complete run with figures chosen from scratch. Imagine a monthly take-home pay of <strong>$4,860</strong>. The expenses you enter fall into three groups, and each one is added up before the difference is calculated. <!-- SILO_START:slot_d -->Next, open the <a class="silo-link" href="/checkbook-balancer.html">checkbook balancer online</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_d --></p>
+<table>
+<thead><tr><th>Group</th><th>Items entered</th><th>Monthly total</th><th>Share of income</th></tr></thead>
+<tbody>
+<tr><td>Needs</td><td>Rent $1,540, utilities $215, groceries $520, car payment $318, fuel $140, auto insurance $126, student loan payment $235</td><td>$3,094</td><td>63.7%</td></tr>
+<tr><td>Wants</td><td>Dining out $210, subscriptions $48, entertainment $160, shopping $140</td><td>$558</td><td>11.5%</td></tr>
+<tr><td>Savings</td><td>Emergency fund $300, retirement $250</td><td>$550</td><td>11.3%</td></tr>
+<tr><td>Difference</td><td>$4,860 &minus; $4,202 total expenses</td><td>$658</td><td>13.5%</td></tr>
+</tbody>
+</table>
+<figure><img src="/assets/images/tools/budget-calculator/monthly-budget-split-donut-chart.svg" alt="Donut chart splitting a $4,860 monthly budget into needs $3,094, wants $558, savings $550 and $658 left to assign"><figcaption>Where the example's $4,860 of take-home pay goes each month.</figcaption></figure>
+<p>The share of each group is simple division:</p>
+<p>$$\text{Share} = \frac{\text{Group total}}{\text{Net income}} \times 100$$</p>
+<p>Needs come to $3,094 &divide; $4,860, which is <strong>63.7%</strong>, well above the 50% guide of $2,430. Wants are far below their $1,458 allowance. The positive difference of <strong>$658</strong> is the next section's job.</p>
+
+<figure><img src="/assets/images/tools/budget-calculator/50-30-20-budget-calculator-comparison.svg" alt="Bar chart comparing the example's needs, wants, savings and unassigned shares of income with the 50/30/20 rule guide"><figcaption>The example's needs run 63.7% against a 50% guide, while wants and savings sit below theirs.</figcaption></figure>
+        </section>
+        <section id="budget-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="budget-calculator-guide-heading-4">
+<h2 id="budget-calculator-guide-heading-4">Zero-Based Budgeting: Give Every Dollar a Job in a Monthly Budget</h2>
+<p><strong>Zero-based budgeting</strong> takes the green result and finishes the plan. You keep assigning dollars until income minus expenses equals exactly zero. Zero does not mean you are broke; it means there are no <strong>unassigned dollars</strong> drifting into impulse purchases. The idea is to <strong>give every dollar a job</strong> before the month begins.</p>
+<p>In the example, the $658 of extra money gets two jobs: $400 raises the emergency fund and $258 goes toward the student loan. Savings climb to $950, or 19.5% of take-home pay, and the debt payment reaches $493. The difference now reads $0.</p>
+<p>The opposite case matters just as much. A negative result is a warning of <strong>overspending</strong>, and it usually points to a debt problem more than an income problem. Cut wants first, then look at the largest need.</p>
+        </section>
+        <section id="budget-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="budget-calculator-guide-heading-5">
+<h2 id="budget-calculator-guide-heading-5">Testing a Monthly Budget Before Signing a New Lease</h2>
+<p>Dana, a dental hygienist, has a renewal letter raising rent from $1,295 to $1,340 and a week to decide whether to stay. Before answering, Dana opens the calculator and enters take-home pay of <strong>$3,742</strong> from the last three paychecks, not the larger figure on the offer letter.</p>
+<p>Expenses go in from the bank statements: rent $1,295, utilities $164, groceries $438, car payment $289, auto insurance $97, fuel $112, phone and internet $92, a $85 minimum on a credit card and a $176 student loan payment. That is <strong>$2,748</strong> in needs. Wants add $436 (dining out $240, gym $45, hobbies $120 and streaming $31), and $200 goes to savings. Total expenses: <strong>$3,384</strong>.</p>
+<p>The difference reads <strong>+$358</strong>. Green, but the split is lopsided. Needs are 73.4% of take-home pay against the 50% guide of $1,871, and rent alone is 34.6%, above the 30% ceiling Dana's lender friend quoted. Savings sit at 5.3%, far under the 20% guide.</p>
+<table>
+<thead><tr><th>Scenario</th><th>Rent</th><th>Difference</th></tr></thead>
+<tbody>
+<tr><td>Renew at the new price</td><td>$1,340</td><td>+$313</td></tr>
+<tr><td>Move to a smaller unit</td><td>$1,090</td><td>+$563</td></tr>
+</tbody>
+</table>
+<p>Dana reruns the figures with the smaller unit's $1,090 and watches the difference climb to $563. Then comes the decision: the $85 card payment, on a $3,960 balance at 22.9% interest, is the costliest line, so the extra money rolls into it. At $443 a month, the balance is gone in 10 payments, after which that $443 moves to the emergency fund. The lease is signed for the smaller unit, and the plan, not the landlord's letter, sets the rent.</p>
+        </section>
+        <section id="budget-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="budget-calculator-guide-heading-6">
+<h2 id="budget-calculator-guide-heading-6">Building a Monthly Budget Around the Four Walls</h2>
+<p>Some plans rank spending by priority. The <strong>four walls</strong> are food, utilities, shelter and transportation, the costs that keep your life running. They come first, ahead of wants, so your plan never leaves the lights off to fund a streaming bundle.</p>
+
+<h3>Housing costs, rent or mortgage</h3>
+<p><strong>Housing costs</strong> are usually the largest line. Include <strong>rent or mortgage</strong>, property tax, renters or homeowners insurance and association fees. One widely used <strong>rule of thumb</strong> keeps them at or below 30% of gross income. The example's $1,540 rent is 31.7% of take-home pay, which already sits above the 25% many planners prefer.</p>
+
+<h3>Transportation and car payment costs</h3>
+<p><strong>Transportation</strong> covers the car payment, fuel, insurance, parking, public transit and maintenance. In the example it totals $584, or 12.0% of income. A common guide is to keep the car payment under 10% of gross income and total transportation below 15%. Compare quotes for insurance every year, because it is the item most people forget to shop.</p>
+
+<h3>Groceries, utilities and everyday bills</h3>
+<p>Groceries and utilities flex less than most people expect, so measure them against the last three months of <strong>bills</strong> rather than a hopeful target. Dining out and delivery belong in wants, and moving a few of those meals home is the cheapest first change.</p>
+        </section>
+        <section id="budget-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="budget-calculator-guide-heading-7">
+<h2 id="budget-calculator-guide-heading-7">Personal Budget Rules of Thumb for Every Category</h2>
+<p>This kind of plan works best when each line has a financial sanity check. These guides are not laws, but they flag trouble quickly:</p>
+<ul>
+<li>Housing: 25% to 30% of income at most</li>
+<li>Car payment: under 10% of gross income</li>
+<li>Transportation in total: under 15% of income</li>
+<li>Savings and debt: 20% or more of take-home pay</li>
+<li>Giving or sharing: whatever you decide, listed first</li>
+</ul>
+<p>Dividing all your expenses by income gives an <strong>expense-to-income ratio</strong>, the figure this plan puts at 86.5% in the example. Lenders use a related measure, the <strong>debt-to-income</strong> ratio: monthly debt payments divided by <strong>gross income</strong>, the pay before taxes, which many mortgage lenders want near 36% or lower.</p>
+
+<h3>Living within your means</h3>
+<p><strong>Living within your means</strong> is what a green difference proves and a red one disproves. If the figure comes back negative, expenses exceed net income, and that gap turns into <strong>debt</strong> over time, especially when credit fills it. Trim wants first, then renegotiate the largest need.</p>
+
+<h3>Planning for the future</h3>
+<p><strong>Planning for the future</strong> starts on the savings line of the plan. A car replacement, a home down payment, a child's school costs or retirement each get their own monthly contribution, entered alongside your other savings, so a good month's difference does not vanish before the next big expense arrives.</p>
+        </section>
+        <section id="budget-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="budget-calculator-guide-heading-8">
+<h2 id="budget-calculator-guide-heading-8">Handling Debt Payments and Credit Cards in Your Personal Budget</h2>
+<p>When you set up your plan for the first time, <strong>debt payments</strong> deserve their own line. List every minimum, whether it is <strong>credit cards</strong>, a car loan, <strong>student loans</strong> or a personal loan. Credit is not an endless resource, and a card balance carried at high interest quietly grows the number you owe, which is why paying it down belongs near the front of the plan.</p>
+<p>The <strong>debt snowball</strong> is a popular way to clear balances. Pay the minimums on everything, send every extra dollar to the smallest balance, then roll that payment into the next one. Care is needed not to count one loan twice: if a payment is already inside rent or a car payment, do not list it again in the debt section.</p>
+        </section>
+        <section id="budget-calculator-guide-section-9" class="panel article-content p-4 sm:p-6" aria-labelledby="budget-calculator-guide-heading-9">
+<h2 id="budget-calculator-guide-heading-9">Setting Savings Goals With a Budgeting Tool</h2>
+<p>Your <strong>savings goals</strong> work best when they are named, dated and automatic. Decide on the target first, then divide it by the months remaining to find the monthly figure.</p>
+<ul>
+<li><strong>Starter emergency fund:</strong> a first cushion of $1,000 for surprise repairs and bills</li>
+<li><strong>Full emergency fund:</strong> three to six months of expenses once high-interest debt is gone</li>
+<li><strong>Retirement savings:</strong> a steady percentage of income, ideally via a workplace plan</li>
+<li><strong>Other financial goals:</strong> a house deposit, a wedding, a vacation fund</li>
+</ul>
+<p>Set up <strong>automatic payments</strong> for each so the transfer happens on payday. Money you never see in checking is money you will not spend, and automation is the cheapest way to make good intentions stick.</p>
+        </section>
+        <section id="budget-calculator-guide-section-10" class="panel article-content p-4 sm:p-6" aria-labelledby="budget-calculator-guide-heading-10">
+<h2 id="budget-calculator-guide-heading-10">Beyond the Budget Template: Envelope System, 60/30/10 and Reverse Budgeting</h2>
+<p>No single method suits everyone. Several alternatives are worth knowing before you settle on a system:</p>
+<ul>
+<li>The <strong>envelope system</strong> assigns cash to physical or digital envelopes for each variable category, and when an envelope is empty the spending stops</li>
+<li>The <strong>60/30/10</strong> split fits high-cost areas or families with heavy child care, giving needs 60%, wants 30% and savings 10%</li>
+<li><strong>Reverse budgeting</strong> pays savings and investing first, then lets you spend what remains on everything else</li>
+</ul>
+<p>Each one maps onto the same plan: change the three percentages for 60/30/10, enter envelope totals as category expenses, or list savings as the first expense for reverse budgeting. Pick the method you will still be following in six months. Whether you use a spreadsheet, <strong>budgeting software</strong> or a phone app, check the monthly difference each time to see that the method is holding.</p>
+        </section>
+        <section id="budget-calculator-guide-section-11" class="panel article-content p-4 sm:p-6" aria-labelledby="budget-calculator-guide-heading-11">
+<h2 id="budget-calculator-guide-heading-11">Budget Template Habits: Track Your Spending Month by Month</h2>
+<p>A calculator gives you a snapshot, while a saved sheet gives you history. Run the numbers each month, then copy them into a saved sheet. Over a year, the totals show <strong>annual net income</strong>, an annual expense-to-income ratio and the months when seasonal bills pushed you off plan.</p>
+<p>To <strong>track your spending</strong> in between, review your bank and card statements weekly, not monthly. Sort every charge into a category, compare each total with your plan, and fix the biggest gap first. Subscriptions you forgot are usually the easiest cut, and when one appears in the review, cancel it that same day.</p>
+<p>Include every one of your <strong>income items</strong> in the sheet and in the income field: wages, side work, interest and one-off bonuses. Money you earn but never record can't be put to work. Counting all your <strong>financial</strong> inflows and outflows keeps your <strong>personal finance</strong> picture honest.</p>
+        </section>
+      </div>
+
+      <section id="budget-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="budget-calculator-faq-heading" data-section="faq">
+        <h2 id="budget-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Budget Calculator questions</h2>
+        <div id="budget-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="budget-calculator-faq-1" class="faq-item" open><summary id="budget-calculator-faq-1-summary" class="faq-summary"><h3 id="budget-calculator-faq-1-question" class="faq-question">What is a budget calculator?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="budget-calculator-faq-1-answer" class="faq-answer"><p>A budget calculator adds up your income, subtracts your expenses and savings, and shows where your money goes each month so you can plan ahead instead of guessing.</p></div></details>
+          <details id="budget-calculator-faq-2" class="faq-item" open><summary id="budget-calculator-faq-2-summary" class="faq-summary"><h3 id="budget-calculator-faq-2-question" class="faq-question">How does zero-based budgeting work?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="budget-calculator-faq-2-answer" class="faq-answer"><p>You assign every dollar of income to an expense, a savings goal or a debt payment before the month starts, until income minus expenses equals zero. Zero does not mean broke; it means no dollar is left without a job.</p></div></details>
+          <details id="budget-calculator-faq-3" class="faq-item" open><summary id="budget-calculator-faq-3-summary" class="faq-summary"><h3 id="budget-calculator-faq-3-question" class="faq-question">What is the 50/30/20 rule?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="budget-calculator-faq-3-answer" class="faq-answer"><p>It splits after-tax income into 50% for needs, 30% for wants and 20% for savings and debt repayment. It is a broad guide rather than a detailed plan, and the calculator shows your own split next to it.</p></div></details>
+          <details id="budget-calculator-faq-4" class="faq-item" open><summary id="budget-calculator-faq-4-summary" class="faq-summary"><h3 id="budget-calculator-faq-4-question" class="faq-question">What is the difference between before-tax and take-home income?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="budget-calculator-faq-4-answer" class="faq-answer"><p>Before-tax (gross) income is what you earn before taxes and deductions; take-home pay or net income is what reaches your account. This calculator takes income before tax and applies your tax rate to get net income.</p></div></details>
+          <details id="budget-calculator-faq-5" class="faq-item" open><summary id="budget-calculator-faq-5-summary" class="faq-summary"><h3 id="budget-calculator-faq-5-question" class="faq-question">How much of my income should go to housing?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="budget-calculator-faq-5-answer" class="faq-answer"><p>A common rule of thumb keeps housing at or below about 30% of gross income, and many planners prefer 25% of take-home pay. The housing share result shows where you stand.</p></div></details>
+          <details id="budget-calculator-faq-6" class="faq-item" open><summary id="budget-calculator-faq-6-summary" class="faq-summary"><h3 id="budget-calculator-faq-6-question" class="faq-question">What is the debt-to-income ratio?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="budget-calculator-faq-6-answer" class="faq-answer"><p>It divides your monthly debt payments, including rent or mortgage, by gross monthly income. Lenders use it to judge how much more debt you can carry, and lower is safer.</p></div></details>
+          <details id="budget-calculator-faq-7" class="faq-item" open><summary id="budget-calculator-faq-7-summary" class="faq-summary"><h3 id="budget-calculator-faq-7-question" class="faq-question">What should I do if my monthly balance is negative?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="budget-calculator-faq-7-answer" class="faq-answer"><p>A negative balance means you are spending more than you earn. Trim wants first, review the largest needs such as housing and transportation, and avoid covering the gap with credit cards.</p></div></details>
+          <details id="budget-calculator-faq-8" class="faq-item" open><summary id="budget-calculator-faq-8-summary" class="faq-summary"><h3 id="budget-calculator-faq-8-question" class="faq-question">How much should I keep in an emergency fund?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="budget-calculator-faq-8-answer" class="faq-answer"><p>Many planners suggest a starter cushion of about $1,000 first, then three to six months of expenses once high-interest debt is paid down. Enter the monthly contribution under Emergency fund &amp; other savings.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="budget-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="budget-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="budget-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="budget-calculator-ad-bottom-leaderboard">
+            <ins id="budget-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("budget-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="budget-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="budget-calculator-right-rail-top" class="mb-6">
+        <aside id="budget-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="budget-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="budget-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="budget-calculator-ad-right-rail-rectangle">
+            <ins id="budget-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("budget-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="budget-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="budget-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="budget-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="budget-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="budget-calculator-ad-right-rail-skyscraper">
+            <ins id="budget-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("budget-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="budget-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="budget-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="budget-calculator-footer-brand">
+        <a id="budget-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="budget-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="budget-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="budget-calculator-footer-categories" aria-labelledby="budget-calculator-footer-categories-heading">
+        <h2 id="budget-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="budget-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="budget-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="budget-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="budget-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="budget-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="budget-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="budget-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="budget-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="budget-calculator-footer-company" aria-labelledby="budget-calculator-footer-company-heading">
+        <h2 id="budget-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="budget-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="budget-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="budget-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="budget-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="budget-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="budget-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="budget-calculator-footer-bottom" class="border-t border-line">
+      <p id="budget-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="budget-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Monthly budget. Every field is a monthly amount except the one yearly field, which is
+  // divided by 12. Spending is split into needs and wants and compared with the 50/30/20 rule
+  // (50% needs, 30% wants, 20% savings, as shares of take-home income). Left over =
+  // income - needs - wants - savings.
+  // Verified (scratchpad w2debt/bg.test.js): default example income $4,800; needs $3,230,
+  // wants $720, savings $400, left over $450; needs 67.3% of income; yearly field $1,800 -> $150 a
+  // month; every category and bucket total equals the sum of its fields; blank fields count as $0;
+  // a negative field or zero income shows an error instead of results.
+  var FIELDS = [
+    // [id, category, bucket, yearly?]
+    ['bgPay', 'Income', 'income'], ['bgOtherIncome', 'Income', 'income'],
+    ['bgRent', 'Housing', 'need'], ['bgUtilities', 'Housing', 'need'], ['bgPhone', 'Housing', 'need'], ['bgHomeIns', 'Housing', 'need'],
+    ['bgCarPay', 'Transportation', 'need'], ['bgFuel', 'Transportation', 'need'], ['bgCarIns', 'Transportation', 'need'], ['bgCarCare', 'Transportation', 'need'],
+    ['bgGroceries', 'Food', 'need'], ['bgDining', 'Food', 'want'],
+    ['bgHealthIns', 'Health', 'need'], ['bgMedical', 'Health', 'need'],
+    ['bgCards', 'Debt payments', 'need'], ['bgStudent', 'Debt payments', 'need'], ['bgLoans', 'Debt payments', 'need'],
+    ['bgChildcare', 'Family and personal', 'need'], ['bgClothing', 'Family and personal', 'want'], ['bgSubs', 'Family and personal', 'want'],
+    ['bgFun', 'Family and personal', 'want'], ['bgGifts', 'Family and personal', 'want'], ['bgPets', 'Family and personal', 'want'],
+    ['bgOther', 'Family and personal', 'want'], ['bgAnnual', 'Family and personal', 'want', true],
+    ['bgRetire', 'Savings', 'save'], ['bgEmergency', 'Savings', 'save']
+  ];
+  var TARGETS = { need: 0.5, want: 0.3, save: 0.2 };
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+  function readValue(id) {
+    var raw = String(document.getElementById(id).value).trim();
+    if (raw === '') return 0;
+    var v = parseFloat(raw);
+    return isNaN(v) ? NaN : v;
+  }
+
+  // values: { id: monthly amount }. Returns totals by bucket and by category (in FIELDS order).
+  function summarize(values) {
+    var buckets = { income: 0, need: 0, want: 0, save: 0 }, cats = [], catIndex = {};
+    FIELDS.forEach(function (f) {
+      var v = values[f[0]];
+      buckets[f[2]] += v;
+      if (f[2] === 'income') return;
+      if (!(f[1] in catIndex)) { catIndex[f[1]] = cats.length; cats.push({ name: f[1], amount: 0 }); }
+      cats[catIndex[f[1]]].amount += v;
+    });
+    return { income: buckets.income, need: buckets.need, want: buckets.want, save: buckets.save,
+      left: buckets.income - buckets.need - buckets.want - buckets.save, categories: cats };
+  }
+
+  function pct(x) { return (x * 100).toFixed(1) + '%'; }
+
+  function signedMoney(x) {
+    if (Math.abs(x) < 0.005) return money.format(0);
+    return (x > 0 ? '+' : '−') + money.format(Math.abs(x));
+  }
+
+  function set(id, text) { document.getElementById(id).textContent = text; }
+
+  function clearBody(id) {
+    var body = document.getElementById(id);
+    while (body.firstChild) body.removeChild(body.firstChild);
+    return body;
+  }
+
+  function addRow(body, cells) {
+    var tr = document.createElement('tr');
+    cells.forEach(function (text) {
+      var td = document.createElement('td');
+      td.textContent = text;
+      tr.appendChild(td);
+    });
+    body.appendChild(tr);
+  }
+
+  function clearResults() {
+    ['bgLeft', 'bgIncomeOut', 'bgSpendOut', 'bgSaveOut'].forEach(function (id) { set(id, '–'); });
+    set('bgLeftNote', ''); set('bgSaveNote', '');
+    document.getElementById('bgStatus').hidden = true;
+    clearBody('bgRule'); clearBody('bgCategories');
+  }
+
+  function update() {
+    var values = {}, bad = false;
+    FIELDS.forEach(function (f) {
+      var v = readValue(f[0]);
+      if (isNaN(v) || v < 0 || v > 1e8) bad = true;
+      values[f[0]] = f[3] ? v / 12 : v;
+    });
+    var error = document.getElementById('bgError');
+    var problem = bad ? 'Enter amounts of $0 or more. Leave a field blank if it does not apply.' : '';
+    var s = bad ? null : summarize(values);
+    if (!problem && s.income <= 0) problem = 'Enter your monthly take-home pay to build the budget.';
+    error.hidden = !problem;
+    error.textContent = problem;
+    if (problem) { clearResults(); return; }
+
+    set('bgLeft', signedMoney(s.left));
+    set('bgLeftNote', s.left >= 0 ? 'Not yet assigned to spending or savings.' : 'You plan to spend more than you bring in.');
+    set('bgIncomeOut', money.format(s.income));
+    set('bgSpendOut', money.format(s.need + s.want));
+    set('bgSaveOut', money.format(s.save));
+    set('bgSaveNote', pct(s.save / s.income) + ' of take-home pay.');
+
+    var status = document.getElementById('bgStatus');
+    status.hidden = false;
+    if (s.left < -0.005) {
+      status.className = 'callout callout-warning mt-5';
+      set('bgStatusTitle', 'Your budget is short by ' + money.format(-s.left) + ' a month');
+      set('bgStatusText', 'Look first at the wants column below, then at large fixed costs such as housing and car payments.');
+    } else if (s.left > 0.005) {
+      status.className = 'callout callout-success mt-5';
+      set('bgStatusTitle', 'You have ' + money.format(s.left) + ' a month left over');
+      set('bgStatusText', 'Giving it a job, such as savings or extra debt payments, keeps it from disappearing into everyday spending.');
+    } else {
+      status.className = 'callout callout-success mt-5';
+      set('bgStatusTitle', 'Every dollar has a job');
+      set('bgStatusText', 'Income and planned spending and savings match exactly.');
+    }
+
+    var rule = clearBody('bgRule');
+    [['Needs', 'need'], ['Wants', 'want'], ['Savings', 'save']].forEach(function (b) {
+      var amount = s[b[1]], target = TARGETS[b[1]] * s.income;
+      addRow(rule, [b[0], money.format(amount), pct(amount / s.income), money.format(target) + ' (' + Math.round(TARGETS[b[1]] * 100) + '%)', signedMoney(amount - target)]);
+    });
+    addRow(rule, ['Left over', money.format(s.left), pct(s.left / s.income), '–', '–']);
+
+    var cats = clearBody('bgCategories');
+    s.categories.forEach(function (c) {
+      if (c.amount > 0) addRow(cats, [c.name, money.format(c.amount), money.format(c.amount * 12), pct(c.amount / s.income)]);
+    });
+    addRow(cats, ['Total spending and savings', money.format(s.need + s.want + s.save), money.format((s.need + s.want + s.save) * 12), pct((s.need + s.want + s.save) / s.income)]);
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('bgForm');
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

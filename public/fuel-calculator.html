@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en" id="fuel-calculator-document" data-page-slug="fuel-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fuel Cost Calculator: Estimate Your Trip Gas Cost</title>
+  <meta name="description" content="Estimate the fuel cost of a trip from distance, mpg and price per gallon. Free gas calculator for miles or kilometers, cars, SUVs and diesel trucks.">
+  <link rel="canonical" href="https://company-marketcap.github.io/fuel-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Fuel Cost Calculator: Estimate Your Trip Gas Cost">
+  <meta property="og:description" content="Estimate the fuel cost of a trip from distance, mpg and price per gallon. Free gas calculator for miles or kilometers, cars, SUVs and diesel trucks.">
+  <meta property="og:url" content="https://company-marketcap.github.io/fuel-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Fuel Cost Calculator", "url": "https://company-marketcap.github.io/fuel-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Estimate the fuel cost of a trip from distance, mpg and price per gallon. Free gas calculator for miles or kilometers, cars, SUVs and diesel trucks."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Everyday Money & Utility", "item": "https://company-marketcap.github.io/financial-calculators.html#everyday-money-calculators"}, {"@type": "ListItem", "position": 4, "name": "Fuel Cost Calculator", "item": "https://company-marketcap.github.io/fuel-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I calculate fuel cost for a trip?", "acceptedAnswer": {"@type": "Answer", "text": "Divide the trip distance by your vehicle's fuel efficiency to get the fuel needed, then multiply that by the price of a gallon or liter. For example, 100 miles at 25 mpg needs 4 gallons, and at $4.00 per gallon that costs $16."}}, {"@type": "Question", "name": "What is fuel efficiency and where do I find mine?", "acceptedAnswer": {"@type": "Answer", "text": "Fuel efficiency is how far a vehicle travels on a unit of fuel, such as miles per gallon. Check the window sticker or owner's manual, or divide the miles you drove by the gallons you added at your last fill-up for a real-world figure."}}, {"@type": "Question", "name": "Can I use kilometers and liters instead of miles and gallons?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Choose kilometers for distance, pick liters per 100 km, kilometers per liter or liters per mile for efficiency, and set the price unit to per liter. The calculator converts everything before working out the cost."}}, {"@type": "Question", "name": "Why is my real fuel cost different from the estimate?", "acceptedAnswer": {"@type": "Answer", "text": "Traffic, speed, load, weather, tire pressure and driving style all change your actual mpg, and pump prices vary by station. Use your own measured mpg and the current local price for the closest estimate."}}, {"@type": "Question", "name": "Does the fuel cost calculator work for diesel trucks?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Enter the truck's mpg and the diesel price per gallon. Trucks get far fewer miles per gallon than cars, so the same distance costs much more."}}, {"@type": "Question", "name": "How can I lower my fuel cost?", "acceptedAnswer": {"@type": "Answer", "text": "Keep tires inflated to the recommended pressure, drive at a steady speed, avoid long idling, remove extra weight, follow the maintenance schedule, combine errands and consider carpooling."}}, {"@type": "Question", "name": "Does this include tolls or parking?", "acceptedAnswer": {"@type": "Answer", "text": "No. The result covers fuel only, so add tolls, parking and other trip expenses separately."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="fuel-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="fuel-calculator" data-page-type="calculator">
+  <a id="fuel-calculator-skip-link" href="#fuel-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="fuel-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="fuel-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="fuel-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="fuel-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="fuel-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="fuel-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="fuel-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="fuel-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="fuel-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="fuel-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="fuel-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="fuel-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="fuel-calculator-header-search-status" aria-controls="fuel-calculator-header-search-results" data-search-input="header">
+              <p id="fuel-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="fuel-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="fuel-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="fuel-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="fuel-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="fuel-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="fuel-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="fuel-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="fuel-calculator-mobile-search-status" aria-controls="fuel-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="fuel-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="fuel-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="fuel-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="fuel-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="fuel-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="fuel-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="fuel-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="fuel-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="fuel-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="fuel-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="fuel-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="fuel-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="fuel-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="fuel-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="fuel-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="fuel-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="fuel-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="fuel-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="fuel-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="fuel-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="fuel-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="fuel-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="fuel-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="fuel-calculator-sidebar-search-status" aria-controls="fuel-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="fuel-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="fuel-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="fuel-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="fuel-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="fuel-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="fuel-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="fuel-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="fuel-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="fuel-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="fuel-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="fuel-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="fuel-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="fuel-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="fuel-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="fuel-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="fuel-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="fuel-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="fuel-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="fuel-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="fuel-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="fuel-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="fuel-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="fuel-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="fuel-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="fuel-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="fuel-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="fuel-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="fuel-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="fuel-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="fuel-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators" aria-current="true">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="fuel-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="fuel-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="fuel-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="fuel-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="fuel-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="fuel-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="fuel-calculator" data-calculator-slug="fuel-calculator" data-sub-category-slug="everyday-money-calculators">
+      <aside id="fuel-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="fuel-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="fuel-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="fuel-calculator-ad-top-leaderboard">
+            <ins id="fuel-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("fuel-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="fuel-calculator-intro-area" class="space-y-4">
+        <nav id="fuel-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="fuel-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="fuel-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="fuel-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="fuel-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#everyday-money-calculators" itemprop="item"><span itemprop="name">Everyday Money &amp; Utility</span></a><meta itemprop="position" content="3"></li>
+            <li id="fuel-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Fuel Cost Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/fuel-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="fuel-calculator-hero-section" aria-labelledby="fuel-calculator-hero-heading" data-section="hero">
+          <h1 id="fuel-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Fuel Cost Calculator: Estimate Your Trip Gas Cost</h1>
+          <p id="fuel-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Planning a drive and wondering what the pump will take out of your wallet? A fuel cost calculator turns three numbers (how far you are going, how many miles your vehicle covers per gallon, and what a gallon costs) into the dollar amount you will spend on gas, so you can set a budget before you leave the driveway. <!-- SILO_START:slot_a -->Pair this with the <a class="silo-link" href="/date-calculator.html">date calculator</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="fuel-calculator-tool" class="space-y-6" data-page-slug="fuel-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="fuFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="fuForm" class="space-y-5" novalidate aria-labelledby="fuFormHeading">
+      <h2 id="fuFormHeading" class="panel-heading">Enter your trip and vehicle</h2>
+<div><label for="fuMode" class="form-label">What do you want to work out?</label><select id="fuMode" class="form-select"><option value="trip" selected>Fuel cost of a trip</option><option value="mpg">Fuel economy (mpg) from a fill-up</option><option value="budget">How far a fuel budget goes</option></select></div>
+<div id="fuTripInputs" class="space-y-5">
+<div><label for="fuMiles" class="form-label">Trip distance</label><div class="input-group"><input type="number" id="fuMiles" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1" value="300" inputmode="decimal"><span class="input-affix">miles</span></div></div>
+<label class="form-choice"><input type="checkbox" id="fuRound" class="form-choice-input"><span class="form-choice-text">Round trip (double the distance)</span></label>
+</div>
+<div id="fuMpgInputs" class="space-y-5" hidden>
+<div class="form-row form-row-2">
+<div><label for="fuDriven" class="form-label">Miles driven</label><div class="input-group"><input type="number" id="fuDriven" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="0.1" value="412" inputmode="decimal"><span class="input-affix">miles</span></div><p class="form-hint">Since your last full tank, from the trip odometer.</p></div>
+<div><label for="fuGallons" class="form-label">Gallons to refill</label><div class="input-group"><input type="number" id="fuGallons" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="0.001" value="13.7" inputmode="decimal"><span class="input-affix">gal</span></div><p class="form-hint">From the pump receipt.</p></div>
+</div>
+</div>
+<div id="fuBudgetInputs" class="space-y-5" hidden>
+<div><label for="fuBudget" class="form-label">Fuel budget</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="fuBudget" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1" value="50" inputmode="decimal"></div></div>
+</div>
+<div class="form-row form-row-2">
+<div id="fuSharedMpg"><label for="fuMpgIn" class="form-label">Fuel economy</label><div class="input-group"><input type="number" id="fuMpgIn" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="0.1" value="25" inputmode="decimal"><span class="input-affix">mpg</span></div></div>
+<div><label for="fuPrice" class="form-label">Fuel price</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="fuPrice" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="0.01" value="3.50" inputmode="decimal"><span class="input-affix">/gal</span></div><p class="form-hint">Optional when working out fuel economy.</p></div>
+</div>
+<details class="form-details"><summary class="form-details-summary">More options</summary>
+<div><label for="fuPeople" class="form-label">Split the trip cost between</label><div class="input-group"><input type="number" id="fuPeople" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1" max="100" step="1" value="1" inputmode="numeric"><span class="input-affix">people</span></div></div>
+</details>
+      <p id="fuError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="fuResults" aria-live="polite" aria-labelledby="fuResultsHeading">
+      <h2 id="fuResultsHeading" class="panel-heading">Your results</h2>
+<div class="stat-grid mt-4">
+<div class="stat-card stat-card-highlight"><p class="stat-label" id="fuMainLabel">Trip fuel cost</p><p id="fuMain" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label" id="fuSecondLabel">Fuel needed</p><p id="fuSecond" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label" id="fuThirdLabel">Cost per mile</p><p id="fuThird" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label" id="fuFourthLabel">Cost per person</p><p id="fuFourth" class="stat-value">–</p></div>
+</div>
+<p id="fuNote" class="form-hint mt-4"></p>
+    </div>
+  </div>
+</section>
+        <p id="fuel-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="fuel-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Planning a drive and wondering what the pump will take out of your wallet? A fuel cost calculator turns three numbers (how far you are going, how many miles your vehicle covers per gallon, and what a gallon costs) into the dollar amount you will spend on gas, so you can set a budget before you leave the driveway. <!-- SILO_START:slot_a_m -->Pair this with the <a class="silo-link" href="/date-calculator.html">date calculator</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="fuel-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="fuel-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="fuel-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="fuel-calculator-ad-in-feed">
+            <ins id="fuel-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("fuel-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="fuel-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="fuel-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="fuel-calculator-guide-heading-1">
+<h2 id="fuel-calculator-guide-heading-1">How the Fuel Cost Calculator Formula Works</h2>
+<p>Every <strong>gas cost calculator</strong> rests on the same two-step idea: first work out how much fuel the trip burns, then multiply by what that fuel costs. The <strong>fuel needed</strong> comes from distance divided by fuel efficiency, and the money comes from multiplying those gallons by the price at the pump. <!-- SILO_START:slot_b -->Pair this with the <a class="silo-link" href="/finance-calculator.html">finance calculator</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_b --></p>
+<p>$$\text{Fuel needed} = \frac{D}{E} \qquad \text{Trip fuel cost} = \frac{D}{E} \times P$$</p>
+<p>Here \(D\) is the <strong>trip distance</strong>, \(E\) is your vehicle's <strong>fuel efficiency</strong> in miles per gallon, and \(P\) is the <strong>fuel price</strong> per gallon. Divide the final cost by the distance and you also get a <strong>cost per mile</strong>, which is the easiest number to compare between vehicles.</p>
+
+<h3>Fuel efficiency and miles per gallon</h3>
+<p><strong>Miles per gallon</strong> (<strong>mpg</strong>) tells you how far a vehicle travels on one gallon. You can find it on the window sticker, in the owner's manual, or by dividing the miles driven by the gallons you added at your last fill-up. Official <i>fuel economy</i> ratings are a good starting point, but your real <strong>gas mileage</strong> drifts with load, weather and driving style, so use your own measured figure when you have one.</p>
+
+<h3>Price per gallon and price per liter</h3>
+<p>In the United States you enter the <strong>price per gallon</strong>; in most other countries pumps show the <strong>price per liter</strong>. Both work, as long as the efficiency unit matches the price unit. If your price is per liter, your efficiency must be in liters or kilometers per liter too.</p>
+
+<h3>Kilometers per liter and liters per 100 km</h3>
+<p>If you work in metric units, the <strong>gas calculator</strong> takes the same inputs in different clothes. Metric drivers usually quote <strong>kilometers per liter</strong> or liters per 100 km. To convert, divide 100 by the liters-per-100-km figure to get kilometers per liter, then use the same formula with kilometers and liters. One mile is 1.609 kilometers and one US gallon is 3.785 liters, which is why 27.4 mpg works out to roughly 8.6 L/100 km. Enter your efficiency and the local pump price in metric units, and the same distance ÷ efficiency × price formula returns the cost in your local currency.</p>
+        </section>
+        <section id="fuel-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="fuel-calculator-guide-heading-2">
+<h2 id="fuel-calculator-guide-heading-2">Worked Example: Estimate Fuel Cost for a 318-Mile Trip</h2>
+<p>Suppose you are driving a crossover that returns <strong>27.4 mpg</strong> to a family wedding <strong>318 miles</strong> away, and the pump near home shows <strong>$3.79</strong> for a gallon of regular. The <strong>gallons used</strong> are 318 ÷ 27.4 = 11.61, and the <strong>trip cost</strong> is 11.61 × $3.79 = <strong>$43.99</strong>. <!-- SILO_START:slot_c -->Next, open the <a class="silo-link" href="/basic-calculator.html">basic calculator</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_c --></p>
+<table>
+<thead><tr><th>Input or result</th><th>Value</th></tr></thead>
+<tbody>
+<tr><td>Trip distance</td><td>318 miles</td></tr>
+<tr><td>Fuel efficiency</td><td>27.4 mpg</td></tr>
+<tr><td>Fuel price</td><td>$3.79 per gallon</td></tr>
+<tr><td>Gallons used</td><td>11.61 gallons</td></tr>
+<tr><td>Total trip cost, one way</td><td>$43.99</td></tr>
+<tr><td>Cost per mile</td><td>$0.138</td></tr>
+<tr><td>Round trip</td><td>$87.97</td></tr>
+</tbody>
+</table>
+
+<figure><img src="/assets/images/tools/fuel-calculator/fuel-cost-calculator-formula-example.svg" alt="Fuel cost formula distance divided by miles per gallon times price per gallon applied to a 318-mile trip for $43.99"><figcaption>The fuel cost formula with the 318-mile worked example substituted in.</figcaption></figure>
+<h3>Gallons used and fuel needed</h3>
+<p>The <strong>fuel needed</strong> figure matters on its own: 11.61 gallons tells you whether one tank gets you there or whether you must plan a stop at one of the gas stations along the way. Compare it with your tank size before you set off.</p>
+
+<h3>Trip cost per mile</h3>
+<p>Dividing $43.99 by 318 miles gives about 13.8 cents per mile. Multiply that by any distance and you have a quick <strong>trip cost</strong> without re-running every input, which is handy when the route changes.</p>
+        </section>
+        <section id="fuel-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="fuel-calculator-guide-heading-3">
+<h2 id="fuel-calculator-guide-heading-3">Trip Cost Calculator Inputs That Change Your Gas Bill</h2>
+<p>A good <strong>trip cost calculator</strong> reacts to more than the three basics. The table below shows how the same 318-mile drive moves when only the <strong>fuel prices</strong> and the vehicle's efficiency change.</p>
+<table>
+<thead><tr><th>Efficiency</th><th>$3.29 per gallon</th><th>$3.79 per gallon</th><th>$4.29 per gallon</th></tr></thead>
+<tbody>
+<tr><td>22 mpg</td><td>$47.56</td><td>$54.78</td><td>$62.01</td></tr>
+<tr><td>27.4 mpg</td><td>$38.18</td><td>$43.99</td><td>$49.79</td></tr>
+<tr><td>34 mpg</td><td>$30.77</td><td>$35.45</td><td>$40.12</td></tr>
+<tr><td>41 mpg</td><td>$25.52</td><td>$29.40</td><td>$33.27</td></tr>
+</tbody>
+</table>
+
+<figure><img src="/assets/images/tools/fuel-calculator/trip-gas-cost-by-mpg-and-fuel-price.svg" alt="Heatmap of 318-mile trip gas cost across four mpg levels and three gas prices per gallon"><figcaption>Trip cost by fuel efficiency and price per gallon, with the 27.4 mpg at $3.79 example outlined.</figcaption></figure>
+<h3>Fuel prices and gas prices by grade</h3>
+<p>Current <strong>gas prices</strong> differ by grade: regular, premium and diesel each carry their own price, and diesel may cost more or less than regular depending on the week. Premium only pays off when your engine is designed for it, so use the <strong>fuel grade</strong> your manufacturer recommends and enter that grade's price.</p>
+
+<h3>Vehicle type: car, SUV or truck</h3>
+<p>The <strong>vehicle type</strong> is the biggest swing factor. A compact car, a large SUV and a loaded truck can differ by a factor of two in efficiency, as the rows above show. Hybrids and electric vehicles change the math again, since electricity is priced per kilowatt-hour rather than per gallon.</p>
+
+<h3>Distance and route planner</h3>
+<p>Measure the <strong>distance</strong> with a <strong>route planner</strong> rather than guessing, and choose the <strong>cheapest route</strong> instead of the shortest if the two differ. A detour that adds 12 miles adds about $1.66 in the example above, but it can save more in toll cost.</p>
+
+<h3>Toll cost and extras</h3>
+<p>Fuel is not the only line in a road-trip budget. Add any <strong>toll cost</strong>, parking and a buffer for traffic, because slow, stop-and-go driving lowers your real mpg below the rated figure.</p>
+        </section>
+        <section id="fuel-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="fuel-calculator-guide-heading-4">
+<h2 id="fuel-calculator-guide-heading-4">Calculate Fuel Cost for Trucks and Fleets</h2>
+<p>You can <strong>calculate fuel cost</strong> for a <strong>truck</strong> the same way, only with a lower mpg and a diesel price. Owner-operators and any <strong>fleet</strong> manager watch this number closely, because a cent change in the pump price repeats across thousands of miles. Many carriers issue a <strong>fuel card</strong> and track <strong>cost per mile</strong> per driver to spot waste.</p>
+
+<h3>Why owner-operators track cost per mile</h3>
+<p>For <strong>owner-operators</strong>, the fuel line is often the largest expense after the truck payment. Enter the truck's mpg and the diesel price into the calculator, then divide the result by the miles to get a cost per mile you can compare with your rate per mile, so <strong>profitability</strong> and <strong>cash flow</strong> for each load are visible before you accept it.</p>
+        </section>
+        <section id="fuel-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="fuel-calculator-guide-heading-5">
+<h2 id="fuel-calculator-guide-heading-5">Checking a Cycling Club's Fuel Reimbursement with a Gas Cost Calculator</h2>
+<p>Marisol drives volunteers to a trail race 187 miles from town, and the club reimburses fuel up to <strong>$30.00</strong> per vehicle for the full round trip. Before she says yes, she opens the fuel cost calculator to see whether that cap covers her hatchback.</p>
+<p>From the last three fill-ups she knows the car returns <strong>31.6 mpg</strong> on mixed roads, and the station by her office posts <strong>$4.12</strong> for a gallon of regular. She enters 187 miles, 31.6 mpg and $4.12, clicks the button, and reads the result: <strong>5.92 gallons</strong> and <strong>$24.38</strong> one way, or 13.0 cents per mile.</p>
+<table>
+<thead><tr><th>Scenario</th><th>Gallons</th><th>Cost</th></tr></thead>
+<tbody>
+<tr><td>One way, 31.6 mpg</td><td>5.92</td><td>$24.38</td></tr>
+<tr><td>One way with a roof box, 28.9 mpg</td><td>6.47</td><td>$26.66</td></tr>
+<tr><td>Round trip, 31.6 mpg</td><td>11.84</td><td>$48.76</td></tr>
+</tbody>
+</table>
+<p>The round trip comes to $48.76, which is $18.76 over the club's $30.00 cap, so the cap alone will not cover her. She reruns the numbers with a roof box that drops her to 28.9 mpg, and the one-way figure rises to $26.66, confirming the box is not worth carrying. Her next step is concrete: she asks the three riders to split the $18.76 above the cap at $6.25 each, and she sends the club the screenshot of the result before the entry deadline.</p>
+        </section>
+        <section id="fuel-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="fuel-calculator-guide-heading-6">
+<h2 id="fuel-calculator-guide-heading-6">Gas Mileage Tips That Lower Your Trip Fuel Cost</h2>
+<p>You cannot control the pump price, but you can control how many gallons you burn. These habits protect your <strong>fuel economy</strong> and show up directly as <strong>fuel saving</strong> in the calculator.</p>
+
+<h3>Tire pressure and tires</h3>
+<p>Check <strong>tire pressure</strong> monthly against the manufacturer's placard, not the number molded into the sidewall. Under-inflated <strong>tires</strong> raise <strong>rolling resistance</strong>, so the engine works harder and your <strong>fuel consumption</strong> climbs; keeping tires correctly inflated can improve mileage by up to about 3 percent.</p>
+
+<h3>Motor oil and engine tune</h3>
+<p>Use the <strong>motor oil</strong> grade printed in your manual. To <strong>tune the engine</strong> for efficiency rather than power, fix warning lights early: a failed <strong>oxygen sensor</strong> can hurt mileage badly. Keep up with <strong>regular maintenance</strong> such as filters and fuel-system <strong>detergent additives</strong> if the maker recommends them. A well-tuned car raises the mpg you enter and lowers the calculated total.</p>
+
+<h3>Speed, cruise control and idling</h3>
+<p>Aerodynamic <strong>drag</strong> grows quickly with speed, so steady <strong>highway</strong> driving with <strong>cruise control</strong> beats aggressive acceleration. Avoid long <strong>idling</strong>, limit <strong>air conditioning</strong> when it is not needed, and remember that <strong>city driving</strong> with constant braking costs more per mile than open road. Roof racks add <strong>aerodynamics</strong> penalties and extra <strong>weight</strong> works against you too. These habits lower your real mpg when ignored, so enter your measured figure rather than the sticker rating.</p>
+
+<h3>Public transportation and carpool options</h3>
+<p>Sometimes the cheapest gallon is the one you never burn. <strong>Public transportation</strong> or a <strong>carpool</strong> spreads one vehicle's <strong>expense</strong> across several people, so run the calculator for your commute, divide the result by the number of riders, and compare it with a transit fare to see the <strong>savings</strong>.</p>
+        </section>
+        <section id="fuel-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="fuel-calculator-guide-heading-7">
+<h2 id="fuel-calculator-guide-heading-7">Gas Trip Calculator and Gas Estimator Features Worth Using</h2>
+<p>A basic <strong>gas calculator</strong> asks for three numbers, while a fuller <strong>gas trip calculator</strong> lets you type a start and a destination and pulls the miles from a map. That saves effort, but check that it uses your own mpg rather than a generic average, because the default value for a <strong>sedan</strong> will mislead you if you drive something heavier. Treat any <strong>gas estimator</strong> as a starting point and compare its answer with the formula above.</p>
+
+<h3>Build a trip plan around the numbers</h3>
+<p>Once you have a figure, write a short <strong>trip plan</strong>: the miles per day, the gallons per leg, and the places you expect to refuel. A <strong>trip calculator</strong> that supports several stops is especially useful, since each leg may have different road types and therefore different mileage. Compare the <strong>cost of gas</strong> in the towns you will pass and fill up where it is lowest, and a <strong>discount card</strong> from a grocery chain or fuel network can trim a few cents per gallon on top.</p>
+
+<h3>Scale the estimate to a year</h3>
+<p>Multiply a single commute by the days you drive to see what you spend <strong>per year on gas</strong>. Enter your daily commute distance, multiply the calculator's result by the days you drive, and you have the annual figure. A 22-mile commute at 27.4 mpg and $3.79 per gallon costs $3.04 each way, or about $1,520 over 250 working days of round trips, which shows why a small gain in efficiency matters.</p>
+        </section>
+        <section id="fuel-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="fuel-calculator-guide-heading-8">
+<h2 id="fuel-calculator-guide-heading-8">What Drives Gas Price Changes</h2>
+<p>Understanding why the pump price moves helps you time a fill-up and set a realistic <strong>budget</strong>. Because the pump price is a calculator input, check the current local price before you run an estimate.</p>
+
+<h3>Crude oil prices, Brent and WTI</h3>
+<p><strong>Crude oil</strong> is the biggest component. Benchmarks such as <strong>Brent</strong> and <strong>WTI</strong> are quoted per <strong>barrel</strong>, and a rise in the <strong>oil price</strong> usually reaches the pump within days. After <strong>refining</strong>, distribution and retail margins add to the final cost of <strong>gasoline</strong> (called <i>petrol</i> in many countries). These swings are why the price in your calculator should be today's.</p>
+
+<h3>Taxes, subsidy and supply and demand</h3>
+<p><strong>Taxes</strong> differ widely by region, and a <strong>subsidy</strong> or other <strong>government</strong> policy can push prices down or up. <strong>Supply and demand</strong> shifts, such as summer travel or refinery outages, and <strong>exchange rates</strong> for imported oil, also move what you pay, along with the <strong>emissions</strong> rules that shape refining costs. Regional levies explain why the price you enter differs by state or country.</p>
+        </section>
+      </div>
+
+      <section id="fuel-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="fuel-calculator-faq-heading" data-section="faq">
+        <h2 id="fuel-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Fuel Cost Calculator questions</h2>
+        <div id="fuel-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="fuel-calculator-faq-1" class="faq-item" open><summary id="fuel-calculator-faq-1-summary" class="faq-summary"><h3 id="fuel-calculator-faq-1-question" class="faq-question">How do I calculate fuel cost for a trip?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="fuel-calculator-faq-1-answer" class="faq-answer"><p>Divide the trip distance by your vehicle&#x27;s fuel efficiency to get the fuel needed, then multiply that by the price of a gallon or liter. For example, 100 miles at 25 mpg needs 4 gallons, and at $4.00 per gallon that costs $16.</p></div></details>
+          <details id="fuel-calculator-faq-2" class="faq-item" open><summary id="fuel-calculator-faq-2-summary" class="faq-summary"><h3 id="fuel-calculator-faq-2-question" class="faq-question">What is fuel efficiency and where do I find mine?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="fuel-calculator-faq-2-answer" class="faq-answer"><p>Fuel efficiency is how far a vehicle travels on a unit of fuel, such as miles per gallon. Check the window sticker or owner&#x27;s manual, or divide the miles you drove by the gallons you added at your last fill-up for a real-world figure.</p></div></details>
+          <details id="fuel-calculator-faq-3" class="faq-item" open><summary id="fuel-calculator-faq-3-summary" class="faq-summary"><h3 id="fuel-calculator-faq-3-question" class="faq-question">Can I use kilometers and liters instead of miles and gallons?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="fuel-calculator-faq-3-answer" class="faq-answer"><p>Yes. Choose kilometers for distance, pick liters per 100 km, kilometers per liter or liters per mile for efficiency, and set the price unit to per liter. The calculator converts everything before working out the cost.</p></div></details>
+          <details id="fuel-calculator-faq-4" class="faq-item" open><summary id="fuel-calculator-faq-4-summary" class="faq-summary"><h3 id="fuel-calculator-faq-4-question" class="faq-question">Why is my real fuel cost different from the estimate?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="fuel-calculator-faq-4-answer" class="faq-answer"><p>Traffic, speed, load, weather, tire pressure and driving style all change your actual mpg, and pump prices vary by station. Use your own measured mpg and the current local price for the closest estimate.</p></div></details>
+          <details id="fuel-calculator-faq-5" class="faq-item" open><summary id="fuel-calculator-faq-5-summary" class="faq-summary"><h3 id="fuel-calculator-faq-5-question" class="faq-question">Does the fuel cost calculator work for diesel trucks?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="fuel-calculator-faq-5-answer" class="faq-answer"><p>Yes. Enter the truck&#x27;s mpg and the diesel price per gallon. Trucks get far fewer miles per gallon than cars, so the same distance costs much more.</p></div></details>
+          <details id="fuel-calculator-faq-6" class="faq-item" open><summary id="fuel-calculator-faq-6-summary" class="faq-summary"><h3 id="fuel-calculator-faq-6-question" class="faq-question">How can I lower my fuel cost?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="fuel-calculator-faq-6-answer" class="faq-answer"><p>Keep tires inflated to the recommended pressure, drive at a steady speed, avoid long idling, remove extra weight, follow the maintenance schedule, combine errands and consider carpooling.</p></div></details>
+          <details id="fuel-calculator-faq-7" class="faq-item" open><summary id="fuel-calculator-faq-7-summary" class="faq-summary"><h3 id="fuel-calculator-faq-7-question" class="faq-question">Does this include tolls or parking?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="fuel-calculator-faq-7-answer" class="faq-answer"><p>No. The result covers fuel only, so add tolls, parking and other trip expenses separately.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="fuel-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="fuel-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="fuel-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="fuel-calculator-ad-bottom-leaderboard">
+            <ins id="fuel-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("fuel-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="fuel-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="fuel-calculator-right-rail-top" class="mb-6">
+        <aside id="fuel-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="fuel-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="fuel-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="fuel-calculator-ad-right-rail-rectangle">
+            <ins id="fuel-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("fuel-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="fuel-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="fuel-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="fuel-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="fuel-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="fuel-calculator-ad-right-rail-skyscraper">
+            <ins id="fuel-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("fuel-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="fuel-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="fuel-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="fuel-calculator-footer-brand">
+        <a id="fuel-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="fuel-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="fuel-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="fuel-calculator-footer-categories" aria-labelledby="fuel-calculator-footer-categories-heading">
+        <h2 id="fuel-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="fuel-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="fuel-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="fuel-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="fuel-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="fuel-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="fuel-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="fuel-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="fuel-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="fuel-calculator-footer-company" aria-labelledby="fuel-calculator-footer-company-heading">
+        <h2 id="fuel-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="fuel-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="fuel-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="fuel-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="fuel-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="fuel-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="fuel-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="fuel-calculator-footer-bottom" class="border-t border-line">
+      <p id="fuel-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="fuel-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Fuel maths in US units (miles, gallons, mpg, $/gallon).
+  //   Trip cost:     miles (x2 for a round trip) / mpg = gallons; gallons x price = cost;
+  //                  cost per mile = price / mpg; cost per person = cost / people.
+  //   Fuel economy:  mpg = miles / gallons; cost per mile = price / mpg (if a price is given).
+  //   Fuel budget:   gallons = budget / price; miles = gallons x mpg.
+  // Verified (Node scratch test): 300 mi at 25 mpg and $3.50/gal -> 12 gal, $42.00, $0.14/mile,
+  // $14.00 per 100 miles; round trip of 150 mi each way, 2 people -> $21.00 each; 412 mi on
+  // 13.7 gal -> 30.07 mpg; $50 at $3.25/gal and 28 mpg -> 15.38 gal, 430.8 miles.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  var money3 = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 3, maximumFractionDigits: 3 });
+  var n1 = new Intl.NumberFormat('en-US', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+  var n2 = new Intl.NumberFormat('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+  function num(id) {
+    var s = String(document.getElementById(id).value).trim();
+    if (s === '') return NaN;
+    var v = Number(s);
+    return isFinite(v) ? v : NaN;
+  }
+  function set(id, text) { document.getElementById(id).textContent = text; }
+  function show(id, on) { document.getElementById(id).hidden = !on; }
+
+  function tripCost(miles, mpg, price, people) {
+    var gallons = miles / mpg, cost = gallons * price;
+    return { gallons: gallons, cost: cost, perPerson: cost / people, perMile: price / mpg, per100: price / mpg * 100 };
+  }
+  function economy(miles, gallons, price) {
+    var mpg = miles / gallons;
+    return { mpg: mpg, cost: gallons * price, perMile: price / mpg, per100: price / mpg * 100 };
+  }
+  function budgetRange(budget, price, mpg) {
+    var gallons = budget / price;
+    return { gallons: gallons, miles: gallons * mpg };
+  }
+
+  var LABELS = {
+    trip: ['Trip fuel cost', 'Fuel needed', 'Cost per mile', 'Cost per person'],
+    mpg: ['Fuel economy', 'Fuel cost', 'Cost per mile', 'Cost per 100 miles'],
+    budget: ['Miles you can drive', 'Gallons you can buy', 'Cost per mile', 'Cost per 100 miles']
+  };
+
+  function blank(msg) {
+    var error = document.getElementById('fuError');
+    error.hidden = !msg;
+    error.textContent = msg || '';
+    ['fuMain', 'fuSecond', 'fuThird', 'fuFourth'].forEach(function (id) { set(id, '–'); });
+    set('fuNote', '');
+  }
+
+  function update() {
+    var mode = document.getElementById('fuMode').value;
+    if (!LABELS[mode]) mode = 'trip';
+    show('fuTripInputs', mode === 'trip');
+    show('fuMpgInputs', mode === 'mpg');
+    show('fuBudgetInputs', mode === 'budget');
+    show('fuSharedMpg', mode !== 'mpg');
+    var l = LABELS[mode];
+    set('fuMainLabel', l[0]); set('fuSecondLabel', l[1]); set('fuThirdLabel', l[2]); set('fuFourthLabel', l[3]);
+    blank('');
+    var price = num('fuPrice');
+
+    if (mode === 'trip') {
+      var miles = num('fuMiles'), mpg = num('fuMpgIn'), people = num('fuPeople');
+      var round = document.getElementById('fuRound').checked;
+      if ([miles, mpg, price, people].some(isNaN) || miles < 0 || mpg <= 0 || price < 0 ||
+          people < 1 || Math.floor(people) !== people || miles > 1e7 || mpg > 1000 || price > 100 || people > 100) {
+        return blank('Enter a distance of 0 or more, fuel economy above 0 mpg, a fuel price from $0 to $100 and 1 to 100 people.');
+      }
+      var dist = round ? miles * 2 : miles;
+      var t = tripCost(dist, mpg, price, people);
+      set('fuMain', money.format(t.cost));
+      set('fuSecond', n2.format(t.gallons) + ' gal');
+      set('fuThird', money3.format(t.perMile));
+      set('fuFourth', money.format(t.perPerson));
+      set('fuNote', 'Based on ' + n1.format(dist) + ' miles' + (round ? ' (round trip)' : '') + ' at ' + n1.format(mpg) +
+        ' mpg. Fuel costs ' + money.format(t.per100) + ' per 100 miles.');
+    } else if (mode === 'mpg') {
+      var driven = num('fuDriven'), gallons = num('fuGallons');
+      if ([driven, gallons].some(isNaN) || driven <= 0 || gallons <= 0 || driven > 1e7 || gallons > 1e6) {
+        return blank('Enter the miles driven and the gallons used, both above 0.');
+      }
+      var havePrice = !isNaN(price) && price > 0 && price <= 100;
+      if (!isNaN(price) && (price < 0 || price > 100)) return blank('Enter a fuel price from $0 to $100, or leave it empty.');
+      var e = economy(driven, gallons, havePrice ? price : 0);
+      set('fuMain', n2.format(e.mpg) + ' mpg');
+      set('fuSecond', havePrice ? money.format(e.cost) : '–');
+      set('fuThird', havePrice ? money3.format(e.perMile) : '–');
+      set('fuFourth', havePrice ? money.format(e.per100) : '–');
+      set('fuNote', 'That is ' + n2.format(gallons / driven * 100) + ' gallons per 100 miles.' +
+        (havePrice ? '' : ' Add the fuel price to see the cost per mile.'));
+    } else {
+      var budget = num('fuBudget'), mpgB = num('fuMpgIn');
+      if ([budget, mpgB, price].some(isNaN) || budget < 0 || mpgB <= 0 || price <= 0 || budget > 1e7 || mpgB > 1000 || price > 100) {
+        return blank('Enter a budget of $0 or more, fuel economy above 0 mpg and a fuel price above $0 (up to $100).');
+      }
+      var b = budgetRange(budget, price, mpgB);
+      set('fuMain', n1.format(b.miles) + ' mi');
+      set('fuSecond', n2.format(b.gallons) + ' gal');
+      set('fuThird', money3.format(price / mpgB));
+      set('fuFourth', money.format(price / mpgB * 100));
+      set('fuNote', money.format(budget) + ' of fuel at ' + money.format(price) + ' a gallon and ' + n1.format(mpgB) + ' mpg.');
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('fuForm');
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

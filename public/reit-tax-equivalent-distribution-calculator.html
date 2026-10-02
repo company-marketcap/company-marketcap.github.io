@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="en" id="reit-tax-equivalent-distribution-calculator-document" data-page-slug="reit-tax-equivalent-distribution-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>REIT Tax-Equivalent Distribution Calculator: Equivalent Yield</title>
+  <meta name="description" content="Estimate the equivalent yield a taxable bond must earn to match your REIT distribution, after return of capital and the 199A deduction. Free tax calculator for investors.">
+  <link rel="canonical" href="https://company-marketcap.github.io/reit-tax-equivalent-distribution-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="REIT Tax-Equivalent Distribution Calculator: Equivalent Yield">
+  <meta property="og:description" content="Estimate the equivalent yield a taxable bond must earn to match your REIT distribution, after return of capital and the 199A deduction. Free tax calculator for investors.">
+  <meta property="og:url" content="https://company-marketcap.github.io/reit-tax-equivalent-distribution-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "REIT Tax-Equivalent Distribution Calculator", "url": "https://company-marketcap.github.io/reit-tax-equivalent-distribution-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Estimate the equivalent yield a taxable bond must earn to match your REIT distribution, after return of capital and the 199A deduction. Free tax calculator for investors."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Bonds, CDs & Fixed Income", "item": "https://company-marketcap.github.io/financial-calculators.html#bond-cd-calculators"}, {"@type": "ListItem", "position": 4, "name": "REIT Tax-Equivalent Distribution Calculator", "item": "https://company-marketcap.github.io/reit-tax-equivalent-distribution-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a REIT tax-equivalent distribution?", "acceptedAnswer": {"@type": "Answer", "text": "It is the pre-tax yield a fully taxable investment would need to earn to leave you with the same after-tax cash as your REIT's distribution. Because part of a REIT payout can be return of capital or taxed at lower rates, the equivalent yield is usually higher than the REIT's headline yield."}}, {"@type": "Question", "name": "How is return of capital treated in the calculation?", "acceptedAnswer": {"@type": "Answer", "text": "Return of capital is not taxed in the year you receive it. It lowers your cost basis instead, so the calculator treats it as untaxed income now (at the rate you enter, normally 0%), which raises the equivalent yield. The tax comes due as a larger gain when you sell."}}, {"@type": "Question", "name": "What is the Section 199A deduction for REITs?", "acceptedAnswer": {"@type": "Answer", "text": "Section 199A lets you deduct up to 20% of qualified REIT ordinary dividends, so only 80% of those dividends are taxed at your ordinary rate. It does not apply to qualified dividends or capital gain distributions. Confirm the current rules, since the provision has been subject to expiry dates."}}, {"@type": "Question", "name": "Where do I find my distribution breakdown?", "acceptedAnswer": {"@type": "Answer", "text": "The REIT reports the split between ordinary dividends, qualified dividends, capital gain distributions and return of capital on your year-end tax form and on its investor relations page. Type those percentages into the calculator in place of the defaults."}}, {"@type": "Question", "name": "Which tax rates does the calculator use?", "acceptedAnswer": {"@type": "Answer", "text": "It uses 2025 federal ordinary brackets for your filing status and other taxable income, 0%, 15% and 20% rates for qualified dividends and capital gain distributions, and an optional flat state rate. The 3.8% net investment income tax is not included."}}, {"@type": "Question", "name": "When is a REIT better than a taxable bond?", "acceptedAnswer": {"@type": "Answer", "text": "When the REIT's tax-equivalent yield is above the pre-tax yield of the bond you are comparing, the REIT leaves you more spendable income after tax. Remember the comparison covers income only, not price risk or the tax due on return of capital at sale."}}, {"@type": "Question", "name": "Why does a higher tax bracket raise the equivalent yield?", "acceptedAnswer": {"@type": "Answer", "text": "A higher bracket makes fully taxable interest lose more to tax, so a bond has to pay more to match the same REIT cash. The REIT's return of capital and capital gain pieces are less exposed to that bracket."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="reit-tax-equivalent-distribution-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="reit-tax-equivalent-distribution-calculator" data-page-type="calculator">
+  <a id="reit-tax-equivalent-distribution-calculator-skip-link" href="#reit-tax-equivalent-distribution-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="reit-tax-equivalent-distribution-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="reit-tax-equivalent-distribution-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="reit-tax-equivalent-distribution-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="reit-tax-equivalent-distribution-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="reit-tax-equivalent-distribution-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="reit-tax-equivalent-distribution-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="reit-tax-equivalent-distribution-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="reit-tax-equivalent-distribution-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="reit-tax-equivalent-distribution-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="reit-tax-equivalent-distribution-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="reit-tax-equivalent-distribution-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="reit-tax-equivalent-distribution-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="reit-tax-equivalent-distribution-calculator-header-search-status" aria-controls="reit-tax-equivalent-distribution-calculator-header-search-results" data-search-input="header">
+              <p id="reit-tax-equivalent-distribution-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="reit-tax-equivalent-distribution-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="reit-tax-equivalent-distribution-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="reit-tax-equivalent-distribution-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="reit-tax-equivalent-distribution-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="reit-tax-equivalent-distribution-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="reit-tax-equivalent-distribution-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="reit-tax-equivalent-distribution-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="reit-tax-equivalent-distribution-calculator-mobile-search-status" aria-controls="reit-tax-equivalent-distribution-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="reit-tax-equivalent-distribution-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="reit-tax-equivalent-distribution-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="reit-tax-equivalent-distribution-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="reit-tax-equivalent-distribution-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="reit-tax-equivalent-distribution-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="reit-tax-equivalent-distribution-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="reit-tax-equivalent-distribution-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="reit-tax-equivalent-distribution-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="reit-tax-equivalent-distribution-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="reit-tax-equivalent-distribution-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="reit-tax-equivalent-distribution-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="reit-tax-equivalent-distribution-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="reit-tax-equivalent-distribution-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="reit-tax-equivalent-distribution-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="reit-tax-equivalent-distribution-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="reit-tax-equivalent-distribution-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="reit-tax-equivalent-distribution-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="reit-tax-equivalent-distribution-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="reit-tax-equivalent-distribution-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="reit-tax-equivalent-distribution-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="reit-tax-equivalent-distribution-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="reit-tax-equivalent-distribution-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="reit-tax-equivalent-distribution-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="reit-tax-equivalent-distribution-calculator-sidebar-search-status" aria-controls="reit-tax-equivalent-distribution-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="reit-tax-equivalent-distribution-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="reit-tax-equivalent-distribution-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="reit-tax-equivalent-distribution-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="reit-tax-equivalent-distribution-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="reit-tax-equivalent-distribution-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="reit-tax-equivalent-distribution-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="reit-tax-equivalent-distribution-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="reit-tax-equivalent-distribution-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="reit-tax-equivalent-distribution-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="reit-tax-equivalent-distribution-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="reit-tax-equivalent-distribution-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="reit-tax-equivalent-distribution-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="reit-tax-equivalent-distribution-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="reit-tax-equivalent-distribution-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="reit-tax-equivalent-distribution-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="reit-tax-equivalent-distribution-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="reit-tax-equivalent-distribution-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="reit-tax-equivalent-distribution-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="reit-tax-equivalent-distribution-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="reit-tax-equivalent-distribution-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="reit-tax-equivalent-distribution-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators" aria-current="true">Bonds &amp; CDs</a></li><li><a id="reit-tax-equivalent-distribution-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="reit-tax-equivalent-distribution-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="reit-tax-equivalent-distribution-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="reit-tax-equivalent-distribution-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="reit-tax-equivalent-distribution-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="reit-tax-equivalent-distribution-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="reit-tax-equivalent-distribution-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="reit-tax-equivalent-distribution-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="reit-tax-equivalent-distribution-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="reit-tax-equivalent-distribution-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="reit-tax-equivalent-distribution-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="reit-tax-equivalent-distribution-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="reit-tax-equivalent-distribution-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="reit-tax-equivalent-distribution-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="reit-tax-equivalent-distribution-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="reit-tax-equivalent-distribution-calculator" data-calculator-slug="reit-tax-equivalent-distribution-calculator" data-sub-category-slug="bond-cd-calculators">
+      <aside id="reit-tax-equivalent-distribution-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="reit-tax-equivalent-distribution-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="reit-tax-equivalent-distribution-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="reit-tax-equivalent-distribution-calculator-ad-top-leaderboard">
+            <ins id="reit-tax-equivalent-distribution-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("reit-tax-equivalent-distribution-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="reit-tax-equivalent-distribution-calculator-intro-area" class="space-y-4">
+        <nav id="reit-tax-equivalent-distribution-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="reit-tax-equivalent-distribution-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="reit-tax-equivalent-distribution-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="reit-tax-equivalent-distribution-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="reit-tax-equivalent-distribution-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#bond-cd-calculators" itemprop="item"><span itemprop="name">Bonds, CDs &amp; Fixed Income</span></a><meta itemprop="position" content="3"></li>
+            <li id="reit-tax-equivalent-distribution-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">REIT Tax-Equivalent Distribution Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/reit-tax-equivalent-distribution-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="reit-tax-equivalent-distribution-calculator-hero-section" aria-labelledby="reit-tax-equivalent-distribution-calculator-hero-heading" data-section="hero">
+          <h1 id="reit-tax-equivalent-distribution-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">REIT Tax-Equivalent Distribution Calculator: Equivalent Yield</h1>
+          <p id="reit-tax-equivalent-distribution-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Wondering whether a 5.6% payout from a real estate investment trust really beats a bond that pays more on paper? The REIT tax-equivalent distribution calculator converts what a trust pays you into the fully taxable investment yield another holding would need to deliver the same spendable cash. Because every payout is a mix of ordinary income, capital gains and return of capital, the headline rate alone tells you very little about what you actually keep. <!-- SILO_START:slot_a -->The <a class="silo-link" href="/cd-calculator.html">cd calculator</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="reit-tax-equivalent-distribution-calculator-tool" class="space-y-6" data-page-slug="reit-tax-equivalent-distribution-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="rtFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="rtForm" class="space-y-5" novalidate aria-labelledby="rtFormHeading">
+      <h2 id="rtFormHeading" class="panel-heading">Enter the REIT and your taxes</h2>
+<p class="badge badge-sky">2026 federal tax brackets</p>
+<div class="form-row form-row-2">
+<div><label for="rtYield" class="form-label">REIT distribution yield</label><div class="input-group"><input type="number" id="rtYield" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="30" step="0.05" value="6" inputmode="decimal"><span class="input-affix">%</span></div></div>
+<div><label for="rtAmount" class="form-label">Amount invested</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="rtAmount" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1000" value="10000" inputmode="decimal"></div></div>
+</div>
+<div class="form-row form-row-2">
+<div><label for="rtStatus" class="form-label">Filing status</label><select id="rtStatus" class="form-select"><option value="single" selected>Single</option><option value="mfj">Married filing jointly</option><option value="mfs">Married filing separately</option><option value="hoh">Head of household</option></select></div>
+<div><label for="rtIncome" class="form-label">Taxable income</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="rtIncome" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1000" value="100000" inputmode="decimal"></div></div>
+</div>
+<p class="form-hint">Taxable income is income after deductions (Form 1040, line 15), including these distributions. It sets your bracket.</p>
+<div class="form-row form-row-2">
+<div><label for="rtOrdinary" class="form-label">Ordinary REIT dividends</label><div class="input-group"><input type="number" id="rtOrdinary" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="1" value="70" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">Box 5 of Form 1099-DIV.</p></div>
+<div><label for="rtGains" class="form-label">Capital gain distributions</label><div class="input-group"><input type="number" id="rtGains" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="1" value="10" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">Box 2a.</p></div>
+</div>
+<p class="form-hint">Shares of the total distribution. Whatever is left is return of capital (box 3). Check the REIT's yearly tax breakdown.</p>
+<div><label for="rtState" class="form-label">State income tax rate</label><div class="input-group"><input type="number" id="rtState" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="20" step="0.1" value="5" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">Use 0 if your state has no income tax.</p></div>
+<div class="form-choice-group"><label class="form-choice"><input type="checkbox" id="rtNiit" class="form-choice-input"><span class="form-choice-text">I pay the 3.8% net investment income tax<span class="form-choice-note">Applies when modified AGI is over $200,000 (single or head of household), $250,000 (joint) or $125,000 (separate).</span></span></label></div>
+      <p id="rtError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="rtResults" aria-live="polite" aria-labelledby="rtResultsHeading">
+      <h2 id="rtResultsHeading" class="panel-heading">Your results</h2>
+<div class="stat-grid mt-4">
+<div class="stat-card stat-card-highlight"><p class="stat-label">After-tax yield</p><p id="rtAfter" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">Equivalent fully taxable yield</p><p id="rtTey" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">Equivalent qualified-dividend yield</p><p id="rtQey" class="stat-value">–</p></div>
+</div>
+<div class="mt-4">
+<div class="result-row"><span class="result-term">Your federal rates</span><span id="rtBracket" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Federal rate on ordinary REIT dividends</span><span id="rtOrdRate" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Total tax rate on the distribution</span><span id="rtWeighted" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Return of capital (not taxed now)</span><span id="rtRoc" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Yearly distribution</span><span id="rtDist" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Tax on it this year</span><span id="rtTax" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Yours after tax</span><span id="rtNet" class="result-value">–</span></div>
+</div>
+<p id="rtNote" class="callout callout-note mt-4 text-sm" hidden></p>
+<p class="form-hint mt-4">The fully taxable yield is what a bond, CD or savings account taxed at your full bracket would need to pay to match the REIT after tax. The qualified-dividend yield is the same comparison for an ordinary stock dividend.</p>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="rtTableHeading" data-section="brackets">
+  <h2 id="rtTableHeading" class="panel-heading">The REIT in every federal bracket</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">After-tax and fully taxable equivalent yields at each 2026 bracket for your filing status, using your capital gains rate, state rate and other settings above.</p>
+  <div class="table-scroll mt-5" tabindex="0" role="region" aria-labelledby="rtTableHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Federal bracket</th><th scope="col">Taxable income</th><th scope="col">Rate on ordinary REIT dividends</th><th scope="col">After-tax yield</th><th scope="col">Equivalent fully taxable yield</th></tr></thead>
+      <tbody id="rtTable"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="reit-tax-equivalent-distribution-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="reit-tax-equivalent-distribution-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Wondering whether a 5.6% payout from a real estate investment trust really beats a bond that pays more on paper? The REIT tax-equivalent distribution calculator converts what a trust pays you into the fully taxable investment yield another holding would need to deliver the same spendable cash. Because every payout is a mix of ordinary income, capital gains and return of capital, the headline rate alone tells you very little about what you actually keep. <!-- SILO_START:slot_a_m -->The <a class="silo-link" href="/cd-calculator.html">cd calculator</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="reit-tax-equivalent-distribution-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="reit-tax-equivalent-distribution-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="reit-tax-equivalent-distribution-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="reit-tax-equivalent-distribution-calculator-ad-in-feed">
+            <ins id="reit-tax-equivalent-distribution-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("reit-tax-equivalent-distribution-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="reit-tax-equivalent-distribution-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="reit-tax-equivalent-distribution-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="reit-tax-equivalent-distribution-calculator-guide-heading-1">
+<h2 id="reit-tax-equivalent-distribution-calculator-guide-heading-1">What a Tax Equivalent Distribution Measures</h2>
+<p>This measure answers one question: what pre-tax payout would a fully taxable holding have to produce to leave you with the same cash as your trust? It is the same logic investors apply to a <strong>municipal bond</strong>, but REITs add layers, because each year's payout is divided into several tax buckets that are taxed in different ways. <!-- SILO_START:slot_b -->The <a class="silo-link" href="/credit-union-certificate-calculator.html">credit union certificate calculator</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_b --></p>
+<p>A <strong>real estate investment trust</strong> is a corporation that owns or finances income-producing properties such as apartment buildings, warehouses, data centers and hospitals. To keep its <strong>REIT status</strong>, the company must satisfy strict <strong>distribution requirements</strong>, including paying out at least 90% of its taxable income to shareholders each year. That is why <strong>real estate</strong> trusts are known for a <strong>high dividend</strong>, and why the tax breakdown of each payout, not the headline rate, is the input this calculator asks you to enter.</p>
+<p>Two trusts with an identical headline payout can leave you with very different <strong>after-tax income</strong>. The calculator removes that noise by expressing each trust as one rate you can set beside any bond, certificate of deposit or dividend stock in your <strong>portfolio</strong>.</p>
+
+<h3>Why Taxable Comparisons Matter for REIT Investors</h3>
+<p>Many <strong>REIT investors</strong> hold shares for income and weigh them against corporate bonds, savings products and <strong>mutual funds</strong> whose interest is taxed entirely as ordinary income. Putting both sides on the same footing exposes the true winner. If the breakeven rate for your trust is above what the alternative pays, the trust is delivering more spendable income; if it is below, the alternative is ahead once the IRS takes its share.</p>
+        </section>
+        <section id="reit-tax-equivalent-distribution-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="reit-tax-equivalent-distribution-calculator-guide-heading-2">
+<h2 id="reit-tax-equivalent-distribution-calculator-guide-heading-2">What a REIT Tax Calculator Has to Account For</h2>
+<p><strong>REIT dividends</strong> are not taxed as one lump. Each year the trust reports how the prior year's <strong>dividend distributions</strong> break down, and every slice follows its own rules. That <strong>distribution breakdown</strong>, printed on your year-end tax form, is the core input of any calculation of this kind. <!-- SILO_START:slot_c -->If you want to see how the figures change, the <a class="silo-link" href="/us-treasury-bill-calculator.html">us treasury bill calculator online</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_c --></p>
+
+<h3>Ordinary Income and Ordinary Dividends</h3>
+<p>Most of a typical payout is <strong>ordinary income</strong>, reported as <strong>ordinary dividends</strong>. These are taxed at your marginal bracket rather than at the gentler investment rates. The main relief is the <strong>Section 199A</strong> provision, which lets many shareholders deduct up to 20% of <strong>qualified REIT dividends</strong> through the <strong>qualified business income</strong> rules. That <strong>20% deduction</strong> is scheduled to lapse after 2025 unless Congress extends it, so confirm the current law before relying on it.</p>
+<p>Ordinary dividends from a trust are generally <strong>not</strong> <strong>qualified dividends</strong>. A qualified dividend earns the lower long-term rate, but most REIT payouts do not meet that test because the trust itself pays little corporate tax.</p>
+
+<h3>Capital Gain Distributions</h3>
+<p>When a trust sells a property at a profit it may pass that profit through as <strong>capital gain distributions</strong>. These are taxed at long-term <strong>capital gains</strong> rates of 0%, 15% or 20%, depending on your income, rather than at your ordinary bracket. At the top end, the <strong>maximum rate</strong> on long-term gains is 20%.</p>
+
+<h3>Return of Capital and Your Cost Basis</h3>
+<p><strong>Return of capital</strong> is the portion of a payout that is not treated as taxable income today. It makes REIT income <strong>tax-deferred</strong> rather than <strong>tax-free</strong>: the amount reduces your <strong>cost basis</strong>, so you owe more tax when you eventually sell. A larger share of return of capital raises the breakeven rate, because you keep more of each payment now and pay later.</p>
+
+<h3>Equity Trusts, Mortgage Trusts and Their Properties</h3>
+<p>The kind of <strong>properties</strong> a trust holds shapes its tax profile. Equity trusts own and operate buildings such as apartment complexes, shopping centers, cell towers, self-storage facilities and medical offices, and collect rent from tenants. Because they own physical <strong>properties</strong>, they deduct depreciation, which is the main source of return of capital in their payouts. Mortgage trusts, by contrast, hold loans rather than buildings and earn interest, so nearly all of their payout is ordinary income with little or no return of capital.</p>
+<p>This difference matters to <strong>investors</strong> comparing two trusts with the same yield. An equity trust that owns newer properties with large depreciation write-offs can pass a big share of its payout through as return of capital, while a mortgage trust can look generous on paper and still leave you with less after tax. A trust heavy in depreciation shows a bigger return of capital share, which lowers the tax and lifts the breakeven, so enter each trust's own percentages rather than assuming one split fits every <strong>real estate</strong> holding.</p>
+
+<h3>Where to Find Each Trust's Tax Split</h3>
+<p>Most <strong>investors</strong> find the split on the broker's year-end tax form for listed trusts. For a non-traded trust or a fund holding several, the fund's own statement tells you the percentages to type into the calculator, and it can arrive late, so any <strong>investment</strong> estimate made before then is provisional. The <strong>real estate</strong> payout's official breakdown always beats a guess.</p>
+        </section>
+        <section id="reit-tax-equivalent-distribution-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="reit-tax-equivalent-distribution-calculator-guide-heading-3">
+<h2 id="reit-tax-equivalent-distribution-calculator-guide-heading-3">The Tax-Equivalent Yield Formula for REIT Distributions</h2>
+<p>The math has two steps. First compute the tax owed on the taxable pieces of the distribution, then convert the after-tax yield into the pre-tax figure a fully taxable holding would need. The tax on one year of payouts is:</p>
+$$\text{Tax} = D \times s_{o} \times (1 - q) \times t_{o} + D \times s_{g} \times t_{g}$$
+<p>Here \(D\) is the total annual distribution, \(s_{o}\) the ordinary income share, \(s_{g}\) the capital gain share, \(q\) the 199A rate (0.20, or 0 if you do not qualify), \(t_{o}\) your ordinary bracket and \(t_{g}\) your long-term gains bracket. The return of capital share is untaxed this year, so it never appears in the tax term.</p>
+<p>The breakeven then follows from the after-tax yield:</p>
+$$\text{Breakeven} = \frac{(D - \text{Tax}) / \text{Investment}}{1 - t_{o}}$$
+<p>Dividing by \(1 - t_{o}\) grosses the after-tax figure back up to the amount a fully taxable investment would need to earn, since bond interest is taxed at your ordinary bracket. The share of each payout lost to tax is simply Tax divided by \(D\).</p>
+
+<h3>Inputs You Need Before You Calculate</h3>
+<ul>
+<li><strong>Amount invested</strong> and the <strong>annual distribution</strong> (or the distribution yield).</li>
+<li>The percentage split between ordinary income, long-term gains and return of capital from the trust's tax statement.</li>
+<li>Your ordinary bracket and long-term gains bracket, set by your <strong>filing status</strong> and income.</li>
+<li>Whether the deduction applies to your qualified dividends from the trust.</li>
+<li>Your <strong>effective tax rate</strong> on the result, which the calculator reports back to you.</li>
+</ul>
+        </section>
+        <section id="reit-tax-equivalent-distribution-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="reit-tax-equivalent-distribution-calculator-guide-heading-4">
+<h2 id="reit-tax-equivalent-distribution-calculator-guide-heading-4">Using the REIT Tax-Equivalent Distribution Calculator Step by Step</h2>
+<p>Enter your investment amount and the trust's yield to produce a <strong>hypothetical distribution</strong> in dollars, or type in the dollar payout directly. Next fill in the three percentages from the trust's tax statement. Then pick your brackets and choose whether the 199A break applies. Click the calculate button and read the results from top to bottom: yearly tax, after-tax cash, after-tax yield and the breakeven rate.</p>
+<p>The result doubles as a <strong>cashflow</strong> check. If you rely on the trust to fund living expenses, the after-tax dollar figure is what actually lands in your account, and it can be several hundred dollars lower than the gross payout.</p>
+        </section>
+        <section id="reit-tax-equivalent-distribution-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="reit-tax-equivalent-distribution-calculator-guide-heading-5">
+<h2 id="reit-tax-equivalent-distribution-calculator-guide-heading-5">Worked Example with the Tax Equivalent Investment Return Calculator</h2>
+<p>Suppose you hold <strong>$85,000</strong> in a REIT that yields <strong>5.6%</strong>, so the annual payout is <strong>$4,760</strong>. Its tax statement breaks the payout into 58% ordinary income, 12% capital gain distributions and 30% return of capital. You are in the 32% bracket, pay 15% on long-term gains and qualify for the deduction.</p>
+<table>
+<thead><tr><th>Distribution piece</th><th>Share</th><th>Amount</th><th>Tax owed</th></tr></thead>
+<tbody>
+<tr><td>Ordinary dividends</td><td>58%</td><td>$2,760.80</td><td>$706.76</td></tr>
+<tr><td>Capital gain distributions</td><td>12%</td><td>$571.20</td><td>$85.68</td></tr>
+<tr><td>Return of capital</td><td>30%</td><td>$1,428.00</td><td>$0.00 (lowers cost basis)</td></tr>
+<tr><td><strong>Total</strong></td><td>100%</td><td><strong>$4,760.00</strong></td><td><strong>$792.44</strong></td></tr>
+</tbody>
+</table>
+<p>The ordinary tax comes from $2,760.80 × (1 − 0.20) × 32% = $706.76, and the gains tax from $571.20 × 15% = $85.68. Your <strong>after-tax income</strong> is $4,760.00 − $792.44 = <strong>$3,967.56</strong>, an after-tax yield of 4.67% and an <strong>effective tax rate</strong> of 16.65%.</p>
+<p>Applying the formula: 4.67% ÷ (1 − 0.32) = <strong>6.86%</strong>. A fully taxable bond would need to pay about 6.86% to leave you with the same $3,967.56. If your alternative pays less than that, the trust wins after taxes; this is the <strong>equivalent fully taxable</strong> return you are benchmarking against.</p>
+<figure><img src="/assets/images/tools/reit-tax-equivalent-distribution-calculator/reit-distribution-after-tax-waterfall.svg" alt="Waterfall chart taking an $85,000 REIT's $4,760 payout down by $706.76 and $85.68 of tax to $3,967.56 of after-tax income"><figcaption>From gross payout to cash kept: the worked example's $4,760 distribution loses $792.44 to tax.</figcaption></figure>
+        </section>
+        <section id="reit-tax-equivalent-distribution-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="reit-tax-equivalent-distribution-calculator-guide-heading-6">
+<h2 id="reit-tax-equivalent-distribution-calculator-guide-heading-6">How Return of Capital Shifts the Tax Equivalent Yield</h2>
+<p>Using the same $85,000 position at the 32% bracket, the table shows how the breakeven moves as the return of capital share changes. The capital gain share stays at 12%.</p>
+<table>
+<thead><tr><th>Return of capital share</th><th>Yearly tax</th><th>Breakeven rate</th></tr></thead>
+<tbody>
+<tr><td>0%</td><td>$1,158.01</td><td>6.23%</td></tr>
+<tr><td>15%</td><td>$975.23</td><td>6.55%</td></tr>
+<tr><td>30%</td><td>$792.44</td><td>6.86%</td></tr>
+<tr><td>45%</td><td>$609.66</td><td>7.18%</td></tr>
+</tbody>
+</table>
+<p>Each 15 points of return of capital adds roughly 0.32 percentage points to the breakeven. The catch is the deferral: that benefit reverses at sale, when a lower cost basis means a larger taxable gain.</p>
+<figure><img src="/assets/images/tools/reit-tax-equivalent-distribution-calculator/reit-breakeven-yield-by-bracket-and-return-of-capital.svg" alt="Heatmap of the breakeven taxable yield for a 5.6% REIT payout across tax brackets and return of capital shares"><figcaption>Breakeven yield by bracket and return of capital share, with the worked example outlined.</figcaption></figure>
+
+<h3>Breakeven by Tax Bracket</h3>
+<p>The same payout looks different at different brackets. With the example's 58/12/30 split, the breakeven is 6.32% at 22%, 6.42% at 24%, 6.86% at 32%, 7.06% at 35% and 7.20% at 37%. Higher brackets make this income more valuable relative to fully taxable alternatives, because the 20% deduction shields a larger dollar amount of ordinary dividends.</p>
+<figure><img src="/assets/images/tools/reit-tax-equivalent-distribution-calculator/reit-equivalent-taxable-yield-by-tax-bracket.svg" alt="Dumbbell chart comparing a 5.6% REIT yield with the taxable yield needed to match it at five tax brackets"><figcaption>The higher your bracket, the more a taxable bond must pay to match the same REIT.</figcaption></figure>
+        </section>
+        <section id="reit-tax-equivalent-distribution-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="reit-tax-equivalent-distribution-calculator-guide-heading-7">
+<h2 id="reit-tax-equivalent-distribution-calculator-guide-heading-7">Checking a REIT Tax Calculator Result Before Rebalancing a Portfolio</h2>
+<p>Marguerite, a 58-year-old consultant in the 24% bracket, is deciding whether to move part of her $142,300 holding in a self-storage trust into a 5.9% corporate bond fund. The trust yields 4.7%, so the bond looks better at a glance. Before selling, she pulls the 1099-DIV and reads the box breakdown: 71% ordinary dividends, 9% capital gain distributions and 20% return of capital.</p>
+<p>She enters $142,300 and a 4.7% yield, which the tool turns into a $6,688.10 distribution. She sets her ordinary bracket to 24%, long-term gains to 15%, and leaves the Section 199A deduction on. The REIT tax-equivalent distribution calculator reports $4,748.55 of ordinary dividends, $601.93 of capital gains and $1,337.62 of return of capital, then returns tax of $1,002.01 and after-tax income of $5,686.09. Her after-tax yield is 4.00%, and the breakeven rate comes out at 5.26%.</p>
+<p>That figure is the one she compares with the bond fund. The fund's 5.9% is taxed fully as ordinary interest, so its after-tax yield is 5.9% × (1 − 0.24) = 4.48%, a gain of 0.48 percentage points over the trust's 4.00%, about $695 a year on her balance. She then reruns the calculator with the deduction switched off, because she is unsure her income qualifies. Tax rises to $1,229.94 and the breakeven falls to 5.05%, which is still below the fund's 5.9%, so the bond fund stays ahead and the margin widens to 0.65 points.</p>
+<p>The decision follows from those numbers. She moves $60,000 into the bond fund rather than the entire position, keeps the rest to avoid realising a large gain, and notes that the $1,337.62 return of capital has already lowered her cost basis. Next January she will rerun the calculation with the new tax statement.</p>
+        </section>
+        <section id="reit-tax-equivalent-distribution-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="reit-tax-equivalent-distribution-calculator-guide-heading-8">
+<h2 id="reit-tax-equivalent-distribution-calculator-guide-heading-8">Comparing a Tax Equivalent Distribution Against Bonds and Stocks</h2>
+<p>Treat the breakeven as a hurdle rate. A taxable corporate bond must clear it directly. A <strong>municipal bond</strong> works differently: its interest is often free of federal tax, so compare it against the trust's after-tax yield instead.</p>
+<p>REITs also sit between <strong>bonds</strong> and <strong>stocks</strong>. They behave like stocks because shares trade on an exchange and prices move daily, yet they behave like bonds because most of the return arrives as regular income. When you build a <strong>portfolio</strong>, remember that bond interest is fully taxed while a trust's payout is partly sheltered, so comparing pre-tax yields side by side overstates the bond. Dividend stocks that pay <strong>qualified dividends</strong> sit at the other extreme, since their payouts can be taxed at 15% or less, which is why a trust's breakeven should also be checked against the after-tax yield of comparable stocks and of any other income <strong>investment</strong> you own.</p>
+
+<h3>Placing REITs in the Right Account</h3>
+<p>Because REIT payouts are heavy in ordinary income, many <strong>REIT investors</strong> hold them inside tax-advantaged retirement accounts, where the dividends are not taxed each year. In a taxable account the 199A break and return of capital do more of the work, and the calculator above shows how much. Unlike a rental building you manage yourself, a trust hands <strong>investors</strong> a payout already sorted into tax buckets across many <strong>properties</strong>, which is why a calculation like this one is possible.</p>
+
+<h3>Weighing Total Return, Not Just Income</h3>
+<p>The breakeven rate measures income only, so it is a limit of the result as much as a benchmark. If share prices of the trust fall by more than the after-tax income advantage in a year, the tax benefit is wiped out. Before you switch an <strong>investment</strong> on the strength of a higher breakeven, check that the trust covers its payout from operating cash, since a cut payout lowers the very figure you just compared.</p>
+        </section>
+        <section id="reit-tax-equivalent-distribution-calculator-guide-section-9" class="panel article-content p-4 sm:p-6" aria-labelledby="reit-tax-equivalent-distribution-calculator-guide-heading-9">
+<h2 id="reit-tax-equivalent-distribution-calculator-guide-heading-9">Limits of a REIT Tax Calculator Estimate</h2>
+<p>The model uses federal rates only. <strong>State taxes</strong>, the 3.8% <strong>net investment income tax</strong> (often called the <strong>Medicare surtax</strong>) and phase-outs of the deduction can change the outcome, so confirm your figures with a <strong>tax professional</strong>. Non-U.S. holders also face <strong>withholding tax</strong> on ordinary payouts, which this model does not include.</p>
+<p>The estimate also assumes the same split every year. In practice a trust's breakdown changes with property sales and earnings, so rerun the numbers each January when new tax statements arrive. Add any <strong>taxable income</strong> from other sources to your bracket first, since a large gain elsewhere can push you into the next one.</p>
+
+<h3>When the Breakeven Changes Your Decision</h3>
+<p>A gap of a few tenths of a percentage point rarely justifies a switch, because trading costs and the deferred tax on return of capital can erase it. A gap of one percentage point or more is a meaningful signal. If a taxable bond pays well below your trust's breakeven, the trust is doing the heavier lifting for your <strong>investment</strong> income; if a bond pays above it, the bond leaves you with more cash after tax. Either way, the number gives your <strong>investors</strong> decision a concrete benchmark, whatever the mix of <strong>real estate</strong> and fixed-income holdings you own.</p>
+
+<h3>Common Mistakes When Reading the Result</h3>
+<ul>
+<li>Ignoring the deferred tax on return of capital, which comes due when you sell your shares.</li>
+<li>Comparing a trust's gross yield directly with a bond's pre-tax payout.</li>
+<li>Using last year's breakdown when the trust has since sold properties or changed its payout policy.</li>
+</ul>
+        </section>
+      </div>
+
+      <section id="reit-tax-equivalent-distribution-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="reit-tax-equivalent-distribution-calculator-faq-heading" data-section="faq">
+        <h2 id="reit-tax-equivalent-distribution-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">REIT Tax-Equivalent Distribution Calculator questions</h2>
+        <div id="reit-tax-equivalent-distribution-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="reit-tax-equivalent-distribution-calculator-faq-1" class="faq-item" open><summary id="reit-tax-equivalent-distribution-calculator-faq-1-summary" class="faq-summary"><h3 id="reit-tax-equivalent-distribution-calculator-faq-1-question" class="faq-question">What is a REIT tax-equivalent distribution?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="reit-tax-equivalent-distribution-calculator-faq-1-answer" class="faq-answer"><p>It is the pre-tax yield a fully taxable investment would need to earn to leave you with the same after-tax cash as your REIT&#x27;s distribution. Because part of a REIT payout can be return of capital or taxed at lower rates, the equivalent yield is usually higher than the REIT&#x27;s headline yield.</p></div></details>
+          <details id="reit-tax-equivalent-distribution-calculator-faq-2" class="faq-item" open><summary id="reit-tax-equivalent-distribution-calculator-faq-2-summary" class="faq-summary"><h3 id="reit-tax-equivalent-distribution-calculator-faq-2-question" class="faq-question">How is return of capital treated in the calculation?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="reit-tax-equivalent-distribution-calculator-faq-2-answer" class="faq-answer"><p>Return of capital is not taxed in the year you receive it. It lowers your cost basis instead, so the calculator treats it as untaxed income now (at the rate you enter, normally 0%), which raises the equivalent yield. The tax comes due as a larger gain when you sell.</p></div></details>
+          <details id="reit-tax-equivalent-distribution-calculator-faq-3" class="faq-item" open><summary id="reit-tax-equivalent-distribution-calculator-faq-3-summary" class="faq-summary"><h3 id="reit-tax-equivalent-distribution-calculator-faq-3-question" class="faq-question">What is the Section 199A deduction for REITs?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="reit-tax-equivalent-distribution-calculator-faq-3-answer" class="faq-answer"><p>Section 199A lets you deduct up to 20% of qualified REIT ordinary dividends, so only 80% of those dividends are taxed at your ordinary rate. It does not apply to qualified dividends or capital gain distributions. Confirm the current rules, since the provision has been subject to expiry dates.</p></div></details>
+          <details id="reit-tax-equivalent-distribution-calculator-faq-4" class="faq-item" open><summary id="reit-tax-equivalent-distribution-calculator-faq-4-summary" class="faq-summary"><h3 id="reit-tax-equivalent-distribution-calculator-faq-4-question" class="faq-question">Where do I find my distribution breakdown?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="reit-tax-equivalent-distribution-calculator-faq-4-answer" class="faq-answer"><p>The REIT reports the split between ordinary dividends, qualified dividends, capital gain distributions and return of capital on your year-end tax form and on its investor relations page. Type those percentages into the calculator in place of the defaults.</p></div></details>
+          <details id="reit-tax-equivalent-distribution-calculator-faq-5" class="faq-item" open><summary id="reit-tax-equivalent-distribution-calculator-faq-5-summary" class="faq-summary"><h3 id="reit-tax-equivalent-distribution-calculator-faq-5-question" class="faq-question">Which tax rates does the calculator use?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="reit-tax-equivalent-distribution-calculator-faq-5-answer" class="faq-answer"><p>It uses 2025 federal ordinary brackets for your filing status and other taxable income, 0%, 15% and 20% rates for qualified dividends and capital gain distributions, and an optional flat state rate. The 3.8% net investment income tax is not included.</p></div></details>
+          <details id="reit-tax-equivalent-distribution-calculator-faq-6" class="faq-item" open><summary id="reit-tax-equivalent-distribution-calculator-faq-6-summary" class="faq-summary"><h3 id="reit-tax-equivalent-distribution-calculator-faq-6-question" class="faq-question">When is a REIT better than a taxable bond?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="reit-tax-equivalent-distribution-calculator-faq-6-answer" class="faq-answer"><p>When the REIT&#x27;s tax-equivalent yield is above the pre-tax yield of the bond you are comparing, the REIT leaves you more spendable income after tax. Remember the comparison covers income only, not price risk or the tax due on return of capital at sale.</p></div></details>
+          <details id="reit-tax-equivalent-distribution-calculator-faq-7" class="faq-item" open><summary id="reit-tax-equivalent-distribution-calculator-faq-7-summary" class="faq-summary"><h3 id="reit-tax-equivalent-distribution-calculator-faq-7-question" class="faq-question">Why does a higher tax bracket raise the equivalent yield?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="reit-tax-equivalent-distribution-calculator-faq-7-answer" class="faq-answer"><p>A higher bracket makes fully taxable interest lose more to tax, so a bond has to pay more to match the same REIT cash. The REIT&#x27;s return of capital and capital gain pieces are less exposed to that bracket.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="reit-tax-equivalent-distribution-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="reit-tax-equivalent-distribution-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="reit-tax-equivalent-distribution-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="reit-tax-equivalent-distribution-calculator-ad-bottom-leaderboard">
+            <ins id="reit-tax-equivalent-distribution-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("reit-tax-equivalent-distribution-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="reit-tax-equivalent-distribution-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="reit-tax-equivalent-distribution-calculator-right-rail-top" class="mb-6">
+        <aside id="reit-tax-equivalent-distribution-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="reit-tax-equivalent-distribution-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="reit-tax-equivalent-distribution-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="reit-tax-equivalent-distribution-calculator-ad-right-rail-rectangle">
+            <ins id="reit-tax-equivalent-distribution-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("reit-tax-equivalent-distribution-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="reit-tax-equivalent-distribution-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="reit-tax-equivalent-distribution-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="reit-tax-equivalent-distribution-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="reit-tax-equivalent-distribution-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="reit-tax-equivalent-distribution-calculator-ad-right-rail-skyscraper">
+            <ins id="reit-tax-equivalent-distribution-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("reit-tax-equivalent-distribution-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="reit-tax-equivalent-distribution-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="reit-tax-equivalent-distribution-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="reit-tax-equivalent-distribution-calculator-footer-brand">
+        <a id="reit-tax-equivalent-distribution-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="reit-tax-equivalent-distribution-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="reit-tax-equivalent-distribution-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="reit-tax-equivalent-distribution-calculator-footer-categories" aria-labelledby="reit-tax-equivalent-distribution-calculator-footer-categories-heading">
+        <h2 id="reit-tax-equivalent-distribution-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="reit-tax-equivalent-distribution-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="reit-tax-equivalent-distribution-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="reit-tax-equivalent-distribution-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="reit-tax-equivalent-distribution-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="reit-tax-equivalent-distribution-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="reit-tax-equivalent-distribution-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="reit-tax-equivalent-distribution-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="reit-tax-equivalent-distribution-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="reit-tax-equivalent-distribution-calculator-footer-company" aria-labelledby="reit-tax-equivalent-distribution-calculator-footer-company-heading">
+        <h2 id="reit-tax-equivalent-distribution-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="reit-tax-equivalent-distribution-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="reit-tax-equivalent-distribution-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="reit-tax-equivalent-distribution-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="reit-tax-equivalent-distribution-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="reit-tax-equivalent-distribution-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="reit-tax-equivalent-distribution-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="reit-tax-equivalent-distribution-calculator-footer-bottom" class="border-t border-line">
+      <p id="reit-tax-equivalent-distribution-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="reit-tax-equivalent-distribution-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // After-tax value of a REIT distribution, split into its three tax parts (Form 1099-DIV):
+  //   Ordinary REIT dividends (box 5, "section 199A dividends"): taxed at your ordinary bracket, but
+  //     20% of them is deductible (IRC 199A(b)(1)(B)), so the federal rate on them is
+  //     bracket x (1 - 0.20) - e.g. 37% -> 29.6%, 24% -> 19.2%. The REIT part of the deduction has
+  //     no wage or income-threshold limits; it is capped at 20% of (taxable income - net capital
+  //     gain), which the calculator applies.
+  //   Capital gain distributions (box 2a): 0/15/20% by taxable income.
+  //   Return of capital (box 3, nondividend): not taxed now; it lowers your cost basis, so it is
+  //     taxed later as a capital gain when you sell.
+  //   Optional 3.8% net investment income tax on the ordinary and capital gain parts (the 199A
+  //     deduction does not reduce it) and a flat state rate (most states do not allow the 199A
+  //     deduction, so the state rate applies to the full taxable part).
+  // Results use marginal rates at the taxable income you enter.
+  //   After-tax yield = y x (1 - weighted tax rate)
+  //   Tax-equivalent yield (fully taxable interest such as a bond or CD) = after-tax yield /
+  //     (1 - (bracket + state + NIIT))
+  //   Equivalent qualified-dividend yield = after-tax yield / (1 - (0/15/20% + state + NIIT))
+  // Verified (Node scratch test, tests/rt.test.js, against hand calculations):
+  //   Single, $100,000 taxable income (22% bracket, 15% gain rate), 6% yield, 100% ordinary, no state:
+  //     federal rate 17.6%, after-tax 4.944%, tax-equivalent 4.944 / 0.78 = 6.338%,
+  //     qualified-dividend equivalent 4.944 / 0.85 = 5.816%.
+  //   Joint, $900,000 (37%), 70% ordinary / 10% gain / 20% return of capital, 5% state, NIIT:
+  //     weighted rate 0.7 x (0.296 + 0.05 + 0.038) + 0.1 x (0.20 + 0.05 + 0.038) = 29.76%.
+  //   Taxable income $20,000 with $40,000 of REIT ordinary dividends: deduction capped at
+  //     20% x 20,000 = $4,000 (not $8,000), so only 10% of the dividends is deducted.
+  //
+  // ---- 2026 FEDERAL CONSTANTS (tax year 2026) -------------------------------------------
+  // Brackets and capital gains breakpoints: IRS Rev. Proc. 2025-32 sections 4.01 and 4.03 (as
+  //   amended by P.L. 119-21); same constants as tax-equivalent-yield-calculator and tax-harvesting.
+  // Section 199A 20% deduction for qualified REIT dividends: IRC 199A(b)(1)(B); P.L. 119-21
+  //   sec. 70105 rewrote 199A(i), which had ended the deduction after 2025, so it is permanent.
+  // NIIT: IRC 1411, 3.8%, thresholds not indexed.
+  var TAX_YEAR = 2026;
+  var BRACKETS = { // upper limit of each band; rates 10, 12, 22, 24, 32, 35, 37%
+    single: [12400, 50400, 105700, 201775, 256225, 640600],
+    mfj:    [24800, 100800, 211400, 403550, 512450, 768700],
+    mfs:    [12400, 50400, 105700, 201775, 256225, 384350],
+    hoh:    [17700, 67450, 105700, 201750, 256200, 640600]
+  };
+  var RATES = [0.10, 0.12, 0.22, 0.24, 0.32, 0.35, 0.37];
+  var CG_BREAKS = { single: [49450, 545500], mfj: [98900, 613700], hoh: [66200, 579600], mfs: [49450, 306850] };
+  var REIT_DEDUCTION = 0.20, NIIT_RATE = 0.038;
+  // ---------------------------------------------------------------------------------------
+
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  var money0 = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+
+  function marginalRate(income, s) {
+    var limits = BRACKETS[s];
+    for (var i = 0; i < limits.length; i++) if (income <= limits[i]) return RATES[i];
+    return RATES[RATES.length - 1];
+  }
+  function gainRate(income, s) {
+    var b = CG_BREAKS[s];
+    return income <= b[0] ? 0 : income <= b[1] ? 0.15 : 0.20;
+  }
+  function pct(x, d) { return (x * 100).toFixed(d === undefined ? 2 : d) + '%'; }
+
+  // o: { status, income, yield, ordShare, cgShare, state, niit, amount }
+  function analyse(o, bracketOverride) {
+    var fed = bracketOverride !== undefined ? bracketOverride : marginalRate(o.income, o.status);
+    var cg = gainRate(o.income, o.status);
+    var niit = o.niit ? NIIT_RATE : 0;
+    var rocShare = Math.max(0, 1 - o.ordShare - o.cgShare);
+    var dist = o.amount * o.yield;
+    var ordinary = dist * o.ordShare, gains = dist * o.cgShare;
+    var maxDed = REIT_DEDUCTION * Math.max(0, o.income - gains);
+    var deduction = Math.min(REIT_DEDUCTION * ordinary, maxDed);
+    var dedShare = ordinary > 0 ? deduction / ordinary : REIT_DEDUCTION;
+    var ordRate = fed * (1 - dedShare);
+    var ordTotal = ordRate + o.state + niit, cgTotal = cg + o.state + niit;
+    var weighted = o.ordShare * ordTotal + o.cgShare * cgTotal;
+    var after = o.yield * (1 - weighted);
+    var fullRate = fed + o.state + niit, qualRate = cg + o.state + niit;
+    return {
+      fed: fed, cg: cg, ordRate: ordRate, rocShare: rocShare, dist: dist, deduction: deduction,
+      capped: deduction < REIT_DEDUCTION * ordinary - 0.005, weighted: weighted, after: after,
+      tey: fullRate < 1 ? after / (1 - fullRate) : NaN, qey: qualRate < 1 ? after / (1 - qualRate) : NaN,
+      tax: dist * weighted, ordinaryTotal: ordTotal
+    };
+  }
+
+  function num(id) {
+    var v = parseFloat(document.getElementById(id).value);
+    return isNaN(v) ? NaN : v;
+  }
+  function set(id, text) { document.getElementById(id).textContent = text; }
+  function clearRows(id) {
+    var body = document.getElementById(id);
+    while (body.firstChild) body.removeChild(body.firstChild);
+    return body;
+  }
+
+  function update() {
+    var o = {
+      status: document.getElementById('rtStatus').value, income: num('rtIncome'), yield: num('rtYield') / 100,
+      ordShare: num('rtOrdinary') / 100, cgShare: num('rtGains') / 100, state: num('rtState') / 100,
+      niit: document.getElementById('rtNiit').checked, amount: num('rtAmount')
+    };
+    var error = document.getElementById('rtError');
+    var msg = '';
+    if ([o.income, o.yield, o.ordShare, o.cgShare, o.state, o.amount].some(isNaN)) msg = 'Fill in every field with a number.';
+    else if (o.income < 0 || o.amount < 0) msg = 'Amounts cannot be negative.';
+    else if (o.yield < 0 || o.yield > 0.3) msg = 'Enter a distribution yield from 0 to 30%.';
+    else if (o.ordShare < 0 || o.cgShare < 0 || o.ordShare + o.cgShare > 1.00001) msg = 'The ordinary and capital gain shares must be 0% or more and add up to no more than 100%.';
+    else if (o.state < 0 || o.state > 0.2) msg = 'Enter a state rate from 0 to 20%.';
+    error.hidden = !msg;
+    error.textContent = msg;
+    var ids = ['rtAfter', 'rtTey', 'rtQey', 'rtWeighted', 'rtOrdRate', 'rtRoc', 'rtDist', 'rtTax', 'rtNet', 'rtBracket'];
+    if (msg) {
+      ids.forEach(function (id) { set(id, '–'); });
+      document.getElementById('rtNote').hidden = true;
+      clearRows('rtTable');
+      return;
+    }
+    var a = analyse(o);
+    set('rtAfter', pct(a.after, 3));
+    set('rtTey', isNaN(a.tey) ? '–' : pct(a.tey, 3));
+    set('rtQey', isNaN(a.qey) ? '–' : pct(a.qey, 3));
+    set('rtWeighted', pct(a.weighted));
+    set('rtOrdRate', pct(a.ordRate, 1) + ' (bracket ' + pct(a.fed, 0) + ')');
+    set('rtRoc', pct(a.rocShare, 0));
+    set('rtDist', money.format(a.dist));
+    set('rtTax', money.format(a.tax));
+    set('rtNet', money.format(a.dist - a.tax));
+    set('rtBracket', pct(a.fed, 0) + ' ordinary, ' + pct(a.cg, 0) + ' capital gains');
+    var note = document.getElementById('rtNote');
+    note.hidden = false;
+    if (a.capped) note.textContent = 'Your REIT dividends are large next to your taxable income, so the 20% deduction is capped at 20% of taxable income (' + money0.format(a.deduction) + ').';
+    else if (a.rocShare > 0) note.textContent = 'The ' + pct(a.rocShare, 0) + ' return of capital is not taxed now, but it lowers your cost basis, so it adds to your capital gain when you sell.';
+    else note.textContent = 'The 20% deduction lowers the federal rate on ordinary REIT dividends from ' + pct(a.fed, 0) + ' to ' + pct(a.ordRate, 1) + '.';
+
+    var body = clearRows('rtTable');
+    var limits = BRACKETS[o.status], lower = 0;
+    RATES.forEach(function (rate, i) {
+      var upper = i < limits.length ? limits[i] : Infinity;
+      var r = analyse(o, rate);
+      var range = upper === Infinity ? 'Over ' + money0.format(lower) : money0.format(lower === 0 ? 0 : lower + 1) + ' – ' + money0.format(upper);
+      var tr = document.createElement('tr');
+      [pct(rate, 0), range, pct(r.ordRate, 1), pct(r.after, 3), isNaN(r.tey) ? '–' : pct(r.tey, 3)].forEach(function (t, k) {
+        var td = document.createElement(k === 0 ? 'th' : 'td');
+        if (k === 0) td.setAttribute('scope', 'row');
+        td.textContent = t;
+        tr.appendChild(td);
+      });
+      body.appendChild(tr);
+      lower = upper;
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('rtForm');
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

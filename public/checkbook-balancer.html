@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="en" id="checkbook-balancer-document" data-page-slug="checkbook-balancer">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkbook Balancer: Free Checkbook Balance Calculator</title>
+  <meta name="description" content="Reconcile your check register with your bank statement in seconds. Enter the statement balance, outstanding checks and deposits to see if your account matches.">
+  <link rel="canonical" href="https://company-marketcap.github.io/checkbook-balancer.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Checkbook Balancer: Free Checkbook Balance Calculator">
+  <meta property="og:description" content="Reconcile your check register with your bank statement in seconds. Enter the statement balance, outstanding checks and deposits to see if your account matches.">
+  <meta property="og:url" content="https://company-marketcap.github.io/checkbook-balancer.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Checkbook Balancer", "url": "https://company-marketcap.github.io/checkbook-balancer.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Reconcile your check register with your bank statement in seconds. Enter the statement balance, outstanding checks and deposits to see if your account matches."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Budgeting, Net Worth & Cash Flow", "item": "https://company-marketcap.github.io/financial-calculators.html#budget-calculators"}, {"@type": "ListItem", "position": 4, "name": "Checkbook Balancer", "item": "https://company-marketcap.github.io/checkbook-balancer.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I balance a checkbook?", "acceptedAnswer": {"@type": "Answer", "text": "Take the ending balance from your latest bank statement, subtract outstanding withdrawals that have not cleared, and add outstanding deposits that have not appeared. The result should equal your register balance after you account for any service charges and interest the bank posted."}}, {"@type": "Question", "name": "What are outstanding checks and deposits?", "acceptedAnswer": {"@type": "Answer", "text": "Outstanding checks (or drafts) are payments you recorded that the bank has not processed by the statement date. Outstanding deposits are deposits you recorded that have not yet been credited. Both explain why your register and statement differ."}}, {"@type": "Question", "name": "Why doesn't my checkbook balance match my bank statement?", "acceptedAnswer": {"@type": "Answer", "text": "The usual causes are an unrecorded service charge or interest, a transaction that has not cleared, a transposed digit, a duplicated entry, or an arithmetic slip in the register. Compare the gap with individual transaction amounts to find it."}}, {"@type": "Question", "name": "Do I need to enter service charges and interest?", "acceptedAnswer": {"@type": "Answer", "text": "Only if they appear on the statement but you have not yet written them in your register. Enter them in the service charge and interest fields so the register side is adjusted. If you already recorded them, leave both at zero."}}, {"@type": "Question", "name": "How often should I balance my checkbook?", "acceptedAnswer": {"@type": "Answer", "text": "Once a month, when each statement arrives, is the standard habit. Reconciling regularly helps you avoid overage charges, catch errors and spot fraudulent transactions while they are recent."}}, {"@type": "Question", "name": "Can I balance my checkbook with online banking or an app?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Online banking and smartphone apps show real-time balances and pending items, which makes it easier to list outstanding items. A reconciliation against the statement still confirms the totals are right."}}, {"@type": "Question", "name": "What does the difference result mean?", "acceptedAnswer": {"@type": "Answer", "text": "It is the adjusted statement balance minus the adjusted checkbook balance. Zero means your account is reconciled. Any other amount is the figure you still need to find in your register or statement."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="checkbook-balancer-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="checkbook-balancer" data-page-type="calculator">
+  <a id="checkbook-balancer-skip-link" href="#checkbook-balancer-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="checkbook-balancer-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="checkbook-balancer-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="checkbook-balancer-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="checkbook-balancer-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="checkbook-balancer-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="checkbook-balancer-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="checkbook-balancer-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="checkbook-balancer-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="checkbook-balancer-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="checkbook-balancer-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="checkbook-balancer-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="checkbook-balancer-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="checkbook-balancer-header-search-status" aria-controls="checkbook-balancer-header-search-results" data-search-input="header">
+              <p id="checkbook-balancer-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="checkbook-balancer-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="checkbook-balancer-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="checkbook-balancer-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="checkbook-balancer-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="checkbook-balancer-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="checkbook-balancer-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="checkbook-balancer-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="checkbook-balancer-mobile-search-status" aria-controls="checkbook-balancer-mobile-search-results" data-search-input="mobile">
+            <p id="checkbook-balancer-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="checkbook-balancer-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="checkbook-balancer-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="checkbook-balancer-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="checkbook-balancer-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="checkbook-balancer-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="checkbook-balancer-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="checkbook-balancer-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="checkbook-balancer-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="checkbook-balancer-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="checkbook-balancer-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="checkbook-balancer-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="checkbook-balancer-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="checkbook-balancer-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="checkbook-balancer-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="checkbook-balancer-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="checkbook-balancer-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="checkbook-balancer-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="checkbook-balancer-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="checkbook-balancer-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="checkbook-balancer-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="checkbook-balancer-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="checkbook-balancer-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="checkbook-balancer-sidebar-search-status" aria-controls="checkbook-balancer-sidebar-search-results" data-search-input="sidebar">
+              <p id="checkbook-balancer-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="checkbook-balancer-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="checkbook-balancer-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="checkbook-balancer-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="checkbook-balancer-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="checkbook-balancer-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="checkbook-balancer-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="checkbook-balancer-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="checkbook-balancer-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="checkbook-balancer-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="checkbook-balancer-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="checkbook-balancer-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="checkbook-balancer-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="checkbook-balancer-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="checkbook-balancer-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="checkbook-balancer-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="checkbook-balancer-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="checkbook-balancer-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="checkbook-balancer-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="checkbook-balancer-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="checkbook-balancer-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="checkbook-balancer-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="checkbook-balancer-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="checkbook-balancer-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="checkbook-balancer-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="checkbook-balancer-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="checkbook-balancer-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="checkbook-balancer-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators" aria-current="true">Budgeting &amp; Net Worth</a></li><li><a id="checkbook-balancer-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="checkbook-balancer-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="checkbook-balancer-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="checkbook-balancer-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="checkbook-balancer-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="checkbook-balancer-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="checkbook-balancer-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="checkbook-balancer-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="checkbook-balancer" data-calculator-slug="checkbook-balancer" data-sub-category-slug="budget-calculators">
+      <aside id="checkbook-balancer-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="checkbook-balancer-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="checkbook-balancer-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="checkbook-balancer-ad-top-leaderboard">
+            <ins id="checkbook-balancer-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("checkbook-balancer-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="checkbook-balancer-intro-area" class="space-y-4">
+        <nav id="checkbook-balancer-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="checkbook-balancer-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="checkbook-balancer-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="checkbook-balancer-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="checkbook-balancer-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#budget-calculators" itemprop="item"><span itemprop="name">Budgeting, Net Worth &amp; Cash Flow</span></a><meta itemprop="position" content="3"></li>
+            <li id="checkbook-balancer-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Checkbook Balancer</span><meta itemprop="item" content="https://company-marketcap.github.io/checkbook-balancer.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="checkbook-balancer-hero-section" aria-labelledby="checkbook-balancer-hero-heading" data-section="hero">
+          <h1 id="checkbook-balancer-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Checkbook Balancer: Free Checkbook Balance Calculator</h1>
+          <p id="checkbook-balancer-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Use this checkbook balancer to reconcile your checkbook register with your latest bank statement in under a minute. Enter the ending balance from your statement, add any outstanding deposits, subtract any outstanding checks, and the adjusted total should match the balance in your check register. If it does, your finances are in sync with the bank; if it does not, you know exactly where to look. <!-- SILO_START:slot_a -->Try the <a class="silo-link" href="/budget-calculator.html">budget calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="checkbook-balancer-tool" class="space-y-6" data-page-slug="checkbook-balancer" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="cbFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="cbForm" class="space-y-6" novalidate aria-labelledby="cbFormHeading">
+      <h2 id="cbFormHeading" class="panel-heading">Enter your statement and register</h2>
+      <div><label for="cbStatement" class="form-label">Ending balance on your bank statement</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="cbStatement" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" step="0.01" value="2450.00" inputmode="decimal"></div><p class="form-hint">Use a minus sign if the account was overdrawn on the statement date.</p></div>
+      <fieldset class="form-fieldset">
+        <legend class="form-legend">Outstanding checks and withdrawals</legend>
+        <p class="form-hint">Items in your register that the bank had not cleared by the statement date: checks, debit card payments, transfers out. Empty rows are ignored.</p>
+        <div id="cbChecks" class="space-y-3"></div>
+        <button type="button" id="cbAddCheck" class="button-secondary">Add a check or withdrawal</button>
+      </fieldset>
+      <fieldset class="form-fieldset">
+        <legend class="form-legend">Deposits in transit</legend>
+        <p class="form-hint">Deposits in your register that are not on the statement yet.</p>
+        <div id="cbDeposits" class="space-y-3"></div>
+        <button type="button" id="cbAddDeposit" class="button-secondary">Add a deposit</button>
+      </fieldset>
+      <div><label for="cbRegister" class="form-label">Balance in your checkbook register</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="cbRegister" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" step="0.01" value="2567.60" inputmode="decimal"></div><p class="form-hint">Your own running balance (paper register, spreadsheet or app) as of today.</p></div>
+      <div class="form-row form-row-2">
+        <div><label for="cbFees" class="form-label">Bank fees not yet in your register</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="cbFees" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="0.01" value="5.00" inputmode="decimal"></div></div>
+        <div><label for="cbInterest" class="form-label">Interest not yet in your register</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="cbInterest" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="0.01" value="0" inputmode="decimal"></div></div>
+      </div>
+      <p class="form-hint">Fees, interest and automatic payments that appear on the statement but you haven’t recorded yet. Record them in your register too.</p>
+      <p id="cbError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="cbResults" aria-live="polite" aria-labelledby="cbResultsHeading">
+      <h2 id="cbResultsHeading" class="panel-heading">Reconciliation</h2>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p class="stat-label">Difference</p><p id="cbDiff" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Adjusted bank balance</p><p id="cbAdjBank" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Adjusted register balance</p><p id="cbAdjReg" class="stat-value">–</p></div>
+      </div>
+      <p id="cbStatus" class="callout mt-5 text-[15px]" hidden></p>
+      <ul id="cbClues" class="mt-3 list-disc space-y-1 pl-5 text-sm text-ink-muted" hidden></ul>
+      <h3 class="mt-6 font-display text-base font-bold">Bank side</h3>
+      <div class="mt-2">
+        <div class="result-row"><span class="result-term">Statement ending balance</span><span id="cbOutStatement" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Plus deposits in transit</span><span id="cbOutDeposits" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Minus outstanding checks</span><span id="cbOutChecks" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term font-semibold text-ink">Adjusted bank balance</span><span id="cbOutAdjBank" class="result-value">–</span></div>
+      </div>
+      <h3 class="mt-6 font-display text-base font-bold">Register side</h3>
+      <div class="mt-2">
+        <div class="result-row"><span class="result-term">Register balance</span><span id="cbOutRegister" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Minus unrecorded fees</span><span id="cbOutFees" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Plus unrecorded interest</span><span id="cbOutInterest" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term font-semibold text-ink">Adjusted register balance</span><span id="cbOutAdjReg" class="result-value">–</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+        <p id="checkbook-balancer-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="checkbook-balancer-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Use this checkbook balancer to reconcile your checkbook register with your latest bank statement in under a minute. Enter the ending balance from your statement, add any outstanding deposits, subtract any outstanding checks, and the adjusted total should match the balance in your check register. If it does, your finances are in sync with the bank; if it does not, you know exactly where to look. <!-- SILO_START:slot_a_m -->Try the <a class="silo-link" href="/budget-calculator.html">budget calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="checkbook-balancer-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="checkbook-balancer-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="checkbook-balancer-ad-in-feed-frame" class="ad-slot-live" data-ad-container="checkbook-balancer-ad-in-feed">
+            <ins id="checkbook-balancer-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("checkbook-balancer-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="checkbook-balancer-guide" class="space-y-6" data-section="guide">
+        <section id="checkbook-balancer-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="checkbook-balancer-guide-heading-1">
+<h2 id="checkbook-balancer-guide-heading-1">How a Checkbook Balancer Works</h2>
+<p>A <strong>balance calculator</strong> for your checking account does one simple job: it lines up what the bank knows with what you know. The bank records only show transactions that have already <em>cleared</em>. Your own register also holds the payments and deposits you have made but the bank has not processed yet. The calculator starts from the statement balance, applies those pending items, and tells you what the checkbook balance should be today. <!-- SILO_START:slot_b -->Next, open the <a class="silo-link" href="/vice-savings-calculator.html">vice savings calculator</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_b --></p>
+<p>That is why a checkbook balancing calculator needs only a handful of inputs. You supply the numbers from the statement and the items that are <strong>not cleared</strong>, and the math is done for you. No spreadsheet is needed, and there is no paper ledger to rework when you spot a slip.</p>
+<ul>
+<li><strong>Statement balance:</strong> the ending balance printed on your most recent periodic statement.</li>
+<li><strong>Outstanding drafts:</strong> withdrawals you recorded that the statement does not show yet, such as checks, ATM transactions and point of sale purchases.</li>
+<li><strong>Outstanding deposits:</strong> deposits you recorded that have not appeared on the statement.</li>
+<li><strong>Service charges and interest:</strong> bank service charges or interest the bank added that you have not yet entered in your register.</li>
+</ul>
+        </section>
+        <section id="checkbook-balancer-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="checkbook-balancer-guide-heading-2">
+<h2 id="checkbook-balancer-guide-heading-2">How to Balance a Checkbook Step by Step</h2>
+<p>Balancing your checkbook is simply a comparison of two sets of records. Work through the steps below once a month and the process stays quick. <!-- SILO_START:slot_c -->Next, open the <a class="silo-link" href="/clergy-housing-allowance-worksheet.html">clergy housing allowance worksheet online</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_c --></p>
+<ol>
+<li>Record all transactions in your register as you make them, including automatic deposits and automatic withdrawals that the bank handles for you.</li>
+<li>Get the ending balance from your latest bank statement.</li>
+<li>Compare each line of the statement with your register and place a check mark beside every item that appears on both. Those checkmarks tell you what has cleared.</li>
+<li>List every unmarked withdrawal as an outstanding draft and every unmarked deposit as an outstanding deposit.</li>
+<li>Enter any service charges or interest that appear on the statement but not in the register.</li>
+<li>Click the calculate balance button and compare the answer with the ending total in your register.</li>
+</ol>
+
+<h3>Why the first pass often goes wrong</h3>
+<p>Most mismatches come from a missing automatic item, a transposed digit, or a payment that was entered twice. Check the interest and fees first, because the bank applies those without asking you.</p>
+        </section>
+        <section id="checkbook-balancer-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="checkbook-balancer-guide-heading-3">
+<h2 id="checkbook-balancer-guide-heading-3">Checkbook Balance Calculator Formula and Inputs</h2>
+<p>The calculation behind any checkbook balance calculator is a short chain of addition and subtraction. Start with the statement balance, remove what you have spent that the bank has not seen, and add what you have deposited that the bank has not posted:</p>
+$$\text{Adjusted balance} = \text{Statement balance} - \text{Outstanding drafts} + \text{Outstanding deposits}$$
+<p>Your register side needs its own adjustment for items only the bank knows about:</p>
+$$\text{Register balance} = \text{Checkbook balance} - \text{Service charges} + \text{Interest}$$
+<p>When the two results are equal, you have reconciled the account. The difference between them is the amount you still need to find.</p>
+
+<h3>Reading the ending balance and statement balance</h3>
+<p>The <strong>ending balance</strong> on your statement is the amount the bank holds as of the statement date, so it already includes every cleared item. Your register will usually be higher or lower than this number until you adjust for pending transactions. Math errors in the register are the second most common cause of a gap, so recheck your running total if the figures still disagree.</p>
+        </section>
+        <section id="checkbook-balancer-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="checkbook-balancer-guide-heading-4">
+<h2 id="checkbook-balancer-guide-heading-4">Checkbook Balancing Calculator Example with Real Numbers</h2>
+<p>Suppose your bank statement closes with a <strong>statement balance of $3,418.62</strong>, while your checkbook register shows <strong>$3,002.22</strong>. After ticking off the cleared items, four withdrawals and one deposit remain unmarked, and the statement lists a $12.00 service charge and $1.87 in interest that your register does not yet include.</p>
+<table>
+<thead><tr><th>Item</th><th>Type</th><th>Amount</th></tr></thead>
+<tbody>
+<tr><td>Check 2217</td><td>Outstanding draft</td><td>$412.30</td></tr>
+<tr><td>ATM withdrawal</td><td>Outstanding draft</td><td>$58.75</td></tr>
+<tr><td>Grocery card purchase</td><td>Outstanding draft</td><td>$134.08</td></tr>
+<tr><td>Check 2220</td><td>Outstanding draft</td><td>$96.40</td></tr>
+<tr><td>Payroll deposit</td><td>Outstanding deposit</td><td>$275.00</td></tr>
+</tbody>
+</table>
+<p>The outstanding drafts total <strong>$701.53</strong>. Applying the formula gives $3,418.62 &minus; $701.53 + $275.00 = <strong>$2,992.09</strong>. On the register side, $3,002.22 &minus; $12.00 + $1.87 = <strong>$2,992.09</strong>. Both sides agree, so the account reconciles to the cent.</p>
+        </section>
+        <section id="checkbook-balancer-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="checkbook-balancer-guide-heading-5">
+<h2 id="checkbook-balancer-guide-heading-5">Checkbook Balance Calculator Walkthrough: Tracking Down a $12.00 Gap</h2>
+<p>It is the first Saturday of the month, and Marcus has a bank statement open next to a register he last updated on the 28th. The statement's ending balance reads <strong>$1,846.37</strong>. His register says <strong>$2,020.13</strong>. Before assuming anything is wrong, he ticks off every cleared line and finds three items with no match: check 3306 for $148.25, check 3309 for $39.99, and a $60.00 ATM withdrawal. One deposit is also unmatched, a $410.00 freelance payment he mobile-deposited on the 30th.</p>
+<p>He enters the figures in the checkbook balance calculator: statement balance 1,846.37, outstanding drafts 248.24, outstanding deposits 410.00. The result is <strong>$2,008.13</strong>. His register is $12.00 higher, so the two records disagree.</p>
+<table>
+<thead><tr><th>Line</th><th>Amount</th></tr></thead>
+<tbody>
+<tr><td>Statement balance</td><td>$1,846.37</td></tr>
+<tr><td>Less outstanding drafts (3306, 3309, ATM)</td><td>&minus;$248.24</td></tr>
+<tr><td>Plus outstanding deposit</td><td>+$410.00</td></tr>
+<tr><td>Calculator result</td><td>$2,008.13</td></tr>
+<tr><td>Register balance</td><td>$2,020.13</td></tr>
+</tbody>
+</table>
+<p>A gap of exactly $12.00 is too round to be a typing slip, and no outstanding item matches it. Marcus scans the bottom of the statement and finds the answer: a $12.00 monthly maintenance fee posted on the 15th, which he never logged. He types 12.00 into the service charges field, recalculates, and the register side drops to $2,008.13, identical to the statement side.</p>
+<p>That match settles two decisions. He writes the fee into his register so next month starts clean, and he holds the $410.00 deposit as outstanding until it appears on the next statement, rather than assuming the account is short. The whole check took about four minutes.</p>
+        </section>
+        <section id="checkbook-balancer-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="checkbook-balancer-guide-heading-6">
+<h2 id="checkbook-balancer-guide-heading-6">Why You Should Balance Your Checkbook Every Month with a Calculator</h2>
+<p>Running your figures through the checkbook balance calculator each month, so you reconcile monthly, catches problems while they are still small. The same habit protects your money in several ways:</p>
+<ul>
+<li>It helps you avoid overage charges and a chargeback, which happen when a payment lands after the account has run short.</li>
+<li>It exposes fraudulent transactions early, while the bank still treats them as new.</li>
+<li>It shows you how much you can spend, so you do not overspend on money that is already committed.</li>
+<li>It keeps your budgets honest, because they rest on a balance you have verified rather than guessed.</li>
+</ul>
+<p>Entering your statement balance and outstanding items takes about a minute and confirms that your register is accurate. That check is the base of good money management and a clear financial picture, and it tells you whether a retirement contribution or a credit cards payment can leave the account safely.</p>
+        </section>
+        <section id="checkbook-balancer-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="checkbook-balancer-guide-heading-7">
+<h2 id="checkbook-balancer-guide-heading-7">When the Balance Calculator Result Does Not Match</h2>
+<p>A gap does not mean something is broken. It means one record contains a mistake or a missing entry. Work through these checks in order:</p>
+<ol>
+<li>Confirm the difference. If it equals a single transaction amount, that item is probably missing or duplicated.</li>
+<li>If the difference is exactly twice an amount, you may have recorded a deposit as a withdrawal, or the reverse.</li>
+<li>Look for transposed digits, for example $54.30 entered as $53.40, where the gap is divisible by 9.</li>
+<li>Check for automatic withdrawals, fees and interest you have not logged.</li>
+<li>Recheck the addition and subtraction in your register for errors.</li>
+</ol>
+<p>Fix each error in the register, not on the bank side, then re-enter the figures in the balance calculator. When the adjusted statement balance equals the register balance, the account is reconciled. The bank statement is the outside record, so the slip is rarely there. Common mistakes include forgetting a debit card swipe or copying a check amount incorrectly into the check register, and one early error repeats on every later line, so find the first wrong entry rather than adjusting the final figure.</p>
+        </section>
+        <section id="checkbook-balancer-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="checkbook-balancer-guide-heading-8">
+<h2 id="checkbook-balancer-guide-heading-8">Balance My Checkbook Online: Apps and Tracking Your Money</h2>
+<p>Many people now balance my checkbook questions by opening an app instead of a paper ledger, and the principle stays the same. Online banking gives you real-time access to your available balance, so you can see problems before the monthly statement arrives, and the pending list shows which drafts and deposits to enter in the checkbook balancing calculator. Smartphone apps also let you transfer funds, make a remote deposit and track spending, but only a reconciliation against the statement proves the totals are right.</p>
+<p>You can digitally balance your checkbook this way, but the calculator above is still useful as a check on the totals your tools display. Think of it as tracking your money rather than a chore tied to paper: the habit is the point, whether the register is a notebook, a spreadsheet or an app. Pair it with regular payments and bank alerts, and your accounts stay accurate with very little effort.</p>
+        </section>
+        <section id="checkbook-balancer-guide-section-9" class="panel article-content p-4 sm:p-6" aria-labelledby="checkbook-balancer-guide-heading-9">
+<h2 id="checkbook-balancer-guide-heading-9">Balance Calculator Terms Explained</h2>
+<dl>
+<dt>Cleared</dt><dd>A transaction the bank has processed and listed on your statement.</dd>
+<dt>Outstanding</dt><dd>A transaction in your register that the bank has not processed yet.</dd>
+<dt>Reconcile</dt><dd>To compare your register with the bank records until the two agree.</dd>
+</dl>
+        </section>
+      </div>
+
+      <section id="checkbook-balancer-faq-section" class="panel p-4 sm:p-6" aria-labelledby="checkbook-balancer-faq-heading" data-section="faq">
+        <h2 id="checkbook-balancer-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Checkbook Balancer questions</h2>
+        <div id="checkbook-balancer-faq-list" class="mt-5 space-y-3">
+          <details id="checkbook-balancer-faq-1" class="faq-item" open><summary id="checkbook-balancer-faq-1-summary" class="faq-summary"><h3 id="checkbook-balancer-faq-1-question" class="faq-question">How do I balance a checkbook?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="checkbook-balancer-faq-1-answer" class="faq-answer"><p>Take the ending balance from your latest bank statement, subtract outstanding withdrawals that have not cleared, and add outstanding deposits that have not appeared. The result should equal your register balance after you account for any service charges and interest the bank posted.</p></div></details>
+          <details id="checkbook-balancer-faq-2" class="faq-item" open><summary id="checkbook-balancer-faq-2-summary" class="faq-summary"><h3 id="checkbook-balancer-faq-2-question" class="faq-question">What are outstanding checks and deposits?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="checkbook-balancer-faq-2-answer" class="faq-answer"><p>Outstanding checks (or drafts) are payments you recorded that the bank has not processed by the statement date. Outstanding deposits are deposits you recorded that have not yet been credited. Both explain why your register and statement differ.</p></div></details>
+          <details id="checkbook-balancer-faq-3" class="faq-item" open><summary id="checkbook-balancer-faq-3-summary" class="faq-summary"><h3 id="checkbook-balancer-faq-3-question" class="faq-question">Why doesn&#x27;t my checkbook balance match my bank statement?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="checkbook-balancer-faq-3-answer" class="faq-answer"><p>The usual causes are an unrecorded service charge or interest, a transaction that has not cleared, a transposed digit, a duplicated entry, or an arithmetic slip in the register. Compare the gap with individual transaction amounts to find it.</p></div></details>
+          <details id="checkbook-balancer-faq-4" class="faq-item" open><summary id="checkbook-balancer-faq-4-summary" class="faq-summary"><h3 id="checkbook-balancer-faq-4-question" class="faq-question">Do I need to enter service charges and interest?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="checkbook-balancer-faq-4-answer" class="faq-answer"><p>Only if they appear on the statement but you have not yet written them in your register. Enter them in the service charge and interest fields so the register side is adjusted. If you already recorded them, leave both at zero.</p></div></details>
+          <details id="checkbook-balancer-faq-5" class="faq-item" open><summary id="checkbook-balancer-faq-5-summary" class="faq-summary"><h3 id="checkbook-balancer-faq-5-question" class="faq-question">How often should I balance my checkbook?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="checkbook-balancer-faq-5-answer" class="faq-answer"><p>Once a month, when each statement arrives, is the standard habit. Reconciling regularly helps you avoid overage charges, catch errors and spot fraudulent transactions while they are recent.</p></div></details>
+          <details id="checkbook-balancer-faq-6" class="faq-item" open><summary id="checkbook-balancer-faq-6-summary" class="faq-summary"><h3 id="checkbook-balancer-faq-6-question" class="faq-question">Can I balance my checkbook with online banking or an app?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="checkbook-balancer-faq-6-answer" class="faq-answer"><p>Yes. Online banking and smartphone apps show real-time balances and pending items, which makes it easier to list outstanding items. A reconciliation against the statement still confirms the totals are right.</p></div></details>
+          <details id="checkbook-balancer-faq-7" class="faq-item" open><summary id="checkbook-balancer-faq-7-summary" class="faq-summary"><h3 id="checkbook-balancer-faq-7-question" class="faq-question">What does the difference result mean?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="checkbook-balancer-faq-7-answer" class="faq-answer"><p>It is the adjusted statement balance minus the adjusted checkbook balance. Zero means your account is reconciled. Any other amount is the figure you still need to find in your register or statement.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="checkbook-balancer-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="checkbook-balancer-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="checkbook-balancer-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="checkbook-balancer-ad-bottom-leaderboard">
+            <ins id="checkbook-balancer-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("checkbook-balancer-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="checkbook-balancer-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="checkbook-balancer-right-rail-top" class="mb-6">
+        <aside id="checkbook-balancer-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="checkbook-balancer-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="checkbook-balancer-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="checkbook-balancer-ad-right-rail-rectangle">
+            <ins id="checkbook-balancer-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("checkbook-balancer-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="checkbook-balancer-right-rail-sticky" class="sticky top-21">
+        <aside id="checkbook-balancer-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="checkbook-balancer-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="checkbook-balancer-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="checkbook-balancer-ad-right-rail-skyscraper">
+            <ins id="checkbook-balancer-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("checkbook-balancer-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="checkbook-balancer-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="checkbook-balancer-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="checkbook-balancer-footer-brand">
+        <a id="checkbook-balancer-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="checkbook-balancer-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="checkbook-balancer-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="checkbook-balancer-footer-categories" aria-labelledby="checkbook-balancer-footer-categories-heading">
+        <h2 id="checkbook-balancer-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="checkbook-balancer-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="checkbook-balancer-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="checkbook-balancer-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="checkbook-balancer-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="checkbook-balancer-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="checkbook-balancer-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="checkbook-balancer-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="checkbook-balancer-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="checkbook-balancer-footer-company" aria-labelledby="checkbook-balancer-footer-company-heading">
+        <h2 id="checkbook-balancer-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="checkbook-balancer-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="checkbook-balancer-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="checkbook-balancer-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="checkbook-balancer-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="checkbook-balancer-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="checkbook-balancer-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="checkbook-balancer-footer-bottom" class="border-t border-line">
+      <p id="checkbook-balancer-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="checkbook-balancer-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Bank reconciliation, worked in whole cents so sums never drift:
+  //   adjusted bank balance     = statement ending balance + deposits in transit - outstanding checks
+  //   adjusted register balance = register balance - unrecorded fees + unrecorded interest
+  //   difference                = adjusted bank - adjusted register (0 means balanced)
+  // Checked under Node (scratchpad/tests/b7basic/cb_test.js): the default example (2,450.00 + 300.00 -
+  // 125.00 - 62.40 = 2,562.60; register 2,567.60 - 5.00 fee = 2,562.60) balances to 0.00; amounts like
+  // 0.10 + 0.20 reconcile exactly; a 54.20 / 45.20 transposition gives a 9.00 difference (flagged as
+  // divisible by 9), and an item entered with the wrong sign gives twice the item (flagged).
+  // Item rows are built with DOM methods; user text only ever lives in input values.
+  // ---- Reconciliation maths, all in whole cents to avoid floating-point drift ----
+  function cents(v) { return Math.round(v * 100); }
+
+  // statement, register, fees, interest: cents. checks, deposits: arrays of cents.
+  function reconcile(statement, checks, deposits, register, fees, interest) {
+    var sum = function (a) { return a.reduce(function (s, x) { return s + x; }, 0); };
+    var out = sum(checks), dep = sum(deposits);
+    var adjBank = statement + dep - out;
+    var adjReg = register - fees + interest;
+    return { checks: out, deposits: dep, adjBank: adjBank, adjReg: adjReg, diff: adjBank - adjReg };
+  }
+
+  // Common causes of a difference, given the difference and every item amount (all cents).
+  function clues(diff, items) {
+    var d = Math.abs(diff), list = [];
+    if (d === 0) return list;
+    if (items.indexOf(d) !== -1) list.push('The difference equals one of your items. Check whether it was left out of the register, recorded twice, or has already cleared the bank.');
+    if (d % 2 === 0 && items.indexOf(d / 2) !== -1) list.push('The difference is exactly twice one of your items. An entry may have been added instead of subtracted (or the reverse).');
+    if (d % 9 === 0) list.push('The difference divides evenly by 9, a typical sign of two digits swapped when writing an amount (for example 54.20 entered as 45.20).');
+    if (d % 100 === 0 || d < 100) list.push('A round-dollar or cents-only difference often comes from a simple addition or subtraction slip in the register.');
+    list.push('Compare each cleared item on the statement with your register, and look for fees, interest or automatic payments you haven’t recorded.');
+    return list;
+  }
+
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  var counters = { chk: 0, dep: 0 };
+
+  function fromCents(c) { return money.format(c / 100); }
+  function set(id, text) { document.getElementById(id).textContent = text; }
+  function el(tag, className, text) {
+    var e = document.createElement(tag);
+    if (className) e.className = className;
+    if (text) e.textContent = text;
+    return e;
+  }
+
+  // Builds one item row with DOM methods; user text is only ever held in input values.
+  function addRow(kind, desc, amount) {
+    var list = document.getElementById(kind === 'chk' ? 'cbChecks' : 'cbDeposits');
+    counters[kind]++;
+    var n = counters[kind];
+    var noun = kind === 'chk' ? 'Check or withdrawal' : 'Deposit';
+    var row = el('div', 'grid grid-cols-[minmax(0,1fr)_auto] items-center gap-2 sm:grid-cols-[minmax(0,1fr)_minmax(0,9rem)_auto]');
+    row.setAttribute('data-row', kind);
+
+    var d = el('input', 'form-control col-span-2 sm:col-span-1');
+    d.type = 'text'; d.id = 'cb' + (kind === 'chk' ? 'Chk' : 'Dep') + 'Desc' + n; d.maxLength = 40; d.autocomplete = 'off';
+    d.placeholder = kind === 'chk' ? 'Check # or payee' : 'Description';
+    d.setAttribute('aria-label', noun + ' ' + n + ' description (optional)');
+    d.value = desc || '';
+
+    var group = el('div', 'input-group');
+    var a = el('input', 'min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none');
+    a.type = 'number'; a.id = 'cb' + (kind === 'chk' ? 'Chk' : 'Dep') + 'Amt' + n; a.min = '0'; a.step = '0.01'; a.inputMode = 'decimal';
+    a.setAttribute('aria-label', noun + ' ' + n + ' amount');
+    a.setAttribute('data-amount', kind);
+    a.value = amount === undefined || amount === '' ? '' : String(amount);
+    group.appendChild(el('span', 'input-affix', '$'));
+    group.appendChild(a);
+
+    var remove = el('button', 'button-secondary h-11 px-3 text-sm', 'Remove');
+    remove.type = 'button';
+    remove.setAttribute('aria-label', 'Remove ' + noun.toLowerCase() + ' ' + n);
+    remove.addEventListener('click', function () {
+      row.remove();
+      update();
+    });
+
+    row.appendChild(d); row.appendChild(group); row.appendChild(remove);
+    list.appendChild(row);
+    return a;
+  }
+
+  function amounts(kind) {
+    var bad = false, list = [];
+    Array.prototype.forEach.call(document.querySelectorAll('input[data-amount="' + kind + '"]'), function (input) {
+      if (input.value.trim() === '') { if (input.validity && input.validity.badInput) bad = true; return; }
+      var v = parseFloat(input.value);
+      if (isNaN(v) || v < 0) { bad = true; return; }
+      if (v > 0) list.push(cents(v));
+    });
+    return { list: list, bad: bad };
+  }
+
+  function update() {
+    var error = document.getElementById('cbError');
+    var st = parseFloat(document.getElementById('cbStatement').value),
+        reg = parseFloat(document.getElementById('cbRegister').value),
+        fees = parseFloat(document.getElementById('cbFees').value),
+        intr = parseFloat(document.getElementById('cbInterest').value);
+    if (isNaN(fees)) fees = 0;
+    if (isNaN(intr)) intr = 0;
+    var chk = amounts('chk'), dep = amounts('dep');
+    var msg = '';
+    if (isNaN(st) || isNaN(reg)) msg = 'Enter both the statement ending balance and your register balance.';
+    else if (chk.bad || dep.bad || fees < 0 || intr < 0) msg = 'Item amounts, fees and interest must be numbers of 0 or more.';
+    else if (Math.abs(st) > 1e12 || Math.abs(reg) > 1e12) msg = 'Enter balances under one trillion dollars.';
+    error.textContent = msg; error.hidden = !msg;
+    var status = document.getElementById('cbStatus'), cluesList = document.getElementById('cbClues');
+    while (cluesList.firstChild) cluesList.removeChild(cluesList.firstChild);
+    if (msg) {
+      ['cbDiff', 'cbAdjBank', 'cbAdjReg', 'cbOutStatement', 'cbOutDeposits', 'cbOutChecks', 'cbOutAdjBank', 'cbOutRegister', 'cbOutFees', 'cbOutInterest', 'cbOutAdjReg']
+        .forEach(function (id) { set(id, '–'); });
+      status.hidden = true; cluesList.hidden = true;
+      return;
+    }
+    var r = reconcile(cents(st), chk.list, dep.list, cents(reg), cents(fees), cents(intr));
+    set('cbDiff', fromCents(r.diff));
+    set('cbAdjBank', fromCents(r.adjBank));
+    set('cbAdjReg', fromCents(r.adjReg));
+    set('cbOutStatement', fromCents(cents(st)));
+    set('cbOutDeposits', fromCents(r.deposits) + ' (' + dep.list.length + ')');
+    set('cbOutChecks', fromCents(r.checks) + ' (' + chk.list.length + ')');
+    set('cbOutAdjBank', fromCents(r.adjBank));
+    set('cbOutRegister', fromCents(cents(reg)));
+    set('cbOutFees', fromCents(cents(fees)));
+    set('cbOutInterest', fromCents(cents(intr)));
+    set('cbOutAdjReg', fromCents(r.adjReg));
+
+    status.hidden = false;
+    if (r.diff === 0) {
+      status.className = 'callout callout-success mt-5 text-[15px]';
+      status.textContent = 'Your checkbook is balanced. The adjusted bank and register balances match to the cent.';
+      cluesList.hidden = true;
+    } else {
+      status.className = 'callout callout-warning mt-5 text-[15px]';
+      status.textContent = r.diff > 0
+        ? 'Not balanced: the bank shows ' + fromCents(r.diff) + ' more than your register. Something may be missing from your register (a deposit or interest), or a withdrawal may be recorded too high.'
+        : 'Not balanced: your register shows ' + fromCents(-r.diff) + ' more than the bank. A withdrawal, fee or outstanding check may be missing, or a deposit may be recorded too high.';
+      clues(r.diff, chk.list.concat(dep.list)).forEach(function (text) { cluesList.appendChild(el('li', '', text)); });
+      cluesList.hidden = false;
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('cbForm');
+    if (!form) return;
+    addRow('chk', '1043', '125.00');
+    addRow('chk', '1045', '62.40');
+    addRow('chk', '', '');
+    addRow('dep', 'Paycheck', '300.00');
+    addRow('dep', '', '');
+    document.getElementById('cbAddCheck').addEventListener('click', function () { addRow('chk', '', '').focus(); });
+    document.getElementById('cbAddDeposit').addEventListener('click', function () { addRow('dep', '', '').focus(); });
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

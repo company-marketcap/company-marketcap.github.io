@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en" id="loan-comparison-calculator-document" data-page-slug="loan-comparison-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Loan Comparison Calculator: Compare Two Loans Side by Side</title>
+  <meta name="description" content="Use this loan comparison calculator to line up two loans by monthly payment, total interest and break-even period, so you can see which option costs you less.">
+  <link rel="canonical" href="https://company-marketcap.github.io/loan-comparison-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Loan Comparison Calculator: Compare Two Loans Side by Side">
+  <meta property="og:description" content="Use this loan comparison calculator to line up two loans by monthly payment, total interest and break-even period, so you can see which option costs you less.">
+  <meta property="og:url" content="https://company-marketcap.github.io/loan-comparison-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Loan Comparison Calculator", "url": "https://company-marketcap.github.io/loan-comparison-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Use this loan comparison calculator to line up two loans by monthly payment, total interest and break-even period, so you can see which option costs you less."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Personal & General Loans", "item": "https://company-marketcap.github.io/financial-calculators.html#loan-calculators"}, {"@type": "ListItem", "position": 4, "name": "Loan Comparison Calculator", "item": "https://company-marketcap.github.io/loan-comparison-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How does a loan comparison calculator work?", "acceptedAnswer": {"@type": "Answer", "text": "It runs the standard amortization formula on each loan's amount, interest rate and term to get the monthly payment, then multiplies by the number of payments and subtracts the amount borrowed to find the total interest. Points are added to give the lifetime cost."}}, {"@type": "Question", "name": "What is the break-even period?", "acceptedAnswer": {"@type": "Answer", "text": "It is the point at which the extra money you paid up front, such as points, has been earned back through a lower monthly payment. Before that month the cheaper-upfront loan costs less; after it, the lower-rate loan does."}}, {"@type": "Question", "name": "Should I pay points or take lender credits?", "acceptedAnswer": {"@type": "Answer", "text": "Points make sense if you plan to keep the loan well past its break-even period. If you expect to sell or refinance sooner, credits that lower your closing costs usually come out ahead."}}, {"@type": "Question", "name": "Why can the lowest monthly payment cost more overall?", "acceptedAnswer": {"@type": "Answer", "text": "A lower payment often comes from a longer term or a higher rate, and either one adds interest over the life of the loan. Compare total interest and lifetime cost, not just the payment."}}, {"@type": "Question", "name": "Can I compare car loans or student loans too?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Any fixed-rate loan with an amount, rate and term works. Enter each offer in its own column and compare the monthly payment and total interest."}}, {"@type": "Question", "name": "How does my credit score affect the comparison?", "acceptedAnswer": {"@type": "Answer", "text": "A higher score usually earns a lower interest rate. Enter the rate you were actually quoted, or test a rate a half point lower to see what improving your score could save."}}, {"@type": "Question", "name": "Does the calculator include taxes and insurance?", "acceptedAnswer": {"@type": "Answer", "text": "No. It covers principal and interest plus any points you enter. Add property taxes, insurance and mortgage insurance to your budget separately."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="loan-comparison-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="loan-comparison-calculator" data-page-type="calculator">
+  <a id="loan-comparison-calculator-skip-link" href="#loan-comparison-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="loan-comparison-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="loan-comparison-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="loan-comparison-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="loan-comparison-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="loan-comparison-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="loan-comparison-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="loan-comparison-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="loan-comparison-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="loan-comparison-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="loan-comparison-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="loan-comparison-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="loan-comparison-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="loan-comparison-calculator-header-search-status" aria-controls="loan-comparison-calculator-header-search-results" data-search-input="header">
+              <p id="loan-comparison-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="loan-comparison-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="loan-comparison-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="loan-comparison-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="loan-comparison-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="loan-comparison-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="loan-comparison-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="loan-comparison-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="loan-comparison-calculator-mobile-search-status" aria-controls="loan-comparison-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="loan-comparison-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="loan-comparison-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="loan-comparison-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="loan-comparison-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="loan-comparison-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="loan-comparison-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="loan-comparison-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="loan-comparison-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="loan-comparison-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="loan-comparison-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="loan-comparison-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="loan-comparison-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="loan-comparison-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="loan-comparison-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="loan-comparison-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="loan-comparison-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="loan-comparison-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="loan-comparison-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="loan-comparison-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="loan-comparison-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="loan-comparison-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="loan-comparison-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="loan-comparison-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="loan-comparison-calculator-sidebar-search-status" aria-controls="loan-comparison-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="loan-comparison-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="loan-comparison-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="loan-comparison-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="loan-comparison-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="loan-comparison-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="loan-comparison-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="loan-comparison-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="loan-comparison-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="loan-comparison-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="loan-comparison-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="loan-comparison-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="loan-comparison-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators" aria-current="true">Personal Loans</a></li><li><a id="loan-comparison-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="loan-comparison-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="loan-comparison-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="loan-comparison-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="loan-comparison-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="loan-comparison-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="loan-comparison-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="loan-comparison-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="loan-comparison-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="loan-comparison-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="loan-comparison-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="loan-comparison-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="loan-comparison-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="loan-comparison-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="loan-comparison-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="loan-comparison-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="loan-comparison-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="loan-comparison-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="loan-comparison-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="loan-comparison-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="loan-comparison-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="loan-comparison-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="loan-comparison-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="loan-comparison-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="loan-comparison-calculator" data-calculator-slug="loan-comparison-calculator" data-sub-category-slug="loan-calculators">
+      <aside id="loan-comparison-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="loan-comparison-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="loan-comparison-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="loan-comparison-calculator-ad-top-leaderboard">
+            <ins id="loan-comparison-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("loan-comparison-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="loan-comparison-calculator-intro-area" class="space-y-4">
+        <nav id="loan-comparison-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="loan-comparison-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="loan-comparison-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="loan-comparison-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="loan-comparison-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#loan-calculators" itemprop="item"><span itemprop="name">Personal &amp; General Loans</span></a><meta itemprop="position" content="3"></li>
+            <li id="loan-comparison-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Loan Comparison Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/loan-comparison-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="loan-comparison-calculator-hero-section" aria-labelledby="loan-comparison-calculator-hero-heading" data-section="hero">
+          <h1 id="loan-comparison-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Loan Comparison Calculator: Compare Two Loans Side by Side</h1>
+          <p id="loan-comparison-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Choosing between two offers is easier when the numbers sit next to each other, and a loan comparison calculator does exactly that: you enter the loan amount, interest rate and loan term for each offer, and it shows which option costs you less over the time you will really keep the loan. Instead of guessing from a single monthly payment, you see the full picture of fees, interest and the point where one deal overtakes the other. <!-- SILO_START:slot_a -->The <a class="silo-link" href="/payment-calculator.html">payment calculator online</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="loan-comparison-calculator-tool" class="space-y-6" data-page-slug="loan-comparison-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="lqFormHeading" data-section="calculator">
+<form id="lqForm" class="space-y-5" novalidate aria-labelledby="lqFormHeading">
+<h2 id="lqFormHeading" class="panel-heading">Enter up to three loan offers</h2>
+<p class="text-sm text-ink-muted">Upfront fees are origination, application or closing fees you pay out of pocket or that are deducted from the money you receive. All loans are assumed to have fixed rates and monthly payments.</p>
+<div class="grid gap-6 @3xl:grid-cols-3">
+<fieldset id="lqSetA" class="form-fieldset"><legend class="form-legend">Loan A</legend>
+<div><label for="lqAmountA" class="form-label">Loan amount</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="lqAmountA" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="25000" inputmode="decimal"></div></div>
+<div><label for="lqRateA" class="form-label">Interest rate</label><div class="input-group"><input type="number" id="lqRateA" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="0.1" value="7.5" inputmode="decimal"><span class="input-affix">%</span></div></div>
+<div><label for="lqTermA" class="form-label">Term</label><div class="input-group"><input type="number" id="lqTermA" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0.5" max="40" step="0.5" value="3" inputmode="decimal"><span class="input-affix">years</span></div></div>
+<div><label for="lqFeesA" class="form-label">Upfront fees</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="lqFeesA" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="50" value="0" inputmode="decimal"></div></div>
+</fieldset>
+<fieldset id="lqSetB" class="form-fieldset"><legend class="form-legend">Loan B</legend>
+<div><label for="lqAmountB" class="form-label">Loan amount</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="lqAmountB" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="25000" inputmode="decimal"></div></div>
+<div><label for="lqRateB" class="form-label">Interest rate</label><div class="input-group"><input type="number" id="lqRateB" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="0.1" value="6.9" inputmode="decimal"><span class="input-affix">%</span></div></div>
+<div><label for="lqTermB" class="form-label">Term</label><div class="input-group"><input type="number" id="lqTermB" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0.5" max="40" step="0.5" value="5" inputmode="decimal"><span class="input-affix">years</span></div></div>
+<div><label for="lqFeesB" class="form-label">Upfront fees</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="lqFeesB" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="50" value="500" inputmode="decimal"></div></div>
+</fieldset>
+<fieldset id="lqSetC" class="form-fieldset"><legend class="form-legend">Loan C</legend>
+<div><label for="lqAmountC" class="form-label">Loan amount</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="lqAmountC" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="500" value="25000" inputmode="decimal"></div></div>
+<div><label for="lqRateC" class="form-label">Interest rate</label><div class="input-group"><input type="number" id="lqRateC" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="0.1" value="8.9" inputmode="decimal"><span class="input-affix">%</span></div></div>
+<div><label for="lqTermC" class="form-label">Term</label><div class="input-group"><input type="number" id="lqTermC" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0.5" max="40" step="0.5" value="7" inputmode="decimal"><span class="input-affix">years</span></div></div>
+<div><label for="lqFeesC" class="form-label">Upfront fees</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="lqFeesC" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="50" value="0" inputmode="decimal"></div></div>
+</fieldset>
+</div>
+<label class="form-choice"><input type="checkbox" id="lqUseC" class="form-choice-input" checked><span class="form-choice-text">Include loan C in the comparison</span></label>
+<p id="lqError" class="form-error" role="alert" hidden></p>
+</form>
+</section>
+<section class="panel @container p-4 sm:p-6" aria-labelledby="lqResultsHeading" data-section="results">
+<div id="lqResults" aria-live="polite" aria-labelledby="lqResultsHeading">
+<h2 id="lqResultsHeading" class="panel-heading">How the loans compare</h2>
+<div class="stat-grid mt-4">
+<div class="stat-card stat-card-highlight"><p class="stat-label">Lowest total cost</p><p id="lqBestCost" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">Lowest monthly payment</p><p id="lqBestPay" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">Saving vs. the costliest loan</p><p id="lqSaving" class="stat-value">–</p></div>
+</div>
+<p id="lqVerdict" class="mt-4 text-sm text-ink-muted"></p>
+<div class="table-scroll mt-5" tabindex="0" role="region" aria-labelledby="lqResultsHeading">
+<table class="data-table">
+<thead id="lqHead"><tr><th scope="col">Item</th><th scope="col">Loan A</th><th scope="col">Loan B</th><th scope="col">Loan C</th></tr></thead>
+<tbody id="lqTable"></tbody>
+</table>
+</div>
+<p class="form-hint">Total cost of borrowing is total interest plus upfront fees. The APR spreads those fees over the life of the loan so offers with different fees can be compared on one rate.</p>
+</div>
+</section>
+        <p id="loan-comparison-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="loan-comparison-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Choosing between two offers is easier when the numbers sit next to each other, and a loan comparison calculator does exactly that: you enter the loan amount, interest rate and loan term for each offer, and it shows which option costs you less over the time you will really keep the loan. Instead of guessing from a single monthly payment, you see the full picture of fees, interest and the point where one deal overtakes the other. <!-- SILO_START:slot_a_m -->The <a class="silo-link" href="/payment-calculator.html">payment calculator online</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="loan-comparison-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="loan-comparison-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="loan-comparison-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="loan-comparison-calculator-ad-in-feed">
+            <ins id="loan-comparison-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("loan-comparison-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="loan-comparison-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="loan-comparison-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="loan-comparison-calculator-guide-heading-1">
+<h2 id="loan-comparison-calculator-guide-heading-1">Fixed-Rate Loan Comparison Calculator Inputs You Need</h2>
+<p>A <strong>fixed-rate loan comparison calculator</strong> only needs a handful of figures per offer, and every one of them is printed on the quote your lender hands you. Gather them for both loan options before you start so that you are comparing like with like. Here is the short list: <!-- SILO_START:slot_b -->If you want to see how the figures change, the <a class="silo-link" href="/motorcycle-rv-and-boat-loan-calculator.html">motorcycle rv and boat loan calculator</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_b --></p>
+<ul>
+<li><strong>Loan amount:</strong> the sum you plan to borrow after your deposit.</li>
+<li><strong>Interest rate:</strong> the yearly rate charged, shown as a percentage.</li>
+<li><strong>Loan term:</strong> the number of years or months you have to repay.</li>
+<li><strong>Points or credits:</strong> a one-time charge at closing in exchange for a lower rate, or a rebate in exchange for a higher one.</li>
+</ul>
+
+<h3>Loan amount and loan term</h3>
+<p>The loan amount sets the size of every payment, while the loan term decides how many payments you make. A shorter term means a larger monthly payment but far less interest, because the balance shrinks faster. A longer term does the opposite: a gentler payment that fits your plans today, paid for with more interest costs later. When you compare two loan scenarios, change only one of these inputs at a time so you can tell which change moved the result.</p>
+
+<h3>Interest rate and points or credits</h3>
+<p>The interest rate and the <strong>points or credits</strong> are tied together. When you pay <strong>mortgage points</strong>, you hand over extra money at the closing table and receive a lower rate in return. When you accept <strong>lender credits</strong>, you get help with closing costs now and agree to a higher rate for the life of the loan. Because one pushes cost up front and the other pushes it into later years, you can only judge them by comparing both across time.</p>
+        </section>
+        <section id="loan-comparison-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="loan-comparison-calculator-guide-heading-2">
+<h2 id="loan-comparison-calculator-guide-heading-2">Worked Example: Comparing Two 30-Year Home Loans</h2>
+<p>Suppose you need to <strong>borrow $312,400</strong> to buy a home and your lender offers two financing options. <strong>Loan A</strong> carries a 6.375% rate with no points. <strong>Loan B</strong> carries a 6.000% rate but costs 1.5% of the loan amount in points, which is <strong>$4,686</strong> at closing. Both are 30-year fixed loans. Here is what the calculator returns for each: <!-- SILO_START:slot_c -->The <a class="silo-link" href="/365-365-loan-calculator.html">365 365 loan calculator</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_c --></p>
+<table>
+<thead>
+<tr><th>Result</th><th>Loan A (6.375%)</th><th>Loan B (6.000%)</th></tr>
+</thead>
+<tbody>
+<tr><td>Points paid at closing</td><td>$0</td><td>$4,686</td></tr>
+<tr><td>Monthly payment</td><td>$1,948.97</td><td>$1,873.00</td></tr>
+<tr><td>Total interest over 30 years</td><td>$389,229.04</td><td>$361,878.50</td></tr>
+<tr><td>Lifetime cost including points</td><td>$701,629.04</td><td>$678,964.50</td></tr>
+</tbody>
+</table>
+<p>Loan B asks for more money on day one, yet it leaves you $75.97 better off every month and saves $22,664.54 across the full term. Whether it is the right pick depends on how long you keep the loan, and that is what the break-even point answers.</p>
+
+<h3>Monthly payment formula</h3>
+<p>Each fixed-rate payment comes from the standard amortization formula, where <strong>M</strong> is the monthly payment, <strong>P</strong> is the principal, <strong>r</strong> is the annual rate and <strong>n</strong> is the number of monthly payments:</p>
+<p>$$M = P \times \frac{\frac{r}{12}\left(1 + \frac{r}{12}\right)^{n}}{\left(1 + \frac{r}{12}\right)^{n} - 1}$$</p>
+<p>For Loan A you enter \(P = 312{,}400\), \(r = 0.06375\) and \(n = 360\), which gives $1,948.97. The loan interest calculator inside the tool then multiplies that payment by 360 and subtracts the amount borrowed to report the total interest. Every payment is split into interest and repayment on an amortization schedule, with the interest share falling and the repayment share rising each month. That is why a mortgage differs from simple interest, where the charge stays the same every period.</p>
+
+<h3>Find the break-even period</h3>
+<p>The <strong>break-even period</strong> is the month when the extra money you paid up front has been earned back through lower payments. Divide the extra upfront cost by the monthly saving:</p>
+<p>$$\text{Break-even months} = \frac{\text{Extra points paid}}{\text{Payment A} - \text{Payment B}} = \frac{4{,}686}{75.97} \approx 61.7$$</p>
+<p>The <strong>break-even point</strong> lands at month 62, or <strong>5 years and 2 months</strong>. If you expect to sell or refinance before then, Loan A costs less. If you keep the house longer, Loan B pulls ahead and the gap widens: roughly $1,696 in your favor at 7 years and $4,431 at 10 years.</p>
+
+<figure><img src="/assets/images/tools/loan-comparison-calculator/loan-comparison-break-even-chart.svg" alt="Line chart showing a 6.000% loan with points saving $4,431 by year 10 after breaking even with a 6.375% loan at 5 years and 2 months"><figcaption>Loan B's cumulative saving over Loan A crosses zero at month 62, the break-even period.</figcaption></figure>
+        </section>
+        <section id="loan-comparison-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="loan-comparison-calculator-guide-heading-3">
+<h2 id="loan-comparison-calculator-guide-heading-3">How to Read Mortgage Comparison Calculator Results</h2>
+<p>A <strong>mortgage comparison calculator</strong> gives you several numbers, and each answers a different question. The monthly payment tells you what the loan does to your cash flow. The total interest tells you what borrowing costs beyond the amount you received. The lifetime cost adds fees and points so you see the whole bill, and the break-even period tells you how long you must hold the loan for the cheaper long-term option to actually win.</p>
+<p>Notice that no single number settles the decision. The loan with the lowest payment is not always the loan with the lowest total cost, and the loan with the lowest rate can lose if its points are large and you leave early. Read the four results together and match them to your plans, not to the calculator's default assumptions. A lower interest rate usually matters most on a long mortgage, while on a short term the monthly payment is the number to check first. The break-even period then shows whether the cheaper-looking column stays cheaper for as long as you plan to keep the loan within your budget.</p>
+
+<h3>Total interest versus lifetime cost</h3>
+<p>The <strong>total interest</strong> is only the money paid for the privilege of borrowing. The <strong>lifetime cost</strong> adds everything else you pay, including points, so it is the better yardstick when your two offers carry different <strong>upfront costs</strong>. In the example above the interest gap is $27,350.54, but the lifetime gap is smaller at $22,664.54 because Loan B's points have to be deducted from the saving.</p>
+
+<figure><img src="/assets/images/tools/loan-comparison-calculator/loan-lifetime-cost-breakdown.svg" alt="Donut chart splitting a $678,964 lifetime loan cost into the amount borrowed, total interest and points"><figcaption>Interest makes up 53% of Loan B's lifetime cost in the worked example.</figcaption></figure>
+        </section>
+        <section id="loan-comparison-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="loan-comparison-calculator-guide-heading-4">
+<h2 id="loan-comparison-calculator-guide-heading-4">Testing Loan Scenarios Before You Choose a Home Loan</h2>
+<p>Two offers rarely tell the whole story, so it pays to run a third and fourth set of loan scenarios before you sign anything. Keep the same $312,400 and add a 15-year option at 5.75%. A mortgage calculator returns a payment of $2,594.20 and total interest of only $154,556.20, less than half of Loan A's $389,229.04. The price of that saving is a payment $645.23 higher each month, so the real question becomes whether that larger payment fits your <strong>financial</strong> plans.</p>
+<figure><img src="/assets/images/tools/loan-comparison-calculator/loan-scenarios-total-interest-comparison.svg" alt="Bar chart comparing total interest on two 30-year loans and a 15-year loan for the same $312,400 balance"><figcaption>A 15-year loan at 5.750% cuts total interest to $154,556 but raises the monthly payment to $2,594.20.</figcaption></figure>
+<p>Use these what-if checks to stress-test any home loan before you commit:</p>
+<ul>
+<li>Shorten the term by five or ten years and see how much total interest disappears.</li>
+<li>Raise the rate by a quarter point to learn how sensitive the payment is to a late rate change.</li>
+<li>Move the points amount up and down to find the largest payment that still breaks even in the years you expect to stay.</li>
+<li>Add the extra cash you could put toward the loan each month and note how many months it removes.</li>
+</ul>
+<p>With a fixed rate, the payment never changes, so each column stays stable and the best financing option is easy to spot against your financial picture.</p>
+        </section>
+        <section id="loan-comparison-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="loan-comparison-calculator-guide-heading-5">
+<h2 id="loan-comparison-calculator-guide-heading-5">Weighing Two Car Loan Options: A Dealer Quote Versus a Credit Union</h2>
+<p>Dana Okafor has a take-home pay of $4,310 a month and a $27,860 balance to finance on a used crossover. The dealer quotes <strong>7.49% over 72 months</strong>. A member-owned co-op offers her <strong>5.89% over 60 months</strong>. She opens the calculator, types $27,860 into both columns, then enters each rate and term.</p>
+<p>The side-by-side results come back as two columns:</p>
+<ul>
+<li><strong>Dealer quote:</strong> $481.57 a month, with $6,812.87 of interest paid by the last payment.</li>
+<li><strong>Co-op quote:</strong> $537.19 a month, with $4,371.28 of interest paid.</li>
+</ul>
+<p>The dealer's lower payment looks friendlier, yet it costs her $2,441.59 more over the life of the loan. She checks the result against a common guideline that keeps a car payment at or under 15% of take-home pay, which is $646.50 for her. The dealer's payment is 11.2% of her income and the co-op's is 12.5%, so both pass.</p>
+<p>Next she asks whether a shorter term is affordable. She changes only the co-op's term to 48 months, and the payment jumps to $652.89. That is 15.1% of her income and $6.39 over her $646.50 ceiling, so the 48-month version fails her own rule, and she keeps the 60-month term instead. With one input changed at a time, the calculator tells her why the number moved, so she can walk back into the showroom and decline the 72-month quote with figures to back her up.</p>
+        </section>
+        <section id="loan-comparison-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="loan-comparison-calculator-guide-heading-6">
+<h2 id="loan-comparison-calculator-guide-heading-6">Loan Options Beyond a Mortgage: Car Loans and More</h2>
+<p>The same side-by-side logic works for any fixed-term borrowing. Mortgage loans are the most common case, but you can line up car loans, student loans and other consumer credit the same way, as long as you have the amount, rate and term for each. Different loan options carry different traps, so keep a few rules in mind:</p>
+<ul>
+<li>Dealership financing may bundle add-ons into the amount financed, so compare the sum you actually owe.</li>
+<li>A credit union often quotes a lower rate than a typical bank, so ask for an offer before visiting the showroom.</li>
+<li>Student loans and home improvement loans may have deferral periods or promotional rates that a simple calculation cannot show.</li>
+<li>Any offer that is "interest free" for a set period may charge interest from day one if you miss a condition.</li>
+</ul>
+
+<h3>Car loan comparison and the dealer offer</h3>
+<p>For a car, the main levers are the down payment, the length of the loan and the rate. Stretching the repayment to 72 months lowers the monthly payment but raises the interest, and by the time you finish paying, the vehicle may be worth much less than you spent. Getting a preapproval from your own lender before you walk into the dealership lets you compare its financing against a real number instead of a guess.</p>
+
+<h3>Comparing a home improvement loan against another offer</h3>
+<p>Enter the improvement loan's amount, rate and term as one column and an alternative offer as the other. An upgrade that cuts energy bills can pay for itself, but only if the term is shorter than its useful life, so check that your savings from the upgrade exceed the added monthly payment shown in the comparison.</p>
+        </section>
+        <section id="loan-comparison-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="loan-comparison-calculator-guide-heading-7">
+<h2 id="loan-comparison-calculator-guide-heading-7">What Moves the Interest Rate You Are Offered</h2>
+<p>Two applicants who ask the same company for the same loan amount can receive different rates. Understanding why helps you improve your own offers before you compare them.</p>
+
+<h3>Credit score and credit worthiness</h3>
+<p>Your <strong>credit score</strong>, such as a FICO score, summarizes how reliably you repay debt, and lenders use it to judge your credit worthiness. A higher score usually earns a lower rate, while a lower score signals more risk and a higher rate. The three credit reporting agencies, Equifax, TransUnion and Experian, each keep a report you can review for free, and fixing an error or paying down existing debt before you apply can move you into a better pricing tier.</p>
+<p>The effect on a home loan is easy to test. Enter the interest rate you were quoted into the first column, then enter an interest rate 0.5 points lower into the second column to mimic what a stronger credit score might earn. On a $312,400 balance over 30 years, the half-point difference alone is worth roughly $96 a month, which is why many borrowers spend a few months improving a weak credit score before they apply for a mortgage. Raising your credit score is slow work, but it is one of the few inputs where effort on your side directly lowers the interest rate you are offered.</p>
+
+<h3>Loan-to-value ratio and the rate you enter</h3>
+<p>The <strong>loan-to-value ratio</strong> compares the amount you borrow with the value of the property. Borrow $250,000 against a $312,000 house and the ratio is about 80%; a bigger deposit lowers it, which reduces the bank's risk and often the rate you type into each column. Broader swings in the economy and inflation also move rates, so compare offers dated the same day.</p>
+        </section>
+        <section id="loan-comparison-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="loan-comparison-calculator-guide-heading-8">
+<h2 id="loan-comparison-calculator-guide-heading-8">Fine Print That Changes What Your Home Loan Costs</h2>
+<p>The <strong>fine print</strong> decides whether the number on the calculator matches the bill you will really pay. The <strong>annual percentage rate</strong>, or APR, folds in many closing costs, so it is usually higher than the stated rate and a fairer way to compare. Check whether the rate is fixed or adjustable, because an adjustable loan can start lower and rise later within the caps in the agreement. Ask also about prepayment penalties, since a penalty can erase the saving you were counting on if you refinance early.</p>
+<p>Finally, treat the output as an estimate. Property taxes, insurance and mortgage insurance are not part of a pure payment calculation, so add them to your monthly mortgage figure before you trust the comparison. Once a result looks right, get pre-approved so a lender confirms what you can afford; the pre-approval letter lets you shop with a firm number backed by your savings. A mortgage is a long commitment, so revisit the comparison whenever rates drop enough to make a new offer worth pricing against your current home loan.</p>
+        </section>
+      </div>
+
+      <section id="loan-comparison-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="loan-comparison-calculator-faq-heading" data-section="faq">
+        <h2 id="loan-comparison-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Loan Comparison Calculator questions</h2>
+        <div id="loan-comparison-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="loan-comparison-calculator-faq-1" class="faq-item" open><summary id="loan-comparison-calculator-faq-1-summary" class="faq-summary"><h3 id="loan-comparison-calculator-faq-1-question" class="faq-question">How does a loan comparison calculator work?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="loan-comparison-calculator-faq-1-answer" class="faq-answer"><p>It runs the standard amortization formula on each loan&#x27;s amount, interest rate and term to get the monthly payment, then multiplies by the number of payments and subtracts the amount borrowed to find the total interest. Points are added to give the lifetime cost.</p></div></details>
+          <details id="loan-comparison-calculator-faq-2" class="faq-item" open><summary id="loan-comparison-calculator-faq-2-summary" class="faq-summary"><h3 id="loan-comparison-calculator-faq-2-question" class="faq-question">What is the break-even period?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="loan-comparison-calculator-faq-2-answer" class="faq-answer"><p>It is the point at which the extra money you paid up front, such as points, has been earned back through a lower monthly payment. Before that month the cheaper-upfront loan costs less; after it, the lower-rate loan does.</p></div></details>
+          <details id="loan-comparison-calculator-faq-3" class="faq-item" open><summary id="loan-comparison-calculator-faq-3-summary" class="faq-summary"><h3 id="loan-comparison-calculator-faq-3-question" class="faq-question">Should I pay points or take lender credits?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="loan-comparison-calculator-faq-3-answer" class="faq-answer"><p>Points make sense if you plan to keep the loan well past its break-even period. If you expect to sell or refinance sooner, credits that lower your closing costs usually come out ahead.</p></div></details>
+          <details id="loan-comparison-calculator-faq-4" class="faq-item" open><summary id="loan-comparison-calculator-faq-4-summary" class="faq-summary"><h3 id="loan-comparison-calculator-faq-4-question" class="faq-question">Why can the lowest monthly payment cost more overall?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="loan-comparison-calculator-faq-4-answer" class="faq-answer"><p>A lower payment often comes from a longer term or a higher rate, and either one adds interest over the life of the loan. Compare total interest and lifetime cost, not just the payment.</p></div></details>
+          <details id="loan-comparison-calculator-faq-5" class="faq-item" open><summary id="loan-comparison-calculator-faq-5-summary" class="faq-summary"><h3 id="loan-comparison-calculator-faq-5-question" class="faq-question">Can I compare car loans or student loans too?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="loan-comparison-calculator-faq-5-answer" class="faq-answer"><p>Yes. Any fixed-rate loan with an amount, rate and term works. Enter each offer in its own column and compare the monthly payment and total interest.</p></div></details>
+          <details id="loan-comparison-calculator-faq-6" class="faq-item" open><summary id="loan-comparison-calculator-faq-6-summary" class="faq-summary"><h3 id="loan-comparison-calculator-faq-6-question" class="faq-question">How does my credit score affect the comparison?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="loan-comparison-calculator-faq-6-answer" class="faq-answer"><p>A higher score usually earns a lower interest rate. Enter the rate you were actually quoted, or test a rate a half point lower to see what improving your score could save.</p></div></details>
+          <details id="loan-comparison-calculator-faq-7" class="faq-item" open><summary id="loan-comparison-calculator-faq-7-summary" class="faq-summary"><h3 id="loan-comparison-calculator-faq-7-question" class="faq-question">Does the calculator include taxes and insurance?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="loan-comparison-calculator-faq-7-answer" class="faq-answer"><p>No. It covers principal and interest plus any points you enter. Add property taxes, insurance and mortgage insurance to your budget separately.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="loan-comparison-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="loan-comparison-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="loan-comparison-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="loan-comparison-calculator-ad-bottom-leaderboard">
+            <ins id="loan-comparison-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("loan-comparison-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="loan-comparison-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="loan-comparison-calculator-right-rail-top" class="mb-6">
+        <aside id="loan-comparison-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="loan-comparison-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="loan-comparison-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="loan-comparison-calculator-ad-right-rail-rectangle">
+            <ins id="loan-comparison-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("loan-comparison-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="loan-comparison-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="loan-comparison-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="loan-comparison-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="loan-comparison-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="loan-comparison-calculator-ad-right-rail-skyscraper">
+            <ins id="loan-comparison-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("loan-comparison-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="loan-comparison-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="loan-comparison-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="loan-comparison-calculator-footer-brand">
+        <a id="loan-comparison-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="loan-comparison-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="loan-comparison-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="loan-comparison-calculator-footer-categories" aria-labelledby="loan-comparison-calculator-footer-categories-heading">
+        <h2 id="loan-comparison-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="loan-comparison-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="loan-comparison-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="loan-comparison-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="loan-comparison-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="loan-comparison-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="loan-comparison-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="loan-comparison-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="loan-comparison-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="loan-comparison-calculator-footer-company" aria-labelledby="loan-comparison-calculator-footer-company-heading">
+        <h2 id="loan-comparison-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="loan-comparison-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="loan-comparison-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="loan-comparison-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="loan-comparison-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="loan-comparison-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="loan-comparison-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="loan-comparison-calculator-footer-bottom" class="border-t border-line">
+      <p id="loan-comparison-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="loan-comparison-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Side-by-side comparison of up to three fixed-rate, monthly-payment loans.
+  //   Payment: M = L * i / (1 - (1 + i)^-n), i = rate / 12, n = round(years * 12); M = L / n at 0%.
+  //   Total interest = M * n - L.  Total cost of borrowing = total interest + upfront fees.
+  //   APR (fees included): the annual rate 12 * j where j solves
+  //     (L - fees) = M * (1 - (1 + j)^-n) / j, found by bisection (US actuarial method).
+  // Verified in Node (scratchpad tests/w2loans): $100,000 at 6% for 10 years = $1,110.21/mo and
+  //   with $2,500 of fees APR = 6.563% (matches a published APR calculator's default); with no
+  //   fees APR equals the note rate; $25,000 at 0% for 5 years = $416.67/mo and APR 0% without
+  //   fees; the cheapest loan is picked by total cost; blank or negative input shows an error.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 });
+  var KEYS = ['A', 'B', 'C'];
+
+  function el(id) { return document.getElementById(id); }
+
+  function read(id, blankAsZero) {
+    var raw = String(el(id).value).trim();
+    if (raw === '') return blankAsZero ? 0 : NaN;
+    var v = Number(raw);
+    return isFinite(v) ? v : NaN;
+  }
+
+  function payment(principal, i, n) {
+    if (n <= 0 || principal <= 0) return 0;
+    if (i === 0) return principal / n;
+    return principal * i / (1 - Math.pow(1 + i, -n));
+  }
+
+  function pv(pmt, j, n) { return j === 0 ? pmt * n : pmt * (1 - Math.pow(1 + j, -n)) / j; }
+
+  // Monthly rate j at which the payments are worth exactly the cash received.
+  function solveApr(net, pmt, n) {
+    if (net <= 0 || pmt <= 0) return NaN;
+    if (net >= pmt * n - 1e-9) return 0;
+    var lo = 0, hi = 1;
+    while (pv(pmt, hi, n) > net && hi < 1e6) hi *= 2;
+    for (var k = 0; k < 200; k++) {
+      var mid = (lo + hi) / 2;
+      if (pv(pmt, mid, n) > net) lo = mid; else hi = mid;
+    }
+    return 12 * (lo + hi) / 2;
+  }
+
+  function analyse(amount, ratePct, years, fees) {
+    var n = Math.round(years * 12), i = ratePct / 100 / 12;
+    var pmt = payment(amount, i, n);
+    var interest = Math.max(0, pmt * n - amount);
+    return { amount: amount, rate: ratePct, n: n, pmt: pmt, interest: interest, fees: fees,
+             cost: interest + fees, paid: pmt * n + fees, apr: solveApr(amount - fees, pmt, n) };
+  }
+
+  function setText(id, text) { el(id).textContent = text; }
+
+  function clearResults() {
+    ['lqBestCost', 'lqBestPay', 'lqSaving'].forEach(function (id) { setText(id, '–'); });
+    setText('lqVerdict', '');
+    el('lqTable').innerHTML = '';
+  }
+
+  function aprText(a) { return isNaN(a) ? 'n/a' : (a * 100).toFixed(3) + '%'; }
+
+  function update() {
+    var useC = el('lqUseC').checked;
+    el('lqSetC').disabled = !useC;
+    var keys = useC ? KEYS : KEYS.slice(0, 2), loans = [], msg = '';
+    keys.forEach(function (k) {
+      if (msg) return;
+      var amount = read('lqAmount' + k), rate = read('lqRate' + k), years = read('lqTerm' + k), fees = read('lqFees' + k, true);
+      if (isNaN(amount) || amount <= 0) msg = 'Enter a loan amount greater than $0 for loan ' + k + '.';
+      else if (isNaN(rate) || rate < 0 || rate > 100) msg = 'Enter an interest rate from 0% to 100% for loan ' + k + '.';
+      else if (isNaN(years) || years <= 0 || years > 40 || Math.round(years * 12) < 1) msg = 'Enter a term from 1 month to 40 years for loan ' + k + '.';
+      else if (isNaN(fees) || fees < 0) msg = 'Fees for loan ' + k + ' cannot be negative.';
+      else if (fees >= amount) msg = 'Fees for loan ' + k + ' must be less than the loan amount.';
+      else { var r = analyse(amount, rate, years, fees); r.key = k; loans.push(r); }
+    });
+    var error = el('lqError');
+    error.hidden = !msg;
+    error.textContent = msg;
+    if (msg) { clearResults(); return; }
+
+    var byCost = loans.slice().sort(function (a, b) { return a.cost - b.cost; });
+    var byPay = loans.slice().sort(function (a, b) { return a.pmt - b.pmt; });
+    var best = byCost[0], worst = byCost[byCost.length - 1], low = byPay[0];
+    setText('lqBestCost', 'Loan ' + best.key + ' · ' + money.format(best.cost));
+    setText('lqBestPay', 'Loan ' + low.key + ' · ' + money.format(low.pmt));
+    setText('lqSaving', money.format(worst.cost - best.cost));
+    var verdict;
+    if (worst.cost - best.cost < 0.005) verdict = 'All the loans cost the same to borrow in total.';
+    else if (low.key === best.key) verdict = 'Loan ' + best.key + ' has both the lowest monthly payment and the lowest total cost.';
+    else verdict = 'Loan ' + low.key + ' has the lowest monthly payment, but over its life it costs ' +
+      money.format(low.cost - best.cost) + ' more than loan ' + best.key + '.';
+    if (loans.some(function (l) { return Math.abs(l.amount - loans[0].amount) > 0.005; }))
+      verdict += ' The loan amounts differ, so compare the APRs as well as the dollar totals.';
+    setText('lqVerdict', verdict);
+
+    el('lqHead').innerHTML = '<tr><th scope="col">Item</th>' + loans.map(function (l) {
+      return '<th scope="col">Loan ' + l.key + '</th>';
+    }).join('') + '</tr>';
+    var rows = [
+      ['Loan amount', function (l) { return money.format(l.amount); }],
+      ['Interest rate', function (l) { return l.rate.toFixed(2) + '%'; }],
+      ['Number of monthly payments', function (l) { return String(l.n); }],
+      ['Monthly payment', function (l) { return money.format(l.pmt); }],
+      ['Total interest', function (l) { return money.format(l.interest); }],
+      ['Upfront fees', function (l) { return money.format(l.fees); }],
+      ['Total cost of borrowing', function (l) { return money.format(l.cost); }],
+      ['Total paid (payments + fees)', function (l) { return money.format(l.paid); }],
+      ['APR including fees', function (l) { return aprText(l.apr); }]
+    ];
+    el('lqTable').innerHTML = rows.map(function (row) {
+      return '<tr><th scope="row">' + row[0] + '</th>' + loans.map(function (l) { return '<td>' + row[1](l) + '</td>'; }).join('') + '</tr>';
+    }).join('');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = el('lqForm');
+    if (!form) return;
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

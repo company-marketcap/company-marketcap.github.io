@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en" id="sales-tax-calculator-document" data-page-slug="sales-tax-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sales Tax Calculator: Find Your Sales Tax Rate</title>
+  <meta name="description" content="Our free sales tax calculator adds tax to any price or backs it out of a total. Enter your rate, or check state and local rates, to get the exact tax and final amount.">
+  <link rel="canonical" href="https://company-marketcap.github.io/sales-tax-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Sales Tax Calculator: Find Your Sales Tax Rate">
+  <meta property="og:description" content="Our free sales tax calculator adds tax to any price or backs it out of a total. Enter your rate, or check state and local rates, to get the exact tax and final amount.">
+  <meta property="og:url" content="https://company-marketcap.github.io/sales-tax-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Sales Tax Calculator", "url": "https://company-marketcap.github.io/sales-tax-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Our free sales tax calculator adds tax to any price or backs it out of a total. Enter your rate, or check state and local rates, to get the exact tax and final amount."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Everyday Money & Utility", "item": "https://company-marketcap.github.io/financial-calculators.html#everyday-money-calculators"}, {"@type": "ListItem", "position": 4, "name": "Sales Tax Calculator", "item": "https://company-marketcap.github.io/sales-tax-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do you calculate sales tax?", "acceptedAnswer": {"@type": "Answer", "text": "Multiply the price before tax by the tax rate written as a decimal. At 8.125%, a $100 item carries $8.13 of tax (100 x 0.08125 = 8.125, rounded to the cent), so the total is $108.13."}}, {"@type": "Question", "name": "How do you take sales tax out of a total?", "acceptedAnswer": {"@type": "Answer", "text": "Divide the total by 1 plus the rate as a decimal. A $108.13 total at 8.125% divided by 1.08125 gives the $100 price before tax. In this calculator, choose 'After tax' for the amount."}}, {"@type": "Question", "name": "What is the difference between state and local sales tax?", "acceptedAnswer": {"@type": "Answer", "text": "The state sets a base rate that applies everywhere in the state. Counties, cities and special districts can add local or special tax on top, which is why the combined rate differs from town to town."}}, {"@type": "Question", "name": "Why does the sales tax rate differ between nearby addresses?", "acceptedAnswer": {"@type": "Answer", "text": "Tax jurisdictions follow city, county and district boundaries, not zip codes, so two nearby addresses can fall in different jurisdictions. Look up the rate for the exact street address where the sale happens."}}, {"@type": "Question", "name": "Which states have no statewide sales tax?", "acceptedAnswer": {"@type": "Answer", "text": "Alaska, Delaware, Montana, New Hampshire and Oregon have no statewide sales tax, although some local governments in Alaska charge their own."}}, {"@type": "Question", "name": "Is sales tax the same as VAT?", "acceptedAnswer": {"@type": "Answer", "text": "No. Both are consumption taxes, but a VAT or GST is collected at each stage of production and the listed price usually includes it, while US sales tax is charged only on the final retail sale and is usually added at checkout."}}, {"@type": "Question", "name": "Can I deduct sales tax on my federal return?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, if you itemize deductions you can deduct either state and local income taxes or state and local sales taxes, but not both. Taxpayers who take the standard deduction cannot claim it."}}, {"@type": "Question", "name": "Do businesses have to collect sales tax everywhere they sell?", "acceptedAnswer": {"@type": "Answer", "text": "Only where they have sales tax nexus, meaning a physical presence or sales above that state's economic nexus threshold. Each state sets its own thresholds and registration rules."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="sales-tax-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="sales-tax-calculator" data-page-type="calculator">
+  <a id="sales-tax-calculator-skip-link" href="#sales-tax-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="sales-tax-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="sales-tax-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="sales-tax-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="sales-tax-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="sales-tax-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="sales-tax-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="sales-tax-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="sales-tax-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="sales-tax-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="sales-tax-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="sales-tax-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="sales-tax-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="sales-tax-calculator-header-search-status" aria-controls="sales-tax-calculator-header-search-results" data-search-input="header">
+              <p id="sales-tax-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="sales-tax-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="sales-tax-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="sales-tax-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="sales-tax-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="sales-tax-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="sales-tax-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="sales-tax-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="sales-tax-calculator-mobile-search-status" aria-controls="sales-tax-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="sales-tax-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="sales-tax-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="sales-tax-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="sales-tax-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="sales-tax-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="sales-tax-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="sales-tax-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="sales-tax-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="sales-tax-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="sales-tax-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="sales-tax-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="sales-tax-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="sales-tax-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="sales-tax-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="sales-tax-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="sales-tax-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="sales-tax-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="sales-tax-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="sales-tax-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="sales-tax-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="sales-tax-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="sales-tax-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="sales-tax-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="sales-tax-calculator-sidebar-search-status" aria-controls="sales-tax-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="sales-tax-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="sales-tax-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="sales-tax-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="sales-tax-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="sales-tax-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="sales-tax-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="sales-tax-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="sales-tax-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="sales-tax-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="sales-tax-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="sales-tax-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="sales-tax-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="sales-tax-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="sales-tax-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="sales-tax-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="sales-tax-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="sales-tax-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="sales-tax-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="sales-tax-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="sales-tax-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="sales-tax-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="sales-tax-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="sales-tax-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="sales-tax-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="sales-tax-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="sales-tax-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="sales-tax-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="sales-tax-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="sales-tax-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="sales-tax-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators" aria-current="true">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="sales-tax-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="sales-tax-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="sales-tax-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="sales-tax-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="sales-tax-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="sales-tax-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="sales-tax-calculator" data-calculator-slug="sales-tax-calculator" data-sub-category-slug="everyday-money-calculators">
+      <aside id="sales-tax-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="sales-tax-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="sales-tax-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="sales-tax-calculator-ad-top-leaderboard">
+            <ins id="sales-tax-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("sales-tax-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="sales-tax-calculator-intro-area" class="space-y-4">
+        <nav id="sales-tax-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="sales-tax-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="sales-tax-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="sales-tax-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="sales-tax-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#everyday-money-calculators" itemprop="item"><span itemprop="name">Everyday Money &amp; Utility</span></a><meta itemprop="position" content="3"></li>
+            <li id="sales-tax-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Sales Tax Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/sales-tax-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="sales-tax-calculator-hero-section" aria-labelledby="sales-tax-calculator-hero-heading" data-section="hero">
+          <h1 id="sales-tax-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Sales Tax Calculator: Find Your Sales Tax Rate</h1>
+          <p id="sales-tax-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Use this sales tax calculator to see exactly what a purchase costs once the tax is added, or to work backward from a receipt total to the price before tax. Enter the price and the rate, and the total sales tax and the amount due appear immediately, so you can budget before you reach the register. Whether you are a shopper comparing prices or a seller invoicing customers, the same simple steps apply. <!-- SILO_START:slot_a -->Next, open the <a class="silo-link" href="/date-calculator.html">date calculator</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="sales-tax-calculator-tool" class="space-y-6" data-page-slug="sales-tax-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="stFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="stForm" class="space-y-5" novalidate aria-labelledby="stFormHeading">
+      <h2 id="stFormHeading" class="panel-heading">Enter the price and tax rate</h2>
+<div><label for="stMode" class="form-label">What do you want to work out?</label><select id="stMode" class="form-select"><option value="add" selected>Add sales tax to a price</option><option value="remove">Remove sales tax from a total</option><option value="rate">Find the sales tax rate</option></select></div>
+<div id="stPriceField"><label for="stPrice" class="form-label">Price before tax</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="stPrice" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="0.01" value="249.99" inputmode="decimal"></div></div>
+<div id="stTotalField" hidden><label for="stTotal" class="form-label">Total price including tax</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="stTotal" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="0.01" value="106.50" inputmode="decimal"></div></div>
+<div id="stRateField"><label for="stRate" class="form-label">Sales tax rate</label><div class="input-group"><input type="number" id="stRate" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="0.001" value="7.25" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">The combined rate: state plus any county, city and special district rates. Check your state revenue department for the rate at the address of sale.</p></div>
+      <p id="stError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="stResults" aria-live="polite" aria-labelledby="stResultsHeading">
+      <h2 id="stResultsHeading" class="panel-heading">Your results</h2>
+      <div class="stat-grid mt-4">
+<div id="stCardTotal" class="stat-card stat-card-highlight"><p class="stat-label">Total price</p><p id="stOutTotal" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">Sales tax</p><p id="stOutTax" class="stat-value">–</p></div>
+<div id="stCardPrice" class="stat-card"><p class="stat-label">Price before tax</p><p id="stOutPrice" class="stat-value">–</p></div>
+<div id="stCardRate" class="stat-card"><p class="stat-label">Tax rate</p><p id="stOutRate" class="stat-value">–</p></div>
+      </div>
+      <p id="stSummary" class="mt-4 text-sm text-ink-muted"></p>
+      <p class="callout callout-note mt-4 text-sm">Tax is rounded to the nearest cent. Stores may round per item rather than per receipt, so the total can differ by a cent or two.</p>
+    </div>
+  </div>
+</section>
+        <p id="sales-tax-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="sales-tax-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Use this sales tax calculator to see exactly what a purchase costs once the tax is added, or to work backward from a receipt total to the price before tax. Enter the price and the rate, and the total sales tax and the amount due appear immediately, so you can budget before you reach the register. Whether you are a shopper comparing prices or a seller invoicing customers, the same simple steps apply. <!-- SILO_START:slot_a_m -->Next, open the <a class="silo-link" href="/date-calculator.html">date calculator</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="sales-tax-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="sales-tax-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="sales-tax-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="sales-tax-calculator-ad-in-feed">
+            <ins id="sales-tax-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("sales-tax-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="sales-tax-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="sales-tax-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="sales-tax-calculator-guide-heading-1">
+<h2 id="sales-tax-calculator-guide-heading-1">Sales Tax Calculator Basics: How to Add Sales Tax to Any Price</h2>
+<p>Sales tax is a percent charged on top of the listed price of goods and many services. The seller collects it at checkout and passes it on to the state or local government. Every <strong>sales tax</strong> calculation needs only two things: the price and the <strong>tax rate</strong>. Everything else, including the total, follows from those two numbers. <!-- SILO_START:slot_b -->Next, open the <a class="silo-link" href="/discount-calculator.html">discount calculator</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_b --></p>
+<p>A good tax calculator handles three jobs. It adds tax to a pre-tax price, it removes tax from a tax-inclusive total, and it solves for the unknown rate when you know both the price and the final amount. The sections below explain each job, show a full example with real arithmetic, and cover the rules that decide which rate applies to you.</p>
+
+<h3>What You Enter and What You Get Back</h3>
+<ul>
+<li><strong>Purchase amount:</strong> the price before tax, in dollars.</li>
+<li><strong>Sales tax rate:</strong> the combined percentage for the place where the sale happens.</li>
+<li><strong>Include sales tax or exclude sales tax:</strong> tells the tool whether the amount you typed already contains the tax.</li>
+<li><strong>Results:</strong> the tax, the amount before tax, and the total amount you pay.</li>
+</ul>
+        </section>
+        <section id="sales-tax-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="sales-tax-calculator-guide-heading-2">
+<h2 id="sales-tax-calculator-guide-heading-2">The Sales Tax Formula and Rate Conversion</h2>
+<p>The math is short enough to do on paper. To add tax, multiply the price by the rate written as a decimal, then add the result to the price. The rate as a decimal is the percentage divided by 100, so 8.125% becomes 0.08125. <!-- SILO_START:slot_c -->The <a class="silo-link" href="/basic-financial-calculator.html">free basic financial calculator</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_c --></p>
+$$\text{Sales tax} = \text{Price} \times \text{Rate}$$
+$$\text{Total} = \text{Price} \times (1 + \text{Rate})$$
+<dl>
+<dt>Price</dt>
+<dd>The <em>before-tax price</em> of the item or service.</dd>
+<dt>Rate</dt>
+<dd>The combined <strong>sales tax rate</strong> as a decimal, covering every layer of government that taxes the sale.</dd>
+<dt>Total</dt>
+<dd>The <em>after-tax price</em> you hand over at checkout.</dd>
+</dl>
+<p>To go the other direction, divide the total by one plus the rate. This is how you find the price hidden inside a receipt that only shows the grand total.</p>
+$$\text{Price} = \dfrac{\text{Total}}{1 + \text{Rate}}$$
+<p>Some people search for "sale tax" when they mean the same thing, and the formula does not change. Whichever name you use, the tax rate is the only input that varies from one place to another.</p>
+        </section>
+        <section id="sales-tax-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="sales-tax-calculator-guide-heading-3">
+<h2 id="sales-tax-calculator-guide-heading-3">Working Through a Sales Tax Calculation Step by Step</h2>
+<p>Suppose you are buying a standing desk with a <strong>purchase amount of $2,318.40</strong> in a city where the <strong>combined sales tax rate is 8.125%</strong>. That total rate is the sum of three layers, and each layer produces its own piece of the tax.</p>
+<table>
+<thead><tr><th>Layer</th><th>Rate</th><th>Tax on $2,318.40</th></tr></thead>
+<tbody>
+<tr><td>State portion</td><td>6.000%</td><td>$139.10</td></tr>
+<tr><td>County sales tax</td><td>1.500%</td><td>$34.78</td></tr>
+<tr><td>City sales tax</td><td>0.625%</td><td>$14.49</td></tr>
+<tr><td><strong>Total sales tax</strong></td><td><strong>8.125%</strong></td><td><strong>$188.37</strong></td></tr>
+</tbody>
+</table>
+<p>Adding the pieces gives $188.37 of tax, so you pay $2,318.40 + $188.37 = <strong>$2,506.77</strong>. Multiplying $2,318.40 by 1.08125 gives the same answer in one step, which is the shortcut most people use at a glance.</p>
+<figure><img src="/assets/images/tools/sales-tax-calculator/sales-tax-calculator-price-plus-state-county-city-tax-waterfall.svg" alt="Waterfall chart adding $139.10 state, $34.78 county and $14.49 city sales tax to a $2,318.40 price for a $2,506.77 total"><figcaption>State, county and city layers together add $188.37 to the $2,318.40 desk.</figcaption></figure>
+
+<h3>How Rounding Affects What You Pay</h3>
+<p>The tool rounds the tax amount to the nearest cent, which is how the $188.37 in the desk example is reached. Registers differ: some round each line item while others round the whole receipt. On a single item the difference is never more than a cent. On an invoice with dozens of lines it can reach a few cents, which is why a business should always follow the rounding method its state requires.</p>
+
+<h3>How Price and Rate Change the Tax Due</h3>
+<p>The table below shows how the tax changes when either the price or the rate moves. Your example sits in the middle row, under the 8.125% column.</p>
+<table>
+<thead><tr><th>Price</th><th>6.25%</th><th>7.00%</th><th>8.125%</th><th>9.25%</th></tr></thead>
+<tbody>
+<tr><td>$1,200.00</td><td>$75.00</td><td>$84.00</td><td>$97.50</td><td>$111.00</td></tr>
+<tr><td>$2,318.40</td><td>$144.90</td><td>$162.29</td><td><strong>$188.37</strong></td><td>$214.45</td></tr>
+<tr><td>$3,500.00</td><td>$218.75</td><td>$245.00</td><td>$284.38</td><td>$323.75</td></tr>
+</tbody>
+</table>
+
+<figure><img src="/assets/images/tools/sales-tax-calculator/sales-tax-due-by-price-and-tax-rate-heatmap.svg" alt="Heatmap of sales tax due for three prices at 6.25%, 7.00%, 8.125% and 9.25% tax rates with the 8.125% example outlined"><figcaption>Tax due rises with both the price and the rate; the outlined cell is the worked example.</figcaption></figure>
+        </section>
+        <section id="sales-tax-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="sales-tax-calculator-guide-heading-4">
+<h2 id="sales-tax-calculator-guide-heading-4">Backing Out Sales Tax From a Final Price</h2>
+<p>Many receipts list only the grand total. If you paid $2,506.77 at the same sales tax rate of 8.125% and need the price before tax, divide by 1.08125 to get $2,318.40, and subtract to find the $188.37 of tax. Freelancers, bookkeepers and anyone preparing an expense report do this constantly, because the tax line usually needs to be recorded separately.</p>
+<p>In the tool, you simply choose the option that tells it the amount already includes tax. The calculator then returns the price before tax and the tax itself instead of adding anything on top.</p>
+<figure><img src="/assets/images/tools/sales-tax-calculator/sales-tax-formula-before-and-after-tax-price.svg" alt="Sales tax formula card above before-tax and after-tax prices for three purchases at an 8.125% rate"><figcaption>Multiply by 1 plus the rate to add tax; divide to remove it.</figcaption></figure>
+        </section>
+        <section id="sales-tax-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="sales-tax-calculator-guide-heading-5">
+<h2 id="sales-tax-calculator-guide-heading-5">Finding the Sales Tax Rates for Your City</h2>
+<p>The hardest part of any sales tax calculation is usually knowing which rate to use. In the United States there is no federal sales tax, so the rate is built from several layers. Published sales tax rates and sales tax rates by city usually show the minimum combined sales tax rate for a place, which is the sum of the state and required local portions before any optional district tax. Two neighboring towns can charge different totals even when they share the same state.</p>
+
+<h3>State Sales Tax vs Local Sales Tax</h3>
+<p>The <strong>state sales tax</strong> is set by the legislature and applies everywhere in that state. Counties, cities and taxing districts may then add <strong>local sales tax</strong> on top, which is why the total is higher than the base rate almost everywhere. Some places also add a special tax for a transit or stadium district, which is why two addresses a few blocks apart can differ. Five states, Alaska, Delaware, Montana, New Hampshire and Oregon, have no statewide sales tax, although Alaska allows local rates in some places.</p>
+
+<h3>Why a Zip Code Is Not Always Enough</h3>
+<p>A single zip code can cross municipal lines, and tax jurisdictions rarely follow postal boundaries. Rate lookups that use a street address and geolocation are more accurate than a zip code lookup, because they locate the exact tax jurisdiction. Some tools also let you pick a tax region by name, which works well when you already know the district.</p>
+
+<h3>Using a New York Sales Tax Calculator or Another State Tool</h3>
+<p>States with complicated local layers often publish their own tools that let you choose a place and then add the state, local and any special district tax together. A tool of this kind is useful for confirming the combined rate in a city, and this page's general <strong>US sales tax calculator</strong> then handles the arithmetic once you know it. Whether a state sales tax calculator or a plain rate chart, treat the result as a starting point.</p>
+<p>Published sales tax rate tables list the state and maximum local rate for each state, and they are a reasonable place to begin. Sales tax rates change, so always confirm the exact figure for your address before you rely on it for an invoice.</p>
+        </section>
+        <section id="sales-tax-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="sales-tax-calculator-guide-heading-6">
+<h2 id="sales-tax-calculator-guide-heading-6">Sales Tax Check on a Bakery Oven Quote</h2>
+<p>Marisol runs a small bakery and has been approved for an equipment loan of exactly $5,250.00. The lender will fund the oven only if the invoice total, tax included, fits under that figure. The dealer's quote says <strong>$4,872.60</strong> for a convection oven, and it lists the tax as "to be determined at delivery."</p>
+<p>She looks up the rate for her delivery address, not the dealer's: a 6.500% state portion plus a 0.875% city portion makes a <strong>combined 7.375%</strong>. In the calculator she types 4872.60 as the amount, enters 7.375 as the rate, and leaves the option set to exclude sales tax because the quote has no tax in it. The tool returns $359.35 of tax, so the 7.375% rate decides whether the loan covers the oven.</p>
+<table>
+<thead><tr><th>Line</th><th>Amount</th></tr></thead>
+<tbody>
+<tr><td>Oven quote before tax</td><td>$4,872.60</td></tr>
+<tr><td>Total sales tax at 7.375%</td><td>$359.35</td></tr>
+<tr><td><strong>Invoice total</strong></td><td><strong>$5,231.95</strong></td></tr>
+<tr><td>Loan limit</td><td>$5,250.00</td></tr>
+<tr><td>Left under the limit</td><td>$18.05</td></tr>
+</tbody>
+</table>
+<p>The invoice total of $5,231.95 clears the lender's $5,250.00 limit with only $18.05 to spare. Marisol had hoped to add a $24.99 door gasket kit to the same invoice, and she checks it the same way: $24.99 plus 7.375% tax is $26.83, which would push the invoice to $5,258.78 and break the loan limit by $8.78.</p>
+<p>So the decision is concrete. She asks the dealer to ship the oven alone, orders the gasket kit separately next month, and signs the invoice for $5,231.95. Running the numbers before signing took about a minute, and it kept the sale from being rejected at the lender's desk.</p>
+        </section>
+        <section id="sales-tax-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="sales-tax-calculator-guide-heading-7">
+<h2 id="sales-tax-calculator-guide-heading-7">What Is Sales Tax and How Does It Work?</h2>
+<p>Sales tax is a consumption tax: it is charged when you spend money on a purchase rather than when you earn it. The vendor collects it from the consumer at the point of sale and remits it to the government on a regular schedule. The rate can run from zero to well into double digits depending on the place and the product, so the same cart can cost very different amounts in different towns. Consumers rarely notice this until the total at checkout looks different from what a friend paid.</p>
+<p>Sales tax is a major source of tax revenue for state governments, and some states depend on it for more than half of their budget. Cities and counties use their share to fund services, roads and schools, and city councils vote on their share just as lawmakers vote on the state's. Local sales tax rates and state sales tax rates can both change.</p>
+
+<h3>Taxable Goods, Services and Exempt Items</h3>
+<p>Most states tax retail purchases of physical goods, and retail sales of food are often treated differently. Services are taxed less consistently: some states tax only specific services, and others tax almost none. Many places treat groceries, prescription medicine and some clothing as exempt, and some tax them at a reduced rate. Because taxability differs so much, check the rules for the item you are buying, not only the rate for the location.</p>
+
+<h3>Sales Tax Holiday Periods</h3>
+<p>A <strong>sales tax holiday</strong> is a short window, often around back-to-school season, when a state waives sales tax on selected categories such as clothing or school supplies. During a holiday, set the tax rate to zero for the qualifying items and use the normal rate for everything else in the cart.</p>
+        </section>
+        <section id="sales-tax-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="sales-tax-calculator-guide-heading-8">
+<h2 id="sales-tax-calculator-guide-heading-8">Sales Tax for Businesses: Nexus, Permits and Compliance</h2>
+<p>If you sell products, your business is responsible for collecting the correct sales tax and sending it to the right place. Charging too little leaves a company owing the difference. Charging too much creates problems with customers. A seller who types the wrong rate into a tax tool under-collects on every invoice, which weakens sales tax compliance and can lead to penalties and an audit. Every business, small or large, follows the same basic rules, though the paperwork grows with volume.</p>
+
+<h3>Sales Tax Nexus and Economic Nexus</h3>
+<p><strong>Sales tax nexus</strong> is the connection between a seller and a state that creates a duty to collect tax. A business has physical nexus when it has an office, warehouse or employees in the state. <strong>Economic nexus</strong> comes from crossing a revenue threshold or a transaction threshold in sales to that state, even with no physical presence.</p>
+
+<h3>Collecting Sales Tax on Online Purchases</h3>
+<p>E-commerce sellers must collect tax on online purchases in every state where they have nexus, using the rate at the buyer's delivery address. A business can use software to automate rate lookups for each order, which helps when a store ships to many states and wants to reduce manual errors.</p>
+
+<h3>Sales Tax Permits and Filing Frequency</h3>
+<p>Before collecting, you register for a sales tax permit with each state. The state then assigns a filing frequency, usually monthly, quarterly or annually, based on how much revenue you report. Sales tax returns are due on that schedule even in a month with no sales, and missing a deadline adds penalties and interest. Keep every invoice, because good record-keeping is your defense in an audit.</p>
+<p>Invoicing software should show the tax on its own line, along with the net amount and the total, so buyers and auditors can follow the arithmetic. Use tax is the companion rule: when a buyer purchases from a vendor that did not charge tax, the buyer may owe it directly.</p>
+        </section>
+        <section id="sales-tax-calculator-guide-section-9" class="panel article-content p-4 sm:p-6" aria-labelledby="sales-tax-calculator-guide-heading-9">
+<h2 id="sales-tax-calculator-guide-heading-9">Sales Tax vs VAT, GST and Other Consumption Taxes</h2>
+<p>Most countries use a value-added tax (VAT) or goods and services tax (GST) instead of a sales tax. A VAT is collected at every stage of production, while US sales tax applies only at the final sale to the buyer. In many countries the listed prices already include the tax, which is why a tax-inclusive calculation matters so much for travelers and importers. The VAT or GST rate also needs a different tool.</p>
+        </section>
+        <section id="sales-tax-calculator-guide-section-10" class="panel article-content p-4 sm:p-6" aria-labelledby="sales-tax-calculator-guide-heading-10">
+<h2 id="sales-tax-calculator-guide-heading-10">A Short History of Sales Tax in the United States</h2>
+<p>The history of sales tax in America is tied to the Great Depression, when states were desperate for revenue and income was hard to tax. Mississippi adopted a general sales tax in 1930, and many other states followed within a decade. There is still no federal levy, so every sales tax rate, exemption and collection comes from state and local laws.</p>
+<p>That patchwork explains why any calculator needs a rate you supply: no single national rate exists, and the rules keep changing as legislatures update them. Businesses that sell across state lines are affected most, which is why automated lookups and economic nexus rules have grown in importance in recent years.</p>
+        </section>
+        <section id="sales-tax-calculator-guide-section-11" class="panel article-content p-4 sm:p-6" aria-labelledby="sales-tax-calculator-guide-heading-11">
+<h2 id="sales-tax-calculator-guide-heading-11">Using Your Sales Tax Totals for a Deduction on Your Income Tax Return</h2>
+<p>On your federal income tax return you can deduct either state and local income taxes or state and local sales taxes, but not both. The write-off is available only if you itemize deductions instead of taking the standard deduction. Most households take the standard amount, so itemizing makes sense mainly when your expenses add up to more than that amount.</p>
+<p>To claim it, you can add up your actual receipts or use the IRS tables and its online calculator. The tax amounts this tool returns for each order can be added up for the actual-amount method. Keep a year's worth of records if you plan to use actual amounts, since you may need to prove them.</p>
+        </section>
+      </div>
+
+      <section id="sales-tax-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="sales-tax-calculator-faq-heading" data-section="faq">
+        <h2 id="sales-tax-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Sales Tax Calculator questions</h2>
+        <div id="sales-tax-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="sales-tax-calculator-faq-1" class="faq-item" open><summary id="sales-tax-calculator-faq-1-summary" class="faq-summary"><h3 id="sales-tax-calculator-faq-1-question" class="faq-question">How do you calculate sales tax?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="sales-tax-calculator-faq-1-answer" class="faq-answer"><p>Multiply the price before tax by the tax rate written as a decimal. At 8.125%, a $100 item carries $8.13 of tax (100 x 0.08125 = 8.125, rounded to the cent), so the total is $108.13.</p></div></details>
+          <details id="sales-tax-calculator-faq-2" class="faq-item" open><summary id="sales-tax-calculator-faq-2-summary" class="faq-summary"><h3 id="sales-tax-calculator-faq-2-question" class="faq-question">How do you take sales tax out of a total?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="sales-tax-calculator-faq-2-answer" class="faq-answer"><p>Divide the total by 1 plus the rate as a decimal. A $108.13 total at 8.125% divided by 1.08125 gives the $100 price before tax. In this calculator, choose &#x27;After tax&#x27; for the amount.</p></div></details>
+          <details id="sales-tax-calculator-faq-3" class="faq-item" open><summary id="sales-tax-calculator-faq-3-summary" class="faq-summary"><h3 id="sales-tax-calculator-faq-3-question" class="faq-question">What is the difference between state and local sales tax?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="sales-tax-calculator-faq-3-answer" class="faq-answer"><p>The state sets a base rate that applies everywhere in the state. Counties, cities and special districts can add local or special tax on top, which is why the combined rate differs from town to town.</p></div></details>
+          <details id="sales-tax-calculator-faq-4" class="faq-item" open><summary id="sales-tax-calculator-faq-4-summary" class="faq-summary"><h3 id="sales-tax-calculator-faq-4-question" class="faq-question">Why does the sales tax rate differ between nearby addresses?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="sales-tax-calculator-faq-4-answer" class="faq-answer"><p>Tax jurisdictions follow city, county and district boundaries, not zip codes, so two nearby addresses can fall in different jurisdictions. Look up the rate for the exact street address where the sale happens.</p></div></details>
+          <details id="sales-tax-calculator-faq-5" class="faq-item" open><summary id="sales-tax-calculator-faq-5-summary" class="faq-summary"><h3 id="sales-tax-calculator-faq-5-question" class="faq-question">Which states have no statewide sales tax?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="sales-tax-calculator-faq-5-answer" class="faq-answer"><p>Alaska, Delaware, Montana, New Hampshire and Oregon have no statewide sales tax, although some local governments in Alaska charge their own.</p></div></details>
+          <details id="sales-tax-calculator-faq-6" class="faq-item" open><summary id="sales-tax-calculator-faq-6-summary" class="faq-summary"><h3 id="sales-tax-calculator-faq-6-question" class="faq-question">Is sales tax the same as VAT?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="sales-tax-calculator-faq-6-answer" class="faq-answer"><p>No. Both are consumption taxes, but a VAT or GST is collected at each stage of production and the listed price usually includes it, while US sales tax is charged only on the final retail sale and is usually added at checkout.</p></div></details>
+          <details id="sales-tax-calculator-faq-7" class="faq-item" open><summary id="sales-tax-calculator-faq-7-summary" class="faq-summary"><h3 id="sales-tax-calculator-faq-7-question" class="faq-question">Can I deduct sales tax on my federal return?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="sales-tax-calculator-faq-7-answer" class="faq-answer"><p>Yes, if you itemize deductions you can deduct either state and local income taxes or state and local sales taxes, but not both. Taxpayers who take the standard deduction cannot claim it.</p></div></details>
+          <details id="sales-tax-calculator-faq-8" class="faq-item" open><summary id="sales-tax-calculator-faq-8-summary" class="faq-summary"><h3 id="sales-tax-calculator-faq-8-question" class="faq-question">Do businesses have to collect sales tax everywhere they sell?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="sales-tax-calculator-faq-8-answer" class="faq-answer"><p>Only where they have sales tax nexus, meaning a physical presence or sales above that state&#x27;s economic nexus threshold. Each state sets its own thresholds and registration rules.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="sales-tax-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="sales-tax-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="sales-tax-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="sales-tax-calculator-ad-bottom-leaderboard">
+            <ins id="sales-tax-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("sales-tax-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="sales-tax-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="sales-tax-calculator-right-rail-top" class="mb-6">
+        <aside id="sales-tax-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="sales-tax-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="sales-tax-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="sales-tax-calculator-ad-right-rail-rectangle">
+            <ins id="sales-tax-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("sales-tax-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="sales-tax-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="sales-tax-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="sales-tax-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="sales-tax-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="sales-tax-calculator-ad-right-rail-skyscraper">
+            <ins id="sales-tax-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("sales-tax-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="sales-tax-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="sales-tax-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="sales-tax-calculator-footer-brand">
+        <a id="sales-tax-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="sales-tax-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="sales-tax-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="sales-tax-calculator-footer-categories" aria-labelledby="sales-tax-calculator-footer-categories-heading">
+        <h2 id="sales-tax-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="sales-tax-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="sales-tax-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="sales-tax-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="sales-tax-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="sales-tax-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="sales-tax-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="sales-tax-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="sales-tax-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="sales-tax-calculator-footer-company" aria-labelledby="sales-tax-calculator-footer-company-heading">
+        <h2 id="sales-tax-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="sales-tax-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="sales-tax-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="sales-tax-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="sales-tax-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="sales-tax-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="sales-tax-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="sales-tax-calculator-footer-bottom" class="border-t border-line">
+      <p id="sales-tax-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="sales-tax-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Sales tax, three ways (tax rounded to the nearest cent, as on a receipt):
+  //   Add tax:     tax = price x rate,            total = price + tax
+  //   Remove tax:  price = total / (1 + rate),    tax = total - price
+  //   Find rate:   rate = (total - price) / price
+  // The rate is the combined state + local rate the user enters; no state rates are built in.
+  // Verified (Node, scratch tests, hand-checked): $100 at 6.5% -> tax $6.50, total $106.50;
+  //   $106.50 total at 6.5% -> price $100.00, tax $6.50; $100 -> $106.50 gives 6.5%;
+  //   $19.99 at 8.875% -> tax $1.77 ($1.774...), total $21.76; $0 price and 0% rate give $0 tax;
+  //   total below price and zero price in rate mode show an error. Whole script run under Node
+  //   with a stub DOM: no NaN/Infinity.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+  function cents(x) { return Math.round((x + (x >= 0 ? 1e-9 : -1e-9)) * 100) / 100; }
+
+  function addTax(price, rate) {
+    var tax = cents(price * rate);
+    return { price: price, tax: tax, total: cents(price + tax), rate: rate };
+  }
+  function removeTax(total, rate) {
+    var price = cents(total / (1 + rate));
+    return { price: price, tax: cents(total - price), total: total, rate: rate };
+  }
+  function findRate(price, total) {
+    return { price: price, tax: cents(total - price), total: total, rate: (total - price) / price };
+  }
+
+  function readNum(id) {
+    var el = document.getElementById(id);
+    if (!el) return NaN;
+    var v = parseFloat(el.value);
+    return isNaN(v) ? NaN : v;
+  }
+  function set(id, text) { var el = document.getElementById(id); if (el) el.textContent = text; }
+  function show(id, on) { var el = document.getElementById(id); if (el) el.hidden = !on; }
+  function highlight(id, on) {
+    var el = document.getElementById(id);
+    if (el && el.classList) el.classList[on ? 'add' : 'remove']('stat-card-highlight');
+  }
+  function rateText(r) {
+    var p = r * 100;
+    return (Math.round(p * 1000) / 1000).toString() + '%';
+  }
+
+  function update() {
+    var modeEl = document.getElementById('stMode');
+    var mode = modeEl && ['add', 'remove', 'rate'].indexOf(modeEl.value) !== -1 ? modeEl.value : 'add';
+    show('stPriceField', mode !== 'remove');
+    show('stTotalField', mode !== 'add');
+    show('stRateField', mode !== 'rate');
+    highlight('stCardPrice', mode === 'remove');
+    highlight('stCardTotal', mode === 'add');
+    highlight('stCardRate', mode === 'rate');
+
+    var price = readNum('stPrice'), total = readNum('stTotal'), rate = readNum('stRate');
+    var msg = '';
+    if (mode === 'add') {
+      if (!isFinite(price) || !isFinite(rate) || price < 0 || price > 1e12 || rate < 0 || rate > 100) msg = 'Enter a price of 0 or more and a tax rate from 0 to 100%.';
+    } else if (mode === 'remove') {
+      if (!isFinite(total) || !isFinite(rate) || total < 0 || total > 1e12 || rate < 0 || rate > 100) msg = 'Enter a total of 0 or more and a tax rate from 0 to 100%.';
+    } else if (!isFinite(price) || !isFinite(total) || price <= 0 || total < 0 || price > 1e12 || total > 1e12) {
+      msg = 'Enter a price above 0 and the total you paid.';
+    } else if (total < price) {
+      msg = 'The total including tax cannot be less than the price before tax.';
+    }
+    var error = document.getElementById('stError');
+    if (error) { error.hidden = !msg; error.textContent = msg; }
+    if (msg) {
+      ['stOutPrice', 'stOutTax', 'stOutTotal', 'stOutRate'].forEach(function (id) { set(id, '–'); });
+      set('stSummary', '');
+      return;
+    }
+    var r = mode === 'add' ? addTax(price, rate / 100) : mode === 'remove' ? removeTax(total, rate / 100) : findRate(price, total);
+    set('stOutPrice', money.format(r.price));
+    set('stOutTax', money.format(r.tax));
+    set('stOutTotal', money.format(r.total));
+    set('stOutRate', rateText(r.rate));
+    set('stSummary', money.format(r.price) + ' + ' + money.format(r.tax) + ' tax at ' + rateText(r.rate) +
+      ' = ' + money.format(r.total) + '. Tax is ' + (r.total > 0 ? (r.tax / r.total * 100).toFixed(2) : '0.00') +
+      '% of the total paid.');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('stForm');
+    if (!form) return;
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

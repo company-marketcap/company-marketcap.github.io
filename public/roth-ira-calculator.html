@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en" id="roth-ira-calculator-document" data-page-slug="roth-ira-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Roth IRA Calculator: Estimate Your Retirement Balance</title>
+  <meta name="description" content="Estimate your Roth IRA balance at retirement from your yearly contribution, age, income and return rate, and see how tax-free growth compares with a taxable account.">
+  <link rel="canonical" href="https://company-marketcap.github.io/roth-ira-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Roth IRA Calculator: Estimate Your Retirement Balance">
+  <meta property="og:description" content="Estimate your Roth IRA balance at retirement from your yearly contribution, age, income and return rate, and see how tax-free growth compares with a taxable account.">
+  <meta property="og:url" content="https://company-marketcap.github.io/roth-ira-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Roth IRA Calculator", "url": "https://company-marketcap.github.io/roth-ira-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Estimate your Roth IRA balance at retirement from your yearly contribution, age, income and return rate, and see how tax-free growth compares with a taxable account."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Retirement Accounts (401k, 403b, 457, IRA, Roth)", "item": "https://company-marketcap.github.io/financial-calculators.html#retirement-account-calculators"}, {"@type": "ListItem", "position": 4, "name": "Roth IRA Calculator", "item": "https://company-marketcap.github.io/roth-ira-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the Roth IRA contribution limit for 2026?", "acceptedAnswer": {"@type": "Answer", "text": "For 2026 you can contribute up to $7,500, or $8,600 if you are 50 or older. The limit is reduced, and then eliminated, as your modified adjusted gross income rises through the phase-out range for your filing status."}}, {"@type": "Question", "name": "What are the 2026 Roth IRA income limits?", "acceptedAnswer": {"@type": "Answer", "text": "Single and head-of-household filers phase out between $153,000 and $168,000. Married couples filing jointly phase out between $242,000 and $252,000. Married filing separately while living together phases out between $0 and $10,000."}}, {"@type": "Question", "name": "How does the calculator estimate my balance at retirement?", "acceptedAnswer": {"@type": "Answer", "text": "It compounds your starting balance and each yearly contribution at your estimated rate of return until your retirement age. Contributions are capped at the amount you are allowed to make, and you choose whether deposits land at the start or end of each year."}}, {"@type": "Question", "name": "Why is the Roth IRA compared with a taxable account?", "acceptedAnswer": {"@type": "Answer", "text": "A taxable account pays tax on its earnings every year, which slows compounding. The comparison shows how much that yearly tax drag costs, using the tax rate you enter."}}, {"@type": "Question", "name": "Can I withdraw money from a Roth IRA before retirement?", "acceptedAnswer": {"@type": "Answer", "text": "Your direct contributions can come out tax-free and penalty-free at any time. Earnings are tax-free only if the account is at least five years old and you are 59½ or older, with a few exceptions such as a first-time home purchase up to $10,000."}}, {"@type": "Question", "name": "Do Roth IRAs have required minimum distributions?", "acceptedAnswer": {"@type": "Answer", "text": "No. Unlike traditional IRAs and most employer plans, a Roth IRA has no required minimum distribution during the owner's lifetime."}}, {"@type": "Question", "name": "What rate of return should I use?", "acceptedAnswer": {"@type": "Answer", "text": "Use the average yearly return you expect from your investments. Many savers test a range, such as 5% to 7%, because real returns vary from year to year and are not guaranteed."}}, {"@type": "Question", "name": "What if my income is too high to contribute?", "acceptedAnswer": {"@type": "Answer", "text": "The calculator shows a maximum contribution of zero once your income reaches the top of your range. Some high earners use a backdoor Roth conversion or another retirement account instead; a tax advisor can explain the rules."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="roth-ira-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="roth-ira-calculator" data-page-type="calculator">
+  <a id="roth-ira-calculator-skip-link" href="#roth-ira-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="roth-ira-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="roth-ira-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="roth-ira-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="roth-ira-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="roth-ira-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="roth-ira-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="roth-ira-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="roth-ira-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="roth-ira-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="roth-ira-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="roth-ira-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="roth-ira-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="roth-ira-calculator-header-search-status" aria-controls="roth-ira-calculator-header-search-results" data-search-input="header">
+              <p id="roth-ira-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="roth-ira-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="roth-ira-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="roth-ira-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="roth-ira-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="roth-ira-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="roth-ira-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="roth-ira-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="roth-ira-calculator-mobile-search-status" aria-controls="roth-ira-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="roth-ira-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="roth-ira-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="roth-ira-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="roth-ira-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="roth-ira-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="roth-ira-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="roth-ira-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="roth-ira-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="roth-ira-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="roth-ira-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="roth-ira-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="roth-ira-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="roth-ira-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="roth-ira-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="roth-ira-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="roth-ira-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="roth-ira-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="roth-ira-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="roth-ira-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="roth-ira-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="roth-ira-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="roth-ira-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="roth-ira-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="roth-ira-calculator-sidebar-search-status" aria-controls="roth-ira-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="roth-ira-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="roth-ira-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="roth-ira-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="roth-ira-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="roth-ira-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="roth-ira-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="roth-ira-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="roth-ira-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="roth-ira-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="roth-ira-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="roth-ira-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="roth-ira-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="roth-ira-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="roth-ira-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="roth-ira-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="roth-ira-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="roth-ira-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators" aria-current="true">401(k), IRA &amp; Roth</a></li><li><a id="roth-ira-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="roth-ira-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="roth-ira-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="roth-ira-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="roth-ira-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="roth-ira-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="roth-ira-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="roth-ira-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="roth-ira-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="roth-ira-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="roth-ira-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="roth-ira-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="roth-ira-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="roth-ira-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="roth-ira-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="roth-ira-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="roth-ira-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="roth-ira-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="roth-ira-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="roth-ira-calculator" data-calculator-slug="roth-ira-calculator" data-sub-category-slug="retirement-account-calculators">
+      <aside id="roth-ira-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="roth-ira-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="roth-ira-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="roth-ira-calculator-ad-top-leaderboard">
+            <ins id="roth-ira-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("roth-ira-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="roth-ira-calculator-intro-area" class="space-y-4">
+        <nav id="roth-ira-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="roth-ira-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="roth-ira-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="roth-ira-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="roth-ira-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#retirement-account-calculators" itemprop="item"><span itemprop="name">Retirement Accounts (401k, 403b, 457, IRA, Roth)</span></a><meta itemprop="position" content="3"></li>
+            <li id="roth-ira-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Roth IRA Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/roth-ira-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="roth-ira-calculator-hero-section" aria-labelledby="roth-ira-calculator-hero-heading" data-section="hero">
+          <h1 id="roth-ira-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Roth IRA Calculator: Estimate Your Retirement Balance</h1>
+          <p id="roth-ira-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Not sure what your yearly savings will turn into? This Roth IRA calculator projects how your contributions grow tax-free and shows the balance at retirement you can expect, so you can compare it with the same dollars sitting in a taxable account. You enter your age, income, and rate of return, and the math below shows what happens next. <!-- SILO_START:slot_a -->The <a class="silo-link" href="/retirement-calculator.html">free retirement calculator</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="roth-ira-calculator-tool" class="space-y-6" data-page-slug="roth-ira-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="roFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="roForm" class="space-y-5" novalidate aria-labelledby="roFormHeading">
+      <h2 id="roFormHeading" class="panel-heading">Enter your Roth IRA plan</h2>
+      <p class="badge badge-sky">2026 IRS limits</p>
+      <div class="form-row form-row-2">
+        <div><label for="roAge" class="form-label">Current age</label><div class="input-group"><input type="number" id="roAge" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="16" max="99" step="1" value="30" inputmode="numeric"><span class="input-affix">yrs</span></div></div>
+        <div><label for="roRetireAge" class="form-label">Retirement age</label><div class="input-group"><input type="number" id="roRetireAge" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="17" max="100" step="1" value="65" inputmode="numeric"><span class="input-affix">yrs</span></div></div>
+      </div>
+      <div><label for="roBalance" class="form-label">Current Roth IRA balance</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="roBalance" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1000" value="10000" inputmode="decimal"></div></div>
+      <div><label for="roContrib" class="form-label">Annual contribution</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="roContrib" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="100" value="6000" inputmode="decimal"><span class="input-affix">/yr</span></div><p class="form-hint">Deposited at the start of each year and capped at your 2026 limit.</p></div>
+      <label class="form-choice"><input type="checkbox" id="roMax" class="form-choice-input"><span class="form-choice-text">Contribute the maximum every year<span class="form-choice-note">Your full limit, including the $1,100 catch-up from age 50.</span></span></label>
+      <div class="form-row form-row-2">
+        <div><label for="roStatus" class="form-label">Filing status</label>
+          <select id="roStatus" class="form-select"><option value="single" selected>Single or head of household</option><option value="mfj">Married filing jointly</option><option value="mfs">Married filing separately</option></select></div>
+        <div><label for="roMagi" class="form-label">Modified AGI</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="roMagi" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1000" value="90000" inputmode="decimal"></div></div>
+      </div>
+      <p class="form-hint">Income decides how much you can put in a Roth IRA. If you are married filing separately and lived apart all year, choose single. MAGI is held at this level for every year.</p>
+      <div class="form-row form-row-2">
+        <div><label for="roRate" class="form-label">Expected annual return</label><div class="input-group"><input type="number" id="roRate" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="30" step="0.1" value="6" inputmode="decimal"><span class="input-affix">%</span></div></div>
+        <div><label for="roTax" class="form-label">Tax rate on investment income</label><div class="input-group"><input type="number" id="roTax" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="60" step="1" value="22" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">Used only for the taxable-account comparison.</p></div>
+      </div>
+      <p id="roError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="roResults" aria-live="polite" aria-labelledby="roResultsHeading">
+      <h2 id="roResultsHeading" class="panel-heading">Your results</h2>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p class="stat-label" id="roFutureLabel">Roth IRA at retirement</p><p id="roFuture" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Your contributions</p><p id="roContribTotal" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Tax-free growth</p><p id="roGrowth" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Your 2026 Roth limit</p><p id="roLimit" class="stat-value">–</p></div>
+      </div>
+      <p id="roLimitNote" class="mt-4 text-sm text-ink-muted"></p>
+      <p id="roCapped" class="callout mt-4" hidden></p>
+      <div class="mt-5">
+        <h3 class="text-sm font-semibold text-ink">New contributions: Roth IRA vs taxable account</h3>
+        <div class="result-row"><span class="result-term">In the Roth IRA, tax-free</span><span id="roCmpRoth" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Same money in a taxable account</span><span id="roCmpTaxable" class="result-value">–</span></div>
+        <div class="result-row"><span class="result-term">Roth advantage</span><span id="roCmpDiff" class="result-value">–</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="roScheduleHeading" data-section="schedule">
+  <h2 id="roScheduleHeading" class="panel-heading">Year-by-year projection</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">Contributions, growth and the year-end balance, with the same contributions in a taxable account for comparison.</p>
+  <div class="table-scroll mt-5 max-h-[520px]" tabindex="0" role="region" aria-labelledby="roScheduleHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Age</th><th scope="col">Contribution</th><th scope="col">Growth</th><th scope="col">Roth balance</th><th scope="col">Taxable account</th></tr></thead>
+      <tbody id="roSchedule"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="roth-ira-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="roth-ira-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Not sure what your yearly savings will turn into? This Roth IRA calculator projects how your contributions grow tax-free and shows the balance at retirement you can expect, so you can compare it with the same dollars sitting in a taxable account. You enter your age, income, and rate of return, and the math below shows what happens next. <!-- SILO_START:slot_a_m -->The <a class="silo-link" href="/retirement-calculator.html">free retirement calculator</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="roth-ira-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="roth-ira-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="roth-ira-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="roth-ira-calculator-ad-in-feed">
+            <ins id="roth-ira-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("roth-ira-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="roth-ira-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="roth-ira-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="roth-ira-calculator-guide-heading-1">
+<h2 id="roth-ira-calculator-guide-heading-1">What a Roth IRA savings calculator tells you</h2>
+<p>A <strong>Roth IRA</strong> is a retirement savings account funded with after-tax dollars. You get no deduction when you contribute, but your earnings compound without yearly tax bills, and qualified withdrawals come out untouched. A Roth IRA savings calculator turns that rule into numbers: how much you can put in this year, how large the account becomes by your retirement age, and how much of that balance is growth rather than your own money. <!-- SILO_START:slot_b -->Pair this with the <a class="silo-link" href="/rmd-calculator.html">free rmd calculator</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_b --></p>
+<p>The result is useful because the gap between your <strong>total principal</strong> and your <strong>total interest</strong> is usually the surprise. Over several decades, <strong>tax-free growth</strong> often does most of the work, which is why starting early matters more than contributing a perfect amount.</p>
+<ul>
+<li><strong>Roth IRA</strong> contributions are made with money you have already paid income tax on.</li>
+<li>Growth stays tax-free inside the account, and there is no tax on withdrawals taken under the rules.</li>
+<li>Each year's contribution depends on your earned income, filing status, and age.</li>
+<li>Unlike a traditional IRA, a Roth account has no required minimum distribution during your lifetime.</li>
+</ul>
+        </section>
+        <section id="roth-ira-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="roth-ira-calculator-guide-heading-2">
+<h2 id="roth-ira-calculator-guide-heading-2">Inputs to enter in the Roth IRA calculator</h2>
+<p>Every field in the <strong>Roth IRA calculator</strong> maps to one piece of the contribution rules or one piece of the growth formula. Use estimates if you do not have your tax return handy, then refine them once you do. <!-- SILO_START:slot_c -->If you want to see how the figures change, the <a class="silo-link" href="/401k-calculator.html">free 401k calculator</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_c --></p>
+
+<h3>Contribution year and filing status</h3>
+<p>The IRS reviews limits every year, so choose the <strong>contribution year</strong> first. Most people contribute for the current year, but a prior-year contribution is allowed until the tax filing deadline, including an <strong>extension</strong>. Your <strong>filing status</strong> (single, head of household, married filing jointly, or married filing separately) sets which income thresholds apply to you.</p>
+
+<h3>Annual income and modified adjusted gross income</h3>
+<p>For this field, use your <strong>modified adjusted gross income</strong>, which is your adjusted gross income with certain deductions added back. Your annual income also has to include earned income, such as wages, tips, bonuses, or self-employment income, because a contribution cannot exceed your <strong>compensation</strong> for the year.</p>
+
+<h3>Starting balance, annual contribution and rate of return</h3>
+<p>Your <strong>starting balance</strong> is what the account holds today. Your <strong>annual contribution</strong> is what you plan to add each year, and the maximum depends on your age, filing status, and income. The <strong>rate of return</strong> is the average yearly gain or loss on your investments; a mix of stocks and bonds has historically landed somewhere around 6% to 7% before inflation, but your own portfolio may differ.</p>
+
+<h3>Current age and retirement age</h3>
+<p>Your current age decides whether the catch-up amount applies, and your <strong>retirement age</strong> decides how many years the money compounds. Full retirement age for Social Security ranges from 65 to 67, depending on the year you were born, which is a common choice for this field.</p>
+        </section>
+        <section id="roth-ira-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="roth-ira-calculator-guide-heading-3">
+<h2 id="roth-ira-calculator-guide-heading-3">Roth IRA contribution limit and income limits for 2026</h2>
+<p>The <strong>contribution limit</strong> for 2026 is $7,500, or $8,600 if you are 50 or older. Higher earners lose part or all of that room, so the <strong>income limits</strong> below matter as much as the dollar cap. If your income is above the top of your range, the calculator will show zero allowed, and a <strong>backdoor Roth</strong> or another account may be the better route. <!-- SILO_START:slot_d -->The <a class="silo-link" href="/72t-distribution-impact-calculator.html">72t distribution impact calculator</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_d --></p>
+<table>
+<thead><tr><th>Filing status</th><th>Modified adjusted gross income</th><th>Contribution you can make</th></tr></thead>
+<tbody>
+<tr><td>Single, head of household</td><td>Less than $153,000</td><td>Full $7,500 ($8,600 if 50 or older)</td></tr>
+<tr><td>Single, head of household</td><td>$153,000 to $167,999</td><td>Reduced</td></tr>
+<tr><td>Single, head of household</td><td>$168,000 or more</td><td>No contribution allowed</td></tr>
+<tr><td>Married filing jointly, surviving spouse</td><td>Less than $242,000</td><td>Full $7,500 ($8,600 if 50 or older)</td></tr>
+<tr><td>Married filing jointly, surviving spouse</td><td>$242,000 to $251,999</td><td>Reduced</td></tr>
+<tr><td>Married filing jointly, surviving spouse</td><td>$252,000 or more</td><td>No contribution allowed</td></tr>
+<tr><td>Married filing separately (lived with spouse)</td><td>Less than $10,000</td><td>Reduced</td></tr>
+<tr><td>Married filing separately (lived with spouse)</td><td>$10,000 or more</td><td>No contribution allowed</td></tr>
+</tbody>
+</table>
+
+<h3>Phase-out of the contribution limit</h3>
+<p>When your income lands in a reduced range, the calculator applies the <strong>phase-out</strong> for you and returns a lower allowed amount. It reduces the maximum by the share of the range you have used, then rounds up to the next $10, with a floor of $200 while any room remains. <strong>Eligible</strong> savers just under the top of the range may see only a few hundred dollars of room in the result.</p>
+<h3>Catch-up contribution for age 50 and over</h3>
+<p>The <strong>catch-up contribution</strong> adds $1,100 to the 2026 limit once you turn 50, which brings the cap to $8,600. Spread across a year, a saver under 50 needs about $625 <strong>per month</strong> to reach the full $7,500. If your income is modest, the Saver's Tax Credit can also return a share of your first $2,000 of contributions as a tax credit, which the calculator does not include in its balance.</p>
+        </section>
+        <section id="roth-ira-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="roth-ira-calculator-guide-heading-4">
+<h2 id="roth-ira-calculator-guide-heading-4">The retirement calculator formula behind your Roth IRA balance</h2>
+<p>Growth in this retirement calculator follows one compound-interest formula. With contributions made at the start of each year, the future value is:</p>
+<p>$$FV = B \times (1+r)^{n} + C \times (1+r) \times \frac{(1+r)^{n} - 1}{r}$$</p>
+<p>Here \(B\) is your starting balance, \(C\) is your annual contribution, \(r\) is the yearly rate of return as a decimal, and \(n\) is the number of years until you retire. The first term grows what you already have; the second grows every future deposit.</p>
+
+<h3>Worked example: a 34-year-old single filer retiring at 67</h3>
+<p>Say you are 34, file as single, and have a modified adjusted gross income of $118,500, well under the $153,000 threshold, so the full limit is open to you. You start with $23,400, contribute $6,200 a year (about $517 a month), expect a 7% return, and plan to retire at 67, so \(n = 33\).</p>
+<p>The <strong>balance at retirement</strong> works out to <strong>$1,007,217</strong>. You contributed $228,000 in total (your starting balance plus 33 deposits), so $779,217 of the balance is <strong>total interest</strong> that you never pay tax on.</p>
+<table>
+<thead><tr><th>Age</th><th>Years invested</th><th>Roth IRA balance</th></tr></thead>
+<tbody>
+<tr><td>34</td><td>0</td><td>$23,400</td></tr>
+<tr><td>44</td><td>10</td><td>$137,690</td></tr>
+<tr><td>54</td><td>20</td><td>$362,515</td></tr>
+<tr><td>67</td><td>33</td><td>$1,007,217</td></tr>
+</tbody>
+</table>
+<p>Run the same money through a <strong>taxable account</strong> that loses 15% of its yearly gains to tax, and the balance reaches only about $790,740. The Roth advantage in this example is roughly <strong>$216,477</strong>, and it comes entirely from not paying that annual tax drag.</p>
+        </section>
+        <section id="roth-ira-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="roth-ira-calculator-guide-heading-5">
+<h2 id="roth-ira-calculator-guide-heading-5">Reading the annual schedule of your Roth IRA savings</h2>
+<p>Below the headline figure, most tools print an <strong>annual schedule</strong>: one row per year showing the opening balance, your deposit, and the closing balance. Scan it for the year your balance first passes your total contributions to date, because that is the moment your investment gains start out-earning your own deposits. In the 34-year-old example above, that crossover arrives in the early 40s and the gap widens every year after.</p>
+<p>Three inputs move the schedule the most, so change them one at a time and watch the closing balance and total interest. Shift the <strong>estimated rate of return</strong> by a point in either direction to see how sensitive the projection is. Change the <strong>tax filing status</strong> or income to see whether the allowed contribution shrinks. Then lower the return and rerun it: the middle result is your base case, and the lower-return result is the one your financial plan can still survive.</p>
+<p>The projection assumes one constant investment return every year, a simplification that matters for any financial forecast, so real balances will differ from the schedule year to year.</p>
+        </section>
+        <section id="roth-ira-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="roth-ira-calculator-guide-heading-6">
+<h2 id="roth-ira-calculator-guide-heading-6">Testing a reduced Roth IRA limit before the year's deposit</h2>
+<p>Dana, 41, and a spouse file jointly, and a year-end bonus pushes their modified adjusted gross income to $246,300. Before moving any money, Dana opens the calculator to see what the Roth IRA contribution limit looks like at that income, because $246,300 sits inside the $242,000 to $252,000 phase-out range for joint filers.</p>
+<p>Dana enters the values the tax software shows: 2026 as the contribution year, married filing jointly, age 41, income $246,300, a starting balance of $61,850, a 6.5% estimated rate of return, and retirement at 67. The phase-out calculation is simple. Dana is $4,300 into a $10,000 range, so 43% of the $7,500 limit is removed, leaving $4,275, and the IRS rounds that up to <strong>$4,280</strong>.</p>
+<ul>
+<li>Allowed contribution: $4,280, not the $7,500 Dana assumed.</li>
+<li>Projected balance at 67 with $4,280 a year for 26 years: <strong>$608,429</strong>.</li>
+<li>The same plan at the full $7,500 would reach $826,928, so the reduced limit costs about $218,499 by retirement.</li>
+</ul>
+<p>The result gives Dana a specific decision. Depositing $7,500 would create an excess contribution, which is subject to a 6% excise tax each year until it is corrected, so the deposit is capped at $4,280. Dana then reruns the calculator with income lowered to $241,000, the level a larger pre-tax 401(k) deferral would reach, and sees the full $7,500 return. That single change in the deferral amount is now the question for the payroll department, instead of a guess at the tax deadline.</p>
+        </section>
+        <section id="roth-ira-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="roth-ira-calculator-guide-heading-7">
+<h2 id="roth-ira-calculator-guide-heading-7">Roth vs. traditional IRA calculator: which account fits you?</h2>
+<p>A roth vs. traditional IRA calculator compares two timing choices: pay tax now and withdraw tax-free later, or deduct now and pay tax when you withdraw. The better answer depends mostly on your <strong>tax bracket</strong> today versus your expected bracket in retirement.</p>
+<ul>
+<li>Choose a Roth IRA if you expect a higher bracket in retirement, or you value tax-free withdrawals and flexibility.</li>
+<li>Choose a <strong>traditional IRA</strong> if a deduction now matters more and you expect the same or a lower bracket later.</li>
+<li>A traditional IRA has no income cap on contributions, but the deduction can be limited if you have an employer plan.</li>
+<li>A traditional IRA requires minimum distributions; a Roth IRA does not.</li>
+<li>Switching is possible through a conversion, which is taxable in the year you convert.</li>
+</ul>
+        </section>
+        <section id="roth-ira-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="roth-ira-calculator-guide-heading-8">
+<h2 id="roth-ira-calculator-guide-heading-8">Roth IRA withdrawal rules and penalty exceptions</h2>
+<p>The <strong>withdrawal rules</strong> have two layers. Direct contributions come out tax-free and penalty-free at any time. <strong>Earnings</strong> are different: they are tax-free only when the account is at least <strong>five years</strong> old and you are at least <strong>59½</strong>.</p>
+<ul>
+<li>Withdrawing earnings early can trigger income tax plus a 10% <strong>penalty</strong>.</li>
+<li>The penalty, but not the tax, is waived for a first-time home purchase of up to $10,000.</li>
+<li>Qualified education expenses and a disabled account holder also avoid the penalty.</li>
+<li>Payments to a beneficiary after death are exempt from the penalty as well.</li>
+<li>No required minimum distribution applies, so your account can keep growing.</li>
+</ul>
+        </section>
+        <section id="roth-ira-calculator-guide-section-9" class="panel article-content p-4 sm:p-6" aria-labelledby="roth-ira-calculator-guide-heading-9">
+<h2 id="roth-ira-calculator-guide-heading-9">Ways to use your IRA contribution calculator result</h2>
+<p>Treat the output as a financial planning figure, not a promise. These steps turn the projected balance and the annual schedule into decisions:</p>
+<ul>
+<li>Check the maximum contribution against your income first, and aim your deposits at that allowed amount.</li>
+<li>Set <strong>automatic contributions</strong> equal to the annual contribution you entered, divided by 12.</li>
+<li>Run a conservative and an optimistic return to bracket your balance, matching your stocks, bonds, and mutual funds mix to the portfolio risk you can tolerate.</li>
+<li>Add any 401(k)s or other <strong>employer plan</strong> balance, plus Social Security, and compare the total with the income you will need; this investment and financial picture shows whether your Roth IRA projection is enough.</li>
+<li>Lower the return a little to approximate inflation, since the projected dollars will buy less in the future.</li>
+<li>High earners whose allowed contribution comes back as zero can ask a tax advisor or financial planner whether a backdoor Roth fits you.</li>
+</ul>
+<p>The <strong>maximum contribution</strong> shown by an IRA contribution calculator only applies when your earned income is at least that large, and your IRA contribution for the year counts across all of your IRAs, not each one separately.</p>
+        </section>
+      </div>
+
+      <section id="roth-ira-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="roth-ira-calculator-faq-heading" data-section="faq">
+        <h2 id="roth-ira-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Roth IRA Calculator questions</h2>
+        <div id="roth-ira-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="roth-ira-calculator-faq-1" class="faq-item" open><summary id="roth-ira-calculator-faq-1-summary" class="faq-summary"><h3 id="roth-ira-calculator-faq-1-question" class="faq-question">What is the Roth IRA contribution limit for 2026?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="roth-ira-calculator-faq-1-answer" class="faq-answer"><p>For 2026 you can contribute up to $7,500, or $8,600 if you are 50 or older. The limit is reduced, and then eliminated, as your modified adjusted gross income rises through the phase-out range for your filing status.</p></div></details>
+          <details id="roth-ira-calculator-faq-2" class="faq-item" open><summary id="roth-ira-calculator-faq-2-summary" class="faq-summary"><h3 id="roth-ira-calculator-faq-2-question" class="faq-question">What are the 2026 Roth IRA income limits?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="roth-ira-calculator-faq-2-answer" class="faq-answer"><p>Single and head-of-household filers phase out between $153,000 and $168,000. Married couples filing jointly phase out between $242,000 and $252,000. Married filing separately while living together phases out between $0 and $10,000.</p></div></details>
+          <details id="roth-ira-calculator-faq-3" class="faq-item" open><summary id="roth-ira-calculator-faq-3-summary" class="faq-summary"><h3 id="roth-ira-calculator-faq-3-question" class="faq-question">How does the calculator estimate my balance at retirement?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="roth-ira-calculator-faq-3-answer" class="faq-answer"><p>It compounds your starting balance and each yearly contribution at your estimated rate of return until your retirement age. Contributions are capped at the amount you are allowed to make, and you choose whether deposits land at the start or end of each year.</p></div></details>
+          <details id="roth-ira-calculator-faq-4" class="faq-item" open><summary id="roth-ira-calculator-faq-4-summary" class="faq-summary"><h3 id="roth-ira-calculator-faq-4-question" class="faq-question">Why is the Roth IRA compared with a taxable account?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="roth-ira-calculator-faq-4-answer" class="faq-answer"><p>A taxable account pays tax on its earnings every year, which slows compounding. The comparison shows how much that yearly tax drag costs, using the tax rate you enter.</p></div></details>
+          <details id="roth-ira-calculator-faq-5" class="faq-item" open><summary id="roth-ira-calculator-faq-5-summary" class="faq-summary"><h3 id="roth-ira-calculator-faq-5-question" class="faq-question">Can I withdraw money from a Roth IRA before retirement?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="roth-ira-calculator-faq-5-answer" class="faq-answer"><p>Your direct contributions can come out tax-free and penalty-free at any time. Earnings are tax-free only if the account is at least five years old and you are 59½ or older, with a few exceptions such as a first-time home purchase up to $10,000.</p></div></details>
+          <details id="roth-ira-calculator-faq-6" class="faq-item" open><summary id="roth-ira-calculator-faq-6-summary" class="faq-summary"><h3 id="roth-ira-calculator-faq-6-question" class="faq-question">Do Roth IRAs have required minimum distributions?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="roth-ira-calculator-faq-6-answer" class="faq-answer"><p>No. Unlike traditional IRAs and most employer plans, a Roth IRA has no required minimum distribution during the owner&#x27;s lifetime.</p></div></details>
+          <details id="roth-ira-calculator-faq-7" class="faq-item" open><summary id="roth-ira-calculator-faq-7-summary" class="faq-summary"><h3 id="roth-ira-calculator-faq-7-question" class="faq-question">What rate of return should I use?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="roth-ira-calculator-faq-7-answer" class="faq-answer"><p>Use the average yearly return you expect from your investments. Many savers test a range, such as 5% to 7%, because real returns vary from year to year and are not guaranteed.</p></div></details>
+          <details id="roth-ira-calculator-faq-8" class="faq-item" open><summary id="roth-ira-calculator-faq-8-summary" class="faq-summary"><h3 id="roth-ira-calculator-faq-8-question" class="faq-question">What if my income is too high to contribute?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="roth-ira-calculator-faq-8-answer" class="faq-answer"><p>The calculator shows a maximum contribution of zero once your income reaches the top of your range. Some high earners use a backdoor Roth conversion or another retirement account instead; a tax advisor can explain the rules.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="roth-ira-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="roth-ira-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="roth-ira-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="roth-ira-calculator-ad-bottom-leaderboard">
+            <ins id="roth-ira-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("roth-ira-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="roth-ira-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="roth-ira-calculator-right-rail-top" class="mb-6">
+        <aside id="roth-ira-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="roth-ira-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="roth-ira-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="roth-ira-calculator-ad-right-rail-rectangle">
+            <ins id="roth-ira-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("roth-ira-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="roth-ira-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="roth-ira-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="roth-ira-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="roth-ira-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="roth-ira-calculator-ad-right-rail-skyscraper">
+            <ins id="roth-ira-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("roth-ira-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="roth-ira-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="roth-ira-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="roth-ira-calculator-footer-brand">
+        <a id="roth-ira-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="roth-ira-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="roth-ira-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="roth-ira-calculator-footer-categories" aria-labelledby="roth-ira-calculator-footer-categories-heading">
+        <h2 id="roth-ira-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="roth-ira-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="roth-ira-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="roth-ira-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="roth-ira-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="roth-ira-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="roth-ira-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="roth-ira-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="roth-ira-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="roth-ira-calculator-footer-company" aria-labelledby="roth-ira-calculator-footer-company-heading">
+        <h2 id="roth-ira-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="roth-ira-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="roth-ira-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="roth-ira-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="roth-ira-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="roth-ira-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="roth-ira-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="roth-ira-calculator-footer-bottom" class="border-t border-line">
+      <p id="roth-ira-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="roth-ira-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Roth IRA projection, annual steps: each contribution is deposited at the start of the year and
+  // the balance grows at the expected return, balance = (balance + c) x (1 + r). Qualified
+  // withdrawals are tax-free, so the balance is also the after-tax value.
+  // Contribution limit: the 2026 limit for that year's age, reduced by the IRC 408A(c)(3) MAGI
+  // phase-out: limit x (top of range - MAGI) / range width, rounded up to the next $10 with a
+  // $200 minimum (IRS Pub. 590-A worksheet 2-2). Taxable comparison (new contributions only):
+  // the same after-tax dollars, with earnings taxed every year at the entered rate.
+  // CHECKS (Node, scratch tests): $6,000/yr at 6% for 35 years = 6,000 x 1.06 x (1.06^35 - 1) /
+  // 0.06 = $708,725.20, plus $10,000 x 1.06^35 = $76,860.87 -> $785,586; single MAGI $160,000 ->
+  // 7,500 x 8,000 / 15,000 = $4,000; MAGI $167,990 -> $10 raised to $200; $168,000 -> $0;
+  // MFJ $245,000 -> $5,250; age 50 single $160,000 -> 8,600 x 8 / 15 = $4,586.67 -> $4,590;
+  // MFS $5,000 -> $3,750; taxable side = 6,000 x 1.0468 x (1.0468^35 - 1) / 0.0468.
+  // ---- 2026 ROTH IRA LIMITS (tax year 2026) ------------------------------------------------
+  // Source: IRS Notice 2025-67 (2026 cost-of-living adjustments): IRC 219(b)(5) limit $7,500,
+  // age-50 catch-up $1,100; IRC 408A(c)(3) MAGI phase-out ranges. MFS range is fixed by statute.
+  var IRA = {
+    year: 2026,
+    limit: 7500,
+    catchUp50: 1100,
+    rothRange: { single: [153000, 168000], mfj: [242000, 252000], mfs: [0, 10000] }
+  };
+  // --------------------------------------------------------------------------------------------
+
+  function ageLimit(age) { return IRA.limit + (age >= 50 ? IRA.catchUp50 : 0); }
+
+  function phaseOut(limit, magi, range) {
+    if (magi <= range[0]) return limit;
+    if (magi >= range[1]) return 0;
+    var reduced = Math.ceil(limit * (range[1] - magi) / (range[1] - range[0]) / 10 - 1e-9) * 10;
+    return Math.min(limit, Math.max(200, reduced));
+  }
+
+  function rothLimit(age, status, magi) { return phaseOut(ageLimit(age), magi, IRA.rothRange[status]); }
+
+  // p: age, retireAge, balance, contrib, max (bool), rate, tax (decimals), status, magi.
+  function project(p) {
+    var n = p.retireAge - p.age, bal = p.balance, rows = [], total = 0, capped = false;
+    var rothNew = 0, taxable = 0, taxableRate = p.rate * (1 - p.tax);
+    for (var y = 0; y < n; y++) {
+      var age = p.age + y, lim = rothLimit(age, p.status, p.magi);
+      var c = p.max ? lim : Math.min(p.contrib, lim);
+      if (!p.max && p.contrib > lim + 0.005) capped = true;
+      var start = bal + c;
+      bal = start * (1 + p.rate);
+      rothNew = (rothNew + c) * (1 + p.rate);
+      taxable = (taxable + c) * (1 + taxableRate);
+      total += c;
+      rows.push({ age: age, c: c, growth: bal - start, balance: bal, taxable: taxable });
+    }
+    return { balance: bal, total: total, growth: bal - p.balance - total, capped: capped, rows: rows,
+             rothNew: rothNew, taxable: taxable };
+  }
+
+  var moneyFmt = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+  var money = { format: function (x) { return moneyFmt.format(Math.abs(x) < 0.005 ? 0 : x); } };
+
+  function num(id) {
+    var v = parseFloat(document.getElementById(id).value);
+    return isNaN(v) ? NaN : v;
+  }
+  function set(id, text) { document.getElementById(id).textContent = text; }
+
+  function update() {
+    var age = Math.round(num('roAge')), retireAge = Math.round(num('roRetireAge')), balance = num('roBalance'),
+        contrib = num('roContrib'), rate = num('roRate'), tax = num('roTax'), magi = num('roMagi'),
+        status = document.getElementById('roStatus').value, max = document.getElementById('roMax').checked;
+    var error = document.getElementById('roError');
+    var bad = [age, retireAge, balance, contrib, rate, tax, magi].some(isNaN) || age < 16 || age > 99 ||
+              retireAge <= age || retireAge > 100 || balance < 0 || contrib < 0 || rate < 0 || rate > 30 ||
+              tax < 0 || tax > 60 || magi < 0;
+    error.hidden = !bad;
+    if (bad) {
+      error.textContent = 'Enter an age from 16 to 99, a retirement age above it (up to 100), non-negative amounts, ' +
+                          'a return up to 30% and a tax rate up to 60%.';
+      return;
+    }
+    var r = project({ age: age, retireAge: retireAge, balance: balance, contrib: contrib, max: max,
+                      rate: rate / 100, tax: tax / 100, status: status, magi: magi });
+    var range = IRA.rothRange[status], lim0 = rothLimit(age, status, magi), full0 = ageLimit(age);
+    set('roFutureLabel', 'Roth IRA at age ' + retireAge);
+    set('roFuture', money.format(r.balance));
+    set('roContribTotal', money.format(r.total));
+    set('roGrowth', money.format(r.growth));
+    set('roLimit', money.format(lim0));
+    var note;
+    if (lim0 >= full0) note = 'Your income is below the ' + IRA.year + ' phase-out range (' + money.format(range[0]) + ' to ' +
+        money.format(range[1]) + '), so you can contribute the full ' + money.format(full0) + '.';
+    else if (lim0 > 0) note = 'Your income is inside the ' + IRA.year + ' phase-out range (' + money.format(range[0]) + ' to ' +
+        money.format(range[1]) + '), so your limit is reduced from ' + money.format(full0) + '.';
+    else note = 'Your income is at or above ' + money.format(range[1]) + ', so you can\'t contribute directly to a Roth IRA for ' + IRA.year + '.';
+    set('roLimitNote', lim0 > 0 ? note + ' The limit is shared with any traditional IRA contributions.' : note);
+    var capEl = document.getElementById('roCapped');
+    capEl.hidden = !r.capped;
+    if (r.capped) set('roCapped', 'Your planned contribution is above your limit in some years, so the projection uses the limit instead.');
+    set('roCmpRoth', money.format(r.rothNew));
+    set('roCmpTaxable', money.format(r.taxable));
+    set('roCmpDiff', money.format(r.rothNew - r.taxable));
+    var body = document.getElementById('roSchedule');
+    body.textContent = '';
+    r.rows.forEach(function (row) {
+      var tr = document.createElement('tr');
+      [row.age, money.format(row.c), money.format(row.growth), money.format(row.balance), money.format(row.taxable)]
+        .forEach(function (v) { var td = document.createElement('td'); td.textContent = v; tr.appendChild(td); });
+      body.appendChild(tr);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('roForm');
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="en" id="interest-only-calculator-document" data-page-slug="interest-only-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interest-Only Mortgage Calculator: Monthly Payment Estimate</title>
+  <meta name="description" content="Estimate your monthly payment during the interest-only period, see the jump when principal repayment starts, and compare total interest with a traditional loan.">
+  <link rel="canonical" href="https://company-marketcap.github.io/interest-only-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Interest-Only Mortgage Calculator: Monthly Payment Estimate">
+  <meta property="og:description" content="Estimate your monthly payment during the interest-only period, see the jump when principal repayment starts, and compare total interest with a traditional loan.">
+  <meta property="og:url" content="https://company-marketcap.github.io/interest-only-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Interest Only Mortgage Calculator", "url": "https://company-marketcap.github.io/interest-only-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Estimate your monthly payment during the interest-only period, see the jump when principal repayment starts, and compare total interest with a traditional loan."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Mortgage & Home Buying", "item": "https://company-marketcap.github.io/financial-calculators.html#mortgage-calculators"}, {"@type": "ListItem", "position": 4, "name": "Interest Only Mortgage Calculator", "item": "https://company-marketcap.github.io/interest-only-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How does an interest-only mortgage payment work?", "acceptedAnswer": {"@type": "Answer", "text": "During the interest-only period you pay only the interest on the balance each month, so the payment is the loan amount times the annual rate divided by 12 and the balance does not fall. When the period ends, the same balance is repaid over the remaining term, which raises the payment."}}, {"@type": "Question", "name": "Why does my payment go up after the interest-only period?", "acceptedAnswer": {"@type": "Answer", "text": "Once principal repayment starts, the full balance has to be paid off in fewer years than the original term. A 30-year loan with a 10-year interest-only period is repaid over just 20 years, so the monthly payment is higher than an ordinary 30-year payment."}}, {"@type": "Question", "name": "Do I build equity during the interest-only period?", "acceptedAnswer": {"@type": "Answer", "text": "Not through your payments, because none of the payment reduces the principal. Your equity only grows if the home appreciates or you make voluntary principal payments."}}, {"@type": "Question", "name": "Is an interest-only mortgage cheaper than a traditional mortgage?", "acceptedAnswer": {"@type": "Answer", "text": "It is cheaper each month at first, but usually more expensive overall: you pay interest on the full balance for longer, so total interest is higher. Compare both results in the calculator before you decide."}}, {"@type": "Question", "name": "How long is a typical interest-only period?", "acceptedAnswer": {"@type": "Answer", "text": "Most interest-only periods run between three and ten years, although the calculator lets you test anywhere from 1 to 12 years against your total loan term."}}, {"@type": "Question", "name": "Are interest-only mortgages adjustable-rate loans?", "acceptedAnswer": {"@type": "Answer", "text": "Many are adjustable-rate mortgages, so your rate can reset after an initial period. Enter a higher rate in the interest rate field to see how a reset would change your payment."}}, {"@type": "Question", "name": "Who qualifies for an interest-only mortgage?", "acceptedAnswer": {"@type": "Answer", "text": "Lenders usually look for strong credit scores, a low debt-to-income ratio, a sizable down payment and savings reserves, because these loans are not backed by FHA, VA or USDA programs."}}, {"@type": "Question", "name": "Does the calculator include taxes, insurance and PMI?", "acceptedAnswer": {"@type": "Answer", "text": "No. The results show principal and interest only. Property taxes, homeowners insurance, HOA dues and private mortgage insurance would be added on top of these figures."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="interest-only-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="interest-only-calculator" data-page-type="calculator">
+  <a id="interest-only-calculator-skip-link" href="#interest-only-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="interest-only-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="interest-only-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="interest-only-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="interest-only-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="interest-only-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="interest-only-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="interest-only-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="interest-only-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="interest-only-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="interest-only-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="interest-only-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="interest-only-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="interest-only-calculator-header-search-status" aria-controls="interest-only-calculator-header-search-results" data-search-input="header">
+              <p id="interest-only-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="interest-only-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="interest-only-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="interest-only-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="interest-only-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="interest-only-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="interest-only-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="interest-only-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="interest-only-calculator-mobile-search-status" aria-controls="interest-only-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="interest-only-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="interest-only-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="interest-only-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="interest-only-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="interest-only-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="interest-only-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="interest-only-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="interest-only-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="interest-only-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="interest-only-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="interest-only-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="interest-only-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="interest-only-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="interest-only-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="interest-only-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="interest-only-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="interest-only-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="interest-only-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="interest-only-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="interest-only-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="interest-only-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="interest-only-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="interest-only-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="interest-only-calculator-sidebar-search-status" aria-controls="interest-only-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="interest-only-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="interest-only-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="interest-only-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="interest-only-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="interest-only-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="interest-only-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="interest-only-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="interest-only-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="interest-only-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators" aria-current="true">Mortgage &amp; Home Buying</a></li><li><a id="interest-only-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="interest-only-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="interest-only-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="interest-only-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="interest-only-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="interest-only-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="interest-only-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="interest-only-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="interest-only-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="interest-only-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="interest-only-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="interest-only-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="interest-only-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="interest-only-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="interest-only-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="interest-only-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="interest-only-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="interest-only-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="interest-only-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="interest-only-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="interest-only-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="interest-only-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="interest-only-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="interest-only-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="interest-only-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="interest-only-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="interest-only-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="interest-only-calculator" data-calculator-slug="interest-only-calculator" data-sub-category-slug="mortgage-calculators">
+      <aside id="interest-only-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="interest-only-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="interest-only-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="interest-only-calculator-ad-top-leaderboard">
+            <ins id="interest-only-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("interest-only-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="interest-only-calculator-intro-area" class="space-y-4">
+        <nav id="interest-only-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="interest-only-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="interest-only-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="interest-only-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="interest-only-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#mortgage-calculators" itemprop="item"><span itemprop="name">Mortgage &amp; Home Buying</span></a><meta itemprop="position" content="3"></li>
+            <li id="interest-only-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Interest Only Mortgage Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/interest-only-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="interest-only-calculator-hero-section" aria-labelledby="interest-only-calculator-hero-heading" data-section="hero">
+          <h1 id="interest-only-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Interest-Only Mortgage Calculator: Monthly Payment Estimate</h1>
+          <p id="interest-only-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Use this interest only mortgage calculator to estimate your monthly payment on a home loan while you pay only interest, and exactly how much that payment jumps once principal repayment begins. Enter the loan amount, interest rate, loan term and interest-only period, and you can compare the lower early payment with a traditional mortgage, plus the extra total interest you pay for that flexibility. <!-- SILO_START:slot_a -->If you want to see how the figures change, the <a class="silo-link" href="/amortization-calculator.html">free amortization calculator</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="interest-only-calculator-tool" class="space-y-6" data-page-slug="interest-only-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="ioFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="ioForm" class="space-y-5" novalidate aria-labelledby="ioFormHeading">
+      <h2 id="ioFormHeading" class="panel-heading">Enter your loan details</h2>
+<div><label for="ioLoan" class="form-label">Loan amount</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="ioLoan" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1000" value="300000" inputmode="decimal"></div></div>
+<div class="form-row form-row-2">
+<div><label for="ioRate" class="form-label">Interest rate</label><div class="input-group"><input type="number" id="ioRate" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="30" step="0.125" value="6.5" inputmode="decimal"><span class="input-affix">%</span></div></div>
+<div><label for="ioTerm" class="form-label">Loan term</label><div class="input-group"><input type="number" id="ioTerm" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="2" max="40" step="1" value="30" inputmode="numeric"><span class="input-affix">yrs</span></div></div>
+</div>
+<div><label for="ioYears" class="form-label">Interest-only period</label><div class="input-group"><input type="number" id="ioYears" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1" max="39" step="1" value="10" inputmode="numeric" aria-describedby="ioYearsHint"><span class="input-affix">yrs</span></div><p id="ioYearsHint" class="form-hint">After this the loan repays principal and interest over the years left.</p></div>
+<details class="form-details"><summary class="form-details-summary">More options</summary>
+<div><label for="ioExtra" class="form-label">Extra principal each month during the interest-only period</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="ioExtra" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="50" value="0" inputmode="decimal" aria-describedby="ioExtraHint"></div><p id="ioExtraHint" class="form-hint">Optional. Lowers the balance, and so the later payment.</p></div>
+<div><label for="ioCompareRate" class="form-label">Rate for a standard loan (for comparison)</label><div class="input-group"><input type="number" id="ioCompareRate" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="30" step="0.125" value="6.5" inputmode="decimal" aria-describedby="ioCompareRateHint"><span class="input-affix">%</span></div><p id="ioCompareRateHint" class="form-hint">A fully amortizing loan over the same term. Lenders often quote it a little lower.</p></div>
+</details>
+      <p id="ioError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="ioResults" aria-live="polite" aria-labelledby="ioResultsHeading">
+      <h2 id="ioResultsHeading" class="panel-heading">Your results</h2>
+<div class="stat-grid mt-4">
+<div class="stat-card stat-card-highlight"><p class="stat-label">Interest-only payment</p><p id="ioPay" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">Payment after the interest-only period</p><p id="ioLaterPay" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">Payment increase</p><p id="ioJump" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">Total interest</p><p id="ioTotalInterest" class="stat-value">–</p></div>
+</div>
+<h3 class="mt-6 font-display text-base font-bold">Interest-only loan</h3>
+<div class="mt-2">
+<div class="result-row"><span class="result-term">Balance when principal payments start</span><span id="ioBalanceAtReset" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Principal payments start with payment</span><span id="ioResetWhen" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Total of all payments</span><span id="ioTotalPaid" class="result-value">–</span></div>
+</div>
+<h3 class="mt-6 font-display text-base font-bold">Compared with a standard loan</h3>
+<div class="mt-2">
+<div class="result-row"><span class="result-term">Standard monthly payment</span><span id="ioStdPay" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Standard loan total interest</span><span id="ioStdInterest" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Extra interest with interest-only</span><span id="ioExtraCost" class="result-value">–</span></div>
+</div>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="ioScheduleHeading" data-section="schedule">
+  <h2 id="ioScheduleHeading" class="panel-heading">Year-by-year schedule</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">Payment is the one in effect in the last month of each year; principal and interest are totals for the year.</p>
+  <div class="table-scroll mt-5 max-h-[520px]" tabindex="0" role="region" aria-labelledby="ioScheduleHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Year</th><th scope="col">Monthly payment</th><th scope="col">Principal</th><th scope="col">Interest</th><th scope="col">Ending balance</th></tr></thead>
+      <tbody id="ioSchedule"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="interest-only-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="interest-only-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Use this interest only mortgage calculator to estimate your monthly payment on a home loan while you pay only interest, and exactly how much that payment jumps once principal repayment begins. Enter the loan amount, interest rate, loan term and interest-only period, and you can compare the lower early payment with a traditional mortgage, plus the extra total interest you pay for that flexibility. <!-- SILO_START:slot_a_m -->If you want to see how the figures change, the <a class="silo-link" href="/amortization-calculator.html">free amortization calculator</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="interest-only-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="interest-only-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="interest-only-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="interest-only-calculator-ad-in-feed">
+            <ins id="interest-only-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("interest-only-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="interest-only-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="interest-only-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="interest-only-calculator-guide-heading-1">
+<h2 id="interest-only-calculator-guide-heading-1">How the Interest Only Mortgage Calculator Works</h2>
+<p>An <strong>interest-only mortgage</strong> lets you pay just the interest charged on your balance for a set stretch of years, usually three to ten. Nothing you pay during that window reduces what you owe, and you must still repay every dollar of it. Some lenders call this product an interest only loan or an IO loan. When the window closes, the lender recalculates your payment so the full balance is repaid over the remaining term, which is why the second payment is always larger than the first. A good mortgage payment calculator for this loan type therefore has to show two payments, not one, and this mortgage calculator does exactly that. <!-- SILO_START:slot_b -->Next, open the <a class="silo-link" href="/interest-only-arm-calculator.html">free interest only arm calculator</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_b --></p>
+
+<h3>Loan Amount, Loan Term and Interest Rate</h3>
+<p>Four inputs drive every figure on the screen. Fill them in with the numbers from your lender's quote or pre-approval letter, and use a current estimate if you do not have a quote yet:</p>
+<ul>
+<li><strong>Loan amount:</strong> the home price minus your down payment, not the sticker price of the house.</li>
+<li><strong>Loan term:</strong> the total length of the mortgage in years, commonly 20, 25 or 30.</li>
+<li><strong>Interest rate:</strong> the annual rate your lender quotes, entered as a percentage.</li>
+<li><strong>Interest-only period:</strong> how many of those years you pay interest alone before principal repayment starts.</li>
+</ul>
+
+<h3>Results You Get Back</h3>
+<p>After you click the calculate button, the calculator returns your monthly payment during the interest-only period, your higher monthly payment once amortization begins, your total payments and the total interest over the life of the loan. This interest-only mortgage calculator then compares those figures with a fully amortizing loan shows the cost difference between the two structures in dollars, which is the number most borrowers want before they commit.</p>
+        </section>
+        <section id="interest-only-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="interest-only-calculator-guide-heading-2">
+<h2 id="interest-only-calculator-guide-heading-2">Interest-Only Mortgage Payments: The Formula Behind the Numbers</h2>
+<p>The math is simple enough to check by hand. During the interest-only period, each month's payment is the balance multiplied by the monthly interest rate, which is the annual rate divided by 12: <!-- SILO_START:slot_c -->Next, open the <a class="silo-link" href="/fixed-rate-mortgage-vs-interest-only-mortgage-calculator.html">fixed vs interest-only mortgage calculator online</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_c --></p>
+<p>$$\text{Interest-only payment} = \text{Loan amount} \times \frac{\text{Annual rate}}{12}$$</p>
+<p>After the interest-only period ends, the payment becomes a standard amortizing payment computed over the <em>remaining</em> term only, not the original term. With monthly rate \(r\), loan amount \(P\) and \(n\) months left, the principal and interest payment is:</p>
+<p>$$M = P \times \frac{r}{1 - (1 + r)^{-n}}$$</p>
+<p>Because \(n\) shrinks while \(P\) stays the same, the principal and interest payment climbs. A 30-year loan with a ten-year interest-only period is repaid in just 240 months, so you carry the whole balance on a shorter clock.</p>
+
+<h3>Why the Remaining Term Matters</h3>
+<p>Many borrowers assume the second payment will look like an ordinary 30-year payment. It does not. The lender squeezes the entire principal into the <strong>remaining term</strong>, so a ten-year interest-only period on a 30-year loan produces a payment based on 20 years. That compression is where payment shock comes from.</p>
+        </section>
+        <section id="interest-only-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="interest-only-calculator-guide-heading-3">
+<h2 id="interest-only-calculator-guide-heading-3">Worked Example: A $385,000 Home Loan With a 10-Year Interest-Only Period</h2>
+<p>Suppose you borrow <strong>$385,000</strong> at a <strong>6.375%</strong> interest rate on a 30-year loan term, with the first 10 years interest-only. The monthly rate is 6.375% ÷ 12 = 0.53125%. Here is what the interest-only mortgage calculator returns:</p>
+<table>
+<thead><tr><th>Result</th><th>Interest-only loan</th><th>Traditional 30-year loan</th></tr></thead>
+<tbody>
+<tr><td>Monthly payment, years 1-10</td><td>$2,045.31</td><td>$2,401.90</td></tr>
+<tr><td>Monthly payment, years 11-30</td><td>$2,842.19</td><td>$2,401.90</td></tr>
+<tr><td>Total interest over 30 years</td><td>$542,564.15</td><td>$479,683.68</td></tr>
+<tr><td>Principal balance after 10 years</td><td>$385,000.00</td><td>$325,358.17</td></tr>
+</tbody>
+</table>
+
+<h3>Monthly Payments Before and After the Reset</h3>
+<p>For the first 120 months your interest-only loan payment is <strong>$2,045.31</strong>, which is $356.59 less than the $2,401.90 traditional payment. In month 121 the payment becomes <strong>$2,842.19</strong>, an increase of $796.88, or about 39%, over what you were used to. You also end up paying $440.29 more each month than you would have on the traditional loan for the same remaining years.</p>
+<figure><img src="/assets/images/tools/interest-only-calculator/interest-only-mortgage-payment-jump-chart.svg" alt="Line chart of the monthly payment on a $385,000 interest-only mortgage rising from $2,045.31 to $2,842.19 when the interest-only period ends after year 10"><figcaption>Monthly payment before and after the interest-only period ends</figcaption></figure>
+
+<h3>Total Interest and Equity Built</h3>
+<p>The interest-only loan costs <strong>$62,880.47</strong> more in total interest ($542,564.15 versus $479,683.68). It also leaves your balance untouched: after ten years you still owe $385,000, while the traditional borrower has paid it down to $325,358.17 and built $59,641.83 of equity through payments alone. During the interest-only period itself you pay $245,437.50 in interest and none of it reduces the principal balance.</p>
+<figure><img src="/assets/images/tools/interest-only-calculator/interest-only-loan-total-cost-breakdown.svg" alt="Donut chart splitting the $927,564 total cost of a 10-year interest-only loan into $385,000 of principal and $542,564 of interest"><figcaption>Where the money goes over 30 years on the interest-only loan</figcaption></figure>
+        </section>
+        <section id="interest-only-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="interest-only-calculator-guide-heading-4">
+<h2 id="interest-only-calculator-guide-heading-4">Interest-Only Loan vs a Traditional Mortgage: Total Cost Compared</h2>
+<p>The longer the interest-only period, the bigger the gap between the two loan types. Using the same $385,000 loan at 6.375% over 30 years, this table shows how the period length changes both the later payment and the lifetime interest bill:</p>
+<table>
+<thead><tr><th>Interest-only period</th><th>Early monthly payment</th><th>Payment after reset</th><th>Total interest</th></tr></thead>
+<tbody>
+<tr><td>None (traditional)</td><td>$2,401.90</td><td>$2,401.90</td><td>$479,683.68</td></tr>
+<tr><td>5 years</td><td>$2,045.31</td><td>$2,569.56</td><td>$508,585.67</td></tr>
+<tr><td>10 years</td><td>$2,045.31</td><td>$2,842.19</td><td>$542,564.15</td></tr>
+<tr><td>15 years</td><td>$2,045.31</td><td>$3,327.36</td><td>$582,081.75</td></tr>
+</tbody>
+</table>
+<p>Notice that the early payment never changes; only the later payment and the total interest do. A conventional loan also keeps your payment level for the whole life of the loan, which makes it easier to budget than a standard loan that steps up.</p>
+<figure><img src="/assets/images/tools/interest-only-calculator/total-interest-by-interest-only-period.svg" alt="Bar chart of total 30-year interest on a $385,000 loan growing from $479,684 with no interest-only period to $582,082 with 15 interest-only years"><figcaption>Total interest grows with every year you stay interest-only</figcaption></figure>
+
+<h3>Amortization Schedule Differences</h3>
+<p>On a traditional loan, the first payment is mostly interest, but a slice of principal goes toward the balance every month and that slice grows with time. On an interest-only loan the amortization schedule is flat at first: every payment is 100% interest. Once repayment begins, the schedule behaves like a shorter traditional loan, with a larger principal share from the start.</p>
+        </section>
+        <section id="interest-only-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="interest-only-calculator-guide-heading-5">
+<h2 id="interest-only-calculator-guide-heading-5">How Mortgage Rates and the Interest-Only Period Length Change Your Payment</h2>
+<p>Two choices move your numbers more than anything else: the interest rate and the length of the interest-only period. Most interest-only loans are an <strong>adjustable-rate mortgage</strong> (ARM), so the rate in your first year is rarely the rate you carry for 30 years. A fixed-rate mortgage holds the same rate throughout, but fixed-rate interest-only options are rarer and often priced higher.</p>
+
+<h3>Adjustable Rate Resets</h3>
+<p>If your rate reset after the interest-only period and rose by one point to 7.375%, the payment on the remaining 240 months would be <strong>$3,072.17</strong> instead of $2,842.19. At 8.375% it would reach $3,310.72. Run the calculator with a rate one or two points above your starting rate before you sign, because that stress test shows whether you could still afford the loan.</p>
+
+<h3>Choosing a Shorter or Longer Period</h3>
+<p>A five-year period limits the damage: the later payment is $2,569.56 and total interest is about $29,000 lower than with a ten-year period. A fifteen-year period pushes the later payment to $3,327.36. Pick the shortest interest-only period that still gives you the cash flow you need, and confirm it with the mortgage calculator before you apply for the mortgage.</p>
+        </section>
+        <section id="interest-only-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="interest-only-calculator-guide-heading-6">
+<h2 id="interest-only-calculator-guide-heading-6">Pros and Cons of an Interest-Only Mortgage</h2>
+<p>An interest-only mortgage trades a lower payment today for a higher payment and a bigger interest bill later. Weigh both sides honestly.</p>
+<h3>Pros</h3>
+<ul>
+<li><strong>Lower monthly payments</strong> and lower interest-only payments during the initial period, which frees up cash for renovations, savings or other investments.</li>
+<li><strong>Greater short-term affordability</strong>, which can help you qualify for a more expensive home.</li>
+<li><strong>Cash flow flexibility</strong> for real estate investors and anyone with irregular income.</li>
+<li>The option to make voluntary principal payments whenever cash is available.</li>
+</ul>
+<h3>Cons</h3>
+<ul>
+<li><strong>No way to build equity</strong> from your payments during the interest-only period; you cannot build equity unless the home appreciates or you prepay.</li>
+<li><strong>Payment shock</strong> when higher payments begin on a shorter remaining term.</li>
+<li><strong>Higher total interest</strong> than a traditional loan, since the balance never shrinks early on.</li>
+<li>Rate risk if the loan is an adjustable-rate mortgage that resets upward.</li>
+</ul>
+        </section>
+        <section id="interest-only-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="interest-only-calculator-guide-heading-7">
+<h2 id="interest-only-calculator-guide-heading-7">Checking a $298,750 Interest-Only Mortgage With the Calculator</h2>
+<p>Marisol is buying a duplex to live in one half and rent the other. Her lender has quoted <strong>$298,750</strong> at <strong>6.875%</strong> over 30 years, with the first seven years interest-only. She earns $9,850 a month before tax and already pays $1,120 a month on a car loan and student debt, so before she signs she wants to know what the loan does to her debt-to-income ratio once the interest-only window shuts.</p>
+<p>She enters the loan amount, the rate, a 30-year term and a seven-year interest-only period, then reads both payments. The first is <strong>$1,711.59</strong>, calculated as $298,750 × 0.06875 ÷ 12. The second, for months 85 to 360, is <strong>$2,157.41</strong>, a jump of $445.83 because the same balance must now be repaid in 23 years.</p>
+<table>
+<thead><tr><th>Stage</th><th>Mortgage payment</th><th>Total monthly debts</th><th>Debt-to-income</th></tr></thead>
+<tbody>
+<tr><td>Years 1-7</td><td>$1,711.59</td><td>$2,831.59</td><td>28.7%</td></tr>
+<tr><td>Years 8-30</td><td>$2,157.41</td><td>$3,277.41</td><td>33.3%</td></tr>
+</tbody>
+</table>
+<p>The lender's ceiling is a 43% debt-to-income ratio, a common qualifying limit for a conventional loan, which would allow $4,235.50 a month in total debts. Marisol's post-reset ratio of 33.3% clears it with room to spare. She then reruns the calculator with the rate raised to 7.875% to mimic an adjustable-rate reset, and the later payment rises to $2,346.33, a ratio of 35.2%, still under the ceiling. That result makes her decision: she accepts the seven-year period, and sets up an automatic $445 extra principal payment each month so the balance starts shrinking before the reset arrives.</p>
+        </section>
+        <section id="interest-only-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="interest-only-calculator-guide-heading-8">
+<h2 id="interest-only-calculator-guide-heading-8">Who Uses an Interest-Only Mortgage Loan and What to Check in the Calculator</h2>
+<p>Because the structure rewards a defined exit plan, a handful of borrower types use it most, and each should read a different result on the screen.</p>
+<h3>Real Estate Investors and Rental Property Owners</h3>
+<p>Investors and landlords often use the lower payment to maximize cash flow on a rental property, using rent to cover interest while they renovate, resell or refinance. Leverage works in their favor only if prices rise, so the plan needs a margin for error: compare the early payment with expected rent, then test the payment after the reset in the calculator.</p>
+<h3>Short-Term Homeowners</h3>
+<p>If you expect to sell or refinance before the interest-only period ends, you capture the lower payment and never face the higher one. Short-term homeowners should still test a flat or falling market, since selling may not cover the unchanged balance. Enter your expected sale year as the interest-only period and check how much you would still owe.</p>
+<h3>First-Time Homebuyers Expecting Income Growth</h3>
+<p>Some first-time homebuyers expecting raises, bonuses or windfalls choose lower payments now, planning to pay down principal later. This only works if the extra income is realistic and you have a savings cushion. Run the calculator and check whether a cautious income estimate still covers the higher payment after the reset.</p>
+        </section>
+        <section id="interest-only-calculator-guide-section-9" class="panel article-content p-4 sm:p-6" aria-labelledby="interest-only-calculator-guide-heading-9">
+<h2 id="interest-only-calculator-guide-heading-9">Qualifying for an Interest-Only Home Loan</h2>
+<p>These loans are not backed by FHA, VA or USDA programs, so the borrower qualification bar is higher than for a conventional loan. Lenders typically look for:</p>
+<ul>
+<li>A strong credit score, often 700 or above.</li>
+<li>A low debt-to-income ratio, commonly 43% or less.</li>
+<li>A substantial down payment, frequently 20% or more.</li>
+<li>Proof of savings or reserves to cover the higher monthly payments ahead.</li>
+</ul>
+<p>Ask each lender how it qualifies you: some size your debt-to-income ratio on the interest-only payment, while others use the higher amortizing payments, which can change how much you can borrow.</p>
+        </section>
+        <section id="interest-only-calculator-guide-section-10" class="panel article-content p-4 sm:p-6" aria-labelledby="interest-only-calculator-guide-heading-10">
+<h2 id="interest-only-calculator-guide-heading-10">What Else Is in Your House Payment: Taxes, Insurance and PMI</h2>
+<p>The calculator shows principal and interest, but your lender's monthly bill is usually larger. It is built from four parts known as <strong>PITI</strong>: principal, interest, taxes and insurance. Property taxes and homeowners insurance are commonly collected through an escrow account, and you may also owe private mortgage insurance (PMI) if your down payment is below 20%, plus HOA dues in some communities.</p>
+<dl>
+<dt>Property taxes</dt><dd>Billed by local governments based on your home's assessed value.</dd>
+<dt>Homeowners insurance</dt><dd>Required by the lender to protect the collateral behind your loan.</dd>
+<dt>Private mortgage insurance</dt><dd>An added monthly cost (PMI) when you borrow more than 80% of the home price.</dd>
+<dt>HOA dues</dt><dd>Monthly fees in condo and townhome communities, sometimes paid through escrow.</dd>
+</dl>
+<aside>Add these extras, including any HOA fees, to the calculator's payment, because they apply during the interest-only period too and your lender's estimate will include them.</aside>
+        </section>
+        <section id="interest-only-calculator-guide-section-11" class="panel article-content p-4 sm:p-6" aria-labelledby="interest-only-calculator-guide-heading-11">
+<h2 id="interest-only-calculator-guide-heading-11">Prepare Before You Use a Mortgage Payment Calculator: Down Payment, Credit and Pre-Approval</h2>
+<p>Your estimate is only as good as your inputs, so gather real numbers first. A larger <strong>down payment</strong> shrinks the loan amount, which lowers the monthly payments you see in every result and can remove PMI altogether. Many lenders expect 20% down on an interest-only home loan, although a conventional loan can accept less. If cash is short, <strong>down payment assistance</strong> programs from state housing agencies may help, but they rarely pair with interest-only products, so ask your bank before you count on one.</p>
+<h3>Credit Scores and Preapproval</h3>
+<p>Your credit scores set the interest rate you are offered, and that quoted rate becomes the calculator's interest-rate input. Half a percentage point on $385,000 changes the interest-only payment by about $160 a month and raises the payment after the reset too. A formal preapproval from a bank replaces guesswork with a quoted rate, so copy your inputs from the preapproval letter.</p>
+<h3>Comparing Current Rates Across Lenders</h3>
+<p>Mortgage rates change daily, and gaps between lenders' rates add up, so ask at least three lenders for quotes on the same day and request the rate on the interest-only product specifically; it is often higher than the advertised fixed-rate mortgage. Enter each quote into the calculator to estimate and compare monthly payments and total interest side by side. The lowest advertised rate is not always the best loan if fees or a short reset window offset it.</p>
+        </section>
+        <section id="interest-only-calculator-guide-section-12" class="panel article-content p-4 sm:p-6" aria-labelledby="interest-only-calculator-guide-heading-12">
+<h2 id="interest-only-calculator-guide-heading-12">Financial Goals and Alternatives to an Interest-Only Mortgage: Compare Them in the Calculator</h2>
+<p>Before you commit, check whether another loan reaches the same <strong>financial goals</strong> with less risk. An FHA loan, insured by the Federal Housing Administration, accepts a down payment as low as 3.5% and starts principal repayment on day one. VA loans, offered to eligible veterans and service members, can require no down payment at all. A homeowner who simply needs a lower payment can also stretch a fixed term or shop for a better rate. These government-backed programs do not include interest-only periods, so they are alternatives rather than substitutes. To compare, enter a traditional-loan scenario with no interest-only period and set it beside the interest-only result.</p>
+<h3>Investing the Savings</h3>
+<p>Some borrowers choose an interest-only loan to redirect the monthly savings into an investment, hoping to out-earn the mortgage rate. That is a bet, not a guarantee: investing returns vary, liquidity can vanish in a downturn, and the interest you owe is certain. The $356.59 monthly saving in the example would need to earn more than the 6.375% loan rate, after taxes and fees, to beat simply paying down the loan.</p>
+<h3>Housing Market Risk</h3>
+<p>Interest-only borrowers lean on appreciation, not payments, to gain equity. In a hot housing market that can work; in a flat or falling one you may owe more than the home is worth when the reset arrives. The Consumer Financial Protection Bureau explains that during the interest-only period you are not paying down the loan, which is why a firm exit plan matters: in the example, the $385,000 balance is unchanged after ten years, so any equity must come from price growth.</p>
+        </section>
+        <section id="interest-only-calculator-guide-section-13" class="panel article-content p-4 sm:p-6" aria-labelledby="interest-only-calculator-guide-heading-13">
+<h2 id="interest-only-calculator-guide-heading-13">Is an Interest-Only Mortgage Right for You?</h2>
+<p>Ask three questions before you choose this structure. Can you afford the post-reset payment at a higher rate? Do you have a credible plan to sell, refinance or pay down principal before the reset? Is your risk tolerance high enough to carry a balance that has not fallen? If any answer is no, a traditional loan or a shorter interest-only period is the safer choice.</p>
+<p>Refinancing is a common exit, but it is not guaranteed: it depends on your credit, your equity and mortgage rates at that moment. Older balloon loans carried the same kind of risk, a large bill due on a fixed date. Rerun the calculator at a rate a point higher to check that a refinance would still be workable. Talk with a mortgage professional, compare loan options from several lenders and use this home loan calculator with different inputs, then compare the results against your own financial situation until the worst case still fits your budget.</p>
+        </section>
+      </div>
+
+      <section id="interest-only-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="interest-only-calculator-faq-heading" data-section="faq">
+        <h2 id="interest-only-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Interest Only Mortgage Calculator questions</h2>
+        <div id="interest-only-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="interest-only-calculator-faq-1" class="faq-item" open><summary id="interest-only-calculator-faq-1-summary" class="faq-summary"><h3 id="interest-only-calculator-faq-1-question" class="faq-question">How does an interest-only mortgage payment work?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="interest-only-calculator-faq-1-answer" class="faq-answer"><p>During the interest-only period you pay only the interest on the balance each month, so the payment is the loan amount times the annual rate divided by 12 and the balance does not fall. When the period ends, the same balance is repaid over the remaining term, which raises the payment.</p></div></details>
+          <details id="interest-only-calculator-faq-2" class="faq-item" open><summary id="interest-only-calculator-faq-2-summary" class="faq-summary"><h3 id="interest-only-calculator-faq-2-question" class="faq-question">Why does my payment go up after the interest-only period?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="interest-only-calculator-faq-2-answer" class="faq-answer"><p>Once principal repayment starts, the full balance has to be paid off in fewer years than the original term. A 30-year loan with a 10-year interest-only period is repaid over just 20 years, so the monthly payment is higher than an ordinary 30-year payment.</p></div></details>
+          <details id="interest-only-calculator-faq-3" class="faq-item" open><summary id="interest-only-calculator-faq-3-summary" class="faq-summary"><h3 id="interest-only-calculator-faq-3-question" class="faq-question">Do I build equity during the interest-only period?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="interest-only-calculator-faq-3-answer" class="faq-answer"><p>Not through your payments, because none of the payment reduces the principal. Your equity only grows if the home appreciates or you make voluntary principal payments.</p></div></details>
+          <details id="interest-only-calculator-faq-4" class="faq-item" open><summary id="interest-only-calculator-faq-4-summary" class="faq-summary"><h3 id="interest-only-calculator-faq-4-question" class="faq-question">Is an interest-only mortgage cheaper than a traditional mortgage?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="interest-only-calculator-faq-4-answer" class="faq-answer"><p>It is cheaper each month at first, but usually more expensive overall: you pay interest on the full balance for longer, so total interest is higher. Compare both results in the calculator before you decide.</p></div></details>
+          <details id="interest-only-calculator-faq-5" class="faq-item" open><summary id="interest-only-calculator-faq-5-summary" class="faq-summary"><h3 id="interest-only-calculator-faq-5-question" class="faq-question">How long is a typical interest-only period?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="interest-only-calculator-faq-5-answer" class="faq-answer"><p>Most interest-only periods run between three and ten years, although the calculator lets you test anywhere from 1 to 12 years against your total loan term.</p></div></details>
+          <details id="interest-only-calculator-faq-6" class="faq-item" open><summary id="interest-only-calculator-faq-6-summary" class="faq-summary"><h3 id="interest-only-calculator-faq-6-question" class="faq-question">Are interest-only mortgages adjustable-rate loans?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="interest-only-calculator-faq-6-answer" class="faq-answer"><p>Many are adjustable-rate mortgages, so your rate can reset after an initial period. Enter a higher rate in the interest rate field to see how a reset would change your payment.</p></div></details>
+          <details id="interest-only-calculator-faq-7" class="faq-item" open><summary id="interest-only-calculator-faq-7-summary" class="faq-summary"><h3 id="interest-only-calculator-faq-7-question" class="faq-question">Who qualifies for an interest-only mortgage?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="interest-only-calculator-faq-7-answer" class="faq-answer"><p>Lenders usually look for strong credit scores, a low debt-to-income ratio, a sizable down payment and savings reserves, because these loans are not backed by FHA, VA or USDA programs.</p></div></details>
+          <details id="interest-only-calculator-faq-8" class="faq-item" open><summary id="interest-only-calculator-faq-8-summary" class="faq-summary"><h3 id="interest-only-calculator-faq-8-question" class="faq-question">Does the calculator include taxes, insurance and PMI?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="interest-only-calculator-faq-8-answer" class="faq-answer"><p>No. The results show principal and interest only. Property taxes, homeowners insurance, HOA dues and private mortgage insurance would be added on top of these figures.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="interest-only-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="interest-only-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="interest-only-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="interest-only-calculator-ad-bottom-leaderboard">
+            <ins id="interest-only-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("interest-only-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="interest-only-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="interest-only-calculator-right-rail-top" class="mb-6">
+        <aside id="interest-only-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="interest-only-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="interest-only-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="interest-only-calculator-ad-right-rail-rectangle">
+            <ins id="interest-only-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("interest-only-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="interest-only-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="interest-only-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="interest-only-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="interest-only-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="interest-only-calculator-ad-right-rail-skyscraper">
+            <ins id="interest-only-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("interest-only-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="interest-only-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="interest-only-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="interest-only-calculator-footer-brand">
+        <a id="interest-only-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="interest-only-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="interest-only-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="interest-only-calculator-footer-categories" aria-labelledby="interest-only-calculator-footer-categories-heading">
+        <h2 id="interest-only-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="interest-only-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="interest-only-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="interest-only-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="interest-only-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="interest-only-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="interest-only-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="interest-only-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="interest-only-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="interest-only-calculator-footer-company" aria-labelledby="interest-only-calculator-footer-company-heading">
+        <h2 id="interest-only-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="interest-only-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="interest-only-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="interest-only-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="interest-only-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="interest-only-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="interest-only-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="interest-only-calculator-footer-bottom" class="border-t border-line">
+      <p id="interest-only-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="interest-only-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Interest-only mortgage.
+  //   During the interest-only period: payment = balance * rate / 12 (+ any extra principal).
+  //   After it: the balance left is repaid over the remaining months,
+  //   M = B * i / (1 - (1 + i)^-n), i = rate / 12, n = months left (M = B / n at 0%).
+  //   Comparison: a standard loan for the same amount and full term at the comparison rate.
+  // Verified in Node (scratchpad tests/w2b): $300,000 at 6.5%, 30 yrs, 10 yrs interest-only =
+  //   $1,625.00/mo, then $2,236.72/mo (closed form over 240 months), total interest $431,812.66
+  //   (= 120 * 1,625 + 240 * 2,236.72 - 300,000); standard loan $1,896.20/mo, $382,633.47 interest;
+  //   $200/mo extra principal leaves $276,000 and a $2,057.78 payment; paying $5,000/mo extra clears
+  //   the loan in 60 months with $49,562.50 interest (arithmetic series); 0% rate = $0 then $1,250/mo;
+  //   no NaN/Infinity on blank or bad input.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 });
+
+  function el(id) { return document.getElementById(id); }
+  function setText(id, text) { el(id).textContent = text; }
+
+  function read(id, blankAsZero) {
+    var raw = String(el(id).value).trim();
+    if (raw === '') return blankAsZero ? 0 : NaN;
+    var v = Number(raw);
+    return isFinite(v) ? v : NaN;
+  }
+
+  function payment(balance, annualPct, months) {
+    if (months <= 0 || balance <= 0) return 0;
+    var i = annualPct / 1200;
+    if (i === 0) return balance / months;
+    return balance * i / (1 - Math.pow(1 + i, -months));
+  }
+
+  function interestOnly(loan, rate, months, ioMonths, extra) {
+    var bal = loan, i = rate / 1200, rows = [], total = 0, pay = 0, balAtReset = loan;
+    for (var m = 1; m <= months && bal > 0.005; m++) {
+      var interest = bal * i, principal;
+      if (m <= ioMonths) {
+        principal = Math.min(extra, bal);
+      } else {
+        if (m === ioMonths + 1) { balAtReset = bal; pay = payment(bal, rate, months - ioMonths); }
+        principal = m === months ? bal : Math.min(pay - interest, bal);
+      }
+      bal -= principal;
+      if (bal < 0.005) bal = 0;
+      total += interest;
+      rows.push({ n: m, payment: interest + principal, principal: principal, interest: interest, balance: bal });
+    }
+    if (ioMonths >= rows.length) balAtReset = bal;
+    return { ioPay: loan * i, laterPay: pay, balAtReset: balAtReset, totalInterest: total, rows: rows };
+  }
+
+  function clearResults() {
+    ['ioPay', 'ioLaterPay', 'ioJump', 'ioTotalInterest', 'ioBalanceAtReset', 'ioResetWhen', 'ioTotalPaid', 'ioStdPay',
+     'ioStdInterest', 'ioExtraCost'].forEach(function (id) { setText(id, '–'); });
+    el('ioSchedule').innerHTML = '';
+  }
+
+  function update() {
+    var loan = read('ioLoan'), rate = read('ioRate'), years = read('ioTerm'), ioYears = read('ioYears'),
+        extra = read('ioExtra', true), cmpRate = read('ioCompareRate');
+    var msg = '';
+    if (isNaN(loan) || loan <= 0) msg = 'Enter a loan amount greater than $0.';
+    else if (isNaN(rate) || rate < 0 || rate > 30) msg = 'Enter an interest rate from 0% to 30%.';
+    else if (isNaN(years) || years < 2 || years > 40 || years % 1 !== 0) msg = 'Enter a loan term of 2 to 40 whole years.';
+    else if (isNaN(ioYears) || ioYears < 1 || ioYears % 1 !== 0 || ioYears >= years) msg = 'Enter an interest-only period of at least 1 whole year that is shorter than the loan term.';
+    else if (isNaN(extra) || extra < 0) msg = 'Extra principal cannot be negative.';
+    else if (isNaN(cmpRate) || cmpRate < 0 || cmpRate > 30) msg = 'Enter a comparison rate from 0% to 30%.';
+    var error = el('ioError');
+    error.hidden = !msg;
+    error.textContent = msg;
+    if (msg) { clearResults(); return; }
+
+    var months = years * 12, ioMonths = ioYears * 12;
+    var r = interestOnly(loan, rate, months, ioMonths, extra);
+    var stdPay = payment(loan, cmpRate, months);
+    var stdInterest = stdPay * months - loan;
+    if (cmpRate === 0) stdInterest = 0;
+
+    setText('ioPay', money.format(r.ioPay));
+    setText('ioLaterPay', money.format(r.laterPay));
+    var jump = r.laterPay - r.ioPay;
+    setText('ioJump', r.ioPay > 0 ? money.format(jump) + ' (' + (jump >= 0 ? '+' : '') + Math.round(jump / r.ioPay * 100) + '%)' : money.format(jump));
+    setText('ioTotalInterest', money.format(r.totalInterest));
+    setText('ioBalanceAtReset', money.format(r.balAtReset));
+    setText('ioResetWhen', r.rows.length > ioMonths ? String(ioMonths + 1) : 'Paid off during the interest-only period');
+    setText('ioTotalPaid', money.format(loan + r.totalInterest));
+    setText('ioStdPay', money.format(stdPay));
+    setText('ioStdInterest', money.format(stdInterest));
+    setText('ioExtraCost', money.format(r.totalInterest - stdInterest));
+
+    var html = [], p = 0, intr = 0;
+    r.rows.forEach(function (row, idx) {
+      p += row.principal; intr += row.interest;
+      if (row.n % 12 === 0 || idx === r.rows.length - 1) {
+        html.push('<tr><td>' + Math.ceil(row.n / 12) + '</td><td>' + money.format(row.payment) + '</td><td>' + money.format(p) +
+          '</td><td>' + money.format(intr) + '</td><td>' + money.format(row.balance) + '</td></tr>');
+        p = 0; intr = 0;
+      }
+    });
+    el('ioSchedule').innerHTML = html.join('');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = el('ioForm');
+    if (!form) return;
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

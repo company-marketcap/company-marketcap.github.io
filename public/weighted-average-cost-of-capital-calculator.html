@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en" id="weighted-average-cost-of-capital-calculator-document" data-page-slug="weighted-average-cost-of-capital-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WACC Calculator: Weighted Average Cost of Capital</title>
+  <meta name="description" content="Find your WACC, the weighted average cost of capital, by blending the cost of equity and debt after tax. Enter five inputs to see the return your company must earn.">
+  <link rel="canonical" href="https://company-marketcap.github.io/weighted-average-cost-of-capital-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="WACC Calculator: Weighted Average Cost of Capital">
+  <meta property="og:description" content="Find your WACC, the weighted average cost of capital, by blending the cost of equity and debt after tax. Enter five inputs to see the return your company must earn.">
+  <meta property="og:url" content="https://company-marketcap.github.io/weighted-average-cost-of-capital-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Weighted Average Cost of Capital Calculator", "url": "https://company-marketcap.github.io/weighted-average-cost-of-capital-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Find your WACC, the weighted average cost of capital, by blending the cost of equity and debt after tax. Enter five inputs to see the return your company must earn."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Business Finance & Valuation", "item": "https://company-marketcap.github.io/financial-calculators.html#business-calculators"}, {"@type": "ListItem", "position": 4, "name": "Weighted Average Cost of Capital Calculator", "item": "https://company-marketcap.github.io/weighted-average-cost-of-capital-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does a WACC calculator tell you?", "acceptedAnswer": {"@type": "Answer", "text": "It returns the average annual rate a company pays to fund its assets from equity and debt, weighted by how much of each it uses. It is the minimum return new investments should earn to avoid destroying value."}}, {"@type": "Question", "name": "Should I use market value or book value for equity and debt?", "acceptedAnswer": {"@type": "Answer", "text": "Use market value. The weights should reflect what investors would pay for the company's shares and debt today, not the historical amounts on the balance sheet."}}, {"@type": "Question", "name": "Why is the cost of debt multiplied by (1 - tax rate)?", "acceptedAnswer": {"@type": "Answer", "text": "Interest is tax-deductible, so each dollar of interest lowers the tax bill. The after-tax cost of debt is therefore lower than the stated interest rate, and the effect grows with the tax rate."}}, {"@type": "Question", "name": "How do I estimate the cost of equity?", "acceptedAnswer": {"@type": "Answer", "text": "Most analysts use CAPM: the risk-free rate plus beta multiplied by the equity risk premium. For example, a 4% risk-free rate, a beta of 1.2 and a 5% premium give a cost of equity of 10%."}}, {"@type": "Question", "name": "What is a good WACC?", "acceptedAnswer": {"@type": "Answer", "text": "There is no single good number. Stable, asset-heavy industries often sit lower than technology firms or startups, whose investors expect more for the risk. What matters is whether your projects return more than your WACC."}}, {"@type": "Question", "name": "How is WACC used in valuation and budgeting?", "acceptedAnswer": {"@type": "Answer", "text": "In discounted cash flow analysis it is the discount rate applied to future free cash flows, and in capital budgeting it is the hurdle rate a project's return has to beat."}}, {"@type": "Question", "name": "When should I include preferred stock?", "acceptedAnswer": {"@type": "Answer", "text": "Include it when preferred shares are a meaningful part of your financing. It adds a third weighted term using its market value and dividend yield."}}, {"@type": "Question", "name": "Can WACC change over time?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Interest rates, your share price, your tax rate and your debt-to-equity mix all shift it, so it is worth recalculating whenever your financing changes."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="weighted-average-cost-of-capital-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="weighted-average-cost-of-capital-calculator" data-page-type="calculator">
+  <a id="weighted-average-cost-of-capital-calculator-skip-link" href="#weighted-average-cost-of-capital-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="weighted-average-cost-of-capital-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="weighted-average-cost-of-capital-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="weighted-average-cost-of-capital-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="weighted-average-cost-of-capital-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="weighted-average-cost-of-capital-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="weighted-average-cost-of-capital-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="weighted-average-cost-of-capital-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="weighted-average-cost-of-capital-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="weighted-average-cost-of-capital-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="weighted-average-cost-of-capital-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="weighted-average-cost-of-capital-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="weighted-average-cost-of-capital-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="weighted-average-cost-of-capital-calculator-header-search-status" aria-controls="weighted-average-cost-of-capital-calculator-header-search-results" data-search-input="header">
+              <p id="weighted-average-cost-of-capital-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="weighted-average-cost-of-capital-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="weighted-average-cost-of-capital-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="weighted-average-cost-of-capital-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="weighted-average-cost-of-capital-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="weighted-average-cost-of-capital-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="weighted-average-cost-of-capital-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="weighted-average-cost-of-capital-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="weighted-average-cost-of-capital-calculator-mobile-search-status" aria-controls="weighted-average-cost-of-capital-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="weighted-average-cost-of-capital-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="weighted-average-cost-of-capital-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="weighted-average-cost-of-capital-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="weighted-average-cost-of-capital-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="weighted-average-cost-of-capital-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="weighted-average-cost-of-capital-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="weighted-average-cost-of-capital-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="weighted-average-cost-of-capital-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="weighted-average-cost-of-capital-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="weighted-average-cost-of-capital-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="weighted-average-cost-of-capital-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="weighted-average-cost-of-capital-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="weighted-average-cost-of-capital-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="weighted-average-cost-of-capital-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="weighted-average-cost-of-capital-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="weighted-average-cost-of-capital-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="weighted-average-cost-of-capital-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="weighted-average-cost-of-capital-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="weighted-average-cost-of-capital-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="weighted-average-cost-of-capital-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="weighted-average-cost-of-capital-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="weighted-average-cost-of-capital-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="weighted-average-cost-of-capital-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="weighted-average-cost-of-capital-calculator-sidebar-search-status" aria-controls="weighted-average-cost-of-capital-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="weighted-average-cost-of-capital-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="weighted-average-cost-of-capital-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="weighted-average-cost-of-capital-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="weighted-average-cost-of-capital-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="weighted-average-cost-of-capital-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="weighted-average-cost-of-capital-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="weighted-average-cost-of-capital-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="weighted-average-cost-of-capital-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="weighted-average-cost-of-capital-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="weighted-average-cost-of-capital-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="weighted-average-cost-of-capital-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="weighted-average-cost-of-capital-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="weighted-average-cost-of-capital-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="weighted-average-cost-of-capital-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="weighted-average-cost-of-capital-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="weighted-average-cost-of-capital-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="weighted-average-cost-of-capital-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="weighted-average-cost-of-capital-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="weighted-average-cost-of-capital-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="weighted-average-cost-of-capital-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="weighted-average-cost-of-capital-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="weighted-average-cost-of-capital-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="weighted-average-cost-of-capital-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="weighted-average-cost-of-capital-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="weighted-average-cost-of-capital-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="weighted-average-cost-of-capital-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="weighted-average-cost-of-capital-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="weighted-average-cost-of-capital-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="weighted-average-cost-of-capital-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="weighted-average-cost-of-capital-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="weighted-average-cost-of-capital-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators" aria-current="true">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="weighted-average-cost-of-capital-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="weighted-average-cost-of-capital-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="weighted-average-cost-of-capital-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="weighted-average-cost-of-capital-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="weighted-average-cost-of-capital-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="weighted-average-cost-of-capital-calculator" data-calculator-slug="weighted-average-cost-of-capital-calculator" data-sub-category-slug="business-calculators">
+      <aside id="weighted-average-cost-of-capital-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="weighted-average-cost-of-capital-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="weighted-average-cost-of-capital-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="weighted-average-cost-of-capital-calculator-ad-top-leaderboard">
+            <ins id="weighted-average-cost-of-capital-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("weighted-average-cost-of-capital-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="weighted-average-cost-of-capital-calculator-intro-area" class="space-y-4">
+        <nav id="weighted-average-cost-of-capital-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="weighted-average-cost-of-capital-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="weighted-average-cost-of-capital-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="weighted-average-cost-of-capital-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="weighted-average-cost-of-capital-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#business-calculators" itemprop="item"><span itemprop="name">Business Finance &amp; Valuation</span></a><meta itemprop="position" content="3"></li>
+            <li id="weighted-average-cost-of-capital-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Weighted Average Cost of Capital Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/weighted-average-cost-of-capital-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="weighted-average-cost-of-capital-calculator-hero-section" aria-labelledby="weighted-average-cost-of-capital-calculator-hero-heading" data-section="hero">
+          <h1 id="weighted-average-cost-of-capital-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">WACC Calculator: Weighted Average Cost of Capital</h1>
+          <p id="weighted-average-cost-of-capital-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Every dollar a business raises has a price, and the question is how much you pay on average. The weighted average cost of capital calculator above blends what equity investors expect and what lenders charge into one percentage that your company must earn before it creates any value. Enter your equity, debt, cost of equity, cost of debt and tax rate, and the WACC appears instantly, so you can price projects, valuations and financing choices against a real benchmark. In the sections below you will see the formula, a full worked example and the judgment calls behind each input. <!-- SILO_START:slot_a -->Next, open the <a class="silo-link" href="/margin-calculator.html">free profit margin calculator</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="weighted-average-cost-of-capital-calculator-tool" class="space-y-6" data-page-slug="weighted-average-cost-of-capital-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="wcFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="wcForm" class="space-y-5" novalidate aria-labelledby="wcFormHeading">
+      <h2 id="wcFormHeading" class="panel-heading">Enter the company's capital</h2>
+<fieldset class="form-fieldset"><legend class="form-legend">Common equity</legend>
+<div class="form-choice-group-inline"><label class="form-choice"><input type="radio" name="wcEqMode" id="wcEqModeValue" class="form-choice-input" value="value" checked><span class="form-choice-text">Market value</span></label><label class="form-choice"><input type="radio" name="wcEqMode" id="wcEqModeShares" class="form-choice-input" value="shares"><span class="form-choice-text">Share price × shares</span></label></div>
+<div id="wcEqValueBox"><label for="wcEquity" class="form-label">Market value of equity</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="wcEquity" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10000" value="6000000" inputmode="decimal"></div><p class="form-hint">Market capitalization: what the shares are worth today, not the book equity.</p></div>
+<div id="wcEqSharesBox" class="form-row form-row-2" hidden>
+<div><label for="wcPrice" class="form-label">Share price</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="wcPrice" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="0.01" value="30" inputmode="decimal"></div></div>
+<div><label for="wcShares" class="form-label">Shares outstanding</label><div class="input-group"><input type="number" id="wcShares" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1000" value="200000" inputmode="decimal"></div></div>
+</div>
+<div><label for="wcCostEquity" class="form-label">Cost of equity</label><div class="input-group"><input type="number" id="wcCostEquity" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="0.1" value="10" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">The return shareholders require, often estimated with the CAPM.</p></div>
+</fieldset>
+<fieldset class="form-fieldset"><legend class="form-legend">Debt</legend>
+<div class="form-row form-row-2">
+<div><label for="wcDebt" class="form-label">Market value of debt</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="wcDebt" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10000" value="4000000" inputmode="decimal"></div></div>
+<div><label for="wcCostDebt" class="form-label">Pre-tax cost of debt</label><div class="input-group"><input type="number" id="wcCostDebt" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="0.1" value="6" inputmode="decimal"><span class="input-affix">%</span></div></div>
+</div>
+<p class="form-hint">If the debt isn't traded, its book value is a common stand-in. For the cost, use the yield to maturity on the company's bonds or the rate it would pay on new borrowing.</p>
+<div><label for="wcTax" class="form-label">Tax rate</label><div class="input-group"><input type="number" id="wcTax" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="0.5" value="21" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">The rate at which interest is deductible. The US federal corporate rate is 21%; add state income tax if it applies.</p></div>
+</fieldset>
+<details class="form-details"><summary class="form-details-summary">Preferred stock (optional)</summary>
+<div class="form-row form-row-2">
+<div><label for="wcPref" class="form-label">Market value of preferred stock</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="wcPref" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="10000" value="0" inputmode="decimal"></div></div>
+<div><label for="wcCostPref" class="form-label">Cost of preferred stock</label><div class="input-group"><input type="number" id="wcCostPref" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="100" step="0.1" value="0" inputmode="decimal"><span class="input-affix">%</span></div></div>
+</div>
+<p class="form-hint">Cost of preferred stock is usually its annual dividend divided by its current price. Preferred dividends aren't tax deductible.</p>
+</details>
+      <p id="wcError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="wcResults" aria-live="polite" aria-labelledby="wcResultsHeading">
+      <h2 id="wcResultsHeading" class="panel-heading">Your results</h2>
+<div class="stat-grid mt-4">
+<div class="stat-card stat-card-highlight"><p class="stat-label">WACC</p><p id="wcWacc" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">After-tax cost of debt</p><p id="wcAfterTax" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">Total capital</p><p id="wcTotal" class="stat-value">–</p></div>
+</div>
+<div class="mt-5">
+<div class="result-row"><span class="result-term">Equity weight</span><span id="wcWeightE" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Debt weight</span><span id="wcWeightD" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Preferred stock weight</span><span id="wcWeightP" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Debt-to-equity ratio</span><span id="wcDe" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Yearly interest tax shield</span><span id="wcShield" class="result-value">–</span></div>
+</div>
+<p class="form-hint">WACC is the minimum average return the company must earn on its investments to satisfy all its lenders and shareholders.</p>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="wcTableHeading" data-section="breakdown">
+  <h2 id="wcTableHeading" class="panel-heading">How each source adds up</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">Each source's contribution is its weight times its cost (after tax for debt). The contributions add up to the WACC.</p>
+  <div class="table-scroll mt-5" tabindex="0" role="region" aria-labelledby="wcTableHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Source</th><th scope="col">Market value</th><th scope="col">Weight</th><th scope="col">Cost used</th><th scope="col">Contribution to WACC</th></tr></thead>
+      <tbody>
+<tr><th scope="row">Common equity</th><td id="wcTValE">–</td><td id="wcTWE">–</td><td id="wcTCE">–</td><td id="wcTContE">–</td></tr>
+<tr><th scope="row">Debt (after tax)</th><td id="wcTValD">–</td><td id="wcTWD">–</td><td id="wcTCD">–</td><td id="wcTContD">–</td></tr>
+<tr><th scope="row">Preferred stock</th><td id="wcTValP">–</td><td id="wcTWP">–</td><td id="wcTCP">–</td><td id="wcTContP">–</td></tr>
+<tr><th scope="row">Total</th><td id="wcTValT">–</td><td id="wcTWT">–</td><td></td><td id="wcTContT">–</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+        <p id="weighted-average-cost-of-capital-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="weighted-average-cost-of-capital-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Every dollar a business raises has a price, and the question is how much you pay on average. The weighted average cost of capital calculator above blends what equity investors expect and what lenders charge into one percentage that your company must earn before it creates any value. Enter your equity, debt, cost of equity, cost of debt and tax rate, and the WACC appears instantly, so you can price projects, valuations and financing choices against a real benchmark. In the sections below you will see the formula, a full worked example and the judgment calls behind each input. <!-- SILO_START:slot_a_m -->Next, open the <a class="silo-link" href="/margin-calculator.html">free profit margin calculator</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="weighted-average-cost-of-capital-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="weighted-average-cost-of-capital-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="weighted-average-cost-of-capital-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="weighted-average-cost-of-capital-calculator-ad-in-feed">
+            <ins id="weighted-average-cost-of-capital-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("weighted-average-cost-of-capital-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="weighted-average-cost-of-capital-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="weighted-average-cost-of-capital-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="weighted-average-cost-of-capital-calculator-guide-heading-1">
+<h2 id="weighted-average-cost-of-capital-calculator-guide-heading-1">What Is a WACC Calculator and Why the Cost of Capital Matters</h2>
+<p>A <strong>WACC calculator</strong> takes the mix of money a company uses and returns the average rate it pays for that money. The <strong>cost of capital</strong> is the minimum return your business has to generate on its investments to satisfy the people who funded it. Fall short of it and every new project quietly destroys value, even when the project shows an accounting profit. <!-- SILO_START:slot_b -->The <a class="silo-link" href="/inventory-analysis-calculator.html">inventory analysis calculator</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_b --></p>
+<p>Most firms raise money from two broad sources. <strong>Equity</strong> comes from shareholders who expect returns through dividends and rising share prices, while <strong>debt</strong> comes from lenders and bondholders who expect interest. Because those two groups carry different risks, they ask for different returns, and the weighted average blends both according to how much of each you actually use.</p>
+<ul>
+<li><strong>Equity investors</strong> accept more uncertainty, since they are paid only after lenders, so they demand a higher return.</li>
+<li><strong>Lenders</strong> receive fixed, contractual interest, which makes debt financing cheaper than equity financing for most companies.</li>
+<li><strong>Stakeholders</strong> inside the firm, from the CFO to the board, treat the WACC as the benchmark that every investment has to clear.</li>
+<li>A <strong>weighted average</strong> keeps the result honest, because a company funded 70% by equity should not borrow the cost profile of one funded 70% by debt.</li>
+</ul>
+        </section>
+        <section id="weighted-average-cost-of-capital-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="weighted-average-cost-of-capital-calculator-guide-heading-2">
+<h2 id="weighted-average-cost-of-capital-calculator-guide-heading-2">WACC Formula: How to Calculate WACC from Five Inputs</h2>
+<p>To <strong>calculate WACC</strong>, you weight each source of capital by its share of the firm's total market value and add the results, using the after-tax figure for debt: <!-- SILO_START:slot_c -->The <a class="silo-link" href="/breakeven-analysis-calculator.html">breakeven analysis calculator</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_c --></p>
+<p>$$\text{WACC} = \frac{E}{E + D} \times R_e + \frac{D}{E + D} \times R_d \times (1 - T)$$</p>
+<p>In the <strong>WACC formula</strong>, \(E\) is the market value of equity, \(D\) is the market value of debt, \(R_e\) is the cost of equity, \(R_d\) is the pre-tax cost of debt and \(T\) is the corporate tax rate. The total \(E + D\) is the value of the whole firm, often written \(V\).</p>
+<table>
+<thead><tr><th>Input</th><th>Symbol</th><th>What it represents</th></tr></thead>
+<tbody>
+<tr><td>Total equity</td><td>E</td><td>Market value of all shares, in currency</td></tr>
+<tr><td>Total debt</td><td>D</td><td>Market value of loans and bonds, in currency</td></tr>
+<tr><td>Cost of equity</td><td>R<sub>e</sub></td><td>Return shareholders require, as a percentage</td></tr>
+<tr><td>Cost of debt</td><td>R<sub>d</sub></td><td>Interest rate on borrowing before tax</td></tr>
+<tr><td>Corporate tax rate</td><td>T</td><td>Share of profit paid as tax, which shrinks the cost of capital on debt</td></tr>
+</tbody>
+</table>
+<h3>Why Debt and Equity Weights Matter</h3>
+<p>The weights are the part people underestimate. If your funding is 72% equity and 28% debt, then 72% of your WACC is driven by the cost of equity and 28% by the after-tax borrowing rate. A weighted average of the two means a modest shift in your <strong>capital structure</strong> moves the answer, even when neither individual rate changes. Use <strong>market value</strong> for both pieces, not book value, because investors price the firm at what the market says it is worth today.</p>
+<figure><img src="/assets/images/tools/weighted-average-cost-of-capital-calculator/wacc-formula-and-capital-mix.svg" alt="WACC formula beside a bar splitting $259.6 million of capital into 71.8% equity and 28.2% debt"><figcaption>The WACC formula applied to a capital base of $186.4 million equity and $73.2 million debt.</figcaption></figure>
+<h3>The Interest Tax Shield Inside the Formula</h3>
+<p>The factor \((1 - T)\) is the <strong>interest tax shield</strong>. Interest is tax-deductible, so a 6.3% loan does not really cost 6.3% once your tax bill falls. Equity has no equivalent deduction, which is one reason borrowing looks cheaper on paper. This deduction also explains why the formula uses an after-tax cost of debt while the cost of equity stays as is.</p>
+        </section>
+        <section id="weighted-average-cost-of-capital-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="weighted-average-cost-of-capital-calculator-guide-heading-3">
+<h2 id="weighted-average-cost-of-capital-calculator-guide-heading-3">WACC Calculation Example with Real Numbers</h2>
+<p>Suppose a regional packaging company has equity worth $186.4 million at market prices and debt worth $73.2 million. Its CAPM-based cost of equity is 10.24%, it borrows at 6.3% before tax, and its corporate tax rate is 23%. Here is the <strong>WACC calculation</strong>, one step at a time.</p>
+<h3>Step 1: Find the Debt and Equity Mix</h3>
+<p>Add the two to get the total capital: \(186.4 + 73.2 = 259.6\) million. The equity weight is \(186.4 \div 259.6 = 71.8\%\) and the debt weight is \(73.2 \div 259.6 = 28.2\%\). This split is your <strong>debt-to-equity</strong> picture expressed as shares of the whole, and it is the same weighting your calculator applies automatically.</p>
+<h3>Step 2: Weight Each Cost</h3>
+<table>
+<thead><tr><th>Component</th><th>Weight</th><th>Rate</th><th>Contribution to WACC</th></tr></thead>
+<tbody>
+<tr><td>Equity</td><td>71.8%</td><td>10.24%</td><td>7.35%</td></tr>
+<tr><td>Debt, after tax</td><td>28.2%</td><td>6.3% × (1 − 0.23) = 4.85%</td><td>1.37%</td></tr>
+<tr><td><strong>Weighted average cost of capital</strong></td><td>100%</td><td></td><td><strong>8.72%</strong></td></tr>
+</tbody>
+</table>
+<h3>Step 3: Read the Result</h3>
+<p>This company has to earn at least <strong>8.72%</strong> on new investments to cover its financing. The after-tax debt contributes only 1.37 percentage points, while the same debt without the tax deduction would contribute 1.78 points, so the deduction lowers the blended rate by roughly 0.41 points. A project forecast to return 8.0% would reduce value; one forecast at 10.5% clears the bar comfortably.</p>
+<figure><img src="/assets/images/tools/weighted-average-cost-of-capital-calculator/wacc-calculation-waterfall.svg" alt="Waterfall chart building an 8.72% WACC from equity, pre-tax debt and the tax shield"><figcaption>Equity contributes 7.35%, debt adds 1.78% before tax, and the tax shield removes 0.41% to leave 8.72%.</figcaption></figure>
+        </section>
+        <section id="weighted-average-cost-of-capital-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="weighted-average-cost-of-capital-calculator-guide-heading-4">
+<h2 id="weighted-average-cost-of-capital-calculator-guide-heading-4">Pricing a Plant Expansion Against a 9.43% Cost of Capital</h2>
+<p>A finance manager at a dairy processor has an engineering model for a new $12.5 million packaging line, and it projects an internal rate of return of 9.25%. Before the board meets, she needs to know whether that clears the company's financing cost, so she opens the calculator and works out the weighted average cost of capital from the latest balance sheet and market data.</p>
+<p>She enters the values she already has:</p>
+<ul>
+<li><strong>Equity:</strong> $54.9 million, from the share count multiplied by the latest closing price</li>
+<li><strong>Debt:</strong> $31.6 million, the market value of the term loan and the notes</li>
+<li><strong>Cost of equity:</strong> 11.7%, taken from a CAPM build with a 1.31 beta</li>
+<li><strong>Cost of debt:</strong> 7.4%, the rate on the term loan</li>
+<li><strong>Tax rate:</strong> 26%, the blended federal and state rate</li>
+</ul>
+<p>The calculator weights equity at 63.5% and debt at 36.5%. Equity contributes 7.43 points and the after-tax debt adds 2.00 points, so the WACC reads <strong>9.43%</strong>. The project's 9.25% return falls 18 basis points short of that hurdle, which means that as financed today the expansion would erode value, even though the plant shows a healthy accounting profit.</p>
+<p>The result points to one concrete change rather than a rejection. The term loan reprices at a lender's quoted 6.2%, so she reruns the calculation with only the cost of debt changed. The new WACC is <strong>9.10%</strong>, and the project now clears its hurdle by 15 basis points. Her recommendation to the board is therefore specific: approve the line, but only after the refinancing closes, and re-check the figure if the equity price moves enough to shift the 63.5% weight.</p>
+        </section>
+        <section id="weighted-average-cost-of-capital-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="weighted-average-cost-of-capital-calculator-guide-heading-5">
+<h2 id="weighted-average-cost-of-capital-calculator-guide-heading-5">Estimating the Cost of Equity with CAPM</h2>
+<p>Debt has a visible price tag on a loan agreement, but the <strong>cost of equity</strong> has to be estimated. Most practitioners use the <strong>capital asset pricing model</strong> (<strong>CAPM</strong>), which builds the required return from three pieces:</p>
+<p>$$R_e = R_f + \beta \times (R_m - R_f)$$</p>
+<ul>
+<li><strong>Risk-free rate:</strong> the yield on government treasuries, which is the return you could earn with almost no risk.</li>
+<li><strong>Equity risk premium:</strong> the extra return investors expect for holding stocks instead of treasuries, which is the \(R_m - R_f\) term.</li>
+<li><strong>Beta:</strong> how strongly your stock moves relative to the overall market.</li>
+</ul>
+<h3>Risk-Free Rate and Equity Risk Premium</h3>
+<p>For the packaging company, a <strong>risk-free rate</strong> of 4.1% and an <strong>equity risk premium</strong> of 5.2% set the baseline. Both are market-wide inputs, so every company in the same currency starts from the same two numbers, and only beta customizes them.</p>
+<h3>Choosing a Beta for the Cost of Equity</h3>
+<p>A beta of 1.0 means the stock moves with the market; above 1.0 it swings harder. With a beta of 1.18, the cost of equity is \(4.1\% + 1.18 \times 5.2\% = 10.24\%\), the figure used above. A raw beta comes from regressing historical returns, while an adjusted beta pulls that estimate toward 1.0 on the assumption that extreme values fade.</p>
+<h3>Unlevered Beta and Peer Groups</h3>
+<p>When a company has little trading history, analysts borrow betas from comparable firms. Because each peer has its own debt load, they first strip the effect of leverage to get an <strong>unlevered beta</strong>, average those, and then re-lever the result at the target firm's own mix. This keeps the beta in your WACC consistent with the capital structure you are entering.</p>
+        </section>
+        <section id="weighted-average-cost-of-capital-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="weighted-average-cost-of-capital-calculator-guide-heading-6">
+<h2 id="weighted-average-cost-of-capital-calculator-guide-heading-6">Cost of Debt and Corporate Tax Rate in the WACC Calculator</h2>
+<p>The <strong>cost of debt</strong> is the interest rate a company pays on what it borrows. For a firm with traded bonds, the best estimate is the <strong>yield to maturity</strong> on those bonds, because it reflects what lenders require right now; otherwise use the rate on your most recent long-term borrowing. Avoid the coupon rate on old debt, which can be far from today's market.</p>
+<h3>Effective Versus Marginal Tax Rate</h3>
+<p>The <strong>corporate tax rate</strong> controls how large the tax deduction on interest is. A <strong>marginal tax rate</strong> is the statutory rate on the next dollar of profit, whereas the <strong>effective tax rate</strong> is what you actually paid after credits and deferrals. Because interest saves tax at the margin, the marginal rate is the more defensible input, although many teams settle on the effective rate when it is stable.</p>
+<ul>
+<li>Use the <strong>after-tax cost of debt</strong> in the formula, never the raw interest rate.</li>
+<li>Match the currency and maturity of the debt to the horizon of the cash flows you plan to discount.</li>
+<li>If a company is loss-making and pays no tax, the interest rate gets no relief, so set the tax rate close to zero.</li>
+</ul>
+        </section>
+        <section id="weighted-average-cost-of-capital-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="weighted-average-cost-of-capital-calculator-guide-heading-7">
+<h2 id="weighted-average-cost-of-capital-calculator-guide-heading-7">How Capital Structure Changes Your Weighted Average Cost of Capital Calculator Result</h2>
+<p>Changing the mix of financing is the fastest way to move the blended rate. Because debt is cheaper than equity once the tax deduction applies, adding borrowing lowers the WACC, at least at first. In the packaging example, raising the debt share from 28% to 45% pulls the WACC from 8.72% down to 7.81%, holding every rate constant.</p>
+<p>That is only half the story. More leverage makes equity riskier, so the beta and the cost of equity usually rise, and lenders charge more as borrowing climbs. The cheapest mix is the point where those pressures balance, and no formula pins it down exactly, which is why treasurers re-run the calculation with several scenarios rather than trusting a single output.</p>
+<figure><img src="/assets/images/tools/weighted-average-cost-of-capital-calculator/wacc-sensitivity-debt-share-tax-rate.svg" alt="Heatmap of WACC across debt shares of 20% to 45% and tax rates of 15% to 30%"><figcaption>WACC falls as the debt share rises; the worked example sits at 28.2% debt and a 23% tax rate.</figcaption></figure>
+        </section>
+        <section id="weighted-average-cost-of-capital-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="weighted-average-cost-of-capital-calculator-guide-heading-8">
+<h2 id="weighted-average-cost-of-capital-calculator-guide-heading-8">Using a WACC Formula for Startups, Tech Companies and Acquisitions</h2>
+<p>The mechanics stay identical for a small company, but the inputs get harder to find. A young tech company with no traded shares has no market price to read the equity weight from, so analysts estimate the equity value from the latest funding round and treat that figure as the best available market value. Startup capital is also expensive: early investors accept heavy dilution of their ownership in exchange for a very high expected return, which pushes the cost of equity far above what a mature company shows. Many early-stage companies carry almost no borrowing, so the blended rate is close to the cost of equity and the tax adjustment barely matters.</p>
+<p>When you apply this method to an acquisition target, the same issue appears from the other side. In investment banking work, an acquisition is priced by discounting the target's forecast cash flows at a rate that fits the target's risk, not the buyer's, because the acquired assets carry the target's own uncertainty. Pairing the buyer's cheap financing with the target's riskier cash flows is a classic way to overpay. Analysts usually cross-check the resulting valuation against the enterprise value, which is equity and debt together less cash, because the weights you enter into the calculator must cover both groups of capital providers.</p>
+<ul>
+<li><strong>Forecasting:</strong> rebuild the WACC each time the company revises its plan, because a different target debt level changes both weights.</li>
+<li><strong>Strategy:</strong> test whether a bigger loan or a new share issue lowers the cost of capital, then compare the answer with what that change does to risk.</li>
+<li><strong>Profitability:</strong> compare each division's operating return on its assets with the blended result to see which divisions earn their financing.</li>
+<li><strong>Company size:</strong> a larger company with a long record usually gets a lower cost of debt, which shrinks the after-tax debt term and supports a higher debt weight.</li>
+</ul>
+<p>Whatever the company, write down the sources of each number. A WACC supported by a dated funding round, a quoted bond yield and a named risk-free rate can be defended in a board meeting; a number with no trail cannot.</p>
+        </section>
+        <section id="weighted-average-cost-of-capital-calculator-guide-section-9" class="panel article-content p-4 sm:p-6" aria-labelledby="weighted-average-cost-of-capital-calculator-guide-heading-9">
+<h2 id="weighted-average-cost-of-capital-calculator-guide-heading-9">What Is a Good WACC? Reading Your Result as a Hurdle Rate</h2>
+<p>There is no universal good number. It depends on industry, business risk and how you fund the company. Stable, asset-heavy sectors such as manufacturing or retail often sit in the high single digits, while technology firms and startups usually show higher figures because investors expect more for the added uncertainty. A <strong>lower WACC</strong> means you can raise money more cheaply, which supports a higher company value, and a higher WACC signals expensive capital and perceived risk.</p>
+<p>Treat the result as a <strong>hurdle rate</strong>. A project with an expected rate of return above the WACC adds value, and one below it subtracts value. Compare the figure over time rather than as a one-off, because interest rates, tax law and your financing mix all shift it.</p>
+        </section>
+        <section id="weighted-average-cost-of-capital-calculator-guide-section-10" class="panel article-content p-4 sm:p-6" aria-labelledby="weighted-average-cost-of-capital-calculator-guide-heading-10">
+<h2 id="weighted-average-cost-of-capital-calculator-guide-heading-10">Where WACC Is Used: DCF Valuation, Capital Budgeting and Capital Planning</h2>
+<p>The WACC appears across corporate finance because it converts risk into a rate. Its main uses are:</p>
+<ul>
+<li><strong>Discounted cash flow valuation:</strong> the WACC is the discount rate that brings future cash flows, specifically free cash flows, back to a <strong>present value</strong>. A higher rate shrinks the <strong>value of a company</strong>.</li>
+<li><strong>Capital budgeting:</strong> a project is accepted when its <strong>net present value</strong> is positive at the WACC, or when its return beats the hurdle.</li>
+<li><strong>Investment appraisal:</strong> acquisitions and new product lines are ranked against the minimum return the financing demands.</li>
+<li><strong>Performance measurement:</strong> if ROIC stays above the WACC, the firm is creating value for shareholders; if it stays below, it is not covering its financing costs.</li>
+<li><strong>Capital planning:</strong> finance teams revisit the rate when borrowing costs move, when a new share issue changes the weights, or when a forecast is rebuilt.</li>
+</ul>
+<p>Because the WACC feeds a financial model, small input errors compound: a one-point error in the discount rate can change a long-horizon valuation by double digits, so document where each input came from.</p>
+        </section>
+        <section id="weighted-average-cost-of-capital-calculator-guide-section-11" class="panel article-content p-4 sm:p-6" aria-labelledby="weighted-average-cost-of-capital-calculator-guide-heading-11">
+<h2 id="weighted-average-cost-of-capital-calculator-guide-heading-11">Common Mistakes in a Cost of Capital Estimate</h2>
+<ul>
+<li><strong>Using book value</strong> for equity or debt. Market value reflects what investors would pay today, and the weights should follow it.</li>
+<li><strong>Forgetting the tax adjustment</strong> on debt, which overstates the cost of capital.</li>
+<li><strong>Mixing percentages and decimals</strong>, such as entering 6.3 for one rate and 0.063 for another.</li>
+<li><strong>Using a coupon rate</strong> instead of a current market yield for the cost of debt.</li>
+<li><strong>Ignoring preferred stock</strong> or other financing when it is a material part of the capital base; add it as another weighted term.</li>
+<li><strong>Applying one company-wide WACC to every project</strong>, even when a division carries very different risk.</li>
+</ul>
+<p>Treat the output as a well-reasoned estimate. Its worth comes from consistent inputs and a clear audit trail, not from the second decimal place.</p>
+        </section>
+      </div>
+
+      <section id="weighted-average-cost-of-capital-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="weighted-average-cost-of-capital-calculator-faq-heading" data-section="faq">
+        <h2 id="weighted-average-cost-of-capital-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Weighted Average Cost of Capital Calculator questions</h2>
+        <div id="weighted-average-cost-of-capital-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="weighted-average-cost-of-capital-calculator-faq-1" class="faq-item" open><summary id="weighted-average-cost-of-capital-calculator-faq-1-summary" class="faq-summary"><h3 id="weighted-average-cost-of-capital-calculator-faq-1-question" class="faq-question">What does a WACC calculator tell you?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="weighted-average-cost-of-capital-calculator-faq-1-answer" class="faq-answer"><p>It returns the average annual rate a company pays to fund its assets from equity and debt, weighted by how much of each it uses. It is the minimum return new investments should earn to avoid destroying value.</p></div></details>
+          <details id="weighted-average-cost-of-capital-calculator-faq-2" class="faq-item" open><summary id="weighted-average-cost-of-capital-calculator-faq-2-summary" class="faq-summary"><h3 id="weighted-average-cost-of-capital-calculator-faq-2-question" class="faq-question">Should I use market value or book value for equity and debt?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="weighted-average-cost-of-capital-calculator-faq-2-answer" class="faq-answer"><p>Use market value. The weights should reflect what investors would pay for the company&#x27;s shares and debt today, not the historical amounts on the balance sheet.</p></div></details>
+          <details id="weighted-average-cost-of-capital-calculator-faq-3" class="faq-item" open><summary id="weighted-average-cost-of-capital-calculator-faq-3-summary" class="faq-summary"><h3 id="weighted-average-cost-of-capital-calculator-faq-3-question" class="faq-question">Why is the cost of debt multiplied by (1 - tax rate)?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="weighted-average-cost-of-capital-calculator-faq-3-answer" class="faq-answer"><p>Interest is tax-deductible, so each dollar of interest lowers the tax bill. The after-tax cost of debt is therefore lower than the stated interest rate, and the effect grows with the tax rate.</p></div></details>
+          <details id="weighted-average-cost-of-capital-calculator-faq-4" class="faq-item" open><summary id="weighted-average-cost-of-capital-calculator-faq-4-summary" class="faq-summary"><h3 id="weighted-average-cost-of-capital-calculator-faq-4-question" class="faq-question">How do I estimate the cost of equity?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="weighted-average-cost-of-capital-calculator-faq-4-answer" class="faq-answer"><p>Most analysts use CAPM: the risk-free rate plus beta multiplied by the equity risk premium. For example, a 4% risk-free rate, a beta of 1.2 and a 5% premium give a cost of equity of 10%.</p></div></details>
+          <details id="weighted-average-cost-of-capital-calculator-faq-5" class="faq-item" open><summary id="weighted-average-cost-of-capital-calculator-faq-5-summary" class="faq-summary"><h3 id="weighted-average-cost-of-capital-calculator-faq-5-question" class="faq-question">What is a good WACC?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="weighted-average-cost-of-capital-calculator-faq-5-answer" class="faq-answer"><p>There is no single good number. Stable, asset-heavy industries often sit lower than technology firms or startups, whose investors expect more for the risk. What matters is whether your projects return more than your WACC.</p></div></details>
+          <details id="weighted-average-cost-of-capital-calculator-faq-6" class="faq-item" open><summary id="weighted-average-cost-of-capital-calculator-faq-6-summary" class="faq-summary"><h3 id="weighted-average-cost-of-capital-calculator-faq-6-question" class="faq-question">How is WACC used in valuation and budgeting?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="weighted-average-cost-of-capital-calculator-faq-6-answer" class="faq-answer"><p>In discounted cash flow analysis it is the discount rate applied to future free cash flows, and in capital budgeting it is the hurdle rate a project&#x27;s return has to beat.</p></div></details>
+          <details id="weighted-average-cost-of-capital-calculator-faq-7" class="faq-item" open><summary id="weighted-average-cost-of-capital-calculator-faq-7-summary" class="faq-summary"><h3 id="weighted-average-cost-of-capital-calculator-faq-7-question" class="faq-question">When should I include preferred stock?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="weighted-average-cost-of-capital-calculator-faq-7-answer" class="faq-answer"><p>Include it when preferred shares are a meaningful part of your financing. It adds a third weighted term using its market value and dividend yield.</p></div></details>
+          <details id="weighted-average-cost-of-capital-calculator-faq-8" class="faq-item" open><summary id="weighted-average-cost-of-capital-calculator-faq-8-summary" class="faq-summary"><h3 id="weighted-average-cost-of-capital-calculator-faq-8-question" class="faq-question">Can WACC change over time?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="weighted-average-cost-of-capital-calculator-faq-8-answer" class="faq-answer"><p>Yes. Interest rates, your share price, your tax rate and your debt-to-equity mix all shift it, so it is worth recalculating whenever your financing changes.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="weighted-average-cost-of-capital-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="weighted-average-cost-of-capital-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="weighted-average-cost-of-capital-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="weighted-average-cost-of-capital-calculator-ad-bottom-leaderboard">
+            <ins id="weighted-average-cost-of-capital-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("weighted-average-cost-of-capital-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="weighted-average-cost-of-capital-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="weighted-average-cost-of-capital-calculator-right-rail-top" class="mb-6">
+        <aside id="weighted-average-cost-of-capital-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="weighted-average-cost-of-capital-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="weighted-average-cost-of-capital-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="weighted-average-cost-of-capital-calculator-ad-right-rail-rectangle">
+            <ins id="weighted-average-cost-of-capital-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("weighted-average-cost-of-capital-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="weighted-average-cost-of-capital-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="weighted-average-cost-of-capital-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="weighted-average-cost-of-capital-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="weighted-average-cost-of-capital-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="weighted-average-cost-of-capital-calculator-ad-right-rail-skyscraper">
+            <ins id="weighted-average-cost-of-capital-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("weighted-average-cost-of-capital-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="weighted-average-cost-of-capital-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="weighted-average-cost-of-capital-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="weighted-average-cost-of-capital-calculator-footer-brand">
+        <a id="weighted-average-cost-of-capital-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="weighted-average-cost-of-capital-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="weighted-average-cost-of-capital-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="weighted-average-cost-of-capital-calculator-footer-categories" aria-labelledby="weighted-average-cost-of-capital-calculator-footer-categories-heading">
+        <h2 id="weighted-average-cost-of-capital-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="weighted-average-cost-of-capital-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="weighted-average-cost-of-capital-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="weighted-average-cost-of-capital-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="weighted-average-cost-of-capital-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="weighted-average-cost-of-capital-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="weighted-average-cost-of-capital-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="weighted-average-cost-of-capital-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="weighted-average-cost-of-capital-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="weighted-average-cost-of-capital-calculator-footer-company" aria-labelledby="weighted-average-cost-of-capital-calculator-footer-company-heading">
+        <h2 id="weighted-average-cost-of-capital-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="weighted-average-cost-of-capital-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="weighted-average-cost-of-capital-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="weighted-average-cost-of-capital-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="weighted-average-cost-of-capital-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="weighted-average-cost-of-capital-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="weighted-average-cost-of-capital-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="weighted-average-cost-of-capital-calculator-footer-bottom" class="border-t border-line">
+      <p id="weighted-average-cost-of-capital-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="weighted-average-cost-of-capital-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Weighted average cost of capital from market values.
+  //   V = E + D + P;  WACC = E/V * Re + D/V * Rd * (1 - T) + P/V * Rp.
+  //   Equity E is entered directly or as share price * shares outstanding. Preferred stock is optional
+  //   (P = 0 drops it). Interest tax shield per year = D * Rd * T. Default tax rate 21% = US federal
+  //   corporate rate (IRC section 11(b)); the user can change it.
+  // Verified in Node (scratchpad tests/b2biz), hand-checked: E $6,000,000 at 10%, D $4,000,000 at 6%,
+  //   tax 21% -> after-tax debt 4.74%, WACC 7.896%; E 500 at 12%, preferred 100 at 8%, D 400 at 7%,
+  //   tax 30% -> WACC 8.76%; E $6m at 10%, D $4m at 6%, tax 0 -> 8.40%; all-equity -> WACC = cost of
+  //   equity. Zero total capital, blank or negative input shows an error, never NaN.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+  var dec = new Intl.NumberFormat('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+  // --- calc ---
+  function wacc(E, Re, D, Rd, T, P, Rp) {
+    var V = E + D + P;
+    if (!(V > 0)) return null;
+    var rdAfter = Rd * (1 - T);
+    var r = {
+      total: V, wE: E / V, wD: D / V, wP: P / V, rdAfter: rdAfter,
+      cE: E / V * Re, cD: D / V * rdAfter, cP: P / V * Rp,
+      de: E > 0 ? D / E : null, shield: D * Rd * T
+    };
+    r.wacc = r.cE + r.cD + r.cP;
+    return r;
+  }
+  // --- end calc ---
+
+  function el(id) { return document.getElementById(id); }
+  function setText(id, text) { el(id).textContent = text; }
+
+  function read(id, blankAsZero) {
+    var raw = String(el(id).value).trim();
+    if (raw === '') return blankAsZero ? 0 : NaN;
+    var v = Number(raw);
+    return isFinite(v) ? v : NaN;
+  }
+
+  function pct(x, digits) { return (x * 100).toFixed(digits === undefined ? 2 : digits) + '%'; }
+
+  var OUT = ['wcWacc', 'wcAfterTax', 'wcTotal', 'wcWeightE', 'wcWeightD', 'wcWeightP', 'wcDe', 'wcShield',
+             'wcTValE', 'wcTWE', 'wcTCE', 'wcTContE', 'wcTValD', 'wcTWD', 'wcTCD', 'wcTContD',
+             'wcTValP', 'wcTWP', 'wcTCP', 'wcTContP', 'wcTValT', 'wcTWT', 'wcTContT'];
+
+  function update() {
+    var byShares = el('wcEqModeShares').checked;
+    el('wcEqValueBox').hidden = byShares;
+    el('wcEqSharesBox').hidden = !byShares;
+    var E = byShares ? read('wcPrice') * read('wcShares') : read('wcEquity');
+    var Re = read('wcCostEquity', true), D = read('wcDebt', true), Rd = read('wcCostDebt', true),
+        T = read('wcTax', true), P = read('wcPref', true), Rp = read('wcCostPref', true);
+    var msg = '';
+    if (isNaN(E) || E < 0 || (byShares && (read('wcPrice') < 0 || read('wcShares') < 0)))
+      msg = byShares ? 'Enter a share price and number of shares of 0 or more.' : 'Enter a market value of equity of $0 or more.';
+    else if ([D, P].some(function (v) { return isNaN(v) || v < 0; })) msg = 'Market values cannot be negative.';
+    else if ([Re, Rd, Rp].some(function (v) { return isNaN(v) || v < 0 || v > 100; })) msg = 'Enter each cost of capital from 0% to 100%.';
+    else if (isNaN(T) || T < 0 || T > 100) msg = 'Enter a tax rate from 0% to 100%.';
+    else if (E + D + P <= 0) msg = 'Enter a market value for at least one source of capital.';
+    var error = el('wcError');
+    error.hidden = !msg;
+    error.textContent = msg;
+    if (msg) { OUT.forEach(function (id) { setText(id, '–'); }); return; }
+
+    var r = wacc(E, Re / 100, D, Rd / 100, T / 100, P, Rp / 100);
+    setText('wcWacc', pct(r.wacc, 3));
+    setText('wcAfterTax', pct(r.rdAfter, 3));
+    setText('wcTotal', money.format(r.total));
+    setText('wcWeightE', pct(r.wE));
+    setText('wcWeightD', pct(r.wD));
+    setText('wcWeightP', pct(r.wP));
+    setText('wcDe', r.de === null ? 'n/a' : dec.format(r.de));
+    setText('wcShield', money.format(r.shield));
+    setText('wcTValE', money.format(E)); setText('wcTWE', pct(r.wE)); setText('wcTCE', pct(Re / 100, 3)); setText('wcTContE', pct(r.cE, 3));
+    setText('wcTValD', money.format(D)); setText('wcTWD', pct(r.wD)); setText('wcTCD', pct(r.rdAfter, 3)); setText('wcTContD', pct(r.cD, 3));
+    setText('wcTValP', money.format(P)); setText('wcTWP', pct(r.wP)); setText('wcTCP', pct(Rp / 100, 3)); setText('wcTContP', pct(r.cP, 3));
+    setText('wcTValT', money.format(r.total)); setText('wcTWT', pct(1)); setText('wcTContT', pct(r.wacc, 3));
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = el('wcForm');
+    if (!form) return;
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

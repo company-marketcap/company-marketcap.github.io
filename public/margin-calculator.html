@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="en" id="margin-calculator-document" data-page-slug="margin-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Margin Calculator &amp; Markup Calculator: Profit Margin</title>
+  <meta name="description" content="Use this free profit margin and markup calculator to find your selling price, gross profit and cost-based percentages, and see markup vs margin side by side.">
+  <link rel="canonical" href="https://company-marketcap.github.io/margin-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Margin Calculator &amp; Markup Calculator: Profit Margin">
+  <meta property="og:description" content="Use this free profit margin and markup calculator to find your selling price, gross profit and cost-based percentages, and see markup vs margin side by side.">
+  <meta property="og:url" content="https://company-marketcap.github.io/margin-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Profit Margin and Markup Calculator", "url": "https://company-marketcap.github.io/margin-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Use this free profit margin and markup calculator to find your selling price, gross profit and cost-based percentages, and see markup vs margin side by side."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Business Finance & Valuation", "item": "https://company-marketcap.github.io/financial-calculators.html#business-calculators"}, {"@type": "ListItem", "position": 4, "name": "Profit Margin and Markup Calculator", "item": "https://company-marketcap.github.io/margin-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the difference between markup and margin?", "acceptedAnswer": {"@type": "Answer", "text": "Both measure the same profit, but markup divides it by cost while margin divides it by the selling price. Because the selling price is larger than the cost, markup always shows the higher percentage, and the two only match when profit is zero."}}, {"@type": "Question", "name": "How do I calculate markup from margin?", "acceptedAnswer": {"@type": "Answer", "text": "Write the margin as a decimal, then divide it by one minus the margin. A 40% margin gives 0.40 ÷ 0.60 = 66.7% markup. To go the other way, divide the markup by one plus the markup."}}, {"@type": "Question", "name": "How do I find the selling price for a target profit margin?", "acceptedAnswer": {"@type": "Answer", "text": "Divide your cost by one minus the margin in decimal form. With a $50 cost and a 25% margin, the price is $50 ÷ 0.75 = $66.67."}}, {"@type": "Question", "name": "What is a good profit margin?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the industry. A net margin around 10% is often seen as acceptable and 20% as strong, while gross margins run far higher in software than in grocery or wholesale. Compare your result with businesses like yours."}}, {"@type": "Question", "name": "Can a margin be 100% or higher?", "acceptedAnswer": {"@type": "Answer", "text": "No. Profit cannot exceed the selling price when costs are positive, so margin stays below 100%. Markup has no upper limit, which is why a very high markup still gives a margin under 100%."}}, {"@type": "Question", "name": "Is gross margin the same as profit margin?", "acceptedAnswer": {"@type": "Answer", "text": "Gross margin only subtracts the cost of goods sold. Net profit margin also subtracts operating expenses such as rent, wages and taxes. This calculator works from the cost you enter, so it returns the gross figure unless your cost includes overhead."}}, {"@type": "Question", "name": "How do I calculate margin and markup in Excel?", "acceptedAnswer": {"@type": "Answer", "text": "With cost in A2 and revenue in B2, margin is =(B2-A2)/B2 and markup is =(B2-A2)/A2. Format both cells as Percentage."}}, {"@type": "Question", "name": "Which should I use to set prices, markup or margin?", "acceptedAnswer": {"@type": "Answer", "text": "Use markup to build a price from a supplier's cost, and margin to check what share of each sale becomes profit. Check both before you publish a price."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="margin-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="margin-calculator" data-page-type="calculator">
+  <a id="margin-calculator-skip-link" href="#margin-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="margin-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="margin-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="margin-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="margin-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="margin-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="margin-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="margin-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="margin-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="margin-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="margin-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="margin-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="margin-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="margin-calculator-header-search-status" aria-controls="margin-calculator-header-search-results" data-search-input="header">
+              <p id="margin-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="margin-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="margin-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="margin-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="margin-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="margin-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="margin-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="margin-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="margin-calculator-mobile-search-status" aria-controls="margin-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="margin-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="margin-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="margin-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="margin-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="margin-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="margin-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="margin-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="margin-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="margin-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="margin-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="margin-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="margin-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="margin-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="margin-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="margin-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="margin-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="margin-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="margin-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="margin-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="margin-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="margin-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="margin-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="margin-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="margin-calculator-sidebar-search-status" aria-controls="margin-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="margin-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="margin-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="margin-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="margin-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="margin-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="margin-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="margin-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="margin-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="margin-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators">Mortgage &amp; Home Buying</a></li><li><a id="margin-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="margin-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="margin-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="margin-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="margin-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="margin-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="margin-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="margin-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="margin-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="margin-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="margin-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="margin-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="margin-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="margin-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="margin-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="margin-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="margin-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="margin-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="margin-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="margin-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="margin-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="margin-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators" aria-current="true">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="margin-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="margin-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="margin-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="margin-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="margin-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="margin-calculator" data-calculator-slug="margin-calculator" data-sub-category-slug="business-calculators">
+      <aside id="margin-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="margin-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="margin-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="margin-calculator-ad-top-leaderboard">
+            <ins id="margin-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("margin-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="margin-calculator-intro-area" class="space-y-4">
+        <nav id="margin-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="margin-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="margin-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="margin-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="margin-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#business-calculators" itemprop="item"><span itemprop="name">Business Finance &amp; Valuation</span></a><meta itemprop="position" content="3"></li>
+            <li id="margin-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Profit Margin and Markup Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/margin-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="margin-calculator-hero-section" aria-labelledby="margin-calculator-hero-heading" data-section="hero">
+          <h1 id="margin-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Margin Calculator &amp; Markup Calculator: Profit Margin</h1>
+          <p id="margin-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Price a product off the wrong percentage and you can sell every unit yet still miss your target. The profit margin and markup calculator on this page takes your cost plus either a markup or a margin, then returns the selling price, the profit, and the matching percentage on the other side, so you can compare cost, revenue and profit before you commit to a number. <!-- SILO_START:slot_a -->The <a class="silo-link" href="/business-loan-calculator.html">business loan calculator</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="margin-calculator-tool" class="space-y-6" data-page-slug="margin-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="mgFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="mgForm" class="space-y-5" novalidate aria-labelledby="mgFormHeading">
+      <h2 id="mgFormHeading" class="panel-heading">Enter what you know</h2>
+      <div><label for="mgMode" class="form-label">I know the</label>
+        <select id="mgMode" class="form-select">
+          <option value="cost-price" selected>Cost and selling price</option>
+          <option value="cost-margin">Cost and target margin</option>
+          <option value="cost-markup">Cost and markup</option>
+          <option value="price-margin">Selling price and margin</option>
+          <option value="price-markup">Selling price and markup</option>
+          <option value="cost-profit">Cost and profit per unit</option>
+          <option value="price-profit">Selling price and profit per unit</option>
+        </select></div>
+      <div id="mgCostField"><label for="mgCost" class="form-label">Cost per unit</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="mgCost" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="0.01" value="60" inputmode="decimal"></div><p class="form-hint">What the item costs you to buy or make.</p></div>
+      <div id="mgPriceField"><label for="mgPrice" class="form-label">Selling price per unit</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="mgPrice" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="0.01" value="100" inputmode="decimal"></div><p class="form-hint">The price your customer pays (revenue per unit).</p></div>
+      <div id="mgMarginField" hidden><label for="mgMargin" class="form-label">Gross margin</label><div class="input-group"><input type="number" id="mgMargin" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" max="99.99" step="0.5" value="40" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">Profit as a share of the selling price. Must be below 100%.</p></div>
+      <div id="mgMarkupField" hidden><label for="mgMarkup" class="form-label">Markup</label><div class="input-group"><input type="number" id="mgMarkup" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="-99.99" step="0.5" value="50" inputmode="decimal"><span class="input-affix">%</span></div><p class="form-hint">Profit as a share of the cost.</p></div>
+      <div id="mgProfitField" hidden><label for="mgProfit" class="form-label">Profit per unit</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="mgProfit" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" step="0.01" value="40" inputmode="decimal"></div><p class="form-hint">Use a negative number for a loss.</p></div>
+      <div><label for="mgUnits" class="form-label">Units sold</label><div class="input-group"><input type="number" id="mgUnits" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1" value="1" inputmode="numeric"><span class="input-affix">units</span></div><p class="form-hint">Optional: shows total revenue, cost and profit for a batch.</p></div>
+      <p id="mgError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="mgResults" aria-live="polite" aria-labelledby="mgResultsHeading">
+      <h2 id="mgResultsHeading" class="panel-heading">Your results</h2>
+      <div class="stat-grid mt-4">
+        <div class="stat-card stat-card-highlight"><p class="stat-label">Gross margin</p><p id="mgMarginOut" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Markup</p><p id="mgMarkupOut" class="stat-value">–</p></div>
+        <div class="stat-card"><p class="stat-label">Profit per unit</p><p id="mgProfitOut" class="stat-value">–</p></div>
+      </div>
+      <dl class="key-value-list mt-4">
+        <div class="key-value-row"><dt>Cost per unit</dt><dd id="mgCostOut">–</dd></div>
+        <div class="key-value-row"><dt>Selling price per unit</dt><dd id="mgPriceOut">–</dd></div>
+        <div class="key-value-row"><dt>Total revenue</dt><dd id="mgRevenueTotal">–</dd></div>
+        <div class="key-value-row"><dt>Total cost</dt><dd id="mgCostTotal">–</dd></div>
+        <div class="key-value-row"><dt>Total gross profit</dt><dd id="mgProfitTotal">–</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="mgTableHeading" data-section="schedule">
+  <h2 id="mgTableHeading" class="panel-heading">Selling price for other target margins</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">Based on your cost per unit: the price you would need to charge for each gross margin, and the markup that price represents.</p>
+  <div class="table-scroll mt-5" tabindex="0" role="region" aria-labelledby="mgTableHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Gross margin</th><th scope="col">Markup</th><th scope="col">Selling price</th><th scope="col">Profit per unit</th></tr></thead>
+      <tbody id="mgTable"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="margin-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="margin-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Price a product off the wrong percentage and you can sell every unit yet still miss your target. The profit margin and markup calculator on this page takes your cost plus either a markup or a margin, then returns the selling price, the profit, and the matching percentage on the other side, so you can compare cost, revenue and profit before you commit to a number. <!-- SILO_START:slot_a_m -->The <a class="silo-link" href="/business-loan-calculator.html">business loan calculator</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="margin-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="margin-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="margin-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="margin-calculator-ad-in-feed">
+            <ins id="margin-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("margin-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="margin-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="margin-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="margin-calculator-guide-heading-1">
+<h2 id="margin-calculator-guide-heading-1">How the Profit Margin and Markup Calculator Works</h2>
+<p>Think of this markup and margin calculator as a two-way pricing tool. Enter any two of the four core values (cost, selling price, markup, margin) and it solves for the rest. Start from cost and a markup, and it behaves like a free markup calculator that hands back a selling price. Start from a target percentage of revenue, and it prices the unit backwards from that figure. Enter both prices and it becomes a markup percentage calculator that also shows the matching margin.</p>
+<p>The same inputs also answer the questions people usually ask of a profit calculator, a profit margin calculator or a gross margin calculator: how much money is left on each sale, and what share of the sale it represents.</p>
+<ol>
+<li>Enter your <strong>cost</strong>, meaning what you paid to make, buy or deliver one unit.</li>
+<li>Choose what you know next: a <strong>markup percentage</strong>, a <strong>margin percentage</strong>, or the <strong>selling price</strong> itself.</li>
+<li>Read the results: selling price, profit per unit, markup and margin.</li>
+<li>Adjust one input at a time to see how the other three respond.</li>
+</ol>
+
+<h3>Cost of Goods Sold and Selling Price Explained</h3>
+<p>Your <strong>cost of goods sold</strong> (COGS) is the direct spend behind a unit: materials, manufacturing, inbound freight and packaging. Some sellers call the same figure the <strong>cost price</strong>. The selling price is the revenue you collect from the customer, and the gap between the two is your gross profit. Rent, wages and marketing sit outside this gap, which matters later when you compare gross and net results.</p>
+
+<h3>Markup Percentage vs Margin Percentage</h3>
+<p>The two percentages describe the same profit from different angles. A <strong>markup percentage</strong> is profit measured against cost, while a <strong>margin percentage</strong> is profit measured against revenue. Because revenue is always larger than cost when you make money, markup always shows the bigger number for the same sale.</p>
+        </section>
+        <section id="margin-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="margin-calculator-guide-heading-2">
+<h2 id="margin-calculator-guide-heading-2">Markup vs Margin: The Difference That Changes Your Price</h2>
+<p>The <strong>difference between markup and margin</strong> is the denominator. Markup expresses <strong>profit as a proportion of cost</strong>, a <strong>percentage increase</strong> over what you paid, and answers "how much did I add on top of what I paid?" Margin expresses <strong>profit as a proportion of revenue</strong>, the <strong>percentage of the revenue</strong> you keep, and answers "what share of each sale do I keep?" Sellers who confuse markup vs margin tend to underprice, because a 40% markup feels like a 40% margin and it is nowhere near.</p>
+
+<h3>Why a Markup Never Equals the Margin</h3>
+<p>Take a unit that costs $38.60 and sells for $54.04. The profit is $15.44. Measured against the $38.60 cost, that is a 40% markup. Measured against the $54.04 revenue, it is only a 28.57% margin. Both numbers are correct; they just answer different questions, and the only time they match is when profit is zero.</p>
+
+<h3>Which Percentage Should You Quote?</h3>
+<p>Quote markup when you set prices from a supplier's invoice, since the cost is the number in front of you. Quote margin when you report results, compare products, or talk to investors, because margin shows what share of <strong>sales</strong> turns into profit. Keep the markup vs margin distinction explicit in every pricing sheet so a colleague never reads one as the other.</p>
+        </section>
+        <section id="margin-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="margin-calculator-guide-heading-3">
+<h2 id="margin-calculator-guide-heading-3">Profit Margin Formula and Markup Formula</h2>
+<p>Every result on the calculator comes from a handful of relationships. Start with profit, which is the same in all of them: <!-- SILO_START:slot_d -->Pair this with the <a class="silo-link" href="/inventory-analysis-calculator.html">inventory analysis calculator</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_d --></p>
+<p>$$\text{Profit} = \text{Selling Price} - \text{Cost}$$</p>
+
+<h3>The Markup Formula</h3>
+<p>The <strong>markup formula</strong> divides profit by cost, and the selling price follows from it:</p>
+<p>$$\text{Markup \%} = \frac{\text{Selling Price} - \text{Cost}}{\text{Cost}} \times 100$$</p>
+<p>$$\text{Selling Price} = \text{Cost} \times \left(1 + \frac{\text{Markup \%}}{100}\right)$$</p>
+
+<h3>The Gross Margin Formula</h3>
+<p>The <strong>gross margin formula</strong>, also called the profit margin formula, divides profit by revenue instead. It is the quickest way to learn how to calculate profit margin from two prices:</p>
+<p>$$\text{Margin \%} = \frac{\text{Selling Price} - \text{Cost}}{\text{Selling Price}} \times 100$$</p>
+<p>When you start from a <strong>desired margin</strong> in decimal form, the price falls out of one division:</p>
+<p>$$\text{Selling Price} = \frac{\text{Cost}}{1 - \text{Margin}}$$</p>
+
+<h3>How to Calculate Markup from Margin</h3>
+<p>To calculate markup from margin, use the pair of conversions below, with both values in decimal form (45% is 0.45):</p>
+<p>$$\text{Markup} = \frac{\text{Margin}}{1 - \text{Margin}} \qquad \text{Margin} = \frac{\text{Markup}}{1 + \text{Markup}}$$</p>
+<p>A 45% margin therefore equals a markup of 0.45 ÷ 0.55 = 81.8%, and a 100% markup equals only a 50% margin.</p>
+        </section>
+        <section id="margin-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="margin-calculator-guide-heading-4">
+<h2 id="margin-calculator-guide-heading-4">Worked Example: Markup Calculator Results for One Product</h2>
+<p>Suppose you stock a ceramic pour-over kettle that costs you <strong>$38.60</strong> per unit, and you choose an <strong>85% markup</strong>. The calculator multiplies $38.60 by 1.85 to get a selling price of <strong>$71.41</strong>. Profit per unit is $71.41 − $38.60 = <strong>$32.81</strong>, and the margin is $32.81 ÷ $71.41 = <strong>45.95%</strong>. An 85% markup is a 46% margin; the two figures describe one sale.</p>
+<figure><img src="/assets/images/tools/margin-calculator/markup-vs-margin-one-sale-split.svg" alt="Bar split of a $71.41 selling price into $38.60 cost and $32.81 profit, with the markup formula and margin formula shown above it"><figcaption>One $71.41 sale: the same $32.81 profit is an 85% markup on cost and a 45.95% margin on price.</figcaption></figure>
+<p>The table shows how the same $38.60 cost behaves at other markups, so you can see how quickly profit per unit builds and how slowly margin climbs.</p>
+<table>
+<thead>
+<tr><th>Markup %</th><th>Selling price</th><th>Profit per unit</th><th>Margin %</th></tr>
+</thead>
+<tbody>
+<tr><td>40%</td><td>$54.04</td><td>$15.44</td><td>28.57%</td></tr>
+<tr><td>60%</td><td>$61.76</td><td>$23.16</td><td>37.50%</td></tr>
+<tr><td>85%</td><td>$71.41</td><td>$32.81</td><td>45.95%</td></tr>
+<tr><td>120%</td><td>$84.92</td><td>$46.32</td><td>54.55%</td></tr>
+</tbody>
+</table>
+
+<h3>Working Backwards from a Target Margin</h3>
+<p>Now reverse-calculate the price. If your accountant says each unit must carry a <strong>42% margin</strong>, divide the cost by 1 − 0.42: $38.60 ÷ 0.58 = <strong>$66.55</strong>. Profit is $27.95, and the markup you would have to apply to the cost is 72.4%. Setting a 42% markup instead would give a price of only $54.81 and a margin near 29.6%, a $11.74 shortfall per unit against what the margin target requires.</p>
+<figure><img src="/assets/images/tools/margin-calculator/42-percent-markup-vs-42-percent-margin-price.svg" alt="Paired bars comparing the $54.81 selling price at a 42% markup with the $66.55 selling price at a 42% margin on a $38.60 cost"><figcaption>A 42% margin on a $38.60 cost needs a $66.55 price, $11.74 more than a 42% markup.</figcaption></figure>
+        </section>
+        <section id="margin-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="margin-calculator-guide-heading-5">
+<h2 id="margin-calculator-guide-heading-5">Markup to Margin Conversion Table</h2>
+<p>When you need a fast markup to margin conversion without opening the calculator, this conversion table covers common pricing steps. Each margin is the markup divided by one plus the markup.</p>
+<table>
+<thead>
+<tr><th>Markup %</th><th>Margin %</th><th>Margin equivalent of the markup</th></tr>
+</thead>
+<tbody>
+<tr><td>12.5%</td><td>11.1%</td><td>Thin distribution pricing</td></tr>
+<tr><td>30%</td><td>23.1%</td><td>Typical wholesale pricing</td></tr>
+<tr><td>60%</td><td>37.5%</td><td>Mid-range retail pricing</td></tr>
+<tr><td>120%</td><td>54.5%</td><td>Specialty retail pricing</td></tr>
+<tr><td>180%</td><td>64.3%</td><td>Services pricing</td></tr>
+<tr><td>250%</td><td>71.4%</td><td>SaaS pricing</td></tr>
+</tbody>
+</table>
+<p>Notice that margin can never reach 100%, no matter how high the markup climbs, while markup has no ceiling at all.</p>
+<figure><img src="/assets/images/tools/margin-calculator/markup-to-margin-conversion-curve.svg" alt="Line chart of margin percentage rising and flattening as markup percentage grows from 0% to 300%, with the 40%, 85% and 120% markups marked"><figcaption>Margin flattens as markup grows: it approaches 100% but never reaches it.</figcaption></figure>
+        </section>
+        <section id="margin-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="margin-calculator-guide-heading-6">
+<h2 id="margin-calculator-guide-heading-6">Repricing a Yoga Mat with the Markup and Margin Calculator</h2>
+<p>Ines runs a small online studio shop, and her supplier has just raised the landed cost of a 6 mm yoga mat from $17.43 to $19.12. The mat sells for $26.99, and she wants to know what the increase did to her profit before she touches the price.</p>
+<p>She first enters the old figures: cost $17.43 and selling price $26.99. The calculator returns a profit of $9.56, a markup of 54.85% and a margin of 35.42%. That is her baseline. Then she changes only the cost to $19.12 and leaves the price alone. Profit drops to $7.87, and the margin falls to 29.16%, while the markup, measured against the new and larger cost, reads 41.16%.</p>
+<p>The 29.16% margin sits below the 33% low end of the retail range she has seen quoted for sporting goods, so holding the old price is not an option. Rather than guess, she switches the calculator to a target-margin input and enters 35%, close to her original result. The selling price comes back as $29.42, with profit of $10.30 and a markup of 53.85% on the new cost.</p>
+<ul>
+<li><strong>Old price, old cost:</strong> $9.56 profit, 35.42% margin.</li>
+<li><strong>Old price, new cost:</strong> $7.87 profit, 29.16% margin.</li>
+<li><strong>Price for a 35% margin:</strong> $29.42, giving $10.30 profit.</li>
+</ul>
+<p>Her storefront uses .99 price points, so she tests $29.99 next. One more entry shows a profit of $10.87 and a 36.25% margin, a little above her target, and only $3.00 more than the current shelf price. She updates the listing to $29.99 and notes the 29.16% figure as the number to watch if the supplier raises the cost again.</p>
+        </section>
+        <section id="margin-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="margin-calculator-guide-heading-7">
+<h2 id="margin-calculator-guide-heading-7">Gross Profit Margin vs Net Profit Margin</h2>
+<p>Everything above is <strong>gross profit margin</strong>, the profit left after COGS and nothing else. A <strong>net profit margin</strong> goes further and subtracts <strong>operating expenses</strong> such as rent, wages, software and marketing, then divides by revenue. Investors and lenders lean on the <strong>net margin</strong> because it shows whether your overhead is actually covered; the gross figure only shows whether each unit earns its keep.</p>
+<p>That gap is why a SaaS startup, or any business, can post a healthy gross margin and still hurt its overall profitability. If your gross margin is 46% but overhead consumes 44% of sales, you keep a thin 2% at the bottom line. Terminology also varies: some sellers say sales margin, others say gross margin or profit margin for the same thing, so confirm which costs sit in the base before comparing numbers.</p>
+        </section>
+        <section id="margin-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="margin-calculator-guide-heading-8">
+<h2 id="margin-calculator-guide-heading-8">What Is a Good Margin? Retail Markup and Wholesale Markup Benchmarks</h2>
+<p>There is no single <strong>good margin</strong>, because the answer depends on the cost structure of your industry. Use these industry benchmarks as a starting point, then adjust for your own overhead.</p>
+<ul>
+<li><strong>Retail markup:</strong> commonly 50% to 150%, which equals roughly a 33% to 60% margin; apparel sits at the high end and electronics at the low end.</li>
+<li><strong>Wholesale markup:</strong> usually 15% to 30%, equal to a 13% to 23% margin, offset by high volume.</li>
+<li><strong>Grocery:</strong> very thin, with single-digit margins (a markup of roughly 10% or less) that depend on turnover.</li>
+<li><strong>Consulting and professional services:</strong> a markup of 100% or more on labor cost is common, since the cost to serve is mostly salary.</li>
+<li><strong>SaaS:</strong> hosting is cheap per extra user, so a SaaS margin of 70% to 90% is normal for software and SaaS subscriptions alike.</li>
+</ul>
+
+<h3>Calculate Margin in Excel</h3>
+<p>If you track pricing in a spreadsheet, the same logic fits in two cells. With cost in A2 and revenue in B2, type <code>=(B2-A2)/B2</code> for the margin and <code>=(B2-A2)/A2</code> for the markup, then format both cells as Percentage in Excel. The results match what the calculator returns for the same inputs.</p>
+        </section>
+        <section id="margin-calculator-guide-section-9" class="panel article-content p-4 sm:p-6" aria-labelledby="margin-calculator-guide-heading-9">
+<h2 id="margin-calculator-guide-heading-9">Pricing Strategy: Using Markup and Margin Together</h2>
+<p>A sound <strong>pricing strategy</strong> uses markup to build the price and margin to judge whether it works. The cost-plus number is only your floor. Before you settle, test it against three realities that affect your <strong>pricing decisions</strong>.</p>
+
+<h3>Cover Overhead and Your Desired Profit</h3>
+<p>Your price must cover direct cost, a share of overhead, and the <strong>desired profit</strong> you set for the business. Your margin is what pays for those fixed costs, so enter the margin you need and let the calculator return the price. If you price from COGS alone, you will look profitable per unit while the company slowly loses money.</p>
+
+<h3>Check Competition and Perceived Value</h3>
+<p>Moving your price toward a competitor changes both percentages at once, and the calculator shows the margin and markup you give up at each step. Customers pay for <strong>perceived value</strong>, not for your cost. A well-differentiated product can hold a higher markup than a commodity, while a crowded category with visible competition caps your price however good the formula looks. Run the calculator at two or three candidate prices to see the margin you would trade for being competitive.</p>
+
+<h3>Account for Discounts, VAT and Sales Tax</h3>
+<p>A discount cuts revenue but not cost, so it hits margin harder than most sellers expect: a 10% discount on a 46% margin item leaves roughly 40%. Taxes such as VAT or sales tax are collected on top of the price and are not part of your revenue, so enter the selling price net of tax into the calculator. That keeps the margin honest, whichever tool you use, from a basic price calculator to an upcharge calculator built into your till.</p>
+        </section>
+      </div>
+
+      <section id="margin-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="margin-calculator-faq-heading" data-section="faq">
+        <h2 id="margin-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Profit Margin and Markup Calculator questions</h2>
+        <div id="margin-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="margin-calculator-faq-1" class="faq-item" open><summary id="margin-calculator-faq-1-summary" class="faq-summary"><h3 id="margin-calculator-faq-1-question" class="faq-question">What is the difference between markup and margin?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="margin-calculator-faq-1-answer" class="faq-answer"><p>Both measure the same profit, but markup divides it by cost while margin divides it by the selling price. Because the selling price is larger than the cost, markup always shows the higher percentage, and the two only match when profit is zero.</p></div></details>
+          <details id="margin-calculator-faq-2" class="faq-item" open><summary id="margin-calculator-faq-2-summary" class="faq-summary"><h3 id="margin-calculator-faq-2-question" class="faq-question">How do I calculate markup from margin?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="margin-calculator-faq-2-answer" class="faq-answer"><p>Write the margin as a decimal, then divide it by one minus the margin. A 40% margin gives 0.40 ÷ 0.60 = 66.7% markup. To go the other way, divide the markup by one plus the markup.</p></div></details>
+          <details id="margin-calculator-faq-3" class="faq-item" open><summary id="margin-calculator-faq-3-summary" class="faq-summary"><h3 id="margin-calculator-faq-3-question" class="faq-question">How do I find the selling price for a target profit margin?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="margin-calculator-faq-3-answer" class="faq-answer"><p>Divide your cost by one minus the margin in decimal form. With a $50 cost and a 25% margin, the price is $50 ÷ 0.75 = $66.67.</p></div></details>
+          <details id="margin-calculator-faq-4" class="faq-item" open><summary id="margin-calculator-faq-4-summary" class="faq-summary"><h3 id="margin-calculator-faq-4-question" class="faq-question">What is a good profit margin?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="margin-calculator-faq-4-answer" class="faq-answer"><p>It depends on the industry. A net margin around 10% is often seen as acceptable and 20% as strong, while gross margins run far higher in software than in grocery or wholesale. Compare your result with businesses like yours.</p></div></details>
+          <details id="margin-calculator-faq-5" class="faq-item" open><summary id="margin-calculator-faq-5-summary" class="faq-summary"><h3 id="margin-calculator-faq-5-question" class="faq-question">Can a margin be 100% or higher?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="margin-calculator-faq-5-answer" class="faq-answer"><p>No. Profit cannot exceed the selling price when costs are positive, so margin stays below 100%. Markup has no upper limit, which is why a very high markup still gives a margin under 100%.</p></div></details>
+          <details id="margin-calculator-faq-6" class="faq-item" open><summary id="margin-calculator-faq-6-summary" class="faq-summary"><h3 id="margin-calculator-faq-6-question" class="faq-question">Is gross margin the same as profit margin?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="margin-calculator-faq-6-answer" class="faq-answer"><p>Gross margin only subtracts the cost of goods sold. Net profit margin also subtracts operating expenses such as rent, wages and taxes. This calculator works from the cost you enter, so it returns the gross figure unless your cost includes overhead.</p></div></details>
+          <details id="margin-calculator-faq-7" class="faq-item" open><summary id="margin-calculator-faq-7-summary" class="faq-summary"><h3 id="margin-calculator-faq-7-question" class="faq-question">How do I calculate margin and markup in Excel?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="margin-calculator-faq-7-answer" class="faq-answer"><p>With cost in A2 and revenue in B2, margin is =(B2-A2)/B2 and markup is =(B2-A2)/A2. Format both cells as Percentage.</p></div></details>
+          <details id="margin-calculator-faq-8" class="faq-item" open><summary id="margin-calculator-faq-8-summary" class="faq-summary"><h3 id="margin-calculator-faq-8-question" class="faq-question">Which should I use to set prices, markup or margin?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="margin-calculator-faq-8-answer" class="faq-answer"><p>Use markup to build a price from a supplier&#x27;s cost, and margin to check what share of each sale becomes profit. Check both before you publish a price.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="margin-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="margin-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="margin-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="margin-calculator-ad-bottom-leaderboard">
+            <ins id="margin-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("margin-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="margin-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="margin-calculator-right-rail-top" class="mb-6">
+        <aside id="margin-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="margin-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="margin-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="margin-calculator-ad-right-rail-rectangle">
+            <ins id="margin-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("margin-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="margin-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="margin-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="margin-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="margin-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="margin-calculator-ad-right-rail-skyscraper">
+            <ins id="margin-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("margin-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="margin-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="margin-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="margin-calculator-footer-brand">
+        <a id="margin-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="margin-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="margin-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="margin-calculator-footer-categories" aria-labelledby="margin-calculator-footer-categories-heading">
+        <h2 id="margin-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="margin-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="margin-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="margin-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="margin-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="margin-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="margin-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="margin-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="margin-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="margin-calculator-footer-company" aria-labelledby="margin-calculator-footer-company-heading">
+        <h2 id="margin-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="margin-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="margin-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="margin-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="margin-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="margin-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="margin-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="margin-calculator-footer-bottom" class="border-t border-line">
+      <p id="margin-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="margin-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Gross margin and markup from any two known values:
+  //   profit = price - cost;  margin = profit / price;  markup = profit / cost
+  //   price = cost / (1 - margin) = cost x (1 + markup);  cost = price x (1 - margin) = price / (1 + markup)
+  //   markup = margin / (1 - margin);  margin = markup / (1 + markup)
+  // Verified: cost $60, price $100 -> profit $40, margin 40%, markup 66.67%;
+  // cost $100 at 50% markup -> price $150, margin 33.33%; cost $100 at 25% margin -> price $133.33,
+  // markup 33.33%; price $80 at 20% margin -> cost $64; price $120 at 50% markup -> cost $80.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 });
+  var TARGETS = [10, 15, 20, 25, 30, 35, 40, 50, 60, 70];
+  var FIELDS = { cost: 'mgCostField', price: 'mgPriceField', margin: 'mgMarginField', markup: 'mgMarkupField', profit: 'mgProfitField' };
+
+  // --- calc start
+  // Returns { cost, price } or { error }. margin and markup are decimals.
+  function solve(mode, v) {
+    var cost, price;
+    switch (mode) {
+      case 'cost-price': cost = v.cost; price = v.price; break;
+      case 'cost-margin':
+        if (v.margin >= 1) return { error: 'A gross margin must be below 100%.' };
+        cost = v.cost; price = v.cost / (1 - v.margin); break;
+      case 'cost-markup':
+        if (v.markup <= -1) return { error: 'A markup must be above -100%.' };
+        cost = v.cost; price = v.cost * (1 + v.markup); break;
+      case 'price-margin':
+        if (v.margin >= 1) return { error: 'A gross margin must be below 100%.' };
+        price = v.price; cost = v.price * (1 - v.margin); break;
+      case 'price-markup':
+        if (v.markup <= -1) return { error: 'A markup must be above -100%.' };
+        price = v.price; cost = v.price / (1 + v.markup); break;
+      case 'cost-profit': cost = v.cost; price = v.cost + v.profit; break;
+      case 'price-profit': price = v.price; cost = v.price - v.profit; break;
+      default: return { error: 'Choose what you know.' };
+    }
+    if (cost < 0) return { error: 'These values give a negative cost. Check the profit or margin you entered.' };
+    if (price < 0) return { error: 'These values give a negative selling price. Check the profit or markup you entered.' };
+    return { cost: cost, price: price };
+  }
+
+  function ratios(cost, price) {
+    var profit = price - cost;
+    return { profit: profit, margin: price > 0 ? profit / price : NaN, markup: cost > 0 ? profit / cost : NaN };
+  }
+  // --- calc end
+
+  function pct(x) {
+    return isFinite(x) ? (x * 100).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '%' : '–';
+  }
+
+  function num(id) {
+    var v = parseFloat(document.getElementById(id).value);
+    return isNaN(v) ? NaN : v;
+  }
+
+  var OUT = ['mgMarginOut', 'mgMarkupOut', 'mgProfitOut', 'mgCostOut', 'mgPriceOut', 'mgRevenueTotal', 'mgCostTotal', 'mgProfitTotal'];
+
+  function update() {
+    var mode = document.getElementById('mgMode').value;
+    var needed = mode.split('-');
+    Object.keys(FIELDS).forEach(function (key) {
+      document.getElementById(FIELDS[key]).hidden = needed.indexOf(key) === -1;
+    });
+    var v = { cost: num('mgCost'), price: num('mgPrice'), margin: num('mgMargin') / 100, markup: num('mgMarkup') / 100, profit: num('mgProfit') };
+    var units = num('mgUnits');
+    var names = { cost: 'cost', price: 'selling price', margin: 'margin', markup: 'markup', profit: 'profit' };
+    var msg = '';
+    needed.forEach(function (key) {
+      if (!msg && (isNaN(v[key]) || Math.abs(v[key]) > 1e12)) msg = 'Enter a ' + names[key] + '.';
+    });
+    if (!msg && ((needed.indexOf('cost') > -1 && v.cost < 0) || (needed.indexOf('price') > -1 && v.price < 0)))
+      msg = 'Cost and selling price cannot be negative.';
+    if (!msg && (isNaN(units) || units < 0 || units > 1e9)) msg = 'Enter 0 or more units sold.';
+    var r = msg ? null : solve(mode, v);
+    if (r && r.error) msg = r.error;
+    var error = document.getElementById('mgError');
+    error.hidden = !msg;
+    error.textContent = msg;
+    if (msg) {
+      OUT.forEach(function (id) { document.getElementById(id).textContent = '–'; });
+      document.getElementById('mgTable').innerHTML = '';
+      return;
+    }
+    var q = ratios(r.cost, r.price);
+    document.getElementById('mgMarginOut').textContent = pct(q.margin);
+    document.getElementById('mgMarkupOut').textContent = pct(q.markup);
+    document.getElementById('mgProfitOut').textContent = money.format(q.profit);
+    document.getElementById('mgCostOut').textContent = money.format(r.cost);
+    document.getElementById('mgPriceOut').textContent = money.format(r.price);
+    document.getElementById('mgRevenueTotal').textContent = money.format(r.price * units);
+    document.getElementById('mgCostTotal').textContent = money.format(r.cost * units);
+    document.getElementById('mgProfitTotal').textContent = money.format(q.profit * units);
+    document.getElementById('mgTable').innerHTML = TARGETS.map(function (m) {
+      var price = r.cost / (1 - m / 100);
+      return '<tr><td>' + m + '%</td><td>' + pct(m / (100 - m)) + '</td><td>' + money.format(price) + '</td><td>' +
+             money.format(price - r.cost) + '</td></tr>';
+    }).join('');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('mgForm');
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>

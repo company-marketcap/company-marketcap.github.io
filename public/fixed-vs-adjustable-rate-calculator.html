@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="en" id="fixed-vs-adjustable-rate-calculator-document" data-page-slug="fixed-vs-adjustable-rate-calculator">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adjustable Rate vs Fixed Rate Mortgage Calculator (ARM vs Fixed-Rate)</title>
+  <meta name="description" content="Compare a fixed-rate mortgage with an adjustable rate mortgage (ARM) side by side. Enter your loan and rates to see payments and total interest for each.">
+  <link rel="canonical" href="https://company-marketcap.github.io/fixed-vs-adjustable-rate-calculator.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Company Marketcap">
+  <meta property="og:title" content="Adjustable Rate vs Fixed Rate Mortgage Calculator (ARM vs Fixed-Rate)">
+  <meta property="og:description" content="Compare a fixed-rate mortgage with an adjustable rate mortgage (ARM) side by side. Enter your loan and rates to see payments and total interest for each.">
+  <meta property="og:url" content="https://company-marketcap.github.io/fixed-vs-adjustable-rate-calculator.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site-theme-init.js"></script>
+  <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
+  
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Fixed vs Adjustable Rate Mortgage Calculator", "url": "https://company-marketcap.github.io/fixed-vs-adjustable-rate-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Compare a fixed-rate mortgage with an adjustable rate mortgage (ARM) side by side. Enter your loan and rates to see payments and total interest for each."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Mortgage & Home Buying", "item": "https://company-marketcap.github.io/financial-calculators.html#mortgage-calculators"}, {"@type": "ListItem", "position": 4, "name": "Fixed vs Adjustable Rate Mortgage Calculator", "item": "https://company-marketcap.github.io/fixed-vs-adjustable-rate-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the difference between a fixed-rate and an adjustable-rate mortgage?", "acceptedAnswer": {"@type": "Answer", "text": "A fixed-rate mortgage keeps one interest rate for the whole term, so your principal and interest payment never changes. An adjustable-rate mortgage (ARM) starts with a lower introductory rate for a set number of years, then resets on a schedule, so your payment can rise or fall."}}, {"@type": "Question", "name": "What does a 5/1 ARM mean?", "acceptedAnswer": {"@type": "Answer", "text": "The first number is how many years the starting rate is fixed, and the second is how often the rate adjusts after that. A 5/1 ARM holds its rate for five years, then adjusts once a year for the remaining 25 years of a 30-year loan."}}, {"@type": "Question", "name": "How does this calculator estimate my ARM payment after the rate resets?", "acceptedAnswer": {"@type": "Answer", "text": "It applies the first adjustment you enter at the end of the fixed period, then each later adjustment at your chosen interval, never letting the rate pass the starting rate plus the lifetime cap. At each reset the payment is recalculated on your remaining balance and remaining months."}}, {"@type": "Question", "name": "What is the maximum monthly payment?", "acceptedAnswer": {"@type": "Answer", "text": "It is the highest principal and interest payment on the projected rate path. With the expected adjustments pushing the rate up to the lifetime cap, it shows the worst payment your ARM allows, which is the one your budget has to handle."}}, {"@type": "Question", "name": "When does an ARM cost less than a fixed-rate mortgage?", "acceptedAnswer": {"@type": "Answer", "text": "An ARM tends to cost less if you sell or refinance before or soon after the rate resets, or if rates fall. If you keep the loan for many years and rates rise, the fixed-rate loan usually wins. Compare the total interest rows to see where your numbers land."}}, {"@type": "Question", "name": "Why do some calculators include an interest-only ARM?", "acceptedAnswer": {"@type": "Answer", "text": "An interest-only ARM lets you pay only interest for the first years, which lowers the starting payment. When that period ends, the balance is repaid over the remaining term, so the payment jumps. The third column lets you see that jump next to the other two loans."}}, {"@type": "Question", "name": "Are taxes, insurance, PMI and HOA fees included?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Enter them to see an all-in payment for each loan, or set them to zero to compare only principal and interest. PMI is added only when your down payment is below 20% of the house price."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
+</head>
+<body id="fixed-vs-adjustable-rate-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="fixed-vs-adjustable-rate-calculator" data-page-type="calculator">
+  <a id="fixed-vs-adjustable-rate-calculator-skip-link" href="#fixed-vs-adjustable-rate-calculator-main-content" class="skip-link">Skip to main content</a>
+
+  <header id="fixed-vs-adjustable-rate-calculator-site-header" data-mobile-search="closed" class="sticky top-0 z-40 border-b border-line bg-page/95 backdrop-blur-sm" data-region="site-header">
+    <div id="fixed-vs-adjustable-rate-calculator-site-header-inner" class="mx-auto flex h-16 max-w-[1600px] items-center gap-3 px-4 lg:px-6">
+      <button id="fixed-vs-adjustable-rate-calculator-sidebar-open-button" type="button" class="icon-button lg:hidden" data-mobile-search-hide aria-controls="fixed-vs-adjustable-rate-calculator-sidebar" aria-expanded="false" data-sidebar-control="open">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="sr-only">Open calculator categories</span>
+      </button>
+
+      <a id="fixed-vs-adjustable-rate-calculator-site-logo-link" href="/" class="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg md:w-52 md:shrink-0" data-mobile-search-hide aria-label="Company Marketcap home">
+        <svg id="fixed-vs-adjustable-rate-calculator-header-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <span id="fixed-vs-adjustable-rate-calculator-site-logo-text" class="truncate font-display text-lg font-bold tracking-tight">Company Marketcap</span>
+      </a>
+
+      <div id="fixed-vs-adjustable-rate-calculator-header-search-wrapper" class="hidden flex-1 justify-start md:flex">
+        <search id="fixed-vs-adjustable-rate-calculator-header-search" class="block w-full max-w-md" data-search-region="header">
+            <form id="fixed-vs-adjustable-rate-calculator-header-search-form" class="relative" action="/" method="get" data-search-key="header" data-search-prefill="true">
+              <label for="fixed-vs-adjustable-rate-calculator-header-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="fixed-vs-adjustable-rate-calculator-header-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators, e.g. mortgage" class="search-input" aria-describedby="fixed-vs-adjustable-rate-calculator-header-search-status" aria-controls="fixed-vs-adjustable-rate-calculator-header-search-results" data-search-input="header">
+              <p id="fixed-vs-adjustable-rate-calculator-header-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="fixed-vs-adjustable-rate-calculator-header-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <div id="fixed-vs-adjustable-rate-calculator-mobile-search-inline" class="hidden min-w-0 flex-1 items-center gap-2" data-mobile-search-inline>
+        <button id="fixed-vs-adjustable-rate-calculator-mobile-search-close-button" type="button" class="icon-button" data-mobile-search-close>
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span class="sr-only">Close search</span>
+        </button>
+        <search id="fixed-vs-adjustable-rate-calculator-mobile-search" class="block min-w-0 flex-1" data-search-region="mobile">
+          <form id="fixed-vs-adjustable-rate-calculator-mobile-search-form" class="relative" action="/" method="get" data-search-key="mobile">
+            <label for="fixed-vs-adjustable-rate-calculator-mobile-search-input" class="sr-only">Search calculators</label>
+            <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="fixed-vs-adjustable-rate-calculator-mobile-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="fixed-vs-adjustable-rate-calculator-mobile-search-status" aria-controls="fixed-vs-adjustable-rate-calculator-mobile-search-results" data-search-input="mobile">
+            <p id="fixed-vs-adjustable-rate-calculator-mobile-search-status" class="sr-only" aria-live="polite"></p>
+            <ul id="fixed-vs-adjustable-rate-calculator-mobile-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+          </form>
+        </search>
+      </div>
+
+      <nav id="fixed-vs-adjustable-rate-calculator-header-navigation" class="hidden xl:block" data-mobile-search-hide aria-label="Main">
+        <ul class="flex items-center gap-1" role="list">
+          <li><a id="fixed-vs-adjustable-rate-calculator-header-link-home" class="header-nav-link" href="/">Home</a></li>
+          <li><a id="fixed-vs-adjustable-rate-calculator-header-link-all-calculators" class="header-nav-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="fixed-vs-adjustable-rate-calculator-header-link-about" class="header-nav-link" href="/about.html">About</a></li>
+          <li><a id="fixed-vs-adjustable-rate-calculator-header-link-contact" class="header-nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="fixed-vs-adjustable-rate-calculator-mobile-search-open-button" type="button" class="icon-button ml-auto md:hidden" data-mobile-search-hide data-mobile-search-open aria-controls="fixed-vs-adjustable-rate-calculator-mobile-search-inline" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr-only">Search calculators</span>
+      </button>
+
+      <button id="fixed-vs-adjustable-rate-calculator-theme-toggle-button" type="button" class="icon-button" data-mobile-search-hide data-theme-state="system" aria-label="Theme: System. Switch to light theme">
+        <svg data-theme-icon="system" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <svg data-theme-icon="light" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg data-theme-icon="dark" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" hidden><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <span id="fixed-vs-adjustable-rate-calculator-theme-toggle-label" class="hidden sm:inline">System</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="fixed-vs-adjustable-rate-calculator-page-layout" class="mx-auto flex max-w-[1600px] gap-6 px-4 lg:gap-8 lg:px-6">
+    <div id="fixed-vs-adjustable-rate-calculator-sidebar-overlay" class="fixed inset-0 z-40 bg-ink/40 lg:hidden" data-sidebar-control="overlay" hidden></div>
+
+    <aside id="fixed-vs-adjustable-rate-calculator-sidebar" class="fixed inset-y-0 left-0 z-50 flex w-[86%] max-w-80 -translate-x-full flex-col border-r border-line bg-surface transition-transform duration-200 data-[open=true]:translate-x-0 lg:sticky lg:top-16 lg:bottom-auto lg:z-auto lg:h-[calc(100dvh-4rem)] lg:w-60 lg:max-w-none lg:shrink-0 lg:translate-x-0 lg:border-r-0 lg:bg-transparent" aria-label="Calculator categories" data-open="false" data-keyboard-shortcuts="off">
+      <div id="fixed-vs-adjustable-rate-calculator-sidebar-drawer-header" class="flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-4 lg:hidden">
+        <svg id="fixed-vs-adjustable-rate-calculator-drawer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        <p id="fixed-vs-adjustable-rate-calculator-sidebar-drawer-title" class="font-display text-lg font-bold tracking-tight">Company Marketcap</p>
+        <button id="fixed-vs-adjustable-rate-calculator-sidebar-close-button" type="button" class="icon-button ml-auto" data-sidebar-control="close">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <span class="sr-only">Close calculator categories</span>
+        </button>
+      </div>
+
+      <div id="fixed-vs-adjustable-rate-calculator-sidebar-search-wrapper" class="shrink-0 px-4 pt-4 lg:hidden">
+        <search id="fixed-vs-adjustable-rate-calculator-sidebar-search" class="block" data-search-region="sidebar">
+            <form id="fixed-vs-adjustable-rate-calculator-sidebar-search-form" class="relative" action="/" method="get" data-search-key="sidebar">
+              <label for="fixed-vs-adjustable-rate-calculator-sidebar-search-input" class="sr-only">Search calculators</label>
+              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="fixed-vs-adjustable-rate-calculator-sidebar-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Search calculators" class="search-input" aria-describedby="fixed-vs-adjustable-rate-calculator-sidebar-search-status" aria-controls="fixed-vs-adjustable-rate-calculator-sidebar-search-results" data-search-input="sidebar">
+              <p id="fixed-vs-adjustable-rate-calculator-sidebar-search-status" class="sr-only" aria-live="polite"></p>
+              <ul id="fixed-vs-adjustable-rate-calculator-sidebar-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
+            </form>
+          </search>
+      </div>
+
+      <nav id="fixed-vs-adjustable-rate-calculator-sidebar-navigation" class="flex-1 overflow-y-auto overscroll-contain px-1 pb-8 pt-2 lg:px-0 lg:pt-5" aria-labelledby="fixed-vs-adjustable-rate-calculator-sidebar-heading" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <h2 id="fixed-vs-adjustable-rate-calculator-sidebar-heading" class="px-3 pb-2 font-display text-base font-bold">Calculator categories</h2>
+        <ul id="fixed-vs-adjustable-rate-calculator-sidebar-main-category-list" class="space-y-0.5" role="list">
+                <li><a id="fixed-vs-adjustable-rate-calculator-sidebar-link-financial-calculators" href="/financial-calculators.html" class="sidebar-link" data-main-category-slug="financial-calculators" itemprop="url" aria-current="true"><span class="sidebar-link-swatch bg-butter dark:bg-butter-ink" aria-hidden="true"></span><span itemprop="name">Financial calculators</span><span class="sidebar-link-count"><span class="sr-only">, </span>320<span class="sr-only"> calculators</span></span></a>
+                  <ul id="fixed-vs-adjustable-rate-calculator-sidebar-sub-links-financial-calculators" class="mb-2 mt-0.5 space-y-0.5" role="list" aria-label="Financial calculators topics"><li><p class="sidebar-group-heading">Mortgage &amp; Real Estate</p><ul class="space-y-0.5" role="list"><li><a id="fixed-vs-adjustable-rate-calculator-sidebar-sub-link-mortgage-calculators" class="sidebar-sub-link" href="/financial-calculators.html#mortgage-calculators" data-sub-category-slug="mortgage-calculators" aria-current="true">Mortgage &amp; Home Buying</a></li><li><a id="fixed-vs-adjustable-rate-calculator-sidebar-sub-link-home-equity-refinance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#home-equity-refinance-calculators" data-sub-category-slug="home-equity-refinance-calculators">Home Equity &amp; Refinance</a></li><li><a id="fixed-vs-adjustable-rate-calculator-sidebar-sub-link-real-estate-calculators" class="sidebar-sub-link" href="/financial-calculators.html#real-estate-calculators" data-sub-category-slug="real-estate-calculators">Real Estate &amp; Rentals</a></li></ul></li><li><p class="sidebar-group-heading">Loans &amp; Debt</p><ul class="space-y-0.5" role="list"><li><a id="fixed-vs-adjustable-rate-calculator-sidebar-sub-link-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#loan-calculators" data-sub-category-slug="loan-calculators">Personal Loans</a></li><li><a id="fixed-vs-adjustable-rate-calculator-sidebar-sub-link-auto-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#auto-loan-calculators" data-sub-category-slug="auto-loan-calculators">Auto Loans &amp; Leasing</a></li><li><a id="fixed-vs-adjustable-rate-calculator-sidebar-sub-link-student-loan-calculators" class="sidebar-sub-link" href="/financial-calculators.html#student-loan-calculators" data-sub-category-slug="student-loan-calculators">Student Loans &amp; College</a></li><li><a id="fixed-vs-adjustable-rate-calculator-sidebar-sub-link-credit-card-debt-calculators" class="sidebar-sub-link" href="/financial-calculators.html#credit-card-debt-calculators" data-sub-category-slug="credit-card-debt-calculators">Credit Cards &amp; Debt</a></li></ul></li><li><p class="sidebar-group-heading">Retirement</p><ul class="space-y-0.5" role="list"><li><a id="fixed-vs-adjustable-rate-calculator-sidebar-sub-link-retirement-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-calculators" data-sub-category-slug="retirement-calculators">Retirement Planning</a></li><li><a id="fixed-vs-adjustable-rate-calculator-sidebar-sub-link-retirement-account-calculators" class="sidebar-sub-link" href="/financial-calculators.html#retirement-account-calculators" data-sub-category-slug="retirement-account-calculators">401(k), IRA &amp; Roth</a></li><li><a id="fixed-vs-adjustable-rate-calculator-sidebar-sub-link-social-security-annuity-calculators" class="sidebar-sub-link" href="/financial-calculators.html#social-security-annuity-calculators" data-sub-category-slug="social-security-annuity-calculators">Social Security &amp; Annuities</a></li></ul></li><li><p class="sidebar-group-heading">Investing</p><ul class="space-y-0.5" role="list"><li><a id="fixed-vs-adjustable-rate-calculator-sidebar-sub-link-investment-calculators" class="sidebar-sub-link" href="/financial-calculators.html#investment-calculators" data-sub-category-slug="investment-calculators">Investment Returns</a></li><li><a id="fixed-vs-adjustable-rate-calculator-sidebar-sub-link-stock-calculators" class="sidebar-sub-link" href="/financial-calculators.html#stock-calculators" data-sub-category-slug="stock-calculators">Stocks &amp; Trading</a></li><li><a id="fixed-vs-adjustable-rate-calculator-sidebar-sub-link-bond-cd-calculators" class="sidebar-sub-link" href="/financial-calculators.html#bond-cd-calculators" data-sub-category-slug="bond-cd-calculators">Bonds &amp; CDs</a></li><li><a id="fixed-vs-adjustable-rate-calculator-sidebar-sub-link-interest-calculators" class="sidebar-sub-link" href="/financial-calculators.html#interest-calculators" data-sub-category-slug="interest-calculators">Interest &amp; APR</a></li></ul></li><li><p class="sidebar-group-heading">Tax &amp; Income</p><ul class="space-y-0.5" role="list"><li><a id="fixed-vs-adjustable-rate-calculator-sidebar-sub-link-tax-calculators" class="sidebar-sub-link" href="/financial-calculators.html#tax-calculators" data-sub-category-slug="tax-calculators">Income Tax &amp; Planning</a></li><li><a id="fixed-vs-adjustable-rate-calculator-sidebar-sub-link-salary-paycheck-calculators" class="sidebar-sub-link" href="/financial-calculators.html#salary-paycheck-calculators" data-sub-category-slug="salary-paycheck-calculators">Salary &amp; Paycheck</a></li><li><a id="fixed-vs-adjustable-rate-calculator-sidebar-sub-link-health-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#health-savings-calculators" data-sub-category-slug="health-savings-calculators">HSA &amp; Medical Costs</a></li><li><a id="fixed-vs-adjustable-rate-calculator-sidebar-sub-link-insurance-calculators" class="sidebar-sub-link" href="/financial-calculators.html#insurance-calculators" data-sub-category-slug="insurance-calculators">Insurance</a></li></ul></li><li><p class="sidebar-group-heading">Savings &amp; Budgeting</p><ul class="space-y-0.5" role="list"><li><a id="fixed-vs-adjustable-rate-calculator-sidebar-sub-link-savings-calculators" class="sidebar-sub-link" href="/financial-calculators.html#savings-calculators" data-sub-category-slug="savings-calculators">Savings &amp; Emergency Funds</a></li><li><a id="fixed-vs-adjustable-rate-calculator-sidebar-sub-link-budget-calculators" class="sidebar-sub-link" href="/financial-calculators.html#budget-calculators" data-sub-category-slug="budget-calculators">Budgeting &amp; Net Worth</a></li><li><a id="fixed-vs-adjustable-rate-calculator-sidebar-sub-link-inflation-currency-calculators" class="sidebar-sub-link" href="/financial-calculators.html#inflation-currency-calculators" data-sub-category-slug="inflation-currency-calculators">Inflation &amp; Currency</a></li><li><a id="fixed-vs-adjustable-rate-calculator-sidebar-sub-link-everyday-money-calculators" class="sidebar-sub-link" href="/financial-calculators.html#everyday-money-calculators" data-sub-category-slug="everyday-money-calculators">Everyday Money</a></li></ul></li><li><p class="sidebar-group-heading">Business</p><ul class="space-y-0.5" role="list"><li><a id="fixed-vs-adjustable-rate-calculator-sidebar-sub-link-business-calculators" class="sidebar-sub-link" href="/financial-calculators.html#business-calculators" data-sub-category-slug="business-calculators">Business Finance</a></li></ul></li></ul></li>
+        </ul>
+        <ul id="fixed-vs-adjustable-rate-calculator-sidebar-page-links" class="mt-5 space-y-0.5 border-t border-line pt-4 xl:hidden" role="list">
+          <li><a id="fixed-vs-adjustable-rate-calculator-sidebar-link-all-calculators" class="sidebar-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="fixed-vs-adjustable-rate-calculator-sidebar-link-about" class="sidebar-link" href="/about.html">About</a></li>
+          <li><a id="fixed-vs-adjustable-rate-calculator-sidebar-link-contact" class="sidebar-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="fixed-vs-adjustable-rate-calculator-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="fixed-vs-adjustable-rate-calculator" data-calculator-slug="fixed-vs-adjustable-rate-calculator" data-sub-category-slug="mortgage-calculators">
+      <aside id="fixed-vs-adjustable-rate-calculator-ad-top-leaderboard" class="ad-slot" aria-label="Advertisement, top of page" data-ad-slot-name="fixed-vs-adjustable-rate-calculator-ad-top-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="fixed-vs-adjustable-rate-calculator-ad-top-leaderboard-frame" class="ad-slot-live" data-ad-container="fixed-vs-adjustable-rate-calculator-ad-top-leaderboard">
+            <ins id="fixed-vs-adjustable-rate-calculator-ad-top-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("fixed-vs-adjustable-rate-calculator-ad-top-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="fixed-vs-adjustable-rate-calculator-intro-area" class="space-y-4">
+        <nav id="fixed-vs-adjustable-rate-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
+          <ol id="fixed-vs-adjustable-rate-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li id="fixed-vs-adjustable-rate-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumb-link" href="/" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li>
+            <li id="fixed-vs-adjustable-rate-calculator-breadcrumb-item-2" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html" itemprop="item"><span itemprop="name">Financial calculators</span></a><meta itemprop="position" content="2"></li>
+            <li id="fixed-vs-adjustable-rate-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><a class="breadcrumb-link" href="/financial-calculators.html#mortgage-calculators" itemprop="item"><span itemprop="name">Mortgage &amp; Home Buying</span></a><meta itemprop="position" content="3"></li>
+            <li id="fixed-vs-adjustable-rate-calculator-breadcrumb-item-4" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span itemprop="name" aria-current="page" class="font-semibold text-ink">Fixed vs Adjustable Rate Mortgage Calculator</span><meta itemprop="item" content="https://company-marketcap.github.io/fixed-vs-adjustable-rate-calculator.html"><meta itemprop="position" content="4"></li>
+          </ol>
+        </nav>
+        <section id="fixed-vs-adjustable-rate-calculator-hero-section" aria-labelledby="fixed-vs-adjustable-rate-calculator-hero-heading" data-section="hero">
+          <h1 id="fixed-vs-adjustable-rate-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Adjustable Rate vs Fixed Rate Mortgage Calculator (ARM vs Fixed-Rate)</h1>
+          <p id="fixed-vs-adjustable-rate-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">The Fixed vs Adjustable Rate Mortgage Calculator puts a fixed-rate mortgage and a 5/1 ARM side by side so you can see which home loan costs less for the years you actually plan to stay. Enter your loan amount, both rates and the ARM&#x27;s caps, and you get the initial monthly payments, the worst-case payment and the total interest for each option. <!-- SILO_START:slot_a -->Next, open the <a class="silo-link" href="/amortization-calculator.html">free amortization calculator</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_a --></p>
+        </section>
+      </div>
+
+      <div id="fixed-vs-adjustable-rate-calculator-tool" class="space-y-6" data-page-slug="fixed-vs-adjustable-rate-calculator" data-calculator-key="tool">
+        <section class="panel @container p-4 sm:p-6" aria-labelledby="fxFormHeading" data-section="calculator">
+  <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <form id="fxForm" class="space-y-5" novalidate aria-labelledby="fxFormHeading">
+      <h2 id="fxFormHeading" class="panel-heading">Enter both loan offers</h2>
+<div><label for="fxLoan" class="form-label">Loan amount</label><div class="input-group"><span class="input-affix">$</span><input type="number" id="fxLoan" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" step="1000" value="300000" inputmode="decimal"></div></div>
+<div class="form-row form-row-2">
+<div><label for="fxTerm" class="form-label">Loan term</label><div class="input-group"><input type="number" id="fxTerm" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1" max="40" step="1" value="30" inputmode="numeric"><span class="input-affix">yrs</span></div></div>
+<div><label for="fxHorizon" class="form-label">Years you expect to keep the loan</label><div class="input-group"><input type="number" id="fxHorizon" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1" max="40" step="1" value="7" inputmode="numeric" aria-describedby="fxHorizonHint"><span class="input-affix">yrs</span></div><p id="fxHorizonHint" class="form-hint">Until you sell, refinance or pay it off.</p></div>
+</div>
+<h3 class="pt-2 font-display text-base font-bold">Fixed-rate loan</h3>
+<div><label for="fxFixedRate" class="form-label">Fixed interest rate</label><div class="input-group"><input type="number" id="fxFixedRate" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="30" step="0.125" value="6.5" inputmode="decimal"><span class="input-affix">%</span></div></div>
+<h3 class="pt-2 font-display text-base font-bold">Adjustable-rate loan</h3>
+<div class="form-row form-row-2">
+<div><label for="fxArmRate" class="form-label">Initial interest rate</label><div class="input-group"><input type="number" id="fxArmRate" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="30" step="0.125" value="5.75" inputmode="decimal"><span class="input-affix">%</span></div></div>
+<div><label for="fxFixed" class="form-label">Fixed-rate period</label><div class="input-group"><input type="number" id="fxFixed" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="1" max="39" step="1" value="5" inputmode="numeric"><span class="input-affix">yrs</span></div></div>
+</div>
+<div class="form-row form-row-2">
+<div><label for="fxEvery" class="form-label">Rate adjusts every</label><select id="fxEvery" class="form-select"><option value="12" selected>12 months</option><option value="6">6 months</option></select></div>
+<div><label for="fxChange" class="form-label">Expected change per adjustment</label><div class="input-group"><input type="number" id="fxChange" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="-5" max="5" step="0.125" value="0.25" inputmode="decimal"><span class="input-affix">%</span></div></div>
+</div>
+<details class="form-details"><summary class="form-details-summary">ARM rate caps and floor</summary>
+<div class="form-row form-row-2">
+<div><label for="fxFirstCap" class="form-label">First adjustment cap</label><div class="input-group"><input type="number" id="fxFirstCap" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="15" step="0.125" value="2" inputmode="decimal"><span class="input-affix">%</span></div></div>
+<div><label for="fxPeriodicCap" class="form-label">Later adjustment cap</label><div class="input-group"><input type="number" id="fxPeriodicCap" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="15" step="0.125" value="2" inputmode="decimal"><span class="input-affix">%</span></div></div>
+</div>
+<div class="form-row form-row-2">
+<div><label for="fxLifeCap" class="form-label">Lifetime cap</label><div class="input-group"><input type="number" id="fxLifeCap" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="15" step="0.125" value="5" inputmode="decimal" aria-describedby="fxLifeCapHint"><span class="input-affix">%</span></div><p id="fxLifeCapHint" class="form-hint">Most the rate can ever rise above the initial rate.</p></div>
+<div><label for="fxFloor" class="form-label">Rate floor</label><div class="input-group"><input type="number" id="fxFloor" class="min-w-0 flex-1 bg-transparent px-3 text-[15px] tabular-nums text-ink focus:outline-none" min="0" max="30" step="0.125" value="0" inputmode="decimal" aria-describedby="fxFloorHint"><span class="input-affix">%</span></div><p id="fxFloorHint" class="form-hint">Lowest the ARM rate can fall.</p></div>
+</div>
+</details>
+      <p id="fxError" class="form-error" role="alert" hidden></p>
+    </form>
+    <div id="fxResults" aria-live="polite" aria-labelledby="fxResultsHeading">
+      <h2 id="fxResultsHeading" class="panel-heading">Your results</h2>
+<div class="stat-grid mt-4">
+<div class="stat-card stat-card-highlight"><p class="stat-label">Lower interest cost over your horizon</p><p id="fxWinner" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">Interest saved over your horizon</p><p id="fxSaving" class="stat-value">–</p></div>
+<div class="stat-card"><p class="stat-label">ARM stays cheaper for</p><p id="fxBreakeven" class="stat-value">–</p></div>
+</div>
+<h3 class="mt-6 font-display text-base font-bold">Monthly payments</h3>
+<div class="mt-2">
+<div class="result-row"><span class="result-term">Fixed-rate payment</span><span id="fxFixedPay" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">ARM initial payment</span><span id="fxArmPay" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">ARM highest payment (expected path)</span><span id="fxArmMax" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">ARM highest payment (worst case)</span><span id="fxArmWorst" class="result-value">–</span></div>
+</div>
+<h3 class="mt-6 font-display text-base font-bold">Interest paid</h3>
+<div class="mt-2">
+<div class="result-row"><span class="result-term">Fixed rate, over your horizon</span><span id="fxFixedHorizon" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">ARM, over your horizon</span><span id="fxArmHorizon" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">ARM worst case, over your horizon</span><span id="fxArmWorstHorizon" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">Fixed rate, full term</span><span id="fxFixedTotal" class="result-value">–</span></div>
+<div class="result-row"><span class="result-term">ARM, full term</span><span id="fxArmTotal" class="result-value">–</span></div>
+</div>
+<p id="fxNote" class="form-hint"></p>
+    </div>
+  </div>
+</section>
+<section class="panel p-4 sm:p-6" aria-labelledby="fxScheduleHeading" data-section="schedule">
+  <h2 id="fxScheduleHeading" class="panel-heading">Year-by-year comparison</h2>
+  <p class="mt-0.5 text-sm text-ink-muted">ARM figures follow your expected rate path. Payments are those in effect in the last month of each year; the last column is the running interest difference (positive means the ARM has cost less so far).</p>
+  <div class="table-scroll mt-5 max-h-[520px]" tabindex="0" role="region" aria-labelledby="fxScheduleHeading">
+    <table class="data-table">
+      <thead><tr><th scope="col">Year</th><th scope="col">Fixed payment</th><th scope="col">ARM rate</th><th scope="col">ARM payment</th><th scope="col">Fixed balance</th><th scope="col">ARM balance</th><th scope="col">Interest saved with ARM</th></tr></thead>
+      <tbody id="fxSchedule"></tbody>
+    </table>
+  </div>
+</section>
+        <p id="fixed-vs-adjustable-rate-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
+      </div>
+
+      <p id="fixed-vs-adjustable-rate-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">The Fixed vs Adjustable Rate Mortgage Calculator puts a fixed-rate mortgage and a 5/1 ARM side by side so you can see which home loan costs less for the years you actually plan to stay. Enter your loan amount, both rates and the ARM&#x27;s caps, and you get the initial monthly payments, the worst-case payment and the total interest for each option. <!-- SILO_START:slot_a_m -->Next, open the <a class="silo-link" href="/amortization-calculator.html">free amortization calculator</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_a_m --></p>
+
+      <aside id="fixed-vs-adjustable-rate-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="fixed-vs-adjustable-rate-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
+          <div id="fixed-vs-adjustable-rate-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="fixed-vs-adjustable-rate-calculator-ad-in-feed">
+            <ins id="fixed-vs-adjustable-rate-calculator-ad-in-feed-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("fixed-vs-adjustable-rate-calculator-ad-in-feed-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+
+      <div id="fixed-vs-adjustable-rate-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="fixed-vs-adjustable-rate-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="fixed-vs-adjustable-rate-calculator-guide-heading-1">
+<h2 id="fixed-vs-adjustable-rate-calculator-guide-heading-1">Fixed vs Adjustable Rate Mortgage Calculator: What It Compares</h2>
+<p>Every mortgage buyer faces the same fork. A <strong>FRM</strong> locks one rate for the whole term, so your <strong>mortgage payment</strong> never moves. An <strong>ARM</strong>, which lenders outside the United States usually call a <strong>variable rate mortgage</strong>, starts with a lower rate and then resets. This tool runs both side by side on one loan so you can see the trade rather than guess at it. <!-- SILO_START:slot_b -->Pair this with the <a class="silo-link" href="/discount-points-calculator.html">mortgage discount points calculator</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_b --></p>
+<p>The calculator models a fully <strong>amortizing</strong> loan, meaning every <strong>monthly payment</strong> covers <strong>principal and interest</strong> and the balance reaches zero at the end of the term. Some calculators also add an <strong>interest-only</strong> option, where you pay no principal for the first years. This one does not, which keeps the comparison between a stable payment and a changing one easy to read, and it can still print a full <strong>amortization schedule</strong> for each loan.</p>
+
+<h3>Inputs you enter</h3>
+<p>Most of the fields describe the loan itself, and a few describe how the ARM is allowed to change:</p>
+<ul>
+<li><strong>Loan amount</strong> and <strong>loan term</strong>, typically 30 years for both mortgage types</li>
+<li><strong>Down payment</strong>, plus optional <strong>property taxes</strong>, <strong>PMI</strong>, <strong>HOA fees</strong> and <strong>closing costs</strong> if you want the full cost of owning the home</li>
+<li>The fixed APR, the ARM's starting APR and the ARM's fixed introductory period in years</li>
+<li>The <strong>first adjustment</strong> cap, the yearly cap and the lifetime <strong>rate cap</strong>, so the worst case is known in advance</li>
+</ul>
+<p>Set taxes, PMI and fees to zero when you only want the core principal and interest comparison.</p>
+
+<h3>Results you get back</h3>
+<ul>
+<li>The <strong>initial monthly payments</strong> for the fixed-rate loan and the ARM, so you see the introductory saving</li>
+<li>The payment after the <strong>reset point</strong> and the maximum payment the caps allow</li>
+<li>Total interest and total cost over the years you plan to keep the loan</li>
+<li>A break-even year where the cheaper-looking option stops being cheaper</li>
+</ul>
+        </section>
+        <section id="fixed-vs-adjustable-rate-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="fixed-vs-adjustable-rate-calculator-guide-heading-2">
+<h2 id="fixed-vs-adjustable-rate-calculator-guide-heading-2">How an ARM vs Fixed Rate Mortgage Calculator Works</h2>
+<p>An <strong>ARM vs Fixed Rate Mortgage Calculator</strong> repeats one payment formula many times. For a fixed loan it runs once, because the rate never changes. For an ARM it runs again at each reset, using the remaining balance, the remaining months and the new rate. <!-- SILO_START:slot_c -->The <a class="silo-link" href="/interest-only-arm-calculator.html">interest only arm calculator</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_c --></p>
+<h3>The fixed-rate payment formula</h3>
+<p>Your payment on a loan of principal \(P\), monthly rate \(i\) (the annual rate divided by 12) and \(n\) monthly payments is:</p>
+<p>$$M = P \times \frac{i}{1-(1+i)^{-n}}$$</p>
+<p>The <strong>loan amount</strong> of $372,500 at 6.75% over 360 months gives <strong>$2,416.03</strong> a month, and that figure holds until the last payment. Because it is a fixed-rate mortgage, nothing else in the formula ever changes.</p>
+<h3>How the ARM payment resets</h3>
+<p>An ARM works from the same formula, but each time the <strong>rates reset</strong> the calculator re-solves it with the balance you still owe and the months left. The new rate is the lowest of three numbers: the index plus the margin, the previous rate plus the periodic cap, and the starting rate plus the lifetime cap.</p>
+<p>That is why the <strong>honeymoon period</strong> matters so much. The <strong>introductory rate</strong> is only a promise for the fixed stretch, and the figure that decides the result is the payment after it ends.</p>
+<h3>Common ARM structures</h3>
+<p>The two numbers in a name like 5/1 tell you how long the rate is fixed and how often it adjusts afterward. Lenders also offer a <strong>traditional ARM</strong> that adjusts every single year and a <strong>hybrid ARM</strong> with an introductory stretch first.</p>
+<table>
+<thead><tr><th>ARM type</th><th>Fixed introductory period</th><th>Adjusts every year for</th><th>Adjustments left</th></tr></thead>
+<tbody>
+<tr><td>3/1 ARM</td><td>3 years</td><td>27 years</td><td>27</td></tr>
+<tr><td>5/1 ARM</td><td>5 years</td><td>25 years</td><td>25</td></tr>
+<tr><td>7/1 ARM</td><td>7 years</td><td>23 years</td><td>23</td></tr>
+<tr><td>10/1 ARM</td><td>10 years</td><td>20 years</td><td>20</td></tr>
+</tbody>
+</table>
+        </section>
+        <section id="fixed-vs-adjustable-rate-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="fixed-vs-adjustable-rate-calculator-guide-heading-3">
+<h2 id="fixed-vs-adjustable-rate-calculator-guide-heading-3">Worked Example: Fixed-Rate Mortgage vs 5/1 ARM on $372,500</h2>
+<p>Take a <strong>$372,500</strong> loan over 30 years. The fixed-rate mortgage quotes <strong>6.75%</strong>, and a 5/1 ARM quotes <strong>5.85%</strong> for its first five years, with caps of 2 percentage points at the first adjustment, 2 each year after and 5 over the life of the loan, so the ARM can never pass 10.85%.</p>
+<h3>Initial monthly payments</h3>
+<p>The fixed-rate loan costs <strong>$2,416.03</strong> a month. The ARM costs <strong>$2,197.53</strong>, which is <strong>$218.50</strong> less. Over the 60 months of the introductory rate that adds up to <strong>$13,109.87</strong> in cash you keep, and the ARM balance after five years is $345,978.66 against $349,687.02 on the fixed-rate loan.</p>
+<h3>What happens after the reset point</h3>
+<p>The saving depends on where rates go after year five. Here are three paths for the ARM, all measured against the same fixed-rate loan:</p>
+<table>
+<thead><tr><th>Scenario after year 5</th><th>New rate</th><th>Monthly payment</th><th>Total interest over 30 years</th></tr></thead>
+<tbody>
+<tr><td>Fixed-rate mortgage</td><td>6.75% for 30 years</td><td>$2,416.03</td><td>$497,270</td></tr>
+<tr><td>ARM, rates fall</td><td>5.10%</td><td>$2,042.77</td><td>$372,181</td></tr>
+<tr><td>ARM, rates hold near 7.35%</td><td>7.35%</td><td>$2,523.09</td><td>$516,279</td></tr>
+<tr><td>ARM, rates hit the caps</td><td>7.85%, 9.85%, then 10.85%</td><td>$3,330.64 at the cap</td><td>$747,391</td></tr>
+</tbody>
+</table>
+<figure><img src="/assets/images/tools/fixed-vs-adjustable-rate-calculator/adjustable-rate-mortgage-payment-scenarios-chart.svg" alt="Bar chart comparing the monthly payment after year 5 on a $372,500 loan: fixed-rate $2,416.03 versus an ARM at $2,042.77, $2,523.09 or $3,330.64"><figcaption>The same 5/1 ARM can land below or well above the fixed-rate payment, depending on where rates go after the reset point.</figcaption></figure>
+<h3>Break-even point</h3>
+<p>If the ARM resets to 7.35% and stays there, you are still ahead of the fixed-rate loan after 10 years by about $6,700 in total payments. The two loans only draw level just after year 15, so a buyer who sells or refinances before then comes out ahead. If rates hit the caps, the lead is gone by year 8, and the payment of $3,330.64 is $914.61 a month above the fixed payment.</p>
+<figure><img src="/assets/images/tools/fixed-vs-adjustable-rate-calculator/arm-vs-fixed-rate-mortgage-break-even-chart.svg" alt="Line chart showing the 5/1 ARM $13,110 ahead of the fixed-rate mortgage at year 5 and breaking even around year 15"><figcaption>If the ARM resets to 7.35% and holds, its first-five-years saving is used up at about year 15.</figcaption></figure>
+        </section>
+        <section id="fixed-vs-adjustable-rate-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="fixed-vs-adjustable-rate-calculator-guide-heading-4">
+<h2 id="fixed-vs-adjustable-rate-calculator-guide-heading-4">An ARM vs Fixed-Rate Decision for a Planned Relocation</h2>
+<p>Priya Menon's employer is opening a regional office in 5 years, and she expects to transfer there. Before she signs for a <strong>$298,400</strong> loan, she opens the comparison and enters what her two lenders quoted: a 30-year fixed-rate mortgage at <strong>6.60%</strong> and a 5/1 ARM at <strong>5.70%</strong> with 2/2/5 caps.</p>
+<p>The calculator returns a fixed payment of <strong>$1,905.76</strong> and an ARM payment of <strong>$1,731.91</strong>, a gap of $173.85 a month. Over the 60 months she expects to stay, that is <strong>$10,430.58</strong> kept in her pocket, and the ARM balance at year 5 is $276,624.64 against $279,654.34 on the fixed loan.</p>
+<p>Her real worry is the worst case, so she reads the capped row next. With the rate at its 7.70% ceiling after the first adjustment, the payment on the remaining 300 months is <strong>$2,080.35</strong>. Her gross income is $7,415 a month, and the common 28% front-end housing guideline puts her limit at $2,076.20, so the capped payment misses it by $4.15.</p>
+<ul>
+<li>She keeps the ARM, because she plans to leave before the first reset.</li>
+<li>She asks the lender to confirm the 2-point first-adjustment cap in writing.</li>
+<li>She puts the $173.85 monthly difference into a savings account, so a missed move date is cushioned by roughly the amount the cap would add.</li>
+</ul>
+<p>The comparison tells her the ARM wins only if she really leaves on schedule. If the transfer slips beyond year 5 and rates climb, that $4.15 shortfall grows, and the next thing she reruns is the fixed loan with a larger down payment.</p>
+        </section>
+        <section id="fixed-vs-adjustable-rate-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="fixed-vs-adjustable-rate-calculator-guide-heading-5">
+<h2 id="fixed-vs-adjustable-rate-calculator-guide-heading-5">Adjustable-Rate Mortgage vs Fixed-Rate Mortgage: Pros and Cons</h2>
+<p>Every <strong>adjustable-rate mortgage</strong> trades a lower start for uncertainty. The <strong>fixed-rate mortgage</strong> does the opposite: you pay more at the start and in exchange you know every future payment. Neither is cheaper in the abstract; it depends on how long you keep the loan.</p>
+<h3>Where a fixed-rate loan wins</h3>
+<ul>
+<li>You <strong>lock in</strong> one APR and stable monthly payments for the whole term, which makes budgeting simple</li>
+<li>You can still <strong>refinance</strong> if mortgage rates fall, so the downside of locking is limited</li>
+<li>A <strong>30-year fixed</strong> loan has no <strong>first adjustment</strong> to worry about and no cap structure to read</li>
+</ul>
+<h3>Where an ARM wins</h3>
+<ul>
+<li>A <strong>lower initial</strong> rate means a smaller payment, or a larger loan for the same payment</li>
+<li>If you sell before the <strong>reset period</strong> ends, you never pay the higher rate at all</li>
+<li>When rates drop, the ARM follows them down without a refinance and its closing costs</li>
+</ul>
+        </section>
+        <section id="fixed-vs-adjustable-rate-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="fixed-vs-adjustable-rate-calculator-guide-heading-6">
+<h2 id="fixed-vs-adjustable-rate-calculator-guide-heading-6">Who an ARM Is Good For and Who Should Choose a Fixed Rate</h2>
+<h3>Who are they good for?</h3>
+<p>The profile that fits an adjustable-rate loan best is <strong>likely movers</strong>: <b>homebuyers</b> who expect to sell inside the fixed period. <strong>Growing incomes</strong> also suit an ARM, because a bigger salary can absorb a bigger payment at the reset. <i>Real estate investors who flip</i> properties rarely hold a loan past the introductory rate at all.</p>
+<h3>Who should stay with a fixed rate?</h3>
+<p>If you plan to stay for most of 30 years, live on a fixed income, or sleep badly when payments could rise, choose the fixed-rate loan. <strong>Home buyers</strong> with thin budgets should test the cap scenario above before accepting a <strong>variable rate loan</strong>, since the maximum payment is the one that has to fit. Keep in mind that the 5<sup>th</sup> year is not the end of the risk; the yearly resets continue for 25 more years.</p>
+        </section>
+        <section id="fixed-vs-adjustable-rate-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="fixed-vs-adjustable-rate-calculator-guide-heading-7">
+<h2 id="fixed-vs-adjustable-rate-calculator-guide-heading-7">What Moves ARM Rates: Index, Margin and Caps</h2>
+<p>Your ARM rate after the introductory period is the <strong>index</strong> plus the <strong>margin</strong>. The margin is set in your loan documents and never changes, while the index moves with the market. The most common benchmarks are:</p>
+<ul>
+<li>The one-year <strong>Treasury</strong> yield, tracked by the <strong>Federal Reserve</strong> Board</li>
+<li>The <strong>cost of funds index</strong> for banks in the western United States</li>
+<li>The <strong>prime rate</strong> and the older <strong>LIBOR</strong>, which was widely used before newer benchmarks replaced it</li>
+</ul>
+<p>The caps limit how fast you feel a move. A well-built ARM adjusts every year, which is what <strong>adjusts every year</strong> means in the loan terms, but a cap on the <strong>first adjustment</strong> is the number to read most closely. Some loans allow a large jump at the first reset, so ask whether it is capped at all.</p>
+        </section>
+        <section id="fixed-vs-adjustable-rate-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="fixed-vs-adjustable-rate-calculator-guide-heading-8">
+<h2 id="fixed-vs-adjustable-rate-calculator-guide-heading-8">Refinancing an ARM Into a Fixed-Rate Loan: Equity, Timing and the Economy</h2>
+<p>Many buyers pick the lower payment on purpose and plan to <strong>refinance</strong> before the reset. That plan is reasonable, but the break-even chart and the capped-payment result show how much it matters whether the exit works, so test it before you rely on it.</p>
+<h3>Home equity and your exit</h3>
+<p>A lender will only refinance if you have enough <strong>equity</strong> in the home. The calculator's year-5 balance, $345,978.66 on the ARM against $349,687.02 on the fixed-rate loan, is the starting point for that test, so a <strong>homeowner</strong> whose property has held its value has built real equity. If the home price falls instead, you can end up unable to refinance and stuck with whatever the ARM does next, so rerun the comparison with the capped payment as your base case.</p>
+<h3>The interest rate and the wider economy</h3>
+<p>The <strong>interest rate</strong> on a new fixed loan in year five is unknown today. If the <strong>economy</strong> pushes the market interest rate above your ARM's starting rate, refinancing costs you more, not less. To test the exit, enter a higher rate in the calculator's fixed-rate field, the one you would <strong>borrow</strong> at in year five, and treat any lower rate as a bonus.</p>
+<h3>Hybrid loans and refinancing costs</h3>
+<p>Because <strong>hybrid loans</strong> are the most common form of ARM, most borrowers face the refinancing decision at exactly the same moment: the end of the fixed period. A new loan brings new closing costs, often a few thousand dollars, which should be subtracted from the savings the calculator shows. If those costs eat most of the five years of savings, a fixed-rate loan from the start may be the better home loan.</p>
+<p>Refinancing is a tool, not a guarantee. Treat it as a possible exit and let the cap scenario in the calculator show whether you could carry the loan if the exit closes.</p>
+        </section>
+        <section id="fixed-vs-adjustable-rate-calculator-guide-section-9" class="panel article-content p-4 sm:p-6" aria-labelledby="fixed-vs-adjustable-rate-calculator-guide-heading-9">
+<h2 id="fixed-vs-adjustable-rate-calculator-guide-heading-9">Mistakes to Avoid When You Compare Adjustable-Rate and Fixed-Rate Loans</h2>
+<h3>Comparing only the first payment</h3>
+<p>The lower first payment is the least informative number in the comparison. What counts is the total over the years you keep the loan, and the payment you would face if the loan hits its caps. Check both before you decide.</p>
+<h3>Ignoring the fees</h3>
+<p>Points, closing costs and monthly insurance change the real cost of each home loan. Add them to both sides, or the result favors whichever option has the lower rate even when its fees are higher. Enter the same insurance and fees on both sides so the comparison stays fair.</p>
+<h3>Assuming rates will stay where they are</h3>
+<p>Rates move, so run at least three paths for the ARM: down, flat and capped. A decision that only works if the market stands still is a bet, and the calculator exists to show you the size of that bet.</p>
+        </section>
+        <section id="fixed-vs-adjustable-rate-calculator-guide-section-10" class="panel article-content p-4 sm:p-6" aria-labelledby="fixed-vs-adjustable-rate-calculator-guide-heading-10">
+<h2 id="fixed-vs-adjustable-rate-calculator-guide-heading-10">Before You Choose: Next Steps With a Lender</h2>
+<p>The result from any <strong>adjustable rate mortgage calculator</strong> is only as good as the quotes you feed it. Advertised rates and offered rates often differ, so get the same loan quoted by two or more <strong>lenders</strong> and rerun the comparison with each set. Getting <strong>pre-approved</strong> or choosing to <strong>prequalify</strong> first gives you real rates and caps to type into each field, a real <strong>loan amount</strong> and a clear picture of <strong>closing costs</strong>.</p>
+<p>Then use the tool to compare fixed rates vs adjustable rate loans for the exact years you expect to stay, change one input at a time, and decide which risk you are comfortable carrying. The loan with the lower initial payment is not always the cheaper one, and the one with the higher payment is not always the safer one if your income is uncertain.</p>
+        </section>
+      </div>
+
+      <section id="fixed-vs-adjustable-rate-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="fixed-vs-adjustable-rate-calculator-faq-heading" data-section="faq">
+        <h2 id="fixed-vs-adjustable-rate-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Fixed vs Adjustable Rate Mortgage Calculator questions</h2>
+        <div id="fixed-vs-adjustable-rate-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="fixed-vs-adjustable-rate-calculator-faq-1" class="faq-item" open><summary id="fixed-vs-adjustable-rate-calculator-faq-1-summary" class="faq-summary"><h3 id="fixed-vs-adjustable-rate-calculator-faq-1-question" class="faq-question">What is the difference between a fixed-rate and an adjustable-rate mortgage?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="fixed-vs-adjustable-rate-calculator-faq-1-answer" class="faq-answer"><p>A fixed-rate mortgage keeps one interest rate for the whole term, so your principal and interest payment never changes. An adjustable-rate mortgage (ARM) starts with a lower introductory rate for a set number of years, then resets on a schedule, so your payment can rise or fall.</p></div></details>
+          <details id="fixed-vs-adjustable-rate-calculator-faq-2" class="faq-item" open><summary id="fixed-vs-adjustable-rate-calculator-faq-2-summary" class="faq-summary"><h3 id="fixed-vs-adjustable-rate-calculator-faq-2-question" class="faq-question">What does a 5/1 ARM mean?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="fixed-vs-adjustable-rate-calculator-faq-2-answer" class="faq-answer"><p>The first number is how many years the starting rate is fixed, and the second is how often the rate adjusts after that. A 5/1 ARM holds its rate for five years, then adjusts once a year for the remaining 25 years of a 30-year loan.</p></div></details>
+          <details id="fixed-vs-adjustable-rate-calculator-faq-3" class="faq-item" open><summary id="fixed-vs-adjustable-rate-calculator-faq-3-summary" class="faq-summary"><h3 id="fixed-vs-adjustable-rate-calculator-faq-3-question" class="faq-question">How does this calculator estimate my ARM payment after the rate resets?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="fixed-vs-adjustable-rate-calculator-faq-3-answer" class="faq-answer"><p>It applies the first adjustment you enter at the end of the fixed period, then each later adjustment at your chosen interval, never letting the rate pass the starting rate plus the lifetime cap. At each reset the payment is recalculated on your remaining balance and remaining months.</p></div></details>
+          <details id="fixed-vs-adjustable-rate-calculator-faq-4" class="faq-item" open><summary id="fixed-vs-adjustable-rate-calculator-faq-4-summary" class="faq-summary"><h3 id="fixed-vs-adjustable-rate-calculator-faq-4-question" class="faq-question">What is the maximum monthly payment?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="fixed-vs-adjustable-rate-calculator-faq-4-answer" class="faq-answer"><p>It is the highest principal and interest payment on the projected rate path. With the expected adjustments pushing the rate up to the lifetime cap, it shows the worst payment your ARM allows, which is the one your budget has to handle.</p></div></details>
+          <details id="fixed-vs-adjustable-rate-calculator-faq-5" class="faq-item" open><summary id="fixed-vs-adjustable-rate-calculator-faq-5-summary" class="faq-summary"><h3 id="fixed-vs-adjustable-rate-calculator-faq-5-question" class="faq-question">When does an ARM cost less than a fixed-rate mortgage?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="fixed-vs-adjustable-rate-calculator-faq-5-answer" class="faq-answer"><p>An ARM tends to cost less if you sell or refinance before or soon after the rate resets, or if rates fall. If you keep the loan for many years and rates rise, the fixed-rate loan usually wins. Compare the total interest rows to see where your numbers land.</p></div></details>
+          <details id="fixed-vs-adjustable-rate-calculator-faq-6" class="faq-item" open><summary id="fixed-vs-adjustable-rate-calculator-faq-6-summary" class="faq-summary"><h3 id="fixed-vs-adjustable-rate-calculator-faq-6-question" class="faq-question">Why do some calculators include an interest-only ARM?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="fixed-vs-adjustable-rate-calculator-faq-6-answer" class="faq-answer"><p>An interest-only ARM lets you pay only interest for the first years, which lowers the starting payment. When that period ends, the balance is repaid over the remaining term, so the payment jumps. The third column lets you see that jump next to the other two loans.</p></div></details>
+          <details id="fixed-vs-adjustable-rate-calculator-faq-7" class="faq-item" open><summary id="fixed-vs-adjustable-rate-calculator-faq-7-summary" class="faq-summary"><h3 id="fixed-vs-adjustable-rate-calculator-faq-7-question" class="faq-question">Are taxes, insurance, PMI and HOA fees included?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="fixed-vs-adjustable-rate-calculator-faq-7-answer" class="faq-answer"><p>Yes. Enter them to see an all-in payment for each loan, or set them to zero to compare only principal and interest. PMI is added only when your down payment is below 20% of the house price.</p></div></details>
+        </div>
+      </section>
+
+      
+
+      <aside id="fixed-vs-adjustable-rate-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="fixed-vs-adjustable-rate-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
+          <div id="fixed-vs-adjustable-rate-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="fixed-vs-adjustable-rate-calculator-ad-bottom-leaderboard">
+            <ins id="fixed-vs-adjustable-rate-calculator-ad-bottom-leaderboard-unit" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3146818156"></ins>
+            <script>(function(){var u=document.getElementById("fixed-vs-adjustable-rate-calculator-ad-bottom-leaderboard-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="100px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+    </main>
+
+    <div id="fixed-vs-adjustable-rate-calculator-right-rail" class="hidden w-[300px] shrink-0 pt-5 2xl:block" data-region="right-rail">
+      <div id="fixed-vs-adjustable-rate-calculator-right-rail-top" class="mb-6">
+        <aside id="fixed-vs-adjustable-rate-calculator-ad-right-rail-rectangle" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="fixed-vs-adjustable-rate-calculator-ad-right-rail-rectangle" data-ad-size="300 × 250">
+          <div id="fixed-vs-adjustable-rate-calculator-ad-right-rail-rectangle-frame" class="ad-slot-live" data-ad-container="fixed-vs-adjustable-rate-calculator-ad-right-rail-rectangle">
+            <ins id="fixed-vs-adjustable-rate-calculator-ad-right-rail-rectangle-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="1141135755"></ins>
+            <script>(function(){var u=document.getElementById("fixed-vs-adjustable-rate-calculator-ad-right-rail-rectangle-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="250px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+      <div id="fixed-vs-adjustable-rate-calculator-right-rail-sticky" class="sticky top-21">
+        <aside id="fixed-vs-adjustable-rate-calculator-ad-right-rail-skyscraper" class="ad-slot" aria-label="Advertisement, right column" data-ad-slot-name="fixed-vs-adjustable-rate-calculator-ad-right-rail-skyscraper" data-ad-size="300 × 600">
+          <div id="fixed-vs-adjustable-rate-calculator-ad-right-rail-skyscraper-frame" class="ad-slot-live" data-ad-container="fixed-vs-adjustable-rate-calculator-ad-right-rail-skyscraper">
+            <ins id="fixed-vs-adjustable-rate-calculator-ad-right-rail-skyscraper-unit" class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5426315045205785" data-ad-slot="3895194553"></ins>
+            <script>(function(){var u=document.getElementById("fixed-vs-adjustable-rate-calculator-ad-right-rail-skyscraper-unit");if(window.innerWidth<768){u.style.width="300px";u.style.height="600px";}if(u.offsetParent!==null&&!/^(localhost|127\.|\[::1\])/.test(location.hostname))(adsbygoogle=window.adsbygoogle||[]).push({});})();</script>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <footer id="fixed-vs-adjustable-rate-calculator-site-footer" class="border-t border-line bg-surface" itemscope itemtype="https://schema.org/Organization" data-region="site-footer">
+    <div id="fixed-vs-adjustable-rate-calculator-site-footer-inner" class="mx-auto grid max-w-[1600px] gap-10 px-4 py-12 md:grid-cols-[1.4fr_1fr_1fr] lg:px-6">
+      <div id="fixed-vs-adjustable-rate-calculator-footer-brand">
+        <a id="fixed-vs-adjustable-rate-calculator-footer-logo-link" href="/" class="focus-ring inline-flex items-center gap-2.5 rounded-lg" itemprop="url">
+          <svg id="fixed-vs-adjustable-rate-calculator-footer-brand-mark" class="size-9 shrink-0" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <rect width="96" height="96" rx="22" fill="#2F5233"/>
+            <g stroke="#D4E8C8" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M19 30h22M30 19v22"/>
+              <path d="M55 30h22"/>
+              <path d="M22.5 58.5l15 15M37.5 58.5l-15 15"/>
+            </g>
+            <path d="M55 61h22M55 71h22" stroke="#F7ECB5" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight" itemprop="name">Company Marketcap</span>
+        </a>
+        <p id="fixed-vs-adjustable-rate-calculator-footer-description" class="mt-3 max-w-sm text-[15px] leading-relaxed text-ink-muted" itemprop="description">Free financial calculators for mortgages, loans, retirement, investing, tax and everyday money decisions. No sign-up, and nothing you enter leaves your browser.</p>
+      </div>
+
+      <nav id="fixed-vs-adjustable-rate-calculator-footer-categories" aria-labelledby="fixed-vs-adjustable-rate-calculator-footer-categories-heading">
+        <h2 id="fixed-vs-adjustable-rate-calculator-footer-categories-heading" class="footer-heading">Calculator categories</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="fixed-vs-adjustable-rate-calculator-footer-link-financial-calculators" class="footer-link" href="/financial-calculators.html">Financial calculators</a></li>
+          <li><a id="fixed-vs-adjustable-rate-calculator-footer-link-mortgage-real-estate" class="footer-link" href="/financial-calculators.html#mortgage-real-estate">Mortgage &amp; Real Estate calculators</a></li>
+          <li><a id="fixed-vs-adjustable-rate-calculator-footer-link-loans-debt" class="footer-link" href="/financial-calculators.html#loans-debt">Loans &amp; Debt calculators</a></li>
+          <li><a id="fixed-vs-adjustable-rate-calculator-footer-link-retirement" class="footer-link" href="/financial-calculators.html#retirement">Retirement calculators</a></li>
+          <li><a id="fixed-vs-adjustable-rate-calculator-footer-link-investing" class="footer-link" href="/financial-calculators.html#investing">Investing calculators</a></li>
+          <li><a id="fixed-vs-adjustable-rate-calculator-footer-link-tax-income" class="footer-link" href="/financial-calculators.html#tax-income">Tax &amp; Income calculators</a></li>
+          <li><a id="fixed-vs-adjustable-rate-calculator-footer-link-savings-budgeting" class="footer-link" href="/financial-calculators.html#savings-budgeting">Savings &amp; Budgeting calculators</a></li>
+          <li><a id="fixed-vs-adjustable-rate-calculator-footer-link-business" class="footer-link" href="/financial-calculators.html#business">Business calculators</a></li>
+        </ul>
+      </nav>
+
+      <nav id="fixed-vs-adjustable-rate-calculator-footer-company" aria-labelledby="fixed-vs-adjustable-rate-calculator-footer-company-heading">
+        <h2 id="fixed-vs-adjustable-rate-calculator-footer-company-heading" class="footer-heading">Company</h2>
+        <ul class="mt-3 space-y-2" role="list">
+          <li><a id="fixed-vs-adjustable-rate-calculator-footer-link-about" class="footer-link" href="/about.html">About</a></li>
+          <li><a id="fixed-vs-adjustable-rate-calculator-footer-link-contact" class="footer-link" href="/contact.html">Contact</a></li>
+          <li><a id="fixed-vs-adjustable-rate-calculator-footer-link-all-calculators" class="footer-link" href="/financial-calculators.html">All calculators</a></li>
+          <li><a id="fixed-vs-adjustable-rate-calculator-footer-link-privacy-policy" class="footer-link" href="/privacy-policy.html">Privacy policy</a></li>
+          <li><a id="fixed-vs-adjustable-rate-calculator-footer-link-terms-of-use" class="footer-link" href="/terms.html">Terms of use</a></li>
+          <li><a id="fixed-vs-adjustable-rate-calculator-footer-link-sitemap" class="footer-link" href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="fixed-vs-adjustable-rate-calculator-footer-bottom" class="border-t border-line">
+      <p id="fixed-vs-adjustable-rate-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="fixed-vs-adjustable-rate-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
+    </div>
+  </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
+<script>(function () {
+  'use strict';
+  // Fixed-rate vs adjustable-rate mortgage comparison.
+  //   Payment: M = B * i / (1 - (1 + i)^-n), i = rate / 12, n = months left (M = B / n at 0%).
+  //   ARM: rate fixed for the initial period, then changes by the expected amount at each adjustment,
+  //   limited by the first/periodic caps, the lifetime cap (initial + cap) and the floor; the payment is
+  //   re-amortized over the months left at each adjustment. Worst case = full cap rise every time.
+  //   Cost over the horizon = interest paid in those months (principal repaid + balance left always
+  //   equals the loan, so interest is the true cost of each loan up to a sale or refinance).
+  //   Break-even = first month the ARM's cumulative interest exceeds the fixed loan's.
+  // Verified in Node (scratchpad tests/w2b): $300,000 for 30 yrs: fixed 6.5% = $1,896.20/mo and
+  //   $130,529.88 interest over 84 months; ARM 5.75% = $1,750.72/mo and $116,831.68 interest over 84
+  //   months with a 5/1 path of +0.25%/yr (both closed form: k*M - (L - balance_k), re-amortized at
+  //   6% and 6.25%); ARM equal to the fixed rate with no change = same cost; ARM above fixed = Never;
+  //   0% rates = $833.33/mo; no NaN/Infinity on blank or bad input.
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 });
+
+  function el(id) { return document.getElementById(id); }
+  function setText(id, text) { el(id).textContent = text; }
+
+  function read(id) {
+    var raw = String(el(id).value).trim();
+    if (raw === '') return NaN;
+    var v = Number(raw);
+    return isFinite(v) ? v : NaN;
+  }
+
+  function payment(balance, annualPct, months) {
+    if (months <= 0 || balance <= 0) return 0;
+    var i = annualPct / 1200;
+    if (i === 0) return balance / months;
+    return balance * i / (1 - Math.pow(1 + i, -months));
+  }
+
+  function pct(v) { return (Math.round(v * 1000) / 1000) + '%'; }
+
+  // A fixed loan is an ARM whose fixed period covers the whole term.
+  function schedule(o) {
+    var rate = o.rate, maxRate = o.rate + o.lifeCap, minRate = Math.min(o.floor, o.rate);
+    var bal = o.loan, pay = payment(bal, rate, o.months), rows = [], adj = 0, cum = 0, maxPay = pay;
+    for (var m = 1; m <= o.months; m++) {
+      if (m > o.fixedMonths && (m - o.fixedMonths - 1) % o.every === 0) {
+        var cap = adj === 0 ? o.firstCap : o.periodicCap;
+        rate = Math.max(minRate, Math.min(maxRate, rate + Math.max(-cap, Math.min(cap, o.change))));
+        rate = Math.round(rate * 100000) / 100000;
+        pay = payment(bal, rate, o.months - m + 1);
+        adj++;
+        if (pay > maxPay) maxPay = pay;
+      }
+      var interest = bal * rate / 1200;
+      var principal = m === o.months ? bal : Math.min(pay - interest, bal);
+      bal -= principal;
+      if (bal < 0.005) bal = 0;
+      cum += interest;
+      rows.push({ rate: rate, payment: principal + interest, balance: bal, cumInterest: cum });
+    }
+    return { first: payment(o.loan, o.rate, o.months), maxPay: maxPay, totalInterest: cum, rows: rows };
+  }
+
+  function duration(months) {
+    var y = Math.floor(months / 12), m = months % 12, parts = [];
+    if (y) parts.push(y + (y === 1 ? ' year' : ' years'));
+    if (m || !y) parts.push(m + (m === 1 ? ' month' : ' months'));
+    return parts.join(' ');
+  }
+
+  function clearResults() {
+    ['fxWinner', 'fxSaving', 'fxBreakeven', 'fxFixedPay', 'fxArmPay', 'fxArmMax', 'fxArmWorst', 'fxFixedHorizon',
+     'fxArmHorizon', 'fxArmWorstHorizon', 'fxFixedTotal', 'fxArmTotal'].forEach(function (id) { setText(id, '–'); });
+    setText('fxNote', '');
+    el('fxSchedule').innerHTML = '';
+  }
+
+  function update() {
+    var loan = read('fxLoan'), years = read('fxTerm'), horizon = read('fxHorizon'), fixedRate = read('fxFixedRate'),
+        armRate = read('fxArmRate'), fixedYears = read('fxFixed'), every = parseInt(el('fxEvery').value, 10),
+        change = read('fxChange'), firstCap = read('fxFirstCap'), periodicCap = read('fxPeriodicCap'),
+        lifeCap = read('fxLifeCap'), floor = read('fxFloor');
+    var msg = '';
+    if (isNaN(loan) || loan <= 0) msg = 'Enter a loan amount greater than $0.';
+    else if (isNaN(years) || years < 1 || years > 40 || years % 1 !== 0) msg = 'Enter a loan term of 1 to 40 whole years.';
+    else if (isNaN(horizon) || horizon < 1 || horizon % 1 !== 0 || horizon > years) msg = 'Enter how many whole years you expect to keep the loan, up to the loan term.';
+    else if (isNaN(fixedRate) || fixedRate < 0 || fixedRate > 30 || isNaN(armRate) || armRate < 0 || armRate > 30) msg = 'Enter interest rates from 0% to 30%.';
+    else if (isNaN(fixedYears) || fixedYears < 1 || fixedYears % 1 !== 0 || fixedYears >= years) msg = 'Enter an ARM fixed-rate period of at least 1 whole year that is shorter than the loan term.';
+    else if (isNaN(change) || change < -5 || change > 5) msg = 'Enter an expected change per adjustment from -5% to 5%.';
+    else if ([firstCap, periodicCap, lifeCap].some(function (v) { return isNaN(v) || v < 0 || v > 15; })) msg = 'Enter rate caps from 0% to 15%.';
+    else if (isNaN(floor) || floor < 0 || floor > 30) msg = 'Enter a rate floor from 0% to 30%.';
+    var error = el('fxError');
+    error.hidden = !msg;
+    error.textContent = msg;
+    if (msg) { clearResults(); return; }
+
+    var months = years * 12, h = horizon * 12;
+    var arm = { loan: loan, months: months, rate: armRate, fixedMonths: fixedYears * 12, every: every, change: change,
+                firstCap: firstCap, periodicCap: periodicCap, lifeCap: lifeCap, floor: floor };
+    var a = schedule(arm);
+    arm.change = 100;
+    var w = schedule(arm);
+    var f = schedule({ loan: loan, months: months, rate: fixedRate, fixedMonths: months, every: 12, change: 0,
+                       firstCap: 0, periodicCap: 0, lifeCap: 0, floor: 0 });
+
+    var fixedH = f.rows[h - 1].cumInterest, armH = a.rows[h - 1].cumInterest, worstH = w.rows[h - 1].cumInterest;
+    var diff = fixedH - armH;
+    if (Math.abs(diff) < 0.005) { setText('fxWinner', 'Same cost'); setText('fxSaving', money.format(0)); }
+    else { setText('fxWinner', diff > 0 ? 'Adjustable rate' : 'Fixed rate'); setText('fxSaving', money.format(Math.abs(diff))); }
+
+    var cross = 0;
+    for (var m = 0; m < months; m++) {
+      if (a.rows[m].cumInterest > f.rows[m].cumInterest + 0.005) { cross = m + 1; break; }
+    }
+    if (cross === 1) setText('fxBreakeven', 'Never');
+    else if (cross === 0) setText('fxBreakeven', 'The full term');
+    else setText('fxBreakeven', duration(cross - 1));
+
+    setText('fxFixedPay', money.format(f.first));
+    setText('fxArmPay', money.format(a.first));
+    setText('fxArmMax', money.format(a.maxPay));
+    setText('fxArmWorst', money.format(w.maxPay));
+    setText('fxFixedHorizon', money.format(fixedH));
+    setText('fxArmHorizon', money.format(armH));
+    setText('fxArmWorstHorizon', money.format(worstH));
+    setText('fxFixedTotal', money.format(f.totalInterest));
+    setText('fxArmTotal', money.format(a.totalInterest));
+    setText('fxNote', worstH > fixedH + 0.005
+      ? 'If the ARM rate rises as fast as its caps allow, it would cost ' + money.format(worstH - fixedH) + ' more in interest than the fixed loan over ' + horizon + (horizon === 1 ? ' year.' : ' years.')
+      : 'Even if the ARM rate rises as fast as its caps allow, it costs no more interest than the fixed loan over ' + horizon + (horizon === 1 ? ' year.' : ' years.'));
+
+    var html = [];
+    for (var y = 1; y <= years; y++) {
+      var fr = f.rows[y * 12 - 1], ar = a.rows[y * 12 - 1];
+      html.push('<tr><td>' + y + '</td><td>' + money.format(fr.payment) + '</td><td>' + pct(ar.rate) + '</td><td>' +
+        money.format(ar.payment) + '</td><td>' + money.format(fr.balance) + '</td><td>' + money.format(ar.balance) + '</td><td>' +
+        money.format(fr.cumInterest - ar.cumInterest) + '</td></tr>');
+    }
+    el('fxSchedule').innerHTML = html.join('');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = el('fxForm');
+    if (!form) return;
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  });
+})();</script>
+<script src="/assets/js/tool-form-actions.js" defer></script>
+</body>
+</html>
