@@ -164,6 +164,24 @@ def faq_ld(faq):
          "acceptedAnswer": {"@type": "Answer", "text": qa["answer"]}} for qa in faq]}
 
 
+def render_article_cards(page_id, content):
+    """Wrap each H2 section of an article in its own card, like the calculator card above it."""
+    if not content:
+        return ""
+    parts = re.split(r"(?=<h2[\s>])", content)
+    cards = []
+    for i, part in enumerate(p for p in parts if p.strip()):
+        label = ""
+        if part.lstrip().startswith("<h2"):
+            heading_id = f"{page_id}-guide-heading-{i + 1}"
+            part = re.sub(r"<h2(?![^>]*\bid=)", f'<h2 id="{heading_id}"', part, count=1)
+            label = f' aria-labelledby="{heading_id}"'
+        cards.append(f'<section id="{page_id}-guide-section-{i + 1}" class="panel article-content p-4 sm:p-6"{label}>\n'
+                     f'{part.strip()}\n        </section>')
+    return (f'<div id="{page_id}-guide" class="space-y-6" data-section="guide">\n        '
+            + "\n        ".join(cards) + "\n      </div>")
+
+
 def render_faq(page_id, heading, faq):
     if not faq:
         return ""
@@ -425,8 +443,7 @@ def render_tool(S, tool):
         "TOOL_CARD": fields,
         "DISCLAIMER": esc(site["disclaimer"]),
         "AD_IN_FEED": render_ad(page_id, "in_feed"),
-        "CONTENT_SECTIONS": (f'<article id="{page_id}-guide" class="article-content border-t border-line pt-10" data-section="guide">\n'
-                             f'{content}\n      </article>') if content else "",
+        "CONTENT_SECTIONS": render_article_cards(page_id, content),
         "FAQ": render_faq(page_id, tool.get("faq_heading") or f'{tool["name"]} questions', tool["faq"]),
         "RELATED_TOOLS": render_related(S, tool),
         "TOOL_EXTRA_SCRIPTS": extra,
@@ -442,7 +459,7 @@ KATEX_ASSETS = (
     f'<link rel="stylesheet" href="{KATEX_CDN}/katex.min.css">\n'
     f'<script src="{KATEX_CDN}/katex.min.js" defer></script>\n'
     f'<script src="{KATEX_CDN}/contrib/auto-render.min.js" defer></script>\n'
-    '<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector(".article-content");'
+    '<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");'
     'if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},'
     '{left:"\\\\(",right:"\\\\)",display:false}],throwOnError:false});});</script>')
 
