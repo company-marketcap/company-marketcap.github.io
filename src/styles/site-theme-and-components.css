@@ -4,11 +4,25 @@
  * Compiled at build time by src/build_css.py (Tailwind CLI) into /assets/css/site.css.
  */
 
+/* Metric-adjusted local fallbacks: while the web fonts load, text is laid out at nearly the same widths,
+   so the swap does not re-wrap lines or shift the content below. */
+@font-face {
+  font-family: "Atkinson Fallback";
+  src: local("Arial");
+  size-adjust: 98.5%;
+}
+
+@font-face {
+  font-family: "Bricolage Fallback";
+  src: local("Arial");
+  size-adjust: 101%;
+}
+
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
-  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
-  --font-body: "Atkinson Hyperlegible Next", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bricolage Grotesque", "Bricolage Fallback", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Atkinson Hyperlegible Next", "Atkinson Fallback", ui-sans-serif, system-ui, sans-serif;
   --font-readout: "Atkinson Hyperlegible Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
   --color-page: var(--site-color-page);
