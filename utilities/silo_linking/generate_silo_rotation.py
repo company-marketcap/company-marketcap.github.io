@@ -198,7 +198,7 @@ def intro_position(html, slug, intro_id):
 
 
 def sentence_html(sentence, url, anchor):
-    return sentence.replace("{link}", f'<a href="{url}">{html_lib.escape(anchor)}</a>')
+    return sentence.replace("{link}", f'<a class="silo-link" href="{url}">{html_lib.escape(anchor)}</a>')
 
 
 def patch(html, slug, link_defs):

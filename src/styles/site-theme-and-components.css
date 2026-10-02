@@ -731,6 +731,11 @@ input[type="search"]::-webkit-search-cancel-button { cursor: pointer; }
     text-underline-offset: 3px;
   }
   .article-content a:not([class]):hover { text-decoration-thickness: 2px; }
+  /* Silo links (utilities/silo_linking) are injected into the hero intro as well as the article, so they carry
+     their own class and look the same in both places. */
+  .silo-link { color: var(--site-color-brand); font-weight: 600; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  .silo-link:hover { text-decoration-thickness: 2px; }
+  .silo-link:focus-visible { outline: 2px solid var(--site-color-brand); outline-offset: 2px; border-radius: 2px; }
   .article-content a:not([class]):focus-visible { outline: 2px solid var(--site-color-brand); outline-offset: 2px; border-radius: 2px; }
   .article-content a[target="_blank"]:not([class])::after { content: " \2197"; font-size: 0.8em; font-weight: 400; }
   .article-content :is(strong, b) { font-weight: 700; }
