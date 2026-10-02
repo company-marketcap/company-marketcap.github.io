@@ -38,7 +38,7 @@ COMMON_TOKENS = {"PAGE_ID", "PAGE_TYPE", "SITE_NAME", "META_TITLE", "META_DESCRI
                  "FOOTER_DESCRIPTION", "YEAR", "AD_TOP", "AD_BOTTOM", "AD_RIGHT_RAIL", "H1", "SUBTITLE",
                  "SIDEBAR_DESKTOP_CLASSES", "HEADER_NAV_CLASSES"}
 TEMPLATE_TOKENS = {
-    "home.html": COMMON_TOKENS | {"AD_HERO", "AD_IN_FEED", "SIDE_CATEGORIES", "DIRECTORY", "DIRECTORY_COUNT",
+    "home.html": COMMON_TOKENS | {"AD_IN_FEED", "SIDE_CATEGORIES", "DIRECTORY", "DIRECTORY_COUNT",
                                   "DIRECTORY_HEADING", "DIRECTORY_INTRO", "FAQ"},
     "category.html": COMMON_TOKENS | {"BREADCRUMB", "HERO_TILE", "JUMP_LINKS", "FINDER_INTRO", "AD_HERO",
                                       "DIRECTORY_COUNT", "DIRECTORY", "FAQ"},
@@ -338,7 +338,7 @@ def render_home(S):
                                 "@type": "SearchAction", "target": f'{site["base_url"]}/?q={{search_term_string}}',
                                 "query-input": "required name=search_term_string"}},
                            faq_ld(home["faq"])),
-        "AD_HERO": render_ad(page_id, "hero"), "AD_IN_FEED": render_ad(page_id, "in_feed"),
+        "AD_IN_FEED": render_ad(page_id, "in_feed"),
         "SIDE_CATEGORIES": "\n".join(side),
         "DIRECTORY": "          " + "\n          ".join(cards),
         "DIRECTORY_COUNT": str(len(site["nav"])),

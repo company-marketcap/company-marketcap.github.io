@@ -13,7 +13,7 @@
         <h1 id="home-hero-heading" class="font-display text-3xl font-bold leading-[1.1] tracking-tight text-balance sm:text-4xl">{{H1}}</h1>
         <p id="home-hero-intro" class="mt-3 text-[17px] leading-relaxed text-ink-muted">{{SUBTITLE}}</p>
 
-        <div id="home-hero-layout" class="mt-6 grid gap-6 @4xl:grid-cols-[minmax(0,1fr)_300px] @4xl:items-start">
+        <div id="home-hero-layout" class="mt-6 grid gap-6 @4xl:grid-cols-[minmax(0,1fr)_300px]">
           <section id="home-scientific-calculator-section" class="panel @container p-4 sm:p-5" aria-labelledby="home-scientific-calculator-heading" itemprop="mainEntity" itemscope itemtype="https://schema.org/WebApplication" data-component="scientific-calculator" data-page-slug="home" data-calculator-key="scientific-calculator">
             <meta itemprop="applicationCategory" content="UtilitiesApplication">
             <meta itemprop="operatingSystem" content="Any">
@@ -111,29 +111,14 @@
             </details>
           </section>
 
-          <div id="home-hero-side-column" class="grid content-start gap-6 @2xl:grid-cols-2 @4xl:grid-cols-1">
-            <section id="home-calculator-finder-section" class="panel p-4 sm:p-5" aria-labelledby="home-calculator-finder-heading" data-section="calculator-finder">
-              <h2 id="home-calculator-finder-heading" class="panel-heading">Find a calculator</h2>
-              <p id="home-calculator-finder-intro" class="mb-3 mt-0.5 text-sm text-ink-muted">Type what you want to work out, then pick a match.</p>
-              <search id="home-hero-search" class="block" data-search-region="hero">
-            <form id="home-hero-search-form" class="relative" action="/" method="get" data-search-key="hero" data-search-prefill="true">
-              <label for="home-hero-search-input" class="sr-only">Search calculators</label>
-              <svg class="pointer-events-none absolute left-3.5 top-3 size-5 text-ink-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-              <input id="home-hero-search-input" name="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Try mortgage, 401k, or APR" class="search-input" aria-describedby="home-hero-search-status" aria-controls="home-hero-search-results" data-search-input="hero">
-              <p id="home-hero-search-status" class="sr-only" aria-live="polite"></p>
-              <ul id="home-hero-search-results" class="search-results" aria-label="Matching calculators" hidden></ul>
-            </form>
-          </search>
-            </section>
-
-            <section id="home-side-category-section" class="panel p-4 sm:p-5" aria-labelledby="home-side-category-heading" data-section="side-category-list">
+          <div id="home-hero-side-column" class="@4xl:relative">
+            <section id="home-side-category-section" class="panel flex flex-col p-4 sm:p-5 @4xl:absolute @4xl:inset-0" aria-labelledby="home-side-category-heading" data-section="side-category-list">
               <h2 id="home-side-category-heading" class="panel-heading">Browse by category</h2>
-              <ul id="home-side-category-list" class="mt-1" role="list">
+              <ul id="home-side-category-list" class="mt-1 min-h-0 flex-1 overflow-y-auto" role="list">
 {{SIDE_CATEGORIES}}
               </ul>
             </section>
 
-            {{AD_HERO}}
           </div>
         </div>
       </section>
