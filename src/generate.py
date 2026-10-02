@@ -513,7 +513,8 @@ def sitemap_page_html(S):
             items = "".join(
                 f'<li><a href="{href(t)}">{esc(S.by_slug[t]["name"])}</a></li>' if S.by_slug[t]["live"]
                 else f'<li>{esc(S.by_slug[t]["name"])} <small>(coming soon)</small></li>' for t in s["tools"])
-            parts.append(f'<h3><a href="{href(cat["slug"], s["slug"])}">{esc(s["name"])}</a></h3><ul>{items}</ul>')
+            columns = ' class="sitemap-columns"' if len(s["tools"]) >= 6 else ""
+            parts.append(f'<h3><a href="{href(cat["slug"], s["slug"])}">{esc(s["name"])}</a></h3><ul{columns}>{items}</ul>')
     return "\n".join(parts)
 
 
