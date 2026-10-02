@@ -6,6 +6,8 @@ name: Build and deploy site
 on:
   push:
     branches: [main]
+  schedule:
+    - cron: '0 16 1 * *'   # 00:00 SGT on the 1st: redeploy so the monthly silo-link rotation changes
   workflow_dispatch:
 
 permissions:
@@ -34,6 +36,9 @@ jobs:
 
       - name: Validate JSON and render site
         run: python3 src/generate.py
+
+      - name: Patch this month's silo links into public/
+        run: python3 utilities/silo_linking/generate_silo_rotation.py
 
       - uses: actions/upload-pages-artifact@v3
         with:
