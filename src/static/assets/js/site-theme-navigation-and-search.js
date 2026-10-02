@@ -446,6 +446,7 @@ class SiteApplication {
     new SiteMobileSearchController(this.pageSlug).initialize();
     this.initializeCalculatorSearches();
     this.updateFooterYear();
+    document.querySelectorAll(".breadcrumb-list").forEach((list) => { list.scrollLeft = list.scrollWidth; });
   }
 
   createIndexEntry(entryName, entryCategory, entryUrl) {

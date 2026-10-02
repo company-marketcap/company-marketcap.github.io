@@ -124,7 +124,6 @@ def render_ad(page_id, slot, suffix=""):
     key, label, size, frame = AD_SLOTS[slot]
     name = f"{page_id}-{key}{suffix}"
     return (f'<aside id="{name}" class="ad-slot" aria-label="{label}" data-ad-slot-name="{name}" data-ad-size="{size}">\n'
-            f'          <p id="{name}-label" class="ad-slot-label">Advertisement</p>\n'
             f'          <div id="{name}-frame" class="ad-slot-frame {frame}" data-ad-container="{name}">\n'
             f'            <!-- Paste the ad unit code for "{key}" here -->\n'
             f'            <span aria-hidden="true">{size}</span>\n'
@@ -136,7 +135,7 @@ def render_breadcrumb(site, page_id, trail):
     items = []
     for i, (name, link) in enumerate(trail, 1):
         sep = SEPARATOR_SVG if i > 1 else ""
-        attrs = (f'id="{page_id}-breadcrumb-item-{i}" class="flex items-center gap-1.5" itemprop="itemListElement" '
+        attrs = (f'id="{page_id}-breadcrumb-item-{i}" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" '
                  f'itemscope itemtype="https://schema.org/ListItem"')
         if i < len(trail):
             body = (f'<a class="breadcrumb-link" href="{link}" itemprop="item"><span itemprop="name">{esc(name)}</span></a>')
@@ -145,7 +144,7 @@ def render_breadcrumb(site, page_id, trail):
                     f'<meta itemprop="item" content="{site["base_url"]}{link}">')
         items.append(f'<li {attrs}>{sep}{body}<meta itemprop="position" content="{i}"></li>')
     return (f'<nav id="{page_id}-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">\n'
-            f'          <ol id="{page_id}-breadcrumb-list" class="flex flex-wrap items-center gap-1.5 text-sm" '
+            f'          <ol id="{page_id}-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" '
             f'itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">\n            '
             + "\n            ".join(items) + "\n          </ol>\n        </nav>")
 

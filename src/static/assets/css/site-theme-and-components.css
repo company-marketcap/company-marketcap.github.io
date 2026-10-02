@@ -120,6 +120,12 @@ input[type="search"]::-webkit-search-cancel-button { cursor: pointer; }
 [data-mobile-search="open"] [data-mobile-search-hide] { display: none !important; }
 [data-mobile-search="open"] [data-mobile-search-inline] { display: flex; }
 
+/* Tighter spacing under the header and between the top ad and the content below it (unlayered so it beats space-y). */
+[data-ad-slot-name$="-ad-top-leaderboard"] { margin-block-end: 1rem; }
+
+.breadcrumb-list { scrollbar-width: none; }
+.breadcrumb-list::-webkit-scrollbar { display: none; }
+
 @layer components {
   .skip-link { @apply sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-3 focus:z-[60] focus:rounded-lg focus:bg-brand focus:px-4 focus:py-2 focus:text-brand-ink; }
   .icon-button { @apply focus-ring inline-flex h-10 min-w-10 shrink-0 items-center justify-center gap-2 rounded-lg border border-line bg-surface px-2.5 text-sm text-ink-muted transition-colors hover:bg-surface-muted hover:text-ink; }
