@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TVM Calculator: N, I/Y, PV, PMT and FV Solver</title>
-  <meta name="description" content="A time value of money calculator laid out like a financial calculator: enter four of N, I/Y, PV, PMT and FV, set P/Y, C/Y and BGN or END, and compute the fifth.">
+  <title>TVM Calculator: Time Value of Money Solver</title>
+  <meta name="description" content="Free TVM calculator to solve for present value, future value, interest rate or payments, and see how time changes what your money is worth.">
   <link rel="canonical" href="https://company-marketcap.github.io/tvm-calculator.html">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="color-scheme" content="light dark">
@@ -14,8 +14,8 @@
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Company Marketcap">
-  <meta property="og:title" content="TVM Calculator: N, I/Y, PV, PMT and FV Solver">
-  <meta property="og:description" content="A time value of money calculator laid out like a financial calculator: enter four of N, I/Y, PV, PMT and FV, set P/Y, C/Y and BGN or END, and compute the fifth.">
+  <meta property="og:title" content="TVM Calculator: Time Value of Money Solver">
+  <meta property="og:description" content="Free TVM calculator to solve for present value, future value, interest rate or payments, and see how time changes what your money is worth.">
   <meta property="og:url" content="https://company-marketcap.github.io/tvm-calculator.html">
   <meta name="twitter:card" content="summary">
 
@@ -28,7 +28,7 @@
   <script src="/assets/js/site-theme-init.js"></script>
   <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
   
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "TVM Calculator", "url": "https://company-marketcap.github.io/tvm-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "A time value of money calculator laid out like a financial calculator: enter four of N, I/Y, PV, PMT and FV, set P/Y, C/Y and BGN or END, and compute the fifth."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "TVM Calculator", "url": "https://company-marketcap.github.io/tvm-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Free TVM calculator to solve for present value, future value, interest rate or payments, and see how time changes what your money is worth."}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Interest, APR & Time Value of Money", "item": "https://company-marketcap.github.io/financial-calculators.html#interest-calculators"}, {"@type": "ListItem", "position": 4, "name": "TVM Calculator", "item": "https://company-marketcap.github.io/tvm-calculator.html"}]}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the time value of money?", "acceptedAnswer": {"@type": "Answer", "text": "The time value of money is the idea that a dollar today is worth more than a dollar later, because money you hold now can be invested to earn interest. A TVM calculator measures that gap using the starting amount, payments, rate and time."}}, {"@type": "Question", "name": "What is the difference between END and BGN payment timing?", "acceptedAnswer": {"@type": "Answer", "text": "END assumes each payment lands at the close of its period, like an ordinary annuity. BGN assumes it lands at the start, like rent, so every payment earns one extra period of interest and the future value comes out slightly higher."}}, {"@type": "Question", "name": "What do P/Y and C/Y mean?", "acceptedAnswer": {"@type": "Answer", "text": "P/Y is how many payments you make per year and C/Y is how many times interest compounds per year. Set both to 12 for monthly deposits into an account that compounds monthly."}}, {"@type": "Question", "name": "Should I enter a nominal or an effective interest rate?", "acceptedAnswer": {"@type": "Answer", "text": "Most banks quote a nominal annual rate that compounds several times a year, so choose Nominal unless your rate already states the effective annual yield. The effective annual rate result shows what the nominal rate really earns over a full year."}}, {"@type": "Question", "name": "How do I model regular withdrawals?", "acceptedAnswer": {"@type": "Answer", "text": "Enter the balance you start with as the starting amount, the withdrawal as the payment, and set Payment direction to Withdraw. The future value then shows what is left after the chosen number of years, and a negative figure means the money ran out."}}, {"@type": "Question", "name": "Why is total interest more than my deposits in long plans?", "acceptedAnswer": {"@type": "Answer", "text": "Interest earns interest. In long horizons the growth on earlier gains outweighs the money you add, which is why starting early matters more than the size of any single payment."}}, {"@type": "Question", "name": "What if the interest rate is 0%?", "acceptedAnswer": {"@type": "Answer", "text": "With a 0% rate the calculator simply adds your starting amount and every payment, so total interest is zero and the future value equals the money you put in."}}]}</script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
@@ -172,7 +172,7 @@
           </ol>
         </nav>
         <section id="tvm-calculator-hero-section" aria-labelledby="tvm-calculator-hero-heading" data-section="hero">
-          <h1 id="tvm-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">TVM Calculator</h1>
+          <h1 id="tvm-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">TVM Calculator: Time Value of Money Solver</h1>
           <p id="tvm-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Your TVM calculator answers one question: what is money worth when it moves through time? Enter any four of the five time value of money variables and it solves for the fifth, whether that is present value, future value, payment, interest rate or number of periods. You can price a loan, test a savings plan or check a lump sum in seconds, and see why a dollar today beats a dollar later. <!-- SILO_START:slot_a -->The <a class="silo-link" href="/interest-calculator.html">interest calculator</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_a --></p>
         </section>
       </div>

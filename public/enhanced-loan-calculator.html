@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Enhanced Loan Calculator: Interest-Only, Balloon and Extras</title>
-  <meta name="description" content="Model a loan with an interest-only period, a balloon payment and extra payments together, and see what each feature does to your payment and interest.">
+  <title>Enhanced Loan Calculator: Payment, Rate and Term</title>
+  <meta name="description" content="Use this enhanced loan calculator to compare loans. Change your monthly payment, loan amount, interest rate or term and see total cost and amortization schedule.">
   <link rel="canonical" href="https://company-marketcap.github.io/enhanced-loan-calculator.html">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="color-scheme" content="light dark">
@@ -14,8 +14,8 @@
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Company Marketcap">
-  <meta property="og:title" content="Enhanced Loan Calculator: Interest-Only, Balloon and Extras">
-  <meta property="og:description" content="Model a loan with an interest-only period, a balloon payment and extra payments together, and see what each feature does to your payment and interest.">
+  <meta property="og:title" content="Enhanced Loan Calculator: Payment, Rate and Term">
+  <meta property="og:description" content="Use this enhanced loan calculator to compare loans. Change your monthly payment, loan amount, interest rate or term and see total cost and amortization schedule.">
   <meta property="og:url" content="https://company-marketcap.github.io/enhanced-loan-calculator.html">
   <meta name="twitter:card" content="summary">
 
@@ -28,8 +28,9 @@
   <script src="/assets/js/site-theme-init.js"></script>
   <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
   
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Enhanced Loan Calculator", "url": "https://company-marketcap.github.io/enhanced-loan-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Model a loan with an interest-only period, a balloon payment and extra payments together, and see what each feature does to your payment and interest."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Enhanced Loan Calculator", "url": "https://company-marketcap.github.io/enhanced-loan-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Use this enhanced loan calculator to compare loans. Change your monthly payment, loan amount, interest rate or term and see total cost and amortization schedule."}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Personal & General Loans", "item": "https://company-marketcap.github.io/financial-calculators.html#loan-calculators"}, {"@type": "ListItem", "position": 4, "name": "Enhanced Loan Calculator", "item": "https://company-marketcap.github.io/enhanced-loan-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is an enhanced loan calculator?", "acceptedAnswer": {"@type": "Answer", "text": "It is a loan payment calculator that treats the loan amount, interest rate, term and monthly payment as linked values, so you can test different combinations and see the total interest, total cost and amortization schedule update."}}, {"@type": "Question", "name": "How is the monthly payment calculated?", "acceptedAnswer": {"@type": "Answer", "text": "The calculator uses the standard amortization formula: payment = loan amount × r ÷ (1 − (1 + r)^−n), where r is the annual rate divided by 12 and n is the number of monthly payments. Interest is charged each month on your remaining balance."}}, {"@type": "Question", "name": "Why does a longer term lower my payment but cost more?", "acceptedAnswer": {"@type": "Answer", "text": "Spreading the same balance over more months shrinks each payment, but interest keeps accruing on the outstanding balance for longer. A shorter term has a higher payment and a lower total interest cost."}}, {"@type": "Question", "name": "How does an origination fee change the result?", "acceptedAnswer": {"@type": "Answer", "text": "An origination fee is a one-time charge, usually a percentage of the loan, deducted from your proceeds. It does not change the monthly payment, but the amount you receive is lower than the amount you repay."}}, {"@type": "Question", "name": "What interest rate should I enter?", "acceptedAnswer": {"@type": "Answer", "text": "Use the rate from your lender's quote if you have one. If not, try a range around your best estimate, since your credit score, credit profile and debt-to-income ratio all influence the rate you are offered."}}, {"@type": "Question", "name": "Does the calculator show an amortization schedule?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The table lists each year of the loan with the principal paid, the interest paid and the balance still owed, so you can see how the interest share shrinks over time."}}, {"@type": "Question", "name": "How can I pay off a loan faster?", "acceptedAnswer": {"@type": "Answer", "text": "Choose a shorter term or pay more than the required amount each month. Even a modest extra payment reduces the balance sooner, which cuts the interest charged in every later month."}}, {"@type": "Question", "name": "Is the result the same as my lender's offer?", "acceptedAnswer": {"@type": "Answer", "text": "It is a close estimate. Lenders may round payments differently, add fees or use a different day-count convention, so always check the final disclosure before signing."}}]}</script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
 </head>
 <body id="enhanced-loan-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="enhanced-loan-calculator" data-page-type="calculator">
@@ -171,8 +172,8 @@
           </ol>
         </nav>
         <section id="enhanced-loan-calculator-hero-section" aria-labelledby="enhanced-loan-calculator-hero-heading" data-section="hero">
-          <h1 id="enhanced-loan-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Enhanced Loan Calculator</h1>
-          <p id="enhanced-loan-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Combine an interest-only period, a balloon payment and one-time or monthly extra payments in one loan, and see what each feature adds to or saves on your interest. <!-- SILO_START:slot_a -->Pair this with the <a class="silo-link" href="/payment-calculator.html">free payment calculator</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_a --></p>
+          <h1 id="enhanced-loan-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Enhanced Loan Calculator: Payment, Rate and Term</h1>
+          <p id="enhanced-loan-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">The enhanced loan calculator lets you change your monthly payment, loan amount, interest rate or term in any order and watch the rest of the loan rebuild itself. Instead of filling in one fixed form, you steer with slider controls and see the total cost and amortization schedule update on the spot. Below you will find how every input works, the formula underneath, and a full worked example so you can sanity-check any result. <!-- SILO_START:slot_a -->Pair this with the <a class="silo-link" href="/payment-calculator.html">free payment calculator</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_a --></p>
         </section>
       </div>
 
@@ -236,7 +237,7 @@
         <p id="enhanced-loan-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
       </div>
 
-      <p id="enhanced-loan-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Combine an interest-only period, a balloon payment and one-time or monthly extra payments in one loan, and see what each feature adds to or saves on your interest. <!-- SILO_START:slot_a_m -->Pair this with the <a class="silo-link" href="/payment-calculator.html">free payment calculator</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_a_m --></p>
+      <p id="enhanced-loan-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">The enhanced loan calculator lets you change your monthly payment, loan amount, interest rate or term in any order and watch the rest of the loan rebuild itself. Instead of filling in one fixed form, you steer with slider controls and see the total cost and amortization schedule update on the spot. Below you will find how every input works, the formula underneath, and a full worked example so you can sanity-check any result. <!-- SILO_START:slot_a_m -->Pair this with the <a class="silo-link" href="/payment-calculator.html">free payment calculator</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_a_m --></p>
 
       <aside id="enhanced-loan-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="enhanced-loan-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
           <div id="enhanced-loan-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="enhanced-loan-calculator-ad-in-feed">
@@ -245,21 +246,127 @@
           </div>
         </aside>
 
-      
+      <div id="enhanced-loan-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="enhanced-loan-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="enhanced-loan-calculator-guide-heading-1">
+<h2 id="enhanced-loan-calculator-guide-heading-1">How the Enhanced Loan Calculator Works</h2>
+<p>A standard loan payment calculator asks for three numbers and returns one. This tool treats the loan as four linked values: the <strong>loan amount</strong>, the <strong>interest rate</strong>, the <strong>loan term</strong> and the monthly payment. Move any one of them and the calculator solves for whichever value you leave free, so you can ask either "what will this loan cost me each month?" or "how long until I am debt free if I can afford this much?" <!-- SILO_START:slot_b -->Try the <a class="silo-link" href="/composition-of-loan-payments-calculator.html">composition of loan payments calculator online</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_b --></p>
+<p>The calculator is built for fixed installment loans: the same payment goes out each month, interest is charged on the current outstanding balance, and whatever is left over after interest pays down principal. That is the same pattern behind a car loan, a personal loan, a student loan or a small business loan, which is why one tool covers all of them. A personal loan is the most common use, because it has no collateral to complicate the numbers, but the math is identical for every type.</p>
+<h3>Why sliders beat a single fixed form</h3>
+<p>Borrowing decisions are rarely one-shot. You usually start with a payment you are comfortable with and work backward, or start with a purchase price and test how far a longer term stretches the budget. Slider controls make that back-and-forth instant: drag the term from 48 to 60 months on the example below and the payment falls from $658.54 to $542.96 while total interest rises from $3,759.75 to $4,727.76, so the real-time results show the full trade-off before you commit.</p>
+        </section>
+        <section id="enhanced-loan-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="enhanced-loan-calculator-guide-heading-2">
+<h2 id="enhanced-loan-calculator-guide-heading-2">Loan Payment Calculator Inputs: Amount, Rate and Term</h2>
+<p>Each input maps to a term you will see on every lender's disclosure, so it helps to know exactly what you are entering. <!-- SILO_START:slot_c -->If you want to see how the figures change, the <a class="silo-link" href="/student-loan-consolidation-and-debt-payoff-calculator.html">free student loan consolidation calculator</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_c --></p>
+<dl>
+<dt>Loan amount</dt>
+<dd>The total you borrow before any fees. If a lender deducts an origination fee, the amount received is lower than this figure.</dd>
+<dt>Interest rate</dt>
+<dd>The annual percentage charged on your remaining balance. It is applied monthly at one twelfth of the yearly rate.</dd>
+<dt>Term in months</dt>
+<dd>The repayment term, counted in months. Forty-eight months is four years.</dd>
+<dt>Monthly payment</dt>
+<dd>The fixed amount due each month. Leave it free and the calculator solves for it, or fix it and let the term adjust.</dd>
+</dl>
+<h3>Choosing a realistic interest rate</h3>
+<p>The rate you are offered depends on your credit score, your credit profile and your debt-to-income ratio. Borrowers with long, clean credit histories and little existing debt are offered the lowest rates, while thin or damaged files pay a premium. Use the rate from an actual quote if you have one; otherwise test a range, a point or two above and below your best guess. Enter it as a plain annual percentage, such as 6.35, and the tool converts it to a monthly rate for you; nudging it a point either way shows its effect on the payment right away. A personal loan from an online lender usually prices differently from one at your own bank.</p>
+        </section>
+        <section id="enhanced-loan-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="enhanced-loan-calculator-guide-heading-3">
+<h2 id="enhanced-loan-calculator-guide-heading-3">The Loan Payment Formula Behind Your Monthly Payment</h2>
+<p>The fixed payment on an amortizing loan comes from the present value of an annuity. With monthly rate <strong>r</strong> (annual rate divided by 12), loan amount <strong>P</strong> and <strong>n</strong> monthly payments:</p>
+<p>$$M = P \times \frac{r}{1 - (1 + r)^{-n}}$$</p>
+<p>Total interest is simply what you pay in all, minus what you borrowed:</p>
+<p>$$\text{Total interest} = (M \times n) - P$$</p>
+<p>Each month, the interest portion is \(I = B \times r\), where B is the balance at the start of that month, and the rest of the payment, \(M - I\), reduces principal. Because B shrinks every month, the interest share falls and the principal share rises, a pattern called amortization.</p>
+        </section>
+        <section id="enhanced-loan-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="enhanced-loan-calculator-guide-heading-4">
+<h2 id="enhanced-loan-calculator-guide-heading-4">Worked Example: A $27,850 Personal Loan Calculator Run</h2>
+<p>Suppose you want to borrow <strong>$27,850</strong> at <strong>6.35%</strong> for <strong>48 months</strong>. The monthly rate is 0.0635 ÷ 12 = 0.005292, so:</p>
+<p>$$M = 27{,}850 \times \frac{0.005292}{1 - (1.005292)^{-48}} \approx 658.54$$</p>
+<p>Over 48 payments you would pay $31,609.75 in all, which means <strong>$3,759.75 in total interest</strong>. The first payment splits into $147.37 of interest and $511.17 of principal; by month 48 the interest part has dwindled to $3.47.</p>
+<table>
+<thead><tr><th>Loan term</th><th>Monthly payment</th><th>Total interest</th><th>Total cost</th></tr></thead>
+<tbody>
+<tr><td>36 months</td><td>$851.67</td><td>$2,810.29</td><td>$30,660.29</td></tr>
+<tr><td>48 months</td><td>$658.54</td><td>$3,759.75</td><td>$31,609.75</td></tr>
+<tr><td>60 months</td><td>$542.96</td><td>$4,727.76</td><td>$32,577.76</td></tr>
+<tr><td>72 months</td><td>$466.17</td><td>$5,714.25</td><td>$33,564.25</td></tr>
+</tbody>
+</table>
+<p>Each row below is one setting of the term control on this personal loan, so you can compare every version side by side. The table shows the core trade-off in one view: stretching from 36 to 72 months drops the payment by about $385 but adds roughly $2,904 in interest costs.</p>
+        </section>
+        <section id="enhanced-loan-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="enhanced-loan-calculator-guide-heading-5">
+<h2 id="enhanced-loan-calculator-guide-heading-5">Reading the Amortization Schedule: Principal and Interest by Year</h2>
+<p>The calculator's amortization schedule lists every payment with its interest share, principal share and remaining balance. Viewing it by year, rather than month by month, is the fastest way to see where your money goes. For the 48-month example above:</p>
+<ul>
+<li><strong>Year 1:</strong> $1,587 interest, $6,316 principal</li>
+<li><strong>Year 2:</strong> $1,174 interest, $6,729 principal</li>
+<li><strong>Year 3:</strong> $734 interest, $7,169 principal</li>
+<li><strong>Year 4:</strong> $265 interest, $7,637 principal</li>
+</ul>
+<figure><img src="/assets/images/tools/enhanced-loan-calculator/enhanced-loan-calculator-principal-vs-interest-by-year.svg" alt="Stacked column chart showing principal rising and interest falling across the four years of a $27,850, 48-month loan at 6.35%"><figcaption>Each year of the 48-month example costs about $7,903, but the interest share falls from $1,587 in year 1 to $265 in year 4.</figcaption></figure>
+<h3>Why early payments are mostly interest</h3>
+<p>The interest rate decides how steep this front-loading is: a lower rate shrinks the interest column in every row of the schedule, which is why a stronger credit record pays off across the whole loan.</p>
+<p>Interest is charged on the full balance at the start, so the first year carries the heaviest interest. This is why an early payoff saves more than the same extra money paid late in the loan. Adding $100 each month to the example, a payment of $758.54, clears the balance in 41 months and cuts total interest to about $3,198, a saving near $561.</p>
+        </section>
+        <section id="enhanced-loan-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="enhanced-loan-calculator-guide-heading-6">
+<h2 id="enhanced-loan-calculator-guide-heading-6">Testing a $18,420 Truck Loan with the Loan Payment Calculator</h2>
+<p>You have a credit union quote for a used pickup: <strong>$18,420 at 7.45%</strong>, with the term left open. Your gross income is $5,480 a month and existing debt payments total $1,186. Before looking at the term, you check the ceiling: the common 36% debt-to-income guideline allows $1,972.80 of total monthly debt, so a new payment can reach $786.80 without crossing it. The tighter limit is your own budget, which tops out at $400 a month.</p>
+<p>You enter the loan amount and rate into the enhanced loan calculator and try 48 months first. The monthly payment comes back at <strong>$444.95</strong>, which is $44.95 over budget. At 60 months it drops to $368.66, but total interest climbs to $3,699.69. Dragging the term slider to 54 months gives $402.53, still $2.53 too high.</p>
+<p>At 55 months the payment is <strong>$396.36</strong> and total interest is $3,380.03, so that is the setting you keep. Compared with the 60-month option, you save $319.66 in interest while staying under $400. Compared with 48 months, you pay $442.64 more in interest for a payment that fits.</p>
+<ul>
+<li>Payment at 55 months: $396.36, which is $3.64 under your cap</li>
+<li>Debt-to-income after the loan: ($1,186 + $396.36) ÷ $5,480 = 28.9%, below the 36% guideline</li>
+<li>Next step: rerun the same figures with the credit union's $350 origination quote to see the APR before signing</li>
+</ul>
+        </section>
+        <section id="enhanced-loan-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="enhanced-loan-calculator-guide-heading-7">
+<h2 id="enhanced-loan-calculator-guide-heading-7">Longer Terms vs a Shorter Term: Comparing Loan Offers</h2>
+<p>Longer terms produce lower monthly payments but more interest overall, while a shorter term raises the payment and shrinks the cost. The right choice balances affordable payments against total interest. A good test is to set the payment slider to the highest figure that still fits your budget, then read the resulting term. Fixing a $700 payment on the example loan, for instance, finishes in 45 months with about $3,504 of interest.</p>
+<figure><img src="/assets/images/tools/enhanced-loan-calculator/loan-payment-by-interest-rate-and-term-grid.svg" alt="Heatmap of the monthly payment on a $27,850 loan for three interest rates and four loan terms"><figcaption>Monthly payment on $27,850 by interest rate and term; the 6.35%, 48-month worked example is outlined.</figcaption></figure>
+<h3>How a rate change moves the payment</h3>
+<p>On the 48-month example, each full percentage point of rate moves the payment by roughly $13: from $645.79 at 5.35% to $671.43 at 7.35%. Small rate gaps matter less to the monthly figure than to the lifetime total, so compare loan offers by their total cost, not just the payment.</p>
+        </section>
+        <section id="enhanced-loan-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="enhanced-loan-calculator-guide-heading-8">
+<h2 id="enhanced-loan-calculator-guide-heading-8">Origination Fee and APR: What You Actually Receive</h2>
+<p>Many lenders charge an origination fee, a one-time fee taken upfront from the loan proceeds. Your payment is still calculated on the full loan amount, but you take home less. A 3% fee on $27,850 is $835.50, so the <strong>amount received</strong> is $27,014.50 while you repay the full $27,850.</p>
+<p>That gap is why the APR, or annual percentage rate, exceeds the stated interest rate. Folding the fee in lifts the 6.35% loan to an effective APR of about 7.92%. When you compare lenders, rank them by APR, since it captures fees as well as interest. If you need a specific amount in hand, request a larger loan to cover the deduction.</p>
+
+<figure><img src="/assets/images/tools/enhanced-loan-calculator/loan-origination-fee-and-interest-cost-breakdown.svg" alt="Waterfall chart from the amount received through the origination fee and total interest to the total repaid on a $27,850 loan"><figcaption>Borrowing $27,850 with a 3% fee: $27,014.50 received, $31,609.75 repaid.</figcaption></figure>
+        </section>
+        <section id="enhanced-loan-calculator-guide-section-9" class="panel article-content p-4 sm:p-6" aria-labelledby="enhanced-loan-calculator-guide-heading-9">
+<h2 id="enhanced-loan-calculator-guide-heading-9">Amortizing Loan Calculator vs Balloon, Refinance and Line of Credit Tools</h2>
+<p>The amortizing loan calculator model fits any loan with equal payments. Other structures need different tools: a balloon loan pays less each month and leaves one large lump sum at the end, a refinance replaces an existing balance with a new rate or term, and a line of credit lets you draw and repay repeatedly with interest-only minimums. A mortgage follows the same amortization math but adds taxes and insurance on top of principal and interest.</p>
+<p>If your goal is early payoff, test it here first: raise the payment slider and watch the term drop. If you are deciding whether to refinance, enter your remaining balance, the new rate and the new term, then compare the total interest with what you are on track to pay today.</p>
+        </section>
+        <section id="enhanced-loan-calculator-guide-section-10" class="panel article-content p-4 sm:p-6" aria-labelledby="enhanced-loan-calculator-guide-heading-10">
+<h2 id="enhanced-loan-calculator-guide-heading-10">Compare Loan Offers with the Loan Payment Calculator Before You Apply</h2>
+<p>Before you apply, run two or three scenarios side by side, the way a loan comparison calculator would. Many lenders let you pre-qualify with a soft credit check, which does not affect your credit score, so you can collect real offers first. Then run each offer through the calculator in turn, entering its amount, rate and term, and compare monthly payment, total interest and APR.</p>
+<ul>
+<li>Check that the monthly payment fits comfortably in your budget alongside rent, existing debt and savings.</li>
+<li>Look at fees as well as the rate, including origination and late fees.</li>
+<li>Prefer the lender whose total cost is lowest for a term you can actually keep.</li>
+</ul>
+<p>Rerun the calculator whenever a quote's rate, term or fee changes, and treat each personal loan quote as a draft until you have compared the total cost. Whether you borrow from a bank, a credit union or an online lender, a clear picture of repayment before you sign is the best protection against a loan you cannot carry. For decisions that affect your wider finances, a financial advisor can add personal advice that no calculator can.</p>
+
+<aside><p>Results are estimates for planning only. Your lender's disclosure governs the real terms, including rounding and any rate changes.</p></aside>
+        </section>
+      </div>
+
+      <section id="enhanced-loan-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="enhanced-loan-calculator-faq-heading" data-section="faq">
+        <h2 id="enhanced-loan-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Enhanced Loan Calculator questions</h2>
+        <div id="enhanced-loan-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="enhanced-loan-calculator-faq-1" class="faq-item" open><summary id="enhanced-loan-calculator-faq-1-summary" class="faq-summary"><h3 id="enhanced-loan-calculator-faq-1-question" class="faq-question">What is an enhanced loan calculator?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="enhanced-loan-calculator-faq-1-answer" class="faq-answer"><p>It is a loan payment calculator that treats the loan amount, interest rate, term and monthly payment as linked values, so you can test different combinations and see the total interest, total cost and amortization schedule update.</p></div></details>
+          <details id="enhanced-loan-calculator-faq-2" class="faq-item" open><summary id="enhanced-loan-calculator-faq-2-summary" class="faq-summary"><h3 id="enhanced-loan-calculator-faq-2-question" class="faq-question">How is the monthly payment calculated?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="enhanced-loan-calculator-faq-2-answer" class="faq-answer"><p>The calculator uses the standard amortization formula: payment = loan amount × r ÷ (1 − (1 + r)^−n), where r is the annual rate divided by 12 and n is the number of monthly payments. Interest is charged each month on your remaining balance.</p></div></details>
+          <details id="enhanced-loan-calculator-faq-3" class="faq-item" open><summary id="enhanced-loan-calculator-faq-3-summary" class="faq-summary"><h3 id="enhanced-loan-calculator-faq-3-question" class="faq-question">Why does a longer term lower my payment but cost more?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="enhanced-loan-calculator-faq-3-answer" class="faq-answer"><p>Spreading the same balance over more months shrinks each payment, but interest keeps accruing on the outstanding balance for longer. A shorter term has a higher payment and a lower total interest cost.</p></div></details>
+          <details id="enhanced-loan-calculator-faq-4" class="faq-item" open><summary id="enhanced-loan-calculator-faq-4-summary" class="faq-summary"><h3 id="enhanced-loan-calculator-faq-4-question" class="faq-question">How does an origination fee change the result?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="enhanced-loan-calculator-faq-4-answer" class="faq-answer"><p>An origination fee is a one-time charge, usually a percentage of the loan, deducted from your proceeds. It does not change the monthly payment, but the amount you receive is lower than the amount you repay.</p></div></details>
+          <details id="enhanced-loan-calculator-faq-5" class="faq-item" open><summary id="enhanced-loan-calculator-faq-5-summary" class="faq-summary"><h3 id="enhanced-loan-calculator-faq-5-question" class="faq-question">What interest rate should I enter?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="enhanced-loan-calculator-faq-5-answer" class="faq-answer"><p>Use the rate from your lender&#x27;s quote if you have one. If not, try a range around your best estimate, since your credit score, credit profile and debt-to-income ratio all influence the rate you are offered.</p></div></details>
+          <details id="enhanced-loan-calculator-faq-6" class="faq-item" open><summary id="enhanced-loan-calculator-faq-6-summary" class="faq-summary"><h3 id="enhanced-loan-calculator-faq-6-question" class="faq-question">Does the calculator show an amortization schedule?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="enhanced-loan-calculator-faq-6-answer" class="faq-answer"><p>Yes. The table lists each year of the loan with the principal paid, the interest paid and the balance still owed, so you can see how the interest share shrinks over time.</p></div></details>
+          <details id="enhanced-loan-calculator-faq-7" class="faq-item" open><summary id="enhanced-loan-calculator-faq-7-summary" class="faq-summary"><h3 id="enhanced-loan-calculator-faq-7-question" class="faq-question">How can I pay off a loan faster?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="enhanced-loan-calculator-faq-7-answer" class="faq-answer"><p>Choose a shorter term or pay more than the required amount each month. Even a modest extra payment reduces the balance sooner, which cuts the interest charged in every later month.</p></div></details>
+          <details id="enhanced-loan-calculator-faq-8" class="faq-item" open><summary id="enhanced-loan-calculator-faq-8-summary" class="faq-summary"><h3 id="enhanced-loan-calculator-faq-8-question" class="faq-question">Is the result the same as my lender&#x27;s offer?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="enhanced-loan-calculator-faq-8-answer" class="faq-answer"><p>It is a close estimate. Lenders may round payments differently, add fees or use a different day-count convention, so always check the final disclosure before signing.</p></div></details>
+        </div>
+      </section>
 
       
-
-      <nav id="enhanced-loan-calculator-related-section" class="border-t border-line pt-8" aria-labelledby="enhanced-loan-calculator-related-heading" data-section="related-calculators">
-        <h2 id="enhanced-loan-calculator-related-heading" class="guide-heading">Related calculators</h2>
-        <ul id="enhanced-loan-calculator-related-list" class="mt-5 grid gap-3 @2xl:grid-cols-2 @5xl:grid-cols-3" role="list">
-          <li><a id="enhanced-loan-calculator-related-link-balloon-loan-calculator" class="related-link" href="/balloon-loan-calculator.html" data-calculator-name="Balloon Loan Calculator" data-category-name="Mortgage &amp; Home Buying">Balloon Loan Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
-          <li><a id="enhanced-loan-calculator-related-link-interest-only-calculator" class="related-link" href="/interest-only-calculator.html" data-calculator-name="Interest Only Mortgage Calculator" data-category-name="Mortgage &amp; Home Buying">Interest Only Mortgage Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
-          <li><a id="enhanced-loan-calculator-related-link-loan-early-payoff-calculator" class="related-link" href="/loan-early-payoff-calculator.html" data-calculator-name="Loan Early Payoff Calculator" data-category-name="Credit Cards &amp; Debt Payoff">Loan Early Payoff Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
-          <li><a id="enhanced-loan-calculator-related-link-loan-calculator" class="related-link" href="/loan-calculator.html" data-calculator-name="Loan Calculator" data-category-name="Personal &amp; General Loans">Loan Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
-          <li><a id="enhanced-loan-calculator-related-link-loan-comparison-calculator" class="related-link" href="/loan-comparison-calculator.html" data-calculator-name="Loan Comparison Calculator" data-category-name="Personal &amp; General Loans">Loan Comparison Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
-          <li><a id="enhanced-loan-calculator-related-link-365-360-loan-calculator" class="related-link" href="/365-360-loan-calculator.html" data-calculator-name="365/360 Loan Calculator" data-category-name="Personal &amp; General Loans">365/360 Loan Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
-        </ul>
-      </nav>
 
       <aside id="enhanced-loan-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="enhanced-loan-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
           <div id="enhanced-loan-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="enhanced-loan-calculator-ad-bottom-leaderboard">
@@ -337,7 +444,11 @@
       <p id="enhanced-loan-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="enhanced-loan-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
     </div>
   </footer>
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
 <script>(function () {
   'use strict';
   // A loan with an interest-only lead-in, a balloon and extra payments, all in one schedule.

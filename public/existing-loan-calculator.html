@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Existing Loan Calculator: Balance and Interest Left to Pay</title>
-  <meta name="description" content="Enter your original loan and the payments made so far to see your balance today, the interest you have paid, the interest still to come and your payoff date.">
+  <title>Existing Loan Calculator with Amortization Schedule</title>
+  <meta name="description" content="Calculate your remaining loan balance after any number of monthly payments, then see each payment split into principal and interest on an amortization schedule.">
   <link rel="canonical" href="https://company-marketcap.github.io/existing-loan-calculator.html">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="color-scheme" content="light dark">
@@ -14,8 +14,8 @@
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Company Marketcap">
-  <meta property="og:title" content="Existing Loan Calculator: Balance and Interest Left to Pay">
-  <meta property="og:description" content="Enter your original loan and the payments made so far to see your balance today, the interest you have paid, the interest still to come and your payoff date.">
+  <meta property="og:title" content="Existing Loan Calculator with Amortization Schedule">
+  <meta property="og:description" content="Calculate your remaining loan balance after any number of monthly payments, then see each payment split into principal and interest on an amortization schedule.">
   <meta property="og:url" content="https://company-marketcap.github.io/existing-loan-calculator.html">
   <meta name="twitter:card" content="summary">
 
@@ -28,8 +28,9 @@
   <script src="/assets/js/site-theme-init.js"></script>
   <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
   
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Existing Loan Calculator", "url": "https://company-marketcap.github.io/existing-loan-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Enter your original loan and the payments made so far to see your balance today, the interest you have paid, the interest still to come and your payoff date."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Existing Loan Calculator", "url": "https://company-marketcap.github.io/existing-loan-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Calculate your remaining loan balance after any number of monthly payments, then see each payment split into principal and interest on an amortization schedule."}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Personal & General Loans", "item": "https://company-marketcap.github.io/financial-calculators.html#loan-calculators"}, {"@type": "ListItem", "position": 4, "name": "Existing Loan Calculator", "item": "https://company-marketcap.github.io/existing-loan-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How does an existing loan calculator work out my balance?", "acceptedAnswer": {"@type": "Answer", "text": "It builds the loan's amortization schedule from the amount, rate, term and first payment date, then reads off the ending balance after the number of payments you have made."}}, {"@type": "Question", "name": "What do I need to enter?", "acceptedAnswer": {"@type": "Answer", "text": "The original loan amount, the interest rate, the loan term, the month and year of the first payment, and how many payments you have made. The original monthly payment is optional because it can be calculated."}}, {"@type": "Question", "name": "Why is my balance higher than I expected?", "acceptedAnswer": {"@type": "Answer", "text": "Early payments are mostly interest, so principal drops slowly at first. A late, short or skipped payment also leaves a higher balance than the schedule shows."}}, {"@type": "Question", "name": "What if I did not pay the scheduled amount every month?", "acceptedAnswer": {"@type": "Answer", "text": "Use the fields for payments made at a different amount. Enter that amount and how many of the first payments were made at it."}}, {"@type": "Question", "name": "How do extra payments change the result?", "acceptedAnswer": {"@type": "Answer", "text": "An extra monthly, yearly or one-time payment goes to principal, so later interest is charged on a smaller balance and the payoff date moves earlier."}}, {"@type": "Question", "name": "Can I use it for a mortgage, auto loan or student loan?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Any fixed-rate loan with equal monthly payments works the same way. Enter the terms from your loan agreement."}}, {"@type": "Question", "name": "Will the result match my lender's payoff quote?", "acceptedAnswer": {"@type": "Answer", "text": "Not always. A payoff quote includes interest accrued to the payoff date and may include fees, so confirm the exact figure with your lender before sending money."}}]}</script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5426315045205785" crossorigin="anonymous"></script>
 </head>
 <body id="existing-loan-calculator-page-body" class="min-h-dvh bg-page font-body text-ink antialiased" data-page-slug="existing-loan-calculator" data-page-type="calculator">
@@ -171,8 +172,8 @@
           </ol>
         </nav>
         <section id="existing-loan-calculator-hero-section" aria-labelledby="existing-loan-calculator-hero-heading" data-section="hero">
-          <h1 id="existing-loan-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Existing Loan Calculator</h1>
-          <p id="existing-loan-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Start from your original loan terms and the payments you have made to see what you owe today, the interest paid so far and the interest still to come. <!-- SILO_START:slot_a -->The <a class="silo-link" href="/payment-calculator.html">free payment calculator</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_a --></p>
+          <h1 id="existing-loan-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Existing Loan Calculator with Amortization Schedule</h1>
+          <p id="existing-loan-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Use the existing loan calculator to see exactly what you still owe: enter your original loan terms and how many payments you have made, and you get your current balance plus the interest still ahead. Amortization means each payment splits between principal and interest in a shifting ratio, so the balance on your original loan never falls in a straight line. Knowing the real figure lets you test extra payments before you commit to them. <!-- SILO_START:slot_a -->The <a class="silo-link" href="/payment-calculator.html">free payment calculator</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_a --></p>
         </section>
       </div>
 
@@ -229,7 +230,7 @@
         <p id="existing-loan-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
       </div>
 
-      <p id="existing-loan-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Start from your original loan terms and the payments you have made to see what you owe today, the interest paid so far and the interest still to come. <!-- SILO_START:slot_a_m -->The <a class="silo-link" href="/payment-calculator.html">free payment calculator</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_a_m --></p>
+      <p id="existing-loan-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Use the existing loan calculator to see exactly what you still owe: enter your original loan terms and how many payments you have made, and you get your current balance plus the interest still ahead. Amortization means each payment splits between principal and interest in a shifting ratio, so the balance on your original loan never falls in a straight line. Knowing the real figure lets you test extra payments before you commit to them. <!-- SILO_START:slot_a_m -->The <a class="silo-link" href="/payment-calculator.html">free payment calculator</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_a_m --></p>
 
       <aside id="existing-loan-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="existing-loan-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
           <div id="existing-loan-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="existing-loan-calculator-ad-in-feed">
@@ -238,21 +239,121 @@
           </div>
         </aside>
 
-      
+      <div id="existing-loan-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="existing-loan-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="existing-loan-calculator-guide-heading-1">
+<h2 id="existing-loan-calculator-guide-heading-1">How the Existing Loan Calculator Finds Your Remaining Balance</h2>
+<p>Banks and credit unions host an existing loan calculator so each borrower can check a loan that is already running, rather than one they have not signed yet. You supply the terms from your loan agreement, and the tool replays every month since loan origination to reach today's <strong>loan balance</strong>. It is one of the self-help tools lenders offer, and it returns the balance after your payments so far plus the interest still to come. <!-- SILO_START:slot_b -->Try the <a class="silo-link" href="/personal-loan-calculator.html">personal loan calculator online</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_b --></p>
+
+<h3>Loan Amount, Interest Rate and Loan Term</h3>
+<p>Three inputs drive everything. The <strong>loan amount</strong> is the original sum you borrowed, the <strong>interest rate</strong> is the annual percentage your lender charges, and the <strong>loan term</strong> is the number of months you agreed to repay it. Add the month your first payment fell due and the count of payments you have made, and the calculator has what it needs.</p>
+<ul>
+<li>Original loan amount, taken from your signing documents</li>
+<li>Annual interest rate, as a fixed-rate figure</li>
+<li>Loan term in months, never years, to avoid conversion slips</li>
+<li>Number of payments completed since the first due date</li>
+</ul>
+
+<h3>Monthly Payments and Payment Frequency</h3>
+<p>Most consumer debt uses <strong>monthly payments</strong>, but some contracts allow a different <strong>payment frequency</strong> such as biweekly. If you paid the regular payments in full and on time, the scheduled amount is all you need. If some months were short or skipped, the balance will be higher than the schedule suggests, so enter the actual amounts paid. Paying only the minimum payments your contract demands keeps the loan on its original path, while an unpaid month lets interest pile onto the debt.</p>
+        </section>
+        <section id="existing-loan-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="existing-loan-calculator-guide-heading-2">
+<h2 id="existing-loan-calculator-guide-heading-2">Loan Balance Formula and Amortization Schedule</h2>
+<p>The <strong>amortization</strong> math has two parts. First, the fixed payment that retires the debt over the full term: <!-- SILO_START:slot_c -->Pair this with the <a class="silo-link" href="/loan-prequalification-calculator.html">loan prequalification calculator</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_c --></p>
+$$M = P \times \frac{r(1+r)^{n}}{(1+r)^{n}-1}$$
+<p>Here \(P\) is the loan amount, \(r\) is the monthly rate (annual rate divided by 12) and \(n\) is the number of months. Second, the balance left after \(k\) payments:</p>
+$$B_{k} = P(1+r)^{k} - M \times \frac{(1+r)^{k}-1}{r}$$
+<p>Run the second formula for every month and you have a full <strong>amortization schedule</strong>, which is the same <strong>payment schedule</strong> a lender shows you in a statement.</p>
+
+<h3>Principal Balance and Total Interest</h3>
+<p>Each month, interest equals the <strong>principal balance</strong> times the monthly rate, and whatever is left of your payment reduces the balance. Early on, interest takes the larger share, which is why the first year barely dents the debt. Adding every interest line gives your <strong>total interest</strong>, the true price of borrowing beyond what you were lent.</p>
+
+<h3>Paying Off a Loan Month by Month</h3>
+<p>Because the interest portion shrinks while the payment stays level, the principal portion grows every month. That is the reason a loan feels slow to pay off at first and fast at the end. Reading the schedule row by row shows precisely when your payment flips to mostly principal.</p>
+<figure><img src="/assets/images/tools/existing-loan-calculator/existing-loan-calculator-payment-split-over-time.svg" alt="Stacked area chart showing the principal share of a $474.21 loan payment rising and the interest share shrinking over 60 payments"><figcaption>The principal share of each payment grows as the balance falls.</figcaption></figure>
+        </section>
+        <section id="existing-loan-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="existing-loan-calculator-guide-heading-3">
+<h2 id="existing-loan-calculator-guide-heading-3">Worked Example: Loan Balance After 19 Monthly Payments</h2>
+<p>Suppose you borrowed <strong>$23,750</strong> at a <strong>7.35%</strong> fixed rate over <strong>60 months</strong>. The scheduled payment works out to <strong>$474.21</strong>. After <strong>19 payments</strong>, the calculator reports an ending balance of <strong>$17,147.38</strong>. Over those months you have paid $2,407.37 of interest and $6,602.62 of principal, a total of $9,009.99 sent to the lender. The table shows how the split moves at key points in the loan.</p>
+<figure><img src="/assets/images/tools/existing-loan-calculator/loan-balance-after-19-payments-waterfall.svg" alt="Waterfall chart from a $23,750 original loan, less $6,602.62 of principal repaid, to a $17,147.38 current loan balance after 19 payments"><figcaption>Current loan balance after 19 payments on the example loan.</figcaption></figure>
+<table>
+<thead><tr><th>Month</th><th>Payment</th><th>Interest</th><th>Principal</th><th>Ending balance</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>$474.21</td><td>$145.47</td><td>$328.74</td><td>$23,421.26</td></tr>
+<tr><td>12</td><td>$474.21</td><td>$122.63</td><td>$351.58</td><td>$19,669.47</td></tr>
+<tr><td>19</td><td>$474.21</td><td>$107.28</td><td>$366.93</td><td>$17,147.38</td></tr>
+<tr><td>36</td><td>$474.21</td><td>$67.14</td><td>$407.07</td><td>$10,554.15</td></tr>
+<tr><td>48</td><td>$474.21</td><td>$36.19</td><td>$438.02</td><td>$5,470.38</td></tr>
+</tbody>
+</table>
+<p>At the scheduled pace, the full loan costs <strong>$4,702.70</strong> in total interest, so you repay $28,452.70 in all. A final payment of $474.31 clears the last cent of rounding.</p>
+
+<h3>When Your Real Balance Differs From the Schedule</h3>
+<p>The table assumes all 19 payments were exactly $474.21 and landed on their due dates. A late payment adds a few days of extra interest, and a skipped payment adds a full month. If your records show a short month, change that one row in the calculator instead of the whole loan, because the following balances all shift. Compare the result with the figure on your latest lender statement; a gap of more than a few dollars usually means a fee, a late charge or a payment that was applied somewhere other than the principal.</p>
+<p>Enter the dates and amounts from your own payment log into the calculator, and the month where its balance first departs from your statement is the month to ask the lender about.</p>
+        </section>
+        <section id="existing-loan-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="existing-loan-calculator-guide-heading-4">
+<h2 id="existing-loan-calculator-guide-heading-4">Checking Your Loan Payoff Before a Trade-In</h2>
+<p>Dana Whitcombe wants to trade in a pickup and needs to know whether the dealer's offer covers what is still owed. The truck was financed at <strong>$31,480</strong> for 72 months at 6.15%, and 26 payments are behind her. Her statement shows a different number from the one she expects, so she runs the figures herself instead of trusting a rounded estimate.</p>
+<p>She enters the original amount, the rate, a 72-month term, the first payment date and <strong>26</strong> as the payments made. The tool computes a scheduled payment of <strong>$523.95</strong>, then replays each month of the amortization. The result: a remaining balance of <strong>$21,422.51</strong>, with $3,565.21 of interest already paid.</p>
+<table>
+<thead><tr><th>Item</th><th>Amount</th></tr></thead>
+<tbody>
+<tr><td>Remaining balance after 26 payments</td><td>$21,422.51</td></tr>
+<tr><td>Trade-in value (Kelley Blue Book, good condition)</td><td>$20,900.00</td></tr>
+<tr><td>Shortfall at trade-in</td><td>$522.51</td></tr>
+</tbody>
+</table>
+<p>She reruns the calculator with <strong>27</strong> payments made and an extra $150 on that payment, so $673.95 in total. The balance falls to <strong>$20,858.35</strong>, which is $41.65 under the $20,900 value. Without the extra $150, the balance would sit at $21,008.35 after payment 27 and only slip below the trade-in value at payment 28 ($20,592.07).</p>
+<p>Her decision is concrete: send $673.95 next month, confirm the payoff figure with the lender in writing, and only then visit the dealer.</p>
+        </section>
+        <section id="existing-loan-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="existing-loan-calculator-guide-heading-5">
+<h2 id="existing-loan-calculator-guide-heading-5">Prepayment Calculator View: What Extra Payments Save</h2>
+<p>Once you know your balance, the same inputs work as a <strong>prepayment calculator</strong>. Add an extra payment to the principal each month and the schedule recomputes. Keeping the example above, an added <strong>$125</strong> starting with payment 20 clears the debt in month 51 instead of month 60, and the total interest drops to $4,170.77. That is <strong>$531.93</strong> of interest savings plus nine fewer payments.</p>
+<figure><img src="/assets/images/tools/existing-loan-calculator/extra-payment-payoff-timeline.svg" alt="Timeline of loan payments 1, 19, 51 and 60 showing an extra $125 payment ends the loan nine payments early"><figcaption>An extra $125 from payment 20 ends the loan at payment 51 instead of 60.</figcaption></figure>
+
+<h3>Shorten Your Repayment Timeline</h3>
+<p>An extra payment goes straight to principal, so every later interest charge is calculated on a smaller balance. The effect compounds in your favor, and it is strongest when you start early. Check first that your lender applies the money to principal and does not charge a prepayment penalty.</p>
+<ul>
+<li>Pick an extra amount your monthly cash flow can sustain</li>
+<li>Run the figure through the calculator to see the new payoff month</li>
+<li>Compare the lifetime savings against what you would earn elsewhere</li>
+</ul>
+        </section>
+        <section id="existing-loan-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="existing-loan-calculator-guide-heading-6">
+<h2 id="existing-loan-calculator-guide-heading-6">Amortization Calculator vs Loan Balance Calculator</h2>
+<p>An <strong>amortization calculator</strong> usually starts from a brand-new loan and shows the whole schedule, while a <strong>loan balance calculator</strong> starts from a loan already underway and answers one question: what is owed today? A general <strong>loan calculator</strong> solves for the payment or the loan amount. Use the one that matches the question you actually have.</p>
+<table>
+<thead><tr><th>Calculator</th><th>Best for</th><th>Main result</th></tr></thead>
+<tbody>
+<tr><td>Existing loan</td><td>A loan you are already repaying</td><td>Current balance and remaining interest</td></tr>
+<tr><td>Amortization</td><td>A new loan or full schedule</td><td>Payment and interest per month</td></tr>
+<tr><td>Prepayment</td><td>Extra payment planning</td><td>Interest saved and months removed</td></tr>
+</tbody>
+</table>
+
+<h3>Spreading Costs Across Mortgage, Auto and Student Loans</h3>
+<p>The calculator works the same for a mortgage, an auto loan or student loans; you only change the amount, rate and term. For federal student loans, take those figures from your servicer's notice, and use the smaller loan amount if scholarships reduced what you borrowed. A longer term means more of the total cost sits in the early years, and the interest column is what to show a tax preparer when you ask about the interest deduction.</p>
+        </section>
+        <section id="existing-loan-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="existing-loan-calculator-guide-heading-7">
+<h2 id="existing-loan-calculator-guide-heading-7">Using Your Loan Payoff Result in a Budget</h2>
+<p>The <strong>payoff</strong> figure is more than a curiosity. Lenders quote it when you refinance or sell, and it tells you how much debt is left to carry. Compare the calculator's remaining balance and interest figures with your monthly budget before you borrow again, since a lower balance can improve your credit position when a lender reviews your debts. A sound strategy is to redirect any payment that ends, such as a finished car loan, into your next extra payment, and to rerun the calculator whenever your rate or payment changes. That ties your financial plan, your cash flow and your wider personal finance goals to what you really owe.</p>
+        </section>
+      </div>
+
+      <section id="existing-loan-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="existing-loan-calculator-faq-heading" data-section="faq">
+        <h2 id="existing-loan-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Existing Loan Calculator questions</h2>
+        <div id="existing-loan-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="existing-loan-calculator-faq-1" class="faq-item" open><summary id="existing-loan-calculator-faq-1-summary" class="faq-summary"><h3 id="existing-loan-calculator-faq-1-question" class="faq-question">How does an existing loan calculator work out my balance?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="existing-loan-calculator-faq-1-answer" class="faq-answer"><p>It builds the loan&#x27;s amortization schedule from the amount, rate, term and first payment date, then reads off the ending balance after the number of payments you have made.</p></div></details>
+          <details id="existing-loan-calculator-faq-2" class="faq-item" open><summary id="existing-loan-calculator-faq-2-summary" class="faq-summary"><h3 id="existing-loan-calculator-faq-2-question" class="faq-question">What do I need to enter?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="existing-loan-calculator-faq-2-answer" class="faq-answer"><p>The original loan amount, the interest rate, the loan term, the month and year of the first payment, and how many payments you have made. The original monthly payment is optional because it can be calculated.</p></div></details>
+          <details id="existing-loan-calculator-faq-3" class="faq-item" open><summary id="existing-loan-calculator-faq-3-summary" class="faq-summary"><h3 id="existing-loan-calculator-faq-3-question" class="faq-question">Why is my balance higher than I expected?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="existing-loan-calculator-faq-3-answer" class="faq-answer"><p>Early payments are mostly interest, so principal drops slowly at first. A late, short or skipped payment also leaves a higher balance than the schedule shows.</p></div></details>
+          <details id="existing-loan-calculator-faq-4" class="faq-item" open><summary id="existing-loan-calculator-faq-4-summary" class="faq-summary"><h3 id="existing-loan-calculator-faq-4-question" class="faq-question">What if I did not pay the scheduled amount every month?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="existing-loan-calculator-faq-4-answer" class="faq-answer"><p>Use the fields for payments made at a different amount. Enter that amount and how many of the first payments were made at it.</p></div></details>
+          <details id="existing-loan-calculator-faq-5" class="faq-item" open><summary id="existing-loan-calculator-faq-5-summary" class="faq-summary"><h3 id="existing-loan-calculator-faq-5-question" class="faq-question">How do extra payments change the result?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="existing-loan-calculator-faq-5-answer" class="faq-answer"><p>An extra monthly, yearly or one-time payment goes to principal, so later interest is charged on a smaller balance and the payoff date moves earlier.</p></div></details>
+          <details id="existing-loan-calculator-faq-6" class="faq-item" open><summary id="existing-loan-calculator-faq-6-summary" class="faq-summary"><h3 id="existing-loan-calculator-faq-6-question" class="faq-question">Can I use it for a mortgage, auto loan or student loan?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="existing-loan-calculator-faq-6-answer" class="faq-answer"><p>Yes. Any fixed-rate loan with equal monthly payments works the same way. Enter the terms from your loan agreement.</p></div></details>
+          <details id="existing-loan-calculator-faq-7" class="faq-item" open><summary id="existing-loan-calculator-faq-7-summary" class="faq-summary"><h3 id="existing-loan-calculator-faq-7-question" class="faq-question">Will the result match my lender&#x27;s payoff quote?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="existing-loan-calculator-faq-7-answer" class="faq-answer"><p>Not always. A payoff quote includes interest accrued to the payoff date and may include fees, so confirm the exact figure with your lender before sending money.</p></div></details>
+        </div>
+      </section>
 
       
-
-      <nav id="existing-loan-calculator-related-section" class="border-t border-line pt-8" aria-labelledby="existing-loan-calculator-related-heading" data-section="related-calculators">
-        <h2 id="existing-loan-calculator-related-heading" class="guide-heading">Related calculators</h2>
-        <ul id="existing-loan-calculator-related-list" class="mt-5 grid gap-3 @2xl:grid-cols-2 @5xl:grid-cols-3" role="list">
-          <li><a id="existing-loan-calculator-related-link-loan-early-payoff-calculator" class="related-link" href="/loan-early-payoff-calculator.html" data-calculator-name="Loan Early Payoff Calculator" data-category-name="Credit Cards &amp; Debt Payoff">Loan Early Payoff Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
-          <li><a id="existing-loan-calculator-related-link-amortization-calculator" class="related-link" href="/amortization-calculator.html" data-calculator-name="Amortization Calculator" data-category-name="Mortgage &amp; Home Buying">Amortization Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
-          <li><a id="existing-loan-calculator-related-link-how-much-do-you-owe-calculator" class="related-link" href="/how-much-do-you-owe-calculator.html" data-calculator-name="How Much Do You Owe Calculator" data-category-name="Credit Cards &amp; Debt Payoff">How Much Do You Owe Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
-          <li><a id="existing-loan-calculator-related-link-loan-calculator" class="related-link" href="/loan-calculator.html" data-calculator-name="Loan Calculator" data-category-name="Personal &amp; General Loans">Loan Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
-          <li><a id="existing-loan-calculator-related-link-loan-comparison-calculator" class="related-link" href="/loan-comparison-calculator.html" data-calculator-name="Loan Comparison Calculator" data-category-name="Personal &amp; General Loans">Loan Comparison Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
-          <li><a id="existing-loan-calculator-related-link-365-360-loan-calculator" class="related-link" href="/365-360-loan-calculator.html" data-calculator-name="365/360 Loan Calculator" data-category-name="Personal &amp; General Loans">365/360 Loan Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
-        </ul>
-      </nav>
 
       <aside id="existing-loan-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="existing-loan-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
           <div id="existing-loan-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="existing-loan-calculator-ad-bottom-leaderboard">
@@ -330,7 +431,11 @@
       <p id="existing-loan-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="existing-loan-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
     </div>
   </footer>
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
 <script>(function () {
   'use strict';
   // An existing fixed-rate loan: where it stands after the payments made so far.
