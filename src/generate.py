@@ -80,6 +80,15 @@ AD_SIZES = {
     "right_rail_top": ((300, 300), (250, 250)), "right_rail": ((300, 300), (600, 600)),
 }
 AD_CONFIG = {"client": "", "units": {}}   # filled from site.json in main()
+GA_CONFIG = {"id": ""}                    # filled from site.json in main()
+GA_LOADER = ('<script async src="https://www.googletagmanager.com/gtag/js?id={id}"></script>\n'
+             '  <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}'
+             "gtag('js',new Date());gtag('config','{id}');</script>")
+CLARITY_CONFIG = {"id": ""}               # filled from site.json in main()
+CLARITY_LOADER = ('<script>(function(c,l,a,r,i,t,y){{c[a]=c[a]||function(){{(c[a].q=c[a].q||[]).push(arguments)}};'
+                  't=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;'
+                  'y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);'
+                  '}})(window,document,"clarity","script","{id}");</script>')
 ADSENSE_LOADER = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={client}" crossorigin="anonymous"></script>'
 SEPARATOR_SVG = ('<svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" '
                  'stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg>')
@@ -122,6 +131,10 @@ def render(template_name, values):
     if missing:
         raise SystemExit(f"{template_name}: no value for {sorted(missing)}")
     page = TOKEN_RE.sub(lambda m: values[m.group(1)], tpl)
+    if GA_CONFIG["id"]:
+        page = page.replace("</head>", "  " + GA_LOADER.format(id=GA_CONFIG["id"]) + "\n</head>", 1)
+    if CLARITY_CONFIG["id"]:
+        page = page.replace("</head>", "  " + CLARITY_LOADER.format(id=CLARITY_CONFIG["id"]) + "\n</head>", 1)
     if 'class="adsbygoogle"' in page:
         page = page.replace("</head>", "  " + ADSENSE_LOADER.format(client=AD_CONFIG["client"]) + "\n</head>", 1)
     return page
@@ -604,6 +617,8 @@ def main():
     site, tools, pages = build_data.build(include_planned=args.include_planned)
     S = Site(site, tools, pages)
     AD_CONFIG["client"] = site.get("adsense_client", "")
+    GA_CONFIG["id"] = site.get("ga_id", "")
+    CLARITY_CONFIG["id"] = site.get("clarity_id", "")
     AD_CONFIG["units"] = site.get("ad_units", {}) if AD_CONFIG["client"] else {}
 
     if OUT.exists():
