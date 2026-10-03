@@ -102,6 +102,7 @@ def main():
     ap.add_argument("--apply", action="store_true", help="write changes (default is a dry run)")
     ap.add_argument("--keep-meta", action="store_true", help="leave title, description and h1 unchanged")
     ap.add_argument("--demote-rest", action="store_true", help="set non-imported content-less tools to planned")
+    ap.add_argument("--allow-no-faq", action="store_true", help="import folders with no config.json / empty FAQ (faq left empty)")
     args = ap.parse_args()
     if args.home:
         return import_home(args.home, args.apply)
@@ -116,13 +117,13 @@ def main():
         tool_file = TOOLS / f"{slug}.json"
         if not tool_file.exists():
             skipped.append((slug, "no matching tool JSON")); continue
-        if not (folder / "config.json").exists() or not (folder / "content.html").exists():
+        if not (folder / "content.html").exists() or not ((folder / "config.json").exists() or args.allow_no_faq):
             skipped.append((slug, "no config.json/content.html (generation incomplete)")); continue
-        config = load(folder / "config.json")
+        config = load(folder / "config.json") if (folder / "config.json").exists() else {}
         faqs = [{"question": f["question"].strip(), "answer": f["answer"].strip()}
                 for f in config.get("faqs_json") or [] if f.get("question") and f.get("answer")]
         html = (folder / "content.html").read_text(encoding="utf-8").strip()
-        if not html or not faqs:
+        if not html or not (faqs or args.allow_no_faq):
             skipped.append((slug, "empty content or FAQ")); continue
 
         html = re.sub(r'(<img\b[^>]*?\bsrc=")images/([^"]+)"',

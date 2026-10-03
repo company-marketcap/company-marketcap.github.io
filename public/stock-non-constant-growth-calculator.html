@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Non-constant Growth Stock Calculator (Multi-stage DDM)</title>
-  <meta name="description" content="Value a stock with a multi-stage dividend discount model: one or two high-growth stages, then constant growth, with the PV of each dividend and terminal value.">
+  <title>Non-Constant Growth Stock Calculator (Multi-Stage DDM)</title>
+  <meta name="description" content="Use this non-constant growth stock calculator to find the value of a share whose dividend growth changes for a few years, then settles into a steady rate. Free.">
   <link rel="canonical" href="https://company-marketcap.github.io/stock-non-constant-growth-calculator.html">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="color-scheme" content="light dark">
@@ -14,8 +14,8 @@
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Company Marketcap">
-  <meta property="og:title" content="Non-constant Growth Stock Calculator (Multi-stage DDM)">
-  <meta property="og:description" content="Value a stock with a multi-stage dividend discount model: one or two high-growth stages, then constant growth, with the PV of each dividend and terminal value.">
+  <meta property="og:title" content="Non-Constant Growth Stock Calculator (Multi-Stage DDM)">
+  <meta property="og:description" content="Use this non-constant growth stock calculator to find the value of a share whose dividend growth changes for a few years, then settles into a steady rate. Free.">
   <meta property="og:url" content="https://company-marketcap.github.io/stock-non-constant-growth-calculator.html">
   <meta name="twitter:card" content="summary">
 
@@ -28,8 +28,9 @@
   <script src="/assets/js/site-theme-init.js"></script>
   <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
   
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Stock Non-constant Growth Calculator", "url": "https://company-marketcap.github.io/stock-non-constant-growth-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Value a stock with a multi-stage dividend discount model: one or two high-growth stages, then constant growth, with the PV of each dividend and terminal value."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Stock Non-constant Growth Calculator", "url": "https://company-marketcap.github.io/stock-non-constant-growth-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Use this non-constant growth stock calculator to find the value of a share whose dividend growth changes for a few years, then settles into a steady rate. Free."}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Stocks, Dividends & Trading", "item": "https://company-marketcap.github.io/financial-calculators.html#stock-calculators"}, {"@type": "ListItem", "position": 4, "name": "Stock Non-constant Growth Calculator", "item": "https://company-marketcap.github.io/stock-non-constant-growth-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a non-constant growth stock?", "acceptedAnswer": {"@type": "Answer", "text": "It is a stock whose dividends grow at different rates for a number of years, often called supernormal growth, before settling into a constant rate that lasts indefinitely."}}, {"@type": "Question", "name": "How does the calculator know which growth rate is the steady one?", "acceptedAnswer": {"@type": "Answer", "text": "The last growth rate you enter is treated as the constant rate that applies from that year onward. Rows after it are left blank, and every row before it is a year of explicit growth."}}, {"@type": "Question", "name": "What formula does the calculator use?", "acceptedAnswer": {"@type": "Answer", "text": "It discounts each explicit dividend at your required return, then values the dividends that follow with the Gordon growth formula, next dividend divided by (required return minus steady growth), and discounts that closing value back to today. The two parts are added together."}}, {"@type": "Question", "name": "Why must the required return be higher than the steady growth rate?", "acceptedAnswer": {"@type": "Answer", "text": "If steady growth equals or exceeds the required return, the Gordon growth step gives an infinite or negative value that has no meaning, so the calculator asks you to adjust the inputs."}}, {"@type": "Question", "name": "How is this different from a constant growth stock calculator?", "acceptedAnswer": {"@type": "Answer", "text": "A constant growth calculator assumes one growth rate from the very first dividend. This one lets the early years differ, which matters for companies whose payouts are still ramping up or slowing down."}}, {"@type": "Question", "name": "How do I choose the required return?", "acceptedAnswer": {"@type": "Answer", "text": "Many investors start with a risk-free yield such as a Treasury rate and add a premium for equity risk, then raise it for riskier or less predictable companies."}}, {"@type": "Question", "name": "Can I use it for a stock that pays no dividend?", "acceptedAnswer": {"@type": "Answer", "text": "No. The model values dividends, so a company that pays nothing gives it nothing to discount. Other valuation methods suit those stocks better."}}]}</script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DGENY5FDQP"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-DGENY5FDQP');</script>
   <script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","qxscsfgx1j");</script>
@@ -174,8 +175,8 @@
           </ol>
         </nav>
         <section id="stock-non-constant-growth-calculator-hero-section" aria-labelledby="stock-non-constant-growth-calculator-hero-heading" data-section="hero">
-          <h1 id="stock-non-constant-growth-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Stock Non-constant Growth Calculator</h1>
-          <p id="stock-non-constant-growth-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Value a stock whose dividend grows fast for a few years before settling at a constant long-term rate, with the present value of every dividend and the terminal value. <!-- SILO_START:slot_a -->Pair this with the <a class="silo-link" href="/pivot-point-calculator.html">pivot point calculator online</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_a --></p>
+          <h1 id="stock-non-constant-growth-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Non-Constant Growth Stock Calculator (Multi-Stage DDM)</h1>
+          <p id="stock-non-constant-growth-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Some companies pay dividends that grow quickly for a few years and then slow to a steady pace, and a single-rate formula misprices them. The stock non-constant growth calculator values that kind of share by discounting each uneven dividend separately and then adding a closing value for the supernormal growth phase that ends, so you get a stock price built from the cash flows you actually expect. <!-- SILO_START:slot_a -->Pair this with the <a class="silo-link" href="/pivot-point-calculator.html">pivot point calculator online</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_a --></p>
         </section>
       </div>
 
@@ -231,7 +232,7 @@
         <p id="stock-non-constant-growth-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
       </div>
 
-      <p id="stock-non-constant-growth-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Value a stock whose dividend grows fast for a few years before settling at a constant long-term rate, with the present value of every dividend and the terminal value. <!-- SILO_START:slot_a_m -->Pair this with the <a class="silo-link" href="/pivot-point-calculator.html">pivot point calculator online</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_a_m --></p>
+      <p id="stock-non-constant-growth-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Some companies pay dividends that grow quickly for a few years and then slow to a steady pace, and a single-rate formula misprices them. The stock non-constant growth calculator values that kind of share by discounting each uneven dividend separately and then adding a closing value for the supernormal growth phase that ends, so you get a stock price built from the cash flows you actually expect. <!-- SILO_START:slot_a_m -->Pair this with the <a class="silo-link" href="/pivot-point-calculator.html">pivot point calculator online</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_a_m --></p>
 
       <aside id="stock-non-constant-growth-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="stock-non-constant-growth-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
           <div id="stock-non-constant-growth-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="stock-non-constant-growth-calculator-ad-in-feed">
@@ -240,21 +241,121 @@
           </div>
         </aside>
 
-      
+      <div id="stock-non-constant-growth-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="stock-non-constant-growth-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="stock-non-constant-growth-calculator-guide-heading-1">
+<h2 id="stock-non-constant-growth-calculator-guide-heading-1">What a Stock Non-Constant Growth Calculator Values</h2>
+<p>A <strong>non-constant growth</strong> stock is one whose dividends do not expand at one fixed percentage forever. A young payer may raise its payout 16% a year while it scales, then 11% as the business matures, then settle near the pace of the broader economy. The <strong>nonconstant growth stock</strong> model respects that path: it treats the early years as individual forecasts and only applies <strong>perpetual growth</strong> after the pattern stabilises. <!-- SILO_START:slot_b -->The <a class="silo-link" href="/fibonacci-calculator.html">fibonacci retracement calculator</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_b --></p>
+<p>That makes the <strong>growth stock calculator</strong> approach a practical version of the <strong>dividend discount model</strong>. Rather than guessing one average, you tell the model the <strong>dividend growth rates</strong> for each explicit year and the <strong>constant growth rate</strong> that follows. <strong>Investors</strong>, <strong>analysts</strong> and <strong>students</strong> use it for <strong>equity valuation</strong> whenever a company's payout policy is clearly in transition.</p>
+
+<h3>Why one growth rate is not enough</h3>
+<p>Averaging a 16% sprint and a 4.5% long-run rate into a single number understates the early cash and overstates the late cash. Because the final stage carries most of the <strong>present value</strong>, a small distortion there moves the answer a lot, so the calculator keeps each stage separate.</p>
+        </section>
+        <section id="stock-non-constant-growth-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="stock-non-constant-growth-calculator-guide-heading-2">
+<h2 id="stock-non-constant-growth-calculator-guide-heading-2">Inputs the Nonconstant Growth Stock Calculator Needs</h2>
+<p>The <strong>nonconstant growth stock calculator</strong> asks for a handful of numbers. Each one maps to a term in the valuation, so it helps to know what you are entering before you click the <strong>calculate button</strong>. <!-- SILO_START:slot_c -->If you want to see how the figures change, the <a class="silo-link" href="/expected-return-calculator.html">expected return calculator online</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_c --></p>
+<ul>
+<li><strong>Current dividend</strong> (D<sub>0</sub>): the <strong>just paid dividend</strong>, the most recent annual payout per share.</li>
+<li><strong>Dividend growth rate</strong> for each explicit year: the expected yearly increase while growth is unusual. Enter one row per year.</li>
+<li><strong>Normal dividend growth rate</strong>: the rate used once growth becomes steady, entered on the last row.</li>
+<li><strong>Required return</strong>, also called the <strong>required rate of return</strong> or <strong>cost of equity</strong>: the annual <strong>stock return</strong> you demand for owning the shares.</li>
+</ul>
+
+<h3>Choosing the required return on the stock</h3>
+<p>The <strong>required return on the stock</strong> is the <strong>discount rate</strong> applied to every future cash flow. Build it from a risk-free yield plus a premium for equity <strong>risk</strong>, then keep it above the steady growth rate, because the model requires <code>r &gt; g</code> to produce a finite <strong>fair value</strong>.</p>
+
+<h3>Estimating how long the fast phase lasts</h3>
+<p>The number of explicit rows you enter in the calculator equals the length of this stage, the N in the formula. Choose it by asking how long the company can keep reinvesting at high returns before competition, size or regulation pulls payout growth back toward the steady rate; three to ten rows is a common window. A stage that ends before growth has actually cooled hands the terminal value an inflated starting point, while a stage that runs too long inflates every later dividend, so shorten it whenever the evidence is thin. With the rows set, the tool lets you calculate the price in a single pass instead of rebuilding a spreadsheet each time you revise a forecast.</p>
+        </section>
+        <section id="stock-non-constant-growth-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="stock-non-constant-growth-calculator-guide-heading-3">
+<h2 id="stock-non-constant-growth-calculator-guide-heading-3">Non-Constant Growth Formula and the Gordon Growth Model</h2>
+<p>The <strong>formula</strong> splits the valuation into two pieces: the explicit dividends and a terminal value found with the <strong>Gordon growth model</strong>. For N explicit years, the <strong>theoretical stock price</strong> today is:</p>
+<p>$$P_0 = \sum_{t=1}^{N} \frac{D_t}{(1+r)^t} + \frac{D_{N+1}}{(r-g)} \times \frac{1}{(1+r)^N}$$</p>
+<p>Here \(D_t\) is the dividend in year t, \(r\) is the required return, and \(g\) is the steady rate after year N. The second term is the <strong>constant growth model</strong> applied at the end of the explicit stage, then discounted back. A plain <strong>constant growth calculator</strong> uses only that second term from day one, which is why it suits a <strong>constant growth stock</strong> but not a company still changing gears.</p>
+
+<h3>Step-by-step calculation</h3>
+<ol>
+<li>Grow the <strong>current dividend</strong> by each year's rate to get D<sub>1</sub> through D<sub>N</sub>.</li>
+<li>Discount each of those <strong>future dividends</strong> at the required return.</li>
+<li>Compute the <strong>next dividend</strong> after the explicit stage, D<sub>N+1</sub>, using the steady rate.</li>
+<li>Divide D<sub>N+1</sub> by (r &minus; g) to get the terminal value, then discount it back N years.</li>
+<li>Add the discounted dividends and the discounted terminal value.</li>
+</ol>
+        </section>
+        <section id="stock-non-constant-growth-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="stock-non-constant-growth-calculator-guide-heading-4">
+<h2 id="stock-non-constant-growth-calculator-guide-heading-4">Worked Example: Supernormal Growth, Then Constant Growth</h2>
+<p>Take a company whose <strong>current dividend</strong> is <strong>$1.37</strong> per share. You expect the dividend to rise 16% in year one, 16% in year two and 11% in year three, after which it settles at a steady <strong>4.5%</strong>. Your <strong>required return</strong> is <strong>9.5%</strong>.</p>
+<table>
+<thead><tr><th>Year</th><th>Growth rate</th><th>Dividend</th><th>Discount factor</th><th>Present value</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>16%</td><td>$1.59</td><td>0.9132</td><td>$1.45</td></tr>
+<tr><td>2</td><td>16%</td><td>$1.84</td><td>0.8340</td><td>$1.54</td></tr>
+<tr><td>3</td><td>11%</td><td>$2.05</td><td>0.7617</td><td>$1.56</td></tr>
+<tr><td>Sum of explicit dividends</td><td></td><td></td><td></td><td>$4.55</td></tr>
+</tbody>
+</table>
+<figure><img src="/assets/images/tools/stock-non-constant-growth-calculator/non-constant-growth-dividend-path-timeline.svg" alt="Timeline of a $1.37 dividend growing 16%, 16% and 11% before settling at a steady 4.5% growth rate"><figcaption>Dividend path for the worked example, from the just paid dividend to the first steady-growth year.</figcaption></figure>
+<p>The <strong>next dividend</strong> in year four is $2.05 &times; 1.045 = <strong>$2.14</strong>. The terminal value at the end of year three is $2.14 &divide; (0.095 &minus; 0.045) = <strong>$42.77</strong>, and discounting it three years at 9.5% gives a present value of <strong>$32.57</strong>. The calculator adds the two pieces for a model <strong>stock price</strong> of <strong>$37.12</strong>.</p>
+<p>Notice that the terminal piece supplies about 88% of the total. That is typical for any <strong>dividend discount model</strong> with a long horizon, and it is the reason the steady rate deserves the most scrutiny.</p>
+
+<figure><img src="/assets/images/tools/stock-non-constant-growth-calculator/nonconstant-growth-stock-price-waterfall.svg" alt="Waterfall chart adding three discounted dividends and a discounted terminal value to reach a $37.12 stock price"><figcaption>How the three explicit dividends and the terminal value add up to the model price.</figcaption></figure>
+        </section>
+        <section id="stock-non-constant-growth-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="stock-non-constant-growth-calculator-guide-heading-5">
+<h2 id="stock-non-constant-growth-calculator-guide-heading-5">Reading the Result: Intrinsic Value Versus Market Price</h2>
+<p>The output is an <strong>intrinsic value</strong>, sometimes called <strong>intrinsic worth</strong>: what the shares are worth if your dividend path and discount rate are right. Compare it with the <strong>market price</strong>. If the quote is well below $37.12, the shares look <strong>undervalued</strong> under your assumptions; if it is well above, they look <strong>overvalued</strong>. The <strong>model-implied price</strong> is a decision aid, never a guarantee.</p>
+
+<h3>Implied dividend yield and capital gain yield</h3>
+<p>Two cross-checks help. The <strong>implied dividend yield</strong> is the next year's dividend divided by the model price: $1.59 &divide; $37.12 is about 4.3%. After the explicit stage, the <strong>capital gain yield</strong> equals the steady growth rate of 4.5%, so the two yields together reproduce the 9.5% required return of the steady phase only when the price grows with dividends.</p>
+        </section>
+        <section id="stock-non-constant-growth-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="stock-non-constant-growth-calculator-guide-heading-6">
+<h2 id="stock-non-constant-growth-calculator-guide-heading-6">Valuing a Four-Year Supernormal Growth Payout Ramp</h2>
+<p>Marisol Quintero is weighing a regional water-treatment company that trades at $19.85 and just paid an annual dividend of $0.86 per share. Management has guided to payout increases of 21%, 14%, 9% and 7% over the next four years, and she believes growth then fades to 3.8%. Her hurdle is the 10-year Treasury yield of 4.3% plus a 6.5% equity risk premium, so she sets the required return at 10.8%.</p>
+<p>She enters $0.86 as the current dividend, adds one growth row per year, puts 3.8% on a final steady row and clicks the calculate button. The multi-stage dividend discount model grows the payout to $1.04, $1.19, $1.29 and $1.38, and discounts those four dividends to $3.77. The year five dividend is $1.44, which gives a terminal value of $20.52 and a present value of $13.61. The price comes back at <strong>$17.39</strong>.</p>
+<p>Against the $19.85 quote, the shares trade 14.1% above her estimate, so at 10.8% they screen as overvalued rather than a bargain. Instead of walking away, she reruns the same rows with the required return lowered to 10.0%, the rate she would accept for a utility-like cash flow. The model now returns <strong>$19.66</strong>, within 1% of the market price, which tells her the stock is fairly priced only if she is willing to settle for a 10.0% return.</p>
+<p>Her decision follows from that single comparison: she places a limit order at $17.40, the 10.8% value, and sets a reminder to refresh the growth rows after the next earnings release.</p>
+        </section>
+        <section id="stock-non-constant-growth-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="stock-non-constant-growth-calculator-guide-heading-7">
+<h2 id="stock-non-constant-growth-calculator-guide-heading-7">Sensitivity Analysis of the Valuation</h2>
+<p>A <strong>sensitivity analysis</strong> shows how fragile the answer is. Running the same inputs through the calculator again while moving the required return and the steady growth rate by a full point produces the table below.</p>
+<table>
+<thead><tr><th>Required return</th><th>3.5% steady growth</th><th>4.5% steady growth</th><th>5.5% steady growth</th></tr></thead>
+<tbody>
+<tr><td>8.5%</td><td>$37.79</td><td>$46.49</td><td>$60.97</td></tr>
+<tr><td>9.5%</td><td>$31.43</td><td>$37.12</td><td>$45.65</td></tr>
+<tr><td>10.5%</td><td>$26.89</td><td>$30.88</td><td>$36.46</td></tr>
+</tbody>
+</table>
+<p>One point of extra steady growth lifts the price by about 23% at a 9.5% required return, while one point less cuts it by about 15%. When the gap between r and g narrows, the terminal value grows quickly, so keep the steady rate conservative.</p>
+
+<figure><img src="/assets/images/tools/stock-non-constant-growth-calculator/stock-valuation-sensitivity-heatmap.svg" alt="Heatmap of model stock price across three required returns and three steady growth rates"><figcaption>Price sensitivity grid with the $37.12 worked example outlined.</figcaption></figure>
+        </section>
+        <section id="stock-non-constant-growth-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="stock-non-constant-growth-calculator-guide-heading-8">
+<h2 id="stock-non-constant-growth-calculator-guide-heading-8">When a Constant Growth Calculator Is Not Enough</h2>
+<p>A plain <strong>constant growth calculator</strong> is the right tool for <strong>mature companies</strong> with long, steady payout histories, such as <strong>utilities</strong>, <strong>consumer staples</strong> and many <strong>blue-chip</strong> names. Running the same example through a single 4.5% rate returns only $28.63, about 23% below the $37.12 multi-stage answer, because it ignores three years of faster payout increases.</p>
+<p>The <strong>stock calculator</strong> approach in this article fits <strong>high-growth companies</strong> that are expected to mature. It has limits too:</p>
+<ul>
+<li>It needs <strong>dividend payers</strong>; a firm that pays nothing gives the model nothing to discount.</li>
+<li>It ignores <strong>buybacks</strong>, which can return cash without raising the dividend.</li>
+<li>It struggles with <strong>cyclical</strong> businesses whose <strong>earnings</strong> swing from year to year.</li>
+<li>It depends on <strong>assumptions</strong> that can be tested with the <strong>retention ratio</strong> and return on equity: sustainable growth is roughly return on equity times the share of earnings retained.</li>
+</ul>
+<p>Use the result as one input to your <strong>portfolio</strong> decisions, alongside other <strong>finance</strong> metrics and qualitative research, and treat it as an estimate, not a forecast.</p>
+        </section>
+      </div>
+
+      <section id="stock-non-constant-growth-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="stock-non-constant-growth-calculator-faq-heading" data-section="faq">
+        <h2 id="stock-non-constant-growth-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Stock Non-constant Growth Calculator questions</h2>
+        <div id="stock-non-constant-growth-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="stock-non-constant-growth-calculator-faq-1" class="faq-item" open><summary id="stock-non-constant-growth-calculator-faq-1-summary" class="faq-summary"><h3 id="stock-non-constant-growth-calculator-faq-1-question" class="faq-question">What is a non-constant growth stock?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="stock-non-constant-growth-calculator-faq-1-answer" class="faq-answer"><p>It is a stock whose dividends grow at different rates for a number of years, often called supernormal growth, before settling into a constant rate that lasts indefinitely.</p></div></details>
+          <details id="stock-non-constant-growth-calculator-faq-2" class="faq-item" open><summary id="stock-non-constant-growth-calculator-faq-2-summary" class="faq-summary"><h3 id="stock-non-constant-growth-calculator-faq-2-question" class="faq-question">How does the calculator know which growth rate is the steady one?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="stock-non-constant-growth-calculator-faq-2-answer" class="faq-answer"><p>The last growth rate you enter is treated as the constant rate that applies from that year onward. Rows after it are left blank, and every row before it is a year of explicit growth.</p></div></details>
+          <details id="stock-non-constant-growth-calculator-faq-3" class="faq-item" open><summary id="stock-non-constant-growth-calculator-faq-3-summary" class="faq-summary"><h3 id="stock-non-constant-growth-calculator-faq-3-question" class="faq-question">What formula does the calculator use?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="stock-non-constant-growth-calculator-faq-3-answer" class="faq-answer"><p>It discounts each explicit dividend at your required return, then values the dividends that follow with the Gordon growth formula, next dividend divided by (required return minus steady growth), and discounts that closing value back to today. The two parts are added together.</p></div></details>
+          <details id="stock-non-constant-growth-calculator-faq-4" class="faq-item" open><summary id="stock-non-constant-growth-calculator-faq-4-summary" class="faq-summary"><h3 id="stock-non-constant-growth-calculator-faq-4-question" class="faq-question">Why must the required return be higher than the steady growth rate?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="stock-non-constant-growth-calculator-faq-4-answer" class="faq-answer"><p>If steady growth equals or exceeds the required return, the Gordon growth step gives an infinite or negative value that has no meaning, so the calculator asks you to adjust the inputs.</p></div></details>
+          <details id="stock-non-constant-growth-calculator-faq-5" class="faq-item" open><summary id="stock-non-constant-growth-calculator-faq-5-summary" class="faq-summary"><h3 id="stock-non-constant-growth-calculator-faq-5-question" class="faq-question">How is this different from a constant growth stock calculator?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="stock-non-constant-growth-calculator-faq-5-answer" class="faq-answer"><p>A constant growth calculator assumes one growth rate from the very first dividend. This one lets the early years differ, which matters for companies whose payouts are still ramping up or slowing down.</p></div></details>
+          <details id="stock-non-constant-growth-calculator-faq-6" class="faq-item" open><summary id="stock-non-constant-growth-calculator-faq-6-summary" class="faq-summary"><h3 id="stock-non-constant-growth-calculator-faq-6-question" class="faq-question">How do I choose the required return?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="stock-non-constant-growth-calculator-faq-6-answer" class="faq-answer"><p>Many investors start with a risk-free yield such as a Treasury rate and add a premium for equity risk, then raise it for riskier or less predictable companies.</p></div></details>
+          <details id="stock-non-constant-growth-calculator-faq-7" class="faq-item" open><summary id="stock-non-constant-growth-calculator-faq-7-summary" class="faq-summary"><h3 id="stock-non-constant-growth-calculator-faq-7-question" class="faq-question">Can I use it for a stock that pays no dividend?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="stock-non-constant-growth-calculator-faq-7-answer" class="faq-answer"><p>No. The model values dividends, so a company that pays nothing gives it nothing to discount. Other valuation methods suit those stocks better.</p></div></details>
+        </div>
+      </section>
 
       
-
-      <nav id="stock-non-constant-growth-calculator-related-section" class="border-t border-line pt-8" aria-labelledby="stock-non-constant-growth-calculator-related-heading" data-section="related-calculators">
-        <h2 id="stock-non-constant-growth-calculator-related-heading" class="guide-heading">Related calculators</h2>
-        <ul id="stock-non-constant-growth-calculator-related-list" class="mt-5 grid gap-3 @2xl:grid-cols-2 @5xl:grid-cols-3" role="list">
-          <li><a id="stock-non-constant-growth-calculator-related-link-stock-constant-growth-calculator" class="related-link" href="/stock-constant-growth-calculator.html" data-calculator-name="Stock Constant Growth Calculator" data-category-name="Stocks, Dividends &amp; Trading">Stock Constant Growth Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
-          <li><a id="stock-non-constant-growth-calculator-related-link-capm-calculator" class="related-link" href="/capm-calculator.html" data-calculator-name="CAPM Calculator" data-category-name="Stocks, Dividends &amp; Trading">CAPM Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
-          <li><a id="stock-non-constant-growth-calculator-related-link-present-value-calculator" class="related-link" href="/present-value-calculator.html" data-calculator-name="Present Value Calculator" data-category-name="Investment Returns &amp; Growth">Present Value Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
-          <li><a id="stock-non-constant-growth-calculator-related-link-weighted-average-cost-of-capital-calculator" class="related-link" href="/weighted-average-cost-of-capital-calculator.html" data-calculator-name="Weighted Average Cost of Capital Calculator" data-category-name="Business Finance &amp; Valuation">Weighted Average Cost of Capital Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
-          <li><a id="stock-non-constant-growth-calculator-related-link-dividend-reinvestment" class="related-link" href="/dividend-reinvestment.html" data-calculator-name="Dividend Reinvestment Breakeven Calculator" data-category-name="Stocks, Dividends &amp; Trading">Dividend Reinvestment Breakeven Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
-          <li><a id="stock-non-constant-growth-calculator-related-link-market-cap-growth-calculator" class="related-link" href="/market-cap-growth-calculator.html" data-calculator-name="Market Cap Growth Calculator" data-category-name="Stocks, Dividends &amp; Trading">Market Cap Growth Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
-        </ul>
-      </nav>
 
       <aside id="stock-non-constant-growth-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="stock-non-constant-growth-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
           <div id="stock-non-constant-growth-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="stock-non-constant-growth-calculator-ad-bottom-leaderboard">
@@ -332,7 +433,11 @@
       <p id="stock-non-constant-growth-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="stock-non-constant-growth-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
     </div>
   </footer>
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
 <script>(function () {
   'use strict';
   // Multi-stage dividend discount model: one or two high-growth stages, then constant growth forever.

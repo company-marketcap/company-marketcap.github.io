@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NUA Calculator: Company Stock Distribution vs IRA Rollover</title>
-  <meta name="description" content="Compare taking employer stock out of your 401(k) using net unrealized appreciation (NUA) with rolling it to an IRA, using 2026 federal tax brackets.">
+  <title>Company Stock Distribution Analysis Calculator</title>
+  <meta name="description" content="Use this calculator to see how an in-kind distribution of employer stock could cut taxes on your retirement nest egg versus a rollover into an investment account.">
   <link rel="canonical" href="https://company-marketcap.github.io/company-stock-distribution-analysis-calculator.html">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="color-scheme" content="light dark">
@@ -14,8 +14,8 @@
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Company Marketcap">
-  <meta property="og:title" content="NUA Calculator: Company Stock Distribution vs IRA Rollover">
-  <meta property="og:description" content="Compare taking employer stock out of your 401(k) using net unrealized appreciation (NUA) with rolling it to an IRA, using 2026 federal tax brackets.">
+  <meta property="og:title" content="Company Stock Distribution Analysis Calculator">
+  <meta property="og:description" content="Use this calculator to see how an in-kind distribution of employer stock could cut taxes on your retirement nest egg versus a rollover into an investment account.">
   <meta property="og:url" content="https://company-marketcap.github.io/company-stock-distribution-analysis-calculator.html">
   <meta name="twitter:card" content="summary">
 
@@ -28,8 +28,9 @@
   <script src="/assets/js/site-theme-init.js"></script>
   <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
   
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Company Stock Distribution Analysis Calculator", "url": "https://company-marketcap.github.io/company-stock-distribution-analysis-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Compare taking employer stock out of your 401(k) using net unrealized appreciation (NUA) with rolling it to an IRA, using 2026 federal tax brackets."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Company Stock Distribution Analysis Calculator", "url": "https://company-marketcap.github.io/company-stock-distribution-analysis-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Use this calculator to see how an in-kind distribution of employer stock could cut taxes on your retirement nest egg versus a rollover into an investment account."}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Stocks, Dividends & Trading", "item": "https://company-marketcap.github.io/financial-calculators.html#stock-calculators"}, {"@type": "ListItem", "position": 4, "name": "Company Stock Distribution Analysis Calculator", "item": "https://company-marketcap.github.io/company-stock-distribution-analysis-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a company stock distribution analysis?", "acceptedAnswer": {"@type": "Answer", "text": "It compares two ways of getting employer shares out of a retirement plan: an in-kind distribution into a taxable account, or a rollover followed by withdrawals taxed as ordinary income."}}, {"@type": "Question", "name": "What is net unrealized appreciation?", "acceptedAnswer": {"@type": "Answer", "text": "It is the gain that built up while the plan held the shares, which is the market value minus the plan's cost basis. Under the special rules it is taxed at capital gains rates when you sell."}}, {"@type": "Question", "name": "Do I owe tax on the day of the distribution?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, ordinary income tax is due on the cost basis in the year of the distribution. The gain is taxed only when the shares are sold."}}, {"@type": "Question", "name": "Why does the calculator ask for state and local taxes?", "acceptedAnswer": {"@type": "Answer", "text": "State and local taxes can apply on top of the federal rates. Entering a combined rate gives a more realistic comparison, and leaving it at 0 shows the federal-only result."}}, {"@type": "Question", "name": "Can the in-kind route ever cost more than a rollover?", "acceptedAnswer": {"@type": "Answer", "text": "The gap between the ordinary and capital gains rates drives the savings. When your cost basis is close to the market value, or the two rates are similar, the advantage shrinks."}}, {"@type": "Question", "name": "Is the result tax advice?", "acceptedAnswer": {"@type": "Answer", "text": "No. It is a hypothetical estimate for illustration. Confirm plan rules and your numbers with a financial advisor or tax professional."}}, {"@type": "Question", "name": "Why diversify away from employer stock?", "acceptedAnswer": {"@type": "Answer", "text": "Holding too much of one company, commonly more than about 10% of a portfolio, ties your finances to a single company's fortunes."}}]}</script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DGENY5FDQP"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-DGENY5FDQP');</script>
   <script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","qxscsfgx1j");</script>
@@ -175,7 +176,7 @@
         </nav>
         <section id="company-stock-distribution-analysis-calculator-hero-section" aria-labelledby="company-stock-distribution-analysis-calculator-hero-heading" data-section="hero">
           <h1 id="company-stock-distribution-analysis-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Company Stock Distribution Analysis Calculator</h1>
-          <p id="company-stock-distribution-analysis-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Compare the taxes on taking company stock out of your 401(k) in shares, using net unrealized appreciation (NUA), with rolling it all over to an IRA. NUA means ordinary income tax on the cost basis now and long-term capital gains tax on the rest when you sell. <!-- SILO_START:slot_a -->The <a class="silo-link" href="/pivot-point-calculator.html">pivot point calculator online</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_a --></p>
+          <p id="company-stock-distribution-analysis-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">If you hold shares of your employer inside a workplace plan, the company stock distribution analysis calculator shows you whether taking those shares out in kind could cut the tax bill on your retirement nest egg. You enter what the shares cost and what they are worth today, and the stock distribution analysis compares two paths side by side: a straight rollover versus moving the shares into a taxable investment account. <!-- SILO_START:slot_a -->The <a class="silo-link" href="/pivot-point-calculator.html">pivot point calculator online</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_a --></p>
         </section>
       </div>
 
@@ -234,7 +235,7 @@
         <p id="company-stock-distribution-analysis-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
       </div>
 
-      <p id="company-stock-distribution-analysis-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Compare the taxes on taking company stock out of your 401(k) in shares, using net unrealized appreciation (NUA), with rolling it all over to an IRA. NUA means ordinary income tax on the cost basis now and long-term capital gains tax on the rest when you sell. <!-- SILO_START:slot_a_m -->The <a class="silo-link" href="/pivot-point-calculator.html">pivot point calculator online</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_a_m --></p>
+      <p id="company-stock-distribution-analysis-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">If you hold shares of your employer inside a workplace plan, the company stock distribution analysis calculator shows you whether taking those shares out in kind could cut the tax bill on your retirement nest egg. You enter what the shares cost and what they are worth today, and the stock distribution analysis compares two paths side by side: a straight rollover versus moving the shares into a taxable investment account. <!-- SILO_START:slot_a_m -->The <a class="silo-link" href="/pivot-point-calculator.html">pivot point calculator online</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_a_m --></p>
 
       <aside id="company-stock-distribution-analysis-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="company-stock-distribution-analysis-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
           <div id="company-stock-distribution-analysis-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="company-stock-distribution-analysis-calculator-ad-in-feed">
@@ -243,21 +244,102 @@
           </div>
         </aside>
 
-      
+      <div id="company-stock-distribution-analysis-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="company-stock-distribution-analysis-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="company-stock-distribution-analysis-calculator-guide-heading-1">
+<h2 id="company-stock-distribution-analysis-calculator-guide-heading-1">In-Kind Distribution of Company Stock Explained</h2>
+<p>A retirement plan normally taxes every dollar <em>withdrawn</em> as ordinary income, no matter how much of it is investment earnings. Employer shares are the exception. A special set of rules lets you take an <strong>in-kind distribution</strong>, which means the actual shares move out of the plan instead of being sold inside it. When you do that, a significant portion of the growth can be taxed at a lower rate than your paycheck. <!-- SILO_START:slot_b -->Next, open the <a class="silo-link" href="/expected-return-calculator.html">expected return calculator</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_b --></p>
+
+<h3>Moving Shares from a Retirement Plan to a Taxable Investment Account</h3>
+<p>The shares leave your <strong>retirement plan</strong> and land in a <strong>taxable investment account</strong> at a brokerage. You owe ordinary income tax right away, but only on the plan's original cost of the shares. The gain that built up while the plan owned them, often called net unrealized appreciation, is not taxed until you sell. Any shares you keep in the <strong>taxable account</strong> then sit exposed to market swings like any other holding, so the move works best when you have a plan for what happens next.</p>
+
+<h3>Why Long-Term Capital Gains Beat Ordinary Income</h3>
+<p>Wages and rollover withdrawals are taxed as <strong>ordinary income</strong>, and ordinary income tax rates climb as high as 37%. The <strong>long-term capital gains</strong> schedule tops out far lower, so the same dollar of growth costs you less when it falls under the <strong>long-term capital gains tax rate</strong>. That gap between the two schedules is the entire engine of the calculation. Use an <strong>income tax rate</strong> that matches your actual bracket, since a lower bracket shrinks the advantage.</p>
+        </section>
+        <section id="company-stock-distribution-analysis-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="company-stock-distribution-analysis-calculator-guide-heading-2">
+<h2 id="company-stock-distribution-analysis-calculator-guide-heading-2">How the Company Stock Distribution Analysis Calculator Works</h2>
+<p>The tool runs the same arithmetic you would do on paper. It splits the market value of your <strong>company stock</strong> into two pieces, taxes each piece at its own rate, and subtracts the total from the value you started with: <!-- SILO_START:slot_c -->Next, open the <a class="silo-link" href="/market-cap-growth-calculator.html">free market cap growth calculator</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_c --></p>
+<p>$$\text{Net proceeds} = V - \left(B \times r_{o}\right) - \left(\left(V - B\right) \times r_{g}\right)$$</p>
+<p>Here \(V\) is the market value of the shares, \(B\) is the cost basis, \(r_{o}\) is your ordinary income rate and \(r_{g}\) is the <strong>capital gains tax</strong> rate. The rollover alternative is simpler: \(V \times r_{o}\), because everything withdrawn is ordinary income.</p>
+
+<h3>Inputs You Enter</h3>
+<ul>
+<li><strong>Market value</strong> of the employer shares in your plan</li>
+<li><strong>Cost basis</strong> the plan paid for them</li>
+<li>Your ordinary <strong>tax rate</strong> and the capital gains rate that applies to you</li>
+<li>Whether <strong>state and local taxes</strong> should be added to each rate</li>
+</ul>
+<p>Press the button, and the report lays out the tax due now, the tax due later, and the <strong>capital gains taxes</strong> you avoid compared with a rollover. Like other <strong>interactive calculators</strong> offered as <strong>self-help tools</strong>, it gives an estimate, so confirm the final numbers with your plan administrator.</p>
+        </section>
+        <section id="company-stock-distribution-analysis-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="company-stock-distribution-analysis-calculator-guide-heading-3">
+<h2 id="company-stock-distribution-analysis-calculator-guide-heading-3">Worked Example: Stock Rollover Versus an In-Kind Distribution</h2>
+<p>Take a plan holding 3,250 shares priced at $127.00 each, so the market value is <strong>$412,750</strong>. The plan paid $86,400 for them. Your ordinary rate is 32% and your capital gains rate is 15%. A <strong>stock rollover</strong> into an IRA followed by a full withdrawal would be taxed entirely as ordinary income. The in-kind route splits the bill.</p>
+<table>
+<thead><tr><th>Step</th><th>In-kind distribution</th><th>Rollover and withdrawal</th></tr></thead>
+<tbody>
+<tr><td>Taxed as ordinary income today</td><td>$86,400 at 32% = $27,648.00</td><td>$412,750 at 32% = $132,080.00</td></tr>
+<tr><td>Taxed as capital gain when sold</td><td>$326,350 at 15% = $48,952.50</td><td>None</td></tr>
+<tr><td>Total tax</td><td>$76,600.50</td><td>$132,080.00</td></tr>
+<tr><td>Net after tax</td><td>$336,149.50</td><td>$280,670.00</td></tr>
+</tbody>
+</table>
+<p>The in-kind route keeps <strong>$55,479.50</strong> more in your pocket, which is the $326,350 gain multiplied by the 17-point gap between the two rates.</p>
+
+<h3>Reading the Capital Gains Tax Line</h3>
+<p>The $48,952.50 line is a <strong>capital gains tax</strong> you only pay on the day you sell, which means timing is yours to control. Waiting more than a year after the distribution keeps any further growth in the long-term bucket, too. Growth that happens after the shares leave the plan is taxed on its own schedule, and that is why the tool reports the gain at the moment of distribution.</p>
+        </section>
+        <section id="company-stock-distribution-analysis-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="company-stock-distribution-analysis-calculator-guide-heading-4">
+<h2 id="company-stock-distribution-analysis-calculator-guide-heading-4">Concentrated Stock Position Risk and Diversification</h2>
+<p>A <strong>concentrated stock position</strong> means one holding dominates your balance. Many people end up there because they work for a <strong>current or former employer</strong>, while for others the shares arrived through a merger or an acquisition, or one name kept outperforming everything else. Whatever the cause, a <strong>single company</strong> setback can damage your <strong>financial well-being</strong>, and Lehman Brothers and Enron are the usual reminders. Most advisors suggest <strong>prudent limits</strong>, commonly no more than 10% of your <strong>portfolio value</strong> in a <strong>single stock</strong>.</p>
+
+<h3>Selling Low-Cost Stock Without a Surprise Tax Bill</h3>
+<p>The obstacle to <strong>diversifying</strong> is often <strong>low-cost stock</strong>: a sale of stock in a taxable account triggers the full gain at once, plus tax and transaction costs. An in-kind move lets you spread the decision across years. For any <strong>stock position</strong> with a large embedded gain, that flexibility lets you <strong>reduce</strong> exposure in stages and supports <strong>risk reduction</strong> without forcing a single huge taxable event, and <strong>diversification</strong> can then happen at a pace you pick. Running each staged sale through the tool shows the tax cost of every step before you commit to it.</p>
+        </section>
+        <section id="company-stock-distribution-analysis-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="company-stock-distribution-analysis-calculator-guide-heading-5">
+<h2 id="company-stock-distribution-analysis-calculator-guide-heading-5">Testing an In-Kind Distribution on 2,415 Plan Shares</h2>
+<p>Priya is leaving her employer after eleven years and has a 401(k) statement open beside her. It lists 2,415 shares of company stock at $81.20, worth <strong>$196,098</strong>, and the plan paid an average of $17.08 per share, a cost basis of $41,248.20. Her whole household portfolio is about $612,000, so the employer's shares are roughly 32% of it, far above the 10% guideline she keeps seeing.</p>
+<p>She enters those three numbers, a 24% ordinary rate and a 15% long-term rate into the calculator and reads the result.</p>
+<ul>
+<li>Tax now on the basis: $41,248.20 at 24% = <strong>$9,899.57</strong></li>
+<li>Tax later on the $154,849.80 gain, once sold: 15% = <strong>$23,227.47</strong></li>
+<li>Total: $33,127.04, versus $47,063.52 if she rolls everything to an IRA and withdraws it as ordinary income</li>
+</ul>
+<p>The distribution analysis shows an in-kind distribution saving her <strong>$13,936.48</strong>, which equals the gain times the nine-point gap between the two rates. That is the figure that settles the question, so she asks the plan administrator for a distribution of the shares rather than a cash-out.</p>
+<p>Next she changes one input. To get under 10% of the portfolio she needs to sell enough that no more than about $61,200 remains. Selling 1,700 shares leaves 715 shares worth $58,058, or 9.49%. The gain realized on those 1,700 shares is $109,004 ($64.12 each), so the capital gains tax from that sale is <strong>$16,350.60</strong>, and she plans to schedule the sale after the one-year holding period.</p>
+        </section>
+        <section id="company-stock-distribution-analysis-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="company-stock-distribution-analysis-calculator-guide-heading-6">
+<h2 id="company-stock-distribution-analysis-calculator-guide-heading-6">Where the Proceeds Go After You Sell</h2>
+<p>Selling the shares only solves half of the problem, because the money still needs a home that keeps the tax on your remaining gain in view. Many people lean on <strong>fixed income</strong> to dampen swings, which means weighing <strong>interest rates</strong>, <strong>credit quality</strong>, <strong>duration</strong> and <strong>liquidity</strong>. <strong>Municipal bonds</strong> are <strong>tax-exempt</strong> at the federal level but can still trigger the <strong>alternative minimum tax</strong>. A fund tracking the <strong>S&P 500</strong> spreads you across 500 companies, though <strong>volatility</strong> remains, and a broad market <strong>index</strong> is the benchmark most funds are measured against. Compare the <strong>fees and charges</strong> of any fund or <strong>ETF</strong> you consider, and remember that <strong>past performance</strong> of an <strong>index</strong> or a manager says little about next year's <strong>performance</strong>.</p>
+
+<h3>Taking Periodic Distributions Later</h3>
+<p>If the sale will fund your living costs, <strong>periodic distributions</strong> from the proceeds become the next question: how long does a <strong>balance</strong> last when you draw a fixed amount each <strong>periodic</strong> interval? Your <strong>estate</strong> plans matter here too, since heirs generally treat inherited holdings differently from an inherited plan balance, and that can change which route leaves the most behind.</p>
+        </section>
+        <section id="company-stock-distribution-analysis-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="company-stock-distribution-analysis-calculator-guide-heading-7">
+<h2 id="company-stock-distribution-analysis-calculator-guide-heading-7">Related Tools: Stock Calculator and Investment Calculator Options</h2>
+<p>Neighboring tools answer different questions. A <strong>stock calculator</strong> or <strong>stock investment calculator</strong> replays <strong>historical</strong> prices as an <strong>investment simulation</strong>: you enter an <strong>investment amount</strong>, pick a <strong>start date</strong> and add an optional <strong>periodic contribution</strong>. Switch on the option to <strong>reinvest dividends</strong> and a <strong>dividend reinvestment plan</strong> speeds up <strong>compounding</strong>, because each <strong>dividend</strong> buys more shares that earn a <strong>dividend</strong> of their own. A generic <strong>investment calculator</strong> projects growth in a similar way, the <strong>investment distributions</strong> tool works in the opposite direction, and a <strong>stock position calculator</strong> measures how heavily one holding weighs on a portfolio. None of them applies the <strong>special set of rules</strong> for employer shares, which is what a <strong>distribution analysis calculator</strong> built for plan stock adds, and why a <strong>stock distribution analysis</strong> belongs beside them rather than in place of them.</p>
+        </section>
+        <section id="company-stock-distribution-analysis-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="company-stock-distribution-analysis-calculator-guide-heading-8">
+<h2 id="company-stock-distribution-analysis-calculator-guide-heading-8">Limits of the Estimate and Tax Law Changes</h2>
+<p>Every figure above is <strong>hypothetical</strong> and offered for <strong>illustrative purposes</strong>. Nobody can <strong>guarantee</strong> the <strong>accuracy</strong> of a projection, because <strong>tax law</strong>, <strong>investment trends</strong> and your <strong>personal circumstances</strong> keep changing. The results are not <strong>tax advice</strong> or <strong>investment advice</strong>, and they do not replace <strong>personal finance</strong> guidance tailored to you. Before you act on <strong>company stock distribution</strong> numbers, review them with a <strong>financial advisor</strong> and a <strong>legal advisor</strong> who can confirm the plan's paperwork. The <strong>benefit</strong> depends on your <strong>earnings</strong>, your cost basis, and whether you leave a <strong>significant portion</strong> of the stock in the plan. Also weigh the rate you expect to pay in later years, since the capital gains rate and state taxes can change.</p>
+
+<h3>Questions About Employer Stock in a Plan</h3>
+<p>Can you take in-kind treatment on only some of the shares? Often yes, and the plan administrator can confirm which lots are eligible, since a mistake there is hard to unwind. Do gains and losses on separate lots net against each other inside the plan? Not in the way they do in a taxable account, so ask your plan recordkeeper or one of the brokerages you use for lot-level cost basis, because a statement that shows only a market total hides the split this analysis needs. And if you own stocks, bonds or a share in other accounts, check each account separately: an investor with a small holding (many investors have one) of employer's company stock in a second account can overlook it, and planning for retirement works best when every distribution and every capital gain is counted once.</p>
+        </section>
+      </div>
+
+      <section id="company-stock-distribution-analysis-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="company-stock-distribution-analysis-calculator-faq-heading" data-section="faq">
+        <h2 id="company-stock-distribution-analysis-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Company Stock Distribution Analysis Calculator questions</h2>
+        <div id="company-stock-distribution-analysis-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="company-stock-distribution-analysis-calculator-faq-1" class="faq-item" open><summary id="company-stock-distribution-analysis-calculator-faq-1-summary" class="faq-summary"><h3 id="company-stock-distribution-analysis-calculator-faq-1-question" class="faq-question">What is a company stock distribution analysis?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="company-stock-distribution-analysis-calculator-faq-1-answer" class="faq-answer"><p>It compares two ways of getting employer shares out of a retirement plan: an in-kind distribution into a taxable account, or a rollover followed by withdrawals taxed as ordinary income.</p></div></details>
+          <details id="company-stock-distribution-analysis-calculator-faq-2" class="faq-item" open><summary id="company-stock-distribution-analysis-calculator-faq-2-summary" class="faq-summary"><h3 id="company-stock-distribution-analysis-calculator-faq-2-question" class="faq-question">What is net unrealized appreciation?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="company-stock-distribution-analysis-calculator-faq-2-answer" class="faq-answer"><p>It is the gain that built up while the plan held the shares, which is the market value minus the plan&#x27;s cost basis. Under the special rules it is taxed at capital gains rates when you sell.</p></div></details>
+          <details id="company-stock-distribution-analysis-calculator-faq-3" class="faq-item" open><summary id="company-stock-distribution-analysis-calculator-faq-3-summary" class="faq-summary"><h3 id="company-stock-distribution-analysis-calculator-faq-3-question" class="faq-question">Do I owe tax on the day of the distribution?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="company-stock-distribution-analysis-calculator-faq-3-answer" class="faq-answer"><p>Yes, ordinary income tax is due on the cost basis in the year of the distribution. The gain is taxed only when the shares are sold.</p></div></details>
+          <details id="company-stock-distribution-analysis-calculator-faq-4" class="faq-item" open><summary id="company-stock-distribution-analysis-calculator-faq-4-summary" class="faq-summary"><h3 id="company-stock-distribution-analysis-calculator-faq-4-question" class="faq-question">Why does the calculator ask for state and local taxes?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="company-stock-distribution-analysis-calculator-faq-4-answer" class="faq-answer"><p>State and local taxes can apply on top of the federal rates. Entering a combined rate gives a more realistic comparison, and leaving it at 0 shows the federal-only result.</p></div></details>
+          <details id="company-stock-distribution-analysis-calculator-faq-5" class="faq-item" open><summary id="company-stock-distribution-analysis-calculator-faq-5-summary" class="faq-summary"><h3 id="company-stock-distribution-analysis-calculator-faq-5-question" class="faq-question">Can the in-kind route ever cost more than a rollover?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="company-stock-distribution-analysis-calculator-faq-5-answer" class="faq-answer"><p>The gap between the ordinary and capital gains rates drives the savings. When your cost basis is close to the market value, or the two rates are similar, the advantage shrinks.</p></div></details>
+          <details id="company-stock-distribution-analysis-calculator-faq-6" class="faq-item" open><summary id="company-stock-distribution-analysis-calculator-faq-6-summary" class="faq-summary"><h3 id="company-stock-distribution-analysis-calculator-faq-6-question" class="faq-question">Is the result tax advice?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="company-stock-distribution-analysis-calculator-faq-6-answer" class="faq-answer"><p>No. It is a hypothetical estimate for illustration. Confirm plan rules and your numbers with a financial advisor or tax professional.</p></div></details>
+          <details id="company-stock-distribution-analysis-calculator-faq-7" class="faq-item" open><summary id="company-stock-distribution-analysis-calculator-faq-7-summary" class="faq-summary"><h3 id="company-stock-distribution-analysis-calculator-faq-7-question" class="faq-question">Why diversify away from employer stock?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="company-stock-distribution-analysis-calculator-faq-7-answer" class="faq-answer"><p>Holding too much of one company, commonly more than about 10% of a portfolio, ties your finances to a single company&#x27;s fortunes.</p></div></details>
+        </div>
+      </section>
 
       
-
-      <nav id="company-stock-distribution-analysis-calculator-related-section" class="border-t border-line pt-8" aria-labelledby="company-stock-distribution-analysis-calculator-related-heading" data-section="related-calculators">
-        <h2 id="company-stock-distribution-analysis-calculator-related-heading" class="guide-heading">Related calculators</h2>
-        <ul id="company-stock-distribution-analysis-calculator-related-list" class="mt-5 grid gap-3 @2xl:grid-cols-2 @5xl:grid-cols-3" role="list">
-          <li><a id="company-stock-distribution-analysis-calculator-related-link-stock-option-calculator" class="related-link" href="/stock-option-calculator.html" data-calculator-name="Stock Option Calculator" data-category-name="Stocks, Dividends &amp; Trading">Stock Option Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
-          <li><a id="company-stock-distribution-analysis-calculator-related-link-net-distribution-calculator" class="related-link" href="/net-distribution-calculator.html" data-calculator-name="Net Distribution Calculator" data-category-name="Retirement Planning">Net Distribution Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
-          <li><a id="company-stock-distribution-analysis-calculator-related-link-rmd-calculator" class="related-link" href="/rmd-calculator.html" data-calculator-name="RMD Calculator" data-category-name="Retirement Accounts (401k, 403b, 457, IRA, Roth)">RMD Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
-          <li><a id="company-stock-distribution-analysis-calculator-related-link-tax-harvesting" class="related-link" href="/tax-harvesting.html" data-calculator-name="Tax-Loss Harvesting Calculator" data-category-name="Income Tax &amp; Tax Planning">Tax-Loss Harvesting Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
-          <li><a id="company-stock-distribution-analysis-calculator-related-link-dividend-reinvestment" class="related-link" href="/dividend-reinvestment.html" data-calculator-name="Dividend Reinvestment Breakeven Calculator" data-category-name="Stocks, Dividends &amp; Trading">Dividend Reinvestment Breakeven Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
-          <li><a id="company-stock-distribution-analysis-calculator-related-link-market-cap-growth-calculator" class="related-link" href="/market-cap-growth-calculator.html" data-calculator-name="Market Cap Growth Calculator" data-category-name="Stocks, Dividends &amp; Trading">Market Cap Growth Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
-        </ul>
-      </nav>
 
       <aside id="company-stock-distribution-analysis-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="company-stock-distribution-analysis-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
           <div id="company-stock-distribution-analysis-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="company-stock-distribution-analysis-calculator-ad-bottom-leaderboard">
@@ -335,7 +417,11 @@
       <p id="company-stock-distribution-analysis-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="company-stock-distribution-analysis-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
     </div>
   </footer>
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
 <script>(function () {
   'use strict';
   // ===== Tax figures: tax year 2026 =====

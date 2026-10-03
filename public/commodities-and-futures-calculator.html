@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Futures Profit Calculator: Ticks, P&amp;L and Margin</title>
-  <meta name="description" content="Calculate futures and commodity profit or loss from tick size, tick value, entry and exit prices and contracts, with notional value and margin as a % of it.">
+  <title>Futures Calculator: Commodities Profit and Loss</title>
+  <meta name="description" content="Use this futures calculator to calculate profit and loss on commodity trades. Enter your entry price, exit price, contracts and fees to see gross and net P&amp;L.">
   <link rel="canonical" href="https://company-marketcap.github.io/commodities-and-futures-calculator.html">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="color-scheme" content="light dark">
@@ -14,8 +14,8 @@
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Company Marketcap">
-  <meta property="og:title" content="Futures Profit Calculator: Ticks, P&amp;L and Margin">
-  <meta property="og:description" content="Calculate futures and commodity profit or loss from tick size, tick value, entry and exit prices and contracts, with notional value and margin as a % of it.">
+  <meta property="og:title" content="Futures Calculator: Commodities Profit and Loss">
+  <meta property="og:description" content="Use this futures calculator to calculate profit and loss on commodity trades. Enter your entry price, exit price, contracts and fees to see gross and net P&amp;L.">
   <meta property="og:url" content="https://company-marketcap.github.io/commodities-and-futures-calculator.html">
   <meta name="twitter:card" content="summary">
 
@@ -28,8 +28,9 @@
   <script src="/assets/js/site-theme-init.js"></script>
   <script src="/assets/js/site-theme-navigation-and-search.js" defer></script>
   
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Futures and Commodities Profit Calculator", "url": "https://company-marketcap.github.io/commodities-and-futures-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Calculate futures and commodity profit or loss from tick size, tick value, entry and exit prices and contracts, with notional value and margin as a % of it."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Futures and Commodities Profit Calculator", "url": "https://company-marketcap.github.io/commodities-and-futures-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Use this futures calculator to calculate profit and loss on commodity trades. Enter your entry price, exit price, contracts and fees to see gross and net P&L."}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://company-marketcap.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Financial calculators", "item": "https://company-marketcap.github.io/financial-calculators.html"}, {"@type": "ListItem", "position": 3, "name": "Stocks, Dividends & Trading", "item": "https://company-marketcap.github.io/financial-calculators.html#stock-calculators"}, {"@type": "ListItem", "position": 4, "name": "Futures and Commodities Profit Calculator", "item": "https://company-marketcap.github.io/commodities-and-futures-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do you calculate profit and loss on a futures trade?", "acceptedAnswer": {"@type": "Answer", "text": "Subtract the entry price from the exit price (reverse it for a short), then multiply by the contract's point value and the number of contracts. Subtract round-trip commissions to get net PnL."}}, {"@type": "Question", "name": "What is the difference between a tick and a point?", "acceptedAnswer": {"@type": "Answer", "text": "A tick is the smallest price step a contract can make, and a point is a full unit of price. Point value equals tick value divided by tick size, so gold's $10 tick of 0.10 gives a $100 point."}}, {"@type": "Question", "name": "What is the difference between gross PnL and net PnL?", "acceptedAnswer": {"@type": "Answer", "text": "Gross PnL is the profit or loss from price movement alone. Net PnL subtracts commissions, which are charged per side, so each contract pays twice on a round trip."}}, {"@type": "Question", "name": "How many contracts should I trade for my account size?", "acceptedAnswer": {"@type": "Answer", "text": "Multiply account size by the percentage you are willing to risk, then divide by the stop distance times point value, rounding down. Many traders risk one to two percent per trade."}}, {"@type": "Question", "name": "What is the difference between E-mini and Micro E-mini contracts?", "acceptedAnswer": {"@type": "Answer", "text": "Micro contracts are one-tenth the size of their E-mini versions, so the same price move is worth a tenth as much. That makes them practical for smaller accounts."}}, {"@type": "Question", "name": "Does this calculator include exchange fees, slippage or margin?", "acceptedAnswer": {"@type": "Answer", "text": "No. It uses the commission you enter. Exchange fees, regulatory charges, slippage and broker margin requirements vary and are not included."}}, {"@type": "Question", "name": "Can I use it for short trades?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Choose Short and the price difference is reversed, so a falling market produces a gain and a rising market a loss."}}]}</script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DGENY5FDQP"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-DGENY5FDQP');</script>
   <script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","qxscsfgx1j");</script>
@@ -174,8 +175,8 @@
           </ol>
         </nav>
         <section id="commodities-and-futures-calculator-hero-section" aria-labelledby="commodities-and-futures-calculator-hero-heading" data-section="hero">
-          <h1 id="commodities-and-futures-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Futures and Commodities Profit Calculator</h1>
-          <p id="commodities-and-futures-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Work out the profit or loss on a futures or commodity trade from the contract specifications, your entry and exit prices and the number of contracts, with margin shown as a share of notional value. <!-- SILO_START:slot_a -->If you want to see how the figures change, the <a class="silo-link" href="/pivot-point-calculator.html">pivot point calculator online</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_a --></p>
+          <h1 id="commodities-and-futures-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Futures Calculator: Commodities Profit and Loss</h1>
+          <p id="commodities-and-futures-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Before you place a trade, the futures and commodities profit calculator turns a price move into dollars, so you can see your potential profit or loss on any futures contract, from gold and crude oil to the S&amp;P 500. Pick the contract, choose long or short, and enter your entry price, exit price and number of contracts to get gross PnL and net PnL in one step. <!-- SILO_START:slot_a -->If you want to see how the figures change, the <a class="silo-link" href="/pivot-point-calculator.html">pivot point calculator online</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_a --></p>
         </section>
       </div>
 
@@ -237,7 +238,7 @@
         <p id="commodities-and-futures-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
       </div>
 
-      <p id="commodities-and-futures-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Work out the profit or loss on a futures or commodity trade from the contract specifications, your entry and exit prices and the number of contracts, with margin shown as a share of notional value. <!-- SILO_START:slot_a_m -->If you want to see how the figures change, the <a class="silo-link" href="/pivot-point-calculator.html">pivot point calculator online</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_a_m --></p>
+      <p id="commodities-and-futures-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Before you place a trade, the futures and commodities profit calculator turns a price move into dollars, so you can see your potential profit or loss on any futures contract, from gold and crude oil to the S&amp;P 500. Pick the contract, choose long or short, and enter your entry price, exit price and number of contracts to get gross PnL and net PnL in one step. <!-- SILO_START:slot_a_m -->If you want to see how the figures change, the <a class="silo-link" href="/pivot-point-calculator.html">pivot point calculator online</a> gives you an instant result you can adjust as you go.<!-- SILO_END:slot_a_m --></p>
 
       <aside id="commodities-and-futures-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="commodities-and-futures-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
           <div id="commodities-and-futures-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="commodities-and-futures-calculator-ad-in-feed">
@@ -246,21 +247,142 @@
           </div>
         </aside>
 
-      
+      <div id="commodities-and-futures-calculator-guide" class="space-y-6" data-section="guide">
+        <section id="commodities-and-futures-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="commodities-and-futures-calculator-guide-heading-1">
+<h2 id="commodities-and-futures-calculator-guide-heading-1">How a Futures Calculator Turns Price Movement into Dollars</h2>
+<p>A <strong>futures calculator</strong> multiplies how far the market moved by what each point is worth. Every futures contract has a fixed <strong>contract size</strong> set by its exchange, and that size decides how many dollars one tick or one point is worth. Because the contract is standardized, the same price move produces the same dollars for every trader holding the same number of contracts. That predictability is what makes a <strong>profit calculator</strong> so useful for traders who need an exact answer before they commit capital. <!-- SILO_START:slot_b -->The <a class="silo-link" href="/black-scholes-option-calculator.html">black scholes option calculator</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_b --></p>
+<p>Futures are standardized agreements to buy or sell an underlying asset at a set price on a future date. Traders use them to hedge price volatility in physical holdings or to speculate on direction, and most positions are closed before expiration, which is why the calculator reports PnL rather than delivery value.</p>
+
+<h3>Inputs you enter</h3>
+<ul>
+<li><strong>Contract:</strong> the instrument you trade, which fills in the tick size and point value for you.</li>
+<li><strong>Direction:</strong> long if you expect the price to rise, short if you expect it to fall.</li>
+<li><strong>Entry price</strong> and <strong>exit price</strong>: where the trade opens and where it closes or where you plan to take profit.</li>
+<li><strong>Number of contracts:</strong> how many contracts you hold.</li>
+<li><strong>Commission</strong> per side: the broker fee you pay once to enter and once to exit.</li>
+</ul>
+
+<h3>Results you get back</h3>
+<p>The calculator returns the points moved, the ticks moved, <strong>gross PnL</strong>, commissions, <strong>net PnL</strong> and the result per contract. Some versions add the notional value of the position and a <strong>risk reward ratio</strong> when you also supply a <strong>stop loss</strong> and a <strong>take profit</strong> level.</p>
+        </section>
+        <section id="commodities-and-futures-calculator-guide-section-2" class="panel article-content p-4 sm:p-6" aria-labelledby="commodities-and-futures-calculator-guide-heading-2">
+<h2 id="commodities-and-futures-calculator-guide-heading-2">Futures and Commodities Profit Calculator Formula</h2>
+<p>The core relationship is the same for a long position in any market: <!-- SILO_START:slot_c -->Try the <a class="silo-link" href="/stock-split-impact.html">stock split calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_c --></p>
+<p>$$\text{Gross PnL} = (\text{Exit Price} - \text{Entry Price}) \times \text{Point Value} \times \text{Contracts}$$</p>
+<p>For a short position, reverse the price difference so a falling market produces a gain:</p>
+<p>$$\text{Gross PnL}_{\text{short}} = (\text{Entry Price} - \text{Exit Price}) \times \text{Point Value} \times \text{Contracts}$$</p>
+<p>Net PnL subtracts the cost of getting in and out. Commissions are charged <strong>per side</strong>, so a <strong>round-trip</strong> trade pays twice for every contract:</p>
+<p>$$\text{Net PnL} = \text{Gross PnL} - (\text{Commission per side} \times 2 \times \text{Contracts})$$</p>
+
+<h3>Tick size and point value</h3>
+<p>A tick is the smallest price step a contract can make, and the <strong>tick value</strong> is what that step is worth in dollars. The <strong>point value</strong> is the dollar worth of a full one-point move, which equals the tick value divided by the <strong>tick size</strong>. For gold the tick size is 0.10 and the tick value is $10, so one point is worth $100.</p>
+
+<h3>Long and short trades</h3>
+<p>Going <strong>long</strong> means buying first and selling later; going <strong>short</strong> means selling first and buying back later. Both directions use the same point value, only the sign of the price difference changes.</p>
+        </section>
+        <section id="commodities-and-futures-calculator-guide-section-3" class="panel article-content p-4 sm:p-6" aria-labelledby="commodities-and-futures-calculator-guide-heading-3">
+<h2 id="commodities-and-futures-calculator-guide-heading-3">Worked Example with a Gold Commodities Profit Calculator</h2>
+<p>Suppose you buy 3 gold futures contracts at 3,412.60 and sell them at 3,438.90. Gold has a point value of $100, and your broker charges $2.10 per side.</p>
+<table>
+<thead><tr><th>Step</th><th>Calculation</th><th>Result</th></tr></thead>
+<tbody>
+<tr><td>Points moved</td><td>3,438.90 &minus; 3,412.60</td><td>26.3 points</td></tr>
+<tr><td>Ticks moved</td><td>26.3 &divide; 0.10</td><td>263 ticks</td></tr>
+<tr><td>Gross PnL</td><td>26.3 &times; $100 &times; 3</td><td>$7,890.00</td></tr>
+<tr><td>Round-trip commission</td><td>$2.10 &times; 2 &times; 3</td><td>$12.60</td></tr>
+<tr><td>Net PnL</td><td>$7,890.00 &minus; $12.60</td><td><strong>$7,877.40</strong></td></tr>
+</tbody>
+</table>
+<p>Per contract, the trade earned $2,625.80 after fees. If you had been <strong>short</strong> the same contracts with the same prices, the same arithmetic would produce a loss of $7,902.60 once commission is added.</p>
+<figure><img src="/assets/images/tools/commodities-and-futures-calculator/gold-futures-profit-loss-payoff-chart.svg" alt="Line chart of net profit or loss on 3 gold futures contracts across exit prices from 3,395 to 3,445, crossing breakeven near 3,412.64" /><figcaption>Net PnL on 3 gold contracts bought at 3,412.60 across a range of exit prices.</figcaption></figure>
+
+<h3>Gross PnL vs net PnL</h3>
+<p>Gross PnL is the result before any trading costs, while net PnL is what you keep after commissions and fees. On a small move, the gap matters: a 2-point gold move earns $600 gross on 3 contracts, and $12.60 of that disappears to commission.</p>
+<figure><img src="/assets/images/tools/commodities-and-futures-calculator/gold-futures-gross-to-net-pnl-waterfall.svg" alt="Waterfall chart showing 7,890 dollars gross PnL minus 12.60 dollars commission leaving 7,877.40 dollars net PnL" /><figcaption>How $7,890.00 of gross PnL becomes $7,877.40 of net PnL.</figcaption></figure>
+        </section>
+        <section id="commodities-and-futures-calculator-guide-section-4" class="panel article-content p-4 sm:p-6" aria-labelledby="commodities-and-futures-calculator-guide-heading-4">
+<h2 id="commodities-and-futures-calculator-guide-heading-4">Contract Specifications for Popular Commodity Calculator Markets</h2>
+<p>A <strong>commodity calculator</strong> needs the right specifications to be accurate, and the exchange publishes them for every contract. The table below lists the standard values you will see most often. Standard <strong>E-mini</strong> and <strong>Micro E-mini</strong> index contracts trade on the CME, and a micro contract carries one-tenth of the point value of its full-size sibling.</p>
+<table>
+<thead><tr><th>Market</th><th>Contract</th><th>Tick size</th><th>Tick value</th><th>Point value</th><th>Exchange</th></tr></thead>
+<tbody>
+<tr><td>Metals</td><td>Gold</td><td>0.10</td><td>$10.00</td><td>$100</td><td>COMEX</td></tr>
+<tr><td>Metals</td><td>Micro Gold</td><td>0.10</td><td>$1.00</td><td>$10</td><td>COMEX</td></tr>
+<tr><td>Metals</td><td>Silver</td><td>0.005</td><td>$25.00</td><td>$5,000</td><td>COMEX</td></tr>
+<tr><td>Metals</td><td>Copper</td><td>0.0005</td><td>$12.50</td><td>$25,000</td><td>COMEX</td></tr>
+<tr><td>Energy</td><td>Crude Oil</td><td>0.01</td><td>$10.00</td><td>$1,000</td><td>NYMEX</td></tr>
+<tr><td>Energy</td><td>Natural Gas</td><td>0.001</td><td>$10.00</td><td>$10,000</td><td>NYMEX</td></tr>
+<tr><td>Agriculture</td><td>Corn</td><td>0.25</td><td>$12.50</td><td>$50</td><td>CBOT</td></tr>
+<tr><td>Agriculture</td><td>Soybeans</td><td>0.25</td><td>$12.50</td><td>$50</td><td>CBOT</td></tr>
+<tr><td>Agriculture</td><td>Wheat</td><td>0.25</td><td>$12.50</td><td>$50</td><td>CBOT</td></tr>
+<tr><td>Stock indexes</td><td>E-mini S&P 500</td><td>0.25</td><td>$12.50</td><td>$50</td><td>CME</td></tr>
+<tr><td>Stock indexes</td><td>E-mini Nasdaq</td><td>0.25</td><td>$5.00</td><td>$20</td><td>CME</td></tr>
+<tr><td>Currencies</td><td>Euro FX</td><td>0.00005</td><td>$6.25</td><td>$125,000</td><td>CME</td></tr>
+<tr><td>Treasuries</td><td>10-Year T-Note</td><td>1/64</td><td>$15.625</td><td>$1,000</td><td>CBOT</td></tr>
+</tbody>
+</table>
+
+<h3>Reading the table for a short crude oil trade</h3>
+<p>Say you sell 2 crude oil contracts short at 71.46 and buy them back at 70.82. The price fell 0.64 points, so the trade earns 0.64 &times; $1,000 &times; 2 = $1,280 before fees. The same 0.64 move on one corn contract would be worth only $32, which is why checking the point value before sizing a trade matters.</p>
+        </section>
+        <section id="commodities-and-futures-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="commodities-and-futures-calculator-guide-heading-5">
+<h2 id="commodities-and-futures-calculator-guide-heading-5">Checking a Soybean Short with a Commodity Profit Calculator</h2>
+<p>A grain merchant expects the harvest to push soybean prices lower, so you follow the logic and sell 5 CBOT soybean contracts short at 1,046.50 cents per bushel. Before entering, you want the profit and loss in dollars, not cents. Soybeans move in 0.25-cent ticks worth $12.50, and one full cent is worth $50 per contract.</p>
+<p>You open the calculator and select soybeans, choose <strong>short</strong>, type 1,046.50 as the entry price and 1,031.25 as the exit price, set 5 contracts and enter $2.40 commission per side. The calculator reports a 15.25-cent move, which is 61 ticks. Gross PnL is 15.25 &times; $50 &times; 5 = <strong>$3,812.50</strong>. Round-trip commission is $2.40 &times; 2 &times; 5 = $24.00, so net PnL is <strong>$3,788.50</strong>.</p>
+<p>Because the tick value is published by the exchange, you can check the screen yourself: 61 ticks &times; $12.50 &times; 5 contracts is the same $3,812.50. The figure then drives one specific decision. You want at least $2,000 net on the trade, so you rerun the calculation with the exit at 1,038.00. That 8.5-cent move produces $2,125.00 gross and $2,101.00 net, which clears your floor, so you set the buy-to-cover order at 1,038.00 and keep a second order at 1,031.25 for the rest of the move.</p>
+        </section>
+        <section id="commodities-and-futures-calculator-guide-section-6" class="panel article-content p-4 sm:p-6" aria-labelledby="commodities-and-futures-calculator-guide-heading-6">
+<h2 id="commodities-and-futures-calculator-guide-heading-6">Futures Trading Risk Management and Position Size</h2>
+<p>Knowing your potential profit and loss is only half of <strong>risk management</strong>. The other half is deciding how many contracts to hold so that one losing trade stays inside the <strong>maximum risk</strong> you chose. Most traders risk one to two percent of their <strong>account size</strong> per trade, and the <strong>position sizing</strong> formula is simple:</p>
+<p>$$\text{Contracts} = \left\lfloor \frac{\text{Account Size} \times \text{Risk \%}}{\text{Stop Distance} \times \text{Point Value}} \right\rfloor$$</p>
+
+<h3>Position size on a $60,000 account</h3>
+<p>With a $60,000 account risking 1%, your maximum risk is $600. You plan to buy at 3,412.60 with a stop loss at 3,404.20, an 8.4-point stop. On a full gold contract that stop costs 8.4 &times; $100 = $840 per contract, which already exceeds your limit, so the answer is zero. On the micro contract it costs 8.4 &times; $10 = $84, and $600 &divide; $84 allows 7 contracts with $588 at risk.</p>
+<figure><img src="/assets/images/tools/commodities-and-futures-calculator/micro-gold-position-size-by-account-and-stop.svg" alt="Heatmap of micro gold contracts allowed by account size and stop distance at 1 percent risk, with 7 contracts outlined for a 60,000 dollar account and an 8.4 point stop" /><figcaption>Micro gold contracts allowed at 1% risk, by account size and stop distance.</figcaption></figure>
+
+<h3>Risk reward ratio</h3>
+<p>The <strong>risk reward ratio</strong> compares the distance to your take profit with the distance to your stop. A 25.2-point target against that 8.4-point stop gives 3 to 1, meaning you earn three dollars of potential profit for each dollar of potential loss.</p>
+        </section>
+        <section id="commodities-and-futures-calculator-guide-section-7" class="panel article-content p-4 sm:p-6" aria-labelledby="commodities-and-futures-calculator-guide-heading-7">
+<h2 id="commodities-and-futures-calculator-guide-heading-7">Using a Futures PnL Calculator in Your Futures Trading Strategy</h2>
+<p>A <strong>futures pnl calculator</strong> belongs in your trading <strong>strategy</strong> before the order goes in, not after. Enter a <strong>hypothetical order</strong>, compare the result against the <strong>stop-loss</strong> you would place, and decide whether the trade is worth taking. A <strong>free futures calculator</strong> costs nothing to repeat, so you can test ten entries in the time one live trade takes. Futures trading rewards that kind of preparation, because futures prices move in fixed steps, and the <strong>minimum tick</strong> of each contract has a set dollar value.</p>
+
+<h3>Choosing between calculator types</h3>
+<p>A <strong>futures p&l calculator</strong> answers what a trade will earn, while a position size tool answers how many futures contracts you can afford to hold. A general <strong>trading calculator</strong> or <strong>profit/loss calculator</strong> often offers both on one screen, and the same logic runs inside a <strong>pnl calculator</strong> for stocks, although futures add a point value and a contract size. A broker's CFD <strong>trading profit calculator</strong> adds the <strong>spread</strong>, a <strong>conversion fee</strong> and <strong>overnight swaps</strong> to the same price-difference formula, and quotes size in units such as <strong>barrels</strong>. A <strong>futures profit calculator</strong> for exchange-traded contracts needs none of those lines, and a <strong>commodity profit calculator</strong> built for CFDs is the one to use when your broker quotes them.</p>
+
+<h3>Futures in a wider portfolio</h3>
+<p>Whether you use futures for speculation, to hedge a physical holding, or as one sleeve of a wider <strong>portfolio</strong>, the calculator expresses every position in the same unit, dollars, so a gold trade and an index trade compare on equal terms. The <strong>CFTC</strong> requires large positions in some contracts to be reported, but that reporting never changes the PnL figure the calculator returns.</p>
+        </section>
+        <section id="commodities-and-futures-calculator-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="commodities-and-futures-calculator-guide-heading-8">
+<h2 id="commodities-and-futures-calculator-guide-heading-8">Costs a Profit Loss Calculator Does Not Include</h2>
+<p>A <strong>profit loss calculator</strong> shows the trade you planned, not the trade you got. Several real costs sit outside the formula, and each one reduces the figure you actually keep.</p>
+<ul>
+<li><strong>Exchange fees</strong> and regulatory pass-through charges, which vary by broker and contract.</li>
+<li><strong>Slippage</strong>, the gap between the price you wanted and the price you were filled at.</li>
+<li><strong>Margin</strong> and <strong>margin requirements</strong>, which brokers can raise in volatile weeks, and <strong>leverage</strong>: a small deposit controls a large position, so gains and losses both scale up, and a margin call can force you out early.</li>
+<li><strong>Trading costs</strong> such as data and platform fees, which depend on your setup.</li>
+</ul>
+<p>Futures trading carries substantial risk, and this calculator is for education, not trading advice. Practice with a demo account before committing real capital.</p>
+
+<h3>Cash settlement and physical delivery</h3>
+<p>Some contracts settle in cash while others call for physical delivery of the commodity. The PnL calculation assumes you close before the delivery month, so any delivery charges from holding past it fall outside the figure the calculator returns.</p>
+        </section>
+      </div>
+
+      <section id="commodities-and-futures-calculator-faq-section" class="panel p-4 sm:p-6" aria-labelledby="commodities-and-futures-calculator-faq-heading" data-section="faq">
+        <h2 id="commodities-and-futures-calculator-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">Futures and Commodities Profit Calculator questions</h2>
+        <div id="commodities-and-futures-calculator-faq-list" class="mt-5 space-y-3">
+          <details id="commodities-and-futures-calculator-faq-1" class="faq-item" open><summary id="commodities-and-futures-calculator-faq-1-summary" class="faq-summary"><h3 id="commodities-and-futures-calculator-faq-1-question" class="faq-question">How do you calculate profit and loss on a futures trade?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="commodities-and-futures-calculator-faq-1-answer" class="faq-answer"><p>Subtract the entry price from the exit price (reverse it for a short), then multiply by the contract&#x27;s point value and the number of contracts. Subtract round-trip commissions to get net PnL.</p></div></details>
+          <details id="commodities-and-futures-calculator-faq-2" class="faq-item" open><summary id="commodities-and-futures-calculator-faq-2-summary" class="faq-summary"><h3 id="commodities-and-futures-calculator-faq-2-question" class="faq-question">What is the difference between a tick and a point?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="commodities-and-futures-calculator-faq-2-answer" class="faq-answer"><p>A tick is the smallest price step a contract can make, and a point is a full unit of price. Point value equals tick value divided by tick size, so gold&#x27;s $10 tick of 0.10 gives a $100 point.</p></div></details>
+          <details id="commodities-and-futures-calculator-faq-3" class="faq-item" open><summary id="commodities-and-futures-calculator-faq-3-summary" class="faq-summary"><h3 id="commodities-and-futures-calculator-faq-3-question" class="faq-question">What is the difference between gross PnL and net PnL?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="commodities-and-futures-calculator-faq-3-answer" class="faq-answer"><p>Gross PnL is the profit or loss from price movement alone. Net PnL subtracts commissions, which are charged per side, so each contract pays twice on a round trip.</p></div></details>
+          <details id="commodities-and-futures-calculator-faq-4" class="faq-item" open><summary id="commodities-and-futures-calculator-faq-4-summary" class="faq-summary"><h3 id="commodities-and-futures-calculator-faq-4-question" class="faq-question">How many contracts should I trade for my account size?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="commodities-and-futures-calculator-faq-4-answer" class="faq-answer"><p>Multiply account size by the percentage you are willing to risk, then divide by the stop distance times point value, rounding down. Many traders risk one to two percent per trade.</p></div></details>
+          <details id="commodities-and-futures-calculator-faq-5" class="faq-item" open><summary id="commodities-and-futures-calculator-faq-5-summary" class="faq-summary"><h3 id="commodities-and-futures-calculator-faq-5-question" class="faq-question">What is the difference between E-mini and Micro E-mini contracts?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="commodities-and-futures-calculator-faq-5-answer" class="faq-answer"><p>Micro contracts are one-tenth the size of their E-mini versions, so the same price move is worth a tenth as much. That makes them practical for smaller accounts.</p></div></details>
+          <details id="commodities-and-futures-calculator-faq-6" class="faq-item" open><summary id="commodities-and-futures-calculator-faq-6-summary" class="faq-summary"><h3 id="commodities-and-futures-calculator-faq-6-question" class="faq-question">Does this calculator include exchange fees, slippage or margin?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="commodities-and-futures-calculator-faq-6-answer" class="faq-answer"><p>No. It uses the commission you enter. Exchange fees, regulatory charges, slippage and broker margin requirements vary and are not included.</p></div></details>
+          <details id="commodities-and-futures-calculator-faq-7" class="faq-item" open><summary id="commodities-and-futures-calculator-faq-7-summary" class="faq-summary"><h3 id="commodities-and-futures-calculator-faq-7-question" class="faq-question">Can I use it for short trades?</h3><span class="faq-marker" aria-hidden="true"></span></summary><div id="commodities-and-futures-calculator-faq-7-answer" class="faq-answer"><p>Yes. Choose Short and the price difference is reversed, so a falling market produces a gain and a rising market a loss.</p></div></details>
+        </div>
+      </section>
 
       
-
-      <nav id="commodities-and-futures-calculator-related-section" class="border-t border-line pt-8" aria-labelledby="commodities-and-futures-calculator-related-heading" data-section="related-calculators">
-        <h2 id="commodities-and-futures-calculator-related-heading" class="guide-heading">Related calculators</h2>
-        <ul id="commodities-and-futures-calculator-related-list" class="mt-5 grid gap-3 @2xl:grid-cols-2 @5xl:grid-cols-3" role="list">
-          <li><a id="commodities-and-futures-calculator-related-link-position-sizing" class="related-link" href="/position-sizing.html" data-calculator-name="Position Sizing Calculator" data-category-name="Stocks, Dividends &amp; Trading">Position Sizing Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
-          <li><a id="commodities-and-futures-calculator-related-link-pivot-point-calculator" class="related-link" href="/pivot-point-calculator.html" data-calculator-name="Pivot Point Calculator" data-category-name="Stocks, Dividends &amp; Trading">Pivot Point Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
-          <li><a id="commodities-and-futures-calculator-related-link-fibonacci-calculator" class="related-link" href="/fibonacci-calculator.html" data-calculator-name="Fibonacci Retracement Calculator" data-category-name="Stocks, Dividends &amp; Trading">Fibonacci Retracement Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
-          <li><a id="commodities-and-futures-calculator-related-link-roi-calculator" class="related-link" href="/roi-calculator.html" data-calculator-name="ROI Calculator" data-category-name="Investment Returns &amp; Growth">ROI Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
-          <li><a id="commodities-and-futures-calculator-related-link-dividend-reinvestment" class="related-link" href="/dividend-reinvestment.html" data-calculator-name="Dividend Reinvestment Breakeven Calculator" data-category-name="Stocks, Dividends &amp; Trading">Dividend Reinvestment Breakeven Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
-          <li><a id="commodities-and-futures-calculator-related-link-market-cap-growth-calculator" class="related-link" href="/market-cap-growth-calculator.html" data-calculator-name="Market Cap Growth Calculator" data-category-name="Stocks, Dividends &amp; Trading">Market Cap Growth Calculator<span aria-hidden="true" class="text-ink-muted">›</span></a></li>
-        </ul>
-      </nav>
 
       <aside id="commodities-and-futures-calculator-ad-bottom-leaderboard" class="ad-slot" aria-label="Advertisement, bottom of page" data-ad-slot-name="commodities-and-futures-calculator-ad-bottom-leaderboard" data-ad-size="728 × 90 or 320 × 100">
           <div id="commodities-and-futures-calculator-ad-bottom-leaderboard-frame" class="ad-slot-live" data-ad-container="commodities-and-futures-calculator-ad-bottom-leaderboard">
@@ -338,7 +460,11 @@
       <p id="commodities-and-futures-calculator-footer-copyright" class="mx-auto max-w-[1600px] px-4 py-5 text-sm text-ink-muted lg:px-6">© <span id="commodities-and-futures-calculator-footer-year">2026</span> Company Marketcap. Every calculator is free to use.</p>
     </div>
   </footer>
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){var a=document.querySelector("[data-section=guide]");if(a&&window.renderMathInElement)renderMathInElement(a,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false}],throwOnError:false});});</script>
 <script>(function () {
   'use strict';
   // Futures profit/loss and margin from user-entered contract specifications (no exchange specs built in).
