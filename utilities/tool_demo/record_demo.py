@@ -120,8 +120,16 @@ def plan_fields(fields, rng, vary):
     """[(field, new_value)] for the controls the demo touches: numbers and selects only (dates, text, radios and
     checkboxes keep the page's own values)."""
     plan, previous_date, dates, switches, seen_radio = [], None, [], 0, set()
+    # A questionnaire (radio groups and nothing else) only produces a result once every question is answered.
+    questionnaire = not any(f["type"] in ("number", "date", "month") or f["tag"] == "select" for f in fields)
     for f in fields:
         if f["readonly"]:
+            continue
+        if questionnaire and f["type"] == "radio":
+            if f["name"] not in seen_radio:
+                seen_radio.add(f["name"])
+                options = [g for g in fields if g["type"] == "radio" and g["name"] == f["name"]]
+                plan.append((rng.choice(options), "switch"))
             continue
         if f["type"] in ("checkbox", "radio"):
             # Flip a checkbox, or pick another radio option (one per group). Only on varied runs: a switch can hide
@@ -150,7 +158,7 @@ def plan_fields(fields, rng, vary):
             plan.append((f, value))
     if vary and not plan:  # a form made only of pre-filled dates: move them
         plan = [(f, vary_date(f, rng, None)) for f in dates]
-    return plan[:MAX_FIELDS]
+    return plan[:12 if questionnaire else MAX_FIELDS]
 
 
 def route_handler(route):
@@ -247,7 +255,8 @@ def record(tool, base_url, video_dir, attempt):
                 page.wait_for_timeout(400)
                 text = result.inner_text()
                 errors = page.evaluate(ERROR_JS, CALC_SECTION)
-            if vary and (not result_ok(text, errors) or (initial is not None and text == initial)):
+            unchanged = initial is not None and text == initial and attempt < MAX_VARY_ATTEMPTS - 1  # last varied try may keep it
+            if vary and (not result_ok(text, errors) or unchanged):
                 raise InvalidScenario(f"attempt {attempt}: result {text!r} (was {initial!r}), errors {errors}")
             if not result_ok(text, errors):
                 raise RuntimeError(f"result {text!r}, errors {errors} even with defaults")
@@ -422,14 +431,21 @@ def main():
     if not slugs:
         return print("nothing to do")
 
-    server = None
-    if not port_open(args.port):  # serve public/ for the recording (stopped again below)
-        server = subprocess.Popen([sys.executable, "-m", "http.server", str(args.port), "--directory", args.site_dir],
-                                  stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    servers = []
+
+    def ensure_server():
+        """Serve the built site on --port, (re)starting the server if it isn't answering. A long batch must not die
+        because the one static server did."""
+        if port_open(args.port):
+            return
+        servers.append(subprocess.Popen([sys.executable, "-m", "http.server", str(args.port), "--directory", args.site_dir],
+                                        stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL))
         for _ in range(50):
             if port_open(args.port):
                 break
             time.sleep(0.1)
+
+    ensure_server()
     base_url = f"http://localhost:{args.port}"
     try:
         if args.jobs > 1 and not args.shard:
@@ -441,6 +457,7 @@ def main():
             failures = []
             for n, slug in enumerate(slugs, 1):
                 print(f"[{n}/{len(slugs)}] {slug}", flush=True)
+                ensure_server()
                 try:
                     make_one(slug, base_url, args.keep_temp)
                 except Exception as exc:  # one broken tool must not stop the batch
@@ -453,8 +470,10 @@ def main():
                 (WORK / f"failures-{tag}.txt").write_text("".join(failures), encoding="utf-8")
                 print(f"{len(failures)} failed")
     finally:
-        if server:
+        for server in servers:
             server.terminate()
+        if not args.shard:  # also stop one a shard had to restart
+            subprocess.run(["pkill", "-f", f"http.server {args.port}"], check=False)
     if not args.shard:
         merge_manifest()
 

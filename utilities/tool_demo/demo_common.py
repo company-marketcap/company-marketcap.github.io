@@ -45,7 +45,7 @@ RESULT_LABEL_JS = """
 
 # Third-party requests are blocked while recording (no analytics hits, no ads); Google Fonts stay allowed so the
 # page looks as it does for visitors.
-ALLOWED_EXTERNAL = ("fonts.googleapis.com", "fonts.gstatic.com")
+ALLOWED_EXTERNAL = ("fonts.googleapis.com", "fonts.gstatic.com", "api.frankfurter.dev")  # + the currency calculator's rates
 
 INIT_SCRIPT = """
 (() => {
