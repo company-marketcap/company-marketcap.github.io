@@ -301,8 +301,9 @@ def render_demo(S, tool):
             f'        <img id="{page_id}-demo-image" class="h-auto w-full rounded-lg border border-line" '
             f'src="{DEMO_DIR}/{page_id}-demo.avif" alt="{esc(demo["alt"])}" width="{demo["width"]}" height="{demo["height"]}" '
             f'loading="lazy" decoding="async">\n'
-            f'        <figcaption id="{page_id}-demo-caption" class="mt-3 text-sm text-ink-muted">A short demo of the '
-            f'{esc(tool["name"].lower())}: entering example numbers and reading the result.</figcaption>\n      </figure>')
+            f'        <figcaption id="{page_id}-demo-caption" class="mt-3 text-sm text-ink-muted">See how the '
+            f'{esc(tool["name"])} works: change the inputs and the {esc(schema.demo_result_phrase(demo["alt"]))} updates instantly. '
+            f'Enter your own numbers in the calculator above.</figcaption>\n      </figure>')
 
 
 class Site:

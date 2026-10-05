@@ -28,6 +28,16 @@ ATTR_RE = re.compile(r'\b(src|alt|width|height)="([^"]*)"')
 VIEWBOX_RE = re.compile(r'viewBox="[\d.\-]+[ ,]+[\d.\-]+[ ,]+([\d.]+)[ ,]+([\d.]+)"')
 STATIC = Path(__file__).resolve().parent / "static"
 
+RESULT_RE = re.compile(r"reading the (.+?)\.$")
+
+
+def demo_result_phrase(alt):
+    """What the demo ends on ("monthly payment"), taken from its alt text; a generic word when that is too terse."""
+    m = RESULT_RE.search(alt)
+    phrase = m.group(1) if m else ""
+    return phrase if len(phrase) > 3 else "result"
+
+
 PAGE_TYPES = {"about": "AboutPage", "contact": "ContactPage"}
 
 
@@ -161,7 +171,8 @@ class Schema:
         year = date.today().year
         secs = round(demo["duration_s"])
         return {"@type": "ImageObject", "@id": url + "#demo", "url": full, "contentUrl": full, "name": f"{tool['name']} demo",
-                "caption": demo["alt"], "description": demo["alt"], "width": demo["width"], "height": demo["height"],
+                "caption": f"{tool['name']} demo: change the inputs and watch the {demo_result_phrase(demo['alt'])} update",
+                "description": demo["alt"], "width": demo["width"], "height": demo["height"],
                 "encodingFormat": "image/avif", "contentSize": f"{round(demo['bytes'] / 1024)} KB", "duration": f"PT{secs}S",
                 "uploadDate": self.stamp(demo["generated"]), "inLanguage": "en-US", "representativeOfPage": True,
                 "isPartOf": {"@id": url + "#webpage"}, "creator": {"@id": self.person_id},
