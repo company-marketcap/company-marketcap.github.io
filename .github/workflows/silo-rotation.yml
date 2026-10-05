@@ -19,6 +19,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # schema.py reads git history for datePublished/dateModified
 
       - uses: actions/setup-python@v5
         with:

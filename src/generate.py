@@ -27,6 +27,7 @@ from pathlib import Path
 
 import build_css
 import build_data
+import schema
 
 SRC = Path(__file__).resolve().parent
 ROOT = SRC.parent
@@ -38,14 +39,16 @@ COMMON_TOKENS = {"PAGE_ID", "PAGE_TYPE", "SITE_NAME", "META_TITLE", "META_DESCRI
                  "ROBOTS", "HEAD_EXTRA", "JSON_LD", "SIDEBAR_CATEGORIES", "FOOTER_CATEGORIES",
                  "FOOTER_DESCRIPTION", "YEAR", "AD_TOP", "AD_BOTTOM", "AD_RIGHT_RAIL_TOP", "AD_RIGHT_RAIL", "H1", "SUBTITLE",
                  "SIDEBAR_DESKTOP_CLASSES", "HEADER_NAV_CLASSES"}
+AUTHOR_CONFIG = SRC / "config" / "author.json"
 TEMPLATE_TOKENS = {
     "home.html": COMMON_TOKENS | {"AD_IN_FEED", "SIDE_CATEGORIES", "DIRECTORY", "DIRECTORY_COUNT",
                                   "DIRECTORY_HEADING", "DIRECTORY_INTRO", "CONTENT_SECTIONS", "FAQ"},
-    "category.html": COMMON_TOKENS | {"BREADCRUMB", "HERO_TILE", "JUMP_LINKS",
-                                      "DIRECTORY_COUNT", "DIRECTORY", "CONTENT_SECTIONS", "FAQ"},
+    "category.html": COMMON_TOKENS | {"BREADCRUMB", "HERO_TILE", "JUMP_LINKS", "DIRECTORY_COUNT", "DIRECTORY",
+                                      "CONTENT_SECTIONS", "FAQ", "AUTHOR_BOX"},
     "tool.html": COMMON_TOKENS | {"BREADCRUMB", "SUBCATEGORY_SLUG", "TOOL_CARD", "DISCLAIMER", "AD_IN_FEED",
-                                  "CONTENT_SECTIONS", "FAQ", "RELATED_TOOLS", "TOOL_EXTRA_SCRIPTS", "TOOL_SCRIPT"},
-    "page.html": COMMON_TOKENS | {"BREADCRUMB", "CONTENT_HTML"},
+                                  "CONTENT_SECTIONS", "FAQ", "RELATED_TOOLS", "TOOL_EXTRA_SCRIPTS", "TOOL_SCRIPT",
+                                  "AUTHOR_BYLINE", "AUTHOR_BOX"},
+    "page.html": COMMON_TOKENS | {"BREADCRUMB", "CONTENT_HTML", "AUTHOR_BOX"},
     "404.html": COMMON_TOKENS | {"POPULAR_TOOLS", "CATEGORY_URL", "SITEMAP_URL"},
 }
 TOKEN_RE = re.compile(r"\{\{([A-Z0-9_]+)\}\}")
@@ -145,6 +148,17 @@ def json_ld(*objects):
                        for o in objects if o)
 
 
+S_SCHEMA = [None]  # the build's Schema, set by Site.__init__
+
+
+def json_ld_graph(nodes, url=None, content_html=""):
+    """One <script> holding a linked @graph (see schema.py). With url + content_html, the page's article
+    images are added as ImageObject nodes."""
+    if url:
+        nodes = S_SCHEMA[0].add_images(nodes, url, content_html)
+    return f'<script type="application/ld+json">{json.dumps({"@context": "https://schema.org", "@graph": nodes}, ensure_ascii=False)}</script>'
+
+
 # --- shared components -------------------------------------------------------------------
 def render_ad(page_id, slot, suffix=""):
     """An ad slot. With an AdSense unit id in site.json "ad_units" it renders the live unit; without one it
@@ -174,17 +188,15 @@ def render_breadcrumb(site, page_id, trail):
     items = []
     for i, (name, link) in enumerate(trail, 1):
         sep = SEPARATOR_SVG if i > 1 else ""
-        attrs = (f'id="{page_id}-breadcrumb-item-{i}" class="flex shrink-0 items-center gap-1.5" itemprop="itemListElement" '
-                 f'itemscope itemtype="https://schema.org/ListItem"')
+        attrs = (f'id="{page_id}-breadcrumb-item-{i}" class="flex shrink-0 items-center gap-1.5"')
         if i < len(trail):
-            body = (f'<a class="breadcrumb-link" href="{link}" itemprop="item"><span itemprop="name">{esc(name)}</span></a>')
+            body = (f'<a class="breadcrumb-link" href="{link}"><span>{esc(name)}</span></a>')
         else:
-            body = (f'<span itemprop="name" aria-current="page" class="font-semibold text-ink">{esc(name)}</span>'
-                    f'<meta itemprop="item" content="{site["base_url"]}{link}">')
-        items.append(f'<li {attrs}>{sep}{body}<meta itemprop="position" content="{i}"></li>')
+            body = (f'<span aria-current="page" class="font-semibold text-ink">{esc(name)}</span>')
+        items.append(f'<li {attrs}>{sep}{body}</li>')
     return (f'<nav id="{page_id}-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">\n'
             f'          <ol id="{page_id}-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" '
-            f'itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">\n            '
+            f'>\n            '
             + "\n            ".join(items) + "\n          </ol>\n        </nav>")
 
 
@@ -237,6 +249,38 @@ def render_faq(page_id, heading, faq):
             + "\n          ".join(items) + "\n        </div>\n      </section>")
 
 
+def render_author_byline(S, page_id, modified):
+    """One-line byline under the hero: content author, fact checker and last update."""
+    a = S.author
+    return (f'<p id="{page_id}-byline" class="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-ink-muted" data-section="byline">'
+            f'<span>{esc(a["content_role"])}: <a class="font-semibold text-ink underline-offset-2 hover:underline" href="{href(a["slug"])}" rel="author">{esc(a["name"])}</a></span>'
+            f'<span>{esc(a["review_role"])}: <a class="font-semibold text-ink underline-offset-2 hover:underline" href="{href(a["slug"])}">{esc(a["name"])}</a></span>'
+            f'<span>Updated <time datetime="{modified}">{schema.long_date(modified)}</time></span></p>')
+
+
+def render_author_box(S, page_id, published, modified):
+    """Full author box: the same person is content author and fact checker."""
+    a = S.author
+    link = f'<a class="font-semibold text-ink underline-offset-2 hover:underline" href="{href(a["slug"])}">{esc(a["name"])}</a>'
+    return (f'<aside id="{page_id}-author-box" class="panel p-4 sm:p-6" aria-labelledby="{page_id}-author-box-heading" data-section="author-box">\n'
+            f'        <h2 id="{page_id}-author-box-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">About the author</h2>\n'
+            f'        <div class="mt-4 flex items-start gap-4">\n'
+            f'          <span id="{page_id}-author-avatar" class="flex size-14 shrink-0 items-center justify-center rounded-full bg-ink font-display text-lg font-bold text-surface" aria-hidden="true">{esc(a["initials"])}</span>\n'
+            f'          <div class="min-w-0 space-y-2">\n'
+            f'            <p id="{page_id}-author-name" class="font-display text-lg font-bold leading-tight">{link}</p>\n'
+            f'            <p id="{page_id}-author-title" class="text-sm text-ink-muted">{esc(a["job_title"])}</p>\n'
+            f'            <p id="{page_id}-author-bio" class="text-ink-muted">{esc(a["bio"])}</p>\n'
+            f'            <ul id="{page_id}-author-roles" class="space-y-1 text-sm" role="list">\n'
+            f'              <li><span class="text-ink-muted">{esc(a["content_role"])}:</span> {link}</li>\n'
+            f'              <li><span class="text-ink-muted">{esc(a["review_role"])}:</span> {link}. {esc(a["review_note"])}</li>\n'
+            f'              <li><span class="text-ink-muted">Published</span> <time datetime="{published}">{schema.long_date(published)}</time>'
+            f' <span class="text-ink-muted" aria-hidden="true">&middot;</span> <span class="text-ink-muted">Updated</span> <time datetime="{modified}">{schema.long_date(modified)}</time></li>\n'
+            f'            </ul>\n'
+            f'            <p class="text-sm"><a id="{page_id}-author-linkedin" class="font-semibold underline underline-offset-2" href="{esc(a["linkedin"])}" rel="me noopener" target="_blank">Unnikrishnan P on LinkedIn</a>'
+            f' &middot; <a id="{page_id}-author-profile-link" class="font-semibold underline underline-offset-2" href="{href(a["slug"])}">Full profile</a></p>\n'
+            f'          </div>\n        </div>\n      </aside>')
+
+
 class Site:
     """Shared, per-build view of the data that every page renderer needs."""
 
@@ -246,6 +290,9 @@ class Site:
         self.by_slug = {t["slug"]: t for t in tools}
         self.subcats = {s["slug"]: dict(s, group=g) for g in site["nav"] for s in g["subcategories"]}
         self.live_count = sum(1 for t in tools if t["live"])
+        self.author = json.loads(AUTHOR_CONFIG.read_text(encoding="utf-8"))
+        self.schema = schema.Schema(site, self.author, schema.load_git_dates(ROOT))
+        S_SCHEMA[0] = self.schema
 
     def live_in(self, slugs):
         return [s for s in slugs if self.by_slug[s]["live"]]
@@ -273,9 +320,9 @@ class Site:
                           f'<ul class="space-y-0.5" role="list">{links}</ul></li>')
         current = ' aria-current="page"' if on_category else (' aria-current="true"' if current_sub else "")
         return (f'                <li><a id="{page_id}-sidebar-link-{cat["slug"]}" href="{href(cat["slug"])}" class="sidebar-link" '
-                f'data-main-category-slug="{cat["slug"]}" itemprop="url"{current}>'
+                f'data-main-category-slug="{cat["slug"]}"{current}>'
                 f'<span class="sidebar-link-swatch bg-{cat["color"]} dark:bg-{cat["color"]}-ink" aria-hidden="true"></span>'
-                f'<span itemprop="name">{esc(cat["name"])}</span><span class="sidebar-link-count"><span class="sr-only">, </span>'
+                f'<span>{esc(cat["name"])}</span><span class="sidebar-link-count"><span class="sr-only">, </span>'
                 f'{self.live_count}<span class="sr-only"> calculators</span></span></a>\n'
                 f'                  <ul id="{page_id}-sidebar-sub-links-{cat["slug"]}" class="mb-2 mt-0.5 space-y-0.5" role="list" '
                 f'aria-label="{esc(cat["name"])} topics">{"".join(groups)}</ul></li>')
@@ -324,17 +371,16 @@ class Site:
         ordered = self.live_in(sub["tools"]) + [s for s in sub["tools"] if not self.by_slug[s]["live"]]
         items = "\n              ".join(self.tool_list_item(page_id, sub, s) for s in ordered)
         p = f"{page_id}-sub-category-{sid}"
-        return (f'<section id="{sid}" class="category-card scroll-mt-24" aria-labelledby="{p}-heading" itemprop="itemListElement" '
-                f'itemscope itemtype="https://schema.org/ListItem" data-sub-category-slug="{sid}">\n'
-                f'            <meta itemprop="position" content="{position}">\n'
+        return (f'<section id="{sid}" class="category-card scroll-mt-24" aria-labelledby="{p}-heading" '
+                f'data-sub-category-slug="{sid}">\n'
                 f'            <div id="{p}-header" class="category-card-header bg-{c} text-{c}-ink">\n'
                 f'              <span id="{p}-tile" class="category-element-tile" aria-hidden="true"><span class="category-element-count">'
                 f'{len(self.live_in(sub["tools"]))}</span><span class="category-element-symbol">{esc(sub["symbol"])}</span></span>\n'
                 f'              <div class="min-w-0">\n'
-                f'                <h2 id="{p}-heading" class="font-display text-lg font-bold leading-tight"><span itemprop="name">{esc(sub["name"])} Calculators</span></h2>\n'
+                f'                <h2 id="{p}-heading" class="font-display text-lg font-bold leading-tight"><span>{esc(sub["name"])} Calculators</span></h2>\n'
                 f'                <p id="{p}-count" class="text-sm opacity-80">{esc(self.count_line(sub["tools"]))}</p>\n'
                 f'              </div>\n            </div>\n'
-                f'            <p id="{p}-description" class="px-4 pt-3 text-sm text-ink-muted" itemprop="description">{esc(sub["description"])}</p>\n'
+                f'            <p id="{p}-description" class="px-4 pt-3 text-sm text-ink-muted">{esc(sub["description"])}</p>\n'
                 f'            <ul id="{p}-list" class="category-calculator-list" role="list">\n              {items}\n            </ul>\n'
                 f'          </section>')
 
@@ -355,14 +401,13 @@ def render_home(S):
         slugs = S.group_tools(g)
         covers = ", ".join(s["nav_name"].lower() for s in g["subcategories"])
         cards.append(
-            f'<section id="{p}" class="main-category-card" aria-labelledby="{p}-heading" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">\n'
-            f'            <meta itemprop="position" content="{i}">\n'
+            f'<section id="{p}" class="main-category-card" aria-labelledby="{p}-heading">\n'
             f'            <div id="{p}-header" class="category-card-header bg-{c} text-{c}-ink">\n'
             f'              <span id="{p}-tile" class="category-element-tile" aria-hidden="true"><span class="category-element-count">{len(S.live_in(slugs))}</span>'
             f'<span class="category-element-symbol">{esc(g["symbol"])}</span></span>\n'
             f'              <div class="min-w-0">\n'
             f'                <h3 id="{p}-heading" class="font-display text-lg font-bold leading-tight"><a href="{href(cat["slug"], g["id"])}" '
-            f'class="category-heading-link" itemprop="url"><span itemprop="name">{esc(g["name"])} calculators</span></a></h3>\n'
+            f'class="category-heading-link"><span>{esc(g["name"])} calculators</span></a></h3>\n'
             f'                <p id="{p}-count" class="text-sm opacity-80">{esc(S.count_line(slugs, len(g["subcategories"])))}</p>\n'
             f'              </div>\n            </div>\n'
             f'            <div id="{p}-body" class="main-category-body">\n'
@@ -372,11 +417,9 @@ def render_home(S):
             f'Browse {esc(g["name"].lower())} calculators</a>\n'
             f'            </div>\n          </section>')
     values.update({
-        "JSON_LD": json_ld({"@context": "https://schema.org", "@type": "WebSite", "name": site["site_name"],
-                            "url": url(site, ""), "potentialAction": {
-                                "@type": "SearchAction", "target": f'{site["base_url"]}/?q={{search_term_string}}',
-                                "query-input": "required name=search_term_string"}},
-                           faq_ld(home["faq"])),
+        "JSON_LD": json_ld_graph(S.schema.home(
+            home, [(g["name"] + " calculators", url(site, cat["slug"]) + "#" + g["id"]) for g in site["nav"]],
+            *S.schema.dates("src/content/pages/home.json")), url(site, ""), home.get("content_html", "")),
         "AD_IN_FEED": render_ad(page_id, "in_feed"),
         "SIDE_CATEGORIES": "\n".join(side),
         "DIRECTORY": "          " + "\n          ".join(cards),
@@ -415,11 +458,11 @@ def render_category(S):
             f'{len(S.live_in(s["tools"]))}</span></a></li>' for g in site["nav"] for s in g["subcategories"]]
     live = [t for t in S.tools if t["live"]]
     values.update({
-        "JSON_LD": json_ld(
-            {"@context": "https://schema.org", "@type": "CollectionPage", "name": cat["name"],
-             "url": url(site, cat["slug"]), "description": fill(cat["meta_description"], site),
-             "hasPart": [{"@type": "WebApplication", "name": t["name"], "url": url(site, t["slug"])} for t in live]},
-            breadcrumb_ld(site, trail), faq_ld(cat["faq"])),
+        "JSON_LD": json_ld_graph(S.schema.category(
+            dict(cat, meta_description=fill(cat["meta_description"], site)), url(site, cat["slug"]), trail,
+            [(s["name"] + " calculators", url(site, cat["slug"]) + "#" + s["slug"]) for g in site["nav"] for s in g["subcategories"]],
+            *S.schema.dates("src/config/categories.json")), url(site, cat["slug"]), cat.get("content_html", "")),
+        "AUTHOR_BOX": render_author_box(S, page_id, *S.schema.dates("src/config/categories.json")),
         "BREADCRUMB": render_breadcrumb(site, page_id, trail),
         "HERO_TILE": (f'<span id="{page_id}-hero-tile" class="category-element-tile hidden size-16 sm:flex bg-{cat["color"]} '
                       f'text-{cat["color"]}-ink" aria-hidden="true"><span class="category-element-count">{S.live_count}</span>'
@@ -465,22 +508,19 @@ def render_tool(S, tool):
     card = tool["card"]
     fields = card.get("fields_html") or ('<section class="panel p-4 sm:p-6"><p class="text-ink-muted">This calculator '
                                          'is planned and not built yet.</p></section>')
-    app = {"@context": "https://schema.org", "@type": "WebApplication", "name": tool["name"],
-           "url": url(site, tool["slug"]), "applicationCategory": "FinanceApplication", "operatingSystem": "Any",
-           "browserRequirements": "Requires JavaScript",
-           "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}
-    if tool["meta_description"]:
-        app["description"] = tool["meta_description"]
     content = tool["content_html"].strip()
     outbound = OUTBOUND_LINKS.get(tool["slug"])
     if outbound and "</p>" in content:  # end of the article's last paragraph
         cut = content.rindex("</p>")
         content = f"{content[:cut]} {outbound}{content[cut:]}"
+    tool_dates = S.schema.dates(f"src/content/tools/{tool['slug']}.json")
     extra = "\n".join(f'<script src="{esc(s)}" defer></script>' for s in card.get("extra_scripts", []))
     if MATH_RE.search(content):
         extra = (extra + "\n" + KATEX_ASSETS).strip()
     values.update({
-        "JSON_LD": json_ld(app, breadcrumb_ld(site, trail), faq_ld(tool["faq"])),
+        "JSON_LD": json_ld_graph(S.schema.tool(tool, url(site, tool["slug"]), trail, *tool_dates), url(site, tool["slug"]), tool["content_html"]),
+        "AUTHOR_BYLINE": render_author_byline(S, page_id, tool_dates[1]),
+        "AUTHOR_BOX": render_author_box(S, page_id, *tool_dates),
         "BREADCRUMB": render_breadcrumb(site, page_id, trail),
         "SUBCATEGORY_SLUG": sub["slug"],
         "TOOL_CARD": fields,
@@ -514,13 +554,16 @@ KATEX_ASSETS = (
 NO_AD_PAGES = {"contact", "privacy-policy", "terms", "sitemap"}
 
 
-def render_page(S, slug, meta_title, meta_description, h1, subtitle, content_html, preview=False):
+def render_page(S, slug, meta_title, meta_description, h1, subtitle, content_html, preview=False, page=None):
     trail = [("Home", "/"), (h1, href(slug))]
     values = S.base(slug, "page", slug, meta_title, meta_description, h1, subtitle, preview=preview)
     values.update({
-        "JSON_LD": json_ld(breadcrumb_ld(S.site, trail)),
+        "JSON_LD": json_ld_graph(
+            S.schema.info(page, url(S.site, slug), trail, *S.schema.dates(f"src/content/pages/{slug}.json")) if page
+            else S.schema.plain(url(S.site, slug), trail, fill(meta_title, S.site), fill(meta_description, S.site))),
         "BREADCRUMB": render_breadcrumb(S.site, slug, trail),
         "CONTENT_HTML": content_html,
+        "AUTHOR_BOX": render_author_box(S, slug, *S.schema.dates(f"src/content/pages/{slug}.json")) if slug == "about" else "",
     })
     if slug in NO_AD_PAGES:
         values.update({"AD_TOP": "", "AD_BOTTOM": "", "AD_RIGHT_RAIL_TOP": "", "AD_RIGHT_RAIL": ""})
@@ -647,7 +690,7 @@ def main():
         if page["live"]:
             write(page["slug"], render_page(S, page["slug"], page["meta_title"], page["meta_description"], page["h1"],
                                             page.get("subtitle", ""), page["content_html"] or
-                                            "<p>This page is being written.</p>", preview=page["preview"]))
+                                            "<p>This page is being written.</p>", preview=page["preview"], page=page))
             if not page["preview"]:
                 indexable.append(page["slug"])
     write("sitemap", render_page(S, "sitemap", f"Sitemap | {site['site_name']}",
