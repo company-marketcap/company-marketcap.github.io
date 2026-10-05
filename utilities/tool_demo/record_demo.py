@@ -51,6 +51,8 @@ MAX_VARY_ATTEMPTS = 3
 LEAD_IN_MS, FIELD_MOVE_MS, TYPE_DELAY_MS = 1200, 900, 110
 PRE_TYPE_MS, POST_FIELD_MS, PULSE_MS, TAIL_MS, CAPTION_PRE_MS = 350, 700, 2600, 1800, 400
 SECOND_PASS_FIELDS = 2    # numbers changed again after the first result, to show it respond
+# Tools whose result label can't be read from the page (the label sits in the same element as the number).
+RESULT_LABEL_OVERRIDES = {"currency-calculator": "Converted amount"}
 PLACEHOLDER_RESULTS = {"", "–", "—", "-", "--"}
 
 
@@ -246,7 +248,7 @@ def record(tool, base_url, video_dir, attempt):
                 result = find_result(page)
                 if result is None:
                     raise RuntimeError("no result element (.stat-value / .result-value / numeric leaf) on the page")
-            primary_label = page.evaluate(RESULT_LABEL_JS, result.element_handle())
+            primary_label = RESULT_LABEL_OVERRIDES.get(slug) or page.evaluate(RESULT_LABEL_JS, result.element_handle())
             ensure_in_view(page, result)
             text = result.inner_text()
             errors = page.evaluate(ERROR_JS, CALC_SECTION)
@@ -270,7 +272,8 @@ def record(tool, base_url, video_dir, attempt):
 
             if vary:  # second scenario: change the first numbers again and let the result respond
                 second = [(f, vary_number(dict(f, value=v), rng)) for f, v in plan if f["type"] == "number"][:SECOND_PASS_FIELDS]
-                second = [(f, v) for f, v in second if v is not None and page.locator(f"#{f['id']}").is_visible()]
+                second = [(f, v) for f, v in second if v is not None and page.locator(f"#{f['id']}").is_visible()
+                          and page.locator(f"#{f['id']}").is_editable()]  # a solve-for field turns read-only
                 if second:
                     set_caption(page, "Now try different numbers")
                     page.wait_for_timeout(900)
@@ -298,8 +301,9 @@ def record(tool, base_url, video_dir, attempt):
                         for f, _ in second:
                             old = next(v for ff, v in plan if ff["id"] == f["id"])
                             loc = page.locator(f"#{f['id']}")
-                            loc.fill(old)
-                            page.keyboard.press("Tab")
+                            if loc.is_editable():
+                                loc.fill(old, timeout=3000)
+                                page.keyboard.press("Tab")
                         page.wait_for_timeout(300)
                         text = result.inner_text()
                         set_caption(page, f"{primary_label}: {text}")
