@@ -89,6 +89,9 @@ Settings → Pages → Source = **GitHub Actions** (the old site served the `mai
 
 ## Supporting folders
 
+- `utilities/tool_demo/record_demo.py` — records a looping AVIF demo of each live calculator into
+  `src/static/assets/images/demos/` and writes `src/config/demos.json`; `generate.py` embeds the demo under each
+  calculator and adds it to the JSON-LD. See its README. Re-record only tools whose calculator or layout changed.
 - `utilities/competitor_research/` — offline mirrors of calculator.net, dinkytown.net and
   fncalculator.com (gitignored), the crawler, and `calculator_inventory.xlsx` (312 unique US
   calculators in 23 subcategories). Its own `CLAUDE.md` covers the rebuild plan and research rules.

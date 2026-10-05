@@ -10,12 +10,13 @@ checker) plus the page's own nodes, tied together by @id references:
     WebApplication, HowTo, Article, FAQPage all point back at the WebPage with isPartOf / mainEntityOfPage
 
 There is no Organization node: the site is run by an individual, so the Person is the publisher.
-Dates come from git history (first and last commit of the page's source file); see load_git_dates().
+Dates are full ISO 8601 timestamps with a time zone (Google's recommendation). They come from git history (first and last
+commit of the page's source file; see load_git_dates()), unless the page JSON sets "date_published" / "date_modified".
 """
 import re
 import struct
 import subprocess
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
 
 TAG_RE = re.compile(r"<[^>]+>")
@@ -35,9 +36,9 @@ def text(fragment):
 
 
 def load_git_dates(root):
-    """{repo-relative path: (first commit date, last commit date)} as YYYY-MM-DD, from one git log pass."""
+    """{repo-relative path: (first commit time, last commit time)} as ISO 8601 with offset, from one git log pass."""
     try:
-        out = subprocess.run(["git", "log", "--format=@%cs", "--name-only", "--", "src/content", "src/config"],
+        out = subprocess.run(["git", "log", "--format=@%cI", "--name-only", "--", "src/content", "src/config"],
                              cwd=root, capture_output=True, text=True, check=True).stdout
     except (OSError, subprocess.CalledProcessError):
         return {}
@@ -52,7 +53,7 @@ def load_git_dates(root):
 
 
 def long_date(iso):
-    d = date.fromisoformat(iso)
+    d = date.fromisoformat(iso[:10])
     return f"{d:%B} {d.day}, {d.year}"
 
 
@@ -63,11 +64,19 @@ class Schema:
         self.website_id = f"{self.base}/#website"
         self.person_id = f"{self.base}/{author['slug']}.html#person"
 
-    def dates(self, source_path):
-        """(published, modified) for a source file, falling back to today for uncommitted files."""
-        today = date.today().isoformat()
+    def stamp(self, value):
+        """A date-only override becomes a full timestamp in the site's time zone."""
+        return f"{value}T00:00:00{self.site['timezone_offset']}" if len(value) == 10 else value
+
+    def dates(self, source_path, content=None):
+        """(published, modified) timestamps for a source file. The page JSON can set date_published / date_modified;
+        otherwise git history, falling back to now for files that aren't committed yet."""
+        now = datetime.now().astimezone().isoformat(timespec="seconds")
         first, last = self.git_dates.get(source_path, (None, None))
-        return first or today, last or today
+        content = content or {}
+        published = self.stamp(content["date_published"]) if content.get("date_published") else first or now
+        modified = self.stamp(content["date_modified"]) if content.get("date_modified") else last or now
+        return published, max(published, modified)
 
     # --- sitewide nodes ---
     def website(self):
@@ -100,12 +109,13 @@ class Schema:
                                   for e in a["education"]]}
 
     # --- page nodes ---
-    def webpage(self, url, name, description, published, modified, kind="WebPage", extra=None, credit=True):
+    def webpage(self, url, name, description, published=None, modified=None, kind="WebPage", extra=None, credit=True):
         node = {"@type": kind, "@id": url + "#webpage", "url": url, "name": name, "headline": name,
                 "description": description, "inLanguage": "en-US", "isPartOf": {"@id": self.website_id},
-                "publisher": {"@id": self.person_id}, "datePublished": published, "dateModified": modified,
-                "breadcrumb": {"@id": url + "#breadcrumb"},
+                "publisher": {"@id": self.person_id}, "breadcrumb": {"@id": url + "#breadcrumb"},
                 "potentialAction": {"@type": "ReadAction", "target": [url]}}
+        if published:  # pages with no visible date (home, 404, sitemap) carry none in the markup either
+            node["datePublished"], node["dateModified"] = published, modified
         if credit:
             node["author"] = {"@id": self.person_id}
             node["reviewedBy"] = {"@id": self.person_id}
@@ -145,6 +155,20 @@ class Schema:
             pass
         return None
 
+    def demo_image(self, tool, url, demo):
+        """The tool's animated AVIF demo as an ImageObject (WebApplication.screenshot points at it)."""
+        full = f"{self.base}/assets/images/demos/{tool['slug']}-demo.avif"
+        year = date.today().year
+        secs = round(demo["duration_s"])
+        return {"@type": "ImageObject", "@id": url + "#demo", "url": full, "contentUrl": full, "name": f"{tool['name']} demo",
+                "caption": demo["alt"], "description": demo["alt"], "width": demo["width"], "height": demo["height"],
+                "encodingFormat": "image/avif", "contentSize": f"{round(demo['bytes'] / 1024)} KB", "duration": f"PT{secs}S",
+                "uploadDate": self.stamp(demo["generated"]), "inLanguage": "en-US", "representativeOfPage": True,
+                "isPartOf": {"@id": url + "#webpage"}, "creator": {"@id": self.person_id},
+                "copyrightHolder": {"@id": self.person_id}, "copyrightYear": year, "creditText": self.site["site_name"],
+                "copyrightNotice": f"© {year} {self.site['site_name']}", "license": f"{self.base}/terms.html",
+                "acquireLicensePage": f"{self.base}/terms.html"}
+
     def add_images(self, graph, url, content_html):
         """ImageObject nodes for the page's article images, linked from the WebPage and Article nodes."""
         found, seen = [], set()
@@ -158,6 +182,7 @@ class Schema:
         if not found:
             return graph
         year = date.today().year
+        has_demo = any(n.get("@id") == url + "#demo" for n in graph)
         nodes = []
         for i, (src, alt, (w, h)) in enumerate(found, 1):
             full = self.base + src
@@ -168,22 +193,23 @@ class Schema:
                     "copyrightHolder": {"@id": self.person_id}, "copyrightYear": year,
                     "creditText": self.site["site_name"], "copyrightNotice": f"© {year} {self.site['site_name']}",
                     "license": f"{self.base}/terms.html", "acquireLicensePage": f"{self.base}/terms.html"}
-            if i == 1:
+            if i == 1 and not has_demo:
                 node["representativeOfPage"] = True
             nodes.append(node)
         refs = [{"@id": n["@id"]} for n in nodes]
         for node in graph:
             if node.get("@id") == url + "#webpage":
-                node["primaryImageOfPage"] = refs[0]
-                node["image"] = refs
+                if not has_demo:
+                    node["primaryImageOfPage"] = refs[0]
+                node["image"] = node.get("image", []) + refs
             elif node.get("@id") == url + "#article":
                 node["image"] = refs
         return graph + nodes
 
     # --- page types ---
-    def home(self, home, items, published, modified):
+    def home(self, home, items):
         url = self.base + "/"
-        page = self.webpage(url, home["meta_title"], home["meta_description"], published, modified,
+        page = self.webpage(url, home["meta_title"], home["meta_description"],
                             extra={"mainEntity": {"@id": url + "#topics"}, "about": {"@id": self.website_id}})
         calc = {"@type": "WebApplication", "@id": url + "#scientific-calculator", "name": "Scientific calculator",
                 "url": url + "#home-scientific-calculator-section", "applicationCategory": "UtilitiesApplication",
@@ -199,10 +225,12 @@ class Schema:
         return [self.website(), self.person(), page, self.breadcrumb(url, trail),
                 self.item_list(url, "subcategories", f"{cat['name']} by topic", items), *self.faq(url, cat["faq"])]
 
-    def tool(self, tool, url, trail, published, modified):
+    def tool(self, tool, url, trail, published, modified, demo=None):
         name, desc = tool["name"], tool["meta_description"]
-        page = self.webpage(url, tool["meta_title"], desc, published, modified,
-                            extra={"mainEntity": {"@id": url + "#webapplication"}, "about": {"@id": url + "#webapplication"}})
+        extra = {"mainEntity": {"@id": url + "#webapplication"}, "about": {"@id": url + "#webapplication"}}
+        if demo:
+            extra.update({"primaryImageOfPage": {"@id": url + "#demo"}, "image": [{"@id": url + "#demo"}]})
+        page = self.webpage(url, tool["meta_title"], desc, published, modified, extra=extra)
         app = {"@type": "WebApplication", "@id": url + "#webapplication", "name": name, "url": url,
                "description": desc, "applicationCategory": "FinanceApplication", "operatingSystem": "Any",
                "browserRequirements": "Requires JavaScript and a modern web browser", "isAccessibleForFree": True,
@@ -210,6 +238,9 @@ class Schema:
                "isPartOf": {"@id": url + "#webpage"}, "author": {"@id": self.person_id},
                "creator": {"@id": self.person_id}, "publisher": {"@id": self.person_id}}
         graph = [self.website(), self.person(), page, self.breadcrumb(url, trail), app]
+        if demo:
+            app["screenshot"] = {"@id": url + "#demo"}
+            graph.append(self.demo_image(tool, url, demo))
         labels = [text(l) for l in LABEL_RE.findall(tool["card"].get("fields_html", ""))]
         labels = [l for l in dict.fromkeys(labels) if l]
         if labels:
@@ -246,6 +277,5 @@ class Schema:
         return [self.website(), person, node, self.breadcrumb(url, trail)]
 
     def plain(self, url, trail, name, description):
-        today = date.today().isoformat()
-        return [self.website(), self.person(), self.webpage(url, name, description, today, today, credit=False),
+        return [self.website(), self.person(), self.webpage(url, name, description, credit=False),
                 self.breadcrumb(url, trail)]

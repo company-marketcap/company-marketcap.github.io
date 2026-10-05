@@ -40,6 +40,8 @@ COMMON_TOKENS = {"PAGE_ID", "PAGE_TYPE", "SITE_NAME", "META_TITLE", "META_DESCRI
                  "FOOTER_DESCRIPTION", "YEAR", "AD_TOP", "AD_BOTTOM", "AD_RIGHT_RAIL_TOP", "AD_RIGHT_RAIL", "H1", "SUBTITLE",
                  "SIDEBAR_DESKTOP_CLASSES", "HEADER_NAV_CLASSES"}
 AUTHOR_CONFIG = SRC / "config" / "author.json"
+DEMOS_CONFIG = SRC / "config" / "demos.json"   # written by utilities/tool_demo/record_demo.py
+DEMO_DIR = "/assets/images/demos"
 TEMPLATE_TOKENS = {
     "home.html": COMMON_TOKENS | {"AD_IN_FEED", "SIDE_CATEGORIES", "DIRECTORY", "DIRECTORY_COUNT",
                                   "DIRECTORY_HEADING", "DIRECTORY_INTRO", "CONTENT_SECTIONS", "FAQ"},
@@ -47,7 +49,7 @@ TEMPLATE_TOKENS = {
                                       "CONTENT_SECTIONS", "FAQ", "AUTHOR_BOX"},
     "tool.html": COMMON_TOKENS | {"BREADCRUMB", "SUBCATEGORY_SLUG", "TOOL_CARD", "DISCLAIMER", "AD_IN_FEED",
                                   "CONTENT_SECTIONS", "FAQ", "RELATED_TOOLS", "TOOL_EXTRA_SCRIPTS", "TOOL_SCRIPT",
-                                  "AUTHOR_BYLINE", "AUTHOR_BOX"},
+                                  "AUTHOR_BYLINE", "AUTHOR_BOX", "TOOL_DEMO"},
     "page.html": COMMON_TOKENS | {"BREADCRUMB", "CONTENT_HTML", "AUTHOR_BOX"},
     "404.html": COMMON_TOKENS | {"POPULAR_TOOLS", "CATEGORY_URL", "SITEMAP_URL"},
 }
@@ -249,13 +251,21 @@ def render_faq(page_id, heading, faq):
             + "\n          ".join(items) + "\n        </div>\n      </section>")
 
 
-def render_author_byline(S, page_id, modified):
-    """One-line byline under the hero: content author, fact checker and last update."""
+def render_author_byline(S, page_id, published, modified):
+    """One-line byline under the hero: content author, fact checker and the visible dates (match the schema)."""
     a = S.author
+    link = f'<a class="font-semibold text-ink underline-offset-2 hover:underline" href="{href(a["slug"])}"'
     return (f'<p id="{page_id}-byline" class="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-ink-muted" data-section="byline">'
-            f'<span>{esc(a["content_role"])}: <a class="font-semibold text-ink underline-offset-2 hover:underline" href="{href(a["slug"])}" rel="author">{esc(a["name"])}</a></span>'
-            f'<span>{esc(a["review_role"])}: <a class="font-semibold text-ink underline-offset-2 hover:underline" href="{href(a["slug"])}">{esc(a["name"])}</a></span>'
+            f'<span>{esc(a["content_role"])}: {link} rel="author">{esc(a["name"])}</a></span>'
+            f'<span>{esc(a["review_role"])}: {link}>{esc(a["name"])}</a></span>'
+            f'<span>Published <time datetime="{published}">{schema.long_date(published)}</time></span>'
             f'<span>Updated <time datetime="{modified}">{schema.long_date(modified)}</time></span></p>')
+
+
+def render_updated_line(page_id, modified):
+    """A visible 'Last updated' line for pages that carry a dateModified in their markup but no author box."""
+    return (f'<p id="{page_id}-last-updated" class="text-sm text-ink-muted" data-section="last-updated">'
+            f'Last updated <time datetime="{modified}">{schema.long_date(modified)}</time></p>')
 
 
 def render_author_box(S, page_id, published, modified):
@@ -281,6 +291,20 @@ def render_author_box(S, page_id, published, modified):
             f'          </div>\n        </div>\n      </aside>')
 
 
+def render_demo(S, tool):
+    """The tool's animated demo (AVIF from utilities/tool_demo), as the first card under the calculator."""
+    demo = S.demos.get(tool["slug"])
+    if not demo:
+        return ""
+    page_id = tool["slug"]
+    return (f'<figure id="{page_id}-demo" class="panel p-4 sm:p-6" data-section="demo">\n'
+            f'        <img id="{page_id}-demo-image" class="h-auto w-full rounded-lg border border-line" '
+            f'src="{DEMO_DIR}/{page_id}-demo.avif" alt="{esc(demo["alt"])}" width="{demo["width"]}" height="{demo["height"]}" '
+            f'loading="lazy" decoding="async">\n'
+            f'        <figcaption id="{page_id}-demo-caption" class="mt-3 text-sm text-ink-muted">A short demo of the '
+            f'{esc(tool["name"].lower())}: entering example numbers and reading the result.</figcaption>\n      </figure>')
+
+
 class Site:
     """Shared, per-build view of the data that every page renderer needs."""
 
@@ -291,6 +315,7 @@ class Site:
         self.subcats = {s["slug"]: dict(s, group=g) for g in site["nav"] for s in g["subcategories"]}
         self.live_count = sum(1 for t in tools if t["live"])
         self.author = json.loads(AUTHOR_CONFIG.read_text(encoding="utf-8"))
+        self.demos = json.loads(DEMOS_CONFIG.read_text(encoding="utf-8")) if DEMOS_CONFIG.exists() else {}
         self.schema = schema.Schema(site, self.author, schema.load_git_dates(ROOT))
         S_SCHEMA[0] = self.schema
 
@@ -418,8 +443,8 @@ def render_home(S):
             f'            </div>\n          </section>')
     values.update({
         "JSON_LD": json_ld_graph(S.schema.home(
-            home, [(g["name"] + " calculators", url(site, cat["slug"]) + "#" + g["id"]) for g in site["nav"]],
-            *S.schema.dates("src/content/pages/home.json")), url(site, ""), home.get("content_html", "")),
+            home, [(g["name"] + " calculators", url(site, cat["slug"]) + "#" + g["id"]) for g in site["nav"]]),
+            url(site, ""), home.get("content_html", "")),
         "AD_IN_FEED": render_ad(page_id, "in_feed"),
         "SIDE_CATEGORIES": "\n".join(side),
         "DIRECTORY": "          " + "\n          ".join(cards),
@@ -461,8 +486,8 @@ def render_category(S):
         "JSON_LD": json_ld_graph(S.schema.category(
             dict(cat, meta_description=fill(cat["meta_description"], site)), url(site, cat["slug"]), trail,
             [(s["name"] + " calculators", url(site, cat["slug"]) + "#" + s["slug"]) for g in site["nav"] for s in g["subcategories"]],
-            *S.schema.dates("src/config/categories.json")), url(site, cat["slug"]), cat.get("content_html", "")),
-        "AUTHOR_BOX": render_author_box(S, page_id, *S.schema.dates("src/config/categories.json")),
+            *S.schema.dates("src/config/categories.json", cat)), url(site, cat["slug"]), cat.get("content_html", "")),
+        "AUTHOR_BOX": render_author_box(S, page_id, *S.schema.dates("src/config/categories.json", cat)),
         "BREADCRUMB": render_breadcrumb(site, page_id, trail),
         "HERO_TILE": (f'<span id="{page_id}-hero-tile" class="category-element-tile hidden size-16 sm:flex bg-{cat["color"]} '
                       f'text-{cat["color"]}-ink" aria-hidden="true"><span class="category-element-count">{S.live_count}</span>'
@@ -513,13 +538,14 @@ def render_tool(S, tool):
     if outbound and "</p>" in content:  # end of the article's last paragraph
         cut = content.rindex("</p>")
         content = f"{content[:cut]} {outbound}{content[cut:]}"
-    tool_dates = S.schema.dates(f"src/content/tools/{tool['slug']}.json")
+    tool_dates = S.schema.dates(f"src/content/tools/{tool['slug']}.json", tool)
     extra = "\n".join(f'<script src="{esc(s)}" defer></script>' for s in card.get("extra_scripts", []))
     if MATH_RE.search(content):
         extra = (extra + "\n" + KATEX_ASSETS).strip()
     values.update({
-        "JSON_LD": json_ld_graph(S.schema.tool(tool, url(site, tool["slug"]), trail, *tool_dates), url(site, tool["slug"]), tool["content_html"]),
-        "AUTHOR_BYLINE": render_author_byline(S, page_id, tool_dates[1]),
+        "JSON_LD": json_ld_graph(S.schema.tool(tool, url(site, tool["slug"]), trail, *tool_dates, demo=S.demos.get(tool["slug"])), url(site, tool["slug"]), tool["content_html"]),
+        "TOOL_DEMO": render_demo(S, tool),
+        "AUTHOR_BYLINE": render_author_byline(S, page_id, *tool_dates),
         "AUTHOR_BOX": render_author_box(S, page_id, *tool_dates),
         "BREADCRUMB": render_breadcrumb(site, page_id, trail),
         "SUBCATEGORY_SLUG": sub["slug"],
@@ -559,11 +585,13 @@ def render_page(S, slug, meta_title, meta_description, h1, subtitle, content_htm
     values = S.base(slug, "page", slug, meta_title, meta_description, h1, subtitle, preview=preview)
     values.update({
         "JSON_LD": json_ld_graph(
-            S.schema.info(page, url(S.site, slug), trail, *S.schema.dates(f"src/content/pages/{slug}.json")) if page
+            S.schema.info(page, url(S.site, slug), trail, *S.schema.dates(f"src/content/pages/{slug}.json", page)) if page
             else S.schema.plain(url(S.site, slug), trail, fill(meta_title, S.site), fill(meta_description, S.site))),
         "BREADCRUMB": render_breadcrumb(S.site, slug, trail),
         "CONTENT_HTML": content_html,
-        "AUTHOR_BOX": render_author_box(S, slug, *S.schema.dates(f"src/content/pages/{slug}.json")) if slug == "about" else "",
+        "AUTHOR_BOX": (render_author_box(S, slug, *S.schema.dates(f"src/content/pages/{slug}.json", page)) if slug == "about"
+                       else render_updated_line(slug, S.schema.dates(f"src/content/pages/{slug}.json", page)[1])
+                       if page and slug != "sitemap" else ""),
     })
     if slug in NO_AD_PAGES:
         values.update({"AD_TOP": "", "AD_BOTTOM": "", "AD_RIGHT_RAIL_TOP": "", "AD_RIGHT_RAIL": ""})
