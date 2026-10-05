@@ -118,6 +118,7 @@ DISCOVER_JS = """
   };
   return [...root.querySelectorAll('input, select')].filter((el) => el.id && visible(el)).map((el) => ({
     id: el.id, tag: el.tagName.toLowerCase(), type: el.type, label: labelOf(el), value: el.value,
+    checked: el.checked, name: el.name,
     min: el.min, max: el.max, step: el.step, readonly: el.readOnly || el.disabled,
     options: el.tagName === 'SELECT' ? [...el.options].map((o) => ({value: o.value, text: o.textContent.trim()})) : [],
   }));

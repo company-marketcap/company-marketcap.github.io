@@ -43,11 +43,14 @@ MANIFEST = ROOT / "src/config/demos.json"
 WORK = HERE / "_work"
 RESULTS = WORK / "results"
 
-MAX_FIELDS = 6            # fields shown per demo; a longer form would make the clip drag
+MAX_FIELDS = 8            # controls touched per demo (numbers, selects, dates and switches)
+MAX_SWITCHES = 2          # checkboxes / radio buttons flipped per demo
+MAX_BYTES = 900_000       # re-encode at lower quality above this (the whole set has a repo-size budget)
 VARY_MIN, VARY_MAX = 0.20, 0.40
 MAX_VARY_ATTEMPTS = 3
-LEAD_IN_MS, FIELD_MOVE_MS, TYPE_DELAY_MS = 900, 650, 70
-PRE_TYPE_MS, POST_FIELD_MS, PULSE_MS, TAIL_MS = 250, 450, 2200, 1500
+LEAD_IN_MS, FIELD_MOVE_MS, TYPE_DELAY_MS = 1200, 900, 110
+PRE_TYPE_MS, POST_FIELD_MS, PULSE_MS, TAIL_MS, CAPTION_PRE_MS = 350, 700, 2600, 1800, 400
+SECOND_PASS_FIELDS = 2    # numbers changed again after the first result, to show it respond
 PLACEHOLDER_RESULTS = {"", "–", "—", "-", "--"}
 
 
@@ -116,9 +119,18 @@ def vary_select(f, rng):
 def plan_fields(fields, rng, vary):
     """[(field, new_value)] for the controls the demo touches: numbers and selects only (dates, text, radios and
     checkboxes keep the page's own values)."""
-    plan, previous_date, dates = [], None, []
+    plan, previous_date, dates, switches, seen_radio = [], None, [], 0, set()
     for f in fields:
         if f["readonly"]:
+            continue
+        if f["type"] in ("checkbox", "radio"):
+            # Flip a checkbox, or pick another radio option (one per group). Only on varied runs: a switch can hide
+            # fields or make a combination invalid, so the final default-values attempt leaves them alone.
+            if vary and switches < MAX_SWITCHES and not (f["type"] == "radio" and (f["checked"] or f["name"] in seen_radio)):
+                plan.append((f, "switch"))
+                switches += 1
+                if f["type"] == "radio":
+                    seen_radio.add(f["name"])
             continue
         if f["tag"] == "select":
             value = vary_select(f, rng) if vary else None
@@ -201,12 +213,15 @@ def record(tool, base_url, video_dir, attempt):
                     continue
                 ensure_in_view(page, loc)
                 label = f["label"] or f["id"]
-                set_caption(page, f"{'Choose' if f['tag'] == 'select' else 'Set'} {label}")
-                page.wait_for_timeout(250)
+                verb = "Choose" if f["tag"] == "select" or f["type"] == "radio" else "Switch" if f["type"] == "checkbox" else "Set"
+                set_caption(page, f"{verb} {label}")
+                page.wait_for_timeout(CAPTION_PRE_MS)
                 target = center_of(loc)
                 cursor = animate_move(page, cursor, target, FIELD_MOVE_MS)
                 page.wait_for_timeout(PRE_TYPE_MS)
-                if f["tag"] == "select":
+                if f["type"] in ("checkbox", "radio"):
+                    page.mouse.click(*target)
+                elif f["tag"] == "select":
                     loc.select_option(value)
                 elif f["type"] in ("date", "month"):
                     page.mouse.click(*target)
@@ -237,12 +252,49 @@ def record(tool, base_url, video_dir, attempt):
             if not result_ok(text, errors):
                 raise RuntimeError(f"result {text!r}, errors {errors} even with defaults")
 
-            cursor = animate_move(page, cursor, center_of(result), 600)
+            cursor = animate_move(page, cursor, center_of(result), 700)
             card = result.locator("xpath=ancestor::*[contains(@class,'stat-card') or contains(@class,'result-row')][1]")
             pulse(card if card.count() else result)
             page.wait_for_timeout(PULSE_MS)
             set_caption(page, f"{primary_label}: {text}")
             page.wait_for_timeout(TAIL_MS)
+
+            if vary:  # second scenario: change the first numbers again and let the result respond
+                second = [(f, vary_number(dict(f, value=v), rng)) for f, v in plan if f["type"] == "number"][:SECOND_PASS_FIELDS]
+                second = [(f, v) for f, v in second if v is not None and page.locator(f"#{f['id']}").is_visible()]
+                if second:
+                    set_caption(page, "Now try different numbers")
+                    page.wait_for_timeout(900)
+                    for f, v in second:
+                        loc = page.locator(f"#{f['id']}")
+                        ensure_in_view(page, loc)
+                        set_caption(page, f"Set {f['label'] or f['id']}")
+                        page.wait_for_timeout(CAPTION_PRE_MS)
+                        target = center_of(loc)
+                        cursor = animate_move(page, cursor, target, FIELD_MOVE_MS)
+                        page.mouse.click(*target, click_count=3)
+                        page.keyboard.type(v, delay=TYPE_DELAY_MS)
+                        page.keyboard.press("Tab")
+                        page.wait_for_timeout(POST_FIELD_MS)
+                    text2 = result.inner_text()
+                    if result_ok(text2, page.evaluate(ERROR_JS, CALC_SECTION)) and text2 != text:
+                        ensure_in_view(page, result)
+                        cursor = animate_move(page, cursor, center_of(result), 700)
+                        pulse(card if card.count() else result)
+                        page.wait_for_timeout(PULSE_MS)
+                        text = text2
+                        set_caption(page, f"{primary_label}: {text}")
+                        page.wait_for_timeout(TAIL_MS)
+                    else:  # the second scenario broke validation: put the first numbers back and end on the first result
+                        for f, _ in second:
+                            old = next(v for ff, v in plan if ff["id"] == f["id"])
+                            loc = page.locator(f"#{f['id']}")
+                            loc.fill(old)
+                            page.keyboard.press("Tab")
+                        page.wait_for_timeout(300)
+                        text = result.inner_text()
+                        set_caption(page, f"{primary_label}: {text}")
+                        page.wait_for_timeout(TAIL_MS)
             t_end = time.perf_counter() - t0
         finally:
             context.close()  # flushes the .webm
@@ -307,7 +359,12 @@ def make_one(slug, base_url, keep_temp):
         alt = (f"Animated walkthrough of the {tool['name']}: {info['keypad'][0].lower() + info['keypad'][1:]} "
                f"and reading the answer." if info.get("keypad")
                else tm.build_alt_text(tool["name"], info["labels"], info["primary_label"].lower()))
-        tm.encode_tagged_avif(tool, alt, frames, out, VIEWPORT["width"], VIEWPORT["height"], n)
+        q = tm.QCOLOR
+        tm.encode_tagged_avif(tool, alt, frames, out, VIEWPORT["width"], VIEWPORT["height"], n, qcolor=q)
+        while out.stat().st_size > MAX_BYTES and q > 29:  # keep the whole set inside its repo-size budget
+            q -= 8
+            print(f"  {out.stat().st_size / 1024:.0f} KB is over budget; re-encoding at q={q}", flush=True)
+            tm.encode_tagged_avif(tool, alt, frames, out, VIEWPORT["width"], VIEWPORT["height"], n, qcolor=q)
         entry = {"alt": alt, "width": VIEWPORT["width"], "height": VIEWPORT["height"],
                  "duration_s": round(n / tm.FPS, 2), "bytes": out.stat().st_size, "generated": date.today().isoformat()}
         RESULTS.mkdir(parents=True, exist_ok=True)
