@@ -233,10 +233,7 @@
           </div>
         </aside>
 
-      <figure id="black-scholes-option-calculator-demo" class="panel p-4 sm:p-6" data-section="demo">
-        <img id="black-scholes-option-calculator-demo-image" class="h-auto w-full rounded-lg border border-line" src="/assets/images/demos/black-scholes-option-calculator-demo.avif" alt="Animated walkthrough of the Black-Scholes Option Calculator: entering Stock price, Strike price, Days to expiration, Volatility, Risk-free rate, then reading the call price." width="1280" height="800" loading="lazy" decoding="async">
-        <figcaption id="black-scholes-option-calculator-demo-caption" class="mt-3 text-sm text-ink-muted">See how the Black-Scholes Option Calculator works: change the inputs and the call price updates instantly. Enter your own numbers in the calculator above.</figcaption>
-      </figure>
+      
 
       <div id="black-scholes-option-calculator-guide" class="space-y-6" data-section="guide">
         <section id="black-scholes-option-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="black-scholes-option-calculator-guide-heading-1">
@@ -302,6 +299,11 @@
 <h2 id="black-scholes-option-calculator-guide-heading-4">Reading the Output: Intrinsic Value, Time Value and Fair Value</h2>
 <p>The <strong>theoretical value</strong> of an option splits into two pieces. <strong>Intrinsic value</strong> is what exercising would pay today: for the put in the example, $65.00 minus $62.40 gives $2.60. <strong>Time value</strong> is the rest, the price of the chance that the stock moves further before expiry. The call is out of the money, so its whole $4.73 is time value, and the Black Scholes model's output of $6.31 for the put reflects the same split. This split tells you how much of a quote you are paying for protection against what has already happened versus what might still happen.</p>
 <figure><img src="/assets/images/tools/black-scholes-option-calculator/black-scholes-put-option-value-intrinsic-time-value-waterfall.svg" alt="Waterfall chart building a $6.31 put option theoretical value from $2.60 intrinsic value and $3.71 time value"><figcaption>The put's $6.31 theoretical value split into intrinsic value and time value.</figcaption></figure>
+<figure id="black-scholes-option-calculator-demo" class="my-6" data-section="demo">
+        <img id="black-scholes-option-calculator-demo-image" class="h-auto w-full rounded-lg border border-line" src="/assets/images/demos/black-scholes-option-calculator-demo.avif" alt="Animated walkthrough of the Black-Scholes Option Calculator: entering Stock price, Strike price, Days to expiration, Volatility, Risk-free rate, then reading the call price." width="1280" height="800" loading="lazy" decoding="async">
+        <figcaption id="black-scholes-option-calculator-demo-caption" class="mt-3 text-sm text-ink-muted">See how the Black-Scholes Option Calculator works: change the inputs and the call price updates instantly. Enter your own numbers in the calculator above.</figcaption>
+      </figure>
+
 <p>Compare the figure to the fair market price you see on screen. A listed premium well under the <strong>fair value</strong> may be a bargain; one well above it implies traders expect more volatility than you entered. Reading that gap in terms of implied volatility is often more useful than comparing prices alone.</p>
         </section>
         <section id="black-scholes-option-calculator-guide-section-5" class="panel article-content p-4 sm:p-6" aria-labelledby="black-scholes-option-calculator-guide-heading-5">

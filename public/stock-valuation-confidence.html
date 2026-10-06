@@ -245,10 +245,7 @@
           </div>
         </aside>
 
-      <figure id="stock-valuation-confidence-demo" class="panel p-4 sm:p-6" data-section="demo">
-        <img id="stock-valuation-confidence-demo-image" class="h-auto w-full rounded-lg border border-line" src="/assets/images/demos/stock-valuation-confidence-demo.avif" alt="Animated walkthrough of the Stock Valuation Confidence Interval Calculator: entering Current share price, Your fair value estimate, Time horizon, Confidence level, Annual volatility, Valuation error, then reading the low end." width="1280" height="800" loading="lazy" decoding="async">
-        <figcaption id="stock-valuation-confidence-demo-caption" class="mt-3 text-sm text-ink-muted">See how the Stock Valuation Confidence Interval Calculator works: change the inputs and the low end updates instantly. Enter your own numbers in the calculator above.</figcaption>
-      </figure>
+      
 
       <div id="stock-valuation-confidence-guide" class="space-y-6" data-section="guide">
         <section id="stock-valuation-confidence-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="stock-valuation-confidence-guide-heading-1">
@@ -361,6 +358,11 @@ $$P(\text{loss}) = \Phi\left(\frac{\ln(P_0) - \ln(B)}{\sigma_H}\right)$$
         <section id="stock-valuation-confidence-guide-section-8" class="panel article-content p-4 sm:p-6" aria-labelledby="stock-valuation-confidence-guide-heading-8">
 <h2 id="stock-valuation-confidence-guide-heading-8">How to Calculate a Confidence Interval for a Population Mean, and How the Price Tool Differs</h2>
 <p>In finance and statistics alike, the classical case is the template, and the price tool borrows its structure from it, with horizon volatility and your estimation error playing the part of the standard error, so that case is worth seeing on its own. Suppose you want the average one-year return across large-cap stocks, a population you can never fully observe. You draw a random sample of 64 names and find a <strong>sample mean</strong> of 9.4% with a sample standard deviation of 17.2%. This is sampling in its simplest form: you measure a few and infer the many.</p>
+<figure id="stock-valuation-confidence-demo" class="my-6" data-section="demo">
+        <img id="stock-valuation-confidence-demo-image" class="h-auto w-full rounded-lg border border-line" src="/assets/images/demos/stock-valuation-confidence-demo.avif" alt="Animated walkthrough of the Stock Valuation Confidence Interval Calculator: entering Current share price, Your fair value estimate, Time horizon, Confidence level, Annual volatility, Valuation error, then reading the low end." width="1280" height="800" loading="lazy" decoding="async">
+        <figcaption id="stock-valuation-confidence-demo-caption" class="mt-3 text-sm text-ink-muted">See how the Stock Valuation Confidence Interval Calculator works: change the inputs and the low end updates instantly. Enter your own numbers in the calculator above.</figcaption>
+      </figure>
+
 <p>To calculate a confidence interval here, divide the deviation by the square root of the sample size to get a standard error of \(17.2 / \sqrt{64} = 2.15\%\). With 64 observations you can use the <strong>critical z-value</strong> of 1.96, so the margin of error is \(1.96 \times 2.15 = 4.21\%\). The 95% confidence interval for the <strong>population mean</strong> runs from 5.19% to 13.61%, and the mean of 9.4% sits in the middle of that band.</p>
 <p>More data is the classical way to tighten the band: quadruple the <strong>sample size</strong> to 256 and the standard error halves to 1.08%, so the interval shrinks to 7.29%-11.51%. The price tool has no sample-size input; its band narrows only when you shorten the time horizon or lower your estimation error.</p>
 

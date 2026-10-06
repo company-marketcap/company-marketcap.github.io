@@ -240,10 +240,7 @@
           </div>
         </aside>
 
-      <figure id="retirement-savings-analysis-demo" class="panel p-4 sm:p-6" data-section="demo">
-        <img id="retirement-savings-analysis-demo-image" class="h-auto w-full rounded-lg border border-line" src="/assets/images/demos/retirement-savings-analysis-demo.avif" alt="Animated walkthrough of the Retirement Savings Analysis: entering What do you want to find?, Saved so far, Years until retirement, Annual return, then reading the balance at retirement." width="1280" height="800" loading="lazy" decoding="async">
-        <figcaption id="retirement-savings-analysis-demo-caption" class="mt-3 text-sm text-ink-muted">See how the Retirement Savings Analysis works: change the inputs and the balance at retirement updates instantly. Enter your own numbers in the calculator above.</figcaption>
-      </figure>
+      
 
       <div id="retirement-savings-analysis-guide" class="space-y-6" data-section="guide">
         <section id="retirement-savings-analysis-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="retirement-savings-analysis-guide-heading-1">
@@ -252,6 +249,11 @@
 
 <h3>The future value formula</h3>
 <p>With monthly compounding, the balance at retirement is the growth of your starting balance plus the growth of every deposit:</p>
+<figure id="retirement-savings-analysis-demo" class="my-6" data-section="demo">
+        <img id="retirement-savings-analysis-demo-image" class="h-auto w-full rounded-lg border border-line" src="/assets/images/demos/retirement-savings-analysis-demo.avif" alt="Animated walkthrough of the Retirement Savings Analysis: entering What do you want to find?, Saved so far, Years until retirement, Annual return, then reading the balance at retirement." width="1280" height="800" loading="lazy" decoding="async">
+        <figcaption id="retirement-savings-analysis-demo-caption" class="mt-3 text-sm text-ink-muted">See how the Retirement Savings Analysis works: change the inputs and the balance at retirement updates instantly. Enter your own numbers in the calculator above.</figcaption>
+      </figure>
+
 $$FV = PV \times (1 + r)^{n} + PMT \times \frac{(1 + r)^{n} - 1}{r}$$
 <p>Here <strong>PV</strong> is what you have saved today, <strong>PMT</strong> is your monthly deposit, <strong>r</strong> is the annual return divided by 12, and <strong>n</strong> is the number of months until you retire (years times 12). Solving the same equation for a different unknown gives the other three answers the tool offers.</p>
 

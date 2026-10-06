@@ -221,10 +221,7 @@
           </div>
         </aside>
 
-      <figure id="future-contracts-calculator-demo" class="panel p-4 sm:p-6" data-section="demo">
-        <img id="future-contracts-calculator-demo-image" class="h-auto w-full rounded-lg border border-line" src="/assets/images/demos/future-contracts-calculator-demo.avif" alt="Animated walkthrough of the Futures Contracts Margin Calculator: entering Position, Contracts, Trade price, Contract multiplier, Initial margin per contract, Maintenance margin per contract, When a margin call comes, then reading the total gain or loss." width="1280" height="800" loading="lazy" decoding="async">
-        <figcaption id="future-contracts-calculator-demo-caption" class="mt-3 text-sm text-ink-muted">See how the Futures Contracts Margin Calculator works: change the inputs and the total gain or loss updates instantly. Enter your own numbers in the calculator above.</figcaption>
-      </figure>
+      
 
       <div id="future-contracts-calculator-guide" class="space-y-6" data-section="guide">
         <section id="future-contracts-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="future-contracts-calculator-guide-heading-1">
@@ -258,6 +255,11 @@
 <p>Three formulas sit behind the <strong>futures margin</strong> result. The first is the <strong>notional value</strong>, the total value of the asset a single contract controls:</p>
 <p>$$\text{Notional value} = \text{Price} \times \text{Point value} \times \text{Contracts}$$</p>
 <p>The second turns that exposure into <strong>leverage</strong>, the ratio of what you control to what you deposit:</p>
+<figure id="future-contracts-calculator-demo" class="my-6" data-section="demo">
+        <img id="future-contracts-calculator-demo-image" class="h-auto w-full rounded-lg border border-line" src="/assets/images/demos/future-contracts-calculator-demo.avif" alt="Animated walkthrough of the Futures Contracts Margin Calculator: entering Position, Contracts, Trade price, Contract multiplier, Initial margin per contract, Maintenance margin per contract, When a margin call comes, then reading the total gain or loss." width="1280" height="800" loading="lazy" decoding="async">
+        <figcaption id="future-contracts-calculator-demo-caption" class="mt-3 text-sm text-ink-muted">See how the Futures Contracts Margin Calculator works: change the inputs and the total gain or loss updates instantly. Enter your own numbers in the calculator above.</figcaption>
+      </figure>
+
 <p>$$\text{Leverage} = \frac{\text{Notional value}}{\text{Initial margin} \times \text{Contracts}}$$</p>
 <p>The third is <strong>margin utilization</strong>, the share of your <strong>account</strong> committed as margin:</p>
 <p>$$\text{Margin utilization} = \frac{\text{Margin used}}{\text{Account size}} \times 100$$</p>

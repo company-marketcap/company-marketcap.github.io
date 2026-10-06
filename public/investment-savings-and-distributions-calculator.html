@@ -253,10 +253,7 @@
           </div>
         </aside>
 
-      <figure id="investment-savings-and-distributions-calculator-demo" class="panel p-4 sm:p-6" data-section="demo">
-        <img id="investment-savings-and-distributions-calculator-demo-image" class="h-auto w-full rounded-lg border border-line" src="/assets/images/demos/investment-savings-and-distributions-calculator-demo.avif" alt="Animated walkthrough of the Investment Savings and Distributions Calculator: entering Current age, Starting balance, Contribution, How often, Years of saving, Annual return, Years of withdrawals, Annual return, then reading the you can withdraw each month." width="1280" height="800" loading="lazy" decoding="async">
-        <figcaption id="investment-savings-and-distributions-calculator-demo-caption" class="mt-3 text-sm text-ink-muted">See how the Investment Savings and Distributions Calculator works: change the inputs and the you can withdraw each month updates instantly. Enter your own numbers in the calculator above.</figcaption>
-      </figure>
+      
 
       <div id="investment-savings-and-distributions-calculator-guide" class="space-y-6" data-section="guide">
         <section id="investment-savings-and-distributions-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="investment-savings-and-distributions-calculator-guide-heading-1">
@@ -279,6 +276,11 @@
 <p>Applied \(n\) times, the repeated step collapses into a closed form for the ending balance, where \(B_0\) is your starting amount:</p>
 <p>$$B_{n} = B_{0}(1+i)^{n} - W(1+i)\,\frac{(1+i)^{n}-1}{i}$$</p>
 <p>To find <strong>how long</strong> a balance lasts, solve the same equation for \(n\) when the ending balance is zero:</p>
+<figure id="investment-savings-and-distributions-calculator-demo" class="my-6" data-section="demo">
+        <img id="investment-savings-and-distributions-calculator-demo-image" class="h-auto w-full rounded-lg border border-line" src="/assets/images/demos/investment-savings-and-distributions-calculator-demo.avif" alt="Animated walkthrough of the Investment Savings and Distributions Calculator: entering Current age, Starting balance, Contribution, How often, Years of saving, Annual return, Years of withdrawals, Annual return, then reading the you can withdraw each month." width="1280" height="800" loading="lazy" decoding="async">
+        <figcaption id="investment-savings-and-distributions-calculator-demo-caption" class="mt-3 text-sm text-ink-muted">See how the Investment Savings and Distributions Calculator works: change the inputs and the you can withdraw each month updates instantly. Enter your own numbers in the calculator above.</figcaption>
+      </figure>
+
 <p>$$n = \frac{\ln\!\left(\dfrac{W(1+i)}{W(1+i) - B_{0}\,i}\right)}{\ln(1+i)}$$</p>
 <p>This only works when \(W(1+i)\) is larger than \(B_0 \times i\), meaning your payout exceeds the interest the account earns in a single period. If the payout is smaller than the interest, the balance never runs out, and the calculator simply shows it growing or holding steady.</p>
         </section>

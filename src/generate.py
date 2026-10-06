@@ -18,6 +18,7 @@ Templates live in src/templates/. {{INCLUDE:_partial.html}} pulls in a shared pa
 page type gets), so a typo can't ship as literal "{{...}}" text.
 """
 import argparse
+import hashlib
 import html
 import json
 import re
@@ -291,19 +292,46 @@ def render_author_box(S, page_id, published, modified):
             f'          </div>\n        </div>\n      </aside>')
 
 
-def render_demo(S, tool):
-    """The tool's animated demo (AVIF from utilities/tool_demo), as the first card under the calculator."""
+def render_demo(S, tool, inline=False):
+    """The tool's animated demo (AVIF from utilities/tool_demo): a card under the calculator, or, with
+    inline=True, a bare figure placed inside an article section (see place_demo)."""
     demo = S.demos.get(tool["slug"])
     if not demo:
         return ""
     page_id = tool["slug"]
-    return (f'<figure id="{page_id}-demo" class="panel p-4 sm:p-6" data-section="demo">\n'
+    figure_class = "my-6" if inline else "panel p-4 sm:p-6"
+    return (f'<figure id="{page_id}-demo" class="{figure_class}" data-section="demo">\n'
             f'        <img id="{page_id}-demo-image" class="h-auto w-full rounded-lg border border-line" '
             f'src="{DEMO_DIR}/{page_id}-demo.avif" alt="{esc(demo["alt"])}" width="{demo["width"]}" height="{demo["height"]}" '
             f'loading="lazy" decoding="async">\n'
             f'        <figcaption id="{page_id}-demo-caption" class="mt-3 text-sm text-ink-muted">See how the '
             f'{esc(tool["name"])} works: change the inputs and the {esc(schema.demo_result_phrase(demo["alt"]))} updates instantly. '
             f'Enter your own numbers in the calculator above.</figcaption>\n      </figure>')
+
+
+_BLOCK_TAG_RE = re.compile(r"<(/?)(p|ul|ol|table|blockquote|details|div|figure|aside|section|dl|pre)\b[^>]*>", re.I)
+
+
+def place_demo(slug, content, figure):
+    """Insert the demo figure at a stable pseudo-random spot inside one of the article's H2 sections.
+
+    The spot is seeded from the slug (hashlib, not hash(), so it is identical on every build) and is always
+    a top-level block boundary after the first block of an H2 section, so it never splits a list or table."""
+    parts = [p for p in re.split(r"(?=<h2[\s>])", content) if p.strip()]
+    seed = int(hashlib.sha256(slug.encode()).hexdigest(), 16)
+    spots = []  # (part index, offset) of every top-level block end that is not the section's last
+    for i, part in enumerate(parts):
+        depth, ends = 0, []
+        for m in _BLOCK_TAG_RE.finditer(part):
+            depth += -1 if m.group(1) else 1
+            if depth == 0 and m.group(1):
+                ends.append(m.end())
+        spots += [(i, off) for off in ends[:-1]] or ([(i, ends[0])] if ends else [])
+    if not spots:
+        return content + "\n" + figure
+    i, off = spots[seed % len(spots)]
+    parts[i] = parts[i][:off] + "\n" + figure + "\n" + parts[i][off:]
+    return "".join(parts)
 
 
 class Site:
@@ -545,7 +573,7 @@ def render_tool(S, tool):
         extra = (extra + "\n" + KATEX_ASSETS).strip()
     values.update({
         "JSON_LD": json_ld_graph(S.schema.tool(tool, url(site, tool["slug"]), trail, *tool_dates, demo=S.demos.get(tool["slug"])), url(site, tool["slug"]), tool["content_html"]),
-        "TOOL_DEMO": render_demo(S, tool),
+        "TOOL_DEMO": "" if content else render_demo(S, tool),
         "AUTHOR_BYLINE": render_author_byline(S, page_id, *tool_dates),
         "AUTHOR_BOX": render_author_box(S, page_id, *tool_dates),
         "BREADCRUMB": render_breadcrumb(site, page_id, trail),
@@ -553,7 +581,7 @@ def render_tool(S, tool):
         "TOOL_CARD": fields,
         "DISCLAIMER": esc(site["disclaimer"]),
         "AD_IN_FEED": render_ad(page_id, "in_feed"),
-        "CONTENT_SECTIONS": render_article_cards(page_id, content),
+        "CONTENT_SECTIONS": render_article_cards(page_id, place_demo(tool["slug"], content, render_demo(S, tool, inline=True)) if content and S.demos.get(tool["slug"]) else content),
         "FAQ": render_faq(page_id, tool.get("faq_heading") or f'{tool["name"]} questions', tool["faq"]),
         # Related calculators are the stop-gap navigation for pages without an article; once the article is
         # imported, the silo links (utilities/silo_linking) take over.

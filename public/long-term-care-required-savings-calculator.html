@@ -246,10 +246,7 @@
           </div>
         </aside>
 
-      <figure id="long-term-care-required-savings-calculator-demo" class="panel p-4 sm:p-6" data-section="demo">
-        <img id="long-term-care-required-savings-calculator-demo-image" class="h-auto w-full rounded-lg border border-line" src="/assets/images/demos/long-term-care-required-savings-calculator-demo.avif" alt="Animated walkthrough of the Long-Term Care Required Savings Calculator: entering Current age, Age care starts, Yearly cost of care today, Years of care, Care cost inflation, Already saved for care, Return while saving, Return during care, then reading the monthly saving needed." width="1280" height="800" loading="lazy" decoding="async">
-        <figcaption id="long-term-care-required-savings-calculator-demo-caption" class="mt-3 text-sm text-ink-muted">See how the Long-Term Care Required Savings Calculator works: change the inputs and the monthly saving needed updates instantly. Enter your own numbers in the calculator above.</figcaption>
-      </figure>
+      
 
       <div id="long-term-care-required-savings-calculator-guide" class="space-y-6" data-section="guide">
         <section id="long-term-care-required-savings-calculator-guide-section-1" class="panel article-content p-4 sm:p-6" aria-labelledby="long-term-care-required-savings-calculator-guide-heading-1">
@@ -259,6 +256,11 @@
 
 <h3>The formula behind the estimated total need</h3>
 <p>If <strong>A</strong> is today's annual cost, <strong>i</strong> is the inflation rate, <strong>Y</strong> is the number of years before care begins and <strong>N</strong> is the number of years of care, the estimated total need is the sum of each year's inflated bill:</p>
+<figure id="long-term-care-required-savings-calculator-demo" class="my-6" data-section="demo">
+        <img id="long-term-care-required-savings-calculator-demo-image" class="h-auto w-full rounded-lg border border-line" src="/assets/images/demos/long-term-care-required-savings-calculator-demo.avif" alt="Animated walkthrough of the Long-Term Care Required Savings Calculator: entering Current age, Age care starts, Yearly cost of care today, Years of care, Care cost inflation, Already saved for care, Return while saving, Return during care, then reading the monthly saving needed." width="1280" height="800" loading="lazy" decoding="async">
+        <figcaption id="long-term-care-required-savings-calculator-demo-caption" class="mt-3 text-sm text-ink-muted">See how the Long-Term Care Required Savings Calculator works: change the inputs and the monthly saving needed updates instantly. Enter your own numbers in the calculator above.</figcaption>
+      </figure>
+
 $$\text{Need} = \sum_{k=0}^{N-1} A \times (1+i)^{Y+k}$$
 <p>Your projected savings use the amount you hold now, <strong>S</strong>, a monthly contribution <strong>m</strong> paid at the start of each month and an annual return <strong>r</strong>, with <em>n</em> = 12 × Y months and a monthly rate of \(j = (1+r)^{1/12} - 1\):</p>
 $$\text{Savings} = S \times (1+r)^{Y} + m \times \frac{(1+j)^{n} - 1}{j} \times (1+j)$$
