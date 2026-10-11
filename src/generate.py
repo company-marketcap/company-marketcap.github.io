@@ -50,7 +50,7 @@ TEMPLATE_TOKENS = {
                                       "CONTENT_SECTIONS", "FAQ", "AUTHOR_BOX"},
     "tool.html": COMMON_TOKENS | {"BREADCRUMB", "SUBCATEGORY_SLUG", "TOOL_CARD", "DISCLAIMER", "AD_IN_FEED",
                                   "CONTENT_SECTIONS", "FAQ", "RELATED_TOOLS", "TOOL_EXTRA_SCRIPTS", "TOOL_SCRIPT",
-                                  "AUTHOR_BYLINE", "AUTHOR_BOX", "TOOL_DEMO"},
+                                  "AUTHOR_BOX", "TOOL_DEMO"},
     "page.html": COMMON_TOKENS | {"BREADCRUMB", "CONTENT_HTML", "AUTHOR_BOX"},
     "404.html": COMMON_TOKENS | {"POPULAR_TOOLS", "CATEGORY_URL", "SITEMAP_URL"},
 }
@@ -250,17 +250,6 @@ def render_faq(page_id, heading, faq):
             f'        <h2 id="{page_id}-faq-heading" class="font-display text-[1.625rem] font-bold leading-tight tracking-tight">{esc(heading)}</h2>\n'
             f'        <div id="{page_id}-faq-list" class="mt-5 space-y-3">\n          '
             + "\n          ".join(items) + "\n        </div>\n      </section>")
-
-
-def render_author_byline(S, page_id, published, modified):
-    """One-line byline under the hero: content author, fact checker and the visible dates (match the schema)."""
-    a = S.author
-    link = f'<a class="font-semibold text-ink underline-offset-2 hover:underline" href="{href(a["slug"])}"'
-    return (f'<p id="{page_id}-byline" class="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-ink-muted" data-section="byline">'
-            f'<span>{esc(a["content_role"])}: {link} rel="author">{esc(a["name"])}</a></span>'
-            f'<span>{esc(a["review_role"])}: {link}>{esc(a["name"])}</a></span>'
-            f'<span>Published <time datetime="{published}">{schema.long_date(published)}</time></span>'
-            f'<span>Updated <time datetime="{modified}">{schema.long_date(modified)}</time></span></p>')
 
 
 def render_updated_line(page_id, modified):
@@ -573,7 +562,6 @@ def render_tool(S, tool):
     values.update({
         "JSON_LD": json_ld_graph(S.schema.tool(tool, url(site, tool["slug"]), trail, *tool_dates, demo=S.demos.get(tool["slug"])), url(site, tool["slug"]), tool["content_html"]),
         "TOOL_DEMO": "" if content else render_demo(S, tool),
-        "AUTHOR_BYLINE": render_author_byline(S, page_id, *tool_dates),
         "AUTHOR_BOX": render_author_box(S, page_id, *tool_dates),
         "BREADCRUMB": render_breadcrumb(site, page_id, trail),
         "SUBCATEGORY_SLUG": sub["slug"],
