@@ -156,6 +156,15 @@ input[type="search"]::-webkit-search-cancel-button { cursor: pointer; }
 
 /* HTML sitemap: long calculator lists run in two columns from tablet width up. */
 @media (min-width: 640px) { .article-content ul.sitemap-columns { column-count: 2; column-gap: 2.5rem; max-width: none; } }
+
+/* Phones, tool pages: cards sit 0.5rem from the screen edge (half the 1rem page gutter) with 0.75rem padding, so the
+   calculator and article get most of the width but still read as cards. Unlayered so it beats the p-4 utility. */
+@media (width < 40rem) {
+  [data-page-type="calculator"] main .panel { @apply -mx-2 p-3; }
+  /* The tool card's form/results grid has no explicit column below @3xl, so a long select option or result row would
+     widen it past the screen; clamp it to the card. */
+  [data-page-type="calculator"] main .panel > .grid { grid-template-columns: minmax(0, 1fr); }
+}
 .sitemap-columns > li { break-inside: avoid; }
 
 @layer components {
@@ -829,6 +838,8 @@ input[type="search"]::-webkit-search-cancel-button { cursor: pointer; }
     border-radius: var(--site-radius-card);
     background-color: var(--site-color-surface);
   }
+  /* generate.py wraps every bare article table in this, so a wide table scrolls in place instead of being cut off. */
+  .table-overflow { max-width: 100%; overflow-x: auto; }
   .article-content table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; }
   .article-content caption { padding: 0.75rem 1rem; text-align: left; font-weight: 700; border-bottom: 1px solid var(--site-color-line); }
   .article-content thead { background-color: var(--site-color-surface-muted); }

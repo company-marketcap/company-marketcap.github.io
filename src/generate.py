@@ -539,6 +539,14 @@ def render_related(S, tool):
             f'        <ul id="{page_id}-related-list" class="mt-5 grid gap-3 @2xl:grid-cols-2 @5xl:grid-cols-3" role="list">\n          {items}\n        </ul>\n      </nav>')
 
 
+TABLE_RE = re.compile(r"<table\b.*?</table>", re.S)
+
+
+def wrap_tables(content):
+    """Wrap each article table in a horizontal scroller so a wide table never overflows the card on phones."""
+    return TABLE_RE.sub(lambda m: f'<div class="table-overflow">{m.group(0)}</div>', content)
+
+
 def render_tool(S, tool):
     site, cat = S.site, S.category
     sub = S.subcats[tool["subcategory"]]
@@ -550,7 +558,7 @@ def render_tool(S, tool):
     card = tool["card"]
     fields = card.get("fields_html") or ('<section class="panel p-4 sm:p-6"><p class="text-ink-muted">This calculator '
                                          'is planned and not built yet.</p></section>')
-    content = tool["content_html"].strip()
+    content = wrap_tables(tool["content_html"].strip())
     outbound = OUTBOUND_LINKS.get(tool["slug"])
     if outbound and "</p>" in content:  # end of the article's last paragraph
         cut = content.rindex("</p>")
