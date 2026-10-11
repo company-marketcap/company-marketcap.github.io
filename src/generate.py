@@ -554,8 +554,7 @@ def render_tool(S, tool):
     site, cat = S.site, S.category
     sub = S.subcats[tool["subcategory"]]
     page_id = tool["slug"]
-    trail = [("Home", "/"), (cat["name"], href(cat["slug"])), (sub["name"], href(cat["slug"], sub["slug"])),
-             (tool["name"], href(tool["slug"]))]
+    trail = [("Home", "/"), (cat["name"], href(cat["slug"])), (tool["name"], href(tool["slug"]))]
     values = S.base(page_id, "calculator", tool["slug"], tool["meta_title"], tool["meta_description"],
                     tool["h1"], tool["subtitle"], preview=tool["preview"])
     values["SIDEBAR_CATEGORIES"] = S.sidebar(page_id, current_sub=sub["slug"])
