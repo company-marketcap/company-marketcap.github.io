@@ -163,7 +163,11 @@
           </div>
         </aside>
 
-      <div id="recreational-vehicle-rv-loan-calculator-intro-area" class="space-y-4">
+      <!-- One intro paragraph. Phones: the intro area and hero section are display:contents, so the breadcrumb, H1,
+           intro and tool all sit in this flex column and the intro (order-last) shows below the tool. sm and up:
+           plain blocks, intro under the H1. -->
+      <div id="recreational-vehicle-rv-loan-calculator-top" class="flex flex-col sm:block sm:space-y-10">
+      <div id="recreational-vehicle-rv-loan-calculator-intro-area" class="contents space-y-4 sm:block">
         <nav id="recreational-vehicle-rv-loan-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
           <ol id="recreational-vehicle-rv-loan-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" >
             <li id="recreational-vehicle-rv-loan-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5"><a class="breadcrumb-link" href="/"><span>Home</span></a></li>
@@ -171,13 +175,13 @@
             <li id="recreational-vehicle-rv-loan-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span aria-current="page" class="font-semibold text-ink">RV Loan Calculator</span></li>
           </ol>
         </nav>
-        <section id="recreational-vehicle-rv-loan-calculator-hero-section" aria-labelledby="recreational-vehicle-rv-loan-calculator-hero-heading" data-section="hero">
+        <section id="recreational-vehicle-rv-loan-calculator-hero-section" class="contents sm:block" aria-labelledby="recreational-vehicle-rv-loan-calculator-hero-heading" data-section="hero">
           <h1 id="recreational-vehicle-rv-loan-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">RV Loan Calculator</h1>
-          <p id="recreational-vehicle-rv-loan-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">RV Loan Calculator. Planning a trip in a motorhome, camper or travel trailer starts with one number, and this RV loan calculator gives it to you: the monthly payment you can expect once your price, down payment, trade-in, rate and term are set. You can also see the total interest you would pay, so you can fit the purchase into your budget before you ever step onto a dealer lot. <!-- SILO_START:slot_a -->Next, open the <a class="silo-link" href="/auto-loan-calculator.html">auto loan calculator</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_a --></p>
+          <p id="recreational-vehicle-rv-loan-calculator-hero-intro" class="order-last mt-10 text-[17px] leading-relaxed text-ink-muted sm:mt-3">RV Loan Calculator. Planning a trip in a motorhome, camper or travel trailer starts with one number, and this RV loan calculator gives it to you: the monthly payment you can expect once your price, down payment, trade-in, rate and term are set. You can also see the total interest you would pay, so you can fit the purchase into your budget before you ever step onto a dealer lot. <!-- SILO_START:slot_a -->Next, open the <a class="silo-link" href="/auto-loan-calculator.html">auto loan calculator</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_a --></p>
         </section>
       </div>
 
-      <div id="recreational-vehicle-rv-loan-calculator-tool" class="space-y-6" data-page-slug="recreational-vehicle-rv-loan-calculator" data-calculator-key="tool">
+      <div id="recreational-vehicle-rv-loan-calculator-tool" class="mt-10 space-y-6 sm:mt-0" data-page-slug="recreational-vehicle-rv-loan-calculator" data-calculator-key="tool">
         <section class="panel @container p-4 sm:p-6" aria-labelledby="rvFormHeading" data-section="calculator">
   <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
     <form id="rvForm" class="space-y-5" novalidate aria-labelledby="rvFormHeading">
@@ -242,8 +246,7 @@
 </section>
         <p id="recreational-vehicle-rv-loan-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
       </div>
-
-      <p id="recreational-vehicle-rv-loan-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">RV Loan Calculator. Planning a trip in a motorhome, camper or travel trailer starts with one number, and this RV loan calculator gives it to you: the monthly payment you can expect once your price, down payment, trade-in, rate and term are set. You can also see the total interest you would pay, so you can fit the purchase into your budget before you ever step onto a dealer lot. <!-- SILO_START:slot_a_m -->Next, open the <a class="silo-link" href="/auto-loan-calculator.html">auto loan calculator</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_a_m --></p>
+      </div>
 
       <aside id="recreational-vehicle-rv-loan-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="recreational-vehicle-rv-loan-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
           <div id="recreational-vehicle-rv-loan-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="recreational-vehicle-rv-loan-calculator-ad-in-feed">

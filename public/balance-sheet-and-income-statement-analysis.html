@@ -163,7 +163,11 @@
           </div>
         </aside>
 
-      <div id="balance-sheet-and-income-statement-analysis-intro-area" class="space-y-4">
+      <!-- One intro paragraph. Phones: the intro area and hero section are display:contents, so the breadcrumb, H1,
+           intro and tool all sit in this flex column and the intro (order-last) shows below the tool. sm and up:
+           plain blocks, intro under the H1. -->
+      <div id="balance-sheet-and-income-statement-analysis-top" class="flex flex-col sm:block sm:space-y-10">
+      <div id="balance-sheet-and-income-statement-analysis-intro-area" class="contents space-y-4 sm:block">
         <nav id="balance-sheet-and-income-statement-analysis-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
           <ol id="balance-sheet-and-income-statement-analysis-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" >
             <li id="balance-sheet-and-income-statement-analysis-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5"><a class="breadcrumb-link" href="/"><span>Home</span></a></li>
@@ -171,13 +175,13 @@
             <li id="balance-sheet-and-income-statement-analysis-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span aria-current="page" class="font-semibold text-ink">Balance Sheet and Income Statement Analysis</span></li>
           </ol>
         </nav>
-        <section id="balance-sheet-and-income-statement-analysis-hero-section" aria-labelledby="balance-sheet-and-income-statement-analysis-hero-heading" data-section="hero">
+        <section id="balance-sheet-and-income-statement-analysis-hero-section" class="contents sm:block" aria-labelledby="balance-sheet-and-income-statement-analysis-hero-heading" data-section="hero">
           <h1 id="balance-sheet-and-income-statement-analysis-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Balance Sheet and Income Statement Analysis</h1>
-          <p id="balance-sheet-and-income-statement-analysis-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Balance Sheet and Income Statement Analysis. Done well, balance sheet and income statement analysis tells you whether a business earns real money, can pay what it owes and is funded sensibly, all from a few pages of numbers. The income statement shows what a company earned over a period, while its partner records what it owns and owes on a single date, so reading the two together lets investors and managers weigh risk and make better financial decisions about a stock or a business. <!-- SILO_START:slot_a -->The <a class="silo-link" href="/margin-calculator.html">profit margin calculator</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_a --></p>
+          <p id="balance-sheet-and-income-statement-analysis-hero-intro" class="order-last mt-10 text-[17px] leading-relaxed text-ink-muted sm:mt-3">Balance Sheet and Income Statement Analysis. Done well, balance sheet and income statement analysis tells you whether a business earns real money, can pay what it owes and is funded sensibly, all from a few pages of numbers. The income statement shows what a company earned over a period, while its partner records what it owns and owes on a single date, so reading the two together lets investors and managers weigh risk and make better financial decisions about a stock or a business. <!-- SILO_START:slot_a -->The <a class="silo-link" href="/margin-calculator.html">profit margin calculator</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_a --></p>
         </section>
       </div>
 
-      <div id="balance-sheet-and-income-statement-analysis-tool" class="space-y-6" data-page-slug="balance-sheet-and-income-statement-analysis" data-calculator-key="tool">
+      <div id="balance-sheet-and-income-statement-analysis-tool" class="mt-10 space-y-6 sm:mt-0" data-page-slug="balance-sheet-and-income-statement-analysis" data-calculator-key="tool">
         <section class="panel p-4 sm:p-6" aria-labelledby="bsFormHeading" data-section="calculator">
   <form id="bsForm" class="space-y-6" novalidate aria-labelledby="bsFormHeading">
     <h2 id="bsFormHeading" class="panel-heading">Enter two years of statements</h2>
@@ -274,8 +278,7 @@
 </section>
         <p id="balance-sheet-and-income-statement-analysis-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
       </div>
-
-      <p id="balance-sheet-and-income-statement-analysis-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Balance Sheet and Income Statement Analysis. Done well, balance sheet and income statement analysis tells you whether a business earns real money, can pay what it owes and is funded sensibly, all from a few pages of numbers. The income statement shows what a company earned over a period, while its partner records what it owns and owes on a single date, so reading the two together lets investors and managers weigh risk and make better financial decisions about a stock or a business. <!-- SILO_START:slot_a_m -->The <a class="silo-link" href="/margin-calculator.html">profit margin calculator</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_a_m --></p>
+      </div>
 
       <aside id="balance-sheet-and-income-statement-analysis-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="balance-sheet-and-income-statement-analysis-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
           <div id="balance-sheet-and-income-statement-analysis-ad-in-feed-frame" class="ad-slot-live" data-ad-container="balance-sheet-and-income-statement-analysis-ad-in-feed">

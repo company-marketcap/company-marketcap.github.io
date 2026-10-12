@@ -163,7 +163,11 @@
           </div>
         </aside>
 
-      <div id="roi-calculator-intro-area" class="space-y-4">
+      <!-- One intro paragraph. Phones: the intro area and hero section are display:contents, so the breadcrumb, H1,
+           intro and tool all sit in this flex column and the intro (order-last) shows below the tool. sm and up:
+           plain blocks, intro under the H1. -->
+      <div id="roi-calculator-top" class="flex flex-col sm:block sm:space-y-10">
+      <div id="roi-calculator-intro-area" class="contents space-y-4 sm:block">
         <nav id="roi-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
           <ol id="roi-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" >
             <li id="roi-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5"><a class="breadcrumb-link" href="/"><span>Home</span></a></li>
@@ -171,13 +175,13 @@
             <li id="roi-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span aria-current="page" class="font-semibold text-ink">ROI Calculator</span></li>
           </ol>
         </nav>
-        <section id="roi-calculator-hero-section" aria-labelledby="roi-calculator-hero-heading" data-section="hero">
+        <section id="roi-calculator-hero-section" class="contents sm:block" aria-labelledby="roi-calculator-hero-heading" data-section="hero">
           <h1 id="roi-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">ROI Calculator</h1>
-          <p id="roi-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">ROI Calculator. Wondering whether the money you put to work actually paid off? This ROI calculator compares what you invested with what came back and shows your return on investment as a clean figure, plus the annualized return that makes two very different deals comparable. It takes a few seconds, and the answer tells you whether a purchase, campaign or investing move was worth it, whether you are a first-time investor or a company owner weighing a new project. <!-- SILO_START:slot_a -->Try the <a class="silo-link" href="/investment-calculator.html">free investment calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_a --></p>
+          <p id="roi-calculator-hero-intro" class="order-last mt-10 text-[17px] leading-relaxed text-ink-muted sm:mt-3">ROI Calculator. Wondering whether the money you put to work actually paid off? This ROI calculator compares what you invested with what came back and shows your return on investment as a clean figure, plus the annualized return that makes two very different deals comparable. It takes a few seconds, and the answer tells you whether a purchase, campaign or investing move was worth it, whether you are a first-time investor or a company owner weighing a new project. <!-- SILO_START:slot_a -->Try the <a class="silo-link" href="/investment-calculator.html">free investment calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_a --></p>
         </section>
       </div>
 
-      <div id="roi-calculator-tool" class="space-y-6" data-page-slug="roi-calculator" data-calculator-key="tool">
+      <div id="roi-calculator-tool" class="mt-10 space-y-6 sm:mt-0" data-page-slug="roi-calculator" data-calculator-key="tool">
         <section class="panel @container p-4 sm:p-6" aria-labelledby="roiFormHeading" data-section="calculator">
   <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
     <form id="roiForm" class="space-y-5" novalidate aria-labelledby="roiFormHeading">
@@ -231,8 +235,7 @@
 </section>
         <p id="roi-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
       </div>
-
-      <p id="roi-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">ROI Calculator. Wondering whether the money you put to work actually paid off? This ROI calculator compares what you invested with what came back and shows your return on investment as a clean figure, plus the annualized return that makes two very different deals comparable. It takes a few seconds, and the answer tells you whether a purchase, campaign or investing move was worth it, whether you are a first-time investor or a company owner weighing a new project. <!-- SILO_START:slot_a_m -->Try the <a class="silo-link" href="/investment-calculator.html">free investment calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_a_m --></p>
+      </div>
 
       <aside id="roi-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="roi-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
           <div id="roi-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="roi-calculator-ad-in-feed">

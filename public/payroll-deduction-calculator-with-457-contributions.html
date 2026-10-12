@@ -163,7 +163,11 @@
           </div>
         </aside>
 
-      <div id="payroll-deduction-calculator-with-457-contributions-intro-area" class="space-y-4">
+      <!-- One intro paragraph. Phones: the intro area and hero section are display:contents, so the breadcrumb, H1,
+           intro and tool all sit in this flex column and the intro (order-last) shows below the tool. sm and up:
+           plain blocks, intro under the H1. -->
+      <div id="payroll-deduction-calculator-with-457-contributions-top" class="flex flex-col sm:block sm:space-y-10">
+      <div id="payroll-deduction-calculator-with-457-contributions-intro-area" class="contents space-y-4 sm:block">
         <nav id="payroll-deduction-calculator-with-457-contributions-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
           <ol id="payroll-deduction-calculator-with-457-contributions-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" >
             <li id="payroll-deduction-calculator-with-457-contributions-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5"><a class="breadcrumb-link" href="/"><span>Home</span></a></li>
@@ -171,13 +175,13 @@
             <li id="payroll-deduction-calculator-with-457-contributions-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span aria-current="page" class="font-semibold text-ink">Payroll Deduction Calculator with 457 Contributions</span></li>
           </ol>
         </nav>
-        <section id="payroll-deduction-calculator-with-457-contributions-hero-section" aria-labelledby="payroll-deduction-calculator-with-457-contributions-hero-heading" data-section="hero">
+        <section id="payroll-deduction-calculator-with-457-contributions-hero-section" class="contents sm:block" aria-labelledby="payroll-deduction-calculator-with-457-contributions-hero-heading" data-section="hero">
           <h1 id="payroll-deduction-calculator-with-457-contributions-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Payroll Deduction Calculator with 457 Contributions</h1>
-          <p id="payroll-deduction-calculator-with-457-contributions-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Payroll Deduction Calculator with 457 Contributions. Wondering what your first paycheck will look like after you start saving? The payroll deduction calculator with 457 contributions shows how a deferral into your 457 plan reshapes every line of your pay stub, so you can see your take home pay before the money leaves your account. Because retirement contributions come out before income tax is figured, the drop in your net check is usually smaller than the amount you set aside. <!-- SILO_START:slot_a -->The <a class="silo-link" href="/401k-calculator.html">401k calculator</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_a --></p>
+          <p id="payroll-deduction-calculator-with-457-contributions-hero-intro" class="order-last mt-10 text-[17px] leading-relaxed text-ink-muted sm:mt-3">Payroll Deduction Calculator with 457 Contributions. Wondering what your first paycheck will look like after you start saving? The payroll deduction calculator with 457 contributions shows how a deferral into your 457 plan reshapes every line of your pay stub, so you can see your take home pay before the money leaves your account. Because retirement contributions come out before income tax is figured, the drop in your net check is usually smaller than the amount you set aside. <!-- SILO_START:slot_a -->The <a class="silo-link" href="/401k-calculator.html">401k calculator</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_a --></p>
         </section>
       </div>
 
-      <div id="payroll-deduction-calculator-with-457-contributions-tool" class="space-y-6" data-page-slug="payroll-deduction-calculator-with-457-contributions" data-calculator-key="tool">
+      <div id="payroll-deduction-calculator-with-457-contributions-tool" class="mt-10 space-y-6 sm:mt-0" data-page-slug="payroll-deduction-calculator-with-457-contributions" data-calculator-key="tool">
         <section class="panel @container p-4 sm:p-6" aria-labelledby="pdFormHeading" data-section="calculator">
   <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
     <form id="pdForm" class="space-y-5" novalidate aria-labelledby="pdFormHeading">
@@ -252,8 +256,7 @@
 </section>
         <p id="payroll-deduction-calculator-with-457-contributions-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
       </div>
-
-      <p id="payroll-deduction-calculator-with-457-contributions-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Payroll Deduction Calculator with 457 Contributions. Wondering what your first paycheck will look like after you start saving? The payroll deduction calculator with 457 contributions shows how a deferral into your 457 plan reshapes every line of your pay stub, so you can see your take home pay before the money leaves your account. Because retirement contributions come out before income tax is figured, the drop in your net check is usually smaller than the amount you set aside. <!-- SILO_START:slot_a_m -->The <a class="silo-link" href="/401k-calculator.html">401k calculator</a> uses the same plain-English approach, so you can compare results side by side.<!-- SILO_END:slot_a_m --></p>
+      </div>
 
       <aside id="payroll-deduction-calculator-with-457-contributions-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="payroll-deduction-calculator-with-457-contributions-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
           <div id="payroll-deduction-calculator-with-457-contributions-ad-in-feed-frame" class="ad-slot-live" data-ad-container="payroll-deduction-calculator-with-457-contributions-ad-in-feed">

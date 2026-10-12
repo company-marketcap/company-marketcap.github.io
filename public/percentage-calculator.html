@@ -163,7 +163,11 @@
           </div>
         </aside>
 
-      <div id="percentage-calculator-intro-area" class="space-y-4">
+      <!-- One intro paragraph. Phones: the intro area and hero section are display:contents, so the breadcrumb, H1,
+           intro and tool all sit in this flex column and the intro (order-last) shows below the tool. sm and up:
+           plain blocks, intro under the H1. -->
+      <div id="percentage-calculator-top" class="flex flex-col sm:block sm:space-y-10">
+      <div id="percentage-calculator-intro-area" class="contents space-y-4 sm:block">
         <nav id="percentage-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
           <ol id="percentage-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" >
             <li id="percentage-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5"><a class="breadcrumb-link" href="/"><span>Home</span></a></li>
@@ -171,13 +175,13 @@
             <li id="percentage-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span aria-current="page" class="font-semibold text-ink">Percentage Calculator</span></li>
           </ol>
         </nav>
-        <section id="percentage-calculator-hero-section" aria-labelledby="percentage-calculator-hero-heading" data-section="hero">
+        <section id="percentage-calculator-hero-section" class="contents sm:block" aria-labelledby="percentage-calculator-hero-heading" data-section="hero">
           <h1 id="percentage-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Percentage Calculator</h1>
-          <p id="percentage-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Percentage Calculator. Use this percentage calculator to turn any two figures into a clear percentage value, whether you are checking a shopping discount, splitting a tip or reading an exam score. Our free online percentage calculator handles the three questions people ask most, so you get the right answer without guessing which way to divide. Below, you will see the percentage formula behind every result, a fully worked example and the most common percentage problems explained in plain language. <!-- SILO_START:slot_a -->Next, open the <a class="silo-link" href="/date-calculator.html">date calculator online</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_a --></p>
+          <p id="percentage-calculator-hero-intro" class="order-last mt-10 text-[17px] leading-relaxed text-ink-muted sm:mt-3">Percentage Calculator. Use this percentage calculator to turn any two figures into a clear percentage value, whether you are checking a shopping discount, splitting a tip or reading an exam score. Our free online percentage calculator handles the three questions people ask most, so you get the right answer without guessing which way to divide. Below, you will see the percentage formula behind every result, a fully worked example and the most common percentage problems explained in plain language. <!-- SILO_START:slot_a -->Next, open the <a class="silo-link" href="/date-calculator.html">date calculator online</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_a --></p>
         </section>
       </div>
 
-      <div id="percentage-calculator-tool" class="space-y-6" data-page-slug="percentage-calculator" data-calculator-key="tool">
+      <div id="percentage-calculator-tool" class="mt-10 space-y-6 sm:mt-0" data-page-slug="percentage-calculator" data-calculator-key="tool">
         <section class="panel @container p-4 sm:p-6" aria-labelledby="pc1Heading" data-section="calculator">
   <h2 id="pc1Heading" class="panel-heading">Percent of a number</h2>
   <p class="mt-0.5 text-sm text-ink-muted">What is 20% of 150?</p>
@@ -297,8 +301,7 @@
 </section>
         <p id="percentage-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
       </div>
-
-      <p id="percentage-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Percentage Calculator. Use this percentage calculator to turn any two figures into a clear percentage value, whether you are checking a shopping discount, splitting a tip or reading an exam score. Our free online percentage calculator handles the three questions people ask most, so you get the right answer without guessing which way to divide. Below, you will see the percentage formula behind every result, a fully worked example and the most common percentage problems explained in plain language. <!-- SILO_START:slot_a_m -->Next, open the <a class="silo-link" href="/date-calculator.html">date calculator online</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_a_m --></p>
+      </div>
 
       <aside id="percentage-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="percentage-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
           <div id="percentage-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="percentage-calculator-ad-in-feed">

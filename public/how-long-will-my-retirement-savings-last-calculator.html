@@ -163,7 +163,11 @@
           </div>
         </aside>
 
-      <div id="how-long-will-my-retirement-savings-last-calculator-intro-area" class="space-y-4">
+      <!-- One intro paragraph. Phones: the intro area and hero section are display:contents, so the breadcrumb, H1,
+           intro and tool all sit in this flex column and the intro (order-last) shows below the tool. sm and up:
+           plain blocks, intro under the H1. -->
+      <div id="how-long-will-my-retirement-savings-last-calculator-top" class="flex flex-col sm:block sm:space-y-10">
+      <div id="how-long-will-my-retirement-savings-last-calculator-intro-area" class="contents space-y-4 sm:block">
         <nav id="how-long-will-my-retirement-savings-last-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
           <ol id="how-long-will-my-retirement-savings-last-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" >
             <li id="how-long-will-my-retirement-savings-last-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5"><a class="breadcrumb-link" href="/"><span>Home</span></a></li>
@@ -171,13 +175,13 @@
             <li id="how-long-will-my-retirement-savings-last-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span aria-current="page" class="font-semibold text-ink">How Long Will My Retirement Savings Last?</span></li>
           </ol>
         </nav>
-        <section id="how-long-will-my-retirement-savings-last-calculator-hero-section" aria-labelledby="how-long-will-my-retirement-savings-last-calculator-hero-heading" data-section="hero">
+        <section id="how-long-will-my-retirement-savings-last-calculator-hero-section" class="contents sm:block" aria-labelledby="how-long-will-my-retirement-savings-last-calculator-hero-heading" data-section="hero">
           <h1 id="how-long-will-my-retirement-savings-last-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">How Long Will My Retirement Savings Last?</h1>
-          <p id="how-long-will-my-retirement-savings-last-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">How Long Will My Retirement Savings Last? Few questions weigh on future retirees like how long will my retirement savings last? Enter your balance, spending and other income, and you will see how long your money will last in years and months, so you can protect your financial security through your golden years. <!-- SILO_START:slot_a -->Try the <a class="silo-link" href="/life-expectancy-calculator.html">life expectancy calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_a --></p>
+          <p id="how-long-will-my-retirement-savings-last-calculator-hero-intro" class="order-last mt-10 text-[17px] leading-relaxed text-ink-muted sm:mt-3">How Long Will My Retirement Savings Last? Few questions weigh on future retirees like how long will my retirement savings last? Enter your balance, spending and other income, and you will see how long your money will last in years and months, so you can protect your financial security through your golden years. <!-- SILO_START:slot_a -->Try the <a class="silo-link" href="/life-expectancy-calculator.html">life expectancy calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_a --></p>
         </section>
       </div>
 
-      <div id="how-long-will-my-retirement-savings-last-calculator-tool" class="space-y-6" data-page-slug="how-long-will-my-retirement-savings-last-calculator" data-calculator-key="tool">
+      <div id="how-long-will-my-retirement-savings-last-calculator-tool" class="mt-10 space-y-6 sm:mt-0" data-page-slug="how-long-will-my-retirement-savings-last-calculator" data-calculator-key="tool">
         <section class="panel @container p-4 sm:p-6" aria-labelledby="hlFormHeading" data-section="calculator">
   <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
     <form id="hlForm" class="space-y-5" novalidate aria-labelledby="hlFormHeading">
@@ -240,8 +244,7 @@
 </section>
         <p id="how-long-will-my-retirement-savings-last-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
       </div>
-
-      <p id="how-long-will-my-retirement-savings-last-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">How Long Will My Retirement Savings Last? Few questions weigh on future retirees like how long will my retirement savings last? Enter your balance, spending and other income, and you will see how long your money will last in years and months, so you can protect your financial security through your golden years. <!-- SILO_START:slot_a_m -->Try the <a class="silo-link" href="/life-expectancy-calculator.html">life expectancy calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_a_m --></p>
+      </div>
 
       <aside id="how-long-will-my-retirement-savings-last-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="how-long-will-my-retirement-savings-last-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
           <div id="how-long-will-my-retirement-savings-last-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="how-long-will-my-retirement-savings-last-calculator-ad-in-feed">

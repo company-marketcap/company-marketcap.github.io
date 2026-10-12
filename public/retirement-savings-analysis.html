@@ -163,7 +163,11 @@
           </div>
         </aside>
 
-      <div id="retirement-savings-analysis-intro-area" class="space-y-4">
+      <!-- One intro paragraph. Phones: the intro area and hero section are display:contents, so the breadcrumb, H1,
+           intro and tool all sit in this flex column and the intro (order-last) shows below the tool. sm and up:
+           plain blocks, intro under the H1. -->
+      <div id="retirement-savings-analysis-top" class="flex flex-col sm:block sm:space-y-10">
+      <div id="retirement-savings-analysis-intro-area" class="contents space-y-4 sm:block">
         <nav id="retirement-savings-analysis-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
           <ol id="retirement-savings-analysis-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" >
             <li id="retirement-savings-analysis-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5"><a class="breadcrumb-link" href="/"><span>Home</span></a></li>
@@ -171,13 +175,13 @@
             <li id="retirement-savings-analysis-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span aria-current="page" class="font-semibold text-ink">Retirement Savings Analysis</span></li>
           </ol>
         </nav>
-        <section id="retirement-savings-analysis-hero-section" aria-labelledby="retirement-savings-analysis-hero-heading" data-section="hero">
+        <section id="retirement-savings-analysis-hero-section" class="contents sm:block" aria-labelledby="retirement-savings-analysis-hero-heading" data-section="hero">
           <h1 id="retirement-savings-analysis-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Retirement Savings Analysis</h1>
-          <p id="retirement-savings-analysis-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Retirement Savings Analysis. Your retirement savings analysis shows whether the money you set aside today can pay for the life you want later. Enter what you have saved, what you add each month, how many years remain and the return you expect, and the retirement savings analysis calculator gives you a projected balance, the monthly amount you need to save, or the number of years it will take to reach your target. <!-- SILO_START:slot_a -->Try the <a class="silo-link" href="/life-expectancy-calculator.html">life expectancy calculator online</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_a --></p>
+          <p id="retirement-savings-analysis-hero-intro" class="order-last mt-10 text-[17px] leading-relaxed text-ink-muted sm:mt-3">Retirement Savings Analysis. Your retirement savings analysis shows whether the money you set aside today can pay for the life you want later. Enter what you have saved, what you add each month, how many years remain and the return you expect, and the retirement savings analysis calculator gives you a projected balance, the monthly amount you need to save, or the number of years it will take to reach your target. <!-- SILO_START:slot_a -->Try the <a class="silo-link" href="/life-expectancy-calculator.html">life expectancy calculator online</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_a --></p>
         </section>
       </div>
 
-      <div id="retirement-savings-analysis-tool" class="space-y-6" data-page-slug="retirement-savings-analysis" data-calculator-key="tool">
+      <div id="retirement-savings-analysis-tool" class="mt-10 space-y-6 sm:mt-0" data-page-slug="retirement-savings-analysis" data-calculator-key="tool">
         <section class="panel @container p-4 sm:p-6" aria-labelledby="rsFormHeading" data-section="calculator">
   <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
     <form id="rsForm" class="space-y-5" novalidate aria-labelledby="rsFormHeading">
@@ -228,8 +232,7 @@
 </section>
         <p id="retirement-savings-analysis-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
       </div>
-
-      <p id="retirement-savings-analysis-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Retirement Savings Analysis. Your retirement savings analysis shows whether the money you set aside today can pay for the life you want later. Enter what you have saved, what you add each month, how many years remain and the return you expect, and the retirement savings analysis calculator gives you a projected balance, the monthly amount you need to save, or the number of years it will take to reach your target. <!-- SILO_START:slot_a_m -->Try the <a class="silo-link" href="/life-expectancy-calculator.html">life expectancy calculator online</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_a_m --></p>
+      </div>
 
       <aside id="retirement-savings-analysis-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="retirement-savings-analysis-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
           <div id="retirement-savings-analysis-ad-in-feed-frame" class="ad-slot-live" data-ad-container="retirement-savings-analysis-ad-in-feed">

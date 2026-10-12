@@ -163,7 +163,11 @@
           </div>
         </aside>
 
-      <div id="credit-card-optimizer-calculator-intro-area" class="space-y-4">
+      <!-- One intro paragraph. Phones: the intro area and hero section are display:contents, so the breadcrumb, H1,
+           intro and tool all sit in this flex column and the intro (order-last) shows below the tool. sm and up:
+           plain blocks, intro under the H1. -->
+      <div id="credit-card-optimizer-calculator-top" class="flex flex-col sm:block sm:space-y-10">
+      <div id="credit-card-optimizer-calculator-intro-area" class="contents space-y-4 sm:block">
         <nav id="credit-card-optimizer-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
           <ol id="credit-card-optimizer-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" >
             <li id="credit-card-optimizer-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5"><a class="breadcrumb-link" href="/"><span>Home</span></a></li>
@@ -171,13 +175,13 @@
             <li id="credit-card-optimizer-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span aria-current="page" class="font-semibold text-ink">Credit Card Optimizer Calculator</span></li>
           </ol>
         </nav>
-        <section id="credit-card-optimizer-calculator-hero-section" aria-labelledby="credit-card-optimizer-calculator-hero-heading" data-section="hero">
+        <section id="credit-card-optimizer-calculator-hero-section" class="contents sm:block" aria-labelledby="credit-card-optimizer-calculator-hero-heading" data-section="hero">
           <h1 id="credit-card-optimizer-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Credit Card Optimizer Calculator</h1>
-          <p id="credit-card-optimizer-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Credit Card Optimizer Calculator. Wondering which card in your wallet deserves your next purchase? The credit card optimizer calculator turns your monthly spending into a yearly dollar figure for each card you compare, so you can see the net annual value of every option and stop guessing which sign-up bonus or annual fee is actually worth it. <!-- SILO_START:slot_a -->Pair this with the <a class="silo-link" href="/debt-to-income-ratio-calculator.html">free debt to income ratio calculator</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_a --></p>
+          <p id="credit-card-optimizer-calculator-hero-intro" class="order-last mt-10 text-[17px] leading-relaxed text-ink-muted sm:mt-3">Credit Card Optimizer Calculator. Wondering which card in your wallet deserves your next purchase? The credit card optimizer calculator turns your monthly spending into a yearly dollar figure for each card you compare, so you can see the net annual value of every option and stop guessing which sign-up bonus or annual fee is actually worth it. <!-- SILO_START:slot_a -->Pair this with the <a class="silo-link" href="/debt-to-income-ratio-calculator.html">free debt to income ratio calculator</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_a --></p>
         </section>
       </div>
 
-      <div id="credit-card-optimizer-calculator-tool" class="space-y-6" data-page-slug="credit-card-optimizer-calculator" data-calculator-key="tool">
+      <div id="credit-card-optimizer-calculator-tool" class="mt-10 space-y-6 sm:mt-0" data-page-slug="credit-card-optimizer-calculator" data-calculator-key="tool">
         <section class="panel @container p-4 sm:p-6" aria-labelledby="ccoFormHeading" data-section="calculator">
   <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
     <form id="ccoForm" class="space-y-6" novalidate aria-labelledby="ccoFormHeading">
@@ -239,8 +243,7 @@
 </section>
         <p id="credit-card-optimizer-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
       </div>
-
-      <p id="credit-card-optimizer-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Credit Card Optimizer Calculator. Wondering which card in your wallet deserves your next purchase? The credit card optimizer calculator turns your monthly spending into a yearly dollar figure for each card you compare, so you can see the net annual value of every option and stop guessing which sign-up bonus or annual fee is actually worth it. <!-- SILO_START:slot_a_m -->Pair this with the <a class="silo-link" href="/debt-to-income-ratio-calculator.html">free debt to income ratio calculator</a> for a fuller picture before you make a decision.<!-- SILO_END:slot_a_m --></p>
+      </div>
 
       <aside id="credit-card-optimizer-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="credit-card-optimizer-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
           <div id="credit-card-optimizer-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="credit-card-optimizer-calculator-ad-in-feed">

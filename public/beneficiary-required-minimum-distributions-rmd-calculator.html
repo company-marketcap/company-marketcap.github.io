@@ -163,7 +163,11 @@
           </div>
         </aside>
 
-      <div id="beneficiary-required-minimum-distributions-rmd-calculator-intro-area" class="space-y-4">
+      <!-- One intro paragraph. Phones: the intro area and hero section are display:contents, so the breadcrumb, H1,
+           intro and tool all sit in this flex column and the intro (order-last) shows below the tool. sm and up:
+           plain blocks, intro under the H1. -->
+      <div id="beneficiary-required-minimum-distributions-rmd-calculator-top" class="flex flex-col sm:block sm:space-y-10">
+      <div id="beneficiary-required-minimum-distributions-rmd-calculator-intro-area" class="contents space-y-4 sm:block">
         <nav id="beneficiary-required-minimum-distributions-rmd-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
           <ol id="beneficiary-required-minimum-distributions-rmd-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" >
             <li id="beneficiary-required-minimum-distributions-rmd-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5"><a class="breadcrumb-link" href="/"><span>Home</span></a></li>
@@ -171,13 +175,13 @@
             <li id="beneficiary-required-minimum-distributions-rmd-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span aria-current="page" class="font-semibold text-ink">Beneficiary RMD Calculator</span></li>
           </ol>
         </nav>
-        <section id="beneficiary-required-minimum-distributions-rmd-calculator-hero-section" aria-labelledby="beneficiary-required-minimum-distributions-rmd-calculator-hero-heading" data-section="hero">
+        <section id="beneficiary-required-minimum-distributions-rmd-calculator-hero-section" class="contents sm:block" aria-labelledby="beneficiary-required-minimum-distributions-rmd-calculator-hero-heading" data-section="hero">
           <h1 id="beneficiary-required-minimum-distributions-rmd-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Beneficiary RMD Calculator</h1>
-          <p id="beneficiary-required-minimum-distributions-rmd-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Beneficiary RMD Calculator. Use this beneficiary RMD calculator to see how much you must take out of an account you inherited each year, and by what date the account has to be empty. Enter the balance, the owner&#x27;s death year and your age, and you get your annual distributions plan, including the year the full balance comes due. The penalties for missing a withdrawal are steep, so it pays to get the first-year figure right. <!-- SILO_START:slot_a -->Next, open the <a class="silo-link" href="/rmd-calculator.html">rmd calculator</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_a --></p>
+          <p id="beneficiary-required-minimum-distributions-rmd-calculator-hero-intro" class="order-last mt-10 text-[17px] leading-relaxed text-ink-muted sm:mt-3">Beneficiary RMD Calculator. Use this beneficiary RMD calculator to see how much you must take out of an account you inherited each year, and by what date the account has to be empty. Enter the balance, the owner&#x27;s death year and your age, and you get your annual distributions plan, including the year the full balance comes due. The penalties for missing a withdrawal are steep, so it pays to get the first-year figure right. <!-- SILO_START:slot_a -->Next, open the <a class="silo-link" href="/rmd-calculator.html">rmd calculator</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_a --></p>
         </section>
       </div>
 
-      <div id="beneficiary-required-minimum-distributions-rmd-calculator-tool" class="space-y-6" data-page-slug="beneficiary-required-minimum-distributions-rmd-calculator" data-calculator-key="tool">
+      <div id="beneficiary-required-minimum-distributions-rmd-calculator-tool" class="mt-10 space-y-6 sm:mt-0" data-page-slug="beneficiary-required-minimum-distributions-rmd-calculator" data-calculator-key="tool">
         <section class="panel @container p-4 sm:p-6" aria-labelledby="bnFormHeading" data-section="calculator">
   <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
     <form id="bnForm" class="space-y-5" novalidate aria-labelledby="bnFormHeading">
@@ -223,8 +227,7 @@
 </section>
         <p id="beneficiary-required-minimum-distributions-rmd-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
       </div>
-
-      <p id="beneficiary-required-minimum-distributions-rmd-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Beneficiary RMD Calculator. Use this beneficiary RMD calculator to see how much you must take out of an account you inherited each year, and by what date the account has to be empty. Enter the balance, the owner&#x27;s death year and your age, and you get your annual distributions plan, including the year the full balance comes due. The penalties for missing a withdrawal are steep, so it pays to get the first-year figure right. <!-- SILO_START:slot_a_m -->Next, open the <a class="silo-link" href="/rmd-calculator.html">rmd calculator</a> and enter your own details to see an estimate in seconds.<!-- SILO_END:slot_a_m --></p>
+      </div>
 
       <aside id="beneficiary-required-minimum-distributions-rmd-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="beneficiary-required-minimum-distributions-rmd-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
           <div id="beneficiary-required-minimum-distributions-rmd-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="beneficiary-required-minimum-distributions-rmd-calculator-ad-in-feed">

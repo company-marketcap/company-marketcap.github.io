@@ -163,7 +163,11 @@
           </div>
         </aside>
 
-      <div id="payroll-deductions-calculator-w-4-with-exemptions-intro-area" class="space-y-4">
+      <!-- One intro paragraph. Phones: the intro area and hero section are display:contents, so the breadcrumb, H1,
+           intro and tool all sit in this flex column and the intro (order-last) shows below the tool. sm and up:
+           plain blocks, intro under the H1. -->
+      <div id="payroll-deductions-calculator-w-4-with-exemptions-top" class="flex flex-col sm:block sm:space-y-10">
+      <div id="payroll-deductions-calculator-w-4-with-exemptions-intro-area" class="contents space-y-4 sm:block">
         <nav id="payroll-deductions-calculator-w-4-with-exemptions-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
           <ol id="payroll-deductions-calculator-w-4-with-exemptions-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" >
             <li id="payroll-deductions-calculator-w-4-with-exemptions-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5"><a class="breadcrumb-link" href="/"><span>Home</span></a></li>
@@ -171,13 +175,13 @@
             <li id="payroll-deductions-calculator-w-4-with-exemptions-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span aria-current="page" class="font-semibold text-ink">W-4 Payroll Deductions Calculator</span></li>
           </ol>
         </nav>
-        <section id="payroll-deductions-calculator-w-4-with-exemptions-hero-section" aria-labelledby="payroll-deductions-calculator-w-4-with-exemptions-hero-heading" data-section="hero">
+        <section id="payroll-deductions-calculator-w-4-with-exemptions-hero-section" class="contents sm:block" aria-labelledby="payroll-deductions-calculator-w-4-with-exemptions-hero-heading" data-section="hero">
           <h1 id="payroll-deductions-calculator-w-4-with-exemptions-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">W-4 Payroll Deductions Calculator</h1>
-          <p id="payroll-deductions-calculator-w-4-with-exemptions-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">W-4 Payroll Deductions Calculator. Wondering why your paycheck is smaller than your salary suggests? Our W-4 payroll deductions calculator is a free salary calculator that turns your pay, filing details and deductions into a clear estimate of your take-home pay. Enter what your employer withholds, see where every dollar of your gross pay goes, and get an accurate picture of your likely refund or balance due before you change a thing on your Form W-4. <!-- SILO_START:slot_a -->Try the <a class="silo-link" href="/salary-increase-calculator.html">free salary increase calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_a --></p>
+          <p id="payroll-deductions-calculator-w-4-with-exemptions-hero-intro" class="order-last mt-10 text-[17px] leading-relaxed text-ink-muted sm:mt-3">W-4 Payroll Deductions Calculator. Wondering why your paycheck is smaller than your salary suggests? Our W-4 payroll deductions calculator is a free salary calculator that turns your pay, filing details and deductions into a clear estimate of your take-home pay. Enter what your employer withholds, see where every dollar of your gross pay goes, and get an accurate picture of your likely refund or balance due before you change a thing on your Form W-4. <!-- SILO_START:slot_a -->Try the <a class="silo-link" href="/salary-increase-calculator.html">free salary increase calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_a --></p>
         </section>
       </div>
 
-      <div id="payroll-deductions-calculator-w-4-with-exemptions-tool" class="space-y-6" data-page-slug="payroll-deductions-calculator-w-4-with-exemptions" data-calculator-key="tool">
+      <div id="payroll-deductions-calculator-w-4-with-exemptions-tool" class="mt-10 space-y-6 sm:mt-0" data-page-slug="payroll-deductions-calculator-w-4-with-exemptions" data-calculator-key="tool">
         <section class="panel @container p-4 sm:p-6" aria-labelledby="wxFormHeading" data-section="calculator">
   <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
     <form id="wxForm" class="space-y-5" novalidate aria-labelledby="wxFormHeading">
@@ -265,8 +269,7 @@
 </section>
         <p id="payroll-deductions-calculator-w-4-with-exemptions-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
       </div>
-
-      <p id="payroll-deductions-calculator-w-4-with-exemptions-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">W-4 Payroll Deductions Calculator. Wondering why your paycheck is smaller than your salary suggests? Our W-4 payroll deductions calculator is a free salary calculator that turns your pay, filing details and deductions into a clear estimate of your take-home pay. Enter what your employer withholds, see where every dollar of your gross pay goes, and get an accurate picture of your likely refund or balance due before you change a thing on your Form W-4. <!-- SILO_START:slot_a_m -->Try the <a class="silo-link" href="/salary-increase-calculator.html">free salary increase calculator</a> to run your own numbers — everything is calculated in your browser and nothing you enter is stored or sent anywhere.<!-- SILO_END:slot_a_m --></p>
+      </div>
 
       <aside id="payroll-deductions-calculator-w-4-with-exemptions-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="payroll-deductions-calculator-w-4-with-exemptions-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
           <div id="payroll-deductions-calculator-w-4-with-exemptions-ad-in-feed-frame" class="ad-slot-live" data-ad-container="payroll-deductions-calculator-w-4-with-exemptions-ad-in-feed">

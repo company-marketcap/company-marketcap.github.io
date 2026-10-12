@@ -163,7 +163,11 @@
           </div>
         </aside>
 
-      <div id="stock-valuation-confidence-intro-area" class="space-y-4">
+      <!-- One intro paragraph. Phones: the intro area and hero section are display:contents, so the breadcrumb, H1,
+           intro and tool all sit in this flex column and the intro (order-last) shows below the tool. sm and up:
+           plain blocks, intro under the H1. -->
+      <div id="stock-valuation-confidence-top" class="flex flex-col sm:block sm:space-y-10">
+      <div id="stock-valuation-confidence-intro-area" class="contents space-y-4 sm:block">
         <nav id="stock-valuation-confidence-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
           <ol id="stock-valuation-confidence-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" >
             <li id="stock-valuation-confidence-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5"><a class="breadcrumb-link" href="/"><span>Home</span></a></li>
@@ -171,13 +175,13 @@
             <li id="stock-valuation-confidence-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span aria-current="page" class="font-semibold text-ink">Stock Valuation Confidence Interval Calculator</span></li>
           </ol>
         </nav>
-        <section id="stock-valuation-confidence-hero-section" aria-labelledby="stock-valuation-confidence-hero-heading" data-section="hero">
+        <section id="stock-valuation-confidence-hero-section" class="contents sm:block" aria-labelledby="stock-valuation-confidence-hero-heading" data-section="hero">
           <h1 id="stock-valuation-confidence-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Stock Valuation Confidence Interval Calculator</h1>
-          <p id="stock-valuation-confidence-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Stock Valuation Confidence Interval Calculator. Instead of trusting one number, the stock valuation confidence interval calculator wraps a statistical band around your target so you can see how wide your uncertainty really is. You enter today&#x27;s price, a base case, the stock&#x27;s volatility and how wrong you expect your own estimate to be, and you get back a bearish price, a bullish price and the odds of losing money. <!-- SILO_START:slot_a -->The <a class="silo-link" href="/pivot-point-calculator.html">pivot point calculator online</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_a --></p>
+          <p id="stock-valuation-confidence-hero-intro" class="order-last mt-10 text-[17px] leading-relaxed text-ink-muted sm:mt-3">Stock Valuation Confidence Interval Calculator. Instead of trusting one number, the stock valuation confidence interval calculator wraps a statistical band around your target so you can see how wide your uncertainty really is. You enter today&#x27;s price, a base case, the stock&#x27;s volatility and how wrong you expect your own estimate to be, and you get back a bearish price, a bullish price and the odds of losing money. <!-- SILO_START:slot_a -->The <a class="silo-link" href="/pivot-point-calculator.html">pivot point calculator online</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_a --></p>
         </section>
       </div>
 
-      <div id="stock-valuation-confidence-tool" class="space-y-6" data-page-slug="stock-valuation-confidence" data-calculator-key="tool">
+      <div id="stock-valuation-confidence-tool" class="mt-10 space-y-6 sm:mt-0" data-page-slug="stock-valuation-confidence" data-calculator-key="tool">
         <section class="panel @container p-4 sm:p-6" aria-labelledby="vcFormHeading" data-section="calculator">
   <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
     <form id="vcForm" class="space-y-5" novalidate aria-labelledby="vcFormHeading">
@@ -233,8 +237,7 @@
 </section>
         <p id="stock-valuation-confidence-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
       </div>
-
-      <p id="stock-valuation-confidence-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Stock Valuation Confidence Interval Calculator. Instead of trusting one number, the stock valuation confidence interval calculator wraps a statistical band around your target so you can see how wide your uncertainty really is. You enter today&#x27;s price, a base case, the stock&#x27;s volatility and how wrong you expect your own estimate to be, and you get back a bearish price, a bullish price and the odds of losing money. <!-- SILO_START:slot_a_m -->The <a class="silo-link" href="/pivot-point-calculator.html">pivot point calculator online</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_a_m --></p>
+      </div>
 
       <aside id="stock-valuation-confidence-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="stock-valuation-confidence-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
           <div id="stock-valuation-confidence-ad-in-feed-frame" class="ad-slot-live" data-ad-container="stock-valuation-confidence-ad-in-feed">

@@ -163,7 +163,11 @@
           </div>
         </aside>
 
-      <div id="cash-back-or-low-interest-calculator-intro-area" class="space-y-4">
+      <!-- One intro paragraph. Phones: the intro area and hero section are display:contents, so the breadcrumb, H1,
+           intro and tool all sit in this flex column and the intro (order-last) shows below the tool. sm and up:
+           plain blocks, intro under the H1. -->
+      <div id="cash-back-or-low-interest-calculator-top" class="flex flex-col sm:block sm:space-y-10">
+      <div id="cash-back-or-low-interest-calculator-intro-area" class="contents space-y-4 sm:block">
         <nav id="cash-back-or-low-interest-calculator-breadcrumb" aria-label="Breadcrumb" data-section="breadcrumb">
           <ol id="cash-back-or-low-interest-calculator-breadcrumb-list" class="breadcrumb-list flex items-center gap-1.5 overflow-x-auto whitespace-nowrap text-sm sm:flex-wrap sm:overflow-visible" >
             <li id="cash-back-or-low-interest-calculator-breadcrumb-item-1" class="flex shrink-0 items-center gap-1.5"><a class="breadcrumb-link" href="/"><span>Home</span></a></li>
@@ -171,13 +175,13 @@
             <li id="cash-back-or-low-interest-calculator-breadcrumb-item-3" class="flex shrink-0 items-center gap-1.5"><svg class="breadcrumb-separator" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5"/></svg><span aria-current="page" class="font-semibold text-ink">Cash Back or Low Interest Calculator</span></li>
           </ol>
         </nav>
-        <section id="cash-back-or-low-interest-calculator-hero-section" aria-labelledby="cash-back-or-low-interest-calculator-hero-heading" data-section="hero">
+        <section id="cash-back-or-low-interest-calculator-hero-section" class="contents sm:block" aria-labelledby="cash-back-or-low-interest-calculator-hero-heading" data-section="hero">
           <h1 id="cash-back-or-low-interest-calculator-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">Cash Back or Low Interest Calculator</h1>
-          <p id="cash-back-or-low-interest-calculator-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">Cash Back or Low Interest Calculator. The cash back or low interest calculator shows you which car deal keeps more money in your pocket: a car rebate taken off what you pay, or a cheaper rate on your auto financing. Because manufacturers usually make the two choices mutually exclusive, you can only pick one, and the right pick depends on how the size of the cash back compares with the total savings from a lower interest rate. Enter the cost, your cash and the two rates to see the monthly payment and the winner before you sign anything. <!-- SILO_START:slot_a -->The <a class="silo-link" href="/interest-calculator.html">interest calculator online</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_a --></p>
+          <p id="cash-back-or-low-interest-calculator-hero-intro" class="order-last mt-10 text-[17px] leading-relaxed text-ink-muted sm:mt-3">Cash Back or Low Interest Calculator. The cash back or low interest calculator shows you which car deal keeps more money in your pocket: a car rebate taken off what you pay, or a cheaper rate on your auto financing. Because manufacturers usually make the two choices mutually exclusive, you can only pick one, and the right pick depends on how the size of the cash back compares with the total savings from a lower interest rate. Enter the cost, your cash and the two rates to see the monthly payment and the winner before you sign anything. <!-- SILO_START:slot_a -->The <a class="silo-link" href="/interest-calculator.html">interest calculator online</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_a --></p>
         </section>
       </div>
 
-      <div id="cash-back-or-low-interest-calculator-tool" class="space-y-6" data-page-slug="cash-back-or-low-interest-calculator" data-calculator-key="tool">
+      <div id="cash-back-or-low-interest-calculator-tool" class="mt-10 space-y-6 sm:mt-0" data-page-slug="cash-back-or-low-interest-calculator" data-calculator-key="tool">
         <section class="panel @container p-4 sm:p-6" aria-labelledby="cbFormHeading" data-section="calculator">
   <div class="grid gap-8 @3xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
     <form id="cbForm" class="space-y-5" novalidate aria-labelledby="cbFormHeading">
@@ -226,8 +230,7 @@
 </section>
         <p id="cash-back-or-low-interest-calculator-disclaimer" class="text-sm text-ink-muted">Results are estimates for educational purposes and are not financial, tax or legal advice.</p>
       </div>
-
-      <p id="cash-back-or-low-interest-calculator-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">Cash Back or Low Interest Calculator. The cash back or low interest calculator shows you which car deal keeps more money in your pocket: a car rebate taken off what you pay, or a cheaper rate on your auto financing. Because manufacturers usually make the two choices mutually exclusive, you can only pick one, and the right pick depends on how the size of the cash back compares with the total savings from a lower interest rate. Enter the cost, your cash and the two rates to see the monthly payment and the winner before you sign anything. <!-- SILO_START:slot_a_m -->The <a class="silo-link" href="/interest-calculator.html">interest calculator online</a> is free to use with no sign-up, and works on desktop and mobile.<!-- SILO_END:slot_a_m --></p>
+      </div>
 
       <aside id="cash-back-or-low-interest-calculator-ad-in-feed" class="ad-slot" aria-label="Advertisement" data-ad-slot-name="cash-back-or-low-interest-calculator-ad-in-feed" data-ad-size="728 × 90 or 320 × 100">
           <div id="cash-back-or-low-interest-calculator-ad-in-feed-frame" class="ad-slot-live" data-ad-container="cash-back-or-low-interest-calculator-ad-in-feed">

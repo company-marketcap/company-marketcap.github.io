@@ -6,20 +6,23 @@
     <main id="{{PAGE_ID}}-main-content" class="@container min-w-0 flex-1 space-y-10 pb-16 pt-3 focus:outline-none" tabindex="-1" data-page-main="{{PAGE_ID}}" data-calculator-slug="{{PAGE_ID}}" data-sub-category-slug="{{SUBCATEGORY_SLUG}}">
       {{AD_TOP}}
 
-      <div id="{{PAGE_ID}}-intro-area" class="space-y-4">
+      <!-- One intro paragraph. Phones: the intro area and hero section are display:contents, so the breadcrumb, H1,
+           intro and tool all sit in this flex column and the intro (order-last) shows below the tool. sm and up:
+           plain blocks, intro under the H1. -->
+      <div id="{{PAGE_ID}}-top" class="flex flex-col sm:block sm:space-y-10">
+      <div id="{{PAGE_ID}}-intro-area" class="contents space-y-4 sm:block">
         {{BREADCRUMB}}
-        <section id="{{PAGE_ID}}-hero-section" aria-labelledby="{{PAGE_ID}}-hero-heading" data-section="hero">
+        <section id="{{PAGE_ID}}-hero-section" class="contents sm:block" aria-labelledby="{{PAGE_ID}}-hero-heading" data-section="hero">
           <h1 id="{{PAGE_ID}}-hero-heading" class="font-display text-2xl font-bold leading-[1.1] tracking-tight sm:text-4xl">{{H1}}</h1>
-          <p id="{{PAGE_ID}}-hero-intro" class="mt-3 hidden text-[17px] leading-relaxed text-ink-muted sm:block">{{SUBTITLE}}</p>
+          <p id="{{PAGE_ID}}-hero-intro" class="order-last mt-10 text-[17px] leading-relaxed text-ink-muted sm:mt-3">{{SUBTITLE}}</p>
         </section>
       </div>
 
-      <div id="{{PAGE_ID}}-tool" class="space-y-6" data-page-slug="{{PAGE_ID}}" data-calculator-key="tool">
+      <div id="{{PAGE_ID}}-tool" class="mt-10 space-y-6 sm:mt-0" data-page-slug="{{PAGE_ID}}" data-calculator-key="tool">
         {{TOOL_CARD}}
         <p id="{{PAGE_ID}}-disclaimer" class="text-sm text-ink-muted">{{DISCLAIMER}}</p>
       </div>
-
-      <p id="{{PAGE_ID}}-hero-intro-mobile" class="text-[17px] leading-relaxed text-ink-muted sm:hidden">{{SUBTITLE}}</p>
+      </div>
 
       {{AD_IN_FEED}}
 
