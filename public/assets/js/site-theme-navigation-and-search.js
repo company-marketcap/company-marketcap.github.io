@@ -521,3 +521,26 @@ class SiteApplication {
 }
 
 new SiteApplication().initialize();
+
+// Go-to-top button: built here so every page gets it without touching the templates.
+(function initBackToTop() {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "back-to-top";
+  button.setAttribute("aria-label", "Go to top of page");
+  button.innerHTML = '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  document.body.appendChild(button);
+  let ticking = false;
+  const update = () => {
+    ticking = false;
+    button.classList.toggle("is-visible", window.scrollY > window.innerHeight);
+  };
+  window.addEventListener("scroll", () => {
+    if (!ticking) { ticking = true; requestAnimationFrame(update); }
+  }, { passive: true });
+  button.addEventListener("click", () => {
+    const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+  });
+  update();
+})();
