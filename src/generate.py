@@ -650,6 +650,10 @@ def render_404(S):
 def sitemap_page_html(S):
     cat, parts = S.category, []
     parts.append(f'<p><a href="{href(cat["slug"])}">{esc(cat["name"])}</a></p>')
+    site_pages = [("About", "about"), ("Contact", "contact"), ("Privacy policy", "privacy-policy"), ("Terms of use", "terms")]
+    parts.insert(0, "<h2>Sitemap and site pages</h2>\n<p>Use the XML sitemap to see every page search engines can crawl, "
+                    "or open one of the site pages below.</p>\n<ul><li><a href=\"/sitemap.xml\">XML sitemap</a></li>"
+                    + "".join(f'<li><a href="{href(slug)}">{label}</a></li>' for label, slug in site_pages) + "</ul>")
     for g in S.site["nav"]:
         parts.append(f"<h2>{esc(g['name'])}</h2>")
         for s in g["subcategories"]:
